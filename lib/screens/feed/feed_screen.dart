@@ -55,6 +55,7 @@ class _FeedView extends StatelessWidget {
                     (habit) => HabitListTile(
                       habit: habit,
                       isUpvoted: viewModel.isUpvoted(habit),
+                      isLoading: viewModel.loadingHabits.contains(habit.id),
                       onClickUpvote: () => viewModel.vote(habit, true),
                       onClickDownvote: () => viewModel.vote(habit, false),
                     ),
@@ -68,6 +69,7 @@ class _FeedView extends StatelessWidget {
 class HabitListTile extends StatelessWidget {
   final Habit habit;
   final bool? isUpvoted;
+  final bool isLoading;
   final void Function() onClickUpvote;
   final void Function() onClickDownvote;
 
@@ -75,9 +77,12 @@ class HabitListTile extends StatelessWidget {
     Key? key,
     required this.habit,
     required this.isUpvoted,
+    required this.isLoading,
     required this.onClickUpvote,
     required this.onClickDownvote,
   }) : super(key: key);
+
+  static final loadingColor = Colors.grey[300]!;
 
   @override
   Widget build(BuildContext context) {
@@ -89,20 +94,33 @@ class HabitListTile extends StatelessWidget {
               padding: EdgeInsets.zero,
               icon: Icon(
                 Icons.expand_less,
-                color: isUpvoted == true ? Colors.amber : null,
+                color: isLoading
+                    ? loadingColor
+                    : isUpvoted == true
+                        ? Colors.amber
+                        : null,
               ),
-              onPressed: onClickUpvote,
+              onPressed: isLoading ? null : onClickUpvote,
             ),
           ),
-          Text('${(habit.ups ?? 0) - (habit.downs ?? 0)}'),
+          Text(
+            '${(habit.ups ?? 0) - (habit.downs ?? 0)}',
+            style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                  color: isLoading ? loadingColor : null,
+                ),
+          ),
           Expanded(
             child: IconButton(
               padding: EdgeInsets.zero,
               icon: Icon(
                 Icons.expand_more,
-                color: isUpvoted == false ? Colors.amber : null,
+                color: isLoading
+                    ? loadingColor
+                    : isUpvoted == false
+                        ? Colors.amber
+                        : null,
               ),
-              onPressed: onClickDownvote,
+              onPressed: isLoading ? null : onClickDownvote,
             ),
           ),
         ],

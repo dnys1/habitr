@@ -17,6 +17,7 @@ import 'package:habitr/services/backend_service.dart';
 import 'package:habitr/services/data_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/print.dart';
+import 'package:habitr/util/scaffold.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -56,8 +57,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
-
   late AuthBloc _authBloc;
   late StreamSubscription<AuthException> _authExceptions;
 
@@ -72,7 +71,7 @@ class _MyAppState extends State<MyApp> {
 
     _authExceptions = _authBloc.exceptions.listen((exception) {
       safePrint('Auth Exception: ${exception.message}');
-      _scaffoldMessengerKey.currentState?.showSnackBar(SnackBar(
+      scaffoldMessengerKey.currentState?.showSnackBar(SnackBar(
         content: Text(exception.message),
       ));
     });
@@ -103,7 +102,7 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          scaffoldMessengerKey: _scaffoldMessengerKey,
+          scaffoldMessengerKey: scaffoldMessengerKey,
           home: StreamBuilder<AuthState>(
             stream: _authBloc.stream,
             builder: (context, snapshot) {

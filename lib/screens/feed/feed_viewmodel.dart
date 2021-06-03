@@ -9,6 +9,7 @@ import 'package:habitr/models/VoteType.dart';
 import 'package:habitr/services/data_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
+import 'package:habitr/util/scaffold.dart';
 
 class FeedViewModel extends BaseViewModel {
   final AuthBloc _authBloc;
@@ -63,6 +64,7 @@ class FeedViewModel extends BaseViewModel {
       } else {
         _habits[habit.id] = habit;
       }
+      _loadingHabits.remove(habit.id);
       if (hasListeners) {
         notifyListeners();
       }
@@ -91,6 +93,9 @@ class FeedViewModel extends BaseViewModel {
   late Set<String> _downvotedHabits;
   Set<String> get downvotedHabits => _downvotedHabits;
 
+  final Set<String> _loadingHabits = {};
+  Set<String> get loadingHabits => _loadingHabits;
+
   Map<String, Habit> _habits = {};
   Map<String, Habit> get habits => _habits;
   void _setHabits(List<Habit> habits) {
@@ -108,6 +113,8 @@ class FeedViewModel extends BaseViewModel {
   }
 
   Future<void> vote(Habit habit, bool upvote) async {
+    _loadingHabits.add(habit.id);
+    notifyListeners();
     try {
       VoteType type;
       switch (isUpvoted(habit)) {
@@ -125,7 +132,14 @@ class FeedViewModel extends BaseViewModel {
     } on Exception catch (e) {
       safePrint('Error voting for habit: $e');
       setError(e);
+      _loadingHabits.remove(habit.id);
+      notifyListeners();
     }
+  }
+
+  @override
+  void setError(Object error) {
+    showErrorSnackbar(error.toString());
   }
 
   Future<void> fetchHabits() async {
