@@ -26,6 +26,7 @@ Future<InvocationResult> handler(Context context, AwsCognitoEvent event) async {
     final error = await createUser(event.userName);
     if (error != null) {
       print('Error creating user ${event.userName}: $error');
+      throw error;
     }
   }
   return InvocationResult(context.requestId, event);
