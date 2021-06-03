@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:habitr/models/Comment.dart';
+import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/screens/user_info/user_info_viewmodel.dart';
 import 'package:habitr/services/api_service.dart';
+import 'package:habitr/widgets/habit/habit_list_tile.dart';
+import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
 
 class UserInfoScreen extends StatelessWidget {
@@ -35,6 +39,8 @@ class UserInfoScreen extends StatelessWidget {
 }
 
 class _UserInfoView extends StatelessWidget {
+  static const defaultPadding = SizedBox(height: 20);
+
   final UserInfoViewModel viewModel;
 
   const _UserInfoView({
@@ -50,20 +56,130 @@ class _UserInfoView extends StatelessWidget {
             ? null
             : Text(viewModel.user!.name ?? viewModel.user!.username),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          if (viewModel.hasError)
-            Center(
-              child: Text(viewModel.error.toString()),
-            )
-          else ...[
-            Center(
-              child: Text(viewModel.user!.username),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                if (viewModel.isBusy)
+                  const CircularProgressIndicator()
+                else if (viewModel.hasError)
+                  Text(viewModel.error.toString())
+                else ...[
+                  UserAvatar(viewModel.user!),
+                  defaultPadding,
+                  if (viewModel.user!.name != null) ...[
+                    Text(
+                      viewModel.user!.name!,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    defaultPadding,
+                  ],
+                  Text(
+                    '@${viewModel.user!.username}',
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                  defaultPadding,
+                  _UserHabitsAndComments(
+                    habits: viewModel.user!.habits ?? [],
+                    comments: viewModel.user!.comments ?? [],
+                  ),
+                  defaultPadding,
+                ],
+              ],
             ),
-          ],
-        ],
+          ),
+        ),
       ),
+    );
+  }
+}
+
+class _UserHabitsAndComments extends StatefulWidget {
+  const _UserHabitsAndComments({
+    Key? key,
+    required this.habits,
+    required this.comments,
+  }) : super(key: key);
+
+  final List<Habit> habits;
+  final List<Comment> comments;
+
+  @override
+  _UserHabitsAndCommentsState createState() => _UserHabitsAndCommentsState();
+}
+
+class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
+  bool isHabitsExpanded = false;
+  bool isCommentsExpanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return ExpansionPanelList(
+      expansionCallback: (int index, bool isExpanded) {
+        setState(() {
+          if (index == 0) isHabitsExpanded = !isExpanded;
+          if (index == 1) isCommentsExpanded = !isExpanded;
+        });
+      },
+      children: [
+        ExpansionPanel(
+          headerBuilder: (context, bool isExpanded) {
+            return const ListTile(
+              title: Text('Habits'),
+            );
+          },
+          body: ConstrainedBox(
+            constraints: const BoxConstraints(maxHeight: 300),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  if (widget.habits.isNotEmpty)
+                    for (var habit in widget.habits)
+                      HabitListTile(
+                        habit: habit,
+                        isUpvoted: null,
+                        isLoading: false,
+                        onClickUpvote: () {},
+                        onClickDownvote: () {},
+                      )
+                  else
+                    const Text('No habits'),
+                  _UserInfoView.defaultPadding,
+                ],
+              ),
+            ),
+          ),
+          isExpanded: isHabitsExpanded,
+        ),
+        ExpansionPanel(
+          headerBuilder: (context, bool isExpanded) {
+            return const ListTile(
+              title: Text('Comments'),
+            );
+          },
+          body: ConstrainedBox(
+            constraints: const BoxConstraints(maxHeight: 300),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  if (widget.comments.isNotEmpty)
+                    Container()
+                  else
+                    const Text('No comments'),
+                  _UserInfoView.defaultPadding,
+                  // for (var comment in widget.comments)
+                  //   CommentListTile(comment: comment)
+                ],
+              ),
+            ),
+          ),
+          isExpanded: isCommentsExpanded,
+        ),
+      ],
     );
   }
 }

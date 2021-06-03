@@ -1,22 +1,28 @@
+import 'dart:async';
+
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/User.dart';
-import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 
 class HomeDrawerViewModel extends BaseViewModel {
   final AuthBloc _authBloc;
-  final StorageService _storageService;
+
+  late final StreamSubscription<AuthState> _authBlocSubscription;
 
   HomeDrawerViewModel({
     required AuthBloc authBloc,
-    required StorageService storageService,
-  })  : _authBloc = authBloc,
-        _storageService = storageService {
-    _authBloc.stream.listen((event) {
+  }) : _authBloc = authBloc {
+    _authBlocSubscription = _authBloc.stream.listen((event) {
       if (event is AuthLoggedIn && hasListeners) {
         notifyListeners();
       }
     });
+  }
+
+  @override
+  void dispose() {
+    _authBlocSubscription.cancel();
+    super.dispose();
   }
 
   User get currentUser {
@@ -24,14 +30,13 @@ class HomeDrawerViewModel extends BaseViewModel {
     return authState.user;
   }
 
-  Future<String?> get userAvatarUrl async {
-    if (currentUser.avatar == null) {
-      return null;
-    }
-    return _storageService.getImageUrl(currentUser.avatar!.key);
-  }
-
-  void logout() {
+  Future<void> logout() async {
+    setBusy(true);
     _authBloc.add(const AuthLogout());
+    await Future.wait([
+      _authBloc.exceptions.first,
+      _authBloc.stream.first,
+    ]);
+    setBusy(false);
   }
 }

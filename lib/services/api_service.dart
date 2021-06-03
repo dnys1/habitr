@@ -107,6 +107,7 @@ class AmplifyApiService implements ApiService {
 
     await _runQuery(
       const ast.DocumentNode(definitions: [
+        AllUserFields,
         UpdateUser,
       ]),
       operationName,

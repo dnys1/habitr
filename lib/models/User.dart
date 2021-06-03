@@ -156,13 +156,13 @@ class User extends Model {
     var avatar = json['avatar'] is Map
         ? S3Object.fromJson(json['avatar'] as Map<String, dynamic>)
         : null;
-    var comments = json['comments'] is List
-        ? (json['comments'] as List)
+    var comments = json['comments']?['items'] is List
+        ? (json['comments']['items'] as List)
             .map((e) => Comment.fromJson(new Map<String, dynamic>.from(e)))
             .toList()
         : null;
-    var habits = json['habits'] is List
-        ? (json['habits'] as List)
+    var habits = json['habits']?['items'] is List
+        ? (json['habits']['items'] as List)
             .map((e) => Habit.fromJson(new Map<String, dynamic>.from(e)))
             .toList()
         : null;

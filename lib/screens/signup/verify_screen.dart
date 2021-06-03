@@ -51,18 +51,12 @@ class _VerifyView extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  AnimatedBuilder(
-                    animation: viewModel,
-                    builder: (context, child) {
-                      if (viewModel.isBusy) {
-                        return const CircularProgressIndicator();
-                      }
-                      return TextButton(
-                        onPressed: viewModel.verify,
-                        child: const Text('Verify'),
-                      );
-                    },
-                  ),
+                  viewModel.isBusy
+                      ? const CircularProgressIndicator()
+                      : ElevatedButton(
+                          onPressed: viewModel.verify,
+                          child: const Text('Verify'),
+                        ),
                 ],
               ),
             ),

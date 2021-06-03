@@ -36,6 +36,10 @@ fragment AllUserFields on User {
   habits {
     items {
       id
+      tagline
+      category
+      ups
+      downs
     }
   }
   upvotedHabits
