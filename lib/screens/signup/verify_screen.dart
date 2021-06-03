@@ -31,33 +31,38 @@ class _VerifyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
-          child: Form(
-            key: viewModel.formKey,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  TextFormField(
-                    onChanged: viewModel.setCode,
-                    validator: validateCode,
-                    decoration: const InputDecoration(
-                      labelText: 'Code',
-                      prefixIcon: Icon(Icons.password),
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(FocusNode());
+      },
+      child: Scaffold(
+        body: Center(
+          child: SingleChildScrollView(
+            child: Form(
+              key: viewModel.formKey,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TextFormField(
+                      onChanged: viewModel.setCode,
+                      validator: validateCode,
+                      decoration: const InputDecoration(
+                        labelText: 'Code',
+                        prefixIcon: Icon(Icons.password),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 20),
-                  viewModel.isBusy
-                      ? const CircularProgressIndicator()
-                      : ElevatedButton(
-                          onPressed: viewModel.verify,
-                          child: const Text('Verify'),
-                        ),
-                ],
+                    const SizedBox(height: 20),
+                    viewModel.isBusy
+                        ? const CircularProgressIndicator()
+                        : ElevatedButton(
+                            onPressed: viewModel.verify,
+                            child: const Text('Verify'),
+                          ),
+                  ],
+                ),
               ),
             ),
           ),

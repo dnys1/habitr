@@ -128,8 +128,8 @@ class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
       children: [
         ExpansionPanel(
           headerBuilder: (context, bool isExpanded) {
-            return const ListTile(
-              title: Text('Habits'),
+            return ListTile(
+              title: Text('Habits (${widget.habits.length})'),
             );
           },
           body: ConstrainedBox(
@@ -157,8 +157,8 @@ class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
         ),
         ExpansionPanel(
           headerBuilder: (context, bool isExpanded) {
-            return const ListTile(
-              title: Text('Comments'),
+            return ListTile(
+              title: Text('Comments (${widget.comments.length})'),
             );
           },
           body: ConstrainedBox(

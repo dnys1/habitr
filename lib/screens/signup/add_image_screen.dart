@@ -45,66 +45,71 @@ class _AddImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Center(
-              child: ConstrainedBox(
-                constraints: BoxConstraints.tightFor(
-                  width: MediaQuery.of(context).size.shortestSide / 2,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Add a name and picture',
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headline6,
-                    ),
-                    const SizedBox(height: 20),
-                    GestureDetector(
-                      onTap: viewModel.pickImage,
-                      child: CircleAvatar(
-                        radius: MediaQuery.of(context).size.shortestSide / 4,
-                        foregroundImage: viewModel.image != null
-                            ? FileImage(viewModel.image!)
-                            : null,
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(FocusNode());
+      },
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(
+                    width: MediaQuery.of(context).size.shortestSide / 2,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Add a name and picture',
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.headline6,
                       ),
-                    ),
-                    const SizedBox(height: 20),
-                    TextField(
-                      onChanged: viewModel.setName,
-                      textAlign: TextAlign.center,
-                      decoration: const InputDecoration(
-                        labelText: 'Name',
-                        floatingLabelBehavior: FloatingLabelBehavior.never,
+                      const SizedBox(height: 20),
+                      GestureDetector(
+                        onTap: viewModel.pickImage,
+                        child: CircleAvatar(
+                          radius: MediaQuery.of(context).size.shortestSide / 4,
+                          foregroundImage: viewModel.image != null
+                              ? FileImage(viewModel.image!)
+                              : null,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 10),
-                    TextButton(
-                      onPressed: viewModel.save,
-                      child: viewModel.isDirty
-                          ? const Text('Save')
-                          : const Text('Skip'),
-                    ),
-                  ],
+                      const SizedBox(height: 20),
+                      TextField(
+                        onChanged: viewModel.setName,
+                        textAlign: TextAlign.center,
+                        decoration: const InputDecoration(
+                          labelText: 'Name',
+                          floatingLabelBehavior: FloatingLabelBehavior.never,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      TextButton(
+                        onPressed: viewModel.save,
+                        child: viewModel.isDirty
+                            ? const Text('Save')
+                            : const Text('Skip'),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          if (viewModel.isBusy)
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[200]!.withOpacity(0.8),
+            if (viewModel.isBusy)
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200]!.withOpacity(0.8),
+                ),
+                child: const Center(
+                  child: CircularProgressIndicator(),
+                ),
               ),
-              child: const Center(
-                child: CircularProgressIndicator(),
-              ),
-            ),
-        ],
+          ],
+        ),
       ),
     );
   }
