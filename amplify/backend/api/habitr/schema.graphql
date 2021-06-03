@@ -51,8 +51,8 @@ type Habit @model
             { allow: private, operations: [read] }
             { allow: groups, groups: ["admin"] }
         ])
-    owner: String!
-    author: User!
+    owner: String
+    author: User
         @connection(fields: ["owner"])
     comments: [Comment!] @connection
 }
@@ -66,8 +66,8 @@ type Comment @model
         { allow: owner, operations: [create, delete, update] }              # Read, create, update, and delete access for owners
     ]) {
     id: ID!
-    owner: String!
-    by: User! @connection(fields: ["owner"])
+    owner: String
+    by: User @connection(fields: ["owner"])
     habit: Habit! @connection
     comment: String!
 }
@@ -86,12 +86,16 @@ type S3Object {
 }
 
 type Mutation {
-    vote(habitId: ID!, type: VoteType!): VoteResult                         # Custom resolver for atomic voting operations
+    vote(habitId: ID!, type: VoteType!): VoteResult                               # Custom resolver for atomic voting operations
 }
 
 type Subscription {
     subscribeToUser(username: String!): User
         @aws_subscribe(mutations: ["updateUser"])
+        @aws_api_key
+        @aws_cognito_user_pools
+    subscribeToVotes: VoteResult
+        @aws_subscribe(mutations: ["vote"])
         @aws_api_key
         @aws_cognito_user_pools
 }

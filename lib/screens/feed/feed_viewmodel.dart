@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:habitr/blocs/auth/auth_bloc.dart';
+import 'package:habitr/models/VoteResult.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/models/Habit.dart';
@@ -27,6 +28,7 @@ class FeedViewModel extends BaseViewModel {
 
   StreamSubscription<AuthState>? _authSubscription;
   StreamSubscription<Habit>? _habitSubscription;
+  StreamSubscription<VoteResult>? _voteResultSubscription;
 
   void init() {
     final authState = _authBloc.state as AuthLoggedIn;
@@ -42,6 +44,29 @@ class FeedViewModel extends BaseViewModel {
         notifyListeners();
       }
     });
+    _voteResultSubscription = _apiService.voteResults.listen((voteResult) {
+      var user = voteResult.user;
+      if (user.username == _user.username) {
+        _user = _user.copyWith(
+          upvotedHabits: user.upvotedHabits,
+          downvotedHabits: user.downvotedHabits,
+        );
+        _upvotedHabits = user.upvotedHabits?.toSet() ?? {};
+        _downvotedHabits = user.downvotedHabits?.toSet() ?? {};
+      }
+      var habit = voteResult.habit;
+      if (_habits.containsKey(habit.id)) {
+        _habits[habit.id] = _habits[habit.id]!.copyWith(
+          ups: habit.ups,
+          downs: habit.downs,
+        );
+      } else {
+        _habits[habit.id] = habit;
+      }
+      if (hasListeners) {
+        notifyListeners();
+      }
+    });
     fetchHabits();
   }
 
@@ -49,6 +74,7 @@ class FeedViewModel extends BaseViewModel {
   void dispose() {
     _authSubscription?.cancel();
     _habitSubscription?.cancel();
+    _voteResultSubscription?.cancel();
     super.dispose();
   }
 

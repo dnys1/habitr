@@ -95,15 +95,29 @@ mutation UpdateHabit($input: UpdateHabitInput!) {
   }
 }
 
+fragment AllVoteResultFields on VoteResult {
+  habit {
+    id
+    tagline
+    category
+    ups
+    downs
+  }
+  user {
+    username
+    upvotedHabits
+    downvotedHabits
+  }
+}
+
 mutation VoteForHabit($habitId: ID!, $type: VoteType!) {
   vote(habitId: $habitId, type: $type) {
-    habit {
-      ups
-      downs
-    }
-    user {
-      upvotedHabits
-      downvotedHabits
-    }
+    ...AllVoteResultFields
+  }
+}
+
+subscription SubscribeToVotes {
+  subscribeToVotes {
+    ...AllVoteResultFields
   }
 }

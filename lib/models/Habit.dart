@@ -29,7 +29,7 @@ class Habit extends Model {
   final String? category;
   final int? ups;
   final int? downs;
-  final User author;
+  final User? author;
   final List<Comment>? comments;
   final int? version;
 
@@ -58,7 +58,7 @@ class Habit extends Model {
       required String? category,
       int? ups,
       int? downs,
-      required User author,
+      required User? author,
       List<Comment>? comments,
       int? version}) {
     return Habit._internal(
@@ -137,7 +137,9 @@ class Habit extends Model {
     var category = json['category'];
     var ups = json['ups'];
     var downs = json['downs'];
-    var author = User.fromJson(new Map<String, dynamic>.from(json['author']));
+    var author = json['author'] is Map
+        ? User.fromJson(new Map<String, dynamic>.from(json['author']))
+        : null;
     var comments = json['comments'] is List
         ? (json['comments'] as List)
             .map((e) => Comment.fromJson(new Map<String, dynamic>.from(e)))
@@ -162,7 +164,7 @@ class Habit extends Model {
         'category': category,
         'ups': ups,
         'downs': downs,
-        'author': author.toJson(),
+        'author': author?.toJson(),
         'comments': comments?.map((e) => e.toJson()).toList(),
         '_version': version,
       };

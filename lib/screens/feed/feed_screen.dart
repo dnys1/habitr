@@ -108,7 +108,7 @@ class HabitListTile extends StatelessWidget {
         ],
       ),
       title: Text(habit.tagline),
-      subtitle: Text(habit.author.username),
+      subtitle: habit.author != null ? Text(habit.author!.username) : null,
     );
   }
 }

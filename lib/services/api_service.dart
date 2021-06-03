@@ -1,9 +1,11 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_flutter/amplify.dart';
 import 'package:habitr/models/ModelProvider.dart';
 import 'package:habitr/models/S3Object.dart';
+import 'package:habitr/models/VoteResult.dart';
 import 'package:habitr_models/habitr_models.dart';
 import 'package:gql/language.dart' as gql;
 import 'package:gql/ast.dart' as ast;
@@ -12,6 +14,7 @@ abstract class ApiService {
   Future<User?> getUser(String username);
   Future<List<Habit>> listHabits();
   Future<void> voteForHabit(String habitId, VoteType type);
+  Stream<VoteResult> get voteResults;
 }
 
 class AmplifyApiService implements ApiService {
@@ -122,12 +125,51 @@ class AmplifyApiService implements ApiService {
 
     final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
+        AllVoteResultFields,
         VoteForHabit,
       ]),
       operationName,
       mutation.vars.toJson(),
     );
 
-    final data = resp ?? {};
+    if (resp == null) {
+      throw Exception('Could not vote for habit. Please try again.');
+    }
+  }
+
+  final _voteResultStreamController = StreamController<VoteResult>.broadcast();
+  GraphQLSubscriptionOperation? _voteResultSubscription;
+
+  @override
+  Stream<VoteResult> get voteResults {
+    const operationName = 'subscribeToVotes';
+    const _document = ast.DocumentNode(definitions: [
+      AllVoteResultFields,
+      SubscribeToVotes,
+    ]);
+
+    _voteResultSubscription ??= Amplify.API.subscribe<String>(
+      request: GraphQLRequest(document: gql.printNode(_document)),
+      onData: (data) {
+        print('Got vote result: $data');
+        final map = jsonDecode(data.data) as Map<String, dynamic>;
+        final voteResult = map[operationName] as Map<String, dynamic>?;
+        if (voteResult == null) {
+          return;
+        }
+        _voteResultStreamController.add(VoteResult.fromJson(voteResult));
+      },
+      onEstablished: () {
+        print('Established vote result subscription');
+      },
+      onError: (error) => _voteResultStreamController.addError(error),
+      onDone: () {},
+    );
+    _voteResultStreamController.onCancel ??= () {
+      _voteResultSubscription?.cancel();
+      _voteResultSubscription = null;
+    };
+
+    return _voteResultStreamController.stream;
   }
 }
