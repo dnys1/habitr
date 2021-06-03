@@ -151,7 +151,6 @@ class AmplifyApiService implements ApiService {
     _voteResultSubscription ??= Amplify.API.subscribe<String>(
       request: GraphQLRequest(document: gql.printNode(_document)),
       onData: (data) {
-        print('Got vote result: $data');
         final map = jsonDecode(data.data) as Map<String, dynamic>;
         final voteResult = map[operationName] as Map<String, dynamic>?;
         if (voteResult == null) {
@@ -159,9 +158,7 @@ class AmplifyApiService implements ApiService {
         }
         _voteResultStreamController.add(VoteResult.fromJson(voteResult));
       },
-      onEstablished: () {
-        print('Established vote result subscription');
-      },
+      onEstablished: () {},
       onError: (error) => _voteResultStreamController.addError(error),
       onDone: () {},
     );
