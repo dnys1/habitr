@@ -165,6 +165,7 @@ class AmplifyApiService implements ApiService {
     _voteResultStreamController.onCancel ??= () {
       _voteResultSubscription?.cancel();
       _voteResultSubscription = null;
+      _voteResultStreamController.onCancel = null;
     };
 
     return _voteResultStreamController.stream;

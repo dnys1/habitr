@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/blocs/auth/auth_data.dart';
-import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 
 class LoginViewModel extends BaseViewModel {

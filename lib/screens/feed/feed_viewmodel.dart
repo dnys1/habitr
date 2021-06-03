@@ -131,7 +131,7 @@ class FeedViewModel extends BaseViewModel {
       await _apiService.voteForHabit(habit.id, type);
     } on Exception catch (e) {
       safePrint('Error voting for habit: $e');
-      setError(e);
+      setError('Error casting vote. Please try again.');
       _loadingHabits.remove(habit.id);
       notifyListeners();
     }
@@ -149,7 +149,7 @@ class FeedViewModel extends BaseViewModel {
       _setHabits(habits);
     } on Exception catch (e) {
       safePrint('Error fetching habits: $e');
-      setError(e);
+      setError('Error loading feed. Please try again.');
     } finally {
       setBusy(false);
     }

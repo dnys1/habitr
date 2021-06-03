@@ -71,9 +71,7 @@ class _MyAppState extends State<MyApp> {
 
     _authExceptions = _authBloc.exceptions.listen((exception) {
       safePrint('Auth Exception: ${exception.message}');
-      scaffoldMessengerKey.currentState?.showSnackBar(SnackBar(
-        content: Text(exception.message),
-      ));
+      showErrorSnackbar(exception.message);
     });
 
     widget._storageService.init();

@@ -102,6 +102,7 @@ class AmplifyAuthService implements AuthService {
 
   @override
   Stream<User> get userUpdates async* {
+    const operationName = 'subscribeToUser';
     const _document = ast.DocumentNode(definitions: [
       AllUserFields,
       SubscribeToUser,
@@ -117,9 +118,8 @@ class AmplifyAuthService implements AuthService {
       ),
       onData: (event) {
         final data = event.data;
-        final userMap =
-            (jsonDecode(data) as Map<String, dynamic>)['subscribeToUser'];
-        final user = User.fromJson(userMap);
+        final userMap = jsonDecode(data) as Map<String, dynamic>;
+        final user = User.fromJson(userMap[operationName]);
         _userController.add(user);
       },
       onEstablished: () {},

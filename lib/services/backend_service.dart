@@ -4,7 +4,6 @@ import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 
 import 'package:habitr/amplifyconfiguration.dart';
-import 'package:habitr/models/ModelProvider.dart';
 
 abstract class BackendService {
   Future<void> configure();
