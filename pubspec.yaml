@@ -54,6 +54,7 @@ dependencies:
     path: models
   image_picker: ^0.8.0
   provider: ^5.0.0
+  google_fonts: ^2.1.0
 
 dependency_overrides:
   json_annotation: ^4.0.1

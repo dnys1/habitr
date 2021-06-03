@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/screens/login/login_viewmodel.dart';
 import 'package:habitr/util/validators.dart';
@@ -40,6 +41,13 @@ class _LoginView extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
+                const Spacer(flex: 3),
+                Text(
+                  'Habitr',
+                  style: GoogleFonts.poppins(
+                    textStyle: Theme.of(context).textTheme.headline1,
+                  ),
+                ),
                 const Spacer(),
                 TextFormField(
                   onChanged: viewModel.setUsername,
@@ -67,9 +75,11 @@ class _LoginView extends StatelessWidget {
                         onPressed: viewModel.login,
                         child: const Text('Login'),
                       ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 5),
+                const Divider(),
+                const SizedBox(height: 5),
                 const LoginWithAmazonButton(),
-                const Spacer(),
+                const Spacer(flex: 4),
                 TextButton(
                   child: const Text('Sign Up'),
                   onPressed: viewModel.goToSignUp,
