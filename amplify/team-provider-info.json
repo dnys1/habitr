@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-habitr-dev-142414-authRole",
+      "UnauthRoleArn": "arn:aws:iam::135644786197:role/amplify-habitr-dev-142414-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::135644786197:role/amplify-habitr-dev-142414-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-habitr-dev-142414-deployment",
+      "UnauthRoleName": "amplify-habitr-dev-142414-unauthRole",
+      "StackName": "amplify-habitr-dev-142414",
+      "StackId": "arn:aws:cloudformation:us-west-2:135644786197:stack/amplify-habitr-dev-142414/0f9658e0-bffb-11eb-a624-06a35f9061a9",
+      "AmplifyAppId": "d4rizuv1qtm1b"
+    },
+    "categories": {
+      "auth": {
+        "habitr277c3719": {}
+      }
+    }
+  }
+}

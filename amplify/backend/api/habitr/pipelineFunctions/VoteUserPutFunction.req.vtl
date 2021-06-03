@@ -1,0 +1,39 @@
+## Updates the user by adding/removing the habit from their tracking, as appropriate
+
+## Return if the last function did not execute. Otherwise, we can assume it succeeded
+## and make the necessary updates to the user.
+#if($util.isNull($ctx.prev.result))
+#return
+#end
+
+#set($username = $ctx.stash.username)
+#set($habitId = $ctx.stash.habitId)
+#set($upvote = $ctx.stash.upvote)
+#set($downvote = $ctx.stash.downvote)
+#set($removeUpvote = $ctx.stash.removeUpvote)
+#set($removeDownvote = $ctx.stash.removeDownvote)
+{
+    "version": "2018-05-29",
+    "operation": "UpdateItem",
+    "key": {
+        "username": $util.dynamodb.toDynamoDBJson($username)
+    },
+
+    #if($upvote)
+        #set($expression = "ADD upvotedHabits :habitId DELETE downvotedHabits :habitId")
+    #elseif($downvote)
+        #set($expression = "ADD downvotedHabits :habitId DELETE upvotedHabits :habitId")
+    #elseif($removeUpvote)
+        #set($expression = "DELETE upvotedHabits :habitId")
+    #elseif($removeDownvote)
+        #set($expression = "DELETE downvotedHabits :habitId")
+    #end
+
+    "update": {
+        "expression": "${expression}",
+        "expressionValues": {
+            ":habitId" : { "SS": [ "${habitId}" ] }
+        }
+    },
+    "_version": $util.toJson($ctx.stash.userVersion)
+}

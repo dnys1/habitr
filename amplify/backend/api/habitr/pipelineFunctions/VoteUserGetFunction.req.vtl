@@ -1,0 +1,8 @@
+#set($username = $ctx.stash.username)
+{
+    "version": "2018-05-29",
+    "operation": "GetItem",
+    "key": {
+        "username": $util.dynamodb.toDynamoDBJson($username)
+    }
+}

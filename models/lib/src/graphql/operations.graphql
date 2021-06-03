@@ -1,0 +1,109 @@
+fragment AllHabitFields on Habit {
+  id
+  tagline
+  author {
+    username
+  }
+  comments {
+    items {
+      id
+    }
+  }
+  createdAt
+  updatedAt
+  ups
+  downs
+  _version
+}
+
+fragment AllUserFields on User {
+  username
+  name
+  avatar {
+    bucket
+    region
+    key
+  }
+  comments {
+    items {
+      id
+      habit {
+        id
+      }
+      comment
+    }
+  }
+  habits {
+    items {
+      id
+    }
+  }
+  upvotedHabits
+  downvotedHabits
+  _version
+}
+
+mutation CreateHabit($habit: CreateHabitInput!) {
+  createHabit(input: $habit) {
+    id
+  }
+}
+
+query ListHabits {
+  listHabits {
+    items {
+      ...AllHabitFields
+    }
+  }
+}
+
+query GetHabit($habitId: ID!) {
+  getHabit(id: $habitId) {
+    ...AllHabitFields
+  }
+}
+
+query GetUser($username: String!) {
+  getUser(username: $username) {
+    ...AllUserFields
+  }
+}
+
+subscription SubscribeToUser($username: String!) {
+  subscribeToUser(username: $username) {
+    ...AllUserFields
+  }
+}
+
+mutation CreateUser($username: String!) {
+  createUser(input: {
+    username: $username
+  }) {
+    username
+  }
+}
+
+mutation UpdateUser($input: UpdateUserInput!) {
+  updateUser(input: $input) {
+    ...AllUserFields
+  }
+}
+
+mutation UpdateHabit($input: UpdateHabitInput!) {
+  updateHabit(input: $input) {
+    ...AllHabitFields
+  }
+}
+
+mutation VoteForHabit($habitId: ID!, $type: VoteType!) {
+  vote(habitId: $habitId, type: $type) {
+    habit {
+      ups
+      downs
+    }
+    user {
+      upvotedHabits
+      downvotedHabits
+    }
+  }
+}

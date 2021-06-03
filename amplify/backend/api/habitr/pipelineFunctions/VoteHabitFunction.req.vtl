@@ -1,0 +1,69 @@
+## Updates the Habit by atomically incrementing or decrementing the votes.
+
+#set($username = $ctx.stash.username)
+#set($habitId = $ctx.stash.habitId)
+#set($wasUpvoted = $ctx.stash.wasUpvoted)
+#set($wasDownvoted = $ctx.stash.wasDownvoted)
+
+#set($type = $ctx.arguments.type)
+#set($upvote = $type == "upvote")
+#set($downvote = $type == "downvote")
+#set($removeUpvote = $type == "removeUpvote" || ($downvote && $wasUpvoted))
+#set($removeDownvote = $type == "removeDownvote" || ($upvote && $wasDownvoted))
+
+#if($wasUpvoted && $upvote)
+#return
+#elseif($wasDownvoted && $downvote)
+#return
+#end
+
+$util.qr($ctx.stash.put("upvote", $upvote))
+$util.qr($ctx.stash.put("downvote", $downvote))
+$util.qr($ctx.stash.put("removeUpvote", $removeUpvote))
+$util.qr($ctx.stash.put("removeDownvote", $removeDownvote))
+
+{
+    "version": "2018-05-29",
+    "operation": "UpdateItem",
+    "key": {
+        "id": $util.dynamodb.toDynamoDBJson($habitId)
+    },
+
+    #set($expression = "")
+    #set($expressionValues = {})
+    #if($upvote)
+        #set($expression = "ADD ups :plusOne")
+    #elseif($downvote)
+        #set($expression = "ADD downs :plusOne")
+    #end
+
+    #if($removeUpvote)
+        #if($util.isNullOrEmpty($expression))
+            #set($expression = "ADD")
+        #else
+            #set($expression = "$expression,")
+        #end
+        #set($expression = "$expression ups :minusOne")
+    #elseif($removeDownvote)
+        #if($util.isNullOrEmpty($expression))
+            #set($expression = "ADD")
+        #else
+            #set($expression = "$expression,")
+        #end
+        #set($expression = "$expression downs :minusOne")
+    #end
+
+    "update": {
+        "expression": "$expression",
+
+        ## DynamoDB complains if there are unused values here.
+        #if($upvote || $downvote)
+            $util.qr($expressionValues.put(":plusOne", { "N": 1 }))
+        #end
+        #if($removeUpvote || $removeDownvote)
+            $util.qr($expressionValues.put(":minusOne", { "N": -1 }))
+        #end
+        "expressionValues": $util.toJson($expressionValues)
+    },
+    "_version": 1
+}

@@ -1,0 +1,32 @@
+#if ($ctx.error)
+    $util.error($ctx.error.message, $ctx.error.type)
+#else
+
+#set($user = $ctx.result)
+#set($habitId = $ctx.stash.habitId)
+
+## Determine if the habit was previously upvoted or downvoted
+#set($wasUpvoted = false)
+#set($wasDownvoted = false)
+#foreach($upvotedHabit in $user.upvotedHabits)
+    #if($upvotedHabit == $habitId)
+    #set($wasUpvoted = true)
+    #end
+#end
+
+#foreach($downvotedHabit in $user.downvotedHabits)
+    #if($downvotedHabit == $habitId)
+    #set($wasDownvoted = true)
+    #end
+#end
+
+#if($wasUpvoted && $wasDownvoted)
+    $util.error("Inconsistent state.")
+#end
+
+$util.qr($ctx.stash.put("wasUpvoted", $wasUpvoted))
+$util.qr($ctx.stash.put("wasDownvoted", $wasDownvoted))
+$util.qr($ctx.stash.put("userVersion", $user.get("_version")))
+
+$util.toJson($ctx.result)
+#end

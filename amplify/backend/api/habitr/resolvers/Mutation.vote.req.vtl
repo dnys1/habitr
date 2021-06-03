@@ -1,0 +1,8 @@
+## Allow only Cognito User Pool-authenticated users
+#set($username = $context.identity.username)
+#if( $util.isNull($username) )
+    $util.unauthorized()
+#end
+$util.qr($ctx.stash.put("username", $username))
+$util.qr($ctx.stash.put("habitId", $ctx.arguments.habitId))
+{}
