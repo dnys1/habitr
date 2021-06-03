@@ -31,6 +31,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   @override
   Future<void> close() async {
     await _userUpdates?.cancel();
+    await _exceptionController.close();
     return super.close();
   }
 
@@ -90,20 +91,27 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await for (var user in _authService.userUpdates) {
         yield AuthUserUpdate(user);
       }
-    } on Exception {
-      yield const AuthLogout();
+    } on Exception catch (e) {
+      yield AuthFailure(e);
     }
   }
 
-  Stream<AuthState> _login(AuthLoginData loginData) async* {
+  Stream<AuthState> _login(AuthData loginData) async* {
     try {
       _authData = loginData;
-      final user = await _authService.login(
-        loginData.username,
-        loginData.password,
-      );
-      yield AuthLoggedIn(user);
-      _userUpdates ??= _userEvents.listen(add);
+      User? user;
+      if (loginData is AuthLoginData) {
+        user = await _authService.login(
+          loginData.username!,
+          loginData.password!,
+        );
+      } else {
+        user = await _authService.loginWithProvider(loginData.provider!);
+      }
+      if (user != null) {
+        yield AuthLoggedIn(user);
+        _userUpdates ??= _userEvents.listen(add);
+      }
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString()));
     }
@@ -113,11 +121,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       _authData = signupData;
       await _authService.signUp(
-        signupData.username,
-        signupData.password,
+        signupData.username!,
+        signupData.password!,
         signupData.email,
       );
-      yield AuthInFlow.verify(signupData.username);
+      yield AuthInFlow.verify(signupData.username!);
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString()));
     }
@@ -129,10 +137,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     assert(username != null);
     try {
       await _authService.verify(username!, code);
-      if (_authData != null) {
+      if (_authData?.username != null && _authData?.password != null) {
         final user = await _authService.login(
-          _authData!.username,
-          _authData!.password,
+          _authData!.username!,
+          _authData!.password!,
         );
         yield AuthInFlow.addImage(user);
       } else {
@@ -145,7 +153,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   Stream<AuthState> _logout() async* {
     try {
-      await _userUpdates?.cancel();
+      _userUpdates?.cancel();
       _userUpdates = null;
       await _authService.logout();
       yield AuthInFlow.login();

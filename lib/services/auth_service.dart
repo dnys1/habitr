@@ -12,6 +12,7 @@ import 'package:gql/ast.dart' as ast;
 
 abstract class AuthService {
   Future<User> login(String username, String password);
+  Future<User?> loginWithProvider(AuthProvider provider);
   Future<void> signUp(String username, String password, String email);
   Future<void> verify(String username, String code);
   Future<void> logout();
@@ -41,6 +42,23 @@ class AmplifyAuthService implements AuthService {
       throw const AuthException('Could not login');
     }
     return (await currentUser)!;
+  }
+
+  @override
+  Future<User?> loginWithProvider(AuthProvider provider) async {
+    final user = await currentUser;
+    if (user != null) {
+      return user;
+    }
+    try {
+      final result = await Amplify.Auth.signInWithWebUI(provider: provider);
+      if (!result.isSignedIn) {
+        throw const AuthException('Could not login');
+      }
+      return (await currentUser)!;
+    } on UserCancelledException {
+      return null;
+    }
   }
 
   @override

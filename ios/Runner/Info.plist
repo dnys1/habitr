@@ -45,5 +45,14 @@
 	<string>Habitr uses the photo library to set a custom avatar.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Habitr uses the camera to set a custom avatar.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>habitr</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

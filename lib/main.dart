@@ -98,7 +98,7 @@ class _MyAppState extends State<MyApp> {
         child: MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primarySwatch: Colors.deepPurple,
           ),
           scaffoldMessengerKey: scaffoldMessengerKey,
           home: StreamBuilder<AuthState>(

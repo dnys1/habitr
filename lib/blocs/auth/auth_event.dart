@@ -32,7 +32,7 @@ class AuthChangeScreen extends AuthEvent {
 }
 
 class AuthLogin extends AuthEvent {
-  final AuthLoginData data;
+  final AuthData data;
 
   const AuthLogin(this.data);
 
