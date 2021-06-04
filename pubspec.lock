@@ -8,6 +8,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "22.0.0"
+  amplify_analytics_pinpoint:
+    dependency: "direct main"
+    description:
+      path: "packages/amplify_analytics_pinpoint"
+      ref: null-safety-master
+      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
+      url: "https://github.com/aws-amplify/amplify-flutter"
+    source: git
+    version: "0.1.5"
   amplify_analytics_plugin_interface:
     dependency: "direct overridden"
     description:

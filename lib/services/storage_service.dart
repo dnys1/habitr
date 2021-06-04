@@ -5,6 +5,7 @@ import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
+import 'package:habitr/services/analytics_service.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/amplifyconfiguration.dart';
 import 'package:image_picker/image_picker.dart';
@@ -31,8 +32,9 @@ class AmplifyStorageService extends StorageService {
   static final _imagePicker = ImagePicker();
 
   final AmplifyApiService _apiService;
+  final AnalyticsService _analyticsService;
 
-  AmplifyStorageService(this._apiService);
+  AmplifyStorageService(this._apiService, this._analyticsService);
 
   File? _lostFile;
   @override
@@ -66,6 +68,7 @@ class AmplifyStorageService extends StorageService {
       user,
       avatar: S3Object(bucket, region, key),
     );
+    _analyticsService.recordEvent('photoUpload');
   }
 
   @override

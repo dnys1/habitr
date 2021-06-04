@@ -37,5 +37,11 @@
       "service": "S3",
       "providerPlugin": "awscloudformation"
     }
+  },
+  "analytics": {
+    "habitr": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

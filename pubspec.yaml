@@ -21,6 +21,11 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  amplify_analytics_pinpoint:
+    git:
+      url: https://github.com/aws-amplify/amplify-flutter
+      ref: null-safety-master
+      path: packages/amplify_analytics_pinpoint
   amplify_auth_cognito:
     git:
       url: https://github.com/aws-amplify/amplify-flutter

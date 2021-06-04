@@ -11,6 +11,7 @@ import 'package:habitr/screens/login/login_screen.dart';
 import 'package:habitr/screens/signup/add_image_screen.dart';
 import 'package:habitr/screens/signup/signup_screen.dart';
 import 'package:habitr/screens/signup/verify_screen.dart';
+import 'package:habitr/services/analytics_service.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/backend_service.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatefulWidget {
   final BackendService _backendService;
   final DataService _dataService;
   late final StorageService _storageService;
+  final AnalyticsService _analyticsService;
 
   MyApp({
     Key? key,
@@ -40,16 +42,21 @@ class MyApp extends StatefulWidget {
     BackendService? backendService,
     DataService? dataService,
     StorageService? storageService,
+    AnalyticsService? analyticsService,
   })  : _apiService = apiService ?? AmplifyApiService(),
         _backendService = backendService ?? AmplifyBackendService(),
         _dataService = dataService ?? AmplifyDataService(),
+        _analyticsService = analyticsService ?? AmplifyAnalyticsService(),
         super(key: key) {
     _authService = authService ??
         AmplifyAuthService(
           apiService: _apiService,
         );
     _storageService = storageService ??
-        AmplifyStorageService(_apiService as AmplifyApiService);
+        AmplifyStorageService(
+          _apiService as AmplifyApiService,
+          _analyticsService,
+        );
   }
 
   @override
@@ -92,6 +99,7 @@ class _MyAppState extends State<MyApp> {
         Provider.value(value: widget._apiService),
         Provider.value(value: widget._storageService),
         Provider.value(value: widget._dataService),
+        Provider.value(value: widget._analyticsService),
       ],
       child: BlocProvider.value(
         value: _authBloc,

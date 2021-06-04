@@ -2,6 +2,11 @@ PODS:
   - Amplify (1.9.2):
     - Amplify/Default (= 1.9.2)
   - Amplify/Default (1.9.2)
+  - amplify_analytics_pinpoint (0.0.1):
+    - Amplify
+    - amplify_core
+    - AmplifyPlugins/AWSPinpointAnalyticsPlugin
+    - Flutter
   - amplify_api (0.0.1):
     - Amplify
     - amplify_core
@@ -37,6 +42,10 @@ PODS:
     - AWSCore (~> 2.24.0)
     - AWSMobileClient (~> 2.24.0)
     - AWSPluginsCore (= 1.9.2)
+  - AmplifyPlugins/AWSPinpointAnalyticsPlugin (1.9.2):
+    - AWSCore (~> 2.24.0)
+    - AWSPinpoint (~> 2.24.0)
+    - AWSPluginsCore (= 1.9.2)
   - AmplifyPlugins/AWSS3StoragePlugin (1.9.2):
     - AWSCore (~> 2.24.0)
     - AWSPluginsCore (= 1.9.2)
@@ -54,6 +63,8 @@ PODS:
     - AWSAuthCore (= 2.24.1)
     - AWSCognitoIdentityProvider (= 2.24.1)
     - AWSCognitoIdentityProviderASF (= 2.24.1)
+    - AWSCore (= 2.24.1)
+  - AWSPinpoint (2.24.1):
     - AWSCore (= 2.24.1)
   - AWSPluginsCore (1.9.2):
     - Amplify (= 1.9.2)
@@ -75,6 +86,7 @@ PODS:
   - Starscream (3.1.1)
 
 DEPENDENCIES:
+  - amplify_analytics_pinpoint (from `.symlinks/plugins/amplify_analytics_pinpoint/ios`)
   - amplify_api (from `.symlinks/plugins/amplify_api/ios`)
   - amplify_auth_cognito (from `.symlinks/plugins/amplify_auth_cognito/ios`)
   - amplify_core (from `.symlinks/plugins/amplify_core/ios`)
@@ -95,6 +107,7 @@ SPEC REPOS:
     - AWSCognitoIdentityProviderASF
     - AWSCore
     - AWSMobileClient
+    - AWSPinpoint
     - AWSPluginsCore
     - AWSS3
     - FMDB
@@ -102,6 +115,8 @@ SPEC REPOS:
     - Starscream
 
 EXTERNAL SOURCES:
+  amplify_analytics_pinpoint:
+    :path: ".symlinks/plugins/amplify_analytics_pinpoint/ios"
   amplify_api:
     :path: ".symlinks/plugins/amplify_api/ios"
   amplify_auth_cognito:
@@ -123,6 +138,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Amplify: 16dcca0275599bc3fa0bb19a02259f058a9f0c45
+  amplify_analytics_pinpoint: df3010eb49161ada82712a6b74d3f77296ac561e
   amplify_api: 9a94aa18c1576ee0f3bae038b34c227e07b5c6ab
   amplify_auth_cognito: 2e090a788d0ba4e08f6438170b1e7aac872782b4
   amplify_core: 8b38d20089fe4f225c14db6892f586bd03824a42
@@ -135,6 +151,7 @@ SPEC CHECKSUMS:
   AWSCognitoIdentityProviderASF: ffc62276197db5c41d8f7ce952443fb29e2967cc
   AWSCore: f6cfada8b48d569c11b94e49e8fb184b9c1a2e7e
   AWSMobileClient: b39ba2044701c4d013814bab148550d10b47f8b3
+  AWSPinpoint: 3fb2a0cc2879c26df6c370a27c5def4f2a370ebd
   AWSPluginsCore: dcedd6826f38917f6b8bc11f261abb0fc0eb2977
   AWSS3: e5b5a1595e08c52bb321495d7122e1d331134317
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
