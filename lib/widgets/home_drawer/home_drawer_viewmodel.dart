@@ -33,7 +33,7 @@ class HomeDrawerViewModel extends BaseViewModel {
   Future<void> logout() async {
     setBusy(true);
     _authBloc.add(const AuthLogout());
-    await Future.wait([
+    await Future.any([
       _authBloc.exceptions.first,
       _authBloc.stream.first,
     ]);

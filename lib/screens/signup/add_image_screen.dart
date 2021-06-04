@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,6 +47,7 @@ class _AddImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final radius = MediaQuery.of(context).size.shortestSide / 4;
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
@@ -72,9 +75,15 @@ class _AddImageView extends StatelessWidget {
                       GestureDetector(
                         onTap: viewModel.pickImage,
                         child: CircleAvatar(
-                          radius: MediaQuery.of(context).size.shortestSide / 4,
+                          radius: radius,
                           foregroundImage: viewModel.image != null
                               ? FileImage(viewModel.image!)
+                              : null,
+                          child: viewModel.image == null
+                              ? Icon(
+                                  Icons.perm_identity,
+                                  size: max(radius, 40),
+                                )
                               : null,
                         ),
                       ),

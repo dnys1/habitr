@@ -9,3 +9,11 @@ void showErrorSnackbar(String message) {
   );
   scaffoldMessengerKey.currentState?.showSnackBar(snackBar);
 }
+
+void showSuccessSnackbar(String message) {
+  final snackBar = SnackBar(
+    content: Text(message),
+    backgroundColor: Colors.green,
+  );
+  scaffoldMessengerKey.currentState?.showSnackBar(snackBar);
+}

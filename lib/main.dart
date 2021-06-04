@@ -101,6 +101,7 @@ class _MyAppState extends State<MyApp> {
             primarySwatch: Colors.deepPurple,
           ),
           scaffoldMessengerKey: scaffoldMessengerKey,
+          debugShowCheckedModeBanner: false,
           home: StreamBuilder<AuthState>(
             stream: _authBloc.stream,
             builder: (context, snapshot) {

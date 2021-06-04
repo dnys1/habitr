@@ -14,6 +14,7 @@ abstract class AuthService {
   Future<User> login(String username, String password);
   Future<User?> loginWithProvider(AuthProvider provider);
   Future<void> signUp(String username, String password, String email);
+  Future<void> resendVerificationCode(String username);
   Future<void> verify(String username, String code);
   Future<void> logout();
   Future<User?> get currentUser;
@@ -81,6 +82,11 @@ class AmplifyAuthService implements AuthService {
     if (!result.isSignUpComplete) {
       throw const AuthException();
     }
+  }
+
+  @override
+  Future<void> resendVerificationCode(String username) {
+    return Amplify.Auth.resendSignUpCode(username: username);
   }
 
   @override

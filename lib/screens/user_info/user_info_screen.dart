@@ -67,7 +67,10 @@ class _UserInfoView extends StatelessWidget {
                 if (viewModel.isBusy)
                   const CircularProgressIndicator()
                 else if (viewModel.hasError)
-                  Text(viewModel.error.toString())
+                  Text(
+                    viewModel.error.toString(),
+                    textAlign: TextAlign.center,
+                  )
                 else ...[
                   UserAvatar(viewModel.user!),
                   defaultPadding,
@@ -75,12 +78,14 @@ class _UserInfoView extends StatelessWidget {
                     Text(
                       viewModel.user!.name!,
                       style: Theme.of(context).textTheme.headline6,
+                      textAlign: TextAlign.center,
                     ),
                     defaultPadding,
                   ],
                   Text(
                     '@${viewModel.user!.username}',
                     style: Theme.of(context).textTheme.subtitle1,
+                    textAlign: TextAlign.center,
                   ),
                   defaultPadding,
                   _UserHabitsAndComments(

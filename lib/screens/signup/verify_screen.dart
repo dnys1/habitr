@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/screens/signup/verify_viewmodel.dart';
+import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/util/validators.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +14,11 @@ class VerifyScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) {
         final authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
-        return VerifyViewModel(authBloc);
+        final authService = Provider.of<AuthService>(context, listen: false);
+        return VerifyViewModel(
+          authBloc: authBloc,
+          authService: authService,
+        );
       },
       builder: (context, _) {
         return _VerifyView(
@@ -61,6 +66,16 @@ class _VerifyView extends StatelessWidget {
                             onPressed: viewModel.verify,
                             child: const Text('Verify'),
                           ),
+                    const SizedBox(height: 20),
+                    Text(
+                      'Please check your email for the 6-digit verification code.',
+                      style: Theme.of(context).textTheme.caption,
+                    ),
+                    const SizedBox(height: 5),
+                    TextButton(
+                      onPressed: viewModel.resendCode,
+                      child: const Text('Resend verification code'),
+                    ),
                   ],
                 ),
               ),

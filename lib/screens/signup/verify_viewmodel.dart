@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
+import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
+import 'package:habitr/util/print.dart';
+import 'package:habitr/util/scaffold.dart';
 
 class VerifyViewModel extends BaseViewModel {
   final AuthBloc _authBloc;
+  final AuthService _authService;
 
-  VerifyViewModel(this._authBloc);
+  VerifyViewModel({
+    required AuthBloc authBloc,
+    required AuthService authService,
+  })  : _authBloc = authBloc,
+        _authService = authService;
 
   final _formKey = GlobalKey<FormState>();
   GlobalKey<FormState> get formKey => _formKey;
@@ -28,5 +36,16 @@ class VerifyViewModel extends BaseViewModel {
       _authBloc.stream.first,
     ]);
     setBusy(false);
+  }
+
+  Future<void> resendCode() async {
+    final username = (_authBloc.state as AuthInFlow).username!;
+    try {
+      await _authService.resendVerificationCode(username);
+      showSuccessSnackbar('Code has been sent.');
+    } on Exception catch (e) {
+      safePrint('Error sending code: $e');
+      showErrorSnackbar('Code could not be sent. Please try again.');
+    }
   }
 }

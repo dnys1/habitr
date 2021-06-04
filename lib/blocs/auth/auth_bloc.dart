@@ -99,18 +99,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Stream<AuthState> _login(AuthData loginData) async* {
     try {
       _authData = loginData;
-      User? user;
       if (loginData is AuthLoginData) {
-        user = await _authService.login(
+        final user = await _authService.login(
           loginData.username!,
           loginData.password!,
         );
-      } else {
-        user = await _authService.loginWithProvider(loginData.provider!);
-      }
-      if (user != null) {
         yield AuthLoggedIn(user);
         _userUpdates ??= _userEvents.listen(add);
+      } else {
+        final user = await _authService.loginWithProvider(loginData.provider!);
+        if (user != null) {
+          yield AuthInFlow.addImage(user);
+        }
       }
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString()));
