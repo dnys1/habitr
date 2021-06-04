@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,15 +17,28 @@ import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/backend_service.dart';
 import 'package:habitr/services/data_service.dart';
+import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/services/storage_service.dart';
+import 'package:habitr/services/theme_service.dart';
 import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  Bloc.observer = HabitrBlocObserver();
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(MyApp());
+  Bloc.observer = HabitrBlocObserver();
+  final preferencesService = SharedPreferencesService();
+  await preferencesService.init();
+
+  runApp(
+    ThemeService(
+      preferencesService: preferencesService,
+      child: MyApp(
+        preferencesService: preferencesService,
+      ),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -33,7 +47,8 @@ class MyApp extends StatefulWidget {
   final BackendService _backendService;
   final DataService _dataService;
   late final StorageService _storageService;
-  final AnalyticsService _analyticsService;
+  late final AnalyticsService _analyticsService;
+  final PreferencesService _preferencesService;
 
   MyApp({
     Key? key,
@@ -43,11 +58,16 @@ class MyApp extends StatefulWidget {
     DataService? dataService,
     StorageService? storageService,
     AnalyticsService? analyticsService,
+    PreferencesService? preferencesService,
   })  : _apiService = apiService ?? AmplifyApiService(),
         _backendService = backendService ?? AmplifyBackendService(),
         _dataService = dataService ?? AmplifyDataService(),
-        _analyticsService = analyticsService ?? AmplifyAnalyticsService(),
+        _preferencesService = preferencesService ?? SharedPreferencesService(),
         super(key: key) {
+    _analyticsService = analyticsService ??
+        AmplifyAnalyticsService(
+          preferencesService: _preferencesService,
+        );
     _authService = authService ??
         AmplifyAuthService(
           apiService: _apiService,
@@ -74,11 +94,18 @@ class _MyAppState extends State<MyApp> {
       widget._authService,
       widget._backendService,
       widget._dataService,
+      widget._preferencesService,
     )..add(const AuthLoad());
 
     _authExceptions = _authBloc.exceptions.listen((exception) {
       safePrint('Auth Exception: ${exception.message}');
       showErrorSnackbar(exception.message);
+    });
+    _authBloc.stream.listen((_) {
+      widget._preferencesService.setString(
+        AuthBloc.stateKey,
+        jsonEncode(_authBloc.toJson()),
+      );
     });
 
     widget._storageService.init();
@@ -100,6 +127,7 @@ class _MyAppState extends State<MyApp> {
         Provider.value(value: widget._storageService),
         Provider.value(value: widget._dataService),
         Provider.value(value: widget._analyticsService),
+        Provider.value(value: widget._preferencesService),
       ],
       child: BlocProvider.value(
         value: _authBloc,
@@ -107,6 +135,9 @@ class _MyAppState extends State<MyApp> {
           title: 'Flutter Demo',
           theme: ThemeData(
             primarySwatch: Colors.deepPurple,
+            brightness: ThemeService.of(context).isDarkModeEnabled
+                ? Brightness.dark
+                : Brightness.light,
           ),
           scaffoldMessengerKey: scaffoldMessengerKey,
           debugShowCheckedModeBanner: false,

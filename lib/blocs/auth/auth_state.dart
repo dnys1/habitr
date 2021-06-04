@@ -7,6 +7,8 @@ abstract class AuthState with EquatableMixin {
   @override
   List<Object?> get props => [];
 
+  Map<String, dynamic> toJson() => {};
+
   @override
   String toString() {
     return '$runtimeType{}';
@@ -24,6 +26,7 @@ class AuthLoading extends AuthState {
 }
 
 /// The bloc is idle at a certain [screen].
+@JsonSerializable()
 class AuthInFlow extends AuthState {
   final AuthScreen screen;
   final User? user;
@@ -44,6 +47,12 @@ class AuthInFlow extends AuthState {
 
   @override
   List<Object?> get props => [screen, user, username];
+
+  @override
+  Map<String, dynamic> toJson() => _$AuthInFlowToJson(this);
+
+  factory AuthInFlow.fromJson(Map<String, dynamic> json) =>
+      _$AuthInFlowFromJson(json);
 
   @override
   String toString() {

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart'
     hide AuthException;
@@ -10,22 +11,43 @@ import 'package:habitr/models/User.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/backend_service.dart';
 import 'package:habitr/services/data_service.dart';
+import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/util/error.dart';
 import 'package:habitr/util/print.dart';
+import 'package:habitr/util/scaffold.dart';
+import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
+part 'auth_bloc.g.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
+  static const stateKey = 'auth_bloc_state';
+
   final AuthService _authService;
   final BackendService _backendService;
   final DataService _dataService;
+  final PreferencesService _preferencesService;
+
+  AuthState? fromJson(Map<String, dynamic> json) {
+    final state = json['state'] as Map<String, dynamic>?;
+    switch (json['runtimeType']) {
+      case 'AuthInFlow':
+        return AuthInFlow.fromJson(state!);
+    }
+  }
+
+  Map<String, dynamic> toJson() => {
+        'runtimeType': state.runtimeType.toString(),
+        'state': state.toJson(),
+      };
 
   AuthBloc(
     this._authService,
     this._backendService,
     this._dataService,
+    this._preferencesService,
   ) : super(const AuthInitial());
 
   @override
@@ -71,14 +93,24 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     } on Exception catch (e) {
       safePrint('Error configuring backend: $e');
     }
+
     try {
       final currentUser = await _authService.currentUser;
       if (currentUser != null) {
         yield AuthLoggedIn(currentUser);
         _userUpdates ??= _userEvents.listen(add);
-      } else {
-        yield AuthInFlow.login();
+        return;
       }
+
+      final storedState = _preferencesService.getString(stateKey);
+      if (storedState == null) {
+        yield AuthInFlow.login();
+        return;
+      }
+
+      final authState =
+          fromJson(jsonDecode(storedState) as Map<String, dynamic>);
+      yield authState ?? AuthInFlow.login();
     } on Exception catch (e, st) {
       safePrint('Exception occurred getting user: $e');
       yield AuthInFlow.login();
@@ -144,6 +176,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         );
         yield AuthInFlow.addImage(user);
       } else {
+        showSuccessSnackbar('Signup complete! 🎉');
         yield AuthInFlow.login();
       }
     } on Exception catch (e, st) {

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
+import 'package:habitr/screens/settings/settings_screen.dart';
 import 'package:habitr/screens/user_info/user_info_screen.dart';
 import 'package:habitr/widgets/home_drawer/home_drawer_viewmodel.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
@@ -52,6 +53,17 @@ class _HomeDrawerView extends StatelessWidget {
             leading: const Icon(Icons.category),
             title: const Text('Browse'),
             onTap: () {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings),
+            title: const Text('Settings'),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const SettingsScreen(),
+                ),
+              );
+            },
           ),
           ListTile(
             leading: const Icon(Icons.exit_to_app),
