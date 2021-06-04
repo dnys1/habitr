@@ -38,17 +38,28 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  Map<String, dynamic> toJson() => {
-        'runtimeType': state.runtimeType.toString(),
-        'state': state.toJson(),
-      };
-
   AuthBloc(
     this._authService,
     this._backendService,
     this._dataService,
     this._preferencesService,
   ) : super(const AuthInitial());
+
+  @override
+  void onTransition(Transition<AuthEvent, AuthState> transition) {
+    super.onTransition(transition);
+    final nextState = transition.nextState;
+    if (nextState is AuthInitial || nextState is AuthLoading) {
+      return;
+    }
+    _preferencesService.setString(
+      AuthBloc.stateKey,
+      jsonEncode({
+        'runtimeType': nextState.runtimeType.toString(),
+        'state': nextState.toJson(),
+      }),
+    );
+  }
 
   @override
   Future<void> close() async {
@@ -101,20 +112,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         _userUpdates ??= _userEvents.listen(add);
         return;
       }
-
-      final storedState = _preferencesService.getString(stateKey);
-      if (storedState == null) {
-        yield AuthInFlow.login();
-        return;
-      }
-
-      final authState =
-          fromJson(jsonDecode(storedState) as Map<String, dynamic>);
-      yield authState ?? AuthInFlow.login();
-    } on Exception catch (e, st) {
+    } on Exception catch (e) {
       safePrint('Exception occurred getting user: $e');
-      yield AuthInFlow.login();
     }
+
+    final storedState = _preferencesService.getString(stateKey);
+    if (storedState == null) {
+      yield AuthInFlow.login();
+      return;
+    }
+
+    final authState = fromJson(jsonDecode(storedState) as Map<String, dynamic>);
+    yield authState ?? AuthInFlow.login();
   }
 
   StreamSubscription<AuthEvent>? _userUpdates;

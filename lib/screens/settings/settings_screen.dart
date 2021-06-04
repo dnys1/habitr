@@ -57,8 +57,8 @@ class _SettingsScreenView extends StatelessWidget {
             ),
             SwitchListTile.adaptive(
               title: const Text('Dark Mode'),
-              value: ThemeService.of(context).isDarkModeEnabled,
-              onChanged: ThemeService.of(context).setDarkModeEnabled,
+              value: Provider.of<ThemeService>(context).isDarkModeEnabled,
+              onChanged: Provider.of<ThemeService>(context).setDarkModeEnabled,
             )
           ],
         ),

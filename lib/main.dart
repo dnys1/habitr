@@ -31,14 +31,9 @@ Future<void> main() async {
   final preferencesService = SharedPreferencesService();
   await preferencesService.init();
 
-  runApp(
-    ThemeService(
-      preferencesService: preferencesService,
-      child: MyApp(
-        preferencesService: preferencesService,
-      ),
-    ),
-  );
+  runApp(MyApp(
+    preferencesService: preferencesService,
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -49,6 +44,7 @@ class MyApp extends StatefulWidget {
   late final StorageService _storageService;
   late final AnalyticsService _analyticsService;
   final PreferencesService _preferencesService;
+  late final ThemeService _themeService;
 
   MyApp({
     Key? key,
@@ -59,6 +55,7 @@ class MyApp extends StatefulWidget {
     StorageService? storageService,
     AnalyticsService? analyticsService,
     PreferencesService? preferencesService,
+    ThemeService? themeService,
   })  : _apiService = apiService ?? AmplifyApiService(),
         _backendService = backendService ?? AmplifyBackendService(),
         _dataService = dataService ?? AmplifyDataService(),
@@ -76,6 +73,10 @@ class MyApp extends StatefulWidget {
         AmplifyStorageService(
           _apiService as AmplifyApiService,
           _analyticsService,
+        );
+    _themeService = themeService ??
+        ThemeService(
+          preferencesService: _preferencesService,
         );
   }
 
@@ -101,12 +102,6 @@ class _MyAppState extends State<MyApp> {
       safePrint('Auth Exception: ${exception.message}');
       showErrorSnackbar(exception.message);
     });
-    _authBloc.stream.listen((_) {
-      widget._preferencesService.setString(
-        AuthBloc.stateKey,
-        jsonEncode(_authBloc.toJson()),
-      );
-    });
 
     widget._storageService.init();
   }
@@ -128,45 +123,53 @@ class _MyAppState extends State<MyApp> {
         Provider.value(value: widget._dataService),
         Provider.value(value: widget._analyticsService),
         Provider.value(value: widget._preferencesService),
+        ChangeNotifierProvider.value(value: widget._themeService)
       ],
       child: BlocProvider.value(
         value: _authBloc,
-        child: MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.deepPurple,
-            brightness: ThemeService.of(context).isDarkModeEnabled
-                ? Brightness.dark
-                : Brightness.light,
-          ),
-          scaffoldMessengerKey: scaffoldMessengerKey,
-          debugShowCheckedModeBanner: false,
-          home: StreamBuilder<AuthState>(
-            stream: _authBloc.stream,
-            builder: (context, snapshot) {
-              final state = snapshot.data ?? const AuthLoading();
-              return Navigator(
-                pages: [
-                  if (state is AuthLoading)
-                    const MaterialPage(child: LoadingScreen()),
-                  if (state is AuthInFlow && state.screen == AuthScreen.login)
-                    const MaterialPage(child: LoginScreen()),
-                  if (state is AuthInFlow && state.screen == AuthScreen.signup)
-                    const MaterialPage(child: SignupScreen()),
-                  if (state is AuthInFlow && state.screen == AuthScreen.verify)
-                    const MaterialPage(child: VerifyScreen()),
-                  if (state is AuthInFlow &&
-                      state.screen == AuthScreen.addImage)
-                    const MaterialPage(child: AddImageScreen()),
-                  if (state is AuthLoggedIn)
-                    const MaterialPage(child: FeedScreen()),
-                ],
-                onPopPage: (route, result) {
-                  return route.didPop(result);
+        child: Builder(
+          builder: (context) {
+            return MaterialApp(
+              title: 'Flutter Demo',
+              theme: ThemeData(
+                primarySwatch: Colors.deepPurple,
+                brightness: Provider.of<ThemeService>(context).isDarkModeEnabled
+                    ? Brightness.dark
+                    : Brightness.light,
+              ),
+              scaffoldMessengerKey: scaffoldMessengerKey,
+              debugShowCheckedModeBanner: false,
+              home: StreamBuilder<AuthState>(
+                stream: _authBloc.stream,
+                builder: (context, snapshot) {
+                  final state = snapshot.data ?? const AuthLoading();
+                  return Navigator(
+                    pages: [
+                      if (state is AuthLoading)
+                        const MaterialPage(child: LoadingScreen()),
+                      if (state is AuthInFlow &&
+                          state.screen == AuthScreen.login)
+                        const MaterialPage(child: LoginScreen()),
+                      if (state is AuthInFlow &&
+                          state.screen == AuthScreen.signup)
+                        const MaterialPage(child: SignupScreen()),
+                      if (state is AuthInFlow &&
+                          state.screen == AuthScreen.verify)
+                        const MaterialPage(child: VerifyScreen()),
+                      if (state is AuthInFlow &&
+                          state.screen == AuthScreen.addImage)
+                        const MaterialPage(child: AddImageScreen()),
+                      if (state is AuthLoggedIn)
+                        const MaterialPage(child: FeedScreen()),
+                    ],
+                    onPopPage: (route, result) {
+                      return route.didPop(result);
+                    },
+                  );
                 },
-              );
-            },
-          ),
+              ),
+            );
+          },
         ),
       ),
     );
