@@ -61,6 +61,7 @@ dependencies:
   image_picker: ^0.8.0
   provider: ^5.0.0
   shared_preferences: ^2.0.6
+  stream_transform: ^2.0.0
 
 dependency_overrides:
   json_annotation: ^4.0.1

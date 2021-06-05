@@ -1,12 +1,24 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/blocs/auth/auth_data.dart';
+import 'package:habitr/services/api_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
+import 'package:habitr/util/print.dart';
+import 'package:stream_transform/stream_transform.dart';
 
 class SignupViewModel extends BaseViewModel {
   final AuthBloc _authBloc;
+  final ApiService _apiService;
 
-  SignupViewModel(this._authBloc);
+  SignupViewModel(this._authBloc, this._apiService) {
+    _usernameExistsController.stream
+        .debounce(const Duration(milliseconds: 400))
+        .listen((username) {
+      _getUsernameExists(username);
+    });
+  }
 
   final _formKey = GlobalKey<FormState>();
   GlobalKey<FormState> get formKey => _formKey;
@@ -15,6 +27,7 @@ class SignupViewModel extends BaseViewModel {
   String get username => _username;
   void setUsername(String username) {
     _username = username;
+    _usernameExistsController.add(username);
     notifyListeners();
   }
 
@@ -30,6 +43,40 @@ class SignupViewModel extends BaseViewModel {
   void setPassword(String password) {
     _password = password;
     notifyListeners();
+  }
+
+  final _usernameExistsController = StreamController<String>();
+
+  bool _usernameExistsLoading = false;
+  bool get usernameExistsLoading => _usernameExistsLoading;
+  void _setUsernameExistsLoading(bool loading) {
+    _usernameExistsLoading = loading;
+    if (hasListeners) {
+      notifyListeners();
+    }
+  }
+
+  bool _usernameExists = false;
+  bool get usernameExists => _usernameExists;
+  void _setUsernameExists(bool exists) {
+    _usernameExists = exists;
+    if (hasListeners) {
+      notifyListeners();
+    }
+  }
+
+  Future<void> _getUsernameExists(String username) async {
+    if (username.isEmpty) return;
+    _setUsernameExistsLoading(true);
+    try {
+      final exists = await _apiService.usernameExists(username);
+      _setUsernameExists(exists);
+    } on Exception catch (e) {
+      safePrint('Error checking if username exists: $e');
+      _setUsernameExists(true);
+    } finally {
+      _setUsernameExistsLoading(false);
+    }
   }
 
   Future<void> signUp() async {

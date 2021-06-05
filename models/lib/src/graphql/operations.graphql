@@ -125,3 +125,9 @@ subscription SubscribeToVotes {
     ...AllVoteResultFields
   }
 }
+
+query SearchUsers($username: String!) {
+  searchUsers(filter: { username: { eq: $username } }) {
+    total
+  }
+}

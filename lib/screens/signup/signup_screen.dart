@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/screens/signup/signup_viewmodel.dart';
+import 'package:habitr/services/api_service.dart';
 import 'package:habitr/util/validators.dart';
 import 'package:habitr/widgets/logo/habitr_logo.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +16,8 @@ class SignupScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) {
         final authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
-        return SignupViewModel(authBloc);
+        final apiService = Provider.of<ApiService>(context, listen: false);
+        return SignupViewModel(authBloc, apiService);
       },
       builder: (context, _) {
         return _SignupView(
@@ -29,6 +32,19 @@ class _SignupView extends StatelessWidget {
   final SignupViewModel viewModel;
 
   const _SignupView({Key? key, required this.viewModel}) : super(key: key);
+
+  Widget? get usernameSuffix {
+    if (viewModel.username.isEmpty) {
+      return null;
+    }
+    if (viewModel.usernameExistsLoading) {
+      return const CupertinoActivityIndicator();
+    }
+    if (!viewModel.usernameExists) {
+      return const Icon(Icons.check, color: Colors.green);
+    }
+    return const Icon(Icons.close, color: Colors.red);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +70,16 @@ class _SignupView extends StatelessWidget {
                     TextFormField(
                       onChanged: viewModel.setUsername,
                       validator: validateUsername,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: 'Username',
-                        prefixIcon: Icon(Icons.person),
+                        prefixIcon: const Icon(Icons.person),
+                        suffix: usernameSuffix != null
+                            ? SizedBox(
+                                width: 32,
+                                height: 32,
+                                child: usernameSuffix,
+                              )
+                            : null,
                       ),
                     ),
                     const SizedBox(height: 20),

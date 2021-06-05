@@ -30,6 +30,20 @@
           ]
         }
       }
+    },
+    "habitrAPI": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "habitrUserExists",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   },
   "storage": {
@@ -42,6 +56,13 @@
     "habitr": {
       "service": "Pinpoint",
       "providerPlugin": "awscloudformation"
+    }
+  },
+  "function": {
+    "habitrUserExists": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }

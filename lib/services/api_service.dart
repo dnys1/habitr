@@ -9,12 +9,14 @@ import 'package:habitr/models/VoteResult.dart';
 import 'package:habitr_models/habitr_models.dart';
 import 'package:gql/language.dart' as gql;
 import 'package:gql/ast.dart' as ast;
+import 'package:http/http.dart' as http;
 
 abstract class ApiService {
   Future<User?> getUser(String username);
   Future<List<Habit>> listHabits();
   Future<void> voteForHabit(String habitId, VoteType type);
   Stream<VoteResult> get voteResults;
+  Future<bool> usernameExists(String username);
 }
 
 class AmplifyApiService implements ApiService {
@@ -170,5 +172,23 @@ class AmplifyApiService implements ApiService {
     };
 
     return _voteResultStreamController.stream;
+  }
+
+  @override
+  Future<bool> usernameExists(String username) async {
+    var request = UserExistsRequest(username);
+    // TODO: update for envs
+    final resp = await http.post(
+      Uri.parse(
+        'https://w61fwdx7z1.execute-api.us-west-2.amazonaws.com/dev/user/exists',
+      ),
+      body: jsonEncode(request),
+    );
+    if (resp.statusCode != 200) {
+      throw Exception('${resp.statusCode}: ${resp.body}');
+    }
+
+    final json = jsonDecode(resp.body) as Map<String, dynamic>;
+    return UserExistsResponse.fromJson(json).exists;
   }
 }

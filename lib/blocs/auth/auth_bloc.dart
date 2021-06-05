@@ -153,6 +153,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           yield AuthInFlow.addImage(user);
         }
       }
+    } on UserNotConfirmedException {
+      var username = loginData.username!;
+      await _authService.resendVerificationCode(username);
+      yield AuthInFlow.verify(username);
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString()));
     }

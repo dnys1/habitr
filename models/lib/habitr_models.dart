@@ -4,3 +4,5 @@ export 'src/graphql/operations.req.gql.dart';
 export 'src/graphql/operations.var.gql.dart';
 
 export 'src/graphql/schema.schema.gql.dart';
+
+export 'src/rest/user_exists.dart';

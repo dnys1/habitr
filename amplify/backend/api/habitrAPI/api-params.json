@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/user/exists",
+      "lambdaFunction": "habitrUserExists",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/user/exists"
+    }
+  ],
+  "resourceName": "habitrAPI",
+  "apiName": "habitrAPI",
+  "functionArns": [
+    {
+      "lambdaFunction": "habitrUserExists"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-habitr-dev-142414-authRole",
+    "unAuthRoleName": "amplify-habitr-dev-142414-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "habitrUserExists",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

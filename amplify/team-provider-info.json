@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "habitr277c3719": {}
+      },
+      "function": {
+        "habitrUserExists": {
+          "deploymentBucketName": "amplify-habitr-dev-142414-deployment",
+          "s3Key": "amplify-builds/habitrUserExists-4572444a4c484b51506f-build.zip"
+        }
       }
     }
   }
