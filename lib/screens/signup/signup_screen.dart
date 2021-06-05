@@ -69,7 +69,7 @@ class _SignupView extends StatelessWidget {
                     const Spacer(),
                     TextFormField(
                       onChanged: viewModel.setUsername,
-                      validator: validateUsername,
+                      validator: viewModel.validateUsername,
                       decoration: InputDecoration(
                         labelText: 'Username',
                         prefixIcon: const Icon(Icons.person),

@@ -6,6 +6,7 @@ import 'package:habitr/blocs/auth/auth_data.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
+import 'package:habitr/util/validators.dart' as util;
 import 'package:stream_transform/stream_transform.dart';
 
 class SignupViewModel extends BaseViewModel {
@@ -16,7 +17,7 @@ class SignupViewModel extends BaseViewModel {
     _usernameExistsController.stream
         .debounce(const Duration(milliseconds: 400))
         .listen((username) {
-      _getUsernameExists(username);
+      _usernameExistsFuture = _getUsernameExists(username);
     });
   }
 
@@ -65,6 +66,15 @@ class SignupViewModel extends BaseViewModel {
     }
   }
 
+  Future<void>? _usernameExistsFuture;
+
+  String? validateUsername(String? username) {
+    if (_usernameExists) {
+      return 'Username already exists';
+    }
+    return util.validateUsername(username);
+  }
+
   Future<void> _getUsernameExists(String username) async {
     if (username.isEmpty) return;
     _setUsernameExistsLoading(true);
@@ -80,6 +90,9 @@ class SignupViewModel extends BaseViewModel {
   }
 
   Future<void> signUp() async {
+    if (_usernameExistsFuture != null) {
+      await _usernameExistsFuture!;
+    }
     if (!_formKey.currentState!.validate()) {
       return;
     }

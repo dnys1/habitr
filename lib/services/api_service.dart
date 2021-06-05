@@ -180,7 +180,7 @@ class AmplifyApiService implements ApiService {
     // TODO: update for envs
     final resp = await http.post(
       Uri.parse(
-        'https://w61fwdx7z1.execute-api.us-west-2.amazonaws.com/dev/user/exists',
+        'https://4ccix50n24.execute-api.us-west-2.amazonaws.com/dev/user/exists',
       ),
       body: jsonEncode(request),
     );
