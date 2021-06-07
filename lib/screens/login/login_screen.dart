@@ -70,12 +70,21 @@ class _LoginView extends StatelessWidget {
                       obscureText: true,
                     ),
                     const SizedBox(height: 20),
-                    viewModel.isBusy
-                        ? const CircularProgressIndicator()
-                        : ElevatedButton(
-                            onPressed: viewModel.login,
-                            child: const Text('Login'),
-                          ),
+                    SizedBox(
+                      height: 40.0,
+                      child: viewModel.isBusy
+                          ? const Padding(
+                              padding: EdgeInsets.only(bottom: 4.0),
+                              child: CircularProgressIndicator(),
+                            )
+                          : Padding(
+                              padding: const EdgeInsets.only(bottom: 4.0),
+                              child: ElevatedButton(
+                                onPressed: viewModel.login,
+                                child: const Text('Login'),
+                              ),
+                            ),
+                    ),
                     const SizedBox(height: 5),
                     const Divider(),
                     const SizedBox(height: 5),

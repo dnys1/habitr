@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/blocs/auth/auth_data.dart';
 import 'package:habitr/blocs/observer.dart';
+import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/feed/feed_screen.dart';
 import 'package:habitr/screens/loading/loading_screen.dart';
 import 'package:habitr/screens/login/login_screen.dart';
@@ -86,6 +87,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   late AuthBloc _authBloc;
   late StreamSubscription<AuthException> _authExceptions;
+  late final HabitRepository _habitRepository;
 
   @override
   void initState() {
@@ -101,6 +103,11 @@ class _MyAppState extends State<MyApp> {
       safePrint('Auth Exception: ${exception.message}');
       showErrorSnackbar(exception.message);
     });
+
+    _habitRepository = HabitRepositoryImpl(
+      apiService: widget._apiService,
+      authBloc: _authBloc,
+    );
 
     widget._storageService.init();
   }
@@ -122,7 +129,8 @@ class _MyAppState extends State<MyApp> {
         Provider.value(value: widget._dataService),
         Provider.value(value: widget._analyticsService),
         Provider.value(value: widget._preferencesService),
-        ChangeNotifierProvider.value(value: widget._themeService)
+        ChangeNotifierProvider.value(value: widget._themeService),
+        ChangeNotifierProvider.value(value: _habitRepository),
       ],
       child: BlocProvider.value(
         value: _authBloc,

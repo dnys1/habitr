@@ -29,6 +29,8 @@ class SignupScreen extends StatelessWidget {
 }
 
 class _SignupView extends StatelessWidget {
+  static const _usernameSuffixRadius = 12.0;
+
   final SignupViewModel viewModel;
 
   const _SignupView({Key? key, required this.viewModel}) : super(key: key);
@@ -38,12 +40,20 @@ class _SignupView extends StatelessWidget {
       return null;
     }
     if (viewModel.usernameExistsLoading) {
-      return const CupertinoActivityIndicator();
+      return const CupertinoActivityIndicator(radius: _usernameSuffixRadius);
     }
     if (!viewModel.usernameExists) {
-      return const Icon(Icons.check, color: Colors.green);
+      return const Icon(
+        Icons.check,
+        color: Colors.green,
+        size: _usernameSuffixRadius * 2,
+      );
     }
-    return const Icon(Icons.close, color: Colors.red);
+    return const Icon(
+      Icons.close,
+      color: Colors.red,
+      size: _usernameSuffixRadius * 2,
+    );
   }
 
   @override
@@ -75,8 +85,8 @@ class _SignupView extends StatelessWidget {
                         prefixIcon: const Icon(Icons.person),
                         suffix: usernameSuffix != null
                             ? SizedBox(
-                                width: 32,
-                                height: 32,
+                                width: _usernameSuffixRadius * 2,
+                                height: _usernameSuffixRadius * 2,
                                 child: usernameSuffix,
                               )
                             : null,

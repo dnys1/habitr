@@ -62,6 +62,8 @@ dependencies:
   provider: ^5.0.0
   shared_preferences: ^2.0.6
   stream_transform: ^2.0.0
+  tuple: ^2.0.0
+  infinite_scroll_pagination: ^3.0.1+1
 
 dependency_overrides:
   json_annotation: ^4.0.1

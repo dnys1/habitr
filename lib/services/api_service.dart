@@ -6,6 +6,7 @@ import 'package:amplify_flutter/amplify.dart';
 import 'package:habitr/models/ModelProvider.dart';
 import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/VoteResult.dart';
+import 'package:habitr/models/list_habit_results.dart';
 import 'package:habitr_models/habitr_models.dart';
 import 'package:gql/language.dart' as gql;
 import 'package:gql/ast.dart' as ast;
@@ -13,7 +14,8 @@ import 'package:http/http.dart' as http;
 
 abstract class ApiService {
   Future<User?> getUser(String username);
-  Future<List<Habit>> listHabits();
+  Future<ListHabitResults> listHabits({required int limit, String? nextToken});
+  Future<Habit> getHabit(String id);
   Future<void> voteForHabit(String habitId, VoteType type);
   Stream<VoteResult> get voteResults;
   Future<bool> usernameExists(String username);
@@ -68,9 +70,17 @@ class AmplifyApiService implements ApiService {
   }
 
   @override
-  Future<List<Habit>> listHabits() async {
+  Future<ListHabitResults> listHabits({
+    required int limit,
+    String? nextToken,
+  }) async {
     const operationName = 'listHabits';
-    final query = GListHabits();
+    final query = GListHabits((b) {
+      b.vars.limit = limit;
+      if (nextToken != null) {
+        b.vars.nextToken = nextToken;
+      }
+    });
 
     final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
@@ -80,14 +90,21 @@ class AmplifyApiService implements ApiService {
       operationName,
       query.vars.toJson(),
     );
-    final habits = resp?['items'] as List?;
+    if (resp == null) {
+      throw Exception('Unable to retrieve habits.');
+    }
+    final habits = resp['items'] as List?;
 
     if (habits is! List) {
-      return const [];
+      throw Exception('Unable to retrieve habits.');
     }
-    return habits
-        .map((habit) => Habit.fromJson(habit as Map<String, dynamic>))
-        .toList();
+
+    return ListHabitResults(
+      habits: habits
+          .map((habit) => Habit.fromJson(habit as Map<String, dynamic>))
+          .toList(),
+      nextToken: resp['nextToken'] as String?,
+    );
   }
 
   Future<void> updateUser(
@@ -138,6 +155,27 @@ class AmplifyApiService implements ApiService {
     if (resp == null) {
       throw Exception('Could not vote for habit. Please try again.');
     }
+  }
+
+  @override
+  Future<Habit> getHabit(String id) async {
+    const operationName = 'getHabit';
+    final query = GGetHabit((b) => b..vars.habitId = id);
+
+    final resp = await _runQuery(
+      const ast.DocumentNode(definitions: [
+        AllHabitFields,
+        GetHabit,
+      ]),
+      operationName,
+      query.vars.toJson(),
+    );
+
+    if (resp == null) {
+      throw Exception('Could not retrieve habit.');
+    }
+
+    return Habit.fromJson(resp);
   }
 
   final _voteResultStreamController = StreamController<VoteResult>.broadcast();

@@ -143,14 +143,7 @@ class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
               child: Column(
                 children: [
                   if (widget.habits.isNotEmpty)
-                    for (var habit in widget.habits)
-                      HabitListTile(
-                        habit: habit,
-                        isUpvoted: null,
-                        isLoading: false,
-                        onClickUpvote: () {},
-                        onClickDownvote: () {},
-                      )
+                    for (var habit in widget.habits) HabitListTile(habit.id)
                   else
                     const Text('No habits'),
                   _UserInfoView.defaultPadding,

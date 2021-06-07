@@ -97,33 +97,41 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   // Cache login data to improve sign up/verify code flow.
   AuthData? _authData;
 
-  Stream<AuthState> _loadInitialState() async* {
-    yield const AuthLoading();
-    try {
-      await _backendService.configure();
-    } on Exception catch (e) {
-      safePrint('Error configuring backend: $e');
-    }
+  final _initializedCompleter = Completer<void>();
+  Future<void> get isInitialized => _initializedCompleter.future;
 
+  Stream<AuthState> _loadInitialState() async* {
     try {
-      final currentUser = await _authService.currentUser;
-      if (currentUser != null) {
-        yield AuthLoggedIn(currentUser);
-        _userUpdates ??= _userEvents.listen(add);
+      yield const AuthLoading();
+      try {
+        await _backendService.configure();
+      } on Exception catch (e) {
+        safePrint('Error configuring backend: $e');
+      }
+
+      try {
+        final currentUser = await _authService.currentUser;
+        if (currentUser != null) {
+          yield AuthLoggedIn(currentUser);
+          _userUpdates ??= _userEvents.listen(add);
+          return;
+        }
+      } on Exception catch (e) {
+        safePrint('Exception occurred getting user: $e');
+      }
+
+      final storedState = _preferencesService.getString(stateKey);
+      if (storedState == null) {
+        yield AuthInFlow.login();
         return;
       }
-    } on Exception catch (e) {
-      safePrint('Exception occurred getting user: $e');
-    }
 
-    final storedState = _preferencesService.getString(stateKey);
-    if (storedState == null) {
-      yield AuthInFlow.login();
-      return;
+      final authState =
+          fromJson(jsonDecode(storedState) as Map<String, dynamic>);
+      yield authState ?? AuthInFlow.login();
+    } finally {
+      _initializedCompleter.complete();
     }
-
-    final authState = fromJson(jsonDecode(storedState) as Map<String, dynamic>);
-    yield authState ?? AuthInFlow.login();
   }
 
   StreamSubscription<AuthEvent>? _userUpdates;

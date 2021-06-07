@@ -53,11 +53,12 @@ mutation CreateHabit($habit: CreateHabitInput!) {
   }
 }
 
-query ListHabits {
-  listHabits {
+query ListHabits($limit: Int!, $nextToken: String) {
+  listHabits(limit: $limit, nextToken: $nextToken) {
     items {
       ...AllHabitFields
     }
+    nextToken
   }
 }
 
@@ -126,8 +127,30 @@ subscription SubscribeToVotes {
   }
 }
 
-query SearchUsers($username: String!) {
-  searchUsers(filter: { username: { eq: $username } }) {
-    total
+query SearchUsers($query: String!) {
+  searchUsers(filter: { or: [
+    { username: { matchPhrase: $query } },
+    { name: { matchPhrasePrefix: $query } }
+  ] }) {
+    items {
+      username
+      name
+      avatar {
+        bucket
+        region
+        key
+      }
+    }
   }
 }
+
+query SearchHabits($query: String!) {
+  searchHabits(filter: { tagline: { matchPhrasePrefix: $query } }) {
+    items {
+      id
+      tagline
+      category
+    }
+  }
+}
+
