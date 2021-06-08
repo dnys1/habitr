@@ -7,28 +7,24 @@ import 'package:habitr/models/User.dart';
 import 'package:habitr/models/VoteResult.dart';
 import 'package:habitr/models/VoteType.dart';
 import 'package:habitr/models/list_habit_results.dart';
+import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/api_service.dart';
 
-abstract class HabitRepository extends ChangeNotifier {
-  Map<String, Habit> get cache;
+abstract class HabitRepository extends Repository<Habit> {
   Future<ListHabitResults> listHabits({
     int limit = 20,
     String? nextToken,
   });
-  Future<Habit> getHabit(String id);
+  Future<Habit?> getHabit(String id);
   Future<List<Habit>> searchHabits(String query);
   Future<void> voteForHabit(String habitId, bool upvote);
   Stream<Habit> get habitUpdates;
   bool? isUpvoted(String habitId);
-  bool isLoading(String habitId);
 }
 
 class HabitRepositoryImpl extends HabitRepository {
   final ApiService _apiService;
   final AuthBloc _authBloc;
-
-  final Map<String, Habit> _habitCache = {};
-  final Set<String> _loadingHabits = {};
 
   User? _user;
   Set<String> _upvotedHabits = {};
@@ -49,47 +45,35 @@ class HabitRepositoryImpl extends HabitRepository {
     if (state is AuthLoggedIn) {
       _updateUser(state.user);
     }
-    _authSubscription = _authBloc.stream.listen((state) {
+    addSubscription(_authBloc.stream.listen((state) {
       if (state is AuthLoggedIn) {
         _updateUser(state.user);
       }
-    });
+    }));
 
-    _voteResultSubscription = _apiService.voteResults.listen((voteResult) {
+    addSubscription(_apiService.voteResults.listen((voteResult) {
       var user = voteResult.user;
       if (user.username == _user?.username) {
         _updateUser(user);
       }
       var habit = voteResult.habit;
       _updateHabit(habit);
-      _loadingHabits.remove(habit.id);
-      notifyListeners();
-    });
-  }
-
-  StreamSubscription<AuthState>? _authSubscription;
-  StreamSubscription<VoteResult>? _voteResultSubscription;
-
-  @override
-  void dispose() {
-    _authSubscription?.cancel();
-    _voteResultSubscription?.cancel();
-    super.dispose();
+      setDoneLoading(habit.id);
+    }));
   }
 
   void _setHabits(List<Habit> habits) {
-    _habitCache.addAll({for (var habit in habits) habit.id: habit});
-    notifyListeners();
+    putAll({for (var habit in habits) habit.id: habit});
   }
 
   void _updateHabit(Habit habit) {
-    if (_habitCache.containsKey(habit.id)) {
-      _habitCache[habit.id] = _habitCache[habit.id]!.copyWith(
+    if (cache.containsKey(habit.id)) {
+      cache[habit.id] = cache[habit.id]!.copyWith(
         ups: habit.ups,
         downs: habit.downs,
       );
     } else {
-      _habitCache[habit.id] = habit;
+      cache[habit.id] = habit;
     }
     notifyListeners();
   }
@@ -119,12 +103,6 @@ class HabitRepositoryImpl extends HabitRepository {
   }
 
   @override
-  bool isLoading(String habitId) => _loadingHabits.contains(habitId);
-
-  @override
-  Map<String, Habit> get cache => _habitCache;
-
-  @override
   Stream<Habit> get habitUpdates {
     throw UnimplementedError();
   }
@@ -143,25 +121,30 @@ class HabitRepositoryImpl extends HabitRepository {
   }
 
   @override
-  Future<Habit> getHabit(String id) async {
-    if (_habitCache.containsKey(id)) {
-      return _habitCache[id]!;
+  Future<Habit?> getHabit(String id) async {
+    if (cache.containsKey(id)) {
+      return cache[id]!;
     }
     final habit = await _apiService.getHabit(id);
-    _updateHabit(habit);
+    if (habit != null) {
+      _updateHabit(habit);
+    }
     return habit;
   }
 
   @override
-  Future<List<Habit>> searchHabits(String query) {
-    // TODO: implement searchHabits
-    throw UnimplementedError();
+  Future<List<Habit>> searchHabits(String query) async {
+    if (query.isEmpty) return [];
+    final searchResults = await _apiService.searchHabits(query, limit: 5);
+    final habits = await Future.wait(
+      searchResults.map((habit) => getHabit(habit.id)),
+    );
+    return habits.whereType<Habit>().toList();
   }
 
   @override
   Future<void> voteForHabit(String habitId, bool upvote) async {
-    _loadingHabits.add(habitId);
-    notifyListeners();
+    setLoading(habitId);
     try {
       VoteType type;
       switch (isUpvoted(habitId)) {
@@ -177,8 +160,7 @@ class HabitRepositoryImpl extends HabitRepository {
       }
       await _apiService.voteForHabit(habitId, type);
     } on Exception {
-      _loadingHabits.remove(habitId);
-      notifyListeners();
+      setDoneLoading(habitId);
       rethrow;
     }
   }

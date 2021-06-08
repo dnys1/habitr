@@ -8,6 +8,7 @@ import 'package:habitr/screens/signup/add_image_viewmodel.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
+import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
 
 class AddImageScreen extends StatelessWidget {
@@ -47,7 +48,6 @@ class _AddImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final radius = MediaQuery.of(context).size.shortestSide / 4;
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
@@ -72,21 +72,7 @@ class _AddImageView extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline6,
                       ),
                       const SizedBox(height: 20),
-                      GestureDetector(
-                        onTap: viewModel.pickImage,
-                        child: CircleAvatar(
-                          radius: radius,
-                          foregroundImage: viewModel.image != null
-                              ? FileImage(viewModel.image!)
-                              : null,
-                          child: viewModel.image == null
-                              ? Icon(
-                                  Icons.perm_identity,
-                                  size: max(radius, 40),
-                                )
-                              : null,
-                        ),
-                      ),
+                      UserAvatar(onImageSelected: viewModel.setImage),
                       const SizedBox(height: 20),
                       TextField(
                         onChanged: viewModel.setName,

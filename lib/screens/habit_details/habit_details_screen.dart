@@ -1,34 +1,56 @@
 import 'package:flutter/material.dart';
-import 'package:habitr/screens/habit_details/habit_details_viewmodel.dart';
+import 'package:habitr/models/Habit.dart';
+import 'package:habitr/repos/habit_repository.dart';
 import 'package:provider/provider.dart';
+import 'package:tuple/tuple.dart';
 
 class HabitDetailsScreen extends StatelessWidget {
-  const HabitDetailsScreen({Key? key}) : super(key: key);
+  final String habitId;
+
+  const HabitDetailsScreen(this.habitId, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) {
-        return HabitDetailsViewModel();
-      },
-      builder: (context, _) {
-        final viewModel = Provider.of<HabitDetailsViewModel>(context);
-        return _HabitDetailsScreenView(viewModel: viewModel);
+    return FutureBuilder<Habit?>(
+      future: Provider.of<HabitRepository>(context, listen: false)
+          .getHabit(habitId),
+      builder: (context, snapshot) {
+        var isLoading = snapshot.data == null;
+        var habit = snapshot.data;
+        return Scaffold(
+          appBar: AppBar(
+            title: isLoading
+                ? null
+                : Text(
+                    habit!.tagline,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+          ),
+          body: isLoading
+              ? const Center(child: CircularProgressIndicator())
+              : Selector<HabitRepository, Tuple3<Habit?, bool, bool?>>(
+                  selector: (_, repo) => Tuple3(
+                    repo.cache[habitId],
+                    repo.isLoading(habitId),
+                    repo.isUpvoted(habitId),
+                  ),
+                  builder: (context, habitStatus, _) {
+                    var habit = habitStatus.item1!;
+                    var isLoading = habitStatus.item2;
+                    var isUpvoted = habitStatus.item3;
+                    var category = habit.category;
+                    var author = habit.author?.username;
+                    return Column(
+                      children: [
+                        Text(habit.tagline),
+                        if (category != null) Text(category),
+                        if (author != null) Text('@' + author),
+                      ],
+                    );
+                  },
+                ),
+        );
       },
     );
-  }
-}
-
-class _HabitDetailsScreenView extends StatelessWidget {
-  final HabitDetailsViewModel viewModel;
-
-  const _HabitDetailsScreenView({
-    Key? key,
-    required this.viewModel,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

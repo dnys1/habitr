@@ -26,7 +26,7 @@ class Habit extends Model {
   static const classType = const _HabitModelType();
   final String id;
   final String tagline;
-  final String? category;
+  final String category;
   final int? ups;
   final int? downs;
   final User? author;
@@ -55,7 +55,7 @@ class Habit extends Model {
   factory Habit(
       {String? id,
       required String tagline,
-      required String? category,
+      required String category,
       int? ups,
       int? downs,
       required User? author,

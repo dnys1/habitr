@@ -64,6 +64,7 @@ dependencies:
   stream_transform: ^2.0.0
   tuple: ^2.0.0
   infinite_scroll_pagination: ^3.0.1+1
+  uuid: ^3.0.4
 
 dependency_overrides:
   json_annotation: ^4.0.1

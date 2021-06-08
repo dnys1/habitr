@@ -23,7 +23,7 @@ ThemeData get _theme {
 
 TextStyle get _textStyle {
   return _theme.textTheme.bodyText2!.copyWith(
-    color: _isDarkMode ? Colors.white : Colors.black,
+    color: Colors.white,
   );
 }
 

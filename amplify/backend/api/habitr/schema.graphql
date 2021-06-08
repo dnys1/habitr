@@ -79,14 +79,18 @@ type VoteResult {
     user: User
 }
 
+enum AccessLevel { guest, private, protected }
+
 type S3Object {
   bucket: String!
   region: String!
   key: String!
-}
+  cognitoId: String
+  accessLevel: AccessLevel                                                          # Defaults to `guest`
+}   
 
 type Mutation {
-    vote(habitId: ID!, type: VoteType!): VoteResult                               # Custom resolver for atomic voting operations
+    vote(habitId: ID!, type: VoteType!): VoteResult                                 # Custom resolver for atomic voting operations
 }
 
 type Subscription {

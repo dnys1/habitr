@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
+import 'package:habitr/models/User.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
@@ -37,24 +38,8 @@ class AddImageViewModel extends BaseViewModel {
   }
 
   File? _image;
-  File? get image => _image;
-
-  Future<void> pickImage() async {
-    setBusy(true);
-    try {
-      final pickedImage = await _imagePicker.getImage(
-        source: ImageSource.gallery,
-        imageQuality: 25,
-      );
-
-      if (pickedImage != null) {
-        _image = File(pickedImage.path);
-      }
-    } on PlatformException catch (e) {
-      safePrint('Exception while selecting image: $e');
-    } finally {
-      setBusy(false);
-    }
+  void setImage(File image) {
+    _image = image;
   }
 
   Future<void> save() async {

@@ -5,14 +5,18 @@ class BaseViewModel extends ChangeNotifier {
   bool get isBusy => _isBusy;
   void setBusy(bool busy) {
     _isBusy = busy;
-    notifyListeners();
+    if (hasListeners) {
+      notifyListeners();
+    }
   }
 
   Object? _error;
   Object? get error => _error;
   void setError(Object error) {
     _error = error;
-    notifyListeners();
+    if (hasListeners) {
+      notifyListeners();
+    }
   }
 
   void clearError() {

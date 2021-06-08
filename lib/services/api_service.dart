@@ -13,12 +13,14 @@ import 'package:gql/ast.dart' as ast;
 import 'package:http/http.dart' as http;
 
 abstract class ApiService {
-  Future<User?> getUser(String username);
+  Future<User?> getUser(String username, {bool self});
   Future<ListHabitResults> listHabits({required int limit, String? nextToken});
-  Future<Habit> getHabit(String id);
+  Future<Habit?> getHabit(String id);
   Future<void> voteForHabit(String habitId, VoteType type);
   Stream<VoteResult> get voteResults;
   Future<bool> usernameExists(String username);
+  Future<List<Habit>> searchHabits(String query, {required int limit});
+  Future<List<User>> searchUsers(String query, {required int limit});
 }
 
 class AmplifyApiService implements ApiService {
@@ -48,17 +50,17 @@ class AmplifyApiService implements ApiService {
   }
 
   @override
-  Future<User?> getUser(String username) async {
+  Future<User?> getUser(String username, {bool self = false}) async {
     const operationName = 'getUser';
     final query = GGetUser(
       (b) => b..vars.username = username,
     );
 
     final user = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        AllUserFields,
-        GetUser,
-      ]),
+      ast.DocumentNode(
+          definitions: self
+              ? [AllPrivateUserFields, GetSelf]
+              : [AllPublicUserFields, GetUser]),
       operationName,
       query.vars.toJson(),
     );
@@ -126,7 +128,7 @@ class AmplifyApiService implements ApiService {
 
     await _runQuery(
       const ast.DocumentNode(definitions: [
-        AllUserFields,
+        AllPrivateUserFields,
         UpdateUser,
       ]),
       operationName,
@@ -158,7 +160,7 @@ class AmplifyApiService implements ApiService {
   }
 
   @override
-  Future<Habit> getHabit(String id) async {
+  Future<Habit?> getHabit(String id) async {
     const operationName = 'getHabit';
     final query = GGetHabit((b) => b..vars.habitId = id);
 
@@ -172,7 +174,7 @@ class AmplifyApiService implements ApiService {
     );
 
     if (resp == null) {
-      throw Exception('Could not retrieve habit.');
+      return null;
     }
 
     return Habit.fromJson(resp);
@@ -228,5 +230,59 @@ class AmplifyApiService implements ApiService {
 
     final json = jsonDecode(resp.body) as Map<String, dynamic>;
     return UserExistsResponse.fromJson(json).exists;
+  }
+
+  @override
+  Future<List<Habit>> searchHabits(String query, {required int limit}) async {
+    const operationName = 'searchHabits';
+    final operation = GSearchHabits(
+      (b) => b
+        ..vars.query = query
+        ..vars.limit = limit,
+    );
+
+    final resp = await _runQuery(
+      const ast.DocumentNode(definitions: [
+        SearchHabits,
+      ]),
+      operationName,
+      operation.vars.toJson(),
+    );
+
+    var items = resp?['items'];
+    if (resp == null || items is! List) {
+      return [];
+    }
+
+    return items
+        .map((json) => Habit.fromJson(json as Map<String, dynamic>))
+        .toList();
+  }
+
+  @override
+  Future<List<User>> searchUsers(String query, {required int limit}) async {
+    const operationName = 'searchUsers';
+    final operation = GSearchUsers(
+      (b) => b
+        ..vars.query = query
+        ..vars.limit = limit,
+    );
+
+    final resp = await _runQuery(
+      const ast.DocumentNode(definitions: [
+        SearchUsers,
+      ]),
+      operationName,
+      operation.vars.toJson(),
+    );
+
+    var items = resp?['items'];
+    if (resp == null || items is! List) {
+      return [];
+    }
+
+    return items
+        .map((json) => User.fromJson(json as Map<String, dynamic>))
+        .toList();
   }
 }

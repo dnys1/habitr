@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "auth": {
+      "habitr277c3719": [
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

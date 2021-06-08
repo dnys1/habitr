@@ -6,6 +6,7 @@ import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/blocs/auth/auth_data.dart';
 import 'package:habitr/blocs/observer.dart';
 import 'package:habitr/repos/habit_repository.dart';
+import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/screens/feed/feed_screen.dart';
 import 'package:habitr/screens/loading/loading_screen.dart';
 import 'package:habitr/screens/login/login_screen.dart';
@@ -73,6 +74,7 @@ class MyApp extends StatefulWidget {
         AmplifyStorageService(
           _apiService as AmplifyApiService,
           _analyticsService,
+          _authService,
         );
     _themeService = themeService ??
         ThemeService(
@@ -88,6 +90,7 @@ class _MyAppState extends State<MyApp> {
   late AuthBloc _authBloc;
   late StreamSubscription<AuthException> _authExceptions;
   late final HabitRepository _habitRepository;
+  late final UserRepository _userRepository;
 
   @override
   void initState() {
@@ -105,6 +108,11 @@ class _MyAppState extends State<MyApp> {
     });
 
     _habitRepository = HabitRepositoryImpl(
+      apiService: widget._apiService,
+      authBloc: _authBloc,
+    );
+
+    _userRepository = UserRepositoryImpl(
       apiService: widget._apiService,
       authBloc: _authBloc,
     );
@@ -131,6 +139,7 @@ class _MyAppState extends State<MyApp> {
         Provider.value(value: widget._preferencesService),
         ChangeNotifierProvider.value(value: widget._themeService),
         ChangeNotifierProvider.value(value: _habitRepository),
+        ChangeNotifierProvider.value(value: _userRepository),
       ],
       child: BlocProvider.value(
         value: _authBloc,

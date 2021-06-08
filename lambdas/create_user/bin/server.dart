@@ -21,7 +21,10 @@ void main() async {
 }
 
 Future<InvocationResult> handler(Context context, AwsCognitoEvent event) async {
-  print('Event from Dart: ${event.toJson()}');
+  print(
+    'Event from Dart: ${event.toJson()}, '
+    'Cognito request: ${event.request.toJson()}',
+  );
   if (event.triggerSource == 'PostConfirmation_ConfirmSignUp') {
     final error = await createUser(event.userName);
     if (error != null) {

@@ -18,8 +18,10 @@ abstract class AuthService {
   Future<void> verify(String username, String code);
   Future<void> logout();
   Future<User?> get currentUser;
+  Future<String?> get username;
   Stream<User> get userUpdates;
   Future<bool> get isLoggedIn;
+  Future<String?> get cognitoIdentityId;
 }
 
 class AmplifyAuthService implements AuthService {
@@ -95,9 +97,24 @@ class AmplifyAuthService implements AuthService {
       return null;
     }
     final user = await Amplify.Auth.getCurrentUser();
-    return _apiService.getUser(user.username);
+    return _apiService.getUser(user.username, self: true);
   }
 
+  @override
+  Future<String?> get cognitoIdentityId async {
+    final resp = await Amplify.API
+        .get(
+          restOptions: RestOptions(
+            path: '/user/identity',
+            apiName: 'habitrAPI',
+          ),
+        )
+        .response;
+    final body = jsonDecode(ascii.decode(resp.data)) as Map<String, dynamic>;
+    return body['identityId'];
+  }
+
+  @override
   Future<String?> get username async {
     if (!await isLoggedIn) {
       return null;
@@ -128,7 +145,7 @@ class AmplifyAuthService implements AuthService {
   Stream<User> get userUpdates async* {
     const operationName = 'subscribeToUser';
     const _document = ast.DocumentNode(definitions: [
-      AllUserFields,
+      AllPublicUserFields,
       SubscribeToUser,
     ]);
     final request = gql.printNode(_document);

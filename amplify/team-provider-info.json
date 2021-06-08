@@ -19,6 +19,10 @@
         "habitrUserExists": {
           "deploymentBucketName": "amplify-habitr-dev-142414-deployment",
           "s3Key": "amplify-builds/habitrUserExists-4572444a4c484b51506f-build.zip"
+        },
+        "habitrUserIdentity": {
+          "deploymentBucketName": "amplify-habitr-dev-142414-deployment",
+          "s3Key": "amplify-builds/habitrUserIdentity-5842536e6a48592b696c-build.zip"
         }
       }
     }

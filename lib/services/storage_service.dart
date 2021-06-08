@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:amplify_api/amplify_api.dart';
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:habitr/models/S3Object.dart';
@@ -8,7 +10,9 @@ import 'package:habitr/models/User.dart';
 import 'package:habitr/services/analytics_service.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/amplifyconfiguration.dart';
+import 'package:habitr/services/auth_service.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:uuid/uuid.dart';
 
 abstract class StorageService {
   Future<void> init();
@@ -18,7 +22,7 @@ abstract class StorageService {
   File? get lostFile;
 
   Future<void> putImage(User user, File image);
-  Future<String> getImageUrl(String key);
+  Future<String> getImageUrl(String identityId, String key);
 }
 
 class AmplifyStorageService extends StorageService {
@@ -32,9 +36,14 @@ class AmplifyStorageService extends StorageService {
   static final _imagePicker = ImagePicker();
 
   final AmplifyApiService _apiService;
+  final AuthService _authService;
   final AnalyticsService _analyticsService;
 
-  AmplifyStorageService(this._apiService, this._analyticsService);
+  AmplifyStorageService(
+    this._apiService,
+    this._analyticsService,
+    this._authService,
+  );
 
   File? _lostFile;
   @override
@@ -56,29 +65,37 @@ class AmplifyStorageService extends StorageService {
 
   @override
   Future<void> putImage(User user, File image) async {
-    final key = DateTime.now().toIso8601String();
+    final key = const Uuid().v4();
     await Amplify.Storage.uploadFile(
       local: image,
       key: key,
-      options: UploadFileOptions(
+      options: S3UploadFileOptions(
+        targetIdentityId: user.username,
         accessLevel: StorageAccessLevel.protected,
       ),
     );
     await _apiService.updateUser(
       user,
-      avatar: S3Object(bucket, region, key),
+      avatar: S3Object(
+        bucket,
+        region,
+        key,
+        accessLevel: AccessLevel.protected,
+        cognitoId: await _authService.cognitoIdentityId,
+      ),
     );
     _analyticsService.recordEvent('photoUpload');
   }
 
   @override
-  Future<String> getImageUrl(String key) async {
+  Future<String> getImageUrl(String identityId, String key) async {
     if (_imageUrlCache.containsKey(key)) {
       return _imageUrlCache[key]!;
     }
     final GetUrlResult result = await Amplify.Storage.getUrl(
       key: key,
-      options: GetUrlOptions(
+      options: S3GetUrlOptions(
+        targetIdentityId: identityId,
         accessLevel: StorageAccessLevel.protected,
       ),
     );

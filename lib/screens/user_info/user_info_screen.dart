@@ -4,6 +4,8 @@ import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/screens/user_info/user_info_viewmodel.dart';
 import 'package:habitr/services/api_service.dart';
+import 'package:habitr/services/auth_service.dart';
+import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/widgets/habit/habit_list_tile.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
@@ -23,8 +25,13 @@ class UserInfoScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) {
         final apiService = Provider.of<ApiService>(context, listen: false);
+        final authService = Provider.of<AuthService>(context, listen: false);
+        final storageService =
+            Provider.of<StorageService>(context, listen: false);
         return UserInfoViewModel(
           apiService: apiService,
+          authService: authService,
+          storageService: storageService,
           username: username,
           user: user,
         );
@@ -54,43 +61,66 @@ class _UserInfoView extends StatelessWidget {
       appBar: AppBar(
         title: viewModel.isBusy || viewModel.hasError
             ? null
-            : Text(viewModel.user!.name ?? viewModel.user!.username),
+            : Align(
+                alignment: Alignment.centerLeft,
+                child: Text(viewModel.user.name ?? viewModel.user.username)),
+        actions: [
+          if (viewModel.canEditProfile)
+            if (viewModel.isEditing) ...[
+              IconButton(
+                icon: const Icon(Icons.close),
+                onPressed: viewModel.close,
+              ),
+              IconButton(
+                icon: const Icon(Icons.check),
+                onPressed: viewModel.save,
+              )
+            ] else
+              IconButton(
+                icon: const Icon(Icons.edit),
+                onPressed: viewModel.toggleEditMode,
+              ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 if (viewModel.isBusy)
-                  const CircularProgressIndicator()
+                  const Center(child: CircularProgressIndicator())
                 else if (viewModel.hasError)
                   Text(
                     viewModel.error.toString(),
                     textAlign: TextAlign.center,
                   )
                 else ...[
-                  UserAvatar(viewModel.user!),
+                  UserAvatar(
+                    user: viewModel.user,
+                    canEdit: viewModel.isEditing,
+                    onImageSelected: viewModel.setImage,
+                  ),
                   defaultPadding,
-                  if (viewModel.user!.name != null) ...[
+                  if (viewModel.user.name != null) ...[
                     Text(
-                      viewModel.user!.name!,
+                      viewModel.user.name!,
                       style: Theme.of(context).textTheme.headline6,
                       textAlign: TextAlign.center,
                     ),
                     defaultPadding,
                   ],
                   Text(
-                    '@${viewModel.user!.username}',
+                    '@${viewModel.user.username}',
                     style: Theme.of(context).textTheme.subtitle1,
                     textAlign: TextAlign.center,
                   ),
                   defaultPadding,
                   _UserHabitsAndComments(
-                    habits: viewModel.user!.habits ?? [],
-                    comments: viewModel.user!.comments ?? [],
+                    habits: viewModel.user.habits ?? [],
+                    comments: viewModel.user.comments ?? [],
                   ),
                   defaultPadding,
                 ],

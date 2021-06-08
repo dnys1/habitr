@@ -3,8 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
+import 'package:habitr/repos/habit_repository.dart';
+import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/screens/settings/settings_screen.dart';
 import 'package:habitr/screens/user_info/user_info_screen.dart';
+import 'package:habitr/services/search_service.dart';
 import 'package:habitr/widgets/home_drawer/home_drawer_viewmodel.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
@@ -45,9 +48,24 @@ class _HomeDrawerView extends StatelessWidget {
         children: [
           _HomeDrawerHeader(viewModel: viewModel),
           ListTile(
+            leading: const Icon(Icons.home),
+            title: const Text('Home'),
+            onTap: () {},
+          ),
+          ListTile(
             leading: const Icon(Icons.search),
             title: const Text('Search'),
-            onTap: () {},
+            onTap: () {
+              showSearch(
+                context: context,
+                delegate: SearchService(
+                  habitRepository:
+                      Provider.of<HabitRepository>(context, listen: false),
+                  userRepository:
+                      Provider.of<UserRepository>(context, listen: false),
+                ),
+              );
+            },
           ),
           ListTile(
             leading: const Icon(Icons.category),
@@ -91,16 +109,16 @@ class _HomeDrawerHeader extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => UserInfoScreen(
-                    user: viewModel.currentUser,
+            child: SizedBox.expand(
+              child: UserAvatar(
+                user: viewModel.currentUser,
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => UserInfoScreen(
+                      user: viewModel.currentUser,
+                    ),
                   ),
                 ),
-              ),
-              child: SizedBox.expand(
-                child: UserAvatar(viewModel.currentUser),
               ),
             ),
           ),

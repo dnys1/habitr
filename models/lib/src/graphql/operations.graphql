@@ -1,6 +1,7 @@
 fragment AllHabitFields on Habit {
   id
   tagline
+  category
   author {
     username
   }
@@ -16,13 +17,46 @@ fragment AllHabitFields on Habit {
   _version
 }
 
-fragment AllUserFields on User {
+fragment AllPublicUserFields on User {
   username
   name
   avatar {
     bucket
     region
     key
+    accessLevel
+    cognitoId
+  }
+  comments {
+    items {
+      id
+      habit {
+        id
+      }
+      comment
+    }
+  }
+  habits {
+    items {
+      id
+      tagline
+      category
+      ups
+      downs
+    }
+  }
+  _version
+}
+
+fragment AllPrivateUserFields on User {
+  username
+  name
+  avatar {
+    bucket
+    region
+    key
+    accessLevel
+    cognitoId
   }
   comments {
     items {
@@ -70,13 +104,19 @@ query GetHabit($habitId: ID!) {
 
 query GetUser($username: String!) {
   getUser(username: $username) {
-    ...AllUserFields
+    ...AllPublicUserFields
+  }
+}
+
+query GetSelf($username: String!) {
+  getUser(username: $username) {
+    ...AllPrivateUserFields
   }
 }
 
 subscription SubscribeToUser($username: String!) {
   subscribeToUser(username: $username) {
-    ...AllUserFields
+    ...AllPublicUserFields
   }
 }
 
@@ -90,7 +130,7 @@ mutation CreateUser($username: String!) {
 
 mutation UpdateUser($input: UpdateUserInput!) {
   updateUser(input: $input) {
-    ...AllUserFields
+    ...AllPrivateUserFields
   }
 }
 
@@ -127,11 +167,14 @@ subscription SubscribeToVotes {
   }
 }
 
-query SearchUsers($query: String!) {
-  searchUsers(filter: { or: [
-    { username: { matchPhrase: $query } },
-    { name: { matchPhrasePrefix: $query } }
-  ] }) {
+query SearchUsers($query: String!, $limit: Int!) {
+  searchUsers(
+    filter: { or: [
+      { username: { matchPhrase: $query } },
+      { name: { matchPhrasePrefix: $query } }
+    ] },
+    limit: $limit
+  ) {
     items {
       username
       name
@@ -144,8 +187,11 @@ query SearchUsers($query: String!) {
   }
 }
 
-query SearchHabits($query: String!) {
-  searchHabits(filter: { tagline: { matchPhrasePrefix: $query } }) {
+query SearchHabits($query: String!, $limit: Int!) {
+  searchHabits(
+    filter: { tagline: { matchPhrasePrefix: $query } },
+    limit: $limit,
+  ) {
     items {
       id
       tagline

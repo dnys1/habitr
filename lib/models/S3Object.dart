@@ -19,16 +19,36 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'S3Object.g.dart';
 
+enum AccessLevel { guest, private, protected }
+
 @JsonSerializable()
 class S3Object {
   final String bucket;
   final String region;
   final String key;
+  final AccessLevel? accessLevel;
+  final String? cognitoId;
 
-  const S3Object(this.bucket, this.region, this.key);
+  const S3Object(
+    this.bucket,
+    this.region,
+    this.key, {
+    this.accessLevel,
+    this.cognitoId,
+  });
 
   factory S3Object.fromJson(Map<String, dynamic> json) =>
       _$S3ObjectFromJson(json);
 
   Map<String, dynamic> toJson() => _$S3ObjectToJson(this);
+
+  S3Object copyWith({String? cognitoId}) {
+    return S3Object(
+      bucket,
+      region,
+      key,
+      accessLevel: accessLevel,
+      cognitoId: cognitoId ?? this.cognitoId,
+    );
+  }
 }
