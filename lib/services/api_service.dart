@@ -14,6 +14,7 @@ import 'package:http/http.dart' as http;
 
 abstract class ApiService {
   Future<User?> getUser(String username, {bool self});
+  Future<Comment?> getComment(String commentId);
   Future<ListHabitResults> listHabits({required int limit, String? nextToken});
   Future<Habit?> getHabit(String id);
   Future<void> voteForHabit(String habitId, VoteType type);
@@ -223,6 +224,28 @@ class AmplifyApiService implements ApiService {
     }
 
     return Habit.fromJson(resp);
+  }
+
+  @override
+  Future<Comment?> getComment(String commentId) async {
+    const operationName = 'getComment';
+    const operation = ast.DocumentNode(definitions: [
+      AllCommentFields,
+      GetComment,
+    ]);
+    final query = GGetComment((b) => b..vars.commentId = commentId);
+
+    final resp = await _runQuery(
+      operation,
+      operationName,
+      query.vars.toJson(),
+    );
+
+    if (resp == null) {
+      return null;
+    }
+
+    return Comment.fromJson(resp);
   }
 
   @override

@@ -6,7 +6,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:habitr/models/User.dart';
-import 'package:habitr/services/api_service.dart';
+import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/widgets/user/user_avatar_viewmodel.dart';
@@ -16,12 +16,18 @@ class UserAvatar extends StatelessWidget {
   const UserAvatar({
     this.canEdit = true,
     this.user,
+    this.username,
     this.onImageSelected,
     this.onTap,
     Key? key,
-  }) : super(key: key);
+  })  : assert(
+          user != null || username != null,
+          'Either user or username must be provided',
+        ),
+        super(key: key);
 
   final User? user;
+  final String? username;
 
   /// Overrides when the photo can be edited.
   final bool canEdit;
@@ -39,10 +45,14 @@ class UserAvatar extends StatelessWidget {
         final authService = Provider.of<AuthService>(context, listen: false);
         final storageService =
             Provider.of<StorageService>(context, listen: false);
+        final userRepository =
+            Provider.of<UserRepository>(context, listen: false);
         return UserAvatarViewModel(
           storageService: storageService,
           authService: authService,
+          userRepository: userRepository,
           user: user,
+          username: username,
         );
       },
       builder: (context, _) {

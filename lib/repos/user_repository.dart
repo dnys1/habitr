@@ -3,7 +3,7 @@ import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/api_service.dart';
 
-abstract class UserRepository extends Repository<User> {
+abstract class UserRepository extends Repository<User?> {
   Future<User?> getUser(String username);
   Future<List<User>> searchUsers(String query);
 }
@@ -20,14 +20,17 @@ class UserRepositoryImpl extends UserRepository {
 
   @override
   Future<User?> getUser(String username) async {
-    if (get(username) != null) {
+    if (has(username)) {
       return get(username);
     }
-    final user = await _apiService.getUser(username);
-    if (user != null) {
-      put(username, user);
+    if (_authBloc.state is AuthLoggedIn) {
+      var currentUser = (_authBloc.state as AuthLoggedIn).user;
+      if (username == currentUser.username) {
+        return put(username, currentUser);
+      }
     }
-    return user;
+    final user = await _apiService.getUser(username);
+    return put(username, user);
   }
 
   @override

@@ -1,10 +1,8 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
-import 'package:habitr/models/VoteResult.dart';
 import 'package:habitr/models/VoteType.dart';
 import 'package:habitr/models/list_habit_results.dart';
 import 'package:habitr/repos/repository.dart';

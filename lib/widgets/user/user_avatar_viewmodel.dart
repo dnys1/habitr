@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:habitr/models/User.dart';
+import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
@@ -12,17 +13,21 @@ class UserAvatarViewModel extends BaseViewModel {
   static final _imagePicker = ImagePicker();
 
   final AuthService _authService;
+  final UserRepository _userRepository;
   final StorageService _storageService;
 
   late final User user;
 
   UserAvatarViewModel({
     required StorageService storageService,
+    required UserRepository userRepository,
     required AuthService authService,
     User? user,
+    String? username,
   })  : _storageService = storageService,
+        _userRepository = userRepository,
         _authService = authService {
-    _init(user: user);
+    _init(user: user, username: username);
   }
 
   String? _url;
@@ -31,14 +36,17 @@ class UserAvatarViewModel extends BaseViewModel {
   bool _canEditPhoto = false;
   bool get canEditPhoto => _canEditPhoto;
 
-  Future<void> _init({User? user}) async {
+  Future<void> _init({
+    User? user,
+    String? username,
+  }) async {
     setBusy(true);
     try {
+      user ??= await _userRepository.getUser(username!);
       if (user == null) {
-        this.user = (await _authService.currentUser)!;
-      } else {
-        this.user = user;
+        throw Exception('User not found');
       }
+      this.user = user;
       if (this.user.username == await _authService.username) {
         _canEditPhoto = true;
       }

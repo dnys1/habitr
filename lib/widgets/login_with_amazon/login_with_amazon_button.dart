@@ -8,7 +8,9 @@ class LoginWithAmazonButton extends StatelessWidget {
   const LoginWithAmazonButton({Key? key}) : super(key: key);
 
   void _login(AuthBloc authBloc) {
-    authBloc.add(const AuthLogin(AuthProviderData(AuthProvider.amazon)));
+    authBloc.add(
+      const AuthLogin(AuthLoginWithProviderData(AuthProvider.amazon)),
+    );
   }
 
   static const _imageSize = Size(2100, 633);

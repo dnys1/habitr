@@ -34,8 +34,9 @@ class AuthLoginData extends AuthData {
       );
 }
 
-class AuthProviderData extends AuthData {
-  const AuthProviderData(AuthProvider provider) : super(provider: provider);
+class AuthLoginWithProviderData extends AuthData {
+  const AuthLoginWithProviderData(AuthProvider provider)
+      : super(provider: provider);
 }
 
 class AuthSignupData extends AuthData {

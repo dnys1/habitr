@@ -27,6 +27,7 @@ class Habit extends Model {
   final String id;
   final String tagline;
   final String category;
+  final String? details;
   final int? ups;
   final int? downs;
   final User? author;
@@ -45,6 +46,7 @@ class Habit extends Model {
     required this.id,
     required this.tagline,
     required this.category,
+    this.details,
     this.ups,
     this.downs,
     required this.author,
@@ -56,6 +58,7 @@ class Habit extends Model {
       {String? id,
       required String tagline,
       required String category,
+      String? details,
       int? ups,
       int? downs,
       required User? author,
@@ -65,6 +68,7 @@ class Habit extends Model {
       id: id ?? UUID.getUUID(),
       tagline: tagline,
       category: category,
+      details: details,
       ups: ups,
       downs: downs,
       author: author,
@@ -84,6 +88,7 @@ class Habit extends Model {
         id == other.id &&
         tagline == other.tagline &&
         category == other.category &&
+        details == other.details &&
         ups == other.ups &&
         downs == other.downs &&
         author == other.author &&
@@ -102,6 +107,7 @@ class Habit extends Model {
     buffer.write("id=" + "$id" + ", ");
     buffer.write("tagline=" + "$tagline" + ", ");
     buffer.write("category=" + "$category" + ", ");
+    buffer.write("details=" + "$details" + ", ");
     buffer.write("ups=" + (ups != null ? ups.toString() : "null") + ", ");
     buffer.write("downs=" + (downs != null ? downs.toString() : "null") + ", ");
     buffer.write(
@@ -116,6 +122,7 @@ class Habit extends Model {
       {String? id,
       String? tagline,
       String? category,
+      String? details,
       int? ups,
       int? downs,
       User? author,
@@ -124,6 +131,7 @@ class Habit extends Model {
         id: id ?? this.id,
         tagline: tagline ?? this.tagline,
         category: category ?? this.category,
+        details: details ?? this.details,
         ups: ups ?? this.ups,
         downs: downs ?? this.downs,
         author: author ?? this.author,
@@ -135,6 +143,7 @@ class Habit extends Model {
     var id = json['id'];
     var tagline = json['tagline'];
     var category = json['category'];
+    var details = json['details'] as String?;
     var ups = json['ups'];
     var downs = json['downs'];
     var author = json['author'] is Map
@@ -149,6 +158,7 @@ class Habit extends Model {
     return Habit(
       tagline: tagline,
       category: category,
+      details: details,
       author: author,
       id: id,
       ups: ups,
@@ -162,6 +172,7 @@ class Habit extends Model {
         'id': id,
         'tagline': tagline,
         'category': category,
+        'details': details,
         'ups': ups,
         'downs': downs,
         'author': author?.toJson(),

@@ -2,6 +2,7 @@ fragment AllHabitFields on Habit {
   id
   tagline
   category
+  details
   author {
     username
   }
@@ -72,6 +73,7 @@ fragment AllPrivateUserFields on User {
       id
       tagline
       category
+      details
       ups
       downs
     }
@@ -79,6 +81,18 @@ fragment AllPrivateUserFields on User {
   upvotedHabits
   downvotedHabits
   _version
+}
+
+fragment AllCommentFields on Comment {
+  id
+  by {
+    username
+    name
+  }
+  habit {
+    id
+  }
+  comment
 }
 
 mutation CreateHabit($habit: CreateHabitInput!) {
@@ -111,6 +125,12 @@ query GetUser($username: String!) {
 query GetSelf($username: String!) {
   getUser(username: $username) {
     ...AllPrivateUserFields
+  }
+}
+
+query GetComment($commentId: ID!) {
+  getComment(id: $commentId) {
+    ...AllCommentFields
   }
 }
 

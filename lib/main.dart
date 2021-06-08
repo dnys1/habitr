@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/blocs/auth/auth_data.dart';
 import 'package:habitr/blocs/observer.dart';
+import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/screens/feed/feed_screen.dart';
@@ -91,6 +92,7 @@ class _MyAppState extends State<MyApp> {
   late StreamSubscription<AuthException> _authExceptions;
   late final HabitRepository _habitRepository;
   late final UserRepository _userRepository;
+  late final CommentRepository _commentRepository;
 
   @override
   void initState() {
@@ -118,6 +120,10 @@ class _MyAppState extends State<MyApp> {
       authBloc: _authBloc,
     );
 
+    _commentRepository = CommentRepositoryImpl(
+      apiService: widget._apiService,
+    );
+
     widget._storageService.init();
   }
 
@@ -141,6 +147,7 @@ class _MyAppState extends State<MyApp> {
         ChangeNotifierProvider.value(value: widget._themeService),
         ChangeNotifierProvider.value(value: _habitRepository),
         ChangeNotifierProvider.value(value: _userRepository),
+        ChangeNotifierProvider.value(value: _commentRepository),
       ],
       child: BlocProvider.value(
         value: _authBloc,

@@ -39,6 +39,7 @@ type Habit @model
     id: ID!
     tagline: String!
     category: String!
+    details: String
     ups: Int
         @auth(rules: [                                                      # Restrict mutations of `ups` to admin + API key
             { allow: public }

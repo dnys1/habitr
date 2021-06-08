@@ -38,7 +38,7 @@ class SearchService extends SearchDelegate {
         final users = result[1] as List<User>;
 
         yield _lastResults = SearchResults(habits: habits, users: users);
-      } catch (_) {
+      } catch (e) {
         yield _errorWidget;
       } finally {
         _lastQuery = query;
@@ -47,7 +47,10 @@ class SearchService extends SearchDelegate {
   }
 
   static const _errorWidget = Center(
-    child: Text('Error performing search. Please try again.'),
+    child: Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Text('Error performing search. Please try again.'),
+    ),
   );
 
   Widget _lastResults = const SizedBox.shrink();

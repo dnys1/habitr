@@ -2,15 +2,14 @@
 directive @defer on FIELD
 
 """
-Tells the service which subscriptions will be published to when this mutation is
-called. This directive is deprecated use @aws_susbscribe directive instead.
+Tells the service this field/object has access authorized by sigv4 signing.
 """
-directive @aws_publish(
-  """
-  List of subscriptions which will be published to when this mutation is called.
-  """
-  subscriptions: [String]
-) on FIELD_DEFINITION
+directive @aws_iam on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by an API key.
+"""
+directive @aws_api_key on OBJECT | FIELD_DEFINITION
 
 """
 Tells the service this field/object has access authorized by a Lambda Authorizer.
@@ -18,9 +17,9 @@ Tells the service this field/object has access authorized by a Lambda Authorizer
 directive @aws_lambda on OBJECT | FIELD_DEFINITION
 
 """
-Tells the service this field/object has access authorized by an API key.
+Tells the service this field/object has access authorized by an OIDC token.
 """
-directive @aws_api_key on OBJECT | FIELD_DEFINITION
+directive @aws_oidc on OBJECT | FIELD_DEFINITION
 
 """
 Tells the service this field/object has access authorized by a Cognito User Pools token.
@@ -30,11 +29,6 @@ directive @aws_cognito_user_pools(
   cognito_groups: [String]
 ) on OBJECT | FIELD_DEFINITION
 
-"""
-Tells the service this field/object has access authorized by sigv4 signing.
-"""
-directive @aws_iam on OBJECT | FIELD_DEFINITION
-
 """Directs the schema to enforce authorization on a field"""
 directive @aws_auth(
   """List of cognito user pool groups which have access on this field"""
@@ -42,9 +36,15 @@ directive @aws_auth(
 ) on FIELD_DEFINITION
 
 """
-Tells the service this field/object has access authorized by an OIDC token.
+Tells the service which subscriptions will be published to when this mutation is
+called. This directive is deprecated use @aws_susbscribe directive instead.
 """
-directive @aws_oidc on OBJECT | FIELD_DEFINITION
+directive @aws_publish(
+  """
+  List of subscriptions which will be published to when this mutation is called.
+  """
+  subscriptions: [String]
+) on FIELD_DEFINITION
 
 """Tells the service which mutation triggers this subscription."""
 directive @aws_subscribe(
@@ -119,6 +119,7 @@ input CreateHabitInput {
   id: ID
   tagline: String!
   category: String!
+  details: String
   ups: Int
   downs: Int
   owner: String
@@ -153,6 +154,7 @@ type Habit {
   id: ID!
   tagline: String!
   category: String!
+  details: String
   owner: String
   _version: Int!
   _deleted: Boolean
@@ -222,6 +224,7 @@ input ModelFloatInput {
 input ModelHabitConditionInput {
   tagline: ModelStringInput
   category: ModelStringInput
+  details: ModelStringInput
   ups: ModelIntInput
   downs: ModelIntInput
   and: [ModelHabitConditionInput]
@@ -239,6 +242,7 @@ input ModelHabitFilterInput {
   id: ModelIDInput
   tagline: ModelStringInput
   category: ModelStringInput
+  details: ModelStringInput
   ups: ModelIntInput
   downs: ModelIntInput
   owner: ModelStringInput
@@ -409,6 +413,7 @@ input SearchableHabitFilterInput {
   id: SearchableIDFilterInput
   tagline: SearchableStringFilterInput
   category: SearchableStringFilterInput
+  details: SearchableStringFilterInput
   ups: SearchableIntFilterInput
   downs: SearchableIntFilterInput
   owner: SearchableStringFilterInput
@@ -421,6 +426,7 @@ enum SearchableHabitSortableFields {
   id
   tagline
   category
+  details
   ups
   downs
   owner
@@ -532,6 +538,7 @@ input UpdateHabitInput {
   id: ID!
   tagline: String
   category: String
+  details: String
   ups: Int
   downs: Int
   owner: String
