@@ -167,12 +167,15 @@ subscription SubscribeToVotes {
   }
 }
 
-query SearchUsers($query: String!, $limit: Int!) {
+query SearchUsers($query: String!, $excludeUsername: String!, $limit: Int!) {
   searchUsers(
-    filter: { or: [
-      { username: { matchPhrase: $query } },
-      { name: { matchPhrasePrefix: $query } }
-    ] },
+    filter: { and: {
+      or: [
+        { username: { matchPhrase: $query } },
+        { name: { matchPhrasePrefix: $query } }
+      ]
+      username: { ne: $excludeUsername }
+    } },
     limit: $limit
   ) {
     items {

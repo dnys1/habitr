@@ -33,12 +33,12 @@ class SearchService extends SearchDelegate {
         final result = await Future.wait([
           _habitRepository.searchHabits(query),
           _userRepository.searchUsers(query),
-        ]);
+        ], eagerError: true);
         final habits = result[0] as List<Habit>;
         final users = result[1] as List<User>;
 
         yield _lastResults = SearchResults(habits: habits, users: users);
-      } on Exception {
+      } catch (_) {
         yield _errorWidget;
       } finally {
         _lastQuery = query;

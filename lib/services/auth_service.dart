@@ -31,6 +31,47 @@ class AmplifyAuthService implements AuthService {
     required ApiService apiService,
   }) : _apiService = apiService;
 
+  StreamController<User>? _userController;
+  GraphQLSubscriptionOperation? _userSubscription;
+
+  @override
+  Stream<User> get userUpdates async* {
+    const operationName = 'subscribeToUser';
+    const _document = ast.DocumentNode(definitions: [
+      AllPublicUserFields,
+      SubscribeToUser,
+    ]);
+    final request = gql.printNode(_document);
+
+    _userController ??= StreamController<User>.broadcast();
+    _userSubscription ??= Amplify.API.subscribe<String>(
+      request: GraphQLRequest(
+        document: request,
+        variables: {
+          'username': await username,
+        },
+      ),
+      onData: (event) {
+        final data = event.data;
+        final userMap = jsonDecode(data) as Map<String, dynamic>;
+        final user = User.fromJson(userMap[operationName]);
+        _userController!.add(user);
+      },
+      onEstablished: () {},
+      onError: (error) => _userController!.addError(error),
+      onDone: () {
+        print('Done');
+      },
+    );
+    _userController!.onCancel ??= () {
+      _userSubscription?.cancel();
+      _userSubscription = null;
+      _userController = null;
+    };
+
+    yield* _userController!.stream;
+  }
+
   @override
   Future<User> login(String username, String password) async {
     final user = await currentUser;
@@ -134,50 +175,9 @@ class AmplifyAuthService implements AuthService {
   }
 
   @override
-  Future<void> logout() {
-    return Amplify.Auth.signOut();
-  }
-
-  final _userController = StreamController<User>.broadcast();
-  GraphQLSubscriptionOperation? _subscription;
-
-  @override
-  Stream<User> get userUpdates async* {
-    const operationName = 'subscribeToUser';
-    const _document = ast.DocumentNode(definitions: [
-      AllPublicUserFields,
-      SubscribeToUser,
-    ]);
-    final request = gql.printNode(_document);
-
-    _subscription ??= Amplify.API.subscribe<String>(
-      request: GraphQLRequest(
-        document: request,
-        variables: {
-          'username': await username,
-        },
-      ),
-      onData: (event) {
-        final data = event.data;
-        final userMap = jsonDecode(data) as Map<String, dynamic>;
-        final user = User.fromJson(userMap[operationName]);
-        _userController.add(user);
-      },
-      onEstablished: () {},
-      onError: (error) {
-        _userController.addError(error);
-      },
-      onDone: () {
-        print('Done');
-      },
-    );
-    _userController.onCancel ??= () {
-      _subscription!.cancel();
-      _subscription = null;
-      _userController.onCancel = null;
-    };
-
-    yield* _userController.stream;
+  Future<void> logout() async {
+    await _apiService.logout();
+    await Amplify.Auth.signOut();
   }
 }
 

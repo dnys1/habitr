@@ -7,6 +7,7 @@ import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
+import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/analytics_service.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/amplifyconfiguration.dart';
@@ -14,7 +15,7 @@ import 'package:habitr/services/auth_service.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 
-abstract class StorageService {
+abstract class StorageService extends Repository<String> {
   Future<void> init();
 
   /// Holds any lost data due to a pending file upload being interrupted
@@ -22,7 +23,8 @@ abstract class StorageService {
   File? get lostFile;
 
   Future<void> putImage(User user, File image);
-  Future<String> getImageUrl(String identityId, String key);
+  Future<String> getImageUrl(String? identityId, String key);
+  Future<void> precache(User user);
 }
 
 class AmplifyStorageService extends StorageService {
@@ -49,8 +51,6 @@ class AmplifyStorageService extends StorageService {
   @override
   File? get lostFile => _lostFile;
 
-  final _imageUrlCache = <String, String>{};
-
   @override
   Future<void> init() async {
     // See discussion about Android crashes:
@@ -60,6 +60,17 @@ class AmplifyStorageService extends StorageService {
       if (!response.isEmpty && response.file != null) {
         _lostFile = File(response.file!.path);
       }
+    }
+  }
+
+  @override
+  Future<void> precache(User user) async {
+    var avatar = user.avatar;
+    if (avatar != null) {
+      await getImageUrl(
+        avatar.cognitoId ?? (await _authService.cognitoIdentityId)!,
+        avatar.key,
+      );
     }
   }
 
@@ -88,10 +99,12 @@ class AmplifyStorageService extends StorageService {
   }
 
   @override
-  Future<String> getImageUrl(String identityId, String key) async {
-    if (_imageUrlCache.containsKey(key)) {
-      return _imageUrlCache[key]!;
+  Future<String> getImageUrl(String? identityId, String key) async {
+    var url = get(key);
+    if (url != null) {
+      return url;
     }
+    identityId ??= await _authService.cognitoIdentityId;
     final GetUrlResult result = await Amplify.Storage.getUrl(
       key: key,
       options: S3GetUrlOptions(
@@ -99,6 +112,6 @@ class AmplifyStorageService extends StorageService {
         accessLevel: StorageAccessLevel.protected,
       ),
     );
-    return _imageUrlCache[key] = result.url;
+    return put(key, result.url);
   }
 }

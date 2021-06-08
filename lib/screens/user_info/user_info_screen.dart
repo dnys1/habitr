@@ -148,7 +148,7 @@ class _UserHabitsAndComments extends StatefulWidget {
 }
 
 class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
-  bool isHabitsExpanded = false;
+  bool isHabitsExpanded = true;
   bool isCommentsExpanded = false;
 
   @override

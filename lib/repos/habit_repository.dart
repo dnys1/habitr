@@ -51,6 +51,15 @@ class HabitRepositoryImpl extends HabitRepository {
       }
     }));
 
+    _setupVoteResultSubscription();
+  }
+
+  Future<void> _setupVoteResultSubscription() async {
+    var state = _authBloc.state;
+    if (state is! AuthLoggedIn) {
+      await _authBloc.stream.firstWhere((state) => state is AuthLoggedIn);
+    }
+
     addSubscription(_apiService.voteResults.listen((voteResult) {
       var user = voteResult.user;
       if (user.username == _user?.username) {

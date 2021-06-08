@@ -42,6 +42,7 @@ class UserAvatar extends StatelessWidget {
         return UserAvatarViewModel(
           storageService: storageService,
           authService: authService,
+          user: user,
         );
       },
       builder: (context, _) {
@@ -56,7 +57,7 @@ class UserAvatar extends StatelessWidget {
   }
 }
 
-class _UserAvatarView extends StatelessWidget {
+class _UserAvatarView extends StatefulWidget {
   final UserAvatarViewModel viewModel;
   final void Function(File)? onImageSelected;
   final void Function()? onTap;
@@ -70,14 +71,19 @@ class _UserAvatarView extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  @override
+  _UserAvatarViewState createState() => _UserAvatarViewState();
+}
+
+class _UserAvatarViewState extends State<_UserAvatarView> {
   Future<void> _selectImage() async {
-    final image = await viewModel.pickImage();
+    final image = await widget.viewModel.pickImage();
     if (image != null) {
-      onImageSelected?.call(image);
+      widget.onImageSelected?.call(image);
     }
   }
 
-  Future<void> _viewImage(BuildContext context, String url) async {
+  Future<void> _viewImage(String url) async {
     return showDialog(
       context: context,
       useSafeArea: false,
@@ -93,69 +99,72 @@ class _UserAvatarView extends StatelessWidget {
     );
   }
 
-  void Function()? getAction(BuildContext context, String? url) {
-    if (onTap != null) {
-      return onTap;
+  void Function()? getAction(String? url) {
+    if (widget.onTap != null) {
+      return widget.onTap;
     }
-    if (viewModel.isBusy) {
+    if (widget.viewModel.isBusy) {
       return null;
     }
-    if (viewModel.canEditPhoto && canEdit) {
+    if (widget.viewModel.canEditPhoto && widget.canEdit) {
       return _selectImage;
     }
     if (url != null) {
-      return () => _viewImage(context, url);
+      return () => _viewImage(url);
     }
     return null;
   }
 
+  Widget childForRadius(double radius) {
+    if (widget.viewModel.isBusy) {
+      return const CupertinoActivityIndicator();
+    }
+
+    var url = widget.viewModel.url;
+    if (url == null) {
+      return Icon(
+        Icons.perm_identity,
+        size: radius,
+      );
+    }
+    return CachedNetworkImage(
+      imageUrl: url,
+      imageBuilder: (context, imageProvider) {
+        return Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: imageProvider,
+              // TODO: Make responsive
+              fit: BoxFit.fitHeight,
+            ),
+            shape: BoxShape.circle,
+          ),
+        );
+      },
+      placeholder: (context, url) => const CupertinoActivityIndicator(),
+      errorWidget: (context, _, __) => Icon(
+        Icons.perm_identity,
+        size: radius,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final storageService = Provider.of<StorageService>(context, listen: false);
-    return FutureBuilder<String?>(
-      future: viewModel.avatarUrl(storageService),
-      builder: (context, snapshot) {
-        final url = snapshot.hasData ? snapshot.data : null;
-        return LayoutBuilder(
-          builder: (context, constraints) {
-            final radius = max(constraints.biggest.shortestSide / 4, 40.0);
-            return GestureDetector(
-              onTap: getAction(context, url),
-              child: CircleAvatar(
-                backgroundColor: Colors.grey[200],
-                radius: radius,
-                foregroundImage: viewModel.image != null
-                    ? FileImage(viewModel.image!)
-                    : null,
-                child: url != null
-                    ? CachedNetworkImage(
-                        imageUrl: url,
-                        imageBuilder: (context, imageProvider) {
-                          return Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: imageProvider,
-                                // TODO: Make responsive
-                                fit: BoxFit.fitHeight,
-                              ),
-                              shape: BoxShape.circle,
-                            ),
-                          );
-                        },
-                        placeholder: (context, url) =>
-                            const CupertinoActivityIndicator(),
-                        errorWidget: (context, _, __) => Icon(
-                          Icons.perm_identity,
-                          size: radius,
-                        ),
-                      )
-                    : Icon(
-                        Icons.perm_identity,
-                        size: radius,
-                      ),
-              ),
-            );
-          },
+    var url = widget.viewModel.url;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final radius = max(constraints.biggest.shortestSide / 4, 40.0);
+        return GestureDetector(
+          onTap: getAction(url),
+          child: CircleAvatar(
+            backgroundColor: Colors.grey[200],
+            radius: radius,
+            foregroundImage: widget.viewModel.image != null
+                ? FileImage(widget.viewModel.image!)
+                : null,
+            child: childForRadius(radius),
+          ),
         );
       },
     );

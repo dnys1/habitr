@@ -22,8 +22,11 @@ class UserAvatarViewModel extends BaseViewModel {
     User? user,
   })  : _storageService = storageService,
         _authService = authService {
-    _init();
+    _init(user: user);
   }
+
+  String? _url;
+  String? get url => _url;
 
   bool _canEditPhoto = false;
   bool get canEditPhoto => _canEditPhoto;
@@ -33,9 +36,15 @@ class UserAvatarViewModel extends BaseViewModel {
     try {
       if (user == null) {
         this.user = (await _authService.currentUser)!;
+      } else {
+        this.user = user;
       }
       if (this.user.username == await _authService.username) {
         _canEditPhoto = true;
+      }
+      var avatar = this.user.avatar;
+      if (avatar != null) {
+        _url = await _storageService.getImageUrl(avatar.cognitoId, avatar.key);
       }
     } on Exception catch (e) {
       safePrint('Error initializing view model: $e');

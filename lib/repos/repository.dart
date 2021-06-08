@@ -1,9 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_interface.dart';
 
-abstract class Repository<T extends Model> extends ChangeNotifier {
+abstract class Repository<T> extends ChangeNotifier {
   final Map<String, T> _cache = {};
   Map<String, T> get cache => _cache;
 
@@ -16,9 +15,10 @@ abstract class Repository<T extends Model> extends ChangeNotifier {
   }
 
   @protected
-  void put(String id, T value) {
+  T put(String id, T value) {
     _cache[id] = value;
     notifyListeners();
+    return value;
   }
 
   @protected
@@ -27,8 +27,8 @@ abstract class Repository<T extends Model> extends ChangeNotifier {
     notifyListeners();
   }
 
-  @protected
   T? get(String id) => _cache[id];
+  bool has(String id) => _cache.containsKey(id);
 
   @protected
   void setLoading(String id) {

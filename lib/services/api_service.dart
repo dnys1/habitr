@@ -20,10 +20,50 @@ abstract class ApiService {
   Stream<VoteResult> get voteResults;
   Future<bool> usernameExists(String username);
   Future<List<Habit>> searchHabits(String query, {required int limit});
-  Future<List<User>> searchUsers(String query, {required int limit});
+  Future<List<User>> searchUsers(
+    String query,
+    String excludeUsername, {
+    required int limit,
+  });
+  Future<void> logout();
 }
 
 class AmplifyApiService implements ApiService {
+  StreamController<VoteResult>? _voteResultStreamController;
+  GraphQLSubscriptionOperation? _voteResultSubscription;
+
+  @override
+  Stream<VoteResult> get voteResults {
+    const operationName = 'subscribeToVotes';
+    const _document = ast.DocumentNode(definitions: [
+      AllVoteResultFields,
+      SubscribeToVotes,
+    ]);
+
+    _voteResultStreamController ??= StreamController<VoteResult>.broadcast();
+    _voteResultSubscription ??= Amplify.API.subscribe<String>(
+      request: GraphQLRequest(document: gql.printNode(_document)),
+      onData: (data) {
+        final map = jsonDecode(data.data) as Map<String, dynamic>;
+        final voteResult = map[operationName] as Map<String, dynamic>?;
+        if (voteResult == null) {
+          return;
+        }
+        _voteResultStreamController!.add(VoteResult.fromJson(voteResult));
+      },
+      onEstablished: () {},
+      onError: (error) => _voteResultStreamController!.addError(error),
+      onDone: () {},
+    );
+    _voteResultStreamController!.onCancel ??= () {
+      _voteResultSubscription?.cancel();
+      _voteResultSubscription = null;
+      _voteResultStreamController = null;
+    };
+
+    return _voteResultStreamController!.stream;
+  }
+
   Future<Map<String, dynamic>?> _runQuery(
     ast.DocumentNode operation,
     String operationName,
@@ -47,6 +87,11 @@ class AmplifyApiService implements ApiService {
     }
 
     return data[operationName];
+  }
+
+  @override
+  Future<void> logout() async {
+    await _voteResultStreamController?.close();
   }
 
   @override
@@ -180,40 +225,6 @@ class AmplifyApiService implements ApiService {
     return Habit.fromJson(resp);
   }
 
-  final _voteResultStreamController = StreamController<VoteResult>.broadcast();
-  GraphQLSubscriptionOperation? _voteResultSubscription;
-
-  @override
-  Stream<VoteResult> get voteResults {
-    const operationName = 'subscribeToVotes';
-    const _document = ast.DocumentNode(definitions: [
-      AllVoteResultFields,
-      SubscribeToVotes,
-    ]);
-
-    _voteResultSubscription ??= Amplify.API.subscribe<String>(
-      request: GraphQLRequest(document: gql.printNode(_document)),
-      onData: (data) {
-        final map = jsonDecode(data.data) as Map<String, dynamic>;
-        final voteResult = map[operationName] as Map<String, dynamic>?;
-        if (voteResult == null) {
-          return;
-        }
-        _voteResultStreamController.add(VoteResult.fromJson(voteResult));
-      },
-      onEstablished: () {},
-      onError: (error) => _voteResultStreamController.addError(error),
-      onDone: () {},
-    );
-    _voteResultStreamController.onCancel ??= () {
-      _voteResultSubscription?.cancel();
-      _voteResultSubscription = null;
-      _voteResultStreamController.onCancel = null;
-    };
-
-    return _voteResultStreamController.stream;
-  }
-
   @override
   Future<bool> usernameExists(String username) async {
     var request = UserExistsRequest(username);
@@ -260,12 +271,17 @@ class AmplifyApiService implements ApiService {
   }
 
   @override
-  Future<List<User>> searchUsers(String query, {required int limit}) async {
+  Future<List<User>> searchUsers(
+    String query,
+    String excludeUsername, {
+    required int limit,
+  }) async {
     const operationName = 'searchUsers';
     final operation = GSearchUsers(
       (b) => b
         ..vars.query = query
-        ..vars.limit = limit,
+        ..vars.limit = limit
+        ..vars.excludeUsername = excludeUsername,
     );
 
     final resp = await _runQuery(

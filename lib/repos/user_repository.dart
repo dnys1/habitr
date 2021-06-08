@@ -33,7 +33,12 @@ class UserRepositoryImpl extends UserRepository {
   @override
   Future<List<User>> searchUsers(String query) async {
     if (query.isEmpty) return [];
-    final searchResults = await _apiService.searchUsers(query, limit: 5);
+    var currentUsername = (_authBloc.state as AuthLoggedIn).user.username;
+    final searchResults = await _apiService.searchUsers(
+      query,
+      currentUsername,
+      limit: 5,
+    );
     final users = await Future.wait(
       searchResults.map((user) => getUser(user.username)),
     );

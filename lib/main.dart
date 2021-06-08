@@ -100,6 +100,7 @@ class _MyAppState extends State<MyApp> {
       widget._backendService,
       widget._dataService,
       widget._preferencesService,
+      widget._storageService,
     )..add(const AuthLoad());
 
     _authExceptions = _authBloc.exceptions.listen((exception) {
@@ -133,10 +134,10 @@ class _MyAppState extends State<MyApp> {
         Provider.value(value: widget._authService),
         Provider.value(value: widget._backendService),
         Provider.value(value: widget._apiService),
-        Provider.value(value: widget._storageService),
         Provider.value(value: widget._dataService),
         Provider.value(value: widget._analyticsService),
         Provider.value(value: widget._preferencesService),
+        ChangeNotifierProvider.value(value: widget._storageService),
         ChangeNotifierProvider.value(value: widget._themeService),
         ChangeNotifierProvider.value(value: _habitRepository),
         ChangeNotifierProvider.value(value: _userRepository),

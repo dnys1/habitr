@@ -12,6 +12,7 @@ import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/backend_service.dart';
 import 'package:habitr/services/data_service.dart';
 import 'package:habitr/services/preferences_service.dart';
+import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/error.dart';
 import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
@@ -29,6 +30,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final BackendService _backendService;
   final DataService _dataService;
   final PreferencesService _preferencesService;
+  final StorageService _storageService;
 
   AuthState? fromJson(Map<String, dynamic> json) {
     final state = json['state'] as Map<String, dynamic>?;
@@ -43,6 +45,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     this._backendService,
     this._dataService,
     this._preferencesService,
+    this._storageService,
   ) : super(const AuthInitial());
 
   @override
@@ -71,6 +74,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final _exceptionController = StreamController<AuthException>.broadcast();
   Stream<AuthException> get exceptions => _exceptionController.stream;
 
+  StreamSubscription<AuthEvent>? _userUpdates;
+
+  // Cache login data to improve sign up/verify code flow.
+  AuthData? _authData;
+
+  final _initializedCompleter = Completer<void>();
+  Future<void> get isInitialized => _initializedCompleter.future;
+
   @override
   Stream<AuthState> mapEventToState(
     AuthEvent event,
@@ -94,12 +105,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  // Cache login data to improve sign up/verify code flow.
-  AuthData? _authData;
-
-  final _initializedCompleter = Completer<void>();
-  Future<void> get isInitialized => _initializedCompleter.future;
-
   Stream<AuthState> _loadInitialState() async* {
     try {
       yield const AuthLoading();
@@ -112,6 +117,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       try {
         final currentUser = await _authService.currentUser;
         if (currentUser != null) {
+          await _storageService.precache(currentUser);
           yield AuthLoggedIn(currentUser);
           _userUpdates ??= _userEvents.listen(add);
           return;
@@ -134,7 +140,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  StreamSubscription<AuthEvent>? _userUpdates;
   Stream<AuthEvent> get _userEvents async* {
     try {
       await for (var user in _authService.userUpdates) {
@@ -153,11 +158,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           loginData.username!,
           loginData.password!,
         );
+        await _storageService.precache(user);
         yield AuthLoggedIn(user);
         _userUpdates ??= _userEvents.listen(add);
       } else {
         final user = await _authService.loginWithProvider(loginData.provider!);
         if (user != null) {
+          await _storageService.precache(user);
           yield AuthInFlow.addImage(user);
         }
       }
