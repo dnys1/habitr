@@ -17,9 +17,9 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'S3Object.g.dart';
+import 'AccessLevel.dart';
 
-enum AccessLevel { guest, private, protected }
+part 'S3Object.g.dart';
 
 @JsonSerializable()
 class S3Object {

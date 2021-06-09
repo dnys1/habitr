@@ -55,11 +55,12 @@ type Habit @model
     owner: String
     author: User
         @connection(fields: ["owner"])
-    comments: [Comment!] @connection
+    comments: [Comment!] @connection(keyName: "commentsByHabit", fields: ["id"])
 }
 
 type Comment @model
     @key(name: "commentsByUser", fields: ["owner"])
+    @key(name: "commentsByHabit", fields: ["habitId"])
     @auth(rules: [
         { allow: groups, groups: ["admin"] }                                # Unrestricted access to members of the "admin" user pool group
         { allow: public }                                                   # Unrestricted access to API key (used in Lambdas)
@@ -67,9 +68,9 @@ type Comment @model
         { allow: owner, operations: [create, delete, update] }              # Read, create, update, and delete access for owners
     ]) {
     id: ID!
+    habitId: ID!
     owner: String
     by: User @connection(fields: ["owner"])
-    habit: Habit! @connection
     comment: String!
 }
 

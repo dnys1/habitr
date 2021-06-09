@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habitr/models/Habit.dart';
+import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
@@ -8,13 +9,17 @@ import 'package:habitr/util/scaffold.dart';
 class HabitDetailsViewModel extends BaseViewModel {
   HabitDetailsViewModel({
     required HabitRepository habitRepository,
-    Habit? habit,
-    String? habitId,
-  }) : _habitRepository = habitRepository {
-    _init(habit: habit, habitId: habitId);
+    required CommentRepository commentRepository,
+    required this.habitId,
+  })  : _habitRepository = habitRepository,
+        _commentRepository = commentRepository {
+    _init();
   }
 
+  final String habitId;
+
   final HabitRepository _habitRepository;
+  final CommentRepository _commentRepository;
 
   final _commentController = TextEditingController();
   TextEditingController get commentController => _commentController;
@@ -33,10 +38,10 @@ class HabitDetailsViewModel extends BaseViewModel {
 
   bool get isDirty => comment.isNotEmpty;
 
-  Future<void> _init({Habit? habit, String? habitId}) async {
+  Future<void> _init() async {
     setBusy(true);
     try {
-      habit ??= await _habitRepository.getHabit(habitId!);
+      var habit = await _habitRepository.getHabit(habitId);
       if (habit == null) {
         throw Exception('Habit not found');
       }
@@ -51,7 +56,10 @@ class HabitDetailsViewModel extends BaseViewModel {
     if (comment.isEmpty) return;
     _setIsSendingComment(true);
     try {
-      // TODO: post comment
+      await _commentRepository.addComment(
+        comment,
+        habit.id,
+      );
 
       _commentController.clear();
       showSuccessSnackbar('Successfully posted comment.');

@@ -83,7 +83,7 @@ class _UserListTileView extends StatelessWidget {
             },
       leading: user == null
           ? const CircularProgressIndicator()
-          : UserAvatar(user: user!),
+          : UserAvatar(user: user!, isThumbnail: true),
       title: isLoading ? const Text('Loading...') : title,
       trailing: const Icon(Icons.chevron_right),
       subtitle: subtitle,

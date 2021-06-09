@@ -16,9 +16,11 @@ class UserAvatar extends StatelessWidget {
   const UserAvatar({
     this.canEdit = true,
     this.user,
+    this.image,
     this.username,
-    this.onImageSelected,
     this.onTap,
+    this.selectImage,
+    this.isThumbnail = false,
     Key? key,
   })  : assert(
           user != null || username != null,
@@ -29,14 +31,19 @@ class UserAvatar extends StatelessWidget {
   final User? user;
   final String? username;
 
+  final File? image;
+
+  /// Whether or not the image is shown as a thumbnail.
+  final bool isThumbnail;
+
   /// Overrides when the photo can be edited.
   final bool canEdit;
 
-  /// A callback for when a user selects an image.
-  final void Function(File)? onImageSelected;
-
   /// Overrides the default tap action.
   final void Function()? onTap;
+
+  /// The function to call to select a new image.
+  final FutureOr<void> Function()? selectImage;
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +67,9 @@ class UserAvatar extends StatelessWidget {
           Provider.of(context),
           canEdit: canEdit,
           onTap: onTap,
-          onImageSelected: onImageSelected,
+          selectImage: selectImage,
+          image: image,
+          isThumbnail: isThumbnail,
         );
       },
     );
@@ -69,15 +78,19 @@ class UserAvatar extends StatelessWidget {
 
 class _UserAvatarView extends StatefulWidget {
   final UserAvatarViewModel viewModel;
-  final void Function(File)? onImageSelected;
+  final FutureOr<void> Function()? selectImage;
   final void Function()? onTap;
   final bool canEdit;
+  final bool isThumbnail;
+  final File? image;
 
   const _UserAvatarView(
     this.viewModel, {
     this.onTap,
-    this.onImageSelected,
+    this.selectImage,
     required this.canEdit,
+    required this.isThumbnail,
+    this.image,
     Key? key,
   }) : super(key: key);
 
@@ -86,13 +99,6 @@ class _UserAvatarView extends StatefulWidget {
 }
 
 class _UserAvatarViewState extends State<_UserAvatarView> {
-  Future<void> _selectImage() async {
-    final image = await widget.viewModel.pickImage();
-    if (image != null) {
-      widget.onImageSelected?.call(image);
-    }
-  }
-
   Future<void> _viewImage(String url) async {
     return showDialog(
       context: context,
@@ -113,11 +119,13 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
     if (widget.onTap != null) {
       return widget.onTap;
     }
-    if (widget.viewModel.isBusy) {
+    if (widget.viewModel.isBusy || widget.isThumbnail) {
       return null;
     }
-    if (widget.viewModel.canEditPhoto && widget.canEdit) {
-      return _selectImage;
+    if (widget.viewModel.canEditPhoto &&
+        widget.canEdit &&
+        widget.selectImage != null) {
+      return widget.selectImage;
     }
     if (url != null) {
       return () => _viewImage(url);
@@ -170,9 +178,8 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
           child: CircleAvatar(
             backgroundColor: Colors.grey[200],
             radius: radius,
-            foregroundImage: widget.viewModel.image != null
-                ? FileImage(widget.viewModel.image!)
-                : null,
+            foregroundImage:
+                widget.image != null ? FileImage(widget.image!) : null,
             child: childForRadius(radius),
           ),
         );

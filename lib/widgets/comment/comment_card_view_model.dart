@@ -3,24 +3,21 @@ import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
 
-class CommentListTileViewModel extends BaseViewModel {
-  CommentListTileViewModel({
+class CommentCardViewModel extends BaseViewModel {
+  CommentCardViewModel({
     required CommentRepository commentRepository,
-    Comment? comment,
-    String? commentId,
+    required this.commentId,
   }) : _commentRepository = commentRepository {
-    _init(comment: comment, commentId: commentId);
+    _init();
   }
 
+  final String commentId;
   final CommentRepository _commentRepository;
 
-  Future<void> _init({
-    Comment? comment,
-    String? commentId,
-  }) async {
+  Future<void> _init() async {
     setBusy(true);
     try {
-      comment ??= await _commentRepository.getComment(commentId!);
+      var comment = await _commentRepository.getComment(commentId);
       if (comment == null) {
         throw Exception('Comment not found');
       }

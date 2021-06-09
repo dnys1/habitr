@@ -26,6 +26,7 @@ abstract class ApiService {
     String excludeUsername, {
     required int limit,
   });
+  Future<Comment> createComment(String comment, String habitId);
   Future<void> logout();
 }
 
@@ -104,9 +105,18 @@ class AmplifyApiService implements ApiService {
 
     final user = await _runQuery(
       ast.DocumentNode(
-          definitions: self
-              ? [AllPrivateUserFields, GetSelf]
-              : [AllPublicUserFields, GetUser]),
+        definitions: [
+          AllCommentFields,
+          AllHabitFields,
+          if (self) ...[
+            AllPrivateUserFields,
+            GetSelf,
+          ] else ...[
+            AllPublicUserFields,
+            GetUser,
+          ],
+        ],
+      ),
       operationName,
       query.vars.toJson(),
     );
@@ -133,6 +143,7 @@ class AmplifyApiService implements ApiService {
     final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
         AllHabitFields,
+        AllCommentFields,
         ListHabits,
       ]),
       operationName,
@@ -174,6 +185,8 @@ class AmplifyApiService implements ApiService {
 
     await _runQuery(
       const ast.DocumentNode(definitions: [
+        AllHabitFields,
+        AllCommentFields,
         AllPrivateUserFields,
         UpdateUser,
       ]),
@@ -213,6 +226,7 @@ class AmplifyApiService implements ApiService {
     final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
         AllHabitFields,
+        AllCommentFields,
         GetHabit,
       ]),
       operationName,
@@ -323,5 +337,30 @@ class AmplifyApiService implements ApiService {
     return items
         .map((json) => User.fromJson(json as Map<String, dynamic>))
         .toList();
+  }
+
+  @override
+  Future<Comment> createComment(String comment, String habitId) async {
+    const operationName = 'createComment';
+    final mutation = GCreateComment(
+      (b) => b
+        ..vars.comment = comment
+        ..vars.habitId = habitId,
+    );
+
+    final resp = await _runQuery(
+      const ast.DocumentNode(definitions: [
+        AllCommentFields,
+        CreateComment,
+      ]),
+      operationName,
+      mutation.vars.toJson(),
+    );
+
+    if (resp == null) {
+      throw Exception('Could not create comment');
+    }
+
+    return Comment.fromJson(resp);
   }
 }

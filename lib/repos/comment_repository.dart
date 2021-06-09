@@ -4,7 +4,7 @@ import 'package:habitr/services/api_service.dart';
 
 abstract class CommentRepository extends Repository<Comment?> {
   Future<Comment?> getComment(String id);
-  Future<void> addComment(Comment comment);
+  Future<Comment> addComment(String comment, String habitId);
 }
 
 class CommentRepositoryImpl extends CommentRepository {
@@ -22,5 +22,9 @@ class CommentRepositoryImpl extends CommentRepository {
   }
 
   @override
-  Future<void> addComment(Comment comment) async {}
+  Future<Comment> addComment(String comment, String habitId) async {
+    final createdComment = await _apiService.createComment(comment, habitId);
+    put(createdComment.id, createdComment);
+    return createdComment;
+  }
 }

@@ -8,6 +8,7 @@ import 'package:habitr/blocs/observer.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/repos/user_repository.dart';
+import 'package:habitr/screens/app/app_screen.dart';
 import 'package:habitr/screens/feed/feed_screen.dart';
 import 'package:habitr/screens/loading/loading_screen.dart';
 import 'package:habitr/screens/login/login_screen.dart';
@@ -110,18 +111,21 @@ class _MyAppState extends State<MyApp> {
       showErrorSnackbar(exception.message);
     });
 
+    _commentRepository = CommentRepositoryImpl(
+      apiService: widget._apiService,
+    );
+
     _habitRepository = HabitRepositoryImpl(
       apiService: widget._apiService,
       authBloc: _authBloc,
+      commentRepository: _commentRepository,
     );
 
     _userRepository = UserRepositoryImpl(
       apiService: widget._apiService,
       authBloc: _authBloc,
-    );
-
-    _commentRepository = CommentRepositoryImpl(
-      apiService: widget._apiService,
+      commentRepository: _commentRepository,
+      habitRepository: _habitRepository,
     );
 
     widget._storageService.init();
@@ -184,7 +188,7 @@ class _MyAppState extends State<MyApp> {
                           state.screen == AuthScreen.addImage)
                         const MaterialPage(child: AddImageScreen()),
                       if (state is AuthLoggedIn)
-                        const MaterialPage(child: FeedScreen()),
+                        const MaterialPage(child: AppScreen()),
                     ],
                     onPopPage: (route, result) {
                       return route.didPop(result);

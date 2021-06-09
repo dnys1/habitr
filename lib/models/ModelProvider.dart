@@ -20,6 +20,7 @@ import 'Comment.dart';
 import 'Habit.dart';
 import 'User.dart';
 
+export 'AccessLevel.dart';
 export 'Comment.dart';
 export 'Habit.dart';
 export 'User.dart';
@@ -27,7 +28,7 @@ export 'VoteType.dart';
 
 class ModelProvider implements ModelProviderInterface {
   @override
-  String version = "62d26ceeeaf1e81a22da88d2a888c390";
+  String version = "f43648dd7812e34856529c998e05cccc";
   @override
   List<ModelSchema> modelSchemas = [Comment.schema, Habit.schema, User.schema];
   static final ModelProvider _instance = ModelProvider();
@@ -37,15 +38,26 @@ class ModelProvider implements ModelProviderInterface {
   ModelType getModelTypeByModelName(String modelName) {
     switch (modelName) {
       case "Comment":
-        return Comment.classType;
+        {
+          return Comment.classType;
+        }
+        break;
       case "Habit":
-        return Habit.classType;
+        {
+          return Habit.classType;
+        }
+        break;
       case "User":
-        return User.classType;
+        {
+          return User.classType;
+        }
+        break;
       default:
-        throw Exception(
-            "Failed to find model in model provider for model name: " +
-                modelName);
+        {
+          throw Exception(
+              "Failed to find model in model provider for model name: " +
+                  modelName);
+        }
     }
   }
 }

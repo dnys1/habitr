@@ -8,7 +8,7 @@ fragment AllHabitFields on Habit {
   }
   comments {
     items {
-      id
+      ...AllCommentFields
     }
   }
   createdAt
@@ -30,20 +30,12 @@ fragment AllPublicUserFields on User {
   }
   comments {
     items {
-      id
-      habit {
-        id
-      }
-      comment
+      ...AllCommentFields
     }
   }
   habits {
     items {
-      id
-      tagline
-      category
-      ups
-      downs
+      ...AllHabitFields
     }
   }
   _version
@@ -61,21 +53,12 @@ fragment AllPrivateUserFields on User {
   }
   comments {
     items {
-      id
-      habit {
-        id
-      }
-      comment
+      ...AllCommentFields
     }
   }
   habits {
     items {
-      id
-      tagline
-      category
-      details
-      ups
-      downs
+      ...AllHabitFields
     }
   }
   upvotedHabits
@@ -89,9 +72,7 @@ fragment AllCommentFields on Comment {
     username
     name
   }
-  habit {
-    id
-  }
+  habitId
   comment
 }
 
@@ -145,6 +126,12 @@ mutation CreateUser($username: String!) {
     username: $username
   }) {
     username
+  }
+}
+
+mutation CreateComment($comment: String!, $habitId: ID!) {
+  createComment(input: { comment: $comment, habitId: $habitId }) {
+    ...AllCommentFields
   }
 }
 

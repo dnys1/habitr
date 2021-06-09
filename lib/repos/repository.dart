@@ -17,14 +17,18 @@ abstract class Repository<T> extends ChangeNotifier {
   @protected
   T put(String id, T value) {
     _cache[id] = value;
-    notifyListeners();
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      notifyListeners();
+    });
     return value;
   }
 
   @protected
   void putAll(Map<String, T> other) {
     _cache.addAll(other);
-    notifyListeners();
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      notifyListeners();
+    });
   }
 
   T? get(String id) => _cache[id];
@@ -33,13 +37,17 @@ abstract class Repository<T> extends ChangeNotifier {
   @protected
   void setLoading(String id) {
     _loading.add(id);
-    notifyListeners();
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      notifyListeners();
+    });
   }
 
   @protected
   void setDoneLoading(String id) {
     _loading.remove(id);
-    notifyListeners();
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      notifyListeners();
+    });
   }
 
   @override

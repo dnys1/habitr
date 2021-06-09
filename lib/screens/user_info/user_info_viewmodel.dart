@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:habitr/mixins/image_picker.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
@@ -8,7 +9,7 @@ import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
-class UserInfoViewModel extends BaseViewModel {
+class UserInfoViewModel extends BaseViewModel with ImagePickerMixin {
   final ApiService _apiService;
   final AuthService _authService;
   final StorageService _storageService;
@@ -60,15 +61,10 @@ class UserInfoViewModel extends BaseViewModel {
     notifyListeners();
   }
 
-  File? _image;
-  void setImage(File image) {
-    _image = image;
-  }
-
-  bool get _isDirty => _image != null;
+  bool get _isDirty => image != null;
 
   void _clear() {
-    _image = null;
+    clearImage();
   }
 
   void close() {
@@ -83,8 +79,8 @@ class UserInfoViewModel extends BaseViewModel {
     }
     setBusy(true);
     try {
-      if (_image != null) {
-        await _storageService.putImage(_user, _image!);
+      if (image != null) {
+        await _storageService.putImage(_user, image!);
       }
       _isEditing = false;
       _clear();

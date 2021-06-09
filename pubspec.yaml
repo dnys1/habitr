@@ -21,31 +21,11 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  amplify_analytics_pinpoint:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_analytics_pinpoint
-  amplify_auth_cognito:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_auth_cognito
-  amplify_api:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_api
-  amplify_flutter:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_flutter
-  amplify_storage_s3:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_storage_s3
+  amplify_analytics_pinpoint: ^0.2.0-0
+  amplify_auth_cognito: ^0.2.0-0
+  amplify_api: ^0.2.0-0
+  amplify_flutter: ^0.2.0-0
+  amplify_storage_s3: ^0.2.0-0
   cached_network_image: ^3.0.0
   cupertino_icons: ^1.0.2
   equatable: ^2.0.2
@@ -59,45 +39,15 @@ dependencies:
   habitr_models:
     path: models
   image_picker: ^0.8.0
+  infinite_scroll_pagination: ^3.0.1+1
   provider: ^5.0.0
   shared_preferences: ^2.0.6
   stream_transform: ^2.0.0
   tuple: ^2.0.0
-  infinite_scroll_pagination: ^3.0.1+1
   uuid: ^3.0.4
 
 dependency_overrides:
   json_annotation: ^4.0.1
-  amplify_api_plugin_interface:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_api_plugin_interface
-  amplify_analytics_plugin_interface:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_analytics_plugin_interface
-  amplify_auth_plugin_interface:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_auth_plugin_interface
-  amplify_core:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_core
-  amplify_datastore_plugin_interface:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_datastore_plugin_interface
-  amplify_storage_plugin_interface:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter
-      ref: null-safety-master
-      path: packages/amplify_storage_plugin_interface
 
 dev_dependencies:
   args: ^2.1.1

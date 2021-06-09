@@ -72,7 +72,10 @@ class _AddImageView extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline6,
                       ),
                       const SizedBox(height: 20),
-                      UserAvatar(onImageSelected: viewModel.setImage),
+                      UserAvatar(
+                        selectImage: viewModel.pickImage,
+                        image: viewModel.image,
+                      ),
                       const SizedBox(height: 20),
                       TextField(
                         onChanged: viewModel.setName,

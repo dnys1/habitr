@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/repos/user_repository.dart';
+import 'package:habitr/screens/app/app_navigator_state.dart';
+import 'package:habitr/screens/feed/feed_screen.dart';
 import 'package:habitr/screens/settings/settings_screen.dart';
 import 'package:habitr/screens/user_info/user_info_screen.dart';
 import 'package:habitr/services/search_service.dart';
@@ -50,7 +52,11 @@ class _HomeDrawerView extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text('Home'),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pop();
+              Provider.of<AppNavigatorState>(context, listen: false)
+                  .setBaseRoute(FeedScreen.page);
+            },
           ),
           ListTile(
             leading: const Icon(Icons.search),
@@ -76,11 +82,7 @@ class _HomeDrawerView extends StatelessWidget {
             leading: const Icon(Icons.settings),
             title: const Text('Settings'),
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => const SettingsScreen(),
-                ),
-              );
+              Navigator.of(context).pushNamed(SettingsScreen.route);
             },
           ),
           ListTile(

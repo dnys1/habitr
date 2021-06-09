@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:habitr/models/Comment.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
+import 'package:habitr/repos/comment_repository.dart';
+import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/user_info/user_info_viewmodel.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
+import 'package:habitr/widgets/comment/comment_card.dart';
+import 'package:habitr/widgets/comment/comment_list_tile.dart';
 import 'package:habitr/widgets/habit/habit_list_tile.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
+import 'package:tuple/tuple.dart';
 
 class UserInfoScreen extends StatelessWidget {
   final String? username;
@@ -101,7 +106,8 @@ class _UserInfoView extends StatelessWidget {
                   UserAvatar(
                     user: viewModel.user,
                     canEdit: viewModel.isEditing,
-                    onImageSelected: viewModel.setImage,
+                    selectImage: viewModel.pickImage,
+                    image: viewModel.image,
                   ),
                   defaultPadding,
                   if (viewModel.user.name != null) ...[
@@ -118,10 +124,7 @@ class _UserInfoView extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   defaultPadding,
-                  _UserHabitsAndComments(
-                    habits: viewModel.user.habits ?? [],
-                    comments: viewModel.user.comments ?? [],
-                  ),
+                  _UserHabitsAndComments(viewModel.user.username),
                   defaultPadding,
                 ],
               ],
@@ -134,14 +137,9 @@ class _UserInfoView extends StatelessWidget {
 }
 
 class _UserHabitsAndComments extends StatefulWidget {
-  const _UserHabitsAndComments({
-    Key? key,
-    required this.habits,
-    required this.comments,
-  }) : super(key: key);
+  const _UserHabitsAndComments(this.username, {Key? key}) : super(key: key);
 
-  final List<Habit> habits;
-  final List<Comment> comments;
+  final String username;
 
   @override
   _UserHabitsAndCommentsState createState() => _UserHabitsAndCommentsState();
@@ -153,61 +151,79 @@ class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
 
   @override
   Widget build(BuildContext context) {
-    return ExpansionPanelList(
-      expansionCallback: (int index, bool isExpanded) {
-        setState(() {
-          if (index == 0) isHabitsExpanded = !isExpanded;
-          if (index == 1) isCommentsExpanded = !isExpanded;
-        });
+    return Selector2<HabitRepository, CommentRepository,
+        Tuple2<List<Habit>, List<Comment>>>(
+      selector: (context, habitsRepo, commentsRepo) {
+        final habits = habitsRepo.cache.values
+            .whereType<Habit>()
+            .where((habit) => habit.author.username == widget.username)
+            .toList();
+        final comments = commentsRepo.cache.values
+            .whereType<Comment>()
+            .where((comment) => comment.by.username == widget.username)
+            .toList();
+
+        return Tuple2(habits, comments);
       },
-      children: [
-        ExpansionPanel(
-          headerBuilder: (context, bool isExpanded) {
-            return ListTile(
-              title: Text('Habits (${widget.habits.length})'),
-            );
+      builder: (context, habitsAndComments, child) {
+        final habits = habitsAndComments.item1;
+        final comments = habitsAndComments.item2;
+        return ExpansionPanelList(
+          expansionCallback: (int index, bool isExpanded) {
+            setState(() {
+              if (index == 0) isHabitsExpanded = !isExpanded;
+              if (index == 1) isCommentsExpanded = !isExpanded;
+            });
           },
-          body: ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 300),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  if (widget.habits.isNotEmpty)
-                    for (var habit in widget.habits) HabitListTile(habit.id)
-                  else
-                    const Text('No habits'),
-                  _UserInfoView.defaultPadding,
-                ],
+          children: [
+            ExpansionPanel(
+              headerBuilder: (context, bool isExpanded) {
+                return ListTile(
+                  title: Text('Habits (${habits.length})'),
+                );
+              },
+              body: ConstrainedBox(
+                constraints: const BoxConstraints(maxHeight: 300),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      if (habits.isNotEmpty)
+                        for (var habit in habits) HabitListTile(habit.id)
+                      else
+                        const Text('No habits'),
+                      _UserInfoView.defaultPadding,
+                    ],
+                  ),
+                ),
               ),
+              isExpanded: isHabitsExpanded,
             ),
-          ),
-          isExpanded: isHabitsExpanded,
-        ),
-        ExpansionPanel(
-          headerBuilder: (context, bool isExpanded) {
-            return ListTile(
-              title: Text('Comments (${widget.comments.length})'),
-            );
-          },
-          body: ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 300),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  if (widget.comments.isNotEmpty)
-                    Container()
-                  else
-                    const Text('No comments'),
-                  _UserInfoView.defaultPadding,
-                  // for (var comment in widget.comments)
-                  //   CommentListTile(comment: comment)
-                ],
+            ExpansionPanel(
+              headerBuilder: (context, bool isExpanded) {
+                return ListTile(
+                  title: Text('Comments (${comments.length})'),
+                );
+              },
+              body: ConstrainedBox(
+                constraints: const BoxConstraints(maxHeight: 300),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      if (comments.isNotEmpty)
+                        Container()
+                      else
+                        const Text('No comments'),
+                      for (var comment in comments) CommentListTile(comment.id),
+                      _UserInfoView.defaultPadding,
+                    ],
+                  ),
+                ),
               ),
+              isExpanded: isCommentsExpanded,
             ),
-          ),
-          isExpanded: isCommentsExpanded,
-        ),
-      ],
+          ],
+        );
+      },
     );
   }
 }

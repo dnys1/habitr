@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/feed/feed_viewmodel.dart';
-import 'package:habitr/services/search_service.dart';
 import 'package:habitr/widgets/habit/habit_list_tile.dart';
 import 'package:habitr/widgets/home_drawer/home_drawer.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -10,6 +9,8 @@ import 'package:provider/provider.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({Key? key}) : super(key: key);
+
+  static const page = MaterialPage(child: FeedScreen());
 
   @override
   Widget build(BuildContext context) {

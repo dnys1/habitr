@@ -23,12 +23,10 @@ import 'package:flutter/foundation.dart';
 @immutable
 class Comment extends Model {
   static const classType = const _CommentModelType();
-  @override
   final String id;
-  final User? by;
-  final Habit? habit;
-  final String? comment;
-  final String? habitCommentsId;
+  final String habitId;
+  final User by;
+  final String comment;
 
   @override
   getInstanceType() => classType;
@@ -38,26 +36,20 @@ class Comment extends Model {
     return id;
   }
 
-  const Comment._internal(
-      {required this.id,
-      required this.by,
-      required this.habit,
-      required this.comment,
-      this.habitCommentsId})
-      : super(id: id);
+  const Comment._internal({
+    required this.id,
+    required this.habitId,
+    required this.by,
+    required this.comment,
+  });
 
   factory Comment(
-      {String? id,
-      required User? by,
-      required Habit? habit,
-      required String? comment,
-      String? habitCommentsId}) {
+      {required String id,
+      required String habitId,
+      required User by,
+      required String comment}) {
     return Comment._internal(
-        id: id ?? UUID.getUUID(),
-        by: by,
-        habit: habit,
-        comment: comment,
-        habitCommentsId: habitCommentsId);
+        id: id, habitId: habitId, by: by, comment: comment);
   }
 
   bool equals(Object other) {
@@ -69,10 +61,9 @@ class Comment extends Model {
     if (identical(other, this)) return true;
     return other is Comment &&
         id == other.id &&
+        habitId == other.habitId &&
         by == other.by &&
-        habit == other.habit &&
-        comment == other.comment &&
-        habitCommentsId == other.habitCommentsId;
+        comment == other.comment;
   }
 
   @override
@@ -84,61 +75,40 @@ class Comment extends Model {
 
     buffer.write("Comment {");
     buffer.write("id=" + "$id" + ", ");
+    buffer.write("habitId=" + "$habitId" + ", ");
     buffer.write("by=" + (by != null ? by.toString() : "null") + ", ");
-    buffer.write("habit=" + (habit != null ? habit.toString() : "null") + ", ");
-    buffer.write("comment=" + "$comment" + ", ");
-    buffer.write("habitCommentsId=" + "$habitCommentsId");
+    buffer.write("comment=" + "$comment");
     buffer.write("}");
 
     return buffer.toString();
   }
 
-  Comment copyWith(
-      {String? id,
-      User? by,
-      Habit? habit,
-      String? comment,
-      String? habitCommentsId}) {
+  Comment copyWith({String? id, String? habitId, User? by, String? comment}) {
     return Comment(
         id: id ?? this.id,
+        habitId: habitId ?? this.habitId,
         by: by ?? this.by,
-        habit: habit ?? this.habit,
-        comment: comment ?? this.comment,
-        habitCommentsId: habitCommentsId ?? this.habitCommentsId);
+        comment: comment ?? this.comment);
   }
 
-  Comment.fromJson(Map<String, dynamic> json)
-      : id = json['id'],
-        by = json['by'] != null
-            ? User.fromJson(new Map<String, dynamic>.from(json['by']))
-            : null,
-        habit = json['habit'] != null
-            ? Habit.fromJson(new Map<String, dynamic>.from(json['habit']))
-            : null,
-        comment = json['comment'],
-        habitCommentsId = json['habitCommentsId'],
-        super(id: json['id']);
+  factory Comment.fromJson(Map<String, dynamic> json) {
+    var id = json['id'];
+    var habitId = json['habitId'];
+    var by = User.fromJson(new Map<String, dynamic>.from(json['by']));
+    var comment = json['comment'];
+    return Comment(id: id, habitId: habitId, by: by, comment: comment);
+  }
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'by': by?.toJson(),
-        'habit': habit?.toJson(),
-        'comment': comment,
-        'habitCommentsId': habitCommentsId
-      };
+  Map<String, dynamic> toJson() =>
+      {'id': id, 'habitId': habitId, 'by': by.toJson(), 'comment': comment};
 
   static final QueryField ID = QueryField(fieldName: "comment.id");
+  static final QueryField HABITID = QueryField(fieldName: "habitId");
   static final QueryField BY = QueryField(
       fieldName: "by",
       fieldType: ModelFieldType(ModelFieldTypeEnum.model,
           ofModelName: (User).toString()));
-  static final QueryField HABIT = QueryField(
-      fieldName: "habit",
-      fieldType: ModelFieldType(ModelFieldTypeEnum.model,
-          ofModelName: (Habit).toString()));
   static final QueryField COMMENT = QueryField(fieldName: "comment");
-  static final QueryField HABITCOMMENTSID =
-      QueryField(fieldName: "habitCommentsId");
   static var schema =
       Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
     modelSchemaDefinition.name = "Comment";
@@ -179,26 +149,20 @@ class Comment extends Model {
 
     modelSchemaDefinition.addField(ModelFieldDefinition.id());
 
-    modelSchemaDefinition.addField(ModelFieldDefinition.belongsTo(
-        key: Comment.BY,
+    modelSchemaDefinition.addField(ModelFieldDefinition.field(
+        key: Comment.HABITID,
         isRequired: true,
-        targetName: "owner",
-        ofModelName: (User).toString()));
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.belongsTo(
-        key: Comment.HABIT,
-        isRequired: true,
-        targetName: "commentHabitId",
-        ofModelName: (Habit).toString()));
+        key: Comment.BY,
+        isRequired: false,
+        targetName: "owner",
+        ofModelName: (User).toString()));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
         key: Comment.COMMENT,
         isRequired: true,
-        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
-
-    modelSchemaDefinition.addField(ModelFieldDefinition.field(
-        key: Comment.HABITCOMMENTSID,
-        isRequired: false,
         ofType: ModelFieldType(ModelFieldTypeEnum.string)));
   });
 }

@@ -1,10 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:habitr/models/Comment.dart';
 import 'package:habitr/models/Habit.dart';
+import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/habit_details/habit_details_viewmodel.dart';
-import 'package:habitr/widgets/comment/comment_list_tile.dart';
+import 'package:habitr/widgets/comment/comment_card.dart';
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
@@ -19,8 +21,11 @@ class HabitDetailsScreen extends StatelessWidget {
       create: (context) {
         final habitRepository =
             Provider.of<HabitRepository>(context, listen: false);
+        final commentRepository =
+            Provider.of<CommentRepository>(context, listen: false);
         return HabitDetailsViewModel(
           habitRepository: habitRepository,
+          commentRepository: commentRepository,
           habitId: habitId,
         );
       },
@@ -92,7 +97,7 @@ class _HabitDetailScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var category = habit.category;
-    var author = habit.author?.username;
+    var author = habit.author.username;
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Column(
@@ -104,10 +109,8 @@ class _HabitDetailScreenBody extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           _Detail(label: 'Category', value: category),
-          if (author != null) ...[
-            const SizedBox(height: 5),
-            _Detail(label: 'Author', value: '@$author'),
-          ],
+          const SizedBox(height: 5),
+          _Detail(label: 'Author', value: '@$author'),
           const SizedBox(height: 20),
           Text(
             'Details',
@@ -128,11 +131,7 @@ class _HabitDetailScreenBody extends StatelessWidget {
             onSend: viewModel.isDirty ? viewModel.sendComment : null,
           ),
           const SizedBox(height: 20),
-          if (habit.comments != null && habit.comments!.isNotEmpty)
-            for (var comment in habit.comments!)
-              CommentListTile(comment: comment)
-          else
-            const Center(child: Text('No comments'))
+          _CommentList(habit.id),
         ],
       ),
     );
@@ -187,6 +186,35 @@ class _Detail extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _CommentList extends StatelessWidget {
+  const _CommentList(this.habitId, {Key? key}) : super(key: key);
+
+  final String habitId;
+
+  @override
+  Widget build(BuildContext context) {
+    return Selector<CommentRepository, List<Comment>>(
+      selector: (context, repo) {
+        return repo.cache.values
+            .whereType<Comment>()
+            .where((comment) => comment.habitId == habitId)
+            .toList();
+      },
+      builder: (context, comments, child) {
+        if (comments.isNotEmpty) {
+          return Column(
+            children: [
+              for (var comment in comments) CommentCard(comment: comment)
+            ],
+          );
+        } else {
+          return const Center(child: Text('No comments'));
+        }
+      },
     );
   }
 }

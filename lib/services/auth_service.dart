@@ -39,6 +39,8 @@ class AmplifyAuthService implements AuthService {
     const operationName = 'subscribeToUser';
     const _document = ast.DocumentNode(definitions: [
       AllPublicUserFields,
+      AllCommentFields,
+      AllHabitFields,
       SubscribeToUser,
     ]);
     final request = gql.printNode(_document);

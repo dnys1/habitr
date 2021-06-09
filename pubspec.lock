@@ -11,102 +11,80 @@ packages:
   amplify_analytics_pinpoint:
     dependency: "direct main"
     description:
-      path: "packages/amplify_analytics_pinpoint"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_analytics_pinpoint
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_analytics_plugin_interface:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/amplify_analytics_plugin_interface"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_analytics_plugin_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_api:
     dependency: "direct main"
     description:
-      path: "packages/amplify_api"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_api
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_api_plugin_interface:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/amplify_api_plugin_interface"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_api_plugin_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_auth_cognito:
     dependency: "direct main"
     description:
-      path: "packages/amplify_auth_cognito"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_auth_cognito
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_auth_plugin_interface:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/amplify_auth_plugin_interface"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_auth_plugin_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_core:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/amplify_core"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_datastore_plugin_interface:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/amplify_datastore_plugin_interface"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_datastore_plugin_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_flutter:
     dependency: "direct main"
     description:
-      path: "packages/amplify_flutter"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_storage_plugin_interface:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/amplify_storage_plugin_interface"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_storage_plugin_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   amplify_storage_s3:
     dependency: "direct main"
     description:
-      path: "packages/amplify_storage_s3"
-      ref: null-safety-master
-      resolved-ref: "015cecfd6da03cd2a849514ec739ee98d2874a54"
-      url: "https://github.com/aws-amplify/amplify-flutter"
-    source: git
-    version: "0.1.5"
+      name: amplify_storage_s3
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0-nullsafety.0"
   analyzer:
     dependency: transitive
     description:

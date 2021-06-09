@@ -5,6 +5,7 @@ import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/models/VoteType.dart';
 import 'package:habitr/models/list_habit_results.dart';
+import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/api_service.dart';
 
@@ -23,6 +24,7 @@ abstract class HabitRepository extends Repository<Habit> {
 class HabitRepositoryImpl extends HabitRepository {
   final ApiService _apiService;
   final AuthBloc _authBloc;
+  final CommentRepository _commentRepository;
 
   User? _user;
   Set<String> _upvotedHabits = {};
@@ -31,8 +33,10 @@ class HabitRepositoryImpl extends HabitRepository {
   HabitRepositoryImpl({
     required ApiService apiService,
     required AuthBloc authBloc,
+    required CommentRepository commentRepository,
   })  : _apiService = apiService,
-        _authBloc = authBloc {
+        _authBloc = authBloc,
+        _commentRepository = commentRepository {
     init();
   }
 
@@ -71,6 +75,13 @@ class HabitRepositoryImpl extends HabitRepository {
 
   void _setHabits(List<Habit> habits) {
     putAll({for (var habit in habits) habit.id: habit});
+    habits.forEach(_updateComments);
+  }
+
+  void _updateComments(Habit habit) {
+    _commentRepository.putAll({
+      for (var comment in habit.comments) comment.id: comment,
+    });
   }
 
   void _updateHabit(Habit habit) {
@@ -82,6 +93,7 @@ class HabitRepositoryImpl extends HabitRepository {
     } else {
       cache[habit.id] = habit;
     }
+    _updateComments(habit);
     notifyListeners();
   }
 
@@ -94,8 +106,8 @@ class HabitRepositoryImpl extends HabitRepository {
         downvotedHabits: user.downvotedHabits,
       );
     }
-    _upvotedHabits = (_user!.upvotedHabits?.toSet()) ?? {};
-    _downvotedHabits = (_user!.downvotedHabits?.toSet()) ?? {};
+    _upvotedHabits = _user!.upvotedHabits.toSet();
+    _downvotedHabits = _user!.downvotedHabits.toSet();
     notifyListeners();
   }
 

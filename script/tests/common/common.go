@@ -240,9 +240,7 @@ func DeleteTestUsers(ctx context.Context, cfg Config, awsCfg aws.Config) error {
 			},
 		})
 		if err != nil {
-			// return err
-			log.Printf("Error deleting user %d: %v\n", i, err)
-			continue
+			return err
 		}
 	}
 

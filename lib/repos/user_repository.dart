@@ -1,5 +1,9 @@
 import 'package:habitr/blocs/auth/auth_bloc.dart';
+import 'package:habitr/models/Comment.dart';
+import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
+import 'package:habitr/repos/comment_repository.dart';
+import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/api_service.dart';
 
@@ -11,12 +15,29 @@ abstract class UserRepository extends Repository<User?> {
 class UserRepositoryImpl extends UserRepository {
   final ApiService _apiService;
   final AuthBloc _authBloc;
+  final HabitRepository _habitRepository;
+  final CommentRepository _commentRepository;
 
   UserRepositoryImpl({
     required ApiService apiService,
     required AuthBloc authBloc,
+    required HabitRepository habitRepository,
+    required CommentRepository commentRepository,
   })  : _apiService = apiService,
-        _authBloc = authBloc;
+        _authBloc = authBloc,
+        _habitRepository = habitRepository,
+        _commentRepository = commentRepository;
+
+  @override
+  User? put(String id, User? value) {
+    _habitRepository.putAll({
+      for (var habit in value?.habits ?? <Habit>[]) habit.id: habit,
+    });
+    _commentRepository.putAll({
+      for (var comment in value?.comments ?? <Comment>[]) comment.id: comment,
+    });
+    return super.put(id, value);
+  }
 
   @override
   Future<User?> getUser(String username) async {

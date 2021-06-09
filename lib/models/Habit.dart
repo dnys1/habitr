@@ -30,9 +30,8 @@ class Habit extends Model {
   final String? details;
   final int? ups;
   final int? downs;
-  final User? author;
-  final List<Comment>? comments;
-  final int? version;
+  final User author;
+  final List<Comment> comments;
 
   @override
   getInstanceType() => classType;
@@ -42,30 +41,28 @@ class Habit extends Model {
     return id;
   }
 
-  const Habit._internal({
-    required this.id,
-    required this.tagline,
-    required this.category,
-    this.details,
-    this.ups,
-    this.downs,
-    required this.author,
-    this.comments,
-    this.version,
-  }) : super(id: id);
+  const Habit._internal(
+      {required this.id,
+      required this.tagline,
+      required this.category,
+      this.details,
+      this.ups,
+      this.downs,
+      required this.author,
+      required this.comments});
 
-  factory Habit(
-      {String? id,
-      required String tagline,
-      required String category,
-      String? details,
-      int? ups,
-      int? downs,
-      required User? author,
-      List<Comment>? comments,
-      int? version}) {
+  factory Habit({
+    required String id,
+    required String tagline,
+    required String category,
+    String? details,
+    int? ups,
+    int? downs,
+    required User author,
+    List<Comment> comments = const [],
+  }) {
     return Habit._internal(
-      id: id ?? UUID.getUUID(),
+      id: id,
       tagline: tagline,
       category: category,
       details: details,
@@ -73,7 +70,6 @@ class Habit extends Model {
       downs: downs,
       author: author,
       comments: comments != null ? List.unmodifiable(comments) : comments,
-      version: version,
     );
   }
 
@@ -92,8 +88,7 @@ class Habit extends Model {
         ups == other.ups &&
         downs == other.downs &&
         author == other.author &&
-        DeepCollectionEquality().equals(comments, other.comments) &&
-        version == other.version;
+        DeepCollectionEquality().equals(comments, other.comments);
   }
 
   @override
@@ -110,9 +105,7 @@ class Habit extends Model {
     buffer.write("details=" + "$details" + ", ");
     buffer.write("ups=" + (ups != null ? ups.toString() : "null") + ", ");
     buffer.write("downs=" + (downs != null ? downs.toString() : "null") + ", ");
-    buffer.write(
-        "author=" + (author != null ? author.toString() : "null") + ', ');
-    buffer.write('version=$version');
+    buffer.write("author=" + (author != null ? author.toString() : "null"));
     buffer.write("}");
 
     return buffer.toString();
@@ -135,36 +128,31 @@ class Habit extends Model {
         ups: ups ?? this.ups,
         downs: downs ?? this.downs,
         author: author ?? this.author,
-        comments: comments ?? this.comments,
-        version: version);
+        comments: comments ?? this.comments);
   }
 
   factory Habit.fromJson(Map<String, dynamic> json) {
     var id = json['id'];
     var tagline = json['tagline'];
     var category = json['category'];
-    var details = json['details'] as String?;
+    var details = json['details'];
     var ups = json['ups'];
     var downs = json['downs'];
-    var author = json['author'] is Map
-        ? User.fromJson(new Map<String, dynamic>.from(json['author']))
-        : null;
-    var comments = json['comments'] is List
-        ? (json['comments'] as List)
+    var author = User.fromJson(new Map<String, dynamic>.from(json['author']));
+    var comments = json['comments']?['items'] is List
+        ? (json['comments']?['items'] as List)
             .map((e) => Comment.fromJson(new Map<String, dynamic>.from(e)))
             .toList()
         : null;
-    var version = json['_version'] as int?;
     return Habit(
+      id: id,
       tagline: tagline,
       category: category,
       details: details,
-      author: author,
-      id: id,
       ups: ups,
       downs: downs,
-      comments: comments,
-      version: version,
+      author: author,
+      comments: comments ?? [],
     );
   }
 
@@ -175,14 +163,14 @@ class Habit extends Model {
         'details': details,
         'ups': ups,
         'downs': downs,
-        'author': author?.toJson(),
-        'comments': comments?.map((e) => e.toJson()).toList(),
-        '_version': version,
+        'author': author.toJson(),
+        'comments': comments.map((e) => e.toJson()).toList()
       };
 
   static final QueryField ID = QueryField(fieldName: "habit.id");
   static final QueryField TAGLINE = QueryField(fieldName: "tagline");
   static final QueryField CATEGORY = QueryField(fieldName: "category");
+  static final QueryField DETAILS = QueryField(fieldName: "details");
   static final QueryField UPS = QueryField(fieldName: "ups");
   static final QueryField DOWNS = QueryField(fieldName: "downs");
   static final QueryField AUTHOR = QueryField(
@@ -240,6 +228,11 @@ class Habit extends Model {
         ofType: ModelFieldType(ModelFieldTypeEnum.string)));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
+        key: Habit.DETAILS,
+        isRequired: false,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+
+    modelSchemaDefinition.addField(ModelFieldDefinition.field(
         key: Habit.UPS,
         isRequired: false,
         ofType: ModelFieldType(ModelFieldTypeEnum.int)));
@@ -251,7 +244,7 @@ class Habit extends Model {
 
     modelSchemaDefinition.addField(ModelFieldDefinition.belongsTo(
         key: Habit.AUTHOR,
-        isRequired: true,
+        isRequired: false,
         targetName: "owner",
         ofModelName: (User).toString()));
 
@@ -259,7 +252,7 @@ class Habit extends Model {
         key: Habit.COMMENTS,
         isRequired: true,
         ofModelName: (Comment).toString(),
-        associatedKey: Comment.HABITCOMMENTSID));
+        associatedKey: Comment.HABITID));
   });
 }
 

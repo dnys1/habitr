@@ -10,8 +10,6 @@ import 'package:habitr/util/print.dart';
 import 'package:image_picker/image_picker.dart';
 
 class UserAvatarViewModel extends BaseViewModel {
-  static final _imagePicker = ImagePicker();
-
   final AuthService _authService;
   final UserRepository _userRepository;
   final StorageService _storageService;
@@ -69,28 +67,5 @@ class UserAvatarViewModel extends BaseViewModel {
       user.avatar!.cognitoId!,
       user.avatar!.key,
     );
-  }
-
-  File? _image;
-  File? get image => _image;
-
-  Future<File?> pickImage() async {
-    setBusy(true);
-    try {
-      final pickedImage = await _imagePicker.getImage(
-        source: ImageSource.gallery,
-        imageQuality: 25,
-      );
-
-      if (pickedImage != null) {
-        _image = File(pickedImage.path);
-        return _image;
-      }
-    } on PlatformException catch (e) {
-      safePrint('Exception while selecting image: $e');
-    } finally {
-      setBusy(false);
-    }
-    return null;
   }
 }

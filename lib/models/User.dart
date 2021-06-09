@@ -30,11 +30,11 @@ class User extends Model {
   final String username;
   final String? name;
   final S3Object? avatar;
-  final List<Comment>? comments;
-  final List<Habit>? habits;
-  final List<String>? upvotedHabits;
-  final List<String>? downvotedHabits;
-  final int? version;
+  final List<Comment> comments;
+  final List<Habit> habits;
+  final List<String> upvotedHabits;
+  final List<String> downvotedHabits;
+  final int version;
 
   @override
   getInstanceType() => classType;
@@ -44,42 +44,42 @@ class User extends Model {
     return id;
   }
 
-  const User._internal(
-      {required this.id,
-      required this.username,
-      this.name,
-      this.avatar,
-      this.comments,
-      this.habits,
-      this.upvotedHabits,
-      this.downvotedHabits,
-      this.version})
-      : super(id: id);
+  const User._internal({
+    required this.id,
+    required this.username,
+    this.name,
+    this.avatar,
+    this.comments = const [],
+    this.habits = const [],
+    this.upvotedHabits = const [],
+    this.downvotedHabits = const [],
+    required this.version,
+  });
 
-  factory User(
-      {String? id,
-      required String username,
-      String? name,
-      S3Object? avatar,
-      List<Comment>? comments,
-      List<Habit>? habits,
-      List<String>? upvotedHabits,
-      List<String>? downvotedHabits,
-      int? version}) {
+  factory User({
+    String? id,
+    required String username,
+    String? name,
+    S3Object? avatar,
+    List<Comment>? comments,
+    List<Habit>? habits,
+    List<String>? upvotedHabits,
+    List<String>? downvotedHabits,
+    required int version,
+  }) {
     return User._internal(
-        id: id == null ? UUID.getUUID() : id,
-        username: username,
-        name: name,
-        avatar: avatar,
-        comments: comments != null ? List.unmodifiable(comments) : comments,
-        habits: habits != null ? List.unmodifiable(habits) : habits,
-        upvotedHabits: upvotedHabits != null
-            ? List.unmodifiable(upvotedHabits)
-            : upvotedHabits,
-        downvotedHabits: downvotedHabits != null
-            ? List.unmodifiable(downvotedHabits)
-            : downvotedHabits,
-        version: version);
+      id: id == null ? UUID.getUUID() : id,
+      username: username,
+      name: name,
+      avatar: avatar,
+      comments: comments != null ? List.unmodifiable(comments) : [],
+      habits: habits != null ? List.unmodifiable(habits) : [],
+      upvotedHabits:
+          upvotedHabits != null ? List.unmodifiable(upvotedHabits) : [],
+      downvotedHabits:
+          downvotedHabits != null ? List.unmodifiable(downvotedHabits) : [],
+      version: version,
+    );
   }
 
   bool equals(Object other) {
@@ -97,9 +97,7 @@ class User extends Model {
         DeepCollectionEquality().equals(comments, other.comments) &&
         DeepCollectionEquality().equals(habits, other.habits) &&
         DeepCollectionEquality().equals(upvotedHabits, other.upvotedHabits) &&
-        DeepCollectionEquality()
-            .equals(downvotedHabits, other.downvotedHabits) &&
-        version == other.version;
+        DeepCollectionEquality().equals(downvotedHabits, other.downvotedHabits);
   }
 
   @override
@@ -119,59 +117,58 @@ class User extends Model {
         (upvotedHabits != null ? upvotedHabits.toString() : "null") +
         ", ");
     buffer.write("downvotedHabits=" +
-        (downvotedHabits != null ? downvotedHabits.toString() : "null") +
-        ', ');
-    buffer.write('version=$version');
+        (downvotedHabits != null ? downvotedHabits.toString() : "null"));
     buffer.write("}");
 
     return buffer.toString();
   }
 
-  User copyWith(
-      {String? id,
-      String? username,
-      String? name,
-      S3Object? avatar,
-      List<Comment>? comments,
-      List<Habit>? habits,
-      List<String>? upvotedHabits,
-      List<String>? downvotedHabits,
-      int? version}) {
+  User copyWith({
+    String? id,
+    String? username,
+    String? name,
+    S3Object? avatar,
+    List<Comment>? comments,
+    List<Habit>? habits,
+    List<String>? upvotedHabits,
+    List<String>? downvotedHabits,
+    int? version,
+  }) {
     return User(
-        id: id ?? this.id,
-        username: username ?? this.username,
-        name: name ?? this.name,
-        avatar: avatar ?? this.avatar,
-        comments: comments ?? this.comments,
-        habits: habits ?? this.habits,
-        upvotedHabits: upvotedHabits ?? this.upvotedHabits,
-        downvotedHabits: downvotedHabits ?? this.downvotedHabits,
-        version: version ?? this.version);
+      id: id ?? this.id,
+      username: username ?? this.username,
+      name: name ?? this.name,
+      avatar: avatar ?? this.avatar,
+      comments: comments ?? this.comments,
+      habits: habits ?? this.habits,
+      upvotedHabits: upvotedHabits ?? this.upvotedHabits,
+      downvotedHabits: downvotedHabits ?? this.downvotedHabits,
+      version: version ?? this.version,
+    );
   }
 
   factory User.fromJson(Map<String, dynamic> json) {
     var id = json['id'];
     var username = json['username'];
     var name = json['name'];
-    var avatar = json['avatar'] is Map
-        ? S3Object.fromJson(json['avatar'] as Map<String, dynamic>)
-        : null;
+    var avatar =
+        json['avatar'] is Map ? S3Object.fromJson(json['avatar']) : null;
     var comments = json['comments']?['items'] is List
-        ? (json['comments']['items'] as List)
+        ? (json['comments']?['items'] as List)
             .map((e) => Comment.fromJson(new Map<String, dynamic>.from(e)))
             .toList()
         : null;
     var habits = json['habits']?['items'] is List
-        ? (json['habits']['items'] as List)
+        ? (json['habits']?['items'] as List)
             .map((e) => Habit.fromJson(new Map<String, dynamic>.from(e)))
             .toList()
         : null;
     var upvotedHabits = json['upvotedHabits']?.cast<String>();
     var downvotedHabits = json['downvotedHabits']?.cast<String>();
-    var version = json['_version'] as int?;
+    var version = json['_version'] ?? 0;
     return User(
-      username: username,
       id: id,
+      username: username,
       name: name,
       avatar: avatar,
       comments: comments,
@@ -187,11 +184,10 @@ class User extends Model {
         'username': username,
         'name': name,
         'avatar': avatar,
-        'comments': comments?.map((e) => e.toJson()).toList(),
-        'habits': habits?.map((e) => e.toJson()).toList(),
+        'comments': comments.map((e) => e.toJson()).toList(),
+        'habits': habits.map((e) => e.toJson()).toList(),
         'upvotedHabits': upvotedHabits,
-        'downvotedHabits': downvotedHabits,
-        '_version': version,
+        'downvotedHabits': downvotedHabits
       };
 
   static final QueryField ID = QueryField(fieldName: "user.id");
