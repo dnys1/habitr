@@ -50,11 +50,22 @@ abstract class Repository<T> extends ChangeNotifier {
     });
   }
 
+  bool _mounted = true;
+  bool get mounted => _mounted;
+
   @override
   void dispose() {
+    _mounted = false;
     for (var subscription in _subscriptions) {
       subscription.cancel();
     }
     super.dispose();
+  }
+
+  @override
+  void notifyListeners() {
+    if (_mounted) {
+      super.notifyListeners();
+    }
   }
 }

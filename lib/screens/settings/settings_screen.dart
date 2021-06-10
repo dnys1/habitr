@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habitr/screens/settings/settings_viewmodel.dart';
 import 'package:habitr/services/analytics_service.dart';
-import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/services/theme_service.dart';
 import 'package:provider/provider.dart';
@@ -19,11 +18,9 @@ class SettingsScreen extends StatelessWidget {
             Provider.of<PreferencesService>(context, listen: false);
         final analyticsService =
             Provider.of<AnalyticsService>(context, listen: false);
-        final authService = Provider.of<AuthService>(context, listen: false);
         return SettingsViewModel(
           preferencesService: preferencesService,
           analyticsService: analyticsService,
-          authService: authService,
         );
       },
       builder: (context, _) {

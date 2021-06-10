@@ -260,7 +260,12 @@ query SearchUsers($query: String!, $excludeUsername: String!, $limit: Int!) {
 
 query SearchHabits($query: String!, $limit: Int!) {
   searchHabits(
-    filter: { tagline: { matchPhrasePrefix: $query } },
+    filter: { 
+      or: [
+        { tagline: { matchPhrasePrefix: $query } }
+        { details: { matchPhrasePrefix: $query } }
+      ]
+    },
     limit: $limit,
   ) {
     items {

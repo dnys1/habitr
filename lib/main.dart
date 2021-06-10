@@ -14,7 +14,6 @@ import 'package:habitr/services/analytics_service.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/backend_service.dart';
-import 'package:habitr/services/data_service.dart';
 import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/services/theme_service.dart';
@@ -38,7 +37,6 @@ class MyApp extends StatefulWidget {
   late final AuthService _authService;
   final ApiService _apiService;
   final BackendService _backendService;
-  final DataService _dataService;
   late final StorageService _storageService;
   late final AnalyticsService _analyticsService;
   final PreferencesService _preferencesService;
@@ -49,14 +47,12 @@ class MyApp extends StatefulWidget {
     AuthService? authService,
     ApiService? apiService,
     BackendService? backendService,
-    DataService? dataService,
     StorageService? storageService,
     AnalyticsService? analyticsService,
     PreferencesService? preferencesService,
     ThemeService? themeService,
   })  : _apiService = apiService ?? AmplifyApiService(),
         _backendService = backendService ?? AmplifyBackendService(),
-        _dataService = dataService ?? AmplifyDataService(),
         _preferencesService = preferencesService ?? SharedPreferencesService(),
         super(key: key) {
     _analyticsService = analyticsService ??
@@ -93,7 +89,6 @@ class _MyAppState extends State<MyApp> {
     _authBloc = AuthBloc(
       widget._authService,
       widget._backendService,
-      widget._dataService,
       widget._preferencesService,
       widget._storageService,
     )..add(const AuthLoad());
@@ -119,7 +114,6 @@ class _MyAppState extends State<MyApp> {
         Provider.value(value: widget._authService),
         Provider.value(value: widget._backendService),
         Provider.value(value: widget._apiService),
-        Provider.value(value: widget._dataService),
         Provider.value(value: widget._analyticsService),
         Provider.value(value: widget._preferencesService),
         ChangeNotifierProvider.value(value: widget._storageService),
@@ -139,10 +133,8 @@ class _MyAppState extends State<MyApp> {
               ),
               scaffoldMessengerKey: scaffoldMessengerKey,
               debugShowCheckedModeBanner: false,
-              home: StreamBuilder<AuthState>(
-                stream: _authBloc.stream,
-                builder: (context, snapshot) {
-                  final state = snapshot.data ?? const AuthLoading();
+              home: BlocBuilder<AuthBloc, AuthState>(
+                builder: (context, state) {
                   return Navigator(
                     pages: [
                       if (state is AuthLoading)

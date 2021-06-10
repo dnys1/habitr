@@ -13,35 +13,74 @@ import 'package:gql/language.dart' as gql;
 import 'package:gql/ast.dart' as ast;
 import 'package:http/http.dart' as http;
 
+/// Handles interacting with the GraphQL and REST APIs.
 abstract class ApiService {
+  /// Returns a [User] for the given [username], if found, or `null`, if not.
+  ///
+  /// Set [self] = `true` for retrieving personal data.
   Future<User?> getUser(String username, {bool self});
-  Future<Comment?> getComment(String commentId);
-  Future<ListHabitResults> listHabits(
-      {Category? category, required int limit, String? nextToken});
+
+  /// Returns a [Habit] for the given [id], if found, or `null`, if not.
   Future<Habit?> getHabit(String id);
+
+  /// Returns a [Comment] for the given [commentId], if found, or `null`, if not.
+  Future<Comment?> getComment(String commentId);
+
+  /// Returns habits for the given [category], if specified, or all categories, if not.
+  ///
+  /// Use [nextToken] on subsequent calls to retrieve more items.
+  Future<ListHabitResults> listHabits({
+    Category? category,
+    required int limit,
+    String? nextToken,
+  });
+
+  /// Casts a vote for the given [habitId] of the given [type]. Will throw an
+  /// [Exception] if the user cannot perform that action.
   Future<void> voteForHabit(String habitId, VoteType type);
+
+  /// Streams the results of ongoing votes.
+  ///
+  /// Callers must ensure they close the stream upon logout.
   Stream<VoteResult> get voteResults;
+
+  /// Returns true if the given [username] is taken.
   Future<bool> usernameExists(String username);
+
+  /// Returns habits which match the provided [query].
+  ///
+  /// Matches [tagline] and [details] fields.
   Future<List<Habit>> searchHabits(String query, {required int limit});
+
+  /// Returns users which match the provided [query].
+  ///
+  /// Matches [username], [displayUsername], and [name] fields.
   Future<List<User>> searchUsers(
     String query,
     String excludeUsername, {
     required int limit,
   });
+
+  /// Updates the given [user].
   Future<void> updateUser(
     User user, {
     String? name,
     String? username,
     S3Object? avatar,
   });
+
+  /// Creates a [Habit] with the specified parameters.
   Future<Habit> createHabit({
     required String tagline,
     required Category category,
     String? details,
   });
+
+  /// Deletes a [Habit].
   Future<bool> deleteHabit(Habit habit);
+
+  /// Creates a [Comment] with the given [comment] and [habitId].
   Future<Comment> createComment(String comment, String habitId);
-  Future<void> logout();
 }
 
 class AmplifyApiService implements ApiService {
@@ -103,11 +142,6 @@ class AmplifyApiService implements ApiService {
     }
 
     return data[operationName];
-  }
-
-  @override
-  Future<void> logout() async {
-    await _voteResultStreamController?.close();
   }
 
   @override

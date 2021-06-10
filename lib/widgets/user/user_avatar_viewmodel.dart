@@ -1,13 +1,9 @@
-import 'dart:io';
-
-import 'package:flutter/services.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
-import 'package:image_picker/image_picker.dart';
 
 class UserAvatarViewModel extends BaseViewModel {
   final AuthService _authService;

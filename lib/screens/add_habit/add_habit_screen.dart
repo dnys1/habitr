@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Category.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/add_habit/add_habit_viewmodel.dart';
@@ -22,11 +20,9 @@ class AddHabitScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) {
-        final authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
         final habitRepository =
             Provider.of<HabitRepository>(context, listen: false);
         return AddHabitViewModel(
-          authBloc: authBloc,
           habitRepository: habitRepository,
         );
       },

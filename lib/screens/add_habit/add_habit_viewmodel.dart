@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/habit_repository.dart';
@@ -9,12 +8,9 @@ import 'package:habitr/util/scaffold.dart';
 
 class AddHabitViewModel extends BaseViewModel {
   AddHabitViewModel({
-    required AuthBloc authBloc,
     required HabitRepository habitRepository,
-  })  : _authBloc = authBloc,
-        _habitRepository = habitRepository;
+  }) : _habitRepository = habitRepository;
 
-  final AuthBloc _authBloc;
   final HabitRepository _habitRepository;
 
   final _formKey = GlobalKey<FormState>();

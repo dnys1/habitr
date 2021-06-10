@@ -1,20 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:habitr/services/theme_service.dart';
-import 'package:provider/provider.dart';
 
 final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
 bool get _mounted {
   return scaffoldMessengerKey.currentContext != null &&
       scaffoldMessengerKey.currentState != null;
-}
-
-bool get _isDarkMode {
-  final theme = Provider.of<ThemeService>(
-    scaffoldMessengerKey.currentContext!,
-    listen: false,
-  );
-  return theme.isDarkModeEnabled;
 }
 
 ThemeData get _theme {

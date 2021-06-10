@@ -78,6 +78,8 @@ class _AppScreenState extends State<AppScreen> {
         ChangeNotifierProvider.value(value: _userRepository),
       ],
       child: BlocBuilder<AuthBloc, AuthState>(
+        buildWhen: (previous, current) =>
+            previous.runtimeType != current.runtimeType,
         builder: (context, authState) {
           var navigatorState = Provider.of<AppNavigatorState>(context);
           return Navigator(

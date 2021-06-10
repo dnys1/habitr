@@ -10,7 +10,6 @@ import 'package:habitr/blocs/auth/auth_data.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/backend_service.dart';
-import 'package:habitr/services/data_service.dart';
 import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/error.dart';
@@ -28,7 +27,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   final AuthService _authService;
   final BackendService _backendService;
-  final DataService _dataService;
   final PreferencesService _preferencesService;
   final StorageService _storageService;
 
@@ -44,7 +42,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc(
     this._authService,
     this._backendService,
-    this._dataService,
     this._preferencesService,
     this._storageService,
   ) : super(const AuthInitial());
@@ -187,7 +184,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _authService.resendVerificationCode(username);
       yield AuthInFlow.verify(username);
     } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString()));
+      _exceptionController.add(AuthException(e.toString(), e, st));
     }
   }
 
@@ -201,7 +198,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       );
       yield AuthInFlow.verify(signupData.username!);
     } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString()));
+      _exceptionController.add(AuthException(e.toString(), e, st));
     }
   }
 
@@ -222,7 +219,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         yield AuthInFlow.login();
       }
     } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString()));
+      _exceptionController.add(AuthException(e.toString(), e, st));
     }
   }
 
@@ -233,7 +230,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       _userUpdates = null;
       yield AuthInFlow.login();
     } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString()));
+      _exceptionController.add(AuthException(e.toString(), e, st));
     }
   }
 }
