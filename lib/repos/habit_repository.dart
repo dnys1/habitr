@@ -211,6 +211,10 @@ class HabitRepositoryImpl extends HabitRepository {
 
   @override
   Future<bool> deleteHabit(String habitId) async {
-    return _apiService.deleteHabit(habitId);
+    var habit = get(habitId);
+    if (habit == null) {
+      return false;
+    }
+    return _apiService.deleteHabit(habit);
   }
 }

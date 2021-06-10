@@ -39,7 +39,7 @@ abstract class ApiService {
     required Category category,
     String? details,
   });
-  Future<bool> deleteHabit(String habitId);
+  Future<bool> deleteHabit(Habit habit);
   Future<Comment> createComment(String comment, String habitId);
   Future<void> logout();
 }
@@ -148,7 +148,8 @@ class AmplifyApiService implements ApiService {
     String? nextToken,
   }) async {
     var withCategoryFilter = category != null;
-    var operationName = withCategoryFilter ? 'habitsByCategory' : 'listHabits';
+    var operationName =
+        withCategoryFilter ? 'habitsByCategory' : 'searchHabits';
     Map<String, dynamic> vars;
     if (withCategoryFilter) {
       final query = GListHabitsByCategory((b) {
@@ -442,9 +443,13 @@ class AmplifyApiService implements ApiService {
   }
 
   @override
-  Future<bool> deleteHabit(String habitId) async {
+  Future<bool> deleteHabit(Habit habit) async {
     const operationName = 'deleteHabit';
-    final mutation = GDeleteHabit((b) => b..vars.habitId = habitId);
+    final mutation = GDeleteHabit(
+      (b) => b
+        ..vars.habitId = habit.id
+        ..vars.version = habit.version,
+    );
 
     final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
