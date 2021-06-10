@@ -5,6 +5,7 @@ import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/screens/app/app_navigator_state.dart';
+import 'package:habitr/screens/category/category_selection_screen.dart';
 import 'package:habitr/screens/feed/feed_screen.dart';
 import 'package:habitr/screens/settings/settings_screen.dart';
 import 'package:habitr/screens/user_info/user_info_screen.dart';
@@ -76,7 +77,9 @@ class _HomeDrawerView extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.category),
             title: const Text('Browse'),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(CategorySelectionScreen.route);
+            },
           ),
           ListTile(
             leading: const Icon(Icons.settings),

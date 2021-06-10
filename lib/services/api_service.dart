@@ -16,7 +16,8 @@ import 'package:http/http.dart' as http;
 abstract class ApiService {
   Future<User?> getUser(String username, {bool self});
   Future<Comment?> getComment(String commentId);
-  Future<ListHabitResults> listHabits({required int limit, String? nextToken});
+  Future<ListHabitResults> listHabits(
+      {Category? category, required int limit, String? nextToken});
   Future<Habit?> getHabit(String id);
   Future<void> voteForHabit(String habitId, VoteType type);
   Stream<VoteResult> get voteResults;
@@ -142,25 +143,41 @@ class AmplifyApiService implements ApiService {
 
   @override
   Future<ListHabitResults> listHabits({
+    Category? category,
     required int limit,
     String? nextToken,
   }) async {
-    const operationName = 'listHabits';
-    final query = GListHabits((b) {
-      b.vars.limit = limit;
-      if (nextToken != null) {
-        b.vars.nextToken = nextToken;
-      }
-    });
+    var withCategoryFilter = category != null;
+    var operationName = withCategoryFilter ? 'habitsByCategory' : 'listHabits';
+    Map<String, dynamic> vars;
+    if (withCategoryFilter) {
+      final query = GListHabitsByCategory((b) {
+        b
+          ..vars.category = GCategory.valueOf(category.toString().split('.')[1])
+          ..vars.limit = limit;
+        if (nextToken != null) {
+          b.vars.nextToken = nextToken;
+        }
+      });
+      vars = query.vars.toJson();
+    } else {
+      final query = GListHabits((b) {
+        b.vars.limit = limit;
+        if (nextToken != null) {
+          b.vars.nextToken = nextToken;
+        }
+      });
+      vars = query.vars.toJson();
+    }
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
+      ast.DocumentNode(definitions: [
         AllHabitFields,
         AllCommentFields,
-        ListHabits,
+        withCategoryFilter ? ListHabitsByCategory : ListHabits,
       ]),
       operationName,
-      query.vars.toJson(),
+      vars,
     );
     if (resp == null) {
       throw Exception('Unable to retrieve habits.');

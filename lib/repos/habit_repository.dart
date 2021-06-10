@@ -12,6 +12,7 @@ import 'package:habitr/services/api_service.dart';
 
 abstract class HabitRepository extends Repository<Habit> {
   Future<ListHabitResults> listHabits({
+    Category? category,
     int limit = 20,
     String? nextToken,
   });
@@ -150,10 +151,12 @@ class HabitRepositoryImpl extends HabitRepository {
 
   @override
   Future<ListHabitResults> listHabits({
+    Category? category,
     int limit = 20,
     String? nextToken,
   }) async {
     final listHabitResults = await _apiService.listHabits(
+      category: category,
       limit: limit,
       nextToken: nextToken,
     );

@@ -11,8 +11,10 @@ type User @model(subscriptions: null)
     displayUsername: String
     name: String
     avatar: S3Object
-    comments: [Comment!] @connection(keyName: "commentsByUser", fields: ["username"])
-    habits: [Habit!] @connection(keyName: "habitsByUser", fields: ["username"])
+    comments: [Comment!]
+        @connection(keyName: "commentsByUser", fields: ["username"])
+    habits: [Habit!]
+        @connection(keyName: "habitsByUser", fields: ["username"])
     upvotedHabits: [ID!]                                                    # Restrict viewing to owners and updates to admins
         @auth(rules: [
             { allow: groups, groups: ["admin"] }

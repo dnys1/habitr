@@ -5,6 +5,7 @@ import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/screens/app/app_navigator_state.dart';
+import 'package:habitr/screens/category/category_selection_screen.dart';
 import 'package:habitr/screens/settings/settings_screen.dart';
 import 'package:habitr/screens/signup/add_image_screen.dart';
 import 'package:habitr/services/api_service.dart';
@@ -16,6 +17,9 @@ class AppScreen extends StatefulWidget {
   static final _routeBuilders = <String, Route<dynamic> Function()>{
     SettingsScreen.route: () => MaterialPageRoute(
           builder: (_) => const SettingsScreen(),
+        ),
+    CategorySelectionScreen.route: () => MaterialPageRoute(
+          builder: (_) => const CategorySelectionScreen(),
         ),
   };
 

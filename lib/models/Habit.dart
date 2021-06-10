@@ -20,6 +20,10 @@ import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_inte
 import 'package:collection/collection.dart';
 import 'package:meta/meta.dart';
 
+extension HabitX on Habit {
+  int get score => (ups ?? 0) - (downs ?? 0);
+}
+
 /** This is an auto generated class representing the Habit type in your schema. */
 @immutable
 class Habit extends Model {

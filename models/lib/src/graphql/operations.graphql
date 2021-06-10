@@ -115,6 +115,15 @@ query ListHabits($limit: Int!, $nextToken: String) {
   }
 }
 
+query ListHabitsByCategory($category: Category!, $limit: Int!, $nextToken: String) {
+  habitsByCategory(category: $category, limit: $limit, nextToken: $nextToken, sortDirection: DESC) {
+    items {
+      ...AllHabitFields
+    }
+    nextToken
+  }
+}
+
 ## Get
 
 query GetHabit($habitId: ID!) {
@@ -237,7 +246,7 @@ query SearchUsers($query: String!, $excludeUsername: String!, $limit: Int!) {
     filter: { and: {
       or: [
         { username: { matchPhrase: $query } },
-        { displayUsername: { matchPhrase: $query} },
+        { displayUsername: { matchPhrase: $query } },
         { name: { matchPhrasePrefix: $query } }
       ]
       displayUsername: { ne: $excludeUsername }

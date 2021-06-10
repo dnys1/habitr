@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/habit_repository.dart';
-import 'package:habitr/screens/add_habit/add_habit_screen.dart';
-import 'package:habitr/screens/feed/feed_viewmodel.dart';
+import 'package:habitr/screens/category/category_details_viewmodel.dart';
 import 'package:habitr/widgets/habit/habit_list_tile.dart';
-import 'package:habitr/widgets/home_drawer/home_drawer.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 
-class FeedScreen extends StatelessWidget {
-  const FeedScreen({Key? key}) : super(key: key);
+class CategoryDetailsScreen extends StatelessWidget {
+  const CategoryDetailsScreen(this.category, {Key? key}) : super(key: key);
 
-  static const page = MaterialPage(child: FeedScreen());
+  final Category category;
 
   @override
   Widget build(BuildContext context) {
@@ -19,34 +18,33 @@ class FeedScreen extends StatelessWidget {
       create: (context) {
         final habitRepository =
             Provider.of<HabitRepository>(context, listen: false);
-        return FeedViewModel(habitRepository: habitRepository);
+        return CategoryDetailsViewModel(
+          category: category,
+          habitRepository: habitRepository,
+        );
       },
       builder: (context, _) {
-        return _FeedView(
-          viewModel: Provider.of<FeedViewModel>(context),
-        );
+        return _CategoryDetailsView(Provider.of(context), category: category);
       },
     );
   }
 }
 
-class _FeedView extends StatelessWidget {
-  final FeedViewModel viewModel;
+class _CategoryDetailsView extends StatelessWidget {
+  const _CategoryDetailsView(
+    this.viewModel, {
+    required this.category,
+    Key? key,
+  }) : super(key: key);
 
-  const _FeedView({Key? key, required this.viewModel}) : super(key: key);
+  final Category category;
+  final CategoryDetailsViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Feed'),
-      ),
-      drawer: const HomeDrawer(),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          Navigator.of(context).push(AddHabitScreen.route);
-        },
+        title: Text(category.string),
       ),
       body: PagedListView<String?, Habit>(
         pagingController: viewModel.pagingController,
