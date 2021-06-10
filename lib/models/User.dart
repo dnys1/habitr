@@ -28,6 +28,7 @@ class User extends Model {
   static const classType = const _UserModelType();
   final String id;
   final String username;
+  final String? displayUsername;
   final String? name;
   final S3Object? avatar;
   final List<Comment> comments;
@@ -47,6 +48,7 @@ class User extends Model {
   const User._internal({
     required this.id,
     required this.username,
+    this.displayUsername,
     this.name,
     this.avatar,
     this.comments = const [],
@@ -59,6 +61,7 @@ class User extends Model {
   factory User({
     String? id,
     required String username,
+    String? displayUsername,
     String? name,
     S3Object? avatar,
     List<Comment>? comments,
@@ -70,6 +73,7 @@ class User extends Model {
     return User._internal(
       id: id == null ? UUID.getUUID() : id,
       username: username,
+      displayUsername: displayUsername,
       name: name,
       avatar: avatar,
       comments: comments != null ? List.unmodifiable(comments) : [],
@@ -92,6 +96,7 @@ class User extends Model {
     return other is User &&
         id == other.id &&
         username == other.username &&
+        displayUsername == other.displayUsername &&
         name == other.name &&
         avatar == other.avatar &&
         DeepCollectionEquality().equals(comments, other.comments) &&
@@ -126,6 +131,7 @@ class User extends Model {
   User copyWith({
     String? id,
     String? username,
+    String? displayUsername,
     String? name,
     S3Object? avatar,
     List<Comment>? comments,
@@ -137,6 +143,7 @@ class User extends Model {
     return User(
       id: id ?? this.id,
       username: username ?? this.username,
+      displayUsername: displayUsername ?? this.displayUsername,
       name: name ?? this.name,
       avatar: avatar ?? this.avatar,
       comments: comments ?? this.comments,
@@ -150,6 +157,7 @@ class User extends Model {
   factory User.fromJson(Map<String, dynamic> json) {
     var id = json['id'];
     var username = json['username'];
+    var displayUsername = json['displayUsername'] as String?;
     var name = json['name'];
     var avatar =
         json['avatar'] is Map ? S3Object.fromJson(json['avatar']) : null;
@@ -169,6 +177,7 @@ class User extends Model {
     return User(
       id: id,
       username: username,
+      displayUsername: displayUsername,
       name: name,
       avatar: avatar,
       comments: comments,
@@ -182,6 +191,7 @@ class User extends Model {
   Map<String, dynamic> toJson() => {
         'id': id,
         'username': username,
+        'displayUsername': displayUsername,
         'name': name,
         'avatar': avatar,
         'comments': comments.map((e) => e.toJson()).toList(),

@@ -18,7 +18,7 @@
 import 'ModelProvider.dart';
 import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_interface.dart';
 import 'package:collection/collection.dart';
-import 'package:flutter/foundation.dart';
+import 'package:meta/meta.dart';
 
 /** This is an auto generated class representing the Habit type in your schema. */
 @immutable
@@ -26,12 +26,16 @@ class Habit extends Model {
   static const classType = const _HabitModelType();
   final String id;
   final String tagline;
-  final String category;
+  final Category category;
   final String? details;
   final int? ups;
   final int? downs;
-  final User author;
+  final User? author;
+  final String owner;
   final List<Comment> comments;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final int version;
 
   @override
   getInstanceType() => classType;
@@ -41,25 +45,34 @@ class Habit extends Model {
     return id;
   }
 
-  const Habit._internal(
-      {required this.id,
-      required this.tagline,
-      required this.category,
-      this.details,
-      this.ups,
-      this.downs,
-      required this.author,
-      required this.comments});
+  const Habit._internal({
+    required this.id,
+    required this.tagline,
+    required this.category,
+    this.details,
+    this.ups,
+    this.downs,
+    required this.author,
+    required this.owner,
+    required this.comments,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.version,
+  });
 
   factory Habit({
     required String id,
     required String tagline,
-    required String category,
+    required Category category,
     String? details,
     int? ups,
     int? downs,
-    required User author,
+    required String owner,
+    required User? author,
     List<Comment> comments = const [],
+    required DateTime createdAt,
+    required DateTime updatedAt,
+    int version = 0,
   }) {
     return Habit._internal(
       id: id,
@@ -69,7 +82,11 @@ class Habit extends Model {
       ups: ups,
       downs: downs,
       author: author,
+      owner: owner,
       comments: comments != null ? List.unmodifiable(comments) : comments,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      version: version,
     );
   }
 
@@ -88,7 +105,11 @@ class Habit extends Model {
         ups == other.ups &&
         downs == other.downs &&
         author == other.author &&
-        DeepCollectionEquality().equals(comments, other.comments);
+        owner == other.owner &&
+        DeepCollectionEquality().equals(comments, other.comments) &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        version == version;
   }
 
   @override
@@ -101,7 +122,9 @@ class Habit extends Model {
     buffer.write("Habit {");
     buffer.write("id=" + "$id" + ", ");
     buffer.write("tagline=" + "$tagline" + ", ");
-    buffer.write("category=" + "$category" + ", ");
+    buffer.write("category=" +
+        (category != null ? enumToString(category)! : "null") +
+        ", ");
     buffer.write("details=" + "$details" + ", ");
     buffer.write("ups=" + (ups != null ? ups.toString() : "null") + ", ");
     buffer.write("downs=" + (downs != null ? downs.toString() : "null") + ", ");
@@ -114,36 +137,47 @@ class Habit extends Model {
   Habit copyWith(
       {String? id,
       String? tagline,
-      String? category,
+      Category? category,
       String? details,
       int? ups,
       int? downs,
       User? author,
       List<Comment>? comments}) {
     return Habit(
-        id: id ?? this.id,
-        tagline: tagline ?? this.tagline,
-        category: category ?? this.category,
-        details: details ?? this.details,
-        ups: ups ?? this.ups,
-        downs: downs ?? this.downs,
-        author: author ?? this.author,
-        comments: comments ?? this.comments);
+      id: id ?? this.id,
+      tagline: tagline ?? this.tagline,
+      category: category ?? this.category,
+      details: details ?? this.details,
+      ups: ups ?? this.ups,
+      downs: downs ?? this.downs,
+      author: author ?? this.author,
+      owner: owner,
+      comments: comments ?? this.comments,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      version: version,
+    );
   }
 
   factory Habit.fromJson(Map<String, dynamic> json) {
     var id = json['id'];
     var tagline = json['tagline'];
-    var category = json['category'];
+    var category = enumFromString<Category>(json['category'], Category.values)!;
     var details = json['details'];
     var ups = json['ups'];
     var downs = json['downs'];
-    var author = User.fromJson(new Map<String, dynamic>.from(json['author']));
+    var owner = json['owner'] as String;
+    var author = json['author'] == null
+        ? null
+        : User.fromJson(new Map<String, dynamic>.from(json['author']));
     var comments = json['comments']?['items'] is List
         ? (json['comments']?['items'] as List)
             .map((e) => Comment.fromJson(new Map<String, dynamic>.from(e)))
             .toList()
         : null;
+    var createdAt = DateTime.parse(json['createdAt'] as String);
+    var updatedAt = DateTime.parse(json['updatedAt'] as String);
+    var version = json['_version'] as int?;
     return Habit(
       id: id,
       tagline: tagline,
@@ -152,19 +186,27 @@ class Habit extends Model {
       ups: ups,
       downs: downs,
       author: author,
+      owner: owner,
       comments: comments ?? [],
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      version: version ?? 0,
     );
   }
 
   Map<String, dynamic> toJson() => {
         'id': id,
         'tagline': tagline,
-        'category': category,
+        'category': enumToString(category),
         'details': details,
         'ups': ups,
         'downs': downs,
-        'author': author.toJson(),
-        'comments': comments.map((e) => e.toJson()).toList()
+        'owner': owner,
+        if (author != null) 'author': author!.toJson(),
+        'comments': comments.map((e) => e.toJson()).toList(),
+        'createdAt': createdAt.toIso8601String(),
+        'updatedAt': updatedAt.toIso8601String(),
+        '_version': version,
       };
 
   static final QueryField ID = QueryField(fieldName: "habit.id");
@@ -225,7 +267,7 @@ class Habit extends Model {
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
         key: Habit.CATEGORY,
         isRequired: true,
-        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+        ofType: ModelFieldType(ModelFieldTypeEnum.enumeration)));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
         key: Habit.DETAILS,

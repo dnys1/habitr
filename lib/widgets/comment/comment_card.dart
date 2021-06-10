@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:habitr/models/Comment.dart';
 import 'package:habitr/repos/comment_repository.dart';
+import 'package:habitr/screens/user_info/user_info_screen.dart';
+import 'package:habitr/util/date.dart';
 import 'package:habitr/widgets/comment/comment_card_view_model.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
@@ -57,12 +59,17 @@ class _CommentCardView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => UserInfoScreen(username: comment.owner),
+                ));
+              },
               leading: UserAvatar(
-                username: author.username,
+                username: comment.owner,
                 isThumbnail: true,
               ),
-              title: Text(author.name ?? '@${author.username}'),
-              subtitle: Text(DateTime.now().toString()),
+              title: Text(author?.name ?? '@${comment.owner}'),
+              subtitle: Text(prettyDate(comment.createdAt)),
             ),
             Padding(
               padding: const EdgeInsets.all(12.0),

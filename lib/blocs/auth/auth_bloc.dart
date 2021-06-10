@@ -32,6 +32,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final PreferencesService _preferencesService;
   final StorageService _storageService;
 
+  /// Used to restore state from previous session.
   AuthState? fromJson(Map<String, dynamic> json) {
     final state = json['state'] as Map<String, dynamic>?;
     switch (json['runtimeType']) {
@@ -51,12 +52,16 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   @override
   void onTransition(Transition<AuthEvent, AuthState> transition) {
     super.onTransition(transition);
+
+    // Writes the current state ("nextState") to SharedPrefs so that if the
+    // user closes the app mid-login, for example if they're on the verify
+    // screen, then we can pick up where they left off.
     final nextState = transition.nextState;
     if (nextState is AuthInitial || nextState is AuthLoading) {
       return;
     }
     _preferencesService.setString(
-      AuthBloc.stateKey,
+      stateKey,
       jsonEncode({
         'runtimeType': nextState.runtimeType.toString(),
         'state': nextState.toJson(),
@@ -72,6 +77,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }
 
   final _exceptionController = StreamController<AuthException>.broadcast();
+
+  /// Streams exceptions for handling outside of the BLoC.
   Stream<AuthException> get exceptions => _exceptionController.stream;
 
   StreamSubscription<AuthEvent>? _userUpdates;
@@ -80,6 +87,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthData? _authData;
 
   final _initializedCompleter = Completer<void>();
+
+  /// Completes when the initial auth state has been determined.
   Future<void> get isInitialized => _initializedCompleter.future;
 
   @override
@@ -165,7 +174,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         final user = await _authService.loginWithProvider(loginData.provider!);
         if (user != null) {
           await _storageService.precache(user);
-          yield AuthInFlow.addImage(user);
+          if (user.displayUsername == null || user.displayUsername!.isEmpty) {
+            yield AuthInFlow.addImage(user);
+          } else {
+            yield AuthLoggedIn(user);
+          }
+          _userUpdates ??= _userEvents.listen(add);
         }
       }
     } on UserNotConfirmedException {
@@ -214,9 +228,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   Stream<AuthState> _logout() async* {
     try {
+      await _authService.logout();
       _userUpdates?.cancel();
       _userUpdates = null;
-      await _authService.logout();
       yield AuthInFlow.login();
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString()));

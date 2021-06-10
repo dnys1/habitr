@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/screens/signup/signup_viewmodel.dart';
-import 'package:habitr/services/api_service.dart';
 import 'package:habitr/util/validators.dart';
 import 'package:habitr/widgets/logo/habitr_logo.dart';
+import 'package:habitr/widgets/username_form_field/username_form_field.dart';
 import 'package:provider/provider.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -16,8 +16,7 @@ class SignupScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) {
         final authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
-        final apiService = Provider.of<ApiService>(context, listen: false);
-        return SignupViewModel(authBloc, apiService);
+        return SignupViewModel(authBloc);
       },
       builder: (context, _) {
         return _SignupView(
@@ -29,32 +28,9 @@ class SignupScreen extends StatelessWidget {
 }
 
 class _SignupView extends StatelessWidget {
-  static const _usernameSuffixRadius = 12.0;
-
-  final SignupViewModel viewModel;
-
   const _SignupView({Key? key, required this.viewModel}) : super(key: key);
 
-  Widget? get usernameSuffix {
-    if (viewModel.username.isEmpty) {
-      return null;
-    }
-    if (viewModel.usernameExistsLoading) {
-      return const CupertinoActivityIndicator(radius: _usernameSuffixRadius);
-    }
-    if (!viewModel.usernameExists) {
-      return const Icon(
-        Icons.check,
-        color: Colors.green,
-        size: _usernameSuffixRadius * 2,
-      );
-    }
-    return const Icon(
-      Icons.close,
-      color: Colors.red,
-      size: _usernameSuffixRadius * 2,
-    );
-  }
+  final SignupViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -77,20 +53,9 @@ class _SignupView extends StatelessWidget {
                     const Spacer(flex: 3),
                     const HabitrLogo(),
                     const Spacer(),
-                    TextFormField(
+                    UsernameFormField(
                       onChanged: viewModel.setUsername,
-                      validator: viewModel.validateUsername,
-                      decoration: InputDecoration(
-                        labelText: 'Username',
-                        prefixIcon: const Icon(Icons.person),
-                        suffix: usernameSuffix != null
-                            ? SizedBox(
-                                width: _usernameSuffixRadius * 2,
-                                height: _usernameSuffixRadius * 2,
-                                child: usernameSuffix,
-                              )
-                            : null,
-                      ),
+                      onUpdateRequestFuture: viewModel.setUsernameExistsFuture,
                     ),
                     const SizedBox(height: 20),
                     TextFormField(

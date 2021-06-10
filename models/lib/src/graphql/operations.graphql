@@ -3,9 +3,7 @@ fragment AllHabitFields on Habit {
   tagline
   category
   details
-  author {
-    username
-  }
+  owner
   comments {
     items {
       ...AllCommentFields
@@ -20,6 +18,7 @@ fragment AllHabitFields on Habit {
 
 fragment AllPublicUserFields on User {
   username
+  displayUsername
   name
   avatar {
     bucket
@@ -43,6 +42,7 @@ fragment AllPublicUserFields on User {
 
 fragment AllPrivateUserFields on User {
   username
+  displayUsername
   name
   avatar {
     bucket
@@ -68,19 +68,43 @@ fragment AllPrivateUserFields on User {
 
 fragment AllCommentFields on Comment {
   id
+  owner
   by {
     username
+    displayUsername
     name
   }
   habitId
+  habit {
+    id
+    tagline
+    category
+    details
+    owner
+    comments {
+      items {
+        id
+        owner
+        habitId
+        comment
+        createdAt
+        updatedAt
+        _version
+      }
+    }
+    createdAt
+    updatedAt
+    ups
+    downs
+    _version
+  }
   comment
+  createdAt
+  updatedAt
+  _version
 }
 
-mutation CreateHabit($habit: CreateHabitInput!) {
-  createHabit(input: $habit) {
-    id
-  }
-}
+## List
 
 query ListHabits($limit: Int!, $nextToken: String) {
   listHabits(limit: $limit, nextToken: $nextToken) {
@@ -90,6 +114,8 @@ query ListHabits($limit: Int!, $nextToken: String) {
     nextToken
   }
 }
+
+## Get
 
 query GetHabit($habitId: ID!) {
   getHabit(id: $habitId) {
@@ -115,15 +141,20 @@ query GetComment($commentId: ID!) {
   }
 }
 
+## Subscribe
+
 subscription SubscribeToUser($username: String!) {
   subscribeToUser(username: $username) {
     ...AllPublicUserFields
   }
 }
 
-mutation CreateUser($username: String!) {
+## Create
+
+mutation CreateUser($username: String!, $displayUsername: String) {
   createUser(input: {
-    username: $username
+    username: $username,
+    displayUsername: $displayUsername
   }) {
     username
   }
@@ -134,6 +165,18 @@ mutation CreateComment($comment: String!, $habitId: ID!) {
     ...AllCommentFields
   }
 }
+
+mutation CreateHabit($tagline: String!, $category: Category!, $details: String) {
+  createHabit(input: {
+    tagline: $tagline,
+    category: $category,
+    details: $details
+  }) {
+    ...AllHabitFields
+  }
+}
+
+## Update
 
 mutation UpdateUser($input: UpdateUserInput!) {
   updateUser(input: $input) {
@@ -147,11 +190,24 @@ mutation UpdateHabit($input: UpdateHabitInput!) {
   }
 }
 
+## Delete
+
+mutation DeleteHabit($habitId: ID!) {
+  deleteHabit(input: { id: $habitId }) {
+    _deleted
+  }
+}
+
+## Vote
+
 fragment AllVoteResultFields on VoteResult {
   habit {
     id
     tagline
     category
+    author {
+      username
+    }
     ups
     downs
   }
@@ -174,25 +230,23 @@ subscription SubscribeToVotes {
   }
 }
 
+## Search
+
 query SearchUsers($query: String!, $excludeUsername: String!, $limit: Int!) {
   searchUsers(
     filter: { and: {
       or: [
         { username: { matchPhrase: $query } },
+        { displayUsername: { matchPhrase: $query} },
         { name: { matchPhrasePrefix: $query } }
       ]
+      displayUsername: { ne: $excludeUsername }
       username: { ne: $excludeUsername }
     } },
     limit: $limit
   ) {
     items {
-      username
-      name
-      avatar {
-        bucket
-        region
-        key
-      }
+      ...AllPublicUserFields
     }
   }
 }
@@ -203,9 +257,7 @@ query SearchHabits($query: String!, $limit: Int!) {
     limit: $limit,
   ) {
     items {
-      id
-      tagline
-      category
+      ...AllHabitFields
     }
   }
 }

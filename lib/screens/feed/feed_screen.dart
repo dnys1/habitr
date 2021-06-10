@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/habit_repository.dart';
+import 'package:habitr/screens/add_habit/add_habit_screen.dart';
 import 'package:habitr/screens/feed/feed_viewmodel.dart';
 import 'package:habitr/widgets/habit/habit_list_tile.dart';
 import 'package:habitr/widgets/home_drawer/home_drawer.dart';
@@ -41,6 +42,12 @@ class _FeedView extends StatelessWidget {
         title: const Text('Feed'),
       ),
       drawer: const HomeDrawer(),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.of(context).push(AddHabitScreen.route);
+        },
+      ),
       body: PagedListView<String?, Habit>(
         pagingController: viewModel.pagingController,
         builderDelegate: PagedChildBuilderDelegate<Habit>(

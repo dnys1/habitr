@@ -267,6 +267,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  date_format:
+    dependency: "direct main"
+    description:
+      name: date_format
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
   date_time_format:
     dependency: transitive
     description:

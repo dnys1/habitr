@@ -3,6 +3,7 @@ import 'package:habitr/models/Comment.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/habit_details/habit_details_screen.dart';
+import 'package:habitr/util/date.dart';
 import 'package:provider/provider.dart';
 
 class CommentListTile extends StatelessWidget {
@@ -15,13 +16,12 @@ class CommentListTile extends StatelessWidget {
     return Selector<CommentRepository, Comment>(
       selector: (context, repo) => repo.get(commentId)!,
       builder: (context, comment, child) {
-        var habit = Provider.of<HabitRepository>(context, listen: false)
-            .get(comment.habitId);
+        var repo = Provider.of<HabitRepository>(context, listen: false);
+        var habit = repo.get(comment.habitId);
         return ListTile(
           title: Text(habit!.tagline),
           subtitle: Text(
-            // TODO
-            DateTime.now().toString() + '\n\n' + comment.comment,
+            prettyDate(comment.createdAt) + '\n\n' + comment.comment,
             overflow: TextOverflow.ellipsis,
           ),
           trailing: const Icon(Icons.chevron_right),

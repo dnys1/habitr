@@ -25,8 +25,13 @@ class Comment extends Model {
   static const classType = const _CommentModelType();
   final String id;
   final String habitId;
-  final User by;
+  final Habit? habit;
+  final User? by;
+  final String owner;
   final String comment;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final int version;
 
   @override
   getInstanceType() => classType;
@@ -39,17 +44,37 @@ class Comment extends Model {
   const Comment._internal({
     required this.id,
     required this.habitId,
+    required this.habit,
     required this.by,
+    required this.owner,
     required this.comment,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.version,
   });
 
-  factory Comment(
-      {required String id,
-      required String habitId,
-      required User by,
-      required String comment}) {
+  factory Comment({
+    required String id,
+    required String habitId,
+    required Habit? habit,
+    required User? by,
+    required String owner,
+    required String comment,
+    required DateTime createdAt,
+    required DateTime updatedAt,
+    int version = 0,
+  }) {
     return Comment._internal(
-        id: id, habitId: habitId, by: by, comment: comment);
+      id: id,
+      habitId: habitId,
+      habit: habit,
+      by: by,
+      owner: owner,
+      comment: comment,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      version: version,
+    );
   }
 
   bool equals(Object other) {
@@ -62,8 +87,13 @@ class Comment extends Model {
     return other is Comment &&
         id == other.id &&
         habitId == other.habitId &&
+        habit == other.habit &&
         by == other.by &&
-        comment == other.comment;
+        owner == other.owner &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        version == version;
   }
 
   @override
@@ -85,22 +115,51 @@ class Comment extends Model {
 
   Comment copyWith({String? id, String? habitId, User? by, String? comment}) {
     return Comment(
-        id: id ?? this.id,
-        habitId: habitId ?? this.habitId,
-        by: by ?? this.by,
-        comment: comment ?? this.comment);
+      id: id ?? this.id,
+      habitId: habitId ?? this.habitId,
+      habit: habit,
+      by: by ?? this.by,
+      owner: owner,
+      comment: comment ?? this.comment,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      version: version,
+    );
   }
 
   factory Comment.fromJson(Map<String, dynamic> json) {
     var id = json['id'];
     var habitId = json['habitId'];
-    var by = User.fromJson(new Map<String, dynamic>.from(json['by']));
+    var habit = json['habit'] == null ? null : Habit.fromJson(json['habit']);
+    var by = json['by'] == null
+        ? null
+        : User.fromJson(new Map<String, dynamic>.from(json['by']));
+    var owner = json['owner'] as String;
     var comment = json['comment'];
-    return Comment(id: id, habitId: habitId, by: by, comment: comment);
+    var createdAt = DateTime.parse(json['createdAt'] as String);
+    var updatedAt = DateTime.parse(json['updatedAt'] as String);
+    var version = json['_version'] as int?;
+    return Comment(
+      id: id,
+      habitId: habitId,
+      habit: habit,
+      owner: owner,
+      by: by,
+      comment: comment,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      version: version ?? 0,
+    );
   }
 
-  Map<String, dynamic> toJson() =>
-      {'id': id, 'habitId': habitId, 'by': by.toJson(), 'comment': comment};
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'habitId': habitId,
+        if (habit != null) 'habit': habit!.toJson(),
+        if (by != null) 'by': by!.toJson(),
+        'owner': owner,
+        'comment': comment,
+      };
 
   static final QueryField ID = QueryField(fieldName: "comment.id");
   static final QueryField HABITID = QueryField(fieldName: "habitId");

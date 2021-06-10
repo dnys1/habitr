@@ -1,54 +1,42 @@
-import 'dart:io';
-
+import 'package:flutter/material.dart';
+import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/mixins/image_picker.dart';
+import 'package:habitr/mixins/username_form.dart';
 import 'package:habitr/models/User.dart';
-import 'package:habitr/services/api_service.dart';
-import 'package:habitr/services/auth_service.dart';
+import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
-class UserInfoViewModel extends BaseViewModel with ImagePickerMixin {
-  final ApiService _apiService;
-  final AuthService _authService;
+class UserInfoViewModel extends BaseViewModel
+    with ImagePickerMixin, UsernameFormMixin {
+  UserInfoViewModel({
+    required AuthBloc authBloc,
+    required UserRepository userRepository,
+    required StorageService storageService,
+    required String username,
+  })  : _authBloc = authBloc,
+        _userRepository = userRepository,
+        _storageService = storageService {
+    _init(username);
+  }
+
+  final AuthBloc _authBloc;
+  final UserRepository _userRepository;
   final StorageService _storageService;
+
+  final _formKey = GlobalKey<FormState>();
+  GlobalKey<FormState> get formKey => _formKey;
+
+  late final TextEditingController _nameController;
+  TextEditingController get nameController => _nameController;
+
+  late final TextEditingController _usernameController;
+  TextEditingController get usernameController => _usernameController;
 
   late User _user;
   User get user => _user;
-  void _setUser(User user) {
-    _user = user;
-    notifyListeners();
-  }
-
-  UserInfoViewModel({
-    required ApiService apiService,
-    required AuthService authService,
-    required StorageService storageService,
-    String? username,
-    User? user,
-  })  : _apiService = apiService,
-        _authService = authService,
-        _storageService = storageService {
-    assert(
-      username != null || user != null,
-      'Either username or user must be provided.',
-    );
-    _init(user: user, username: username);
-  }
-
-  Future<void> _init({User? user, String? username}) async {
-    if (user != null) {
-      _user = user;
-    } else {
-      await _loadUser(username!);
-    }
-
-    if (_user.username == await _authService.username) {
-      _canEditProfile = true;
-      notifyListeners();
-    }
-  }
 
   bool _isEditing = false;
   bool get isEditing => _isEditing;
@@ -61,10 +49,16 @@ class UserInfoViewModel extends BaseViewModel with ImagePickerMixin {
     notifyListeners();
   }
 
-  bool get _isDirty => image != null;
+  bool get _isDirty =>
+      image != null ||
+      (_usernameController.text != _user.username &&
+          _usernameController.text != _user.displayUsername) ||
+      _nameController.text != _user.name;
 
   void _clear() {
     clearImage();
+    _usernameController.text = user.displayUsername ?? user.username;
+    _nameController.text = _user.name ?? '';
   }
 
   void close() {
@@ -72,13 +66,43 @@ class UserInfoViewModel extends BaseViewModel with ImagePickerMixin {
     toggleEditMode();
   }
 
+  Future<void> _init(String username) async {
+    setBusy(true);
+    try {
+      var user = await _loadUser(username);
+
+      if (user == null) {
+        return;
+      }
+
+      var authState = _authBloc.state as AuthLoggedIn;
+      if (_user.username == authState.user.username) {
+        _canEditProfile = true;
+      }
+
+      _usernameController = TextEditingController(
+        text: user.displayUsername ?? user.username,
+      );
+      _nameController = TextEditingController(text: _user.name);
+    } finally {
+      setBusy(false);
+    }
+  }
+
   Future<void> save() async {
     if (!_isDirty) {
       toggleEditMode();
       return;
     }
+    if (!_formKey.currentState!.validate()) {
+      return;
+    }
     setBusy(true);
     try {
+      var name = _nameController.text;
+      if (name != _user.name) {
+        await _userRepository.updateUser(name: name);
+      }
       if (image != null) {
         await _storageService.putImage(_user, image!);
       }
@@ -94,19 +118,18 @@ class UserInfoViewModel extends BaseViewModel with ImagePickerMixin {
     }
   }
 
-  Future<void> _loadUser(String username) async {
-    setBusy(true);
+  Future<User?> _loadUser(String username) async {
     try {
-      final user = await _apiService.getUser(username);
-      if (user != null) {
-        _setUser(user);
-      } else {
-        setError('Could not load user');
+      final user = await _userRepository.getUser(username);
+      if (user == null) {
+        throw Exception('Could not load user');
       }
+
+      _user = user;
+      return _user;
     } on Exception catch (e) {
       setError(e);
-    } finally {
-      setBusy(false);
+      return null;
     }
   }
 }

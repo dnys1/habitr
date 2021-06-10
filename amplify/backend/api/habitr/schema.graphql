@@ -8,6 +8,7 @@ type User @model(subscriptions: null)
     ])
     @searchable {
     username: String!
+    displayUsername: String
     name: String
     avatar: S3Object
     comments: [Comment!] @connection(keyName: "commentsByUser", fields: ["username"])
@@ -26,6 +27,8 @@ type User @model(subscriptions: null)
         ])
 }
 
+enum Category { Health, Finance, Productivity, Relationships }
+
 type Habit @model
     @key(name: "habitsByCategory", fields: ["category", "ups"], queryField: "habitsByCategory")
     @key(name: "habitsByUser", fields: ["owner"])
@@ -38,7 +41,7 @@ type Habit @model
     @searchable {
     id: ID!
     tagline: String!
-    category: String!
+    category: Category!
     details: String
     ups: Int
         @auth(rules: [                                                      # Restrict mutations of `ups` to admin + API key
@@ -55,7 +58,8 @@ type Habit @model
     owner: String
     author: User
         @connection(fields: ["owner"])
-    comments: [Comment!] @connection(keyName: "commentsByHabit", fields: ["id"])
+    comments: [Comment!]
+        @connection(keyName: "commentsByHabit", fields: ["id"])
 }
 
 type Comment @model
@@ -69,8 +73,11 @@ type Comment @model
     ]) {
     id: ID!
     habitId: ID!
+    habit: Habit
+        @connection(fields: ["habitId"])
     owner: String
-    by: User @connection(fields: ["owner"])
+    by: User
+        @connection(fields: ["owner"])
     comment: String!
 }
 

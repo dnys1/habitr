@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
@@ -8,16 +9,18 @@ import 'package:habitr/util/scaffold.dart';
 
 class HabitDetailsViewModel extends BaseViewModel {
   HabitDetailsViewModel({
+    required AuthBloc authBloc,
     required HabitRepository habitRepository,
     required CommentRepository commentRepository,
     required this.habitId,
-  })  : _habitRepository = habitRepository,
+  })  : _authBloc = authBloc,
+        _habitRepository = habitRepository,
         _commentRepository = commentRepository {
     _init();
   }
 
   final String habitId;
-
+  final AuthBloc _authBloc;
   final HabitRepository _habitRepository;
   final CommentRepository _commentRepository;
 
@@ -38,6 +41,9 @@ class HabitDetailsViewModel extends BaseViewModel {
 
   bool get isDirty => comment.isNotEmpty;
 
+  bool _userOwnsHabit = false;
+  bool get userOwnsHabit => _userOwnsHabit;
+
   Future<void> _init() async {
     setBusy(true);
     try {
@@ -47,6 +53,14 @@ class HabitDetailsViewModel extends BaseViewModel {
       }
       _habit = habit;
       _commentController.addListener(notifyListeners);
+
+      var authState = _authBloc.state as AuthLoggedIn;
+      if (authState.user.username == _habit.owner) {
+        _userOwnsHabit = true;
+      }
+    } on Exception catch (e) {
+      safePrint('Error loading habit: $e');
+      showErrorSnackbar('Error loading habit. Please try again.');
     } finally {
       setBusy(false);
     }
@@ -68,6 +82,25 @@ class HabitDetailsViewModel extends BaseViewModel {
       showErrorSnackbar('Error posting comment. Please try again.');
     } finally {
       _setIsSendingComment(false);
+    }
+  }
+
+  Future<bool> deleteHabit() async {
+    if (!_userOwnsHabit) return false;
+    setBusy(true);
+    try {
+      final deleted = await _habitRepository.deleteHabit(habitId);
+      if (!deleted) {
+        throw Exception('Could not delete habit.');
+      }
+      showSuccessSnackbar('Successfully deleted habit.');
+      return deleted;
+    } on Exception catch (e) {
+      safePrint('Error deleting habit: $e');
+      showErrorSnackbar('Error deleting habit. Please try again.');
+      return false;
+    } finally {
+      setBusy(false);
     }
   }
 }

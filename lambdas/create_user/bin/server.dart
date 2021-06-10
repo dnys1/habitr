@@ -14,6 +14,13 @@ final link = HttpLink(
   },
 );
 
+extension on AwsCognitoEvent {
+  bool get isExternalProvider {
+    var status = request.userAttributes['cognito:user_status'] as String?;
+    return status == 'EXTERNAL_PROVIDER';
+  }
+}
+
 void main() async {
   Runtime()
     ..registerHandler<AwsCognitoEvent>('habitrCreateUser', handler)
@@ -26,7 +33,10 @@ Future<InvocationResult> handler(Context context, AwsCognitoEvent event) async {
     'Cognito request: ${event.request.toJson()}',
   );
   if (event.triggerSource == 'PostConfirmation_ConfirmSignUp') {
-    final error = await createUser(event.userName);
+    final error = await createUser(
+      event.userName,
+      isExternalProvider: event.isExternalProvider,
+    );
     if (error != null) {
       print('Error creating user ${event.userName}: $error');
       throw error;
@@ -35,8 +45,16 @@ Future<InvocationResult> handler(Context context, AwsCognitoEvent event) async {
   return InvocationResult(context.requestId, event);
 }
 
-Future<GraphQLError?> createUser(String username) async {
-  final request = GCreateUser((b) => b..vars.username = username);
+Future<GraphQLError?> createUser(
+  String username, {
+  required bool isExternalProvider,
+}) async {
+  final request = GCreateUser((b) {
+    b.vars.username = username;
+    if (!isExternalProvider) {
+      b.vars.displayUsername = username;
+    }
+  });
 
   final resp = await link
       .request(

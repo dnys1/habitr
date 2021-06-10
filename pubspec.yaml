@@ -28,6 +28,7 @@ dependencies:
   amplify_storage_s3: ^0.2.0-0
   cached_network_image: ^3.0.0
   cupertino_icons: ^1.0.2
+  date_format: ^2.0.2
   equatable: ^2.0.2
   flutter:
     sdk: flutter

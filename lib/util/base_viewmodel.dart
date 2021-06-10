@@ -5,18 +5,14 @@ class BaseViewModel extends ChangeNotifier {
   bool get isBusy => _isBusy;
   void setBusy(bool busy) {
     _isBusy = busy;
-    if (hasListeners) {
-      notifyListeners();
-    }
+    notifyListeners();
   }
 
   Object? _error;
   Object? get error => _error;
   void setError(Object error) {
     _error = error;
-    if (hasListeners) {
-      notifyListeners();
-    }
+    notifyListeners();
   }
 
   void clearError() {
@@ -25,4 +21,19 @@ class BaseViewModel extends ChangeNotifier {
   }
 
   bool get hasError => _error != null;
+
+  bool _mounted = true;
+  bool get mounted => _mounted;
+  @override
+  void dispose() {
+    _mounted = false;
+    super.dispose();
+  }
+
+  @override
+  void notifyListeners() {
+    if (_mounted) {
+      super.notifyListeners();
+    }
+  }
 }

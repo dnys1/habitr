@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_flutter/amplify.dart';
+import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/ModelProvider.dart';
 import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/VoteResult.dart';
@@ -26,6 +27,18 @@ abstract class ApiService {
     String excludeUsername, {
     required int limit,
   });
+  Future<void> updateUser(
+    User user, {
+    String? name,
+    String? username,
+    S3Object? avatar,
+  });
+  Future<Habit> createHabit({
+    required String tagline,
+    required Category category,
+    String? details,
+  });
+  Future<bool> deleteHabit(String habitId);
   Future<Comment> createComment(String comment, String habitId);
   Future<void> logout();
 }
@@ -166,17 +179,25 @@ class AmplifyApiService implements ApiService {
     );
   }
 
+  @override
   Future<void> updateUser(
     User user, {
     String? name,
+    String? username,
     S3Object? avatar,
   }) async {
+    if (name == null && username == null && avatar == null) {
+      return;
+    }
     const operationName = 'updateUser';
     final mutation = GUpdateUser((b) {
       b.vars.input.username = user.username;
       b.vars.input.G_version = user.version;
       if (name != null) {
         b.vars.input.name = name;
+      }
+      if (username != null) {
+        b.vars.input.displayUsername = username;
       }
       if (avatar != null) {
         b.vars.input.avatar.replace(GS3ObjectInput.fromJson(avatar.toJson())!);
@@ -291,6 +312,8 @@ class AmplifyApiService implements ApiService {
 
     final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
+        AllHabitFields,
+        AllCommentFields,
         SearchHabits,
       ]),
       operationName,
@@ -323,6 +346,9 @@ class AmplifyApiService implements ApiService {
 
     final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
+        AllPublicUserFields,
+        AllHabitFields,
+        AllCommentFields,
         SearchUsers,
       ]),
       operationName,
@@ -362,5 +388,55 @@ class AmplifyApiService implements ApiService {
     }
 
     return Comment.fromJson(resp);
+  }
+
+  @override
+  Future<Habit> createHabit({
+    required String tagline,
+    required Category category,
+    String? details,
+  }) async {
+    const operationName = 'createHabit';
+    final mutation = GCreateHabit(
+      (b) {
+        b.vars.tagline = tagline;
+        b.vars.category = GCategory.valueOf(category.toString().split('.')[1]);
+        if (details != null) {
+          b.vars.details = details;
+        }
+      },
+    );
+
+    final resp = await _runQuery(
+      const ast.DocumentNode(definitions: [
+        CreateHabit,
+        AllHabitFields,
+        AllCommentFields,
+      ]),
+      operationName,
+      mutation.vars.toJson(),
+    );
+
+    if (resp == null) {
+      throw Exception('Unable to create habit');
+    }
+
+    return Habit.fromJson(resp);
+  }
+
+  @override
+  Future<bool> deleteHabit(String habitId) async {
+    const operationName = 'deleteHabit';
+    final mutation = GDeleteHabit((b) => b..vars.habitId = habitId);
+
+    final resp = await _runQuery(
+      const ast.DocumentNode(definitions: [
+        DeleteHabit,
+      ]),
+      operationName,
+      mutation.vars.toJson(),
+    );
+
+    return (resp?['_deleted'] as bool?) ?? false;
   }
 }

@@ -1,8 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Comment.dart';
 import 'package:habitr/models/Habit.dart';
+import 'package:habitr/models/ModelProvider.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/habit_details/habit_details_viewmodel.dart';
@@ -23,7 +26,9 @@ class HabitDetailsScreen extends StatelessWidget {
             Provider.of<HabitRepository>(context, listen: false);
         final commentRepository =
             Provider.of<CommentRepository>(context, listen: false);
+        final authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
         return HabitDetailsViewModel(
+          authBloc: authBloc,
           habitRepository: habitRepository,
           commentRepository: commentRepository,
           habitId: habitId,
@@ -46,36 +51,48 @@ class _HabitDetailScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: viewModel.isBusy
-            ? null
-            : Text(
-                viewModel.habit.tagline,
-                overflow: TextOverflow.ellipsis,
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(FocusNode());
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: viewModel.isBusy
+              ? null
+              : Text(
+                  viewModel.habit.tagline,
+                  overflow: TextOverflow.ellipsis,
+                ),
+          actions: [
+            if (viewModel.userOwnsHabit)
+              IconButton(
+                icon: const Icon(Icons.delete),
+                onPressed: viewModel.deleteHabit,
+              ),
+          ],
+        ),
+        body: viewModel.isBusy
+            ? const Center(child: CircularProgressIndicator())
+            : Selector<HabitRepository, Tuple3<Habit, bool, bool?>>(
+                selector: (_, repo) => Tuple3(
+                  repo.get(viewModel.habit.id)!,
+                  repo.isLoading(viewModel.habit.id),
+                  repo.isUpvoted(viewModel.habit.id),
+                ),
+                builder: (context, habitStatus, _) {
+                  var habit = habitStatus.item1;
+                  var isProcessing = habitStatus.item2;
+                  var isUpvoted = habitStatus.item3;
+
+                  return _HabitDetailScreenBody(
+                    viewModel: viewModel,
+                    habit: habit,
+                    isProcessing: isProcessing,
+                    isUpvoted: isUpvoted,
+                  );
+                },
               ),
       ),
-      body: viewModel.isBusy
-          ? const Center(child: CircularProgressIndicator())
-          : Selector<HabitRepository, Tuple3<Habit, bool, bool?>>(
-              selector: (_, repo) => Tuple3(
-                repo.get(viewModel.habit.id)!,
-                repo.isLoading(viewModel.habit.id),
-                repo.isUpvoted(viewModel.habit.id),
-              ),
-              builder: (context, habitStatus, _) {
-                var habit = habitStatus.item1;
-                var isProcessing = habitStatus.item2;
-                var isUpvoted = habitStatus.item3;
-
-                return _HabitDetailScreenBody(
-                  viewModel: viewModel,
-                  habit: habit,
-                  isProcessing: isProcessing,
-                  isUpvoted: isUpvoted,
-                );
-              },
-            ),
     );
   }
 }
@@ -97,42 +114,53 @@ class _HabitDetailScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var category = habit.category;
-    var author = habit.author.username;
+    var author = habit.owner;
+    var details = habit.details;
+    var hasDetails = details != null && details.isNotEmpty;
     return Padding(
       padding: const EdgeInsets.all(12.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            habit.tagline,
-            style: Theme.of(context).textTheme.headline6,
+      child: SizedBox.expand(
+        child: Form(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                habit.tagline,
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              const SizedBox(height: 20),
+              _Detail(
+                label: 'Category',
+                value: category.toString().split('.')[1],
+              ),
+              const SizedBox(height: 5),
+              _Detail(label: 'Author', value: '@$author'),
+              const SizedBox(height: 20),
+              Text(
+                'Details',
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+              const SizedBox(height: 10),
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(hasDetails ? details! : 'No details.'),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Comments',
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+              _AddCommentTextField(
+                controller: viewModel.commentController,
+                onSend: viewModel.isDirty ? viewModel.sendComment : null,
+              ),
+              const SizedBox(height: 20),
+              _CommentList(habit.id),
+            ],
           ),
-          const SizedBox(height: 20),
-          _Detail(label: 'Category', value: category),
-          const SizedBox(height: 5),
-          _Detail(label: 'Author', value: '@$author'),
-          const SizedBox(height: 20),
-          Text(
-            'Details',
-            style: Theme.of(context).textTheme.subtitle1,
-          ),
-          const SizedBox(height: 10),
-          if (habit.details != null && habit.details!.isNotEmpty)
-            Text(habit.details!)
-          else
-            const Center(child: Text('No details')),
-          const SizedBox(height: 20),
-          Text(
-            'Comments',
-            style: Theme.of(context).textTheme.subtitle1,
-          ),
-          _AddCommentTextField(
-            controller: viewModel.commentController,
-            onSend: viewModel.isDirty ? viewModel.sendComment : null,
-          ),
-          const SizedBox(height: 20),
-          _CommentList(habit.id),
-        ],
+        ),
       ),
     );
   }
@@ -150,8 +178,9 @@ class _AddCommentTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       controller: controller,
+      autofocus: false,
       decoration: InputDecoration(
         helperText: 'Add a comment',
         suffixIcon: IconButton(

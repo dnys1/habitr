@@ -9,6 +9,7 @@ import 'package:habitr/services/api_service.dart';
 
 abstract class UserRepository extends Repository<User?> {
   Future<User?> getUser(String username);
+  Future<void> updateUser({String? name});
   Future<List<User>> searchUsers(String query);
 }
 
@@ -18,15 +19,35 @@ class UserRepositoryImpl extends UserRepository {
   final HabitRepository _habitRepository;
   final CommentRepository _commentRepository;
 
-  UserRepositoryImpl({
-    required ApiService apiService,
-    required AuthBloc authBloc,
-    required HabitRepository habitRepository,
-    required CommentRepository commentRepository,
-  })  : _apiService = apiService,
+  UserRepositoryImpl(
+      {required ApiService apiService,
+      required AuthBloc authBloc,
+      required HabitRepository habitRepository,
+      required CommentRepository commentRepository})
+      : _apiService = apiService,
         _authBloc = authBloc,
         _habitRepository = habitRepository,
-        _commentRepository = commentRepository;
+        _commentRepository = commentRepository {
+    _init();
+  }
+
+  Future<void> _init() async {
+    await _authBloc.isInitialized;
+
+    var state = _authBloc.state;
+    if (state is AuthLoggedIn) {
+      _updateUser(state.user);
+    }
+    addSubscription(_authBloc.stream.listen((state) {
+      if (state is AuthLoggedIn) {
+        _updateUser(state.user);
+      }
+    }));
+  }
+
+  void _updateUser(User user) {
+    put(user.username, user);
+  }
 
   @override
   User? put(String id, User? value) {
@@ -67,5 +88,13 @@ class UserRepositoryImpl extends UserRepository {
       searchResults.map((user) => getUser(user.username)),
     );
     return users.whereType<User>().toList();
+  }
+
+  @override
+  Future<void> updateUser({String? name}) {
+    return (_apiService as AmplifyApiService).updateUser(
+      (_authBloc.state as AuthLoggedIn).user,
+      name: name,
+    );
   }
 }

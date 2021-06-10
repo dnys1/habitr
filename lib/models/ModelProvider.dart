@@ -21,6 +21,7 @@ import 'Habit.dart';
 import 'User.dart';
 
 export 'AccessLevel.dart';
+export 'Category.dart';
 export 'Comment.dart';
 export 'Habit.dart';
 export 'User.dart';
@@ -28,7 +29,7 @@ export 'VoteType.dart';
 
 class ModelProvider implements ModelProviderInterface {
   @override
-  String version = "f43648dd7812e34856529c998e05cccc";
+  String version = "da65dec848d52948e0f190d587787fa3";
   @override
   List<ModelSchema> modelSchemas = [Comment.schema, Habit.schema, User.schema];
   static final ModelProvider _instance = ModelProvider();

@@ -5,6 +5,7 @@ import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify.dart';
 import 'package:habitr/models/ModelProvider.dart';
+import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr_models/habitr_models.dart';
 import 'package:gql/language.dart' as gql;
@@ -61,9 +62,7 @@ class AmplifyAuthService implements AuthService {
       },
       onEstablished: () {},
       onError: (error) => _userController!.addError(error),
-      onDone: () {
-        print('Done');
-      },
+      onDone: () {},
     );
     _userController!.onCancel ??= () {
       _userSubscription?.cancel();

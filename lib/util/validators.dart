@@ -44,3 +44,13 @@ String? validatePasswordRetype(String? password, String? passwordRetype) {
   }
   return null;
 }
+
+String? Function(T?) createGenericValidator<T>(String name) {
+  return (T? value) {
+    if (value == null || (value is String && value.isEmpty)) {
+      return '$name cannot be empty.';
+    }
+
+    return null;
+  };
+}

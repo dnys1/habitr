@@ -21,6 +21,7 @@ class UserAvatar extends StatelessWidget {
     this.onTap,
     this.selectImage,
     this.isThumbnail = false,
+    this.isEditing = false,
     Key? key,
   })  : assert(
           user != null || username != null,
@@ -44,6 +45,11 @@ class UserAvatar extends StatelessWidget {
 
   /// The function to call to select a new image.
   final FutureOr<void> Function()? selectImage;
+
+  /// Whether or not the image is being edited.
+  ///
+  /// An overlay will be shown to indicate it can be tapped.
+  final bool isEditing;
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +76,7 @@ class UserAvatar extends StatelessWidget {
           selectImage: selectImage,
           image: image,
           isThumbnail: isThumbnail,
+          isEditing: isEditing,
         );
       },
     );
@@ -81,6 +88,7 @@ class _UserAvatarView extends StatefulWidget {
   final FutureOr<void> Function()? selectImage;
   final void Function()? onTap;
   final bool canEdit;
+  final bool isEditing;
   final bool isThumbnail;
   final File? image;
 
@@ -89,6 +97,7 @@ class _UserAvatarView extends StatefulWidget {
     this.onTap,
     this.selectImage,
     required this.canEdit,
+    required this.isEditing,
     required this.isThumbnail,
     this.image,
     Key? key,
@@ -148,15 +157,25 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
     return CachedNetworkImage(
       imageUrl: url,
       imageBuilder: (context, imageProvider) {
-        return Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: imageProvider,
-              // TODO: Make responsive
-              fit: BoxFit.fitHeight,
+        return Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: imageProvider,
+                  // TODO: Make responsive
+                  fit: BoxFit.fitHeight,
+                ),
+                shape: BoxShape.circle,
+              ),
             ),
-            shape: BoxShape.circle,
-          ),
+            if (widget.isEditing)
+              CircleAvatar(
+                radius: radius,
+                backgroundColor: Colors.white.withOpacity(0.5),
+                child: Icon(Icons.edit, size: radius / 2),
+              )
+          ],
         );
       },
       placeholder: (context, url) => const CupertinoActivityIndicator(),

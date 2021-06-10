@@ -80,7 +80,6 @@ class AmplifyStorageService extends StorageService {
       local: image,
       key: key,
       options: S3UploadFileOptions(
-        targetIdentityId: user.username,
         accessLevel: StorageAccessLevel.protected,
       ),
     );

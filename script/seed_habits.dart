@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:args/args.dart';
 import 'package:flutter_lorem/flutter_lorem.dart';
 import 'package:gql_exec/gql_exec.dart';
+import 'package:habitr/models/Category.dart';
 import 'package:habitr_models/habitr_models.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 
@@ -55,25 +56,16 @@ Future<void> main(List<String> args) async {
 }
 
 Future<void> seedDB(HttpLink link, {required String user}) async {
-  const categories = [
-    'Health',
-    'Finance',
-    'Productivity',
-    'Relationships',
-  ];
-
   final random = Random();
+
+  var categories = GCategory.values;
+  var category = categories.elementAt(random.nextInt(categories.length));
+
   for (var i = 0; i < 20; i++) {
-    final habit = <String, dynamic>{
-      'tagline': lorem(paragraphs: 1, words: 10),
-      'category': categories[random.nextInt(categories.length)],
-      'ups': random.nextInt(10),
-      'downs': random.nextInt(10),
-      'owner': user,
-    };
-    final input = GCreateHabitInput.fromJson(habit)!;
     final req = GCreateHabit(
-      (b) => b..vars.habit.replace(input),
+      (b) => b
+        ..vars.tagline = lorem(paragraphs: 1, words: 10)
+        ..vars.category = category,
     );
     final resp = await link
         .request(

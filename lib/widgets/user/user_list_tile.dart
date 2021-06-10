@@ -56,7 +56,7 @@ class _UserListTileView extends StatelessWidget {
     if (user!.name != null) {
       return Text(user!.name!);
     }
-    return Text('@' + user!.username);
+    return Text('@' + (user!.displayUsername ?? user!.username));
   }
 
   Widget? get subtitle {
@@ -66,7 +66,7 @@ class _UserListTileView extends StatelessWidget {
     if (user!.name == null) {
       return null;
     }
-    return Text('@' + user!.username);
+    return Text('@' + (user!.displayUsername ?? user!.username));
   }
 
   @override

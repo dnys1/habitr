@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,6 +12,7 @@ import 'package:habitr/services/search_service.dart';
 import 'package:habitr/widgets/home_drawer/home_drawer_viewmodel.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
+import 'package:tuple/tuple.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({Key? key}) : super(key: key);
@@ -124,13 +124,21 @@ class _HomeDrawerHeader extends StatelessWidget {
               ),
             ),
           ),
-          if (viewModel.currentUser.name != null) ...[
-            const SizedBox(height: 10),
-            Text(
-              viewModel.currentUser.name!,
-              style: Theme.of(context).textTheme.headline6,
-            ),
-          ]
+          const SizedBox(height: 10),
+          Selector<UserRepository, Tuple2<String, String?>>(
+            selector: (context, repo) {
+              var user = repo.get(viewModel.currentUser.username)!;
+              return Tuple2(user.displayUsername ?? user.username, user.name);
+            },
+            builder: (context, names, child) {
+              var username = names.item1;
+              var name = names.item2;
+              return Text(
+                name ?? '@$username',
+                style: Theme.of(context).textTheme.headline6,
+              );
+            },
+          ),
         ],
       ),
     );

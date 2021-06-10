@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Comment.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
+import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/screens/user_info/user_info_viewmodel.dart';
-import 'package:habitr/services/api_service.dart';
-import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
-import 'package:habitr/widgets/comment/comment_card.dart';
 import 'package:habitr/widgets/comment/comment_list_tile.dart';
 import 'package:habitr/widgets/habit/habit_list_tile.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
+import 'package:habitr/util/list.dart';
+import 'package:habitr/widgets/user/username.dart';
+import 'package:habitr/widgets/username_form_field/username_form_field.dart';
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
+
+const _defaultPadding = SizedBox(height: 20);
 
 class UserInfoScreen extends StatelessWidget {
   final String? username;
@@ -23,22 +28,26 @@ class UserInfoScreen extends StatelessWidget {
     Key? key,
     this.username,
     this.user,
-  }) : super(key: key);
+  })  : assert(
+          username != null || user != null,
+          'Either username or user must be provided.',
+        ),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) {
-        final apiService = Provider.of<ApiService>(context, listen: false);
-        final authService = Provider.of<AuthService>(context, listen: false);
+        final authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
+        final userRepository =
+            Provider.of<UserRepository>(context, listen: false);
         final storageService =
             Provider.of<StorageService>(context, listen: false);
         return UserInfoViewModel(
-          apiService: apiService,
-          authService: authService,
+          authBloc: authBloc,
+          userRepository: userRepository,
           storageService: storageService,
-          username: username,
-          user: user,
+          username: username ?? user!.username,
         );
       },
       builder: (context, _) {
@@ -51,8 +60,6 @@ class UserInfoScreen extends StatelessWidget {
 }
 
 class _UserInfoView extends StatelessWidget {
-  static const defaultPadding = SizedBox(height: 20);
-
   final UserInfoViewModel viewModel;
 
   const _UserInfoView({
@@ -66,9 +73,16 @@ class _UserInfoView extends StatelessWidget {
       appBar: AppBar(
         title: viewModel.isBusy || viewModel.hasError
             ? null
-            : Align(
-                alignment: Alignment.centerLeft,
-                child: Text(viewModel.user.name ?? viewModel.user.username)),
+            : Selector<UserRepository, User>(
+                selector: (context, repo) => repo.get(viewModel.user.username)!,
+                builder: (context, user, child) {
+                  return Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      user.name ?? '@${user.displayUsername ?? user.username}',
+                    ),
+                  );
+                }),
         actions: [
           if (viewModel.canEditProfile)
             if (viewModel.isEditing) ...[
@@ -87,48 +101,81 @@ class _UserInfoView extends StatelessWidget {
               ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                if (viewModel.isBusy)
-                  const Center(child: CircularProgressIndicator())
-                else if (viewModel.hasError)
-                  Text(
-                    viewModel.error.toString(),
-                    textAlign: TextAlign.center,
-                  )
-                else ...[
-                  UserAvatar(
-                    user: viewModel.user,
-                    canEdit: viewModel.isEditing,
-                    selectImage: viewModel.pickImage,
-                    image: viewModel.image,
+      body: _UserInfoBody(viewModel),
+    );
+  }
+}
+
+class _UserInfoBody extends StatelessWidget {
+  const _UserInfoBody(this.viewModel, {Key? key}) : super(key: key);
+
+  final UserInfoViewModel viewModel;
+
+  @override
+  Widget build(BuildContext context) {
+    if (viewModel.isBusy) {
+      return const Center(child: CircularProgressIndicator());
+    }
+    if (viewModel.hasError) {
+      return Text(
+        viewModel.error.toString(),
+        textAlign: TextAlign.center,
+      );
+    }
+
+    var user = viewModel.user;
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Form(
+          key: viewModel.formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              UserAvatar(
+                user: user,
+                canEdit: viewModel.isEditing,
+                selectImage: viewModel.pickImage,
+                image: viewModel.image,
+                isEditing: viewModel.isEditing,
+              ),
+              _defaultPadding,
+              if (viewModel.isEditing)
+                TextFormField(
+                  controller: viewModel.nameController,
+                  decoration: const InputDecoration(
+                    labelText: 'Name',
+                    prefixIcon: Icon(Icons.badge),
                   ),
-                  defaultPadding,
-                  if (viewModel.user.name != null) ...[
-                    Text(
-                      viewModel.user.name!,
+                )
+              else
+                Selector<UserRepository, String?>(
+                  selector: (context, repo) =>
+                      repo.get(viewModel.user.username)!.name,
+                  builder: (context, name, child) {
+                    if (name == null) {
+                      return const SizedBox.shrink();
+                    }
+                    return Text(
+                      name,
                       style: Theme.of(context).textTheme.headline6,
                       textAlign: TextAlign.center,
-                    ),
-                    defaultPadding,
-                  ],
-                  Text(
-                    '@${viewModel.user.username}',
-                    style: Theme.of(context).textTheme.subtitle1,
-                    textAlign: TextAlign.center,
-                  ),
-                  defaultPadding,
-                  _UserHabitsAndComments(viewModel.user.username),
-                  defaultPadding,
-                ],
-              ],
-            ),
+                    );
+                  },
+                ),
+              _defaultPadding,
+              if (viewModel.isEditing)
+                UsernameFormField(
+                  controller: viewModel.usernameController,
+                  onUpdateRequestFuture: viewModel.setUsernameExistsFuture,
+                )
+              else
+                UsernameText(user),
+              _defaultPadding,
+              _UserHabitsAndComments(user.username),
+              _defaultPadding,
+            ],
           ),
         ),
       ),
@@ -156,11 +203,11 @@ class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
       selector: (context, habitsRepo, commentsRepo) {
         final habits = habitsRepo.cache.values
             .whereType<Habit>()
-            .where((habit) => habit.author.username == widget.username)
+            .where((habit) => habit.owner == widget.username)
             .toList();
         final comments = commentsRepo.cache.values
             .whereType<Comment>()
-            .where((comment) => comment.by.username == widget.username)
+            .where((comment) => comment.owner == widget.username)
             .toList();
 
         return Tuple2(habits, comments);
@@ -191,7 +238,7 @@ class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
                         for (var habit in habits) HabitListTile(habit.id)
                       else
                         const Text('No habits'),
-                      _UserInfoView.defaultPadding,
+                      _defaultPadding,
                     ],
                   ),
                 ),
@@ -210,11 +257,13 @@ class _UserHabitsAndCommentsState extends State<_UserHabitsAndComments> {
                   child: Column(
                     children: [
                       if (comments.isNotEmpty)
-                        Container()
+                        ...<Widget>[
+                          for (var comment in comments)
+                            CommentListTile(comment.id)
+                        ].spacedBy(const Divider())
                       else
                         const Text('No comments'),
-                      for (var comment in comments) CommentListTile(comment.id),
-                      _UserInfoView.defaultPadding,
+                      _defaultPadding,
                     ],
                   ),
                 ),

@@ -80,12 +80,12 @@ class _HabitListTileView extends StatelessWidget {
     if (isLoading) {
       return null;
     }
-    var author = habit!.author;
+    var owner = habit!.owner;
     var category = habit!.category;
     return Row(
       children: [
-        Text(category),
-        if (author != null) Text(' \u2022 @' + author.username),
+        Text(category.toString().split('.')[1]),
+        Text(' \u2022 @' + owner),
       ],
     );
   }
@@ -96,11 +96,9 @@ class _HabitListTileView extends StatelessWidget {
       onTap: isLoading
           ? null
           : () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => HabitDetailsScreen(habit!.id),
-                ),
-              );
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => HabitDetailsScreen(habit!.id),
+              ));
             },
       leading: Column(
         children: [

@@ -1,18 +1,10 @@
 """This directive allows results to be deferred during execution"""
 directive @defer on FIELD
 
-"""Tells the service which mutation triggers this subscription."""
-directive @aws_subscribe(
-  """
-  List of mutations which will trigger this subscription when they are called.
-  """
-  mutations: [String]
-) on FIELD_DEFINITION
-
 """
-Tells the service this field/object has access authorized by a Lambda Authorizer.
+Tells the service this field/object has access authorized by sigv4 signing.
 """
-directive @aws_lambda on OBJECT | FIELD_DEFINITION
+directive @aws_iam on OBJECT | FIELD_DEFINITION
 
 """
 Tells the service which subscriptions will be published to when this mutation is
@@ -26,19 +18,32 @@ directive @aws_publish(
 ) on FIELD_DEFINITION
 
 """
-Tells the service this field/object has access authorized by sigv4 signing.
-"""
-directive @aws_iam on OBJECT | FIELD_DEFINITION
-
-"""
 Tells the service this field/object has access authorized by an OIDC token.
 """
 directive @aws_oidc on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by a Lambda Authorizer.
+"""
+directive @aws_lambda on OBJECT | FIELD_DEFINITION
 
 """Directs the schema to enforce authorization on a field"""
 directive @aws_auth(
   """List of cognito user pool groups which have access on this field"""
   cognito_groups: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by an API key.
+"""
+directive @aws_api_key on OBJECT | FIELD_DEFINITION
+
+"""Tells the service which mutation triggers this subscription."""
+directive @aws_subscribe(
+  """
+  List of mutations which will trigger this subscription when they are called.
+  """
+  mutations: [String]
 ) on FIELD_DEFINITION
 
 """
@@ -48,11 +53,6 @@ directive @aws_cognito_user_pools(
   """List of cognito user pool groups which have access on this field"""
   cognito_groups: [String]
 ) on OBJECT | FIELD_DEFINITION
-
-"""
-Tells the service this field/object has access authorized by an API key.
-"""
-directive @aws_api_key on OBJECT | FIELD_DEFINITION
 
 enum AccessLevel {
   guest
@@ -93,6 +93,13 @@ timestamp value is **`-31557014167219200`** which corresponds to
 """
 scalar AWSTimestamp
 
+enum Category {
+  Health
+  Finance
+  Productivity
+  Relationships
+}
+
 type Comment {
   id: ID!
   habitId: ID!
@@ -104,6 +111,7 @@ type Comment {
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
   by: User
+  habit: Habit
 }
 
 input CreateCommentInput {
@@ -117,7 +125,7 @@ input CreateCommentInput {
 input CreateHabitInput {
   id: ID
   tagline: String!
-  category: String!
+  category: Category!
   details: String
   ups: Int
   downs: Int
@@ -127,6 +135,7 @@ input CreateHabitInput {
 
 input CreateUserInput {
   username: String!
+  displayUsername: String
   name: String
   avatar: S3ObjectInput
   upvotedHabits: [ID!]
@@ -152,7 +161,7 @@ input DeleteUserInput {
 type Habit {
   id: ID!
   tagline: String!
-  category: String!
+  category: Category!
   details: String
   owner: String
   _version: Int!
@@ -184,6 +193,11 @@ input ModelBooleanInput {
   eq: Boolean
   attributeExists: Boolean
   attributeType: ModelAttributeTypes
+}
+
+input ModelCategoryInput {
+  eq: Category
+  ne: Category
 }
 
 input ModelCommentConditionInput {
@@ -224,7 +238,7 @@ input ModelFloatInput {
 
 input ModelHabitConditionInput {
   tagline: ModelStringInput
-  category: ModelStringInput
+  category: ModelCategoryInput
   details: ModelStringInput
   ups: ModelIntInput
   downs: ModelIntInput
@@ -242,7 +256,7 @@ type ModelHabitConnection {
 input ModelHabitFilterInput {
   id: ModelIDInput
   tagline: ModelStringInput
-  category: ModelStringInput
+  category: ModelCategoryInput
   details: ModelStringInput
   ups: ModelIntInput
   downs: ModelIntInput
@@ -321,6 +335,7 @@ input ModelStringInput {
 }
 
 input ModelUserConditionInput {
+  displayUsername: ModelStringInput
   name: ModelStringInput
   upvotedHabits: ModelIDInput
   downvotedHabits: ModelIDInput
@@ -337,6 +352,7 @@ type ModelUserConnection {
 
 input ModelUserFilterInput {
   username: ModelStringInput
+  displayUsername: ModelStringInput
   name: ModelStringInput
   upvotedHabits: ModelIDInput
   downvotedHabits: ModelIDInput
@@ -363,7 +379,7 @@ type Query {
   syncUsers(filter: ModelUserFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelUserConnection
   getUser(username: String!): User
   listUsers(username: String, filter: ModelUserFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelUserConnection
-  habitsByCategory(category: String, ups: ModelIntKeyConditionInput, sortDirection: ModelSortDirection, filter: ModelHabitFilterInput, limit: Int, nextToken: String): ModelHabitConnection
+  habitsByCategory(category: Category, ups: ModelIntKeyConditionInput, sortDirection: ModelSortDirection, filter: ModelHabitFilterInput, limit: Int, nextToken: String): ModelHabitConnection
   searchHabits(filter: SearchableHabitFilterInput, sort: SearchableHabitSortInput, limit: Int, nextToken: String, from: Int): SearchableHabitConnection
   syncHabits(filter: ModelHabitFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelHabitConnection
   getHabit(id: ID!): Habit
@@ -413,7 +429,6 @@ type SearchableHabitConnection {
 input SearchableHabitFilterInput {
   id: SearchableIDFilterInput
   tagline: SearchableStringFilterInput
-  category: SearchableStringFilterInput
   details: SearchableStringFilterInput
   ups: SearchableIntFilterInput
   downs: SearchableIntFilterInput
@@ -426,7 +441,6 @@ input SearchableHabitFilterInput {
 enum SearchableHabitSortableFields {
   id
   tagline
-  category
   details
   ups
   downs
@@ -495,6 +509,7 @@ type SearchableUserConnection {
 
 input SearchableUserFilterInput {
   username: SearchableStringFilterInput
+  displayUsername: SearchableStringFilterInput
   name: SearchableStringFilterInput
   upvotedHabits: SearchableIDFilterInput
   downvotedHabits: SearchableIDFilterInput
@@ -505,6 +520,7 @@ input SearchableUserFilterInput {
 
 enum SearchableUserSortableFields {
   username
+  displayUsername
   name
   upvotedHabits
   downvotedHabits
@@ -537,7 +553,7 @@ input UpdateCommentInput {
 input UpdateHabitInput {
   id: ID!
   tagline: String
-  category: String
+  category: Category
   details: String
   ups: Int
   downs: Int
@@ -547,6 +563,7 @@ input UpdateHabitInput {
 
 input UpdateUserInput {
   username: String!
+  displayUsername: String
   name: String
   avatar: S3ObjectInput
   upvotedHabits: [ID!]
@@ -556,6 +573,7 @@ input UpdateUserInput {
 
 type User {
   username: String!
+  displayUsername: String
   name: String
   avatar: S3Object
   _version: Int!

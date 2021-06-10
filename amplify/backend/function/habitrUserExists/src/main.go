@@ -23,10 +23,15 @@ type UsernameExistsResponse struct {
 
 const usernameExists = `
 query SearchUsers($username: String!) {
-  searchUsers(filter: { username: { eq: $username } }) {
-    total
+	searchUsers(filter: { 
+	  or: [
+		{ username: { eq: $username } },
+		{ displayUsername: { eq: $username } }
+	  ]
+	}) {
+	  total
+	}
   }
-}
 `
 
 func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {

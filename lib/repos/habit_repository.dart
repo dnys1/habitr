@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:habitr/blocs/auth/auth_bloc.dart';
+import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/models/VoteType.dart';
@@ -15,10 +16,15 @@ abstract class HabitRepository extends Repository<Habit> {
     String? nextToken,
   });
   Future<Habit?> getHabit(String id);
+  Future<Habit> createHabit({
+    required String tagline,
+    required Category category,
+    String? details,
+  });
   Future<List<Habit>> searchHabits(String query);
   Future<void> voteForHabit(String habitId, bool upvote);
-  Stream<Habit> get habitUpdates;
   bool? isUpvoted(String habitId);
+  Future<bool> deleteHabit(String habitId);
 }
 
 class HabitRepositoryImpl extends HabitRepository {
@@ -108,6 +114,13 @@ class HabitRepositoryImpl extends HabitRepository {
     }
     _upvotedHabits = _user!.upvotedHabits.toSet();
     _downvotedHabits = _user!.downvotedHabits.toSet();
+    _setHabits(user.habits);
+    for (var comment in user.comments) {
+      var habit = comment.habit;
+      if (habit != null) {
+        put(habit.id, habit);
+      }
+    }
     notifyListeners();
   }
 
@@ -122,8 +135,17 @@ class HabitRepositoryImpl extends HabitRepository {
   }
 
   @override
-  Stream<Habit> get habitUpdates {
-    throw UnimplementedError();
+  Future<Habit> createHabit({
+    required String tagline,
+    required Category category,
+    String? details,
+  }) async {
+    final habit = await _apiService.createHabit(
+      tagline: tagline,
+      category: category,
+      details: details,
+    );
+    return put(habit.id, habit);
   }
 
   @override
@@ -182,5 +204,10 @@ class HabitRepositoryImpl extends HabitRepository {
       setDoneLoading(habitId);
       rethrow;
     }
+  }
+
+  @override
+  Future<bool> deleteHabit(String habitId) async {
+    return _apiService.deleteHabit(habitId);
   }
 }
