@@ -66,4 +66,5 @@ amplifytools.xcconfig
 .secret-*
 
 # custom
+.env
 /data/
