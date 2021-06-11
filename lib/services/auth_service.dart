@@ -45,8 +45,6 @@ class AmplifyAuthService implements AuthService {
     ]);
     final request = gql.printNode(_document);
 
-    throw Exception('');
-
     _userController ??= StreamController<User>.broadcast();
     _userSubscription ??= Amplify.API.subscribe<String>(
       request: GraphQLRequest(
