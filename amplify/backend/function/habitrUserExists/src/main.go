@@ -127,8 +127,8 @@ var apiKey string
 var graphQLEndpoint string
 
 func main() {
-	if graphQLEndpoint = os.Getenv("GRAPHQL_ENDPOINT"); graphQLEndpoint == "" {
-		fmt.Fprintf(os.Stderr, "Must specify GRAPHQL_ENDPOINT environment variable")
+	if graphQLEndpoint = os.Getenv("GRAPHQL_API_ENDPOINT"); graphQLEndpoint == "" {
+		fmt.Fprintf(os.Stderr, "Must specify GRAPHQL_API_ENDPOINT environment variable")
 		os.Exit(1)
 	}
 
