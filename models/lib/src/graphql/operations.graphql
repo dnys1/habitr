@@ -154,7 +154,7 @@ query GetComment($commentId: ID!) {
 
 subscription SubscribeToUser($username: String!) {
   subscribeToUser(username: $username) {
-    ...AllPublicUserFields
+    ...AllPrivateUserFields
   }
 }
 

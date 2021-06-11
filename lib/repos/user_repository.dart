@@ -102,11 +102,14 @@ class UserRepositoryImpl extends UserRepository {
     S3Object? avatar,
   }) async {
     if (name == null && username == null && avatar == null) return;
-    return _apiService.updateUser(
+    var updatedUser = await _apiService.updateUser(
       (_authBloc.state as AuthLoggedIn).user,
       name: name,
       username: username,
       avatar: avatar,
     );
+    if (updatedUser != null) {
+      put(updatedUser.username, updatedUser);
+    }
   }
 }

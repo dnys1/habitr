@@ -38,12 +38,14 @@ class AmplifyAuthService implements AuthService {
   Stream<User> get userUpdates async* {
     const operationName = 'subscribeToUser';
     const _document = ast.DocumentNode(definitions: [
-      AllPublicUserFields,
+      AllPrivateUserFields,
       AllCommentFields,
       AllHabitFields,
       SubscribeToUser,
     ]);
     final request = gql.printNode(_document);
+
+    throw Exception('');
 
     _userController ??= StreamController<User>.broadcast();
     _userSubscription ??= Amplify.API.subscribe<String>(

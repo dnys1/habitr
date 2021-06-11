@@ -149,8 +149,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   Stream<AuthEvent> get _userEvents async* {
     try {
-      await for (var user in _authService.userUpdates) {
-        yield AuthUserUpdate(user);
+      // vs. await for (var user in _authService.userUpdates),
+      // this method correctly cancels the stream when this
+      // generated stream is canceled.
+      var stream = _authService.userUpdates.map((user) => AuthUserUpdate(user));
+      await for (var update in stream) {
+        yield update;
       }
     } on Exception catch (e) {
       yield AuthFailure(e);

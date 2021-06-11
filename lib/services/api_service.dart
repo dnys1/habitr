@@ -73,7 +73,7 @@ abstract class ApiService {
   Future<bool> usernameExists(String username);
 
   /// Updates the given [user].
-  Future<void> updateUser(
+  Future<User?> updateUser(
     User user, {
     String? name,
     String? username,
@@ -237,14 +237,14 @@ class AmplifyApiService implements ApiService {
   }
 
   @override
-  Future<void> updateUser(
+  Future<User?> updateUser(
     User user, {
     String? name,
     String? username,
     S3Object? avatar,
   }) async {
     if (name == null && username == null && avatar == null) {
-      return;
+      return null;
     }
     const operationName = 'updateUser';
     final mutation = GUpdateUser((b) {
@@ -261,7 +261,7 @@ class AmplifyApiService implements ApiService {
       }
     });
 
-    await _runQuery(
+    final resp = await _runQuery(
       const ast.DocumentNode(definitions: [
         AllHabitFields,
         AllCommentFields,
@@ -271,6 +271,12 @@ class AmplifyApiService implements ApiService {
       operationName,
       mutation.vars.toJson(),
     );
+
+    if (resp == null) {
+      return null;
+    }
+
+    return User.fromJson(resp);
   }
 
   @override
