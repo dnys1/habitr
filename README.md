@@ -2,7 +2,23 @@
 
 Habit-tracking social network built with AWS Amplify Flutter.
 
-## Features
+* [Features](#features)
+* [Getting Started](#getting-started)
+   * [Amplify](#amplify)
+   * [Dart Lambda](#dart-lambda)
+   * [Go Lambdas](#go-lambdas)
+   * [Flutter](#flutter)
+      * [Modify Values](#modify-values)
+   * [Run the App](#run-the-app)
+* [Making Changes](#making-changes)
+   * [GraphQL Schema](#graphql-schema)
+* [Troubleshooting](#troubleshooting)
+   * [Logging (CloudWatch)](#logging-cloudwatch)
+      * [API (GraphQL)](#api-graphql)
+      * [API (REST)](#api-rest)
+      * [Functions](#functions)
+
+# Features
 - Username/password, Login with Amazon sign-in with Cognito
 - Bucket storage with S3
 - [GraphQL API](amplify/backend/api/habitr/schema.graphql) with AppSync
@@ -16,6 +32,14 @@ Habit-tracking social network built with AWS Amplify Flutter.
 Follow these instructions to create the cloud resources needed to run the app in your local environment. Some responses to CLI prompts are marked "\<default\>", in which cases the name does not matter. In other cases, a name is given (like `habitr` for the GraphQL API), in which case it's important to copy it verbatim.
 
 ## Amplify
+
+0. Before starting
+
+Create a `backend-config.json` file in `amplify/backend` with an empty JSON object:
+
+```json
+{}
+```
 
 1. Create a *Login with Amazon* app
 
@@ -87,18 +111,16 @@ $ amplify add api
 
 ? Please select from one of the below mentioned services: GraphQL
 ? Provide API name: habitr
-? Choose the default authorization type for the API API key
-? Enter a description for the API key: Admin API Key
-? After how many days from now the API key should expire (1-365): 365
+? Choose the default authorization type for the API Amazon Cognito User Pool
+Use a Cognito user pool configured as a part of this project.
 ? Do you want to configure advanced settings for the GraphQL API Yes, I want to make some additional changes.
 ? Configure additional auth types? Yes
-? Choose the additional authorization types you want to configure for the API 
-❯◉ Amazon Cognito User Pool
- ◯ IAM
- ◯ OpenID Connect
-Cognito UserPool configuration
-Use a Cognito user pool configured as a part of this project.
+? Choose the additional authorization types you want to configure for the API API key
+API key configuration
+? Enter a description for the API key: Admin API Key
+? After how many days from now the API key should expire (1-365): 365
 ? Enable conflict detection? Yes
+? Select the default resolution strategy Auto Merge
 ? Do you have an annotated GraphQL schema? Yes
 ? Provide your schema file path: amplify/backend/api/habitr/schema.graphql
 
@@ -127,6 +149,11 @@ Available advanced settings:
 - Lambda layers configuration
 
 ? Do you want to configure advanced settings? No
+```
+
+> Note: My CLI kind of bugs out here - make sure to press "n\<RETURN\>" a couple of times, until you get back to your shell.
+
+```sh
 ? overwrite /Users/nydillon/dev/habitr_new/amplify/backend/function/habitrUserExists/src/event.json No
 ? Do you want to edit the local lambda function now? No
 ? overwrite /Users/nydillon/dev/habitr_new/amplify/backend/function/habitrUserExists/src/go.mod No
@@ -167,14 +194,14 @@ Successfully added resource habitrUserIdentity locally.
 
 Run `amplify add api` and choose `REST` this time. We will configure two paths to connect to the functions made in the previous step:
 
-- `/user/exists/` -> `habitrUserExists`
-- `/user/identity/` -> `habitrUserIdentity`
+- `/user/exists` -> `habitrUserExists`
+- `/user/identity` -> `habitrUserIdentity`
 
 ```sh
 $ amplify add api
 
 ? Please select from one of the below mentioned services: REST
-? Provide a friendly name for your resource to be used as a label for this category in the project: <default>
+? Provide a friendly name for your resource to be used as a label for this category in the project: habitrAPI
 ? Provide a path (e.g., /book/{isbn}): /user/exists
 ? Choose a Lambda source Use a Lambda function already added in the current Amplify project
 ? Choose the Lambda function to invoke by this path habitrUserExists
@@ -188,7 +215,7 @@ $ amplify add api
 ? What kind of access do you want for Authenticated users? read
 ? Do you want to add another path? No
 
-Successfully added resource <default> locally
+Successfully added resource habitrAPI locally
 ```
 
 9. Configure Analytics
@@ -203,8 +230,7 @@ $ amplify add analytics
 Auth configuration is required to allow unauthenticated users, but it is not configured properly.
 Adding analytics would add the Auth category to the project if not already added.
 ? Apps need authorization to send analytics events. Do you want to allow guests and unauthenticated users to send analytics events? (we recommend you allow this when getting s
-tarted) No
-Authorize only authenticated users to send analytics events. Use "amplify update auth" to modify this behavior.
+tarted) Yes
 
 Successfully updated auth resource locally.
 Successfully added resource <default> locally
@@ -240,7 +266,7 @@ Current Environment: dev
 | --------- | ------------------ | --------- | ----------------- |
 | Auth      | <default>          | Create    | awscloudformation |
 | Api       | habitr             | Create    | awscloudformation |
-| Api       | <default>          | Create    | awscloudformation |
+| Api       | habitrAPI          | Create    | awscloudformation |
 | Storage   | <default>          | Create    | awscloudformation |
 | Analytics | <default>          | Create    | awscloudformation |
 | Function  | habitrUserExists   | Create    | awscloudformation |
@@ -250,7 +276,7 @@ Current Environment: dev
 
 12. Deploy to the cloud
 
-When you're ready, run `amplify push` to deploy the application to AWS (this may take a while).
+When you're ready, run `amplify push` to deploy the application to AWS (this will take about 20-30 minutes).
 
 ```sh
 $ amplify push
@@ -263,7 +289,7 @@ Current Environment: dev
 | --------- | ------------------ | --------- | ----------------- |
 | Auth      | <default>          | Create    | awscloudformation |
 | Api       | habitr             | Create    | awscloudformation |
-| Api       | <default>          | Create    | awscloudformation |
+| Api       | habitrAPI          | Create    | awscloudformation |
 | Storage   | <default>          | Create    | awscloudformation |
 | Analytics | <default>          | Create    | awscloudformation |
 | Function  | habitrUserExists   | Create    | awscloudformation |
@@ -276,14 +302,7 @@ Current Environment: dev
 
 The output of `amplify push` will be several URLs and API keys. It will be important to note these for yourself, but keep them private and outside of version control.
 
-While working with scripts and tooling, it can be helpful to store these values as environment variables. To setup Habitr, only two environment variables are needed, `GRAPHQL_API_ENDPOINT` and `GRAPHQL_API_KEY`.
-
-Create a file in the root of the project called `.env` and add the following to the file, replacing `...` with the values from `amplify push`.
-
-```sh
-export GRAPHQL_API_ENDPOINT=...
-export GRAPHQL_API_KEY=...
-```
+While working with scripts and tooling, it can be helpful to store these values as environment variables. The following steps will involve configuring Lambdas with the GraphQL endpoint and GraphQL API key from the previous step.
 
 ## Dart Lambda
 
@@ -295,9 +314,9 @@ Since Dart is not an officially supported Lambda runtime, in order to run a Dart
 
 1. Build the Lambda
 
-To build the Lambda, [Docker](https://www.docker.com/products/docker-desktop) is required to be installed. Lambda supports unofficial runtimes but it requires pre-built executables to do so, and the executables must be made to run on Linux. Dart does not support cross-compiling, so we must use a Linux-based Docker container to build our executable.
+To build the Lambda, [Docker](https://www.docker.com/products/docker-desktop) is required to be installed. Lambda supports unofficial runtimes but it requires pre-built executables to do so, and the executables must be made to run on Linux. Since Dart does not support cross-compiling, we must use a Linux-based Docker container to build our executable (unless you happen to be running Linux as your main OS).
 
-Running the following command will generated `lambdas/create_user/build/lambda.zip`
+Running the following command will generate our lamdba zip (`lambdas/create_user/build/lambda.zip`):
 
 ```sh
 $ make lambdas
@@ -319,27 +338,106 @@ The default execution role and Advanced Settings are okay as-is. Click **Create 
 
 Under the **Code** tab, click `Upload from` > `.zip file` and choose the zip file created in the previous step.
 
-Lastly, we need to provide the Lambda with the necessary environment variables (the same two GraphQL variables from before).
+Scroll to `Runtime settings` and click **Edit**. Change the `Handler` field to `habitrCreateUser` and click **Save**.
 
-Under the **Configuration** tab, click `Environment variables`, then `Edit`. Add `GRAPHQL_API_ENDPOINT` and `GRAPHQL_API_KEY`, corresponding to the values from `amplify push`.
+Lastly, we need to provide the Lambda with the necessary environment variables (the two GraphQL variables from before).
+
+Under the **Configuration** tab, click `Environment variables`, then **Edit**. Add `GRAPHQL_API_ENDPOINT` and `GRAPHQL_API_KEY`, corresponding to the values from `amplify push`.
 
 3. Configure the Cognito Trigger
 
 The final step is to configure the Lambda to respond to Cognito events.
 
-Navigate to **Cognito** in the AWS Console.
+Navigate to **Cognito** in the AWS Console. Click on **Manage User Pools**.
 
 ![AWS Console Lambda](setup/cognito.jpg)
+
+Find the User Pool associated with your Habitr project, and on the left side click `Triggers`.
+
+The trigger event we're interested in is `Post confirmation`. Find your Lambda in the dropdown and remember to click **Save changes** when you're done.
+
+## Go Lambda
+
+The Go lambda `habitrUserExists`, which was deployed as an Amplify Function, also needs access to the `GRAPHQL_API_KEY` and `GRAPHQL_API_ENDPOINT` environment variables. Navigate back to **Lambda** to configure them.
 
 ## Flutter
 
 Run the following commands from the root of the project:
 
-1. `source .env` (created in step #13)
-2. `flutter pub get`
-3. `flutter pub run build_runner build --delete-conflicting-outputs`
-4. `make models`
+1. `flutter pub get`
+2. `make models`
 
 ## Run the App
 
 If everything went well in the previous steps, you should now be able to run the Habitr project! 🎉
+
+To create some dummy habit data, you can use the `seed_habits.dart` program under the `scripts` folder. First, run the app and sign up for a user account, then run the script like so:
+
+```sh
+$ dart scripts/seed_habits.dart \
+> --user=<USERNAME> \
+> --endpoint=<GRAPHQL_API_ENDPOINT> \
+> --api-key=<GRAPHQL_API_KEY>
+```
+
+# Making Changes
+
+## GraphQL Schema
+
+Making changes to the GraphQL schema is a three-step process. First, edit the [schema file](amplify/backend/api/habitr/schema.graphql). Then, run `amplify push` to deploy changes. Finally, run `make schema` from the root of the project to regenerate the model files.
+
+> Note: Make sure to have `GRAPHQL_API_ENDPOINT` and `GRAPHQL_API_KEY` environment variables exported in your shell before running `make schema`.
+
+# Troubleshooting
+
+Amplify is primarily a wrapper around AWS and an orchestrator of many AWS resources. Each category spans multiple components of AWS, so troubleshooting can quickly mean understanding the underlying AWS services. In general, the following mapping will give you a starting point for understanding the relationships between Amplify categories and their raw underpinnings.
+
+- All Categories
+    - IAM
+    - CloudWatch
+- Auth (Cognito)
+    - Cognito User Pools
+    - Cognito Identity Pools
+    - SES
+- API (GraphQL)
+    - AppSync
+    - DynamoDB
+- API (REST)
+    - API Gateway
+    - Lambda
+- Analytics (Pinpoint)
+    - Pinpoint
+- Storage (S3)
+    - S3
+
+## Logging (CloudWatch)
+
+One of the best tools for troubleshooting your stack is CloudWatch. Logging is enabled by default for many resources. For others, it requires a bit of manual setup and can incur some additional charges.
+
+### API (GraphQL)
+
+> Logs **are not** enabled by default.
+
+If you go to **AppSync** in the AWS Console, you'll see the GraphQL API you created during setup. Click on that, then navigate to `Settings`. Scroll to `Logging` and click **Enable Logs** to have logs start streaming to CloudWatch.
+
+For debugging custom resolvers, it is helpful to enable `Include verbose content` and set the `Field resolver log level` to **All**. This will log all steps performed in generating mapping templates and important debug information.
+
+Remember to click **Save** when you're done.
+
+### API (REST)
+
+> Logs **are not** enabled by default.
+
+Navigate to **IAM** in the AWS Console and select `Roles`. Click on **Create role**. Under `Choose a use case`, pick **API Gateway**. Click **Next**, then **Next**.
+
+For the `Role name`, choose something descriptive like `habitr-api-gateway-logging` and click **Create role**. Find the new role in the list and click it's name. Copy the `Role ARN`.
+
+Navigate to **API Gateway** in the AWS Console. Select your REST API, then click the global `Settings` link on the left-hand side. Paste the Role ARN from before and click **Save**.
+
+On the left-hand side, under your API name, click `Stages` then select `dev` in the list. Click the `Logs/Tracing` tab and check **Enable CloudWatch Logs**. Change the Log level to your preference, and select `Log full requests/response data` if you'd like to see the full input and output to your functions. Click **Save Changes**.
+
+### Functions
+
+> Logs **are** enabled by default.
+
+Navigate to **CloudWatch** in the AWS Console to see logs for your Lambdas/Functions.
