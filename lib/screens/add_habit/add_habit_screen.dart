@@ -88,7 +88,7 @@ class _AddHabitScreenView extends StatelessWidget {
                             for (var category in Category.values)
                               DropdownMenuItem(
                                 value: category,
-                                child: Text(category.toString().split('.')[1]),
+                                child: Text(category.string),
                               ),
                           ],
                         ),

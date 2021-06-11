@@ -16,6 +16,7 @@ Future<void> main(List<String> args) async {
 
   parser.addOption(
     'user',
+    abbr: 'u',
     help: 'The Cognito user to execute operations on behalf of.',
     valueHelp: 'USER',
     mandatory: true,
@@ -24,6 +25,7 @@ Future<void> main(List<String> args) async {
   if (graphQLEndpoint == null || apiKey == null) {
     parser.addOption(
       'endpoint',
+      abbr: 'e',
       help: 'The endpoint for your GraphQL API.',
       valueHelp: 'GRAPHQL_API_ENDPOINT',
       mandatory: true,
@@ -31,6 +33,7 @@ Future<void> main(List<String> args) async {
 
     parser.addOption(
       'api-key',
+      abbr: 'a',
       help: 'The API key for your GraphQL endpoint.',
       valueHelp: 'GRAPHQL_API_KEY',
       mandatory: true,

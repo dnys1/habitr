@@ -56,16 +56,12 @@ class UserAvatar extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) {
         final authService = Provider.of<AuthService>(context, listen: false);
-        final storageService =
-            Provider.of<StorageService>(context, listen: false);
         final userRepository =
             Provider.of<UserRepository>(context, listen: false);
         return UserAvatarViewModel(
-          storageService: storageService,
           authService: authService,
           userRepository: userRepository,
-          user: user,
-          username: username,
+          username: username ?? user!.username,
         );
       },
       builder: (context, _) {
@@ -142,12 +138,11 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
     return null;
   }
 
-  Widget childForRadius(double radius) {
+  Widget childForRadius(double radius, String? url) {
     if (widget.viewModel.isBusy) {
       return const CupertinoActivityIndicator();
     }
 
-    var url = widget.viewModel.url;
     if (url == null) {
       return Icon(
         Icons.perm_identity,
@@ -188,19 +183,32 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
 
   @override
   Widget build(BuildContext context) {
-    var url = widget.viewModel.url;
     return LayoutBuilder(
       builder: (context, constraints) {
         final radius = max(constraints.biggest.shortestSide / 4, 40.0);
-        return GestureDetector(
-          onTap: getAction(url),
-          child: CircleAvatar(
-            backgroundColor: Colors.grey[200],
-            radius: radius,
-            foregroundImage:
-                widget.image != null ? FileImage(widget.image!) : null,
-            child: childForRadius(radius),
-          ),
+
+        return Selector2<UserRepository, StorageService, String?>(
+          selector: (context, userRepo, storageService) {
+            if (widget.viewModel.isBusy) return null;
+            var user = userRepo.get(widget.viewModel.user.username)!;
+            var key = user.avatar?.key;
+            if (key == null) {
+              return null;
+            }
+            return storageService.get(key);
+          },
+          builder: (context, url, child) {
+            return GestureDetector(
+              onTap: getAction(url),
+              child: CircleAvatar(
+                backgroundColor: Colors.grey[200],
+                radius: radius,
+                foregroundImage:
+                    widget.image != null ? FileImage(widget.image!) : null,
+                child: childForRadius(radius, url),
+              ),
+            );
+          },
         );
       },
     );

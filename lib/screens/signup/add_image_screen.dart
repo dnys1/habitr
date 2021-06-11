@@ -32,8 +32,7 @@ class AddImageScreen extends StatelessWidget {
         );
       },
       builder: (context, _) {
-        final viewModel = Provider.of<AddImageViewModel>(context);
-        return _AddImageView(viewModel: viewModel);
+        return _AddImageView(Provider.of(context));
       },
     );
   }
@@ -42,9 +41,9 @@ class AddImageScreen extends StatelessWidget {
 class _AddImageView extends StatelessWidget {
   final AddImageViewModel viewModel;
 
-  const _AddImageView({
+  const _AddImageView(
+    this.viewModel, {
     Key? key,
-    required this.viewModel,
   }) : super(key: key);
 
   @override

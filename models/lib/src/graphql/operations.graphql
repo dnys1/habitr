@@ -107,7 +107,7 @@ fragment AllCommentFields on Comment {
 ## List
 
 query ListHabits($limit: Int!, $nextToken: String) {
-  searchHabits(limit: $limit, nextToken: $nextToken, sort: { field: ups, direction: desc }) {
+  listHabits(limit: $limit, nextToken: $nextToken) {
     items {
       ...AllHabitFields
     }
@@ -179,7 +179,9 @@ mutation CreateHabit($tagline: String!, $category: Category!, $details: String) 
   createHabit(input: {
     tagline: $tagline,
     category: $category,
-    details: $details
+    details: $details,
+    ups: 0,
+    downs: 0
   }) {
     ...AllHabitFields
   }
@@ -217,6 +219,9 @@ fragment AllVoteResultFields on VoteResult {
     owner
     ups
     downs
+    createdAt
+    updatedAt
+    _version
   }
   user {
     username

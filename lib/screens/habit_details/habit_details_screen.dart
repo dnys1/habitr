@@ -63,13 +63,19 @@ class _HabitDetailScreenView extends StatelessWidget {
                   viewModel.habit.tagline,
                   overflow: TextOverflow.ellipsis,
                 ),
-          actions: [
-            if (viewModel.userOwnsHabit)
-              IconButton(
-                icon: const Icon(Icons.delete),
-                onPressed: viewModel.deleteHabit,
-              ),
-          ],
+          // TODO: Re-enable when DataStore is resolved
+          // actions: [
+          //   if (viewModel.userOwnsHabit)
+          //     IconButton(
+          //       icon: const Icon(Icons.delete),
+          //       onPressed: () async {
+          //         var deleted = await viewModel.deleteHabit();
+          //         if (deleted) {
+          //           Navigator.of(context).pop();
+          //         }
+          //       },
+          //     ),
+          // ],
         ),
         body: viewModel.isBusy
             ? const Center(child: CircularProgressIndicator())
@@ -131,7 +137,7 @@ class _HabitDetailScreenBody extends StatelessWidget {
               const SizedBox(height: 20),
               _Detail(
                 label: 'Category',
-                value: category.toString().split('.')[1],
+                value: category.string,
               ),
               const SizedBox(height: 5),
               _Detail(label: 'Author', value: '@$author'),

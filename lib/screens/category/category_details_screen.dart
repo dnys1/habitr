@@ -46,17 +46,20 @@ class _CategoryDetailsView extends StatelessWidget {
       appBar: AppBar(
         title: Text(category.string),
       ),
-      body: PagedListView<String?, Habit>(
-        pagingController: viewModel.pagingController,
-        builderDelegate: PagedChildBuilderDelegate<Habit>(
-          itemBuilder: (context, item, index) {
-            return HabitListTile(item.id);
-          },
-          noItemsFoundIndicatorBuilder: (context) {
-            return const Center(
-              child: Text('No habits found'),
-            );
-          },
+      body: RefreshIndicator(
+        onRefresh: viewModel.refresh,
+        child: PagedListView<String?, Habit>(
+          pagingController: viewModel.pagingController,
+          builderDelegate: PagedChildBuilderDelegate<Habit>(
+            itemBuilder: (context, item, index) {
+              return HabitListTile(item.id);
+            },
+            noItemsFoundIndicatorBuilder: (context) {
+              return const Center(
+                child: Text('No habits found'),
+              );
+            },
+          ),
         ),
       ),
     );

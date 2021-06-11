@@ -48,4 +48,8 @@ class VerifyViewModel extends BaseViewModel {
       showErrorSnackbar('Code could not be sent. Please try again.');
     }
   }
+
+  void logout() {
+    _authBloc.add(const AuthLogout());
+  }
 }

@@ -1,6 +1,7 @@
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Comment.dart';
 import 'package:habitr/models/Habit.dart';
+import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
@@ -9,7 +10,11 @@ import 'package:habitr/services/api_service.dart';
 
 abstract class UserRepository extends Repository<User?> {
   Future<User?> getUser(String username);
-  Future<void> updateUser({String? name});
+  Future<void> updateUser({
+    String? name,
+    String? username,
+    S3Object? avatar,
+  });
   Future<List<User>> searchUsers(String query);
 }
 
@@ -91,10 +96,17 @@ class UserRepositoryImpl extends UserRepository {
   }
 
   @override
-  Future<void> updateUser({String? name}) {
-    return (_apiService as AmplifyApiService).updateUser(
+  Future<void> updateUser({
+    String? name,
+    String? username,
+    S3Object? avatar,
+  }) async {
+    if (name == null && username == null && avatar == null) return;
+    return _apiService.updateUser(
       (_authBloc.state as AuthLoggedIn).user,
       name: name,
+      username: username,
+      avatar: avatar,
     );
   }
 }

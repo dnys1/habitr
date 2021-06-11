@@ -68,6 +68,8 @@ class FeedViewModel extends BaseViewModel {
     super.dispose();
   }
 
+  Future<void> refresh() async => _pagingController.refresh();
+
   Future<void> _loadNextPage({
     String? nextToken,
     bool firstPage = false,

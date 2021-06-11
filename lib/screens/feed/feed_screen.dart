@@ -48,18 +48,21 @@ class _FeedView extends StatelessWidget {
           Navigator.of(context).push(AddHabitScreen.route);
         },
       ),
-      body: PagedListView<String?, Habit>(
-        pagingController: viewModel.pagingController,
-        builderDelegate: PagedChildBuilderDelegate<Habit>(
-          itemBuilder: (context, item, index) {
-            return HabitListTile(item.id);
-          },
-          noItemsFoundIndicatorBuilder: (context) {
-            return const Center(
-              child: Text('No habits found'),
-            );
-          },
+      body: RefreshIndicator(
+        child: PagedListView<String?, Habit>(
+          pagingController: viewModel.pagingController,
+          builderDelegate: PagedChildBuilderDelegate<Habit>(
+            itemBuilder: (context, item, index) {
+              return HabitListTile(item.id);
+            },
+            noItemsFoundIndicatorBuilder: (context) {
+              return const Center(
+                child: Text('No habits found'),
+              );
+            },
+          ),
         ),
+        onRefresh: viewModel.refresh,
       ),
     );
   }

@@ -15,7 +15,7 @@ class CategorySelectionScreen extends StatelessWidget {
         children: [
           for (var category in Category.values)
             ListTile(
-              title: Text(category.toString().split('.')[1]),
+              title: Text(category.string),
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(

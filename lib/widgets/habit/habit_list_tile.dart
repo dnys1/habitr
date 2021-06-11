@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/habit_details/habit_details_screen.dart';
@@ -84,7 +85,7 @@ class _HabitListTileView extends StatelessWidget {
     var category = habit!.category;
     return Row(
       children: [
-        Text(category.toString().split('.')[1]),
+        Text(category.string),
         Text(' \u2022 @' + owner),
       ],
     );

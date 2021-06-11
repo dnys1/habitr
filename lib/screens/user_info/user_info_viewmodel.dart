@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/mixins/image_picker.dart';
 import 'package:habitr/mixins/username_form.dart';
+import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/services/storage_service.dart';
@@ -99,12 +100,21 @@ class UserInfoViewModel extends BaseViewModel
     }
     setBusy(true);
     try {
-      var name = _nameController.text;
-      if (name != _user.name) {
-        await _userRepository.updateUser(name: name);
-      }
+      S3Object? avatar;
       if (image != null) {
-        await _storageService.putImage(_user, image!);
+        avatar = await _storageService.putImage(_user, image!);
+      }
+      var name = _nameController.text;
+      var displayUsername = _usernameController.text;
+      var includeName = name != _user.name;
+      var includeUsername = displayUsername != _user.username;
+      var includeAvatar = avatar != null;
+      if (includeName || includeUsername || includeAvatar) {
+        await _userRepository.updateUser(
+          name: includeName ? name : null,
+          username: includeUsername ? displayUsername : null,
+          avatar: includeAvatar ? avatar : null,
+        );
       }
       _isEditing = false;
       _clear();

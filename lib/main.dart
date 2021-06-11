@@ -65,7 +65,7 @@ class MyApp extends StatefulWidget {
         );
     _storageService = storageService ??
         AmplifyStorageService(
-          _apiService as AmplifyApiService,
+          _apiService,
           _analyticsService,
           _authService,
         );
@@ -133,24 +133,27 @@ class _MyAppState extends State<MyApp> {
               ),
               scaffoldMessengerKey: scaffoldMessengerKey,
               debugShowCheckedModeBanner: false,
-              home: BlocBuilder<AuthBloc, AuthState>(
+              home: StreamBuilder<AuthState>(
+                initialData: const AuthLoading(),
+                stream: _authBloc.stream,
                 builder: (context, state) {
+                  var authState = state.data;
                   return Navigator(
                     pages: [
-                      if (state is AuthLoading)
+                      if (authState is AuthLoading)
                         const MaterialPage(child: LoadingScreen()),
-                      if (state is AuthInFlow &&
-                          state.screen == AuthScreen.login)
+                      if (authState is AuthInFlow &&
+                          authState.screen == AuthScreen.login)
                         const MaterialPage(child: LoginScreen()),
-                      if (state is AuthInFlow &&
-                          state.screen == AuthScreen.signup)
+                      if (authState is AuthInFlow &&
+                          authState.screen == AuthScreen.signup)
                         const MaterialPage(child: SignupScreen()),
-                      if (state is AuthInFlow &&
-                          state.screen == AuthScreen.verify)
+                      if (authState is AuthInFlow &&
+                          authState.screen == AuthScreen.verify)
                         const MaterialPage(child: VerifyScreen()),
-                      if ((state is AuthInFlow &&
-                              state.screen == AuthScreen.addImage) ||
-                          state is AuthLoggedIn)
+                      if ((authState is AuthInFlow &&
+                              authState.screen == AuthScreen.addImage) ||
+                          authState is AuthLoggedIn)
                         const MaterialPage(child: AppScreen()),
                     ],
                     onPopPage: (route, result) {

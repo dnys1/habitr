@@ -21,7 +21,7 @@ abstract class StorageService extends Repository<String> {
   /// by the app shutting down.
   File? get lostFile;
 
-  Future<void> putImage(User user, File image);
+  Future<S3Object> putImage(User user, File image);
   Future<String> getImageUrl(String? identityId, String key);
   Future<void> precache(User user);
 }
@@ -36,7 +36,7 @@ class AmplifyStorageService extends StorageService {
 
   static final _imagePicker = ImagePicker();
 
-  final AmplifyApiService _apiService;
+  final ApiService _apiService;
   final AuthService _authService;
   final AnalyticsService _analyticsService;
 
@@ -74,7 +74,7 @@ class AmplifyStorageService extends StorageService {
   }
 
   @override
-  Future<void> putImage(User user, File image) async {
+  Future<S3Object> putImage(User user, File image) async {
     final key = const Uuid().v4();
     await Amplify.Storage.uploadFile(
       local: image,
@@ -83,17 +83,16 @@ class AmplifyStorageService extends StorageService {
         accessLevel: StorageAccessLevel.protected,
       ),
     );
-    await _apiService.updateUser(
-      user,
-      avatar: S3Object(
-        bucket,
-        region,
-        key,
-        accessLevel: AccessLevel.protected,
-        cognitoId: await _authService.cognitoIdentityId,
-      ),
-    );
     _analyticsService.recordEvent('photoUpload');
+    var newUrl = await getImageUrl(null, key);
+    put(key, newUrl);
+    return S3Object(
+      bucket,
+      region,
+      key,
+      accessLevel: AccessLevel.protected,
+      cognitoId: await _authService.cognitoIdentityId,
+    );
   }
 
   @override

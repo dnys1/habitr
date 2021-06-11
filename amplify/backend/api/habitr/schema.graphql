@@ -50,12 +50,14 @@ type Habit @model
             { allow: public }
             { allow: private, operations: [read] }
             { allow: groups, groups: ["admin"] }
+            { allow: owner, operations: [create] }
         ])
     downs: Int
         @auth(rules: [                                                      # Restrict mutations of `downs` to admin + API key
             { allow: public }
             { allow: private, operations: [read] }
             { allow: groups, groups: ["admin"] }
+            { allow: owner, operations: [create] }
         ])
     owner: String
     author: User

@@ -51,8 +51,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     super.onTransition(transition);
 
     // Writes the current state ("nextState") to SharedPrefs so that if the
-    // user closes the app mid-login, for example if they're on the verify
-    // screen, then we can pick up where they left off.
+    // user closes the app mid-login--for example, if they're on the verify
+    // screen--then we can pick up where they left off.
     final nextState = transition.nextState;
     if (nextState is AuthInitial || nextState is AuthLoading) {
       return;
@@ -78,6 +78,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   /// Streams exceptions for handling outside of the BLoC.
   Stream<AuthException> get exceptions => _exceptionController.stream;
 
+  /// Manages live user updates.
   StreamSubscription<AuthEvent>? _userUpdates;
 
   // Cache login data to improve sign up/verify code flow.

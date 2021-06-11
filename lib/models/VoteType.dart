@@ -16,3 +16,7 @@
 // ignore_for_file: public_member_api_docs
 
 enum VoteType { upvote, downvote, removeUpvote, removeDownvote }
+
+extension VoteTypeX on VoteType {
+  String get string => toString().split('.')[1];
+}

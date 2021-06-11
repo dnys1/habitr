@@ -13,10 +13,12 @@ abstract class AuthEvent with EquatableMixin {
   }
 }
 
+/// Triggers a loading of state from disk.
 class AuthLoad extends AuthEvent {
   const AuthLoad();
 }
 
+/// Triggers a change in the auth screen being shown.
 class AuthChangeScreen extends AuthEvent {
   final AuthScreen screen;
 
@@ -31,6 +33,7 @@ class AuthChangeScreen extends AuthEvent {
   }
 }
 
+/// Triggers a login (username/password).
 class AuthLogin extends AuthEvent {
   final AuthData data;
 
@@ -40,6 +43,7 @@ class AuthLogin extends AuthEvent {
   List<Object?> get props => [data];
 }
 
+/// Triggers a login (social provider).
 class AuthLoginWithProvider extends AuthEvent {
   final AuthProvider provider;
 
@@ -54,6 +58,7 @@ class AuthLoginWithProvider extends AuthEvent {
   }
 }
 
+/// Triggers a sign up (username/password).
 class AuthSignUp extends AuthEvent {
   final AuthSignupData data;
 
@@ -63,6 +68,7 @@ class AuthSignUp extends AuthEvent {
   List<Object?> get props => [data];
 }
 
+/// Triggers an account confirmation (w/ verification code).
 class AuthVerify extends AuthEvent {
   final String code;
 
@@ -77,6 +83,7 @@ class AuthVerify extends AuthEvent {
   }
 }
 
+/// Triggers a login but post-signup.
 class AuthCompleteSignUp extends AuthEvent {
   final User user;
 
@@ -86,6 +93,8 @@ class AuthCompleteSignUp extends AuthEvent {
   List<Object?> get props => [user];
 }
 
+/// Triggers a post-authentication user update, i.e. when the user is logged in
+/// and their data changes on the server.
 class AuthUserUpdate extends AuthEvent {
   final User user;
 
@@ -95,6 +104,7 @@ class AuthUserUpdate extends AuthEvent {
   List<Object?> get props => [user];
 }
 
+/// Triggers a failure in the auth flow.
 class AuthFailure extends AuthEvent {
   final Object? error;
   final StackTrace? stackTrace;
@@ -108,6 +118,7 @@ class AuthFailure extends AuthEvent {
   String toString() => buildErrorMessage(error, stackTrace);
 }
 
+/// Triggers a logout.
 class AuthLogout extends AuthEvent {
   const AuthLogout();
 }

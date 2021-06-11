@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_flutter/amplify.dart';
+import 'package:habitr/amplifyconfiguration.dart';
 import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/ModelProvider.dart';
 import 'package:habitr/models/S3Object.dart';
@@ -35,6 +36,30 @@ abstract class ApiService {
     String? nextToken,
   });
 
+  /// Returns users which match the provided [query].
+  ///
+  /// Matches [username], [displayUsername], and [name] fields.
+  Future<List<User>> searchUsers(
+    String query,
+    String excludeUsername, {
+    required int limit,
+  });
+
+  /// Returns habits which match the provided [query].
+  ///
+  /// Matches [tagline] and [details] fields.
+  Future<List<Habit>> searchHabits(String query, {required int limit});
+
+  /// Creates a [Habit] with the specified parameters.
+  Future<Habit> createHabit({
+    required String tagline,
+    required Category category,
+    String? details,
+  });
+
+  /// Creates a [Comment] with the given [comment] and [habitId].
+  Future<Comment> createComment(String comment, String habitId);
+
   /// Casts a vote for the given [habitId] of the given [type]. Will throw an
   /// [Exception] if the user cannot perform that action.
   Future<void> voteForHabit(String habitId, VoteType type);
@@ -47,20 +72,6 @@ abstract class ApiService {
   /// Returns true if the given [username] is taken.
   Future<bool> usernameExists(String username);
 
-  /// Returns habits which match the provided [query].
-  ///
-  /// Matches [tagline] and [details] fields.
-  Future<List<Habit>> searchHabits(String query, {required int limit});
-
-  /// Returns users which match the provided [query].
-  ///
-  /// Matches [username], [displayUsername], and [name] fields.
-  Future<List<User>> searchUsers(
-    String query,
-    String excludeUsername, {
-    required int limit,
-  });
-
   /// Updates the given [user].
   Future<void> updateUser(
     User user, {
@@ -69,21 +80,16 @@ abstract class ApiService {
     S3Object? avatar,
   });
 
-  /// Creates a [Habit] with the specified parameters.
-  Future<Habit> createHabit({
-    required String tagline,
-    required Category category,
-    String? details,
-  });
-
   /// Deletes a [Habit].
   Future<bool> deleteHabit(Habit habit);
-
-  /// Creates a [Comment] with the given [comment] and [habitId].
-  Future<Comment> createComment(String comment, String habitId);
 }
 
 class AmplifyApiService implements ApiService {
+  static final _parsedConfig =
+      jsonDecode(amplifyconfig) as Map<String, dynamic>;
+  static final _baseApiUrl =
+      _parsedConfig['api']['plugins']['awsAPIPlugin']['habitrAPI']['endpoint'];
+
   StreamController<VoteResult>? _voteResultStreamController;
   GraphQLSubscriptionOperation? _voteResultSubscription;
 
@@ -182,13 +188,12 @@ class AmplifyApiService implements ApiService {
     String? nextToken,
   }) async {
     var withCategoryFilter = category != null;
-    var operationName =
-        withCategoryFilter ? 'habitsByCategory' : 'searchHabits';
+    var operationName = withCategoryFilter ? 'habitsByCategory' : 'listHabits';
     Map<String, dynamic> vars;
     if (withCategoryFilter) {
       final query = GListHabitsByCategory((b) {
         b
-          ..vars.category = GCategory.valueOf(category.toString().split('.')[1])
+          ..vars.category = GCategory.valueOf(category!.string)
           ..vars.limit = limit;
         if (nextToken != null) {
           b.vars.nextToken = nextToken;
@@ -274,7 +279,7 @@ class AmplifyApiService implements ApiService {
     final mutation = GVoteForHabit(
       (b) => b
         ..vars.habitId = habitId
-        ..vars.type = GVoteType.valueOf(type.toString().split('.')[1]),
+        ..vars.type = GVoteType.valueOf(type.string),
     );
 
     final resp = await _runQuery(
@@ -338,11 +343,8 @@ class AmplifyApiService implements ApiService {
   @override
   Future<bool> usernameExists(String username) async {
     var request = UserExistsRequest(username);
-    // TODO: update for envs
     final resp = await http.post(
-      Uri.parse(
-        'https://4ccix50n24.execute-api.us-west-2.amazonaws.com/dev/user/exists',
-      ),
+      Uri.parse(_baseApiUrl + '/user/exists'),
       body: jsonEncode(request),
     );
     if (resp.statusCode != 200) {
@@ -452,7 +454,7 @@ class AmplifyApiService implements ApiService {
     final mutation = GCreateHabit(
       (b) {
         b.vars.tagline = tagline;
-        b.vars.category = GCategory.valueOf(category.toString().split('.')[1]);
+        b.vars.category = GCategory.valueOf(category.string);
         if (details != null) {
           b.vars.details = details;
         }

@@ -19,7 +19,4 @@ enum Category { Health, Finance, Productivity, Relationships }
 
 extension CategoryX on Category {
   String get string => toString().split('.')[1];
-
-  static Category fromString(String string) =>
-      Category.values.firstWhere((category) => category.string == string);
 }
