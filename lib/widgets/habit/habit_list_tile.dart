@@ -97,7 +97,7 @@ class _HabitListTileView extends StatelessWidget {
       onTap: isLoading
           ? null
           : () {
-              Navigator.of(context).push(MaterialPageRoute(
+              Navigator.of(context).push<void>(MaterialPageRoute(
                 builder: (_) => HabitDetailsScreen(habit!.id),
               ));
             },

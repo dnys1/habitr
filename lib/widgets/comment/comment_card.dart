@@ -60,7 +60,7 @@ class _CommentCardView extends StatelessWidget {
           children: [
             ListTile(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).push<void>(MaterialPageRoute(
                   builder: (_) => UserInfoScreen(username: comment.owner),
                 ));
               },

@@ -13,7 +13,7 @@ import 'package:provider/provider.dart';
 class AddImageScreen extends StatelessWidget {
   const AddImageScreen({Key? key}) : super(key: key);
 
-  static const page = MaterialPage(child: AddImageScreen());
+  static const page = MaterialPage<void>(child: AddImageScreen());
 
   @override
   Widget build(BuildContext context) {

@@ -62,12 +62,13 @@ class _VerifyView extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 20),
-                        viewModel.isBusy
-                            ? const CircularProgressIndicator()
-                            : ElevatedButton(
-                                onPressed: viewModel.verify,
-                                child: const Text('Verify'),
-                              ),
+                        if (viewModel.isBusy)
+                          const CircularProgressIndicator()
+                        else
+                          ElevatedButton(
+                            onPressed: viewModel.verify,
+                            child: const Text('Verify'),
+                          ),
                         const SizedBox(height: 20),
                         Text(
                           'Please check your email for the 6-digit verification code.',

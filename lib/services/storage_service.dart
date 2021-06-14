@@ -8,7 +8,6 @@ import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/analytics_service.dart';
-import 'package:habitr/services/api_service.dart';
 import 'package:habitr/amplifyconfiguration.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:image_picker/image_picker.dart';
@@ -29,19 +28,17 @@ abstract class StorageService extends Repository<String> {
 class AmplifyStorageService extends StorageService {
   static final _parsedConfig =
       jsonDecode(amplifyconfig) as Map<String, dynamic>;
-  static final bucket =
-      _parsedConfig['storage']['plugins']['awsS3StoragePlugin']['bucket'];
-  static final region =
-      _parsedConfig['storage']['plugins']['awsS3StoragePlugin']['region'];
+  static final bucket = _parsedConfig['storage']['plugins']
+      ['awsS3StoragePlugin']['bucket'] as String;
+  static final region = _parsedConfig['storage']['plugins']
+      ['awsS3StoragePlugin']['region'] as String;
 
   static final _imagePicker = ImagePicker();
 
-  final ApiService _apiService;
   final AuthService _authService;
   final AnalyticsService _analyticsService;
 
   AmplifyStorageService(
-    this._apiService,
     this._analyticsService,
     this._authService,
   );

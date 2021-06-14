@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 class AddHabitScreen extends StatelessWidget {
   const AddHabitScreen({Key? key}) : super(key: key);
 
-  static final route = PageRouteBuilder(
+  static final route = PageRouteBuilder<void>(
     pageBuilder: (context, animation, secondaryAnimation) =>
         const AddHabitScreen(),
     transitionsBuilder: slideUpTransition,
@@ -116,7 +116,7 @@ class _AddHabitScreenView extends StatelessWidget {
                         var habit = await viewModel.save();
                         if (habit != null) {
                           Navigator.of(context).pop();
-                          Navigator.of(context).push(MaterialPageRoute(
+                          Navigator.of(context).push<void>(MaterialPageRoute(
                             builder: (_) => HabitDetailsScreen(habit.id),
                           ));
                         }

@@ -91,12 +91,13 @@ class _SignupView extends StatelessWidget {
                       obscureText: true,
                     ),
                     const SizedBox(height: 20),
-                    viewModel.isBusy
-                        ? const CircularProgressIndicator()
-                        : ElevatedButton(
-                            onPressed: viewModel.signUp,
-                            child: const Text('Sign Up'),
-                          ),
+                    if (viewModel.isBusy)
+                      const CircularProgressIndicator()
+                    else
+                      ElevatedButton(
+                        onPressed: viewModel.signUp,
+                        child: const Text('Sign Up'),
+                      ),
                     const Spacer(flex: 4),
                     TextButton(
                       child: const Text('Login'),

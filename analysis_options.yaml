@@ -1,8 +1,6 @@
-include: package:flutter_lints/flutter.yaml
+include: package:amplify_lints/flutter_app.yaml
 
-# analyzer:
-#   exclude:
-#     - lib/models/*
 analyzer:
   exclude:
+    - lib/models/*
     - data/*

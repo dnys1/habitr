@@ -49,7 +49,7 @@ class AmplifyAuthService implements AuthService {
     _userSubscription ??= Amplify.API.subscribe<String>(
       request: GraphQLRequest(
         document: request,
-        variables: {
+        variables: <String, dynamic>{
           'username': await username,
         },
       ),
@@ -60,12 +60,13 @@ class AmplifyAuthService implements AuthService {
         _userController!.add(user);
       },
       onEstablished: () {},
-      onError: (error) => _userController!.addError(error),
+      onError: (dynamic error) => _userController!.addError(error),
       onDone: () {},
     );
     _userController!.onCancel ??= () {
       _userSubscription?.cancel();
       _userSubscription = null;
+      _userController?.close();
       _userController = null;
     };
 

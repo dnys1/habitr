@@ -75,11 +75,9 @@ class _UserListTileView extends StatelessWidget {
       onTap: user == null
           ? null
           : () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => UserInfoScreen(user: user!),
-                ),
-              );
+              Navigator.of(context).push<void>(MaterialPageRoute(
+                builder: (_) => UserInfoScreen(user: user!),
+              ));
             },
       leading: user == null
           ? const CircularProgressIndicator()

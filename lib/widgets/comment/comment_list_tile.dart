@@ -27,7 +27,7 @@ class CommentListTile extends StatelessWidget {
           trailing: const Icon(Icons.chevron_right),
           isThreeLine: true,
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(
+            Navigator.of(context).push<void>(MaterialPageRoute(
               builder: (_) => HabitDetailsScreen(comment.habitId),
             ));
           },

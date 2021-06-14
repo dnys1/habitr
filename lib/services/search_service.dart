@@ -8,7 +8,7 @@ import 'package:habitr/repos/user_repository.dart';
 import 'package:habitr/widgets/search_results/search_results.dart';
 import 'package:stream_transform/stream_transform.dart';
 
-class SearchService extends SearchDelegate {
+class SearchService extends SearchDelegate<void> {
   final HabitRepository _habitRepository;
   final UserRepository _userRepository;
 
@@ -38,6 +38,7 @@ class SearchService extends SearchDelegate {
         final users = result[1] as List<User>;
 
         yield _lastResults = SearchResults(habits: habits, users: users);
+        // ignore: avoid_catches_without_on_clauses
       } catch (e) {
         yield _errorWidget;
       } finally {

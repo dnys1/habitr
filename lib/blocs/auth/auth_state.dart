@@ -7,7 +7,7 @@ abstract class AuthState with EquatableMixin {
   @override
   List<Object?> get props => [];
 
-  Map<String, dynamic> toJson() => {};
+  Map<String, dynamic> toJson() => <String, dynamic>{};
 
   @override
   String toString() {

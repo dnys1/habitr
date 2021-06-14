@@ -18,7 +18,7 @@ class CategorySelectionScreen extends StatelessWidget {
               title: Text(category.string),
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).push<void>(MaterialPageRoute(
                   builder: (_) => CategoryDetailsScreen(category),
                 ));
               },

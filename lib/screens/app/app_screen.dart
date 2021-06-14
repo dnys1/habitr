@@ -15,10 +15,10 @@ class AppScreen extends StatefulWidget {
   const AppScreen({Key? key}) : super(key: key);
 
   static final _routeBuilders = <String, Route<dynamic> Function()>{
-    SettingsScreen.route: () => MaterialPageRoute(
+    SettingsScreen.route: () => MaterialPageRoute<void>(
           builder: (_) => const SettingsScreen(),
         ),
-    CategorySelectionScreen.route: () => MaterialPageRoute(
+    CategorySelectionScreen.route: () => MaterialPageRoute<void>(
           builder: (_) => const CategorySelectionScreen(),
         ),
   };
@@ -89,7 +89,7 @@ class _AppScreenState extends State<AppScreen> {
               else
                 navigatorState.baseRoute,
             ],
-            onPopPage: (route, result) => route.didPop(result),
+            onPopPage: (route, dynamic result) => route.didPop(result),
             onGenerateRoute: (routeSettings) =>
                 AppScreen._routeBuilders[routeSettings.name]?.call(),
           );

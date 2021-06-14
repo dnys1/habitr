@@ -87,8 +87,8 @@ abstract class ApiService {
 class AmplifyApiService implements ApiService {
   static final _parsedConfig =
       jsonDecode(amplifyconfig) as Map<String, dynamic>;
-  static final _baseApiUrl =
-      _parsedConfig['api']['plugins']['awsAPIPlugin']['habitrAPI']['endpoint'];
+  static final _baseApiUrl = _parsedConfig['api']['plugins']['awsAPIPlugin']
+      ['habitrAPI']['endpoint'] as String;
 
   StreamController<VoteResult>? _voteResultStreamController;
   GraphQLSubscriptionOperation? _voteResultSubscription;
@@ -113,12 +113,13 @@ class AmplifyApiService implements ApiService {
         _voteResultStreamController!.add(VoteResult.fromJson(voteResult));
       },
       onEstablished: () {},
-      onError: (error) => _voteResultStreamController!.addError(error),
+      onError: (dynamic error) => _voteResultStreamController!.addError(error),
       onDone: () {},
     );
     _voteResultStreamController!.onCancel ??= () {
       _voteResultSubscription?.cancel();
       _voteResultSubscription = null;
+      _voteResultStreamController?.close();
       _voteResultStreamController = null;
     };
 
@@ -131,7 +132,7 @@ class AmplifyApiService implements ApiService {
     Map<String, dynamic> vars,
   ) async {
     final resp = await Amplify.API
-        .query(
+        .query<String?>(
           request: GraphQLRequest(
             document: gql.printNode(operation),
             variables: vars,
@@ -142,8 +143,9 @@ class AmplifyApiService implements ApiService {
       throw Exception(resp.errors.first.toString());
     }
 
-    final data = resp.data != null ? jsonDecode(resp.data) : null;
-    if (data == null || data is! Map<String, dynamic>) {
+    final Map<String, dynamic>? data =
+        resp.data != null ? jsonDecode(resp.data!) : null;
+    if (data is! Map<String, dynamic>) {
       return null;
     }
 
@@ -214,7 +216,7 @@ class AmplifyApiService implements ApiService {
       ast.DocumentNode(definitions: [
         AllHabitFields,
         AllCommentFields,
-        withCategoryFilter ? ListHabitsByCategory : ListHabits,
+        if (withCategoryFilter) ListHabitsByCategory else ListHabits,
       ]),
       operationName,
       vars,
@@ -230,7 +232,8 @@ class AmplifyApiService implements ApiService {
 
     return ListHabitResults(
       habits: habits
-          .map((habit) => Habit.fromJson(habit as Map<String, dynamic>))
+          .cast<Map<String, dynamic>>()
+          .map((habit) => Habit.fromJson(habit))
           .toList(),
       nextToken: resp['nextToken'] as String?,
     );
@@ -380,13 +383,14 @@ class AmplifyApiService implements ApiService {
       operation.vars.toJson(),
     );
 
-    var items = resp?['items'];
-    if (resp == null || items is! List) {
+    var items = resp?['items'] as List?;
+    if (items is! List) {
       return [];
     }
 
     return items
-        .map((json) => Habit.fromJson(json as Map<String, dynamic>))
+        .cast<Map<String, dynamic>>()
+        .map((json) => Habit.fromJson(json))
         .toList();
   }
 
@@ -415,13 +419,14 @@ class AmplifyApiService implements ApiService {
       operation.vars.toJson(),
     );
 
-    var items = resp?['items'];
-    if (resp == null || items is! List) {
+    var items = resp?['items'] as List?;
+    if (items is! List) {
       return [];
     }
 
     return items
-        .map((json) => User.fromJson(json as Map<String, dynamic>))
+        .cast<Map<String, dynamic>>()
+        .map((json) => User.fromJson(json))
         .toList();
   }
 

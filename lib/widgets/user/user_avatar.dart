@@ -174,7 +174,7 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
         );
       },
       placeholder: (context, url) => const CupertinoActivityIndicator(),
-      errorWidget: (context, _, __) => Icon(
+      errorWidget: (context, String _, dynamic __) => Icon(
         Icons.perm_identity,
         size: radius,
       ),

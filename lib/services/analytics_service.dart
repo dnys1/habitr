@@ -36,12 +36,12 @@ class AmplifyAnalyticsService extends AnalyticsService {
   @override
   Future<void> recordEvent(
     String name, {
-    Map<String, dynamic> properties = const {},
+    Map<String, dynamic> properties = const <String, dynamic>{},
   }) async {
     final event = AnalyticsEvent(name);
     for (var entry in properties.entries) {
       var key = entry.key;
-      var value = entry.value;
+      dynamic value = entry.value;
       switch (value.runtimeType) {
         case bool:
           event.properties.addBoolProperty(key, value as bool);

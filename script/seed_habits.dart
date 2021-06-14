@@ -86,7 +86,7 @@ Future<void> seedDB(HttpLink link, {required String user}) async {
       return;
     }
 
-    final id = resp.data?['createHabit']?['id'];
+    final id = resp.data?['createHabit']?['id'] as String?;
     print('Created habit with ID: $id');
   }
 }

@@ -117,13 +117,11 @@ class _HomeDrawerHeader extends StatelessWidget {
             child: SizedBox.expand(
               child: UserAvatar(
                 user: viewModel.currentUser,
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => UserInfoScreen(
-                      user: viewModel.currentUser,
-                    ),
+                onTap: () => Navigator.of(context).push<void>(MaterialPageRoute(
+                  builder: (_) => UserInfoScreen(
+                    user: viewModel.currentUser,
                   ),
-                ),
+                )),
               ),
             ),
           ),

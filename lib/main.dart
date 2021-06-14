@@ -65,7 +65,6 @@ class MyApp extends StatefulWidget {
         );
     _storageService = storageService ??
         AmplifyStorageService(
-          _apiService,
           _analyticsService,
           _authService,
         );
@@ -141,22 +140,22 @@ class _MyAppState extends State<MyApp> {
                   return Navigator(
                     pages: [
                       if (authState is AuthLoading)
-                        const MaterialPage(child: LoadingScreen()),
+                        const MaterialPage<void>(child: LoadingScreen()),
                       if (authState is AuthInFlow &&
                           authState.screen == AuthScreen.login)
-                        const MaterialPage(child: LoginScreen()),
+                        const MaterialPage<void>(child: LoginScreen()),
                       if (authState is AuthInFlow &&
                           authState.screen == AuthScreen.signup)
-                        const MaterialPage(child: SignupScreen()),
+                        const MaterialPage<void>(child: SignupScreen()),
                       if (authState is AuthInFlow &&
                           authState.screen == AuthScreen.verify)
-                        const MaterialPage(child: VerifyScreen()),
+                        const MaterialPage<void>(child: VerifyScreen()),
                       if ((authState is AuthInFlow &&
                               authState.screen == AuthScreen.addImage) ||
                           authState is AuthLoggedIn)
-                        const MaterialPage(child: AppScreen()),
+                        const MaterialPage<void>(child: AppScreen()),
                     ],
-                    onPopPage: (route, result) {
+                    onPopPage: (route, dynamic result) {
                       return route.didPop(result);
                     },
                   );

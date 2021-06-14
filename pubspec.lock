@@ -71,6 +71,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0-nullsafety.0"
+  amplify_lints:
+    dependency: "direct dev"
+    description:
+      path: "packages/amplify_lints"
+      ref: "chore/lints"
+      resolved-ref: cd95a7c92e4cde86b65b0bca847f26dedf7e0c6b
+      url: "https://github.com/dnys1/amplify-flutter.git"
+    source: git
+    version: "0.2.0"
   amplify_storage_plugin_interface:
     dependency: transitive
     description:
@@ -343,12 +352,12 @@ packages:
     source: hosted
     version: "3.1.0"
   flutter_lints:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: flutter_lints
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3"
   flutter_lorem:
     dependency: "direct dev"
     description:

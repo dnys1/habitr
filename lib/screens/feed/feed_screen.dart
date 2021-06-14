@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 class FeedScreen extends StatelessWidget {
   const FeedScreen({Key? key}) : super(key: key);
 
-  static const page = MaterialPage(child: FeedScreen());
+  static const page = MaterialPage<void>(child: FeedScreen());
 
   @override
   Widget build(BuildContext context) {
