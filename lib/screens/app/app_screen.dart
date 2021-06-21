@@ -55,6 +55,7 @@ class _AppScreenState extends State<AppScreen> {
       authBloc: authBloc,
       commentRepository: _commentRepository,
       habitRepository: _habitRepository,
+      storageService: Provider.of(context, listen: false),
     );
   }
 
