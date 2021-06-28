@@ -110,6 +110,8 @@ class _HomeDrawerHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkModeEnabled =
+        Provider.of<ThemeService>(context).isDarkModeEnabled;
     return DrawerHeader(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -138,10 +140,7 @@ class _HomeDrawerHeader extends StatelessWidget {
               return Text(
                 name ?? '@$username',
                 style: Theme.of(context).textTheme.headline6!.copyWith(
-                      color:
-                          Provider.of<ThemeService>(context).isDarkModeEnabled
-                              ? Colors.white
-                              : Colors.black,
+                      color: isDarkModeEnabled ? Colors.white : Colors.black,
                     ),
               );
             },
