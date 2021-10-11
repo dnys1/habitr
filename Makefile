@@ -4,9 +4,9 @@ lambdas:
 
 .PHONY: models
 models:
-	flutter pub run build_runner build --delete-conflicting-outputs && \
-	pushd models && \
-	dart run build_runner build --delete-conflicting-outputs && \
+	flutter pub run build_runner build --delete-conflicting-outputs
+	pushd models
+	dart run build_runner build --delete-conflicting-outputs
 	popd
 
 .PHONY: schema
