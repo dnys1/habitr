@@ -1,18 +1,18 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_flutter/amplify.dart';
-import 'package:habitr/amplifyconfiguration.dart';
+import 'package:gql/ast.dart' as ast;
+import 'package:gql/language.dart' as gql;
 import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/ModelProvider.dart';
 import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/VoteResult.dart';
 import 'package:habitr/models/list_habit_results.dart';
 import 'package:habitr_models/habitr_models.dart';
-import 'package:gql/language.dart' as gql;
-import 'package:gql/ast.dart' as ast;
-import 'package:http/http.dart' as http;
+import 'package:stream_transform/stream_transform.dart';
 
 /// Handles interacting with the GraphQL and REST APIs.
 abstract class ApiService {
@@ -85,13 +85,7 @@ abstract class ApiService {
 }
 
 class AmplifyApiService implements ApiService {
-  static final _parsedConfig =
-      jsonDecode(amplifyconfig) as Map<String, dynamic>;
-  static final _baseApiUrl = _parsedConfig['api']['plugins']['awsAPIPlugin']
-      ['habitrAPI']['endpoint'] as String;
-
-  StreamController<VoteResult>? _voteResultStreamController;
-  GraphQLSubscriptionOperation? _voteResultSubscription;
+  Stream<VoteResult>? _voteResultStream;
 
   @override
   Stream<VoteResult> get voteResults {
@@ -101,29 +95,18 @@ class AmplifyApiService implements ApiService {
       SubscribeToVotes,
     ]);
 
-    _voteResultStreamController ??= StreamController<VoteResult>.broadcast();
-    _voteResultSubscription ??= Amplify.API.subscribe<String>(
-      request: GraphQLRequest(document: gql.printNode(_document)),
-      onData: (data) {
-        final map = jsonDecode(data.data) as Map<String, dynamic>;
-        final voteResult = map[operationName] as Map<String, dynamic>?;
-        if (voteResult == null) {
-          return;
-        }
-        _voteResultStreamController!.add(VoteResult.fromJson(voteResult));
-      },
-      onEstablished: () {},
-      onError: (dynamic error) => _voteResultStreamController!.addError(error),
-      onDone: () {},
-    );
-    _voteResultStreamController!.onCancel ??= () {
-      _voteResultSubscription?.cancel();
-      _voteResultSubscription = null;
-      _voteResultStreamController?.close();
-      _voteResultStreamController = null;
-    };
+    _voteResultStream ??= Amplify.API
+        .subscribe<String>(GraphQLRequest(document: gql.printNode(_document)))
+        .map((data) {
+      final map = jsonDecode(data.data) as Map<String, dynamic>;
+      final voteResult = map[operationName] as Map<String, dynamic>?;
+      if (voteResult == null) {
+        return null;
+      }
+      return VoteResult.fromJson(voteResult);
+    }).whereType<VoteResult>();
 
-    return _voteResultStreamController!.stream;
+    return _voteResultStream!;
   }
 
   Future<Map<String, dynamic>?> _runQuery(
@@ -352,10 +335,14 @@ class AmplifyApiService implements ApiService {
   @override
   Future<bool> usernameExists(String username) async {
     var request = UserExistsRequest(username);
-    final resp = await http.post(
-      Uri.parse(_baseApiUrl + '/user/exists'),
-      body: jsonEncode(request),
-    );
+    final resp = await Amplify.API
+        .post(
+          restOptions: RestOptions(
+            path: '/user/exists',
+            body: Uint8List.fromList(jsonEncode(request).codeUnits),
+          ),
+        )
+        .response;
     if (resp.statusCode != 200) {
       throw Exception('${resp.statusCode}: ${resp.body}');
     }

@@ -5,8 +5,8 @@ import 'dart:math';
 import 'package:args/args.dart';
 import 'package:flutter_lorem/flutter_lorem.dart';
 import 'package:gql_exec/gql_exec.dart';
-import 'package:habitr_models/habitr_models.dart';
 import 'package:gql_http_link/gql_http_link.dart';
+import 'package:habitr_models/habitr_models.dart';
 
 Future<void> main(List<String> args) async {
   var graphQLEndpoint = Platform.environment['GRAPHQL_API_ENDPOINT'];
