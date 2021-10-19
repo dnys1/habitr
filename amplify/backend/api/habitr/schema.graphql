@@ -1,27 +1,66 @@
-type User @model(subscriptions: null)
-    @key(fields: ["username"])                                              # Set the primary key/index to "username"
+type User
+    # Creates a model type with all generated queries and mutations
+    # but no subscriptions. This is so that we can create a custom
+    # subscription which listens to changes for only one user instead 
+    # of for all users (the default).
+    @model(subscriptions: null)
+
+    # Set the primary key/index to "username"
+    @key(fields: ["username"])
+
+    # Defines the authorization rules for model access
     @auth(rules: [
-        { allow: groups, groups: ["admin"] }                                # Unrestricted access to members of the "admin" user pool group
-        { allow: public }                                                   # Unrestricted access to API key (used in Lambdas)
-        { allow: private, operations: [read] }                              # Read access for all authenticated Cognito users
-        { allow: owner, ownerField: "username", operations: [update] }      # Read and update access for owners (only admin + API key can create)
+        # Unrestricted access to members of the "admin" user pool group
+        { allow: groups, groups: ["admin"] }
+
+        # Unrestricted access to API key (used in Lambdas)
+        { allow: public }
+
+        # Read access for all authenticated Cognito users
+        { allow: private, operations: [read] }
+
+        # Read and update access for owners (only admin + API key can create)
+        { allow: owner, ownerField: "username", operations: [update] }
     ])
-    @searchable {
+
+    # Enable full-text search on all fields
+    @searchable 
+{
+    # The user's Cognito username.
     username: String!
+
+    # The user's preferred display name, if different from their
+    # auto-generated Cognito username, e.g. with social sign-in.
     displayUsername: String
+
+    # The user's first and last name.
     name: String
+
+    # A reference to the user's profile image, uploaded to S3.
     avatar: S3Object
+
+    # A list of comments the user has posted.
     comments: [Comment!]
+        # Creates a has-many relationship to the user's comments
         @connection(keyName: "commentsByUser", fields: ["username"])
+
+    # A list of habits the user has created.
     habits: [Habit!]
+        # Creates a has-many relationship to the user's posted habits
         @connection(keyName: "habitsByUser", fields: ["username"])
-    upvotedHabits: [ID!]                                                    # Restrict viewing to owners and updates to admins
+
+    # The habits this user has upvoted, used to keep voting fair.
+    upvotedHabits: [ID!]
+        # Restrict viewing to owners and updates to admins
         @auth(rules: [
             { allow: groups, groups: ["admin"] }
             { allow: public }
             { allow: owner, ownerField: "username", operations: [read] }
         ])
-    downvotedHabits: [ID!]                                                  # Restrict viewing to owners and updates to admins
+
+    # The habits this user has downvoted, used to keep voting fair.
+    downvotedHabits: [ID!]
+        # Restrict viewing to owners and updates to admins
         @auth(rules: [
             { allow: groups, groups: ["admin"] }
             { allow: public }
@@ -29,88 +68,178 @@ type User @model(subscriptions: null)
         ])
 }
 
+# The available categories for habits.
 enum Category { Health, Finance, Productivity, Relationships }
 
-type Habit @model
+type Habit 
+    # Creates a model with all query, mutation, and subscription fields.
+    @model
+
+    # Allows searching and sorting habits by category.
     @key(name: "habitsByCategory", fields: ["category", "ups"], queryField: "habitsByCategory")
+
+    # Allows searching and sorting habits by their poster.
     @key(name: "habitsByUser", fields: ["owner"])
+
+    # Defines the authorization rules for model access
     @auth(rules: [
-        { allow: groups, groups: ["admin"] }                                # Unrestricted access to members of the "admin" user pool group
-        { allow: public }                                                   # Unrestricted access to API key (used in Lambdas)
-        { allow: private, operations: [read] }                              # Read access for all authenticated users
-        { allow: owner, operations: [create, delete] }                      # Read, create, and delete access for owners (habits cannot be updated once created)
+        # Unrestricted access to members of the "admin" user pool group
+        { allow: groups, groups: ["admin"] }
+
+        # Unrestricted access to API key (used in Lambdas)
+        { allow: public }
+
+        # Read access for all authenticated users
+        { allow: private, operations: [read] }
+
+        # Read, create, and delete access for owners (habits cannot be updated once created)
+        { allow: owner, operations: [create, delete] }
     ])
+
+    # Enable full-text search on all fields
     @searchable {
+
+    # The habit's unique ID.
     id: ID!
+
+    # A short summary of the habit.
     tagline: String!
+
+    # The category which the habit belongs to.
     category: Category!
+
+    # A long-form description of the habit and the user's steps to achieve it.
     details: String
+
+    # The number of upvotes this habit received, used for calculating score.
     ups: Int
-        @auth(rules: [                                                      # Restrict mutations of `ups` to admin + API key
+        # Restrict mutations to admin + API key
+        @auth(rules: [
             { allow: public }
             { allow: private, operations: [read] }
             { allow: groups, groups: ["admin"] }
             { allow: owner, operations: [create] }
         ])
+
+    # The number of downvotes this habit received, used for calculating score.
     downs: Int
-        @auth(rules: [                                                      # Restrict mutations of `downs` to admin + API key
+        # Restrict mutations to admin + API key
+        @auth(rules: [
             { allow: public }
             { allow: private, operations: [read] }
             { allow: groups, groups: ["admin"] }
             { allow: owner, operations: [create] }
         ])
+
+    # The username of the user who created the habit.
     owner: String
+
+    # The user who created the habit.
     author: User
         @connection(fields: ["owner"])
+
+    # The list of comments associated with this habit.
     comments: [Comment!]
         @connection(keyName: "commentsByHabit", fields: ["id"])
 }
 
 type Comment @model
+    # Allows searching and sorting comments by the user.
     @key(name: "commentsByUser", fields: ["owner"])
+
+    # Allows searching and sorting comments by the associated habit.
     @key(name: "commentsByHabit", fields: ["habitId"])
+
+    # Defines the authorization rules for model access
     @auth(rules: [
-        { allow: groups, groups: ["admin"] }                                # Unrestricted access to members of the "admin" user pool group
-        { allow: public }                                                   # Unrestricted access to API key (used in Lambdas)
-        { allow: private, operations: [read] }                              # Read access for all authenticated users
-        { allow: owner, operations: [create, delete, update] }              # Read, create, update, and delete access for owners
+        # Unrestricted access to members of the "admin" user pool group
+        { allow: groups, groups: ["admin"] }
+
+        # Unrestricted access to API key (used in Lambdas)
+        { allow: public }
+
+        # Read access for all authenticated users
+        { allow: private, operations: [read] }
+
+        # Read, create, update, and delete access for owners
+        { allow: owner, operations: [create, delete, update] }
     ]) {
+
+    # The comment's unique ID.
     id: ID!
+
+    # The associated habit ID.
     habitId: ID!
+
+    # The associated habit.
     habit: Habit
         @connection(fields: ["habitId"])
+
+    # The author's username.
     owner: String
+
+    # The author.
     by: User
         @connection(fields: ["owner"])
+
+    # The content of the comment.
     comment: String!
 }
 
+# The different ways to cast a vote.
 enum VoteType { upvote, downvote, removeUpvote, removeDownvote }
 
+# The result of casting a vote using the `vote` mutation.
 type VoteResult {
     habit: Habit
     user: User
 }
 
+# S3 access levels.
 enum AccessLevel { guest, private, protected }
 
+# A reference to an S3 object.
 type S3Object {
-  bucket: String!
-  region: String!
-  key: String!
-  cognitoId: String
-  accessLevel: AccessLevel                                                          # Defaults to `guest`
+    # The S3 bucket name.
+    bucket: String!
+
+    # The S3 bucket's region.
+    region: String!
+
+    # The object's key.
+    key: String!
+
+    # The Cognito identity ID of the user.
+    cognitoId: String
+
+    # The object's access level. Defaults to `guest`.
+    accessLevel: AccessLevel
 }   
 
 type Mutation {
-    vote(habitId: ID!, type: VoteType!): VoteResult                                 # Custom resolver for atomic voting operations
+    # Custom mutation for atomic voting operations.
+    vote(habitId: ID!, type: VoteType!): VoteResult
 }
 
+# The auto-generated "onUpdate" subscription for all users:
+# type Subscription {
+#     onUpdateUser: User
+#         @aws_subscribe(mutations: ["updateUser"])
+#         @aws_api_key
+#         @aws_cognito_user_pools
+# }
+
 type Subscription {
+    # Custom subscription for listening to a single user's updates.
+    # Authorization is deferred to the model type, so the user returned
+    # from this subscription has the same protections as one returned
+    # from a query or mutation.
     subscribeToUser(username: String!): User
         @aws_subscribe(mutations: ["updateUser"])
         @aws_api_key
         @aws_cognito_user_pools
+
+    # Custom subscription for listening to all voting operations.
     subscribeToVotes: VoteResult
         @aws_subscribe(mutations: ["vote"])
         @aws_api_key
