@@ -221,19 +221,19 @@ type Mutation {
     vote(habitId: ID!, type: VoteType!): VoteResult
 }
 
-# The auto-generated "onUpdate" subscription for all users:
-# type Subscription {
-#     onUpdateUser: User
-#         @aws_subscribe(mutations: ["updateUser"])
-#         @aws_api_key
-#         @aws_cognito_user_pools
-# }
-
 type Subscription {
     # Custom subscription for listening to a single user's updates.
     # Authorization is deferred to the model type, so the user returned
     # from this subscription has the same protections as one returned
     # from a query or mutation.
+    #
+    # The auto-generated "onUpdate" subscription for all users:
+    # type Subscription {
+    #     onUpdateUser: User
+    #         @aws_subscribe(mutations: ["updateUser"])
+    #         @aws_api_key
+    #         @aws_cognito_user_pools
+    # }
     subscribeToUser(username: String!): User
         @aws_subscribe(mutations: ["updateUser"])
         @aws_api_key
