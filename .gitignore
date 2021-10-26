@@ -68,4 +68,3 @@ amplifytools.xcconfig
 # custom
 .env
 /data/
-amplify/

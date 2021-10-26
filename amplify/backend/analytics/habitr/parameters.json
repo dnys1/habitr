@@ -1,0 +1,21 @@
+{
+    "appName": "habitr",
+    "roleName": "pinpointLambdaRole708c0718",
+    "cloudformationPolicyName": "cloudformationPolicy708c0718",
+    "cloudWatchPolicyName": "cloudWatchPolicy708c0718",
+    "pinpointPolicyName": "pinpointPolicy708c0718",
+    "authPolicyName": "pinpoint_amplify_708c0718",
+    "unauthPolicyName": "pinpoint_amplify_708c0718",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
