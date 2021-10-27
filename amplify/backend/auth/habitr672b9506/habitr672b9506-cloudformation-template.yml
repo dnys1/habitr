@@ -10,6 +10,18 @@ Parameters:
     Type: String
 
   
+  
+  
+  functionhabitr672b9506PostConfirmationArn:
+    Type: String
+    Default: functionhabitr672b9506PostConfirmationArn
+  
+  functionhabitr672b9506PostConfirmationName:
+    Type: String
+    Default: functionhabitr672b9506PostConfirmationName
+  
+  
+  
 
     
   identityPoolName:
@@ -134,10 +146,6 @@ Parameters:
     Type: String
   
             
-  oAuthMetadata:
-    Type: String
-  
-            
         
   userPoolGroupList:
     Type: CommaDelimitedList
@@ -158,6 +166,47 @@ Parameters:
     Type: String
   
             
+  
+  thirdPartyAuth:
+    Type: String
+            
+  
+  userPoolGroups:
+    Type: String
+            
+  
+  adminQueries:
+    Type: String
+            
+  triggers:
+    Type: String
+  
+            
+  oAuthMetadata:
+    Type: String
+  
+            
+            
+      
+  parentStack:
+    Type: String
+        
+  authTriggerConnections:
+    Type: String
+  
+            
+  
+  breakCircularDependency:
+    Type: String
+            
+        
+  permissions:
+    Type: CommaDelimitedList
+      
+        
+  authProviders:
+    Type: CommaDelimitedList
+      
 Conditions:
   ShouldNotCreateEnvResources: !Equals [ !Ref env, NONE ]
   

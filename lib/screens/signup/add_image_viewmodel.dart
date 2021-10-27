@@ -61,7 +61,6 @@ class AddImageViewModel extends BaseViewModel
 
       if (image != null) {
         await _storageService.putImage(user, image!);
-        user = user.copyWith(version: user.version + 1);
       }
       await _apiService.updateUser(
         user,

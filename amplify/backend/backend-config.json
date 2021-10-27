@@ -3,7 +3,17 @@
     "habitr672b9506": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "habitr672b9506PostConfirmation",
+          "triggerProvider": "Cognito",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
       "customAuth": false,
       "frontendAuthConfig": {
         "loginMechanisms": [
@@ -24,6 +34,22 @@
           "EMAIL"
         ]
       }
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "habitr672b9506",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ]
     }
   },
   "api": {
@@ -77,6 +103,16 @@
     "habitrUserExists": {
       "build": true,
       "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "api",
+          "resourceName": "habitr",
+          "attributes": [
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ]
+        }
+      ],
       "service": "Lambda"
     },
     "habitrUserIdentity": {
@@ -84,9 +120,19 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "habitrCreateUser": {
+    "habitr672b9506PostConfirmation": {
       "build": true,
       "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "api",
+          "resourceName": "habitr",
+          "attributes": [
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ]
+        }
+      ],
       "service": "Lambda"
     }
   },

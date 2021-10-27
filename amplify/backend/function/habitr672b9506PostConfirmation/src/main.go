@@ -24,10 +24,10 @@ mutation CreateUser($username: String!, $displayUsername: String) {
   }
 `
 
-func HandleRequest(ctx context.Context, event *events.CognitoEventUserPoolsPostConfirmation) error {
+func HandleRequest(ctx context.Context, event *events.CognitoEventUserPoolsPostConfirmation) (*events.CognitoEventUserPoolsPostConfirmation, error) {
 	if event.TriggerSource != "PostConfirmation_ConfirmSignUp" {
 		log.Printf("Skipping %s event\n", event.TriggerSource)
-		return nil
+		return event, nil
 	}
 
 	vars := map[string]interface{}{
@@ -47,25 +47,25 @@ func HandleRequest(ctx context.Context, event *events.CognitoEventUserPoolsPostC
 	})
 	if err != nil {
 		log.Printf("Error encoding request: %v\n", err)
-		return err
+		return event, err
 	}
 
 	graphQLRequest, err := http.NewRequest(http.MethodPost, graphQLEndpoint, bb)
 	if err != nil {
-		return err
+		return event, err
 	}
 	graphQLRequest.Header.Add("x-api-key", apiKey)
 
 	resp, err := http.DefaultClient.Do(graphQLRequest)
 	if err != nil {
 		log.Printf("Error sending request: %v\n", err)
-		return err
+		return event, err
 	}
 
 	var response struct {
 		Data struct {
 			CreateUser struct {
-				Username int `json:"username"`
+				Username string `json:"username"`
 			} `json:"createUser"`
 		} `json:"data"`
 		Errors []Error `json:"errors"`
@@ -73,15 +73,15 @@ func HandleRequest(ctx context.Context, event *events.CognitoEventUserPoolsPostC
 	err = json.NewDecoder(resp.Body).Decode(&response)
 	if err != nil {
 		log.Printf("Error decoding response: %v\n", err)
-		return err
+		return nil, err
 	}
 
 	if len(response.Errors) > 0 {
 		log.Printf("Error creating user: %v\n", response.Errors)
-		return fmt.Errorf(response.Errors[0].Message)
+		return nil, fmt.Errorf(response.Errors[0].Message)
 	}
 
-	return nil
+	return event, nil
 }
 
 var apiKey string

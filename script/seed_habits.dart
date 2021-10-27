@@ -33,7 +33,7 @@ Future<void> main(List<String> args) async {
 
     parser.addOption(
       'api-key',
-      abbr: 'a',
+      abbr: 'k',
       help: 'The API key for your GraphQL endpoint.',
       valueHelp: 'GRAPHQL_API_KEY',
       mandatory: true,

@@ -1,0 +1,34 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-habitr-dev-124213-authRole",
+      "UnauthRoleArn": "arn:aws:iam::707603458346:role/amplify-habitr-dev-124213-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::707603458346:role/amplify-habitr-dev-124213-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-habitr-dev-124213-deployment",
+      "UnauthRoleName": "amplify-habitr-dev-124213-unauthRole",
+      "StackName": "amplify-habitr-dev-124213",
+      "StackId": "arn:aws:cloudformation:us-west-2:707603458346:stack/amplify-habitr-dev-124213/d3bc3770-3694-11ec-9ec0-0286172ce653",
+      "AmplifyAppId": "d2vgdbpgi63l7q"
+    },
+    "categories": {
+      "auth": {
+        "habitr672b9506": {}
+      },
+      "function": {
+        "habitrUserExists": {
+          "deploymentBucketName": "amplify-habitr-dev-124213-deployment",
+          "s3Key": "amplify-builds/habitrUserExists-6d71546f333561625663-build.zip"
+        },
+        "habitrUserIdentity": {
+          "deploymentBucketName": "amplify-habitr-dev-124213-deployment",
+          "s3Key": "amplify-builds/habitrUserIdentity-456469452b3235703778-build.zip"
+        },
+        "habitr672b9506PostConfirmation": {
+          "deploymentBucketName": "amplify-habitr-dev-124213-deployment",
+          "s3Key": "amplify-builds/habitr672b9506PostConfirmation-4c416e48326e64553859-build.zip"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "graphqlApiKey": {
+    "Fn::GetAtt": [
+      "apihabitr",
+      "Outputs.GraphQLAPIKeyOutput"
+    ]
+  },
+  "graphqlEndpoint": {
+    "Fn::GetAtt": [
+      "apihabitr",
+      "Outputs.GraphQLAPIEndpointOutput"
+    ]
+  }
+}
