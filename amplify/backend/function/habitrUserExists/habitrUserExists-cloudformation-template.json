@@ -16,12 +16,12 @@
     "s3Key": {
       "Type": "String"
     },
-    "graphqlApiKey": {
+    "apihabitrGraphQLAPIKeyOutput": {
       "Type": "String",
       "Description": "The API key of the AppSync resource.",
       "Default": "NONE"
     },
-    "graphqlEndpoint": {
+    "apihabitrGraphQLAPIEndpointOutput": {
       "Type": "String",
       "Description": "The endpoint of the AppSync resource.",
       "Default": "NONE"
@@ -81,10 +81,10 @@
               "Ref": "AWS::Region"
             },
             "GRAPHQL_API_KEY": {
-              "Ref": "graphqlApiKey"
+              "Ref": "apihabitrGraphQLAPIKeyOutput"
             },
             "GRAPHQL_API_ENDPOINT": {
-              "Ref": "graphqlEndpoint"
+              "Ref": "apihabitrGraphQLAPIEndpointOutput"
             }
           }
         },

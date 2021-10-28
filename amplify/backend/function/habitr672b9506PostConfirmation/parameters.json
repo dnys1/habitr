@@ -1,13 +1,13 @@
 {
   "modules": "custom",
   "resourceName": "habitr672b9506PostConfirmation",
-  "graphqlApiKey": {
+  "apihabitrGraphQLAPIKeyOutput": {
     "Fn::GetAtt": [
       "apihabitr",
       "Outputs.GraphQLAPIKeyOutput"
     ]
   },
-  "graphqlEndpoint": {
+  "apihabitrGraphQLAPIEndpointOutput": {
     "Fn::GetAtt": [
       "apihabitr",
       "Outputs.GraphQLAPIEndpointOutput"
