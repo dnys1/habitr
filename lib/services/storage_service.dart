@@ -3,12 +3,12 @@ import 'dart:io';
 
 import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
+import 'package:habitr/amplifyconfiguration.dart';
 import 'package:habitr/models/AccessLevel.dart';
 import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/analytics_service.dart';
-import 'package:habitr/amplifyconfiguration.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
