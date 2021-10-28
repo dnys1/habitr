@@ -125,7 +125,7 @@ class _HabitDetailScreenBody extends StatelessWidget {
     var hasDetails = details != null && details.isNotEmpty;
     return Padding(
       padding: const EdgeInsets.all(12.0),
-      child: SizedBox.expand(
+      child: SingleChildScrollView(
         child: Form(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,

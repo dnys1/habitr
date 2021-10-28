@@ -4,6 +4,7 @@ import 'package:habitr/mixins/image_picker.dart';
 import 'package:habitr/mixins/username_form.dart';
 import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
+import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';

@@ -10,6 +10,7 @@ import 'package:habitr/screens/feed/feed_screen.dart';
 import 'package:habitr/screens/settings/settings_screen.dart';
 import 'package:habitr/screens/user_info/user_info_screen.dart';
 import 'package:habitr/services/search_service.dart';
+import 'package:habitr/services/theme_service.dart';
 import 'package:habitr/widgets/home_drawer/home_drawer_viewmodel.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
 import 'package:provider/provider.dart';
@@ -109,6 +110,8 @@ class _HomeDrawerHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkModeEnabled =
+        Provider.of<ThemeService>(context).isDarkModeEnabled;
     return DrawerHeader(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -136,7 +139,9 @@ class _HomeDrawerHeader extends StatelessWidget {
               var name = names.item2;
               return Text(
                 name ?? '@$username',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.headline6!.copyWith(
+                      color: isDarkModeEnabled ? Colors.white : Colors.black,
+                    ),
               );
             },
           ),

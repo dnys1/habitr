@@ -7,6 +7,7 @@ import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/api_service.dart';
+import 'package:habitr/services/storage_service.dart';
 
 abstract class UserRepository extends Repository<User?> {
   Future<User?> getUser(String username);
@@ -23,16 +24,19 @@ class UserRepositoryImpl extends UserRepository {
   final AuthBloc _authBloc;
   final HabitRepository _habitRepository;
   final CommentRepository _commentRepository;
+  final StorageService _storageService;
 
-  UserRepositoryImpl(
-      {required ApiService apiService,
-      required AuthBloc authBloc,
-      required HabitRepository habitRepository,
-      required CommentRepository commentRepository})
-      : _apiService = apiService,
+  UserRepositoryImpl({
+    required ApiService apiService,
+    required AuthBloc authBloc,
+    required HabitRepository habitRepository,
+    required CommentRepository commentRepository,
+    required StorageService storageService,
+  })  : _apiService = apiService,
         _authBloc = authBloc,
         _habitRepository = habitRepository,
-        _commentRepository = commentRepository {
+        _commentRepository = commentRepository,
+        _storageService = storageService {
     _init();
   }
 
@@ -62,6 +66,10 @@ class UserRepositoryImpl extends UserRepository {
     _commentRepository.putAll({
       for (var comment in value?.comments ?? <Comment>[]) comment.id: comment,
     });
+    var avatar = value?.avatar;
+    if (avatar != null) {
+      _storageService.getImageUrl(avatar.cognitoId, avatar.key);
+    }
     return super.put(id, value);
   }
 
@@ -89,10 +97,14 @@ class UserRepositoryImpl extends UserRepository {
       currentUsername,
       limit: 5,
     );
-    final users = await Future.wait(
+    final userObjs = await Future.wait(
       searchResults.map((user) => getUser(user.username)),
     );
-    return users.whereType<User>().toList();
+    final users = userObjs.whereType<User>().toList();
+    for (var user in users) {
+      put(user.username, user);
+    }
+    return users;
   }
 
   @override
