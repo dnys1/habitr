@@ -1,0 +1,16 @@
+{
+  "modules": "custom",
+  "resourceName": "habitr672b9506PostConfirmation",
+  "apihabitrGraphQLAPIKeyOutput": {
+    "Fn::GetAtt": [
+      "apihabitr",
+      "Outputs.GraphQLAPIKeyOutput"
+    ]
+  },
+  "apihabitrGraphQLAPIEndpointOutput": {
+    "Fn::GetAtt": [
+      "apihabitr",
+      "Outputs.GraphQLAPIEndpointOutput"
+    ]
+  }
+}

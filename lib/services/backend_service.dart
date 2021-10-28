@@ -1,10 +1,10 @@
+import 'package:amplify_analytics_pinpoint/amplify_analytics_pinpoint.dart';
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
-import 'package:amplify_analytics_pinpoint/amplify_analytics_pinpoint.dart';
-
 import 'package:habitr/amplifyconfiguration.dart';
+import 'package:habitr/util/print.dart';
 
 abstract class BackendService {
   Future<void> configure();
@@ -26,8 +26,8 @@ class AmplifyBackendService implements BackendService {
         // AmplifyDataStore(modelProvider: ModelProvider.instance),
       ]);
       await Amplify.configure(amplifyconfig);
-    } on AmplifyAlreadyConfiguredException {
-      // TODO: Remove when configure is fixed
+    } on Exception catch (e) {
+      safePrint('Error configuring Amplify: $e');
     }
   }
 }

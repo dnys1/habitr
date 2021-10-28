@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "habitr",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authhabitr672b9506",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

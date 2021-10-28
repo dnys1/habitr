@@ -4,11 +4,11 @@ import 'dart:convert';
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify.dart';
+import 'package:gql/ast.dart' as ast;
+import 'package:gql/language.dart' as gql;
 import 'package:habitr/models/ModelProvider.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr_models/habitr_models.dart';
-import 'package:gql/language.dart' as gql;
-import 'package:gql/ast.dart' as ast;
 
 abstract class AuthService {
   Future<User> login(String username, String password);
@@ -31,8 +31,7 @@ class AmplifyAuthService implements AuthService {
     required ApiService apiService,
   }) : _apiService = apiService;
 
-  StreamController<User>? _userController;
-  GraphQLSubscriptionOperation? _userSubscription;
+  Stream<User>? _userStream;
 
   @override
   Stream<User> get userUpdates async* {
@@ -45,32 +44,20 @@ class AmplifyAuthService implements AuthService {
     ]);
     final request = gql.printNode(_document);
 
-    _userController ??= StreamController<User>.broadcast();
-    _userSubscription ??= Amplify.API.subscribe<String>(
-      request: GraphQLRequest(
-        document: request,
-        variables: <String, dynamic>{
-          'username': await username,
-        },
-      ),
-      onData: (event) {
-        final data = event.data;
-        final userMap = jsonDecode(data) as Map<String, dynamic>;
-        final user = User.fromJson(userMap[operationName]);
-        _userController!.add(user);
+    _userStream ??= Amplify.API
+        .subscribe<String>(GraphQLRequest(
+      document: request,
+      variables: <String, dynamic>{
+        'username': await username,
       },
-      onEstablished: () {},
-      onError: (dynamic error) => _userController!.addError(error),
-      onDone: () {},
-    );
-    _userController!.onCancel ??= () {
-      _userSubscription?.cancel();
-      _userSubscription = null;
-      _userController?.close();
-      _userController = null;
-    };
+    ))
+        .map((event) {
+      final data = event.data;
+      final userMap = jsonDecode(data) as Map<String, dynamic>;
+      return User.fromJson(userMap[operationName]);
+    });
 
-    yield* _userController!.stream;
+    yield* _userStream!;
   }
 
   @override
@@ -146,13 +133,13 @@ class AmplifyAuthService implements AuthService {
   Future<String?> get cognitoIdentityId async {
     final resp = await Amplify.API
         .get(
-          restOptions: RestOptions(
+          restOptions: const RestOptions(
             path: '/user/identity',
             apiName: 'habitrAPI',
           ),
         )
         .response;
-    final body = jsonDecode(ascii.decode(resp.data)) as Map<String, dynamic>;
+    final body = jsonDecode(utf8.decode(resp.data)) as Map<String, dynamic>;
     return body['identityId'];
   }
 
