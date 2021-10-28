@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/mixins/image_picker.dart';
 import 'package:habitr/mixins/username_form.dart';
+import 'package:habitr/models/S3Object.dart';
 import 'package:habitr/models/User.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
@@ -59,13 +60,15 @@ class AddImageViewModel extends BaseViewModel
     try {
       var user = (await _authService.currentUser)!;
 
+      S3Object? avatar;
       if (image != null) {
-        await _storageService.putImage(user, image!);
+        avatar = await _storageService.putImage(user, image!);
       }
       await _apiService.updateUser(
         user,
         name: _name,
         username: username,
+        avatar: avatar,
       );
 
       user = (await _authService.currentUser)!;
