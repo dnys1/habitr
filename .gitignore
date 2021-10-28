@@ -68,3 +68,4 @@ amplifytools.xcconfig
 # custom
 .env
 /data/
+team-provider-info.json

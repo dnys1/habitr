@@ -212,7 +212,7 @@ type S3Object {
     # The Cognito identity ID of the user.
     cognitoId: String
 
-    # The object's access level. Defaults to `guest`.
+    # The object's access level.
     accessLevel: AccessLevel
 }   
 

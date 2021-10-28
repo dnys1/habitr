@@ -38,7 +38,7 @@ Note down the Client ID and Client Secret.
 
 2. Configure the project
 
-After [configuring](https://docs.amplify.aws/cli/start/install) the Amplify CLI, run `amplify init` from the root of the project.
+After [configuring](https://docs.amplify.aws/cli/start/install) the Amplify CLI, run `amplify init` from the root of the project. You'll be prompted for your Amazon Client ID and Client Secret from the previous step.
 
 ```sh
 $ amplify init
@@ -54,6 +54,54 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
 
 ? Please choose the profile you want to use <AWS_PROFILE>
 Adding backend environment dev to AWS Amplify Console app: <APP_ID>
+⠦ Initializing project in the cloud...
+
+✔ Successfully created initial AWS cloud resources for deployments.
+✔ Initialized provider successfully.
+ 
+ Enter your Amazon App ID for your OAuth flow:  <AMAZON_APP_ID>
+ Enter your Amazon App Secret for your OAuth flow:  <AMAZON_APP_SECRET>
+
+Initialized your environment successfully.
+
+Your project has been successfully initialized and connected to the cloud!
+```
+
+3. Push changes to cloud
+
+Once the project is initialized, run `amplify push` to see the resources being added and enter `y` to deploy them to your cloud.
+
+```sh
+$ amplify push
+✔ Successfully pulled backend environment dev from the cloud.
+
+    Current Environment: dev
+    
+┌───────────┬────────────────────────────────┬───────────┬───────────────────┐
+│ Category  │ Resource name                  │ Operation │ Provider plugin   │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Auth      │ habitr672b9506                 │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Auth      │ userPoolGroups                 │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Api       │ habitr                         │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Api       │ habitrAPI                      │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Function  │ habitrUserExists               │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Function  │ habitrUserIdentity             │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Function  │ habitr672b9506PostConfirmation │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Analytics │ habitr                         │ Create    │ awscloudformation │
+├───────────┼────────────────────────────────┼───────────┼───────────────────┤
+│ Storage   │ s346bfaba6                     │ Create    │ awscloudformation │
+└───────────┴────────────────────────────────┴───────────┴───────────────────┘
+? Are you sure you want to continue? Yes
+
+
+✔ All resources are updated in the cloud
 ```
 
 ## Flutter
