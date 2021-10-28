@@ -47,9 +47,6 @@ dependencies:
   tuple: ^2.0.0
   uuid: ^3.0.4
 
-dependency_overrides:
-  json_annotation: ^4.0.1
-
 dev_dependencies:
   amplify_lints: ^1.0.0
   args: ^2.1.1
