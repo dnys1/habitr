@@ -1,7 +1,3 @@
-.PHONY: lambdas
-lambdas:
-	docker run -v ${PWD}:/app -it dart:stable /bin/bash /app/script/build_lambdas.sh
-
 .PHONY: models
 models:
 	flutter pub run build_runner build --delete-conflicting-outputs
