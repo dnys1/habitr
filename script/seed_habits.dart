@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:args/args.dart';
 import 'package:flutter_lorem/flutter_lorem.dart';
+import 'package:gql/language.dart';
 import 'package:gql_exec/gql_exec.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 import 'package:habitr_models/habitr_models.dart';
@@ -57,23 +58,45 @@ Future<void> main(List<String> args) async {
   return seedDB(link, user: user);
 }
 
+class GCreateHabit extends Operation {
+  GCreateHabit() : super(document: parseString(r'''
+      mutation CreateHabit(
+        $tagline: String!, 
+        $category: Category!, 
+        $owner: String!,
+        $ups: Int!, 
+        $downs: Int!
+      ) {
+        createHabit(input: {
+          tagline: $tagline,
+          category: $category,
+          owner: $owner,
+          ups: $ups,
+          downs: $downs
+        }) {
+          id
+        }
+      }
+    '''));
+}
+
 Future<void> seedDB(HttpLink link, {required String user}) async {
   final random = Random();
-
-  var categories = GCategory.values;
-  var category = categories.elementAt(random.nextInt(categories.length));
+  final categories = GCategory.values;
 
   for (var i = 0; i < 20; i++) {
-    final req = GCreateHabit(
-      (b) => b
-        ..vars.tagline = lorem(paragraphs: 1, words: 10)
-        ..vars.category = category,
-    );
+    final category = categories.elementAt(random.nextInt(categories.length));
     final resp = await link
         .request(
           Request(
-            operation: req.operation,
-            variables: req.vars.toJson(),
+            operation: GCreateHabit(),
+            variables: <String, dynamic>{
+              'tagline': lorem(paragraphs: 1, words: 10),
+              'category': category.name,
+              'ups': random.nextInt(10),
+              'downs': random.nextInt(10),
+              'owner': user,
+            },
           ),
         )
         .first;
