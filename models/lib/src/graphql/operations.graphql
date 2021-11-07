@@ -13,7 +13,6 @@ fragment AllHabitFields on Habit {
   updatedAt
   ups
   downs
-  _version
 }
 
 fragment AllPublicUserFields on User {
@@ -37,7 +36,6 @@ fragment AllPublicUserFields on User {
       ...AllHabitFields
     }
   }
-  _version
 }
 
 fragment AllPrivateUserFields on User {
@@ -63,7 +61,6 @@ fragment AllPrivateUserFields on User {
   }
   upvotedHabits
   downvotedHabits
-  _version
 }
 
 fragment AllCommentFields on Comment {
@@ -89,19 +86,16 @@ fragment AllCommentFields on Comment {
         comment
         createdAt
         updatedAt
-        _version
       }
     }
     createdAt
     updatedAt
     ups
     downs
-    _version
   }
   comment
   createdAt
   updatedAt
-  _version
 }
 
 ## List
@@ -204,8 +198,8 @@ mutation UpdateHabit($input: UpdateHabitInput!) {
 ## Delete
 
 mutation DeleteHabit($habitId: ID!, $version: Int!) {
-  deleteHabit(input: { id: $habitId, _version: $version }) {
-    _deleted
+  deleteHabit(input: { id: $habitId }) {
+    id
   }
 }
 
@@ -221,7 +215,6 @@ fragment AllVoteResultFields on VoteResult {
     downs
     createdAt
     updatedAt
-    _version
   }
   user {
     username

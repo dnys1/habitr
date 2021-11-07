@@ -81,10 +81,6 @@
                 }
               }
             ]
-          },
-          "SyncConfig": {
-            "ConflictDetection": "NONE",
-            "ConflictHandler": "OPTIMISTIC_CONCURRENCY"
           }
         }
       },
@@ -142,10 +138,6 @@
                 }
               }
             ]
-          },
-          "SyncConfig": {
-            "ConflictDetection": "NONE",
-            "ConflictHandler": "OPTIMISTIC_CONCURRENCY"
           }
         }
       },
@@ -203,10 +195,6 @@
                 }
               }
             ]
-          },
-          "SyncConfig": {
-            "ConflictDetection": "VERSION",
-            "ConflictHandler": "AUTOMERGE"
           }
         }
       },

@@ -35,7 +35,6 @@ class User extends Model {
   final List<Habit> habits;
   final List<String> upvotedHabits;
   final List<String> downvotedHabits;
-  final int version;
 
   @override
   getInstanceType() => classType;
@@ -55,7 +54,6 @@ class User extends Model {
     this.habits = const [],
     this.upvotedHabits = const [],
     this.downvotedHabits = const [],
-    required this.version,
   });
 
   factory User({
@@ -68,7 +66,6 @@ class User extends Model {
     List<Habit>? habits,
     List<String>? upvotedHabits,
     List<String>? downvotedHabits,
-    required int version,
   }) {
     return User._internal(
       id: id == null ? UUID.getUUID() : id,
@@ -82,7 +79,6 @@ class User extends Model {
           upvotedHabits != null ? List.unmodifiable(upvotedHabits) : [],
       downvotedHabits:
           downvotedHabits != null ? List.unmodifiable(downvotedHabits) : [],
-      version: version,
     );
   }
 
@@ -138,7 +134,6 @@ class User extends Model {
     List<Habit>? habits,
     List<String>? upvotedHabits,
     List<String>? downvotedHabits,
-    int? version,
   }) {
     return User(
       id: id ?? this.id,
@@ -150,7 +145,6 @@ class User extends Model {
       habits: habits ?? this.habits,
       upvotedHabits: upvotedHabits ?? this.upvotedHabits,
       downvotedHabits: downvotedHabits ?? this.downvotedHabits,
-      version: version ?? this.version,
     );
   }
 
@@ -173,7 +167,6 @@ class User extends Model {
         : null;
     var upvotedHabits = json['upvotedHabits']?.cast<String>();
     var downvotedHabits = json['downvotedHabits']?.cast<String>();
-    var version = json['_version'] ?? 0;
     return User(
       id: id,
       username: username,
@@ -184,7 +177,6 @@ class User extends Model {
       habits: habits,
       upvotedHabits: upvotedHabits,
       downvotedHabits: downvotedHabits,
-      version: version,
     );
   }
 

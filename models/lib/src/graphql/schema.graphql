@@ -1,42 +1,21 @@
 """This directive allows results to be deferred during execution"""
 directive @defer on FIELD
 
-"""
-Tells the service this field/object has access authorized by an OIDC token.
-"""
-directive @aws_oidc on OBJECT | FIELD_DEFINITION
-
-"""Tells the service which mutation triggers this subscription."""
-directive @aws_subscribe(
-  """
-  List of mutations which will trigger this subscription when they are called.
-  """
-  mutations: [String]
-) on FIELD_DEFINITION
-
-"""
-Tells the service this field/object has access authorized by a Cognito User Pools token.
-"""
-directive @aws_cognito_user_pools(
+"""Directs the schema to enforce authorization on a field"""
+directive @aws_auth(
   """List of cognito user pool groups which have access on this field"""
   cognito_groups: [String]
-) on OBJECT | FIELD_DEFINITION
-
-"""
-Tells the service this field/object has access authorized by a Lambda Authorizer.
-"""
-directive @aws_lambda on OBJECT | FIELD_DEFINITION
+) on FIELD_DEFINITION
 
 """
 Tells the service this field/object has access authorized by an API key.
 """
 directive @aws_api_key on OBJECT | FIELD_DEFINITION
 
-"""Directs the schema to enforce authorization on a field"""
-directive @aws_auth(
-  """List of cognito user pool groups which have access on this field"""
-  cognito_groups: [String]
-) on FIELD_DEFINITION
+"""
+Tells the service this field/object has access authorized by a Lambda Authorizer.
+"""
+directive @aws_lambda on OBJECT | FIELD_DEFINITION
 
 """
 Tells the service which subscriptions will be published to when this mutation is
@@ -49,10 +28,31 @@ directive @aws_publish(
   subscriptions: [String]
 ) on FIELD_DEFINITION
 
+"""Tells the service which mutation triggers this subscription."""
+directive @aws_subscribe(
+  """
+  List of mutations which will trigger this subscription when they are called.
+  """
+  mutations: [String]
+) on FIELD_DEFINITION
+
 """
 Tells the service this field/object has access authorized by sigv4 signing.
 """
 directive @aws_iam on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by a Cognito User Pools token.
+"""
+directive @aws_cognito_user_pools(
+  """List of cognito user pool groups which have access on this field"""
+  cognito_groups: [String]
+) on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by an OIDC token.
+"""
+directive @aws_oidc on OBJECT | FIELD_DEFINITION
 
 enum AccessLevel {
   guest
@@ -81,18 +81,6 @@ of the ISO 8601 standard.
 """
 scalar AWSDateTime
 
-"""
-The `AWSTimestamp` scalar type provided by AWS AppSync, represents the number of
-seconds that have elapsed since `1970-01-01T00:00Z`. Negative values are also
-accepted and these represent the number of seconds till `1970-01-01T00:00Z`. 
-Timestamps are serialized and deserialized as integers. The minimum supported
-timestamp value is **`-31557014167219200`** which corresponds to
-`-1000000000-01-01T00:00Z`. The maximum supported timestamp value is
-**`31556889864403199`** which corresponds to
-`1000000000-12-31T23:59:59.999999999Z`.
-"""
-scalar AWSTimestamp
-
 enum Category {
   Health
   Finance
@@ -105,9 +93,6 @@ type Comment {
   habitId: ID!
   owner: String
   comment: String!
-  _version: Int!
-  _deleted: Boolean
-  _lastChangedAt: AWSTimestamp!
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
   by: User
@@ -119,7 +104,6 @@ input CreateCommentInput {
   habitId: ID!
   owner: String
   comment: String!
-  _version: Int
 }
 
 input CreateHabitInput {
@@ -130,7 +114,6 @@ input CreateHabitInput {
   ups: Int
   downs: Int
   owner: String
-  _version: Int
 }
 
 input CreateUserInput {
@@ -140,22 +123,18 @@ input CreateUserInput {
   avatar: S3ObjectInput
   upvotedHabits: [ID!]
   downvotedHabits: [ID!]
-  _version: Int
 }
 
 input DeleteCommentInput {
   id: ID!
-  _version: Int
 }
 
 input DeleteHabitInput {
   id: ID!
-  _version: Int
 }
 
 input DeleteUserInput {
   username: String!
-  _version: Int
 }
 
 type Habit {
@@ -164,9 +143,6 @@ type Habit {
   category: Category!
   details: String
   owner: String
-  _version: Int!
-  _deleted: Boolean
-  _lastChangedAt: AWSTimestamp!
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
   author: User
@@ -211,7 +187,6 @@ input ModelCommentConditionInput {
 type ModelCommentConnection {
   items: [Comment]
   nextToken: String
-  startedAt: AWSTimestamp
 }
 
 input ModelCommentFilterInput {
@@ -250,7 +225,6 @@ input ModelHabitConditionInput {
 type ModelHabitConnection {
   items: [Habit]
   nextToken: String
-  startedAt: AWSTimestamp
 }
 
 input ModelHabitFilterInput {
@@ -347,7 +321,6 @@ input ModelUserConditionInput {
 type ModelUserConnection {
   items: [User]
   nextToken: String
-  startedAt: AWSTimestamp
 }
 
 input ModelUserFilterInput {
@@ -376,17 +349,14 @@ type Mutation {
 
 type Query {
   searchUsers(filter: SearchableUserFilterInput, sort: SearchableUserSortInput, limit: Int, nextToken: String, from: Int): SearchableUserConnection
-  syncUsers(filter: ModelUserFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelUserConnection
   getUser(username: String!): User
   listUsers(username: String, filter: ModelUserFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelUserConnection
   habitsByCategory(category: Category, ups: ModelIntKeyConditionInput, sortDirection: ModelSortDirection, filter: ModelHabitFilterInput, limit: Int, nextToken: String): ModelHabitConnection
   searchHabits(filter: SearchableHabitFilterInput, sort: SearchableHabitSortInput, limit: Int, nextToken: String, from: Int): SearchableHabitConnection
-  syncHabits(filter: ModelHabitFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelHabitConnection
   getHabit(id: ID!): Habit
   listHabits(filter: ModelHabitFilterInput, limit: Int, nextToken: String): ModelHabitConnection
   getComment(id: ID!): Comment
   listComments(filter: ModelCommentFilterInput, limit: Int, nextToken: String): ModelCommentConnection
-  syncComments(filter: ModelCommentFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelCommentConnection
 }
 
 type S3Object {
@@ -547,7 +517,6 @@ input UpdateCommentInput {
   habitId: ID
   owner: String
   comment: String
-  _version: Int
 }
 
 input UpdateHabitInput {
@@ -558,7 +527,6 @@ input UpdateHabitInput {
   ups: Int
   downs: Int
   owner: String
-  _version: Int
 }
 
 input UpdateUserInput {
@@ -568,7 +536,6 @@ input UpdateUserInput {
   avatar: S3ObjectInput
   upvotedHabits: [ID!]
   downvotedHabits: [ID!]
-  _version: Int
 }
 
 type User {
@@ -576,9 +543,6 @@ type User {
   displayUsername: String
   name: String
   avatar: S3Object
-  _version: Int!
-  _deleted: Boolean
-  _lastChangedAt: AWSTimestamp!
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
   upvotedHabits: [ID!]

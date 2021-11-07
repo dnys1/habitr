@@ -39,7 +39,6 @@ class Habit extends Model {
   final List<Comment> comments;
   final DateTime createdAt;
   final DateTime updatedAt;
-  final int version;
 
   @override
   getInstanceType() => classType;
@@ -61,7 +60,6 @@ class Habit extends Model {
     required this.comments,
     required this.createdAt,
     required this.updatedAt,
-    required this.version,
   });
 
   factory Habit({
@@ -76,7 +74,6 @@ class Habit extends Model {
     List<Comment> comments = const [],
     required DateTime createdAt,
     required DateTime updatedAt,
-    int version = 0,
   }) {
     return Habit._internal(
       id: id,
@@ -90,7 +87,6 @@ class Habit extends Model {
       comments: comments != null ? List.unmodifiable(comments) : comments,
       createdAt: createdAt,
       updatedAt: updatedAt,
-      version: version,
     );
   }
 
@@ -112,8 +108,7 @@ class Habit extends Model {
         owner == other.owner &&
         DeepCollectionEquality().equals(comments, other.comments) &&
         createdAt == other.createdAt &&
-        updatedAt == other.updatedAt &&
-        version == version;
+        updatedAt == other.updatedAt;
   }
 
   @override
@@ -159,7 +154,6 @@ class Habit extends Model {
       comments: comments ?? this.comments,
       createdAt: createdAt,
       updatedAt: updatedAt,
-      version: version,
     );
   }
 
@@ -181,7 +175,6 @@ class Habit extends Model {
         : null;
     var createdAt = DateTime.parse(json['createdAt'] as String);
     var updatedAt = DateTime.parse(json['updatedAt'] as String);
-    var version = json['_version'] as int?;
     return Habit(
       id: id,
       tagline: tagline,
@@ -194,7 +187,6 @@ class Habit extends Model {
       comments: comments ?? [],
       createdAt: createdAt,
       updatedAt: updatedAt,
-      version: version ?? 0,
     );
   }
 
@@ -210,7 +202,6 @@ class Habit extends Model {
         'comments': comments.map((e) => e.toJson()).toList(),
         'createdAt': createdAt.toIso8601String(),
         'updatedAt': updatedAt.toIso8601String(),
-        '_version': version,
       };
 
   static final QueryField ID = QueryField(fieldName: "habit.id");

@@ -26,7 +26,6 @@
 
 $util.qr($ctx.stash.put("wasUpvoted", $wasUpvoted))
 $util.qr($ctx.stash.put("wasDownvoted", $wasDownvoted))
-$util.qr($ctx.stash.put("userVersion", $user.get("_version")))
 
 $util.toJson($ctx.result)
 #end

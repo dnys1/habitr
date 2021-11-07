@@ -31,7 +31,6 @@ class Comment extends Model {
   final String comment;
   final DateTime createdAt;
   final DateTime updatedAt;
-  final int version;
 
   @override
   getInstanceType() => classType;
@@ -50,7 +49,6 @@ class Comment extends Model {
     required this.comment,
     required this.createdAt,
     required this.updatedAt,
-    required this.version,
   });
 
   factory Comment({
@@ -62,7 +60,6 @@ class Comment extends Model {
     required String comment,
     required DateTime createdAt,
     required DateTime updatedAt,
-    int version = 0,
   }) {
     return Comment._internal(
       id: id,
@@ -73,7 +70,6 @@ class Comment extends Model {
       comment: comment,
       createdAt: createdAt,
       updatedAt: updatedAt,
-      version: version,
     );
   }
 
@@ -92,8 +88,7 @@ class Comment extends Model {
         owner == other.owner &&
         comment == other.comment &&
         createdAt == other.createdAt &&
-        updatedAt == other.updatedAt &&
-        version == version;
+        updatedAt == other.updatedAt;
   }
 
   @override
@@ -123,7 +118,6 @@ class Comment extends Model {
       comment: comment ?? this.comment,
       createdAt: createdAt,
       updatedAt: updatedAt,
-      version: version,
     );
   }
 
@@ -138,7 +132,6 @@ class Comment extends Model {
     var comment = json['comment'];
     var createdAt = DateTime.parse(json['createdAt'] as String);
     var updatedAt = DateTime.parse(json['updatedAt'] as String);
-    var version = json['_version'] as int?;
     return Comment(
       id: id,
       habitId: habitId,
@@ -148,7 +141,6 @@ class Comment extends Model {
       comment: comment,
       createdAt: createdAt,
       updatedAt: updatedAt,
-      version: version ?? 0,
     );
   }
 

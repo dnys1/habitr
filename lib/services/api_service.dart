@@ -81,7 +81,7 @@ abstract class ApiService {
   });
 
   /// Deletes a [Habit].
-  Future<bool> deleteHabit(Habit habit);
+  Future<void> deleteHabit(Habit habit);
 }
 
 class AmplifyApiService implements ApiService {
@@ -235,7 +235,6 @@ class AmplifyApiService implements ApiService {
     const operationName = 'updateUser';
     final mutation = GUpdateUser((b) {
       b.vars.input.username = user.username;
-      b.vars.input.G_version = user.version;
       if (name != null) {
         b.vars.input.name = name;
       }
@@ -477,22 +476,18 @@ class AmplifyApiService implements ApiService {
   }
 
   @override
-  Future<bool> deleteHabit(Habit habit) async {
+  Future<void> deleteHabit(Habit habit) async {
     const operationName = 'deleteHabit';
     final mutation = GDeleteHabit(
-      (b) => b
-        ..vars.habitId = habit.id
-        ..vars.version = habit.version,
+      (b) => b..vars.habitId = habit.id,
     );
 
-    final resp = await _runQuery(
+    await _runQuery(
       const ast.DocumentNode(definitions: [
         DeleteHabit,
       ]),
       operationName,
       mutation.vars.toJson(),
     );
-
-    return (resp?['_deleted'] as bool?) ?? false;
   }
 }

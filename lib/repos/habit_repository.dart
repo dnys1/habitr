@@ -215,10 +215,8 @@ class HabitRepositoryImpl extends HabitRepository {
     if (habit == null) {
       return false;
     }
-    var deleted = await _apiService.deleteHabit(habit);
-    if (deleted) {
-      cache.remove(habitId);
-    }
-    return deleted;
+    await _apiService.deleteHabit(habit);
+    cache.remove(habitId);
+    return true;
   }
 }
