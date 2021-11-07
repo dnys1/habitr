@@ -48,7 +48,6 @@ class _AddImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var needsUsername = viewModel.user.displayUsername == null;
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
@@ -57,7 +56,7 @@ class _AddImageView extends StatelessWidget {
         body: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Center(
                 child: ConstrainedBox(
                   constraints: BoxConstraints.tightFor(
@@ -65,46 +64,52 @@ class _AddImageView extends StatelessWidget {
                   ),
                   child: Form(
                     key: viewModel.formKey,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Add a ${needsUsername ? 'username' : 'name'} and picture',
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
-                        const SizedBox(height: 20),
-                        UserAvatar(
-                          user: viewModel.user,
-                          selectImage: viewModel.pickImage,
-                          image: viewModel.image,
-                        ),
-                        if (needsUsername) ...[
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 20 + MediaQuery.of(context).viewPadding.top,
+                          ),
+                          Text(
+                            'Add a name and picture',
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                          const SizedBox(height: 20),
+                          UserAvatar(
+                            user: viewModel.user,
+                            selectImage: viewModel.pickImage,
+                            image: viewModel.image,
+                          ),
                           const SizedBox(height: 20),
                           UsernameFormField(
                             onChanged: viewModel.setUsername,
                             onUpdateRequestFuture:
                                 viewModel.setUsernameExistsFuture,
+                            validator: (_) {},
                           ),
+                          const SizedBox(height: 20),
+                          TextField(
+                            onChanged: viewModel.setName,
+                            decoration: const InputDecoration(
+                              labelText: 'Name',
+                              prefixIcon: Icon(Icons.badge),
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.never,
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          TextButton(
+                            onPressed: viewModel.save,
+                            child: viewModel.isDirty
+                                ? const Text('Save')
+                                : const Text('Skip'),
+                          ),
+                          const SizedBox(height: 20),
                         ],
-                        const SizedBox(height: 20),
-                        TextField(
-                          onChanged: viewModel.setName,
-                          decoration: const InputDecoration(
-                            labelText: 'Name',
-                            prefixIcon: Icon(Icons.badge),
-                            floatingLabelBehavior: FloatingLabelBehavior.never,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        TextButton(
-                          onPressed: viewModel.save,
-                          child: needsUsername || viewModel.isDirty
-                              ? const Text('Save')
-                              : const Text('Skip'),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),

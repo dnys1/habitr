@@ -30,13 +30,7 @@ Follow these instructions to create the cloud resources needed to run the app in
 
 ## Amplify
 
-1. Create a *Login with Amazon* app
-
-Follow the instructions in the **Setup Your Auth Provider** section [here](https://docs.amplify.aws/lib/auth/social_signin_web_ui/q/platform/flutter#setup-your-auth-provider) to setup an Amazon Developer account and create a Login with Amazon app. 
-
-Note down the Client ID and Client Secret.
-
-2. Configure the project
+1. Configure the project
 
 After [configuring](https://docs.amplify.aws/cli/start/install) the Amplify CLI, run `amplify init` from the root of the project. You'll be prompted for your Amazon Client ID and Client Secret from the previous step.
 
@@ -67,7 +61,7 @@ Initialized your environment successfully.
 Your project has been successfully initialized and connected to the cloud!
 ```
 
-3. Push changes to cloud
+2. Push changes to cloud
 
 Once the project is initialized, run `amplify push` to see the resources being added and enter `y` to deploy them to your cloud.
 

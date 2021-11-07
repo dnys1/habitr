@@ -9,6 +9,7 @@ class UsernameFormField extends StatelessWidget {
     this.onChanged,
     this.controller,
     this.onUpdateRequestFuture,
+    this.validator,
     Key? key,
   })  : assert(
           (onChanged != null || controller != null) &&
@@ -20,6 +21,7 @@ class UsernameFormField extends StatelessWidget {
   final void Function(String)? onChanged;
   final TextEditingController? controller;
   final void Function(Future<void>)? onUpdateRequestFuture;
+  final FormFieldValidator<String>? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +39,7 @@ class UsernameFormField extends StatelessWidget {
           Provider.of(context),
           onChanged: onChanged,
           controller: controller,
+          validator: validator,
         );
       },
     );
@@ -48,6 +51,7 @@ class _UsernameFormFieldView extends StatelessWidget {
     this.viewModel, {
     required this.onChanged,
     required this.controller,
+    this.validator,
     Key? key,
   }) : super(key: key);
 
@@ -56,6 +60,7 @@ class _UsernameFormFieldView extends StatelessWidget {
   final UsernameFormFieldViewModel viewModel;
   final void Function(String)? onChanged;
   final TextEditingController? controller;
+  final FormFieldValidator<String>? validator;
 
   Widget? get usernameSuffix {
     if (viewModel.username.isEmpty) {
@@ -88,7 +93,7 @@ class _UsernameFormFieldView extends StatelessWidget {
               viewModel.setUsername(username);
               onChanged!(username);
             },
-      validator: viewModel.validateUsername,
+      validator: validator ?? viewModel.validateUsername,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         labelText: 'Username',

@@ -86,9 +86,6 @@ class _LoginView extends StatelessWidget {
                             ),
                     ),
                     const SizedBox(height: 5),
-                    const Divider(),
-                    const SizedBox(height: 5),
-                    const LoginWithAmazonButton(),
                     const Spacer(flex: 4),
                     TextButton(
                       child: const Text('Sign Up'),
