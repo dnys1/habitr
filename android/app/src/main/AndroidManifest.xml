@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.habitr">
+    package="com.dillonnys.habitr">
    <application
         android:label="habitr"
         android:icon="@mipmap/ic_launcher">

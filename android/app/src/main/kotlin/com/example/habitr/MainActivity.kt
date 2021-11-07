@@ -1,4 +1,4 @@
-package com.example.habitr
+package com.dillonnys.habitr
 
 import io.flutter.embedding.android.FlutterActivity
 
