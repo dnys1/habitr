@@ -18,7 +18,7 @@ class UserExistsRequest {
 class UserExistsResponse {
   final bool exists;
 
-  const UserExistsResponse(this.exists);
+  const UserExistsResponse({required this.exists});
 
   factory UserExistsResponse.fromJson(Map<String, dynamic> json) =>
       _$UserExistsResponseFromJson(json);
