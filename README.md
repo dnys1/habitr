@@ -98,13 +98,6 @@ $ amplify push
 ✔ All resources are updated in the cloud
 ```
 
-## Flutter
-
-Run the following commands from the root of the project:
-
-1. `flutter pub get`
-2. `make models`
-
 ## Run the App
 
 If everything went well in the previous steps, you should now be able to run the Habitr project! 🎉
