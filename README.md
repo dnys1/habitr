@@ -2,7 +2,10 @@
 
 Habit-tracking social network built with AWS Amplify Flutter.
 
-- [habitr](#habitr)
+> To learn more about the project, check out these posts:
+> - [Building a Social Network with Amplify Flutter (Part 1)](https://dillonnys.com/building-a-social-network-with-amplify-flutter-part-1/)
+> - [Building a Social Network with Amplify Flutter (Part 2)](https://dillonnys.com/building-a-social-network-with-amplify-flutter-part-2/)
+
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Amplify](#amplify)
@@ -52,9 +55,6 @@ Adding backend environment dev to AWS Amplify Console app: <APP_ID>
 
 ✔ Successfully created initial AWS cloud resources for deployments.
 ✔ Initialized provider successfully.
- 
- Enter your Amazon App ID for your OAuth flow:  <AMAZON_APP_ID>
- Enter your Amazon App Secret for your OAuth flow:  <AMAZON_APP_SECRET>
 
 Initialized your environment successfully.
 
