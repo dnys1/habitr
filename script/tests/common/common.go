@@ -99,7 +99,7 @@ func CreateTestUsers(ctx context.Context, cfg Config, awsCfg aws.Config) error {
 			UserAttributes: []types.AttributeType{
 				{
 					Name:  aws.String("email"),
-					Value: aws.String("nydillon@amazon.com"),
+					Value: aws.String("test@example.com"),
 				},
 			},
 		})
