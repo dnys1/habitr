@@ -5,6 +5,7 @@ Habit-tracking social network built with AWS Amplify Flutter.
 > To learn more about the project, check out these posts:
 > - [Building a Social Network with Amplify Flutter (Part 1)](https://dillonnys.com/building-a-social-network-with-amplify-flutter-part-1/)
 > - [Building a Social Network with Amplify Flutter (Part 2)](https://dillonnys.com/building-a-social-network-with-amplify-flutter-part-2/)
+> - [Building a Social Network with Amplify Flutter (Part 3)](https://dillonnys.com/building-a-social-network-with-amplify-flutter-part-3/)
 
 - [Features](#features)
 - [Getting Started](#getting-started)
