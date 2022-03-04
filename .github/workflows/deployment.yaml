@@ -49,9 +49,10 @@ jobs:
         env:
           cache-name: pub-cache
         with:
+          # These variables are set by subosito/flutter-action.
           path: |
-            ~/.pub-cache
-            $FLUTTER_HOME/.pub-cache
+            $PUB_CACHE
+            $FLUTTER_ROOT/.pub-cache
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/pubspec.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
