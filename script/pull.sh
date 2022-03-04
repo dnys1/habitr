@@ -10,20 +10,49 @@
 #   - AMPLIFY_APP_ID
 #   - AMPLIFY_ENV
 #
-# If AWS_SESSION_TOKEN is set, it will be picked up by the CLI and does not need to
-# be explicitly passed to the config, unlike AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
 
 set -e
 IFS='|'
+
+#
+# Create the `cicd` profile in CI/CD contexts, since the Amplify CLI's 
+# headless mode does not support session tokens.
+# 
+# Per https://github.com/aws-amplify/amplify-cli/issues/7642#issuecomment-875881203
+# this is the officially correct way to use a session token.
+#
+if [[ -n $CI ]]; then
+
+mkdir -p ~/.aws
+
+CONFIG_PATH=~/.aws/config
+CREDENTIALS_PATH=~/.aws/credentials
+
+cat <<EOF > $CONFIG_PATH
+[cicd]
+region=$AWS_REGION
+output=json
+EOF
+
+cat <<EOF > $CREDENTIALS_PATH
+[cicd]
+aws_access_key_id=$AWS_ACCESS_KEY_ID
+aws_secret_access_key=$AWS_SECRET_ACCESS_KEY
+EOF
+
+if [[ -n $AWS_SESSION_TOKEN ]]; then
+    echo "aws_session_token=$AWS_SESSION_TOKEN" >> $CREDENTIALS_PATH
+fi
+
+fi
 
 FLUTTERCONFIG="{\
 \"ResDir\":\"./lib/\",\
 }"
 AWSCLOUDFORMATIONCONFIG="{\
-\"configLevel\":\"project\",\
-\"useProfile\":false,\
-\"accessKeyId\":\"$AWS_ACCESS_KEY_ID\",\
-\"secretAccessKey\":\"$AWS_SECRET_ACCESS_KEY\",\
+\"configLevel\":\"general\",\
+\"useProfile\":true,\
+\"profileName\":\"cicd\",\
 \"region\":\"$AWS_REGION\"\
 }"
 AMPLIFY="{\
@@ -40,13 +69,16 @@ PROVIDERS="{\
 \"awscloudformation\":$AWSCLOUDFORMATIONCONFIG\
 }"
 
-amplify pull \
---amplify $AMPLIFY \
---frontend $FRONTEND \
---providers $PROVIDERS \
---yes
+amplify-dev pull \
+    --verbose \
+    --amplify $AMPLIFY \
+    --frontend $FRONTEND \
+    --providers $PROVIDERS \
+    --yes
 
 if [[ ! -e "lib/amplifyconfiguration.dart" ]]; then
+    # Dump CLI logs
+    cat ~/.amplify/logs/*.log >&2
     echo "Could not pull Amplify project" >&2
     exit 1
 fi
