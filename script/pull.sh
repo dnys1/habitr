@@ -1,4 +1,18 @@
 #!/bin/bash
+# 
+# This script follows the recommendations provided in the CLI Headless Mode docs:
+# https://docs.amplify.aws/cli/usage/headless/#amplify-pull-parameters
+#
+# It expects the following environment variables to be set:
+#   - AWS_ACCESS_KEY_ID
+#   - AWS_SECRET_ACCESS_KEY
+#   - AWS_REGION
+#   - AMPLIFY_APP_ID
+#   - AMPLIFY_ENV
+#
+# If AWS_SESSION_TOKEN is set, it will be picked up by the CLI and does not need to
+# be explicitly passed to the config, unlike AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
+
 set -e
 IFS='|'
 
@@ -6,7 +20,7 @@ FLUTTERCONFIG="{\
 \"ResDir\":\"./lib/\",\
 }"
 AWSCLOUDFORMATIONCONFIG="{\
-\"configLevel\":\"general\",\
+\"configLevel\":\"project\",\
 \"useProfile\":false,\
 \"accessKeyId\":\"$AWS_ACCESS_KEY_ID\",\
 \"secretAccessKey\":\"$AWS_SECRET_ACCESS_KEY\",\
