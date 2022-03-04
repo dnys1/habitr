@@ -37,6 +37,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       case 'AuthInFlow':
         return AuthInFlow.fromJson(state!);
     }
+    return null;
   }
 
   AuthBloc(

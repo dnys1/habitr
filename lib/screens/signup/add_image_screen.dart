@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
@@ -88,7 +87,7 @@ class _AddImageView extends StatelessWidget {
                             onChanged: viewModel.setUsername,
                             onUpdateRequestFuture:
                                 viewModel.setUsernameExistsFuture,
-                            validator: (_) {},
+                            validator: (_) => null,
                           ),
                           const SizedBox(height: 20),
                           TextField(

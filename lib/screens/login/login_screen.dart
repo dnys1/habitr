@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/screens/login/login_viewmodel.dart';
 import 'package:habitr/util/validators.dart';
-import 'package:habitr/widgets/login_with_amazon/login_with_amazon_button.dart';
 import 'package:habitr/widgets/logo/habitr_logo.dart';
 import 'package:provider/provider.dart';
 
