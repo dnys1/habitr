@@ -5,6 +5,8 @@ IFS='|'
 # Create the `default` profile in CI/CD contexts, since the Amplify CLI's 
 # headless mode does not support session tokens.
 if [[ -n $CI ]]; then
+mkdir -p ~/.aws
+
 cat <<EOF > ~/.aws/config
 [default]
 region=$AWS_REGION
@@ -47,3 +49,8 @@ amplify pull \
 --frontend $FRONTEND \
 --providers $PROVIDERS \
 --yes
+
+if [[ ! -e "lib/amplifyconfiguration.dart" ]]; then
+    echo "Could not pull Amplify project" >&2
+    exit 1
+fi
