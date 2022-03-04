@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+* Copyright 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 *
 * Licensed under the Apache License, Version 2.0 (the "License").
 * You may not use this file except in compliance with the License.
@@ -13,52 +13,49 @@
 * permissions and limitations under the License.
 */
 
-// ignore_for_file: public_member_api_docs
+// NOTE: This file is generated and may not follow lint rules defined in your app
+// Generated files can be excluded from analysis in analysis_options.yaml
+// For more info, see: https://dart.dev/guides/language/analysis-options#excluding-code-from-analysis
 
-import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_interface.dart';
+// ignore_for_file: public_member_api_docs, file_names, unnecessary_new, prefer_if_null_operators, prefer_const_constructors, slash_for_doc_comments, annotate_overrides, non_constant_identifier_names, unnecessary_string_interpolations, prefer_adjacent_string_concatenation, unnecessary_const, dead_code
+
+import 'package:amplify_core/amplify_core.dart';
 import 'Comment.dart';
 import 'Habit.dart';
 import 'User.dart';
+import 'S3Object.dart';
+import 'VoteResult.dart';
 
 export 'AccessLevel.dart';
 export 'Category.dart';
 export 'Comment.dart';
 export 'Habit.dart';
+export 'S3Object.dart';
 export 'User.dart';
+export 'VoteResult.dart';
 export 'VoteType.dart';
 
 class ModelProvider implements ModelProviderInterface {
   @override
-  String version = "da65dec848d52948e0f190d587787fa3";
+  String version = "fdb708b98dc8be002e87f20936ce4ad1";
   @override
   List<ModelSchema> modelSchemas = [Comment.schema, Habit.schema, User.schema];
   static final ModelProvider _instance = ModelProvider();
+  @override
+  List<ModelSchema> customTypeSchemas = [S3Object.schema, VoteResult.schema];
 
   static ModelProvider get instance => _instance;
-
+  
   ModelType getModelTypeByModelName(String modelName) {
-    switch (modelName) {
+    switch(modelName) {
       case "Comment":
-        {
-          return Comment.classType;
-        }
-        break;
+        return Comment.classType;
       case "Habit":
-        {
-          return Habit.classType;
-        }
-        break;
+        return Habit.classType;
       case "User":
-        {
-          return User.classType;
-        }
-        break;
+        return User.classType;
       default:
-        {
-          throw Exception(
-              "Failed to find model in model provider for model name: " +
-                  modelName);
-        }
+        throw Exception("Failed to find model in model provider for model name: " + modelName);
     }
   }
 }

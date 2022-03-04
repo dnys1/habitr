@@ -1,4 +1,7 @@
 {
+  "providers": [
+    "awscloudformation"
+  ],
   "projectName": "habitr",
   "version": "3.1",
   "frontend": "flutter",
@@ -6,8 +9,5 @@
     "config": {
       "ResDir": "./lib/"
     }
-  },
-  "providers": [
-    "awscloudformation"
-  ]
+  }
 }
