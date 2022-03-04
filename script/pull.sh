@@ -54,7 +54,7 @@ FLUTTERCONFIG="{\
 AWSCLOUDFORMATIONCONFIG="{\
 \"configLevel\":\"general\",\
 \"useProfile\":true,\
-\"profileName\":\"${$AWS_PROFILE:-default}\",\
+\"profileName\":\"${AWS_PROFILE:-default}\",\
 \"region\":\"$AWS_REGION\"\
 }"
 AMPLIFY="{\
