@@ -19,9 +19,6 @@ type User
         # Read and update access for owners (only admin + API key can create)
         { allow: owner, ownerField: "username", operations: [update] }
     ])
-
-    # Enable full-text search on all fields
-    # @searchable
 {
     # The user's Cognito username.
     username: String!
@@ -88,11 +85,7 @@ type Habit
         # Read, create, and delete access for owners (habits cannot be updated once created)
         { allow: owner, operations: [create, delete] }
     ])
-
-    # Enable full-text search on all fields
-    # @searchable 
 {
-
     # The habit's unique ID.
     id: ID!
 
@@ -158,8 +151,8 @@ type Comment @model
 
         # Read, create, update, and delete access for owners
         { allow: owner, operations: [create, delete, update] }
-    ]) {
-
+    ])
+{
     # The comment's unique ID.
     id: ID!
 
@@ -239,8 +232,8 @@ type Subscription {
         @aws_cognito_user_pools
 
     # Custom subscription for listening to all voting operations.
-    # subscribeToVotes: VoteResult
-    #     @aws_subscribe(mutations: ["vote"])
-    #     @aws_api_key
-    #     @aws_cognito_user_pools
-}
+    subscribeToVotes: VoteResult
+        @aws_subscribe(mutations: ["vote"])
+        @aws_api_key
+        @aws_cognito_user_pools
+} 

@@ -221,61 +221,47 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GS3ObjectInput.serializer)
       ..add(GSearchHabits.serializer)
       ..add(GSearchHabitsData.serializer)
-      ..add(GSearchHabitsData_searchHabits.serializer)
-      ..add(GSearchHabitsData_searchHabits_items.serializer)
-      ..add(GSearchHabitsData_searchHabits_items_comments.serializer)
-      ..add(GSearchHabitsData_searchHabits_items_comments_items.serializer)
-      ..add(GSearchHabitsData_searchHabits_items_comments_items_by.serializer)
-      ..add(
-          GSearchHabitsData_searchHabits_items_comments_items_habit.serializer)
-      ..add(GSearchHabitsData_searchHabits_items_comments_items_habit_comments
+      ..add(GSearchHabitsData_listHabits.serializer)
+      ..add(GSearchHabitsData_listHabits_items.serializer)
+      ..add(GSearchHabitsData_listHabits_items_comments.serializer)
+      ..add(GSearchHabitsData_listHabits_items_comments_items.serializer)
+      ..add(GSearchHabitsData_listHabits_items_comments_items_by.serializer)
+      ..add(GSearchHabitsData_listHabits_items_comments_items_habit.serializer)
+      ..add(GSearchHabitsData_listHabits_items_comments_items_habit_comments
           .serializer)
       ..add(
-          GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items
+          GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
               .serializer)
       ..add(GSearchHabitsVars.serializer)
       ..add(GSearchUsers.serializer)
       ..add(GSearchUsersData.serializer)
-      ..add(GSearchUsersData_searchUsers.serializer)
-      ..add(GSearchUsersData_searchUsers_items.serializer)
-      ..add(GSearchUsersData_searchUsers_items_avatar.serializer)
-      ..add(GSearchUsersData_searchUsers_items_comments.serializer)
-      ..add(GSearchUsersData_searchUsers_items_comments_items.serializer)
-      ..add(GSearchUsersData_searchUsers_items_comments_items_by.serializer)
-      ..add(GSearchUsersData_searchUsers_items_comments_items_habit.serializer)
-      ..add(GSearchUsersData_searchUsers_items_comments_items_habit_comments
+      ..add(GSearchUsersData_listUsers.serializer)
+      ..add(GSearchUsersData_listUsers_items.serializer)
+      ..add(GSearchUsersData_listUsers_items_avatar.serializer)
+      ..add(GSearchUsersData_listUsers_items_comments.serializer)
+      ..add(GSearchUsersData_listUsers_items_comments_items.serializer)
+      ..add(GSearchUsersData_listUsers_items_comments_items_by.serializer)
+      ..add(GSearchUsersData_listUsers_items_comments_items_habit.serializer)
+      ..add(GSearchUsersData_listUsers_items_comments_items_habit_comments
+          .serializer)
+      ..add(GSearchUsersData_listUsers_items_comments_items_habit_comments_items
+          .serializer)
+      ..add(GSearchUsersData_listUsers_items_habits.serializer)
+      ..add(GSearchUsersData_listUsers_items_habits_items.serializer)
+      ..add(GSearchUsersData_listUsers_items_habits_items_comments.serializer)
+      ..add(GSearchUsersData_listUsers_items_habits_items_comments_items
+          .serializer)
+      ..add(GSearchUsersData_listUsers_items_habits_items_comments_items_by
+          .serializer)
+      ..add(GSearchUsersData_listUsers_items_habits_items_comments_items_habit
           .serializer)
       ..add(
-          GSearchUsersData_searchUsers_items_comments_items_habit_comments_items
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
               .serializer)
-      ..add(GSearchUsersData_searchUsers_items_habits.serializer)
-      ..add(GSearchUsersData_searchUsers_items_habits_items.serializer)
-      ..add(GSearchUsersData_searchUsers_items_habits_items_comments.serializer)
-      ..add(GSearchUsersData_searchUsers_items_habits_items_comments_items
-          .serializer)
-      ..add(GSearchUsersData_searchUsers_items_habits_items_comments_items_by
-          .serializer)
-      ..add(GSearchUsersData_searchUsers_items_habits_items_comments_items_habit
-          .serializer)
       ..add(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments
-              .serializer)
-      ..add(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
               .serializer)
       ..add(GSearchUsersVars.serializer)
-      ..add(GSearchableBooleanFilterInput.serializer)
-      ..add(GSearchableFloatFilterInput.serializer)
-      ..add(GSearchableHabitFilterInput.serializer)
-      ..add(GSearchableHabitSortInput.serializer)
-      ..add(GSearchableHabitSortableFields.serializer)
-      ..add(GSearchableIDFilterInput.serializer)
-      ..add(GSearchableIntFilterInput.serializer)
-      ..add(GSearchableSortDirection.serializer)
-      ..add(GSearchableStringFilterInput.serializer)
-      ..add(GSearchableUserFilterInput.serializer)
-      ..add(GSearchableUserSortInput.serializer)
-      ..add(GSearchableUserSortableFields.serializer)
       ..add(GSubscribeToUser.serializer)
       ..add(GSubscribeToUserData.serializer)
       ..add(GSubscribeToUserData_subscribeToUser.serializer)
@@ -614,74 +600,58 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<GModelUserFilterInput>())
       ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(GSearchHabitsData_searchHabits_items)]),
-          () => new ListBuilder<GSearchHabitsData_searchHabits_items>())
+              const [const FullType(GSearchHabitsData_listHabits_items)]),
+          () => new ListBuilder<GSearchHabitsData_listHabits_items>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(GSearchHabitsData_searchHabits_items_comments_items)
+            const FullType(GSearchHabitsData_listHabits_items_comments_items)
           ]),
           () => new ListBuilder<
-              GSearchHabitsData_searchHabits_items_comments_items>())
+              GSearchHabitsData_listHabits_items_comments_items>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
-                GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items)
+                GSearchHabitsData_listHabits_items_comments_items_habit_comments_items)
           ]),
           () => new ListBuilder<
-              GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items>())
+              GSearchHabitsData_listHabits_items_comments_items_habit_comments_items>())
       ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(GSearchUsersData_searchUsers_items)]),
-          () => new ListBuilder<GSearchUsersData_searchUsers_items>())
+              const [const FullType(GSearchUsersData_listUsers_items)]),
+          () => new ListBuilder<GSearchUsersData_listUsers_items>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(GSearchUsersData_searchUsers_items_comments_items)
+            const FullType(GSearchUsersData_listUsers_items_comments_items)
           ]),
           () => new ListBuilder<
-              GSearchUsersData_searchUsers_items_comments_items>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GSearchUsersData_searchUsers_items_comments_items_habit_comments_items)
-          ]),
-          () => new ListBuilder<
-              GSearchUsersData_searchUsers_items_comments_items_habit_comments_items>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GSearchUsersData_searchUsers_items_habits_items)
-          ]),
-          () => new ListBuilder<
-              GSearchUsersData_searchUsers_items_habits_items>())
+              GSearchUsersData_listUsers_items_comments_items>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
-                GSearchUsersData_searchUsers_items_habits_items_comments_items)
+                GSearchUsersData_listUsers_items_comments_items_habit_comments_items)
           ]),
           () => new ListBuilder<
-              GSearchUsersData_searchUsers_items_habits_items_comments_items>())
+              GSearchUsersData_listUsers_items_comments_items_habit_comments_items>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GSearchUsersData_listUsers_items_habits_items)
+          ]),
+          () =>
+              new ListBuilder<GSearchUsersData_listUsers_items_habits_items>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
-                GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items)
+                GSearchUsersData_listUsers_items_habits_items_comments_items)
           ]),
           () => new ListBuilder<
-              GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items>())
+              GSearchUsersData_listUsers_items_habits_items_comments_items>())
       ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GSearchableHabitFilterInput)]),
-          () => new ListBuilder<GSearchableHabitFilterInput>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GSearchableHabitFilterInput)]),
-          () => new ListBuilder<GSearchableHabitFilterInput>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GSearchableUserFilterInput)]),
-          () => new ListBuilder<GSearchableUserFilterInput>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GSearchableUserFilterInput)]),
-          () => new ListBuilder<GSearchableUserFilterInput>())
+          const FullType(BuiltList, const [
+            const FullType(
+                GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items)
+          ]),
+          () => new ListBuilder<
+              GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(GSubscribeToUserData_subscribeToUser_comments_items)
@@ -818,20 +788,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(double)]),
           () => new ListBuilder<double>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(double)]),
-          () => new ListBuilder<double>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(int)]),
-          () => new ListBuilder<int>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(int)]),
           () => new ListBuilder<int>())

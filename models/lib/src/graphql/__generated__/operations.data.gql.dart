@@ -44,7 +44,7 @@ abstract class GListHabitsData_listHabits
       b..G__typename = 'ModelHabitConnection';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  BuiltList<GListHabitsData_listHabits_items>? get items;
+  BuiltList<GListHabitsData_listHabits_items> get items;
   String? get nextToken;
   static Serializer<GListHabitsData_listHabits> get serializer =>
       _$gListHabitsDataListHabitsSerializer;
@@ -121,7 +121,7 @@ abstract class GListHabitsData_listHabits_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GListHabitsData_listHabits_items_comments_items>? get items;
+  BuiltList<GListHabitsData_listHabits_items_comments_items> get items;
   static Serializer<GListHabitsData_listHabits_items_comments> get serializer =>
       _$gListHabitsDataListHabitsItemsCommentsSerializer;
   @override
@@ -159,7 +159,7 @@ abstract class GListHabitsData_listHabits_items_comments_items
   @override
   GListHabitsData_listHabits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GListHabitsData_listHabits_items_comments_items_habit? get habit;
   @override
@@ -293,7 +293,7 @@ abstract class GListHabitsData_listHabits_items_comments_items_habit_comments
   String get G__typename;
   @override
   BuiltList<
-          GListHabitsData_listHabits_items_comments_items_habit_comments_items>?
+          GListHabitsData_listHabits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GListHabitsData_listHabits_items_comments_items_habit_comments>
@@ -338,7 +338,7 @@ abstract class GListHabitsData_listHabits_items_comments_items_habit_comments_it
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -400,7 +400,7 @@ abstract class GListHabitsByCategoryData_habitsByCategory
       b..G__typename = 'ModelHabitConnection';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  BuiltList<GListHabitsByCategoryData_habitsByCategory_items>? get items;
+  BuiltList<GListHabitsByCategoryData_habitsByCategory_items> get items;
   String? get nextToken;
   static Serializer<GListHabitsByCategoryData_habitsByCategory>
       get serializer => _$gListHabitsByCategoryDataHabitsByCategorySerializer;
@@ -483,7 +483,7 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GListHabitsByCategoryData_habitsByCategory_items_comments_items>?
+  BuiltList<GListHabitsByCategoryData_habitsByCategory_items_comments_items>
       get items;
   static Serializer<GListHabitsByCategoryData_habitsByCategory_items_comments>
       get serializer =>
@@ -528,7 +528,7 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items
   @override
   GListHabitsByCategoryData_habitsByCategory_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit?
       get habit;
@@ -684,7 +684,7 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_h
   String get G__typename;
   @override
   BuiltList<
-          GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items>?
+          GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments>
@@ -730,7 +730,7 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_h
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -835,7 +835,7 @@ abstract class GGetHabitData_getHabit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetHabitData_getHabit_comments_items>? get items;
+  BuiltList<GGetHabitData_getHabit_comments_items> get items;
   static Serializer<GGetHabitData_getHabit_comments> get serializer =>
       _$gGetHabitDataGetHabitCommentsSerializer;
   @override
@@ -872,7 +872,7 @@ abstract class GGetHabitData_getHabit_comments_items
   @override
   GGetHabitData_getHabit_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GGetHabitData_getHabit_comments_items_habit? get habit;
   @override
@@ -998,7 +998,7 @@ abstract class GGetHabitData_getHabit_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetHabitData_getHabit_comments_items_habit_comments_items>?
+  BuiltList<GGetHabitData_getHabit_comments_items_habit_comments_items>
       get items;
   static Serializer<GGetHabitData_getHabit_comments_items_habit_comments>
       get serializer =>
@@ -1040,7 +1040,7 @@ abstract class GGetHabitData_getHabit_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -1170,7 +1170,7 @@ abstract class GGetUserData_getUser_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetUserData_getUser_comments_items>? get items;
+  BuiltList<GGetUserData_getUser_comments_items> get items;
   static Serializer<GGetUserData_getUser_comments> get serializer =>
       _$gGetUserDataGetUserCommentsSerializer;
   @override
@@ -1206,7 +1206,7 @@ abstract class GGetUserData_getUser_comments_items
   @override
   GGetUserData_getUser_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GGetUserData_getUser_comments_items_habit? get habit;
   @override
@@ -1332,8 +1332,7 @@ abstract class GGetUserData_getUser_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetUserData_getUser_comments_items_habit_comments_items>?
-      get items;
+  BuiltList<GGetUserData_getUser_comments_items_habit_comments_items> get items;
   static Serializer<GGetUserData_getUser_comments_items_habit_comments>
       get serializer =>
           _$gGetUserDataGetUserCommentsItemsHabitCommentsSerializer;
@@ -1371,7 +1370,7 @@ abstract class GGetUserData_getUser_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -1408,7 +1407,7 @@ abstract class GGetUserData_getUser_habits
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetUserData_getUser_habits_items>? get items;
+  BuiltList<GGetUserData_getUser_habits_items> get items;
   static Serializer<GGetUserData_getUser_habits> get serializer =>
       _$gGetUserDataGetUserHabitsSerializer;
   @override
@@ -1487,7 +1486,7 @@ abstract class GGetUserData_getUser_habits_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetUserData_getUser_habits_items_comments_items>? get items;
+  BuiltList<GGetUserData_getUser_habits_items_comments_items> get items;
   static Serializer<GGetUserData_getUser_habits_items_comments>
       get serializer => _$gGetUserDataGetUserHabitsItemsCommentsSerializer;
   @override
@@ -1526,7 +1525,7 @@ abstract class GGetUserData_getUser_habits_items_comments_items
   @override
   GGetUserData_getUser_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GGetUserData_getUser_habits_items_comments_items_habit? get habit;
   @override
@@ -1663,7 +1662,7 @@ abstract class GGetUserData_getUser_habits_items_comments_items_habit_comments
   String get G__typename;
   @override
   BuiltList<
-          GGetUserData_getUser_habits_items_comments_items_habit_comments_items>?
+          GGetUserData_getUser_habits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GGetUserData_getUser_habits_items_comments_items_habit_comments>
@@ -1710,7 +1709,7 @@ abstract class GGetUserData_getUser_habits_items_comments_items_habit_comments_i
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -1846,7 +1845,7 @@ abstract class GGetSelfData_getUser_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetSelfData_getUser_comments_items>? get items;
+  BuiltList<GGetSelfData_getUser_comments_items> get items;
   static Serializer<GGetSelfData_getUser_comments> get serializer =>
       _$gGetSelfDataGetUserCommentsSerializer;
   @override
@@ -1882,7 +1881,7 @@ abstract class GGetSelfData_getUser_comments_items
   @override
   GGetSelfData_getUser_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GGetSelfData_getUser_comments_items_habit? get habit;
   @override
@@ -2008,8 +2007,7 @@ abstract class GGetSelfData_getUser_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetSelfData_getUser_comments_items_habit_comments_items>?
-      get items;
+  BuiltList<GGetSelfData_getUser_comments_items_habit_comments_items> get items;
   static Serializer<GGetSelfData_getUser_comments_items_habit_comments>
       get serializer =>
           _$gGetSelfDataGetUserCommentsItemsHabitCommentsSerializer;
@@ -2047,7 +2045,7 @@ abstract class GGetSelfData_getUser_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -2084,7 +2082,7 @@ abstract class GGetSelfData_getUser_habits
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetSelfData_getUser_habits_items>? get items;
+  BuiltList<GGetSelfData_getUser_habits_items> get items;
   static Serializer<GGetSelfData_getUser_habits> get serializer =>
       _$gGetSelfDataGetUserHabitsSerializer;
   @override
@@ -2163,7 +2161,7 @@ abstract class GGetSelfData_getUser_habits_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetSelfData_getUser_habits_items_comments_items>? get items;
+  BuiltList<GGetSelfData_getUser_habits_items_comments_items> get items;
   static Serializer<GGetSelfData_getUser_habits_items_comments>
       get serializer => _$gGetSelfDataGetUserHabitsItemsCommentsSerializer;
   @override
@@ -2202,7 +2200,7 @@ abstract class GGetSelfData_getUser_habits_items_comments_items
   @override
   GGetSelfData_getUser_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GGetSelfData_getUser_habits_items_comments_items_habit? get habit;
   @override
@@ -2339,7 +2337,7 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_habit_comments
   String get G__typename;
   @override
   BuiltList<
-          GGetSelfData_getUser_habits_items_comments_items_habit_comments_items>?
+          GGetSelfData_getUser_habits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GGetSelfData_getUser_habits_items_comments_items_habit_comments>
@@ -2386,7 +2384,7 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_habit_comments_i
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -2452,7 +2450,7 @@ abstract class GGetCommentData_getComment
   @override
   GGetCommentData_getComment_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GGetCommentData_getComment_habit? get habit;
   @override
@@ -2569,7 +2567,7 @@ abstract class GGetCommentData_getComment_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GGetCommentData_getComment_habit_comments_items>? get items;
+  BuiltList<GGetCommentData_getComment_habit_comments_items> get items;
   static Serializer<GGetCommentData_getComment_habit_comments> get serializer =>
       _$gGetCommentDataGetCommentHabitCommentsSerializer;
   @override
@@ -2604,7 +2602,7 @@ abstract class GGetCommentData_getComment_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -2747,7 +2745,7 @@ abstract class GSubscribeToUserData_subscribeToUser_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GSubscribeToUserData_subscribeToUser_comments_items>? get items;
+  BuiltList<GSubscribeToUserData_subscribeToUser_comments_items> get items;
   static Serializer<GSubscribeToUserData_subscribeToUser_comments>
       get serializer => _$gSubscribeToUserDataSubscribeToUserCommentsSerializer;
   @override
@@ -2785,7 +2783,7 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items
   @override
   GSubscribeToUserData_subscribeToUser_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GSubscribeToUserData_subscribeToUser_comments_items_habit? get habit;
   @override
@@ -2925,7 +2923,7 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit_comment
   String get G__typename;
   @override
   BuiltList<
-          GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items>?
+          GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GSubscribeToUserData_subscribeToUser_comments_items_habit_comments>
@@ -2971,7 +2969,7 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit_comment
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -3012,7 +3010,7 @@ abstract class GSubscribeToUserData_subscribeToUser_habits
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GSubscribeToUserData_subscribeToUser_habits_items>? get items;
+  BuiltList<GSubscribeToUserData_subscribeToUser_habits_items> get items;
   static Serializer<GSubscribeToUserData_subscribeToUser_habits>
       get serializer => _$gSubscribeToUserDataSubscribeToUserHabitsSerializer;
   @override
@@ -3098,7 +3096,7 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GSubscribeToUserData_subscribeToUser_habits_items_comments_items>?
+  BuiltList<GSubscribeToUserData_subscribeToUser_habits_items_comments_items>
       get items;
   static Serializer<GSubscribeToUserData_subscribeToUser_habits_items_comments>
       get serializer =>
@@ -3144,7 +3142,7 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items
   @override
   GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit?
       get habit;
@@ -3303,7 +3301,7 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
   String get G__typename;
   @override
   BuiltList<
-          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items>?
+          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments>
@@ -3350,7 +3348,7 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -3461,7 +3459,7 @@ abstract class GCreateCommentData_createComment
   @override
   GCreateCommentData_createComment_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GCreateCommentData_createComment_habit? get habit;
   @override
@@ -3584,7 +3582,7 @@ abstract class GCreateCommentData_createComment_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GCreateCommentData_createComment_habit_comments_items>? get items;
+  BuiltList<GCreateCommentData_createComment_habit_comments_items> get items;
   static Serializer<GCreateCommentData_createComment_habit_comments>
       get serializer =>
           _$gCreateCommentDataCreateCommentHabitCommentsSerializer;
@@ -3620,7 +3618,7 @@ abstract class GCreateCommentData_createComment_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -3726,7 +3724,7 @@ abstract class GCreateHabitData_createHabit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GCreateHabitData_createHabit_comments_items>? get items;
+  BuiltList<GCreateHabitData_createHabit_comments_items> get items;
   static Serializer<GCreateHabitData_createHabit_comments> get serializer =>
       _$gCreateHabitDataCreateHabitCommentsSerializer;
   @override
@@ -3764,7 +3762,7 @@ abstract class GCreateHabitData_createHabit_comments_items
   @override
   GCreateHabitData_createHabit_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GCreateHabitData_createHabit_comments_items_habit? get habit;
   @override
@@ -3894,7 +3892,7 @@ abstract class GCreateHabitData_createHabit_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GCreateHabitData_createHabit_comments_items_habit_comments_items>?
+  BuiltList<GCreateHabitData_createHabit_comments_items_habit_comments_items>
       get items;
   static Serializer<GCreateHabitData_createHabit_comments_items_habit_comments>
       get serializer =>
@@ -3937,7 +3935,7 @@ abstract class GCreateHabitData_createHabit_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -4078,7 +4076,7 @@ abstract class GUpdateUserData_updateUser_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUpdateUserData_updateUser_comments_items>? get items;
+  BuiltList<GUpdateUserData_updateUser_comments_items> get items;
   static Serializer<GUpdateUserData_updateUser_comments> get serializer =>
       _$gUpdateUserDataUpdateUserCommentsSerializer;
   @override
@@ -4116,7 +4114,7 @@ abstract class GUpdateUserData_updateUser_comments_items
   @override
   GUpdateUserData_updateUser_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GUpdateUserData_updateUser_comments_items_habit? get habit;
   @override
@@ -4243,7 +4241,7 @@ abstract class GUpdateUserData_updateUser_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUpdateUserData_updateUser_comments_items_habit_comments_items>?
+  BuiltList<GUpdateUserData_updateUser_comments_items_habit_comments_items>
       get items;
   static Serializer<GUpdateUserData_updateUser_comments_items_habit_comments>
       get serializer =>
@@ -4286,7 +4284,7 @@ abstract class GUpdateUserData_updateUser_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -4325,7 +4323,7 @@ abstract class GUpdateUserData_updateUser_habits
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUpdateUserData_updateUser_habits_items>? get items;
+  BuiltList<GUpdateUserData_updateUser_habits_items> get items;
   static Serializer<GUpdateUserData_updateUser_habits> get serializer =>
       _$gUpdateUserDataUpdateUserHabitsSerializer;
   @override
@@ -4407,7 +4405,7 @@ abstract class GUpdateUserData_updateUser_habits_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUpdateUserData_updateUser_habits_items_comments_items>? get items;
+  BuiltList<GUpdateUserData_updateUser_habits_items_comments_items> get items;
   static Serializer<GUpdateUserData_updateUser_habits_items_comments>
       get serializer =>
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsSerializer;
@@ -4447,7 +4445,7 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items
   @override
   GUpdateUserData_updateUser_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GUpdateUserData_updateUser_habits_items_comments_items_habit? get habit;
   @override
@@ -4597,7 +4595,7 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit_comm
   String get G__typename;
   @override
   BuiltList<
-          GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items>?
+          GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GUpdateUserData_updateUser_habits_items_comments_items_habit_comments>
@@ -4644,7 +4642,7 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit_comm
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -4752,7 +4750,7 @@ abstract class GUpdateHabitData_updateHabit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUpdateHabitData_updateHabit_comments_items>? get items;
+  BuiltList<GUpdateHabitData_updateHabit_comments_items> get items;
   static Serializer<GUpdateHabitData_updateHabit_comments> get serializer =>
       _$gUpdateHabitDataUpdateHabitCommentsSerializer;
   @override
@@ -4790,7 +4788,7 @@ abstract class GUpdateHabitData_updateHabit_comments_items
   @override
   GUpdateHabitData_updateHabit_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GUpdateHabitData_updateHabit_comments_items_habit? get habit;
   @override
@@ -4920,7 +4918,7 @@ abstract class GUpdateHabitData_updateHabit_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUpdateHabitData_updateHabit_comments_items_habit_comments_items>?
+  BuiltList<GUpdateHabitData_updateHabit_comments_items_habit_comments_items>
       get items;
   static Serializer<GUpdateHabitData_updateHabit_comments_items_habit_comments>
       get serializer =>
@@ -4963,7 +4961,7 @@ abstract class GUpdateHabitData_updateHabit_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -5300,7 +5298,7 @@ abstract class GSearchUsersData
       b..G__typename = 'Query';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  GSearchUsersData_searchUsers? get searchUsers;
+  GSearchUsersData_listUsers? get listUsers;
   static Serializer<GSearchUsersData> get serializer =>
       _$gSearchUsersDataSerializer;
   Map<String, dynamic> toJson() =>
@@ -5310,42 +5308,41 @@ abstract class GSearchUsersData
       _i1.serializers.deserializeWith(GSearchUsersData.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers
+abstract class GSearchUsersData_listUsers
     implements
-        Built<GSearchUsersData_searchUsers,
-            GSearchUsersData_searchUsersBuilder> {
-  GSearchUsersData_searchUsers._();
+        Built<GSearchUsersData_listUsers, GSearchUsersData_listUsersBuilder> {
+  GSearchUsersData_listUsers._();
 
-  factory GSearchUsersData_searchUsers(
-          [Function(GSearchUsersData_searchUsersBuilder b) updates]) =
-      _$GSearchUsersData_searchUsers;
+  factory GSearchUsersData_listUsers(
+          [Function(GSearchUsersData_listUsersBuilder b) updates]) =
+      _$GSearchUsersData_listUsers;
 
-  static void _initializeBuilder(GSearchUsersData_searchUsersBuilder b) =>
-      b..G__typename = 'SearchableUserConnection';
+  static void _initializeBuilder(GSearchUsersData_listUsersBuilder b) =>
+      b..G__typename = 'ModelUserConnection';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  BuiltList<GSearchUsersData_searchUsers_items>? get items;
-  static Serializer<GSearchUsersData_searchUsers> get serializer =>
-      _$gSearchUsersDataSearchUsersSerializer;
+  BuiltList<GSearchUsersData_listUsers_items> get items;
+  static Serializer<GSearchUsersData_listUsers> get serializer =>
+      _$gSearchUsersDataListUsersSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers.serializer, this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers? fromJson(Map<String, dynamic> json) =>
+      GSearchUsersData_listUsers.serializer, this) as Map<String, dynamic>);
+  static GSearchUsersData_listUsers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers
-          .deserializeWith(GSearchUsersData_searchUsers.serializer, json);
+          .deserializeWith(GSearchUsersData_listUsers.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items
+abstract class GSearchUsersData_listUsers_items
     implements
-        Built<GSearchUsersData_searchUsers_items,
-            GSearchUsersData_searchUsers_itemsBuilder>,
+        Built<GSearchUsersData_listUsers_items,
+            GSearchUsersData_listUsers_itemsBuilder>,
         GAllPublicUserFields {
-  GSearchUsersData_searchUsers_items._();
+  GSearchUsersData_listUsers_items._();
 
-  factory GSearchUsersData_searchUsers_items(
-          [Function(GSearchUsersData_searchUsers_itemsBuilder b) updates]) =
-      _$GSearchUsersData_searchUsers_items;
+  factory GSearchUsersData_listUsers_items(
+          [Function(GSearchUsersData_listUsers_itemsBuilder b) updates]) =
+      _$GSearchUsersData_listUsers_items;
 
-  static void _initializeBuilder(GSearchUsersData_searchUsers_itemsBuilder b) =>
+  static void _initializeBuilder(GSearchUsersData_listUsers_itemsBuilder b) =>
       b..G__typename = 'User';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -5357,36 +5354,36 @@ abstract class GSearchUsersData_searchUsers_items
   @override
   String? get name;
   @override
-  GSearchUsersData_searchUsers_items_avatar? get avatar;
+  GSearchUsersData_listUsers_items_avatar? get avatar;
   @override
-  GSearchUsersData_searchUsers_items_comments? get comments;
+  GSearchUsersData_listUsers_items_comments? get comments;
   @override
-  GSearchUsersData_searchUsers_items_habits? get habits;
-  static Serializer<GSearchUsersData_searchUsers_items> get serializer =>
-      _$gSearchUsersDataSearchUsersItemsSerializer;
+  GSearchUsersData_listUsers_items_habits? get habits;
+  static Serializer<GSearchUsersData_listUsers_items> get serializer =>
+      _$gSearchUsersDataListUsersItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GSearchUsersData_searchUsers_items.serializer, this)
+          .serializeWith(GSearchUsersData_listUsers_items.serializer, this)
       as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items? fromJson(
+  static GSearchUsersData_listUsers_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers
-          .deserializeWith(GSearchUsersData_searchUsers_items.serializer, json);
+          .deserializeWith(GSearchUsersData_listUsers_items.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_avatar
+abstract class GSearchUsersData_listUsers_items_avatar
     implements
-        Built<GSearchUsersData_searchUsers_items_avatar,
-            GSearchUsersData_searchUsers_items_avatarBuilder>,
+        Built<GSearchUsersData_listUsers_items_avatar,
+            GSearchUsersData_listUsers_items_avatarBuilder>,
         GAllPublicUserFields_avatar {
-  GSearchUsersData_searchUsers_items_avatar._();
+  GSearchUsersData_listUsers_items_avatar._();
 
-  factory GSearchUsersData_searchUsers_items_avatar(
-      [Function(GSearchUsersData_searchUsers_items_avatarBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_avatar;
+  factory GSearchUsersData_listUsers_items_avatar(
+      [Function(GSearchUsersData_listUsers_items_avatarBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_avatar;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_avatarBuilder b) =>
+          GSearchUsersData_listUsers_items_avatarBuilder b) =>
       b..G__typename = 'S3Object';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -5401,63 +5398,63 @@ abstract class GSearchUsersData_searchUsers_items_avatar
   _i2.GAccessLevel? get accessLevel;
   @override
   String? get cognitoId;
-  static Serializer<GSearchUsersData_searchUsers_items_avatar> get serializer =>
-      _$gSearchUsersDataSearchUsersItemsAvatarSerializer;
+  static Serializer<GSearchUsersData_listUsers_items_avatar> get serializer =>
+      _$gSearchUsersDataListUsersItemsAvatarSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_searchUsers_items_avatar.serializer, this)
+          GSearchUsersData_listUsers_items_avatar.serializer, this)
       as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_avatar? fromJson(
+  static GSearchUsersData_listUsers_items_avatar? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_avatar.serializer, json);
+          GSearchUsersData_listUsers_items_avatar.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_comments
+abstract class GSearchUsersData_listUsers_items_comments
     implements
-        Built<GSearchUsersData_searchUsers_items_comments,
-            GSearchUsersData_searchUsers_items_commentsBuilder>,
+        Built<GSearchUsersData_listUsers_items_comments,
+            GSearchUsersData_listUsers_items_commentsBuilder>,
         GAllPublicUserFields_comments {
-  GSearchUsersData_searchUsers_items_comments._();
+  GSearchUsersData_listUsers_items_comments._();
 
-  factory GSearchUsersData_searchUsers_items_comments(
-      [Function(GSearchUsersData_searchUsers_items_commentsBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_comments;
+  factory GSearchUsersData_listUsers_items_comments(
+      [Function(GSearchUsersData_listUsers_items_commentsBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_comments;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_commentsBuilder b) =>
+          GSearchUsersData_listUsers_items_commentsBuilder b) =>
       b..G__typename = 'ModelCommentConnection';
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GSearchUsersData_searchUsers_items_comments_items>? get items;
-  static Serializer<GSearchUsersData_searchUsers_items_comments>
-      get serializer => _$gSearchUsersDataSearchUsersItemsCommentsSerializer;
+  BuiltList<GSearchUsersData_listUsers_items_comments_items> get items;
+  static Serializer<GSearchUsersData_listUsers_items_comments> get serializer =>
+      _$gSearchUsersDataListUsersItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_searchUsers_items_comments.serializer, this)
+          GSearchUsersData_listUsers_items_comments.serializer, this)
       as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_comments? fromJson(
+  static GSearchUsersData_listUsers_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_comments.serializer, json);
+          GSearchUsersData_listUsers_items_comments.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_comments_items
+abstract class GSearchUsersData_listUsers_items_comments_items
     implements
-        Built<GSearchUsersData_searchUsers_items_comments_items,
-            GSearchUsersData_searchUsers_items_comments_itemsBuilder>,
+        Built<GSearchUsersData_listUsers_items_comments_items,
+            GSearchUsersData_listUsers_items_comments_itemsBuilder>,
         GAllPublicUserFields_comments_items,
         GAllCommentFields {
-  GSearchUsersData_searchUsers_items_comments_items._();
+  GSearchUsersData_listUsers_items_comments_items._();
 
-  factory GSearchUsersData_searchUsers_items_comments_items(
-      [Function(GSearchUsersData_searchUsers_items_comments_itemsBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_comments_items;
+  factory GSearchUsersData_listUsers_items_comments_items(
+      [Function(GSearchUsersData_listUsers_items_comments_itemsBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_comments_items;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_comments_itemsBuilder b) =>
+          GSearchUsersData_listUsers_items_comments_itemsBuilder b) =>
       b..G__typename = 'Comment';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -5467,44 +5464,43 @@ abstract class GSearchUsersData_searchUsers_items_comments_items
   @override
   String? get owner;
   @override
-  GSearchUsersData_searchUsers_items_comments_items_by? get by;
+  GSearchUsersData_listUsers_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
-  GSearchUsersData_searchUsers_items_comments_items_habit? get habit;
+  GSearchUsersData_listUsers_items_comments_items_habit? get habit;
   @override
   String get comment;
   @override
   _i2.GAWSDateTime get createdAt;
   @override
   _i2.GAWSDateTime get updatedAt;
-  static Serializer<GSearchUsersData_searchUsers_items_comments_items>
-      get serializer =>
-          _$gSearchUsersDataSearchUsersItemsCommentsItemsSerializer;
+  static Serializer<GSearchUsersData_listUsers_items_comments_items>
+      get serializer => _$gSearchUsersDataListUsersItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_searchUsers_items_comments_items.serializer, this)
+          GSearchUsersData_listUsers_items_comments_items.serializer, this)
       as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_comments_items? fromJson(
+  static GSearchUsersData_listUsers_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_comments_items.serializer, json);
+          GSearchUsersData_listUsers_items_comments_items.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_comments_items_by
+abstract class GSearchUsersData_listUsers_items_comments_items_by
     implements
-        Built<GSearchUsersData_searchUsers_items_comments_items_by,
-            GSearchUsersData_searchUsers_items_comments_items_byBuilder>,
+        Built<GSearchUsersData_listUsers_items_comments_items_by,
+            GSearchUsersData_listUsers_items_comments_items_byBuilder>,
         GAllPublicUserFields_comments_items_by,
         GAllCommentFields_by {
-  GSearchUsersData_searchUsers_items_comments_items_by._();
+  GSearchUsersData_listUsers_items_comments_items_by._();
 
-  factory GSearchUsersData_searchUsers_items_comments_items_by(
-      [Function(GSearchUsersData_searchUsers_items_comments_items_byBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_comments_items_by;
+  factory GSearchUsersData_listUsers_items_comments_items_by(
+      [Function(GSearchUsersData_listUsers_items_comments_items_byBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_comments_items_by;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_comments_items_byBuilder b) =>
+          GSearchUsersData_listUsers_items_comments_items_byBuilder b) =>
       b..G__typename = 'User';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -5515,35 +5511,33 @@ abstract class GSearchUsersData_searchUsers_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
-  static Serializer<GSearchUsersData_searchUsers_items_comments_items_by>
+  static Serializer<GSearchUsersData_listUsers_items_comments_items_by>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsCommentsItemsBySerializer;
+          _$gSearchUsersDataListUsersItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_searchUsers_items_comments_items_by.serializer, this)
+          GSearchUsersData_listUsers_items_comments_items_by.serializer, this)
       as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_comments_items_by? fromJson(
+  static GSearchUsersData_listUsers_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_comments_items_by.serializer,
-          json);
+          GSearchUsersData_listUsers_items_comments_items_by.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_comments_items_habit
+abstract class GSearchUsersData_listUsers_items_comments_items_habit
     implements
-        Built<GSearchUsersData_searchUsers_items_comments_items_habit,
-            GSearchUsersData_searchUsers_items_comments_items_habitBuilder>,
+        Built<GSearchUsersData_listUsers_items_comments_items_habit,
+            GSearchUsersData_listUsers_items_comments_items_habitBuilder>,
         GAllPublicUserFields_comments_items_habit,
         GAllCommentFields_habit {
-  GSearchUsersData_searchUsers_items_comments_items_habit._();
+  GSearchUsersData_listUsers_items_comments_items_habit._();
 
-  factory GSearchUsersData_searchUsers_items_comments_items_habit(
-      [Function(
-              GSearchUsersData_searchUsers_items_comments_items_habitBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_comments_items_habit;
+  factory GSearchUsersData_listUsers_items_comments_items_habit(
+      [Function(GSearchUsersData_listUsers_items_comments_items_habitBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_comments_items_habit;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_comments_items_habitBuilder b) =>
+          GSearchUsersData_listUsers_items_comments_items_habitBuilder b) =>
       b..G__typename = 'Habit';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -5559,8 +5553,7 @@ abstract class GSearchUsersData_searchUsers_items_comments_items_habit
   @override
   String? get owner;
   @override
-  GSearchUsersData_searchUsers_items_comments_items_habit_comments?
-      get comments;
+  GSearchUsersData_listUsers_items_comments_items_habit_comments? get comments;
   @override
   _i2.GAWSDateTime get createdAt;
   @override
@@ -5569,37 +5562,37 @@ abstract class GSearchUsersData_searchUsers_items_comments_items_habit
   int? get ups;
   @override
   int? get downs;
-  static Serializer<GSearchUsersData_searchUsers_items_comments_items_habit>
+  static Serializer<GSearchUsersData_listUsers_items_comments_items_habit>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsCommentsItemsHabitSerializer;
+          _$gSearchUsersDataListUsersItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_comments_items_habit.serializer,
+      GSearchUsersData_listUsers_items_comments_items_habit.serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_comments_items_habit? fromJson(
+  static GSearchUsersData_listUsers_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_comments_items_habit.serializer,
+          GSearchUsersData_listUsers_items_comments_items_habit.serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_comments_items_habit_comments
+abstract class GSearchUsersData_listUsers_items_comments_items_habit_comments
     implements
-        Built<GSearchUsersData_searchUsers_items_comments_items_habit_comments,
-            GSearchUsersData_searchUsers_items_comments_items_habit_commentsBuilder>,
+        Built<GSearchUsersData_listUsers_items_comments_items_habit_comments,
+            GSearchUsersData_listUsers_items_comments_items_habit_commentsBuilder>,
         GAllPublicUserFields_comments_items_habit_comments,
         GAllCommentFields_habit_comments {
-  GSearchUsersData_searchUsers_items_comments_items_habit_comments._();
+  GSearchUsersData_listUsers_items_comments_items_habit_comments._();
 
-  factory GSearchUsersData_searchUsers_items_comments_items_habit_comments(
+  factory GSearchUsersData_listUsers_items_comments_items_habit_comments(
           [Function(
-                  GSearchUsersData_searchUsers_items_comments_items_habit_commentsBuilder
+                  GSearchUsersData_listUsers_items_comments_items_habit_commentsBuilder
                       b)
               updates]) =
-      _$GSearchUsersData_searchUsers_items_comments_items_habit_comments;
+      _$GSearchUsersData_listUsers_items_comments_items_habit_comments;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_comments_items_habit_commentsBuilder
+          GSearchUsersData_listUsers_items_comments_items_habit_commentsBuilder
               b) =>
       b..G__typename = 'ModelCommentConnection';
   @override
@@ -5607,42 +5600,41 @@ abstract class GSearchUsersData_searchUsers_items_comments_items_habit_comments
   String get G__typename;
   @override
   BuiltList<
-          GSearchUsersData_searchUsers_items_comments_items_habit_comments_items>?
+          GSearchUsersData_listUsers_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
-          GSearchUsersData_searchUsers_items_comments_items_habit_comments>
+          GSearchUsersData_listUsers_items_comments_items_habit_comments>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsCommentsItemsHabitCommentsSerializer;
+          _$gSearchUsersDataListUsersItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_comments_items_habit_comments
-          .serializer,
+      GSearchUsersData_listUsers_items_comments_items_habit_comments.serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_comments_items_habit_comments?
+  static GSearchUsersData_listUsers_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_comments_items_habit_comments
+          GSearchUsersData_listUsers_items_comments_items_habit_comments
               .serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_comments_items_habit_comments_items
+abstract class GSearchUsersData_listUsers_items_comments_items_habit_comments_items
     implements
         Built<
-            GSearchUsersData_searchUsers_items_comments_items_habit_comments_items,
-            GSearchUsersData_searchUsers_items_comments_items_habit_comments_itemsBuilder>,
+            GSearchUsersData_listUsers_items_comments_items_habit_comments_items,
+            GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsBuilder>,
         GAllPublicUserFields_comments_items_habit_comments_items,
         GAllCommentFields_habit_comments_items {
-  GSearchUsersData_searchUsers_items_comments_items_habit_comments_items._();
+  GSearchUsersData_listUsers_items_comments_items_habit_comments_items._();
 
-  factory GSearchUsersData_searchUsers_items_comments_items_habit_comments_items(
+  factory GSearchUsersData_listUsers_items_comments_items_habit_comments_items(
           [Function(
-                  GSearchUsersData_searchUsers_items_comments_items_habit_comments_itemsBuilder
+                  GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsBuilder
                       b)
               updates]) =
-      _$GSearchUsersData_searchUsers_items_comments_items_habit_comments_items;
+      _$GSearchUsersData_listUsers_items_comments_items_habit_comments_items;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_comments_items_habit_comments_itemsBuilder
+          GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsBuilder
               b) =>
       b..G__typename = 'Comment';
   @override
@@ -5653,7 +5645,7 @@ abstract class GSearchUsersData_searchUsers_items_comments_items_habit_comments_
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -5661,66 +5653,66 @@ abstract class GSearchUsersData_searchUsers_items_comments_items_habit_comments_
   @override
   _i2.GAWSDateTime get updatedAt;
   static Serializer<
-          GSearchUsersData_searchUsers_items_comments_items_habit_comments_items>
+          GSearchUsersData_listUsers_items_comments_items_habit_comments_items>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsCommentsItemsHabitCommentsItemsSerializer;
+          _$gSearchUsersDataListUsersItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_comments_items_habit_comments_items
+      GSearchUsersData_listUsers_items_comments_items_habit_comments_items
           .serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_comments_items_habit_comments_items?
+  static GSearchUsersData_listUsers_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_comments_items_habit_comments_items
+          GSearchUsersData_listUsers_items_comments_items_habit_comments_items
               .serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits
+abstract class GSearchUsersData_listUsers_items_habits
     implements
-        Built<GSearchUsersData_searchUsers_items_habits,
-            GSearchUsersData_searchUsers_items_habitsBuilder>,
+        Built<GSearchUsersData_listUsers_items_habits,
+            GSearchUsersData_listUsers_items_habitsBuilder>,
         GAllPublicUserFields_habits {
-  GSearchUsersData_searchUsers_items_habits._();
+  GSearchUsersData_listUsers_items_habits._();
 
-  factory GSearchUsersData_searchUsers_items_habits(
-      [Function(GSearchUsersData_searchUsers_items_habitsBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_habits;
+  factory GSearchUsersData_listUsers_items_habits(
+      [Function(GSearchUsersData_listUsers_items_habitsBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_habits;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habitsBuilder b) =>
+          GSearchUsersData_listUsers_items_habitsBuilder b) =>
       b..G__typename = 'ModelHabitConnection';
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GSearchUsersData_searchUsers_items_habits_items>? get items;
-  static Serializer<GSearchUsersData_searchUsers_items_habits> get serializer =>
-      _$gSearchUsersDataSearchUsersItemsHabitsSerializer;
+  BuiltList<GSearchUsersData_listUsers_items_habits_items> get items;
+  static Serializer<GSearchUsersData_listUsers_items_habits> get serializer =>
+      _$gSearchUsersDataListUsersItemsHabitsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_searchUsers_items_habits.serializer, this)
+          GSearchUsersData_listUsers_items_habits.serializer, this)
       as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits? fromJson(
+  static GSearchUsersData_listUsers_items_habits? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits.serializer, json);
+          GSearchUsersData_listUsers_items_habits.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits_items
+abstract class GSearchUsersData_listUsers_items_habits_items
     implements
-        Built<GSearchUsersData_searchUsers_items_habits_items,
-            GSearchUsersData_searchUsers_items_habits_itemsBuilder>,
+        Built<GSearchUsersData_listUsers_items_habits_items,
+            GSearchUsersData_listUsers_items_habits_itemsBuilder>,
         GAllPublicUserFields_habits_items,
         GAllHabitFields {
-  GSearchUsersData_searchUsers_items_habits_items._();
+  GSearchUsersData_listUsers_items_habits_items._();
 
-  factory GSearchUsersData_searchUsers_items_habits_items(
-      [Function(GSearchUsersData_searchUsers_items_habits_itemsBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_habits_items;
+  factory GSearchUsersData_listUsers_items_habits_items(
+      [Function(GSearchUsersData_listUsers_items_habits_itemsBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_habits_items;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habits_itemsBuilder b) =>
+          GSearchUsersData_listUsers_items_habits_itemsBuilder b) =>
       b..G__typename = 'Habit';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -5736,7 +5728,7 @@ abstract class GSearchUsersData_searchUsers_items_habits_items
   @override
   String? get owner;
   @override
-  GSearchUsersData_searchUsers_items_habits_items_comments? get comments;
+  GSearchUsersData_listUsers_items_habits_items_comments? get comments;
   @override
   _i2.GAWSDateTime get createdAt;
   @override
@@ -5745,72 +5737,71 @@ abstract class GSearchUsersData_searchUsers_items_habits_items
   int? get ups;
   @override
   int? get downs;
-  static Serializer<GSearchUsersData_searchUsers_items_habits_items>
-      get serializer => _$gSearchUsersDataSearchUsersItemsHabitsItemsSerializer;
+  static Serializer<GSearchUsersData_listUsers_items_habits_items>
+      get serializer => _$gSearchUsersDataListUsersItemsHabitsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_searchUsers_items_habits_items.serializer, this)
+          GSearchUsersData_listUsers_items_habits_items.serializer, this)
       as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits_items? fromJson(
+  static GSearchUsersData_listUsers_items_habits_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits_items.serializer, json);
+          GSearchUsersData_listUsers_items_habits_items.serializer, json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits_items_comments
+abstract class GSearchUsersData_listUsers_items_habits_items_comments
     implements
-        Built<GSearchUsersData_searchUsers_items_habits_items_comments,
-            GSearchUsersData_searchUsers_items_habits_items_commentsBuilder>,
+        Built<GSearchUsersData_listUsers_items_habits_items_comments,
+            GSearchUsersData_listUsers_items_habits_items_commentsBuilder>,
         GAllPublicUserFields_habits_items_comments,
         GAllHabitFields_comments {
-  GSearchUsersData_searchUsers_items_habits_items_comments._();
+  GSearchUsersData_listUsers_items_habits_items_comments._();
 
-  factory GSearchUsersData_searchUsers_items_habits_items_comments(
-      [Function(
-              GSearchUsersData_searchUsers_items_habits_items_commentsBuilder b)
-          updates]) = _$GSearchUsersData_searchUsers_items_habits_items_comments;
+  factory GSearchUsersData_listUsers_items_habits_items_comments(
+      [Function(GSearchUsersData_listUsers_items_habits_items_commentsBuilder b)
+          updates]) = _$GSearchUsersData_listUsers_items_habits_items_comments;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habits_items_commentsBuilder b) =>
+          GSearchUsersData_listUsers_items_habits_items_commentsBuilder b) =>
       b..G__typename = 'ModelCommentConnection';
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GSearchUsersData_searchUsers_items_habits_items_comments_items>?
+  BuiltList<GSearchUsersData_listUsers_items_habits_items_comments_items>
       get items;
-  static Serializer<GSearchUsersData_searchUsers_items_habits_items_comments>
+  static Serializer<GSearchUsersData_listUsers_items_habits_items_comments>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsHabitsItemsCommentsSerializer;
+          _$gSearchUsersDataListUsersItemsHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_habits_items_comments.serializer,
+      GSearchUsersData_listUsers_items_habits_items_comments.serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits_items_comments? fromJson(
+  static GSearchUsersData_listUsers_items_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits_items_comments.serializer,
+          GSearchUsersData_listUsers_items_habits_items_comments.serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items
+abstract class GSearchUsersData_listUsers_items_habits_items_comments_items
     implements
-        Built<GSearchUsersData_searchUsers_items_habits_items_comments_items,
-            GSearchUsersData_searchUsers_items_habits_items_comments_itemsBuilder>,
+        Built<GSearchUsersData_listUsers_items_habits_items_comments_items,
+            GSearchUsersData_listUsers_items_habits_items_comments_itemsBuilder>,
         GAllPublicUserFields_habits_items_comments_items,
         GAllHabitFields_comments_items,
         GAllCommentFields {
-  GSearchUsersData_searchUsers_items_habits_items_comments_items._();
+  GSearchUsersData_listUsers_items_habits_items_comments_items._();
 
-  factory GSearchUsersData_searchUsers_items_habits_items_comments_items(
+  factory GSearchUsersData_listUsers_items_habits_items_comments_items(
           [Function(
-                  GSearchUsersData_searchUsers_items_habits_items_comments_itemsBuilder
+                  GSearchUsersData_listUsers_items_habits_items_comments_itemsBuilder
                       b)
               updates]) =
-      _$GSearchUsersData_searchUsers_items_habits_items_comments_items;
+      _$GSearchUsersData_listUsers_items_habits_items_comments_items;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habits_items_comments_itemsBuilder
+          GSearchUsersData_listUsers_items_habits_items_comments_itemsBuilder
               b) =>
       b..G__typename = 'Comment';
   @override
@@ -5821,12 +5812,11 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items
   @override
   String? get owner;
   @override
-  GSearchUsersData_searchUsers_items_habits_items_comments_items_by? get by;
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
-  GSearchUsersData_searchUsers_items_habits_items_comments_items_habit?
-      get habit;
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit? get habit;
   @override
   String get comment;
   @override
@@ -5834,38 +5824,39 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items
   @override
   _i2.GAWSDateTime get updatedAt;
   static Serializer<
-          GSearchUsersData_searchUsers_items_habits_items_comments_items>
+          GSearchUsersData_listUsers_items_habits_items_comments_items>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsHabitsItemsCommentsItemsSerializer;
+          _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_habits_items_comments_items.serializer,
+      GSearchUsersData_listUsers_items_habits_items_comments_items.serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits_items_comments_items?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items
+  static GSearchUsersData_listUsers_items_habits_items_comments_items? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+          GSearchUsersData_listUsers_items_habits_items_comments_items
               .serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_by
+abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_by
     implements
-        Built<GSearchUsersData_searchUsers_items_habits_items_comments_items_by,
-            GSearchUsersData_searchUsers_items_habits_items_comments_items_byBuilder>,
+        Built<GSearchUsersData_listUsers_items_habits_items_comments_items_by,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder>,
         GAllPublicUserFields_habits_items_comments_items_by,
         GAllHabitFields_comments_items_by,
         GAllCommentFields_by {
-  GSearchUsersData_searchUsers_items_habits_items_comments_items_by._();
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by._();
 
-  factory GSearchUsersData_searchUsers_items_habits_items_comments_items_by(
+  factory GSearchUsersData_listUsers_items_habits_items_comments_items_by(
           [Function(
-                  GSearchUsersData_searchUsers_items_habits_items_comments_items_byBuilder
+                  GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder
                       b)
               updates]) =
-      _$GSearchUsersData_searchUsers_items_habits_items_comments_items_by;
+      _$GSearchUsersData_listUsers_items_habits_items_comments_items_by;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_byBuilder
+          GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder
               b) =>
       b..G__typename = 'User';
   @override
@@ -5878,40 +5869,40 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_by
   @override
   String? get name;
   static Serializer<
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_by>
+          GSearchUsersData_listUsers_items_habits_items_comments_items_by>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsHabitsItemsCommentsItemsBySerializer;
+          _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_habits_items_comments_items_by
+      GSearchUsersData_listUsers_items_habits_items_comments_items_by
           .serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits_items_comments_items_by?
+  static GSearchUsersData_listUsers_items_habits_items_comments_items_by?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_by
+          GSearchUsersData_listUsers_items_habits_items_comments_items_by
               .serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_habit
+abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habit
     implements
         Built<
-            GSearchUsersData_searchUsers_items_habits_items_comments_items_habit,
-            GSearchUsersData_searchUsers_items_habits_items_comments_items_habitBuilder>,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habitBuilder>,
         GAllPublicUserFields_habits_items_comments_items_habit,
         GAllHabitFields_comments_items_habit,
         GAllCommentFields_habit {
-  GSearchUsersData_searchUsers_items_habits_items_comments_items_habit._();
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit._();
 
-  factory GSearchUsersData_searchUsers_items_habits_items_comments_items_habit(
+  factory GSearchUsersData_listUsers_items_habits_items_comments_items_habit(
           [Function(
-                  GSearchUsersData_searchUsers_items_habits_items_comments_items_habitBuilder
+                  GSearchUsersData_listUsers_items_habits_items_comments_items_habitBuilder
                       b)
               updates]) =
-      _$GSearchUsersData_searchUsers_items_habits_items_comments_items_habit;
+      _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habitBuilder
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habitBuilder
               b) =>
       b..G__typename = 'Habit';
   @override
@@ -5928,7 +5919,7 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_ha
   @override
   String? get owner;
   @override
-  GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments?
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments?
       get comments;
   @override
   _i2.GAWSDateTime get createdAt;
@@ -5939,40 +5930,40 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_ha
   @override
   int? get downs;
   static Serializer<
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit>
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsHabitsItemsCommentsItemsHabitSerializer;
+          _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_habits_items_comments_items_habit
+      GSearchUsersData_listUsers_items_habits_items_comments_items_habit
           .serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits_items_comments_items_habit?
+  static GSearchUsersData_listUsers_items_habits_items_comments_items_habit?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit
               .serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments
+abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
     implements
         Built<
-            GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments,
-            GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_commentsBuilder>,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit_commentsBuilder>,
         GAllPublicUserFields_habits_items_comments_items_habit_comments,
         GAllHabitFields_comments_items_habit_comments,
         GAllCommentFields_habit_comments {
-  GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments._();
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments._();
 
-  factory GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments(
+  factory GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments(
           [Function(
-                  GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_commentsBuilder
+                  GSearchUsersData_listUsers_items_habits_items_comments_items_habit_commentsBuilder
                       b)
               updates]) =
-      _$GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments;
+      _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_commentsBuilder
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_commentsBuilder
               b) =>
       b..G__typename = 'ModelCommentConnection';
   @override
@@ -5980,43 +5971,43 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_ha
   String get G__typename;
   @override
   BuiltList<
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items>?
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments>
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsHabitsItemsCommentsItemsHabitCommentsSerializer;
+          _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments
+      GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
           .serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments?
+  static GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
               .serializer,
           json);
 }
 
-abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items
+abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
     implements
         Built<
-            GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items,
-            GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_itemsBuilder>,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_itemsBuilder>,
         GAllPublicUserFields_habits_items_comments_items_habit_comments_items,
         GAllHabitFields_comments_items_habit_comments_items,
         GAllCommentFields_habit_comments_items {
-  GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items._();
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items._();
 
-  factory GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items(
+  factory GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items(
           [Function(
-                  GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_itemsBuilder
+                  GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_itemsBuilder
                       b)
               updates]) =
-      _$GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items;
+      _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items;
 
   static void _initializeBuilder(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_itemsBuilder
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_itemsBuilder
               b) =>
       b..G__typename = 'Comment';
   @override
@@ -6027,7 +6018,7 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_ha
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -6035,17 +6026,17 @@ abstract class GSearchUsersData_searchUsers_items_habits_items_comments_items_ha
   @override
   _i2.GAWSDateTime get updatedAt;
   static Serializer<
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items>
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items>
       get serializer =>
-          _$gSearchUsersDataSearchUsersItemsHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
+          _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items
+      GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
           .serializer,
       this) as Map<String, dynamic>);
-  static GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items?
+  static GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_searchUsers_items_habits_items_comments_items_habit_comments_items
+          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
               .serializer,
           json);
 }
@@ -6061,7 +6052,7 @@ abstract class GSearchHabitsData
       b..G__typename = 'Query';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  GSearchHabitsData_searchHabits? get searchHabits;
+  GSearchHabitsData_listHabits? get listHabits;
   static Serializer<GSearchHabitsData> get serializer =>
       _$gSearchHabitsDataSerializer;
   Map<String, dynamic> toJson() =>
@@ -6071,43 +6062,42 @@ abstract class GSearchHabitsData
       _i1.serializers.deserializeWith(GSearchHabitsData.serializer, json);
 }
 
-abstract class GSearchHabitsData_searchHabits
+abstract class GSearchHabitsData_listHabits
     implements
-        Built<GSearchHabitsData_searchHabits,
-            GSearchHabitsData_searchHabitsBuilder> {
-  GSearchHabitsData_searchHabits._();
+        Built<GSearchHabitsData_listHabits,
+            GSearchHabitsData_listHabitsBuilder> {
+  GSearchHabitsData_listHabits._();
 
-  factory GSearchHabitsData_searchHabits(
-          [Function(GSearchHabitsData_searchHabitsBuilder b) updates]) =
-      _$GSearchHabitsData_searchHabits;
+  factory GSearchHabitsData_listHabits(
+          [Function(GSearchHabitsData_listHabitsBuilder b) updates]) =
+      _$GSearchHabitsData_listHabits;
 
-  static void _initializeBuilder(GSearchHabitsData_searchHabitsBuilder b) =>
-      b..G__typename = 'SearchableHabitConnection';
+  static void _initializeBuilder(GSearchHabitsData_listHabitsBuilder b) =>
+      b..G__typename = 'ModelHabitConnection';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  BuiltList<GSearchHabitsData_searchHabits_items>? get items;
-  static Serializer<GSearchHabitsData_searchHabits> get serializer =>
-      _$gSearchHabitsDataSearchHabitsSerializer;
+  BuiltList<GSearchHabitsData_listHabits_items> get items;
+  static Serializer<GSearchHabitsData_listHabits> get serializer =>
+      _$gSearchHabitsDataListHabitsSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_searchHabits.serializer, this) as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits? fromJson(Map<String, dynamic> json) =>
+      GSearchHabitsData_listHabits.serializer, this) as Map<String, dynamic>);
+  static GSearchHabitsData_listHabits? fromJson(Map<String, dynamic> json) =>
       _i1.serializers
-          .deserializeWith(GSearchHabitsData_searchHabits.serializer, json);
+          .deserializeWith(GSearchHabitsData_listHabits.serializer, json);
 }
 
-abstract class GSearchHabitsData_searchHabits_items
+abstract class GSearchHabitsData_listHabits_items
     implements
-        Built<GSearchHabitsData_searchHabits_items,
-            GSearchHabitsData_searchHabits_itemsBuilder>,
+        Built<GSearchHabitsData_listHabits_items,
+            GSearchHabitsData_listHabits_itemsBuilder>,
         GAllHabitFields {
-  GSearchHabitsData_searchHabits_items._();
+  GSearchHabitsData_listHabits_items._();
 
-  factory GSearchHabitsData_searchHabits_items(
-          [Function(GSearchHabitsData_searchHabits_itemsBuilder b) updates]) =
-      _$GSearchHabitsData_searchHabits_items;
+  factory GSearchHabitsData_listHabits_items(
+          [Function(GSearchHabitsData_listHabits_itemsBuilder b) updates]) =
+      _$GSearchHabitsData_listHabits_items;
 
-  static void _initializeBuilder(
-          GSearchHabitsData_searchHabits_itemsBuilder b) =>
+  static void _initializeBuilder(GSearchHabitsData_listHabits_itemsBuilder b) =>
       b..G__typename = 'Habit';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -6123,7 +6113,7 @@ abstract class GSearchHabitsData_searchHabits_items
   @override
   String? get owner;
   @override
-  GSearchHabitsData_searchHabits_items_comments? get comments;
+  GSearchHabitsData_listHabits_items_comments? get comments;
   @override
   _i2.GAWSDateTime get createdAt;
   @override
@@ -6132,63 +6122,63 @@ abstract class GSearchHabitsData_searchHabits_items
   int? get ups;
   @override
   int? get downs;
-  static Serializer<GSearchHabitsData_searchHabits_items> get serializer =>
-      _$gSearchHabitsDataSearchHabitsItemsSerializer;
+  static Serializer<GSearchHabitsData_listHabits_items> get serializer =>
+      _$gSearchHabitsDataListHabitsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GSearchHabitsData_searchHabits_items.serializer, this)
+          .serializeWith(GSearchHabitsData_listHabits_items.serializer, this)
       as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits_items? fromJson(
+  static GSearchHabitsData_listHabits_items? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-          GSearchHabitsData_searchHabits_items.serializer, json);
+      _i1.serializers
+          .deserializeWith(GSearchHabitsData_listHabits_items.serializer, json);
 }
 
-abstract class GSearchHabitsData_searchHabits_items_comments
+abstract class GSearchHabitsData_listHabits_items_comments
     implements
-        Built<GSearchHabitsData_searchHabits_items_comments,
-            GSearchHabitsData_searchHabits_items_commentsBuilder>,
+        Built<GSearchHabitsData_listHabits_items_comments,
+            GSearchHabitsData_listHabits_items_commentsBuilder>,
         GAllHabitFields_comments {
-  GSearchHabitsData_searchHabits_items_comments._();
+  GSearchHabitsData_listHabits_items_comments._();
 
-  factory GSearchHabitsData_searchHabits_items_comments(
-      [Function(GSearchHabitsData_searchHabits_items_commentsBuilder b)
-          updates]) = _$GSearchHabitsData_searchHabits_items_comments;
+  factory GSearchHabitsData_listHabits_items_comments(
+      [Function(GSearchHabitsData_listHabits_items_commentsBuilder b)
+          updates]) = _$GSearchHabitsData_listHabits_items_comments;
 
   static void _initializeBuilder(
-          GSearchHabitsData_searchHabits_items_commentsBuilder b) =>
+          GSearchHabitsData_listHabits_items_commentsBuilder b) =>
       b..G__typename = 'ModelCommentConnection';
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GSearchHabitsData_searchHabits_items_comments_items>? get items;
-  static Serializer<GSearchHabitsData_searchHabits_items_comments>
-      get serializer => _$gSearchHabitsDataSearchHabitsItemsCommentsSerializer;
+  BuiltList<GSearchHabitsData_listHabits_items_comments_items> get items;
+  static Serializer<GSearchHabitsData_listHabits_items_comments>
+      get serializer => _$gSearchHabitsDataListHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchHabitsData_searchHabits_items_comments.serializer, this)
+          GSearchHabitsData_listHabits_items_comments.serializer, this)
       as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits_items_comments? fromJson(
+  static GSearchHabitsData_listHabits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_searchHabits_items_comments.serializer, json);
+          GSearchHabitsData_listHabits_items_comments.serializer, json);
 }
 
-abstract class GSearchHabitsData_searchHabits_items_comments_items
+abstract class GSearchHabitsData_listHabits_items_comments_items
     implements
-        Built<GSearchHabitsData_searchHabits_items_comments_items,
-            GSearchHabitsData_searchHabits_items_comments_itemsBuilder>,
+        Built<GSearchHabitsData_listHabits_items_comments_items,
+            GSearchHabitsData_listHabits_items_comments_itemsBuilder>,
         GAllHabitFields_comments_items,
         GAllCommentFields {
-  GSearchHabitsData_searchHabits_items_comments_items._();
+  GSearchHabitsData_listHabits_items_comments_items._();
 
-  factory GSearchHabitsData_searchHabits_items_comments_items(
-      [Function(GSearchHabitsData_searchHabits_items_comments_itemsBuilder b)
-          updates]) = _$GSearchHabitsData_searchHabits_items_comments_items;
+  factory GSearchHabitsData_listHabits_items_comments_items(
+      [Function(GSearchHabitsData_listHabits_items_comments_itemsBuilder b)
+          updates]) = _$GSearchHabitsData_listHabits_items_comments_items;
 
   static void _initializeBuilder(
-          GSearchHabitsData_searchHabits_items_comments_itemsBuilder b) =>
+          GSearchHabitsData_listHabits_items_comments_itemsBuilder b) =>
       b..G__typename = 'Comment';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -6198,44 +6188,44 @@ abstract class GSearchHabitsData_searchHabits_items_comments_items
   @override
   String? get owner;
   @override
-  GSearchHabitsData_searchHabits_items_comments_items_by? get by;
+  GSearchHabitsData_listHabits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
-  GSearchHabitsData_searchHabits_items_comments_items_habit? get habit;
+  GSearchHabitsData_listHabits_items_comments_items_habit? get habit;
   @override
   String get comment;
   @override
   _i2.GAWSDateTime get createdAt;
   @override
   _i2.GAWSDateTime get updatedAt;
-  static Serializer<GSearchHabitsData_searchHabits_items_comments_items>
+  static Serializer<GSearchHabitsData_listHabits_items_comments_items>
       get serializer =>
-          _$gSearchHabitsDataSearchHabitsItemsCommentsItemsSerializer;
+          _$gSearchHabitsDataListHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchHabitsData_searchHabits_items_comments_items.serializer, this)
+          GSearchHabitsData_listHabits_items_comments_items.serializer, this)
       as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits_items_comments_items? fromJson(
+  static GSearchHabitsData_listHabits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_searchHabits_items_comments_items.serializer, json);
+          GSearchHabitsData_listHabits_items_comments_items.serializer, json);
 }
 
-abstract class GSearchHabitsData_searchHabits_items_comments_items_by
+abstract class GSearchHabitsData_listHabits_items_comments_items_by
     implements
-        Built<GSearchHabitsData_searchHabits_items_comments_items_by,
-            GSearchHabitsData_searchHabits_items_comments_items_byBuilder>,
+        Built<GSearchHabitsData_listHabits_items_comments_items_by,
+            GSearchHabitsData_listHabits_items_comments_items_byBuilder>,
         GAllHabitFields_comments_items_by,
         GAllCommentFields_by {
-  GSearchHabitsData_searchHabits_items_comments_items_by._();
+  GSearchHabitsData_listHabits_items_comments_items_by._();
 
-  factory GSearchHabitsData_searchHabits_items_comments_items_by(
-      [Function(GSearchHabitsData_searchHabits_items_comments_items_byBuilder b)
-          updates]) = _$GSearchHabitsData_searchHabits_items_comments_items_by;
+  factory GSearchHabitsData_listHabits_items_comments_items_by(
+      [Function(GSearchHabitsData_listHabits_items_comments_items_byBuilder b)
+          updates]) = _$GSearchHabitsData_listHabits_items_comments_items_by;
 
   static void _initializeBuilder(
-          GSearchHabitsData_searchHabits_items_comments_items_byBuilder b) =>
+          GSearchHabitsData_listHabits_items_comments_items_byBuilder b) =>
       b..G__typename = 'User';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -6246,36 +6236,35 @@ abstract class GSearchHabitsData_searchHabits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
-  static Serializer<GSearchHabitsData_searchHabits_items_comments_items_by>
+  static Serializer<GSearchHabitsData_listHabits_items_comments_items_by>
       get serializer =>
-          _$gSearchHabitsDataSearchHabitsItemsCommentsItemsBySerializer;
+          _$gSearchHabitsDataListHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_searchHabits_items_comments_items_by.serializer,
-      this) as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits_items_comments_items_by? fromJson(
+          GSearchHabitsData_listHabits_items_comments_items_by.serializer, this)
+      as Map<String, dynamic>);
+  static GSearchHabitsData_listHabits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_searchHabits_items_comments_items_by.serializer,
+          GSearchHabitsData_listHabits_items_comments_items_by.serializer,
           json);
 }
 
-abstract class GSearchHabitsData_searchHabits_items_comments_items_habit
+abstract class GSearchHabitsData_listHabits_items_comments_items_habit
     implements
-        Built<GSearchHabitsData_searchHabits_items_comments_items_habit,
-            GSearchHabitsData_searchHabits_items_comments_items_habitBuilder>,
+        Built<GSearchHabitsData_listHabits_items_comments_items_habit,
+            GSearchHabitsData_listHabits_items_comments_items_habitBuilder>,
         GAllHabitFields_comments_items_habit,
         GAllCommentFields_habit {
-  GSearchHabitsData_searchHabits_items_comments_items_habit._();
+  GSearchHabitsData_listHabits_items_comments_items_habit._();
 
-  factory GSearchHabitsData_searchHabits_items_comments_items_habit(
+  factory GSearchHabitsData_listHabits_items_comments_items_habit(
       [Function(
-              GSearchHabitsData_searchHabits_items_comments_items_habitBuilder
-                  b)
-          updates]) = _$GSearchHabitsData_searchHabits_items_comments_items_habit;
+              GSearchHabitsData_listHabits_items_comments_items_habitBuilder b)
+          updates]) = _$GSearchHabitsData_listHabits_items_comments_items_habit;
 
   static void _initializeBuilder(
-          GSearchHabitsData_searchHabits_items_comments_items_habitBuilder b) =>
+          GSearchHabitsData_listHabits_items_comments_items_habitBuilder b) =>
       b..G__typename = 'Habit';
   @override
   @BuiltValueField(wireName: '__typename')
@@ -6291,7 +6280,7 @@ abstract class GSearchHabitsData_searchHabits_items_comments_items_habit
   @override
   String? get owner;
   @override
-  GSearchHabitsData_searchHabits_items_comments_items_habit_comments?
+  GSearchHabitsData_listHabits_items_comments_items_habit_comments?
       get comments;
   @override
   _i2.GAWSDateTime get createdAt;
@@ -6301,38 +6290,37 @@ abstract class GSearchHabitsData_searchHabits_items_comments_items_habit
   int? get ups;
   @override
   int? get downs;
-  static Serializer<GSearchHabitsData_searchHabits_items_comments_items_habit>
+  static Serializer<GSearchHabitsData_listHabits_items_comments_items_habit>
       get serializer =>
-          _$gSearchHabitsDataSearchHabitsItemsCommentsItemsHabitSerializer;
+          _$gSearchHabitsDataListHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_searchHabits_items_comments_items_habit.serializer,
+      GSearchHabitsData_listHabits_items_comments_items_habit.serializer,
       this) as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits_items_comments_items_habit? fromJson(
+  static GSearchHabitsData_listHabits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_searchHabits_items_comments_items_habit.serializer,
+          GSearchHabitsData_listHabits_items_comments_items_habit.serializer,
           json);
 }
 
-abstract class GSearchHabitsData_searchHabits_items_comments_items_habit_comments
+abstract class GSearchHabitsData_listHabits_items_comments_items_habit_comments
     implements
-        Built<
-            GSearchHabitsData_searchHabits_items_comments_items_habit_comments,
-            GSearchHabitsData_searchHabits_items_comments_items_habit_commentsBuilder>,
+        Built<GSearchHabitsData_listHabits_items_comments_items_habit_comments,
+            GSearchHabitsData_listHabits_items_comments_items_habit_commentsBuilder>,
         GAllHabitFields_comments_items_habit_comments,
         GAllCommentFields_habit_comments {
-  GSearchHabitsData_searchHabits_items_comments_items_habit_comments._();
+  GSearchHabitsData_listHabits_items_comments_items_habit_comments._();
 
-  factory GSearchHabitsData_searchHabits_items_comments_items_habit_comments(
+  factory GSearchHabitsData_listHabits_items_comments_items_habit_comments(
           [Function(
-                  GSearchHabitsData_searchHabits_items_comments_items_habit_commentsBuilder
+                  GSearchHabitsData_listHabits_items_comments_items_habit_commentsBuilder
                       b)
               updates]) =
-      _$GSearchHabitsData_searchHabits_items_comments_items_habit_comments;
+      _$GSearchHabitsData_listHabits_items_comments_items_habit_comments;
 
   static void _initializeBuilder(
-          GSearchHabitsData_searchHabits_items_comments_items_habit_commentsBuilder
+          GSearchHabitsData_listHabits_items_comments_items_habit_commentsBuilder
               b) =>
       b..G__typename = 'ModelCommentConnection';
   @override
@@ -6340,42 +6328,42 @@ abstract class GSearchHabitsData_searchHabits_items_comments_items_habit_comment
   String get G__typename;
   @override
   BuiltList<
-          GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items>?
+          GSearchHabitsData_listHabits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
-          GSearchHabitsData_searchHabits_items_comments_items_habit_comments>
+          GSearchHabitsData_listHabits_items_comments_items_habit_comments>
       get serializer =>
-          _$gSearchHabitsDataSearchHabitsItemsCommentsItemsHabitCommentsSerializer;
+          _$gSearchHabitsDataListHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_searchHabits_items_comments_items_habit_comments
+      GSearchHabitsData_listHabits_items_comments_items_habit_comments
           .serializer,
       this) as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits_items_comments_items_habit_comments?
+  static GSearchHabitsData_listHabits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchHabitsData_searchHabits_items_comments_items_habit_comments
+          GSearchHabitsData_listHabits_items_comments_items_habit_comments
               .serializer,
           json);
 }
 
-abstract class GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items
+abstract class GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
     implements
         Built<
-            GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items,
-            GSearchHabitsData_searchHabits_items_comments_items_habit_comments_itemsBuilder>,
+            GSearchHabitsData_listHabits_items_comments_items_habit_comments_items,
+            GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilder>,
         GAllHabitFields_comments_items_habit_comments_items,
         GAllCommentFields_habit_comments_items {
-  GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items._();
+  GSearchHabitsData_listHabits_items_comments_items_habit_comments_items._();
 
-  factory GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items(
+  factory GSearchHabitsData_listHabits_items_comments_items_habit_comments_items(
           [Function(
-                  GSearchHabitsData_searchHabits_items_comments_items_habit_comments_itemsBuilder
+                  GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilder
                       b)
               updates]) =
-      _$GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items;
+      _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_items;
 
   static void _initializeBuilder(
-          GSearchHabitsData_searchHabits_items_comments_items_habit_comments_itemsBuilder
+          GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilder
               b) =>
       b..G__typename = 'Comment';
   @override
@@ -6386,7 +6374,7 @@ abstract class GSearchHabitsData_searchHabits_items_comments_items_habit_comment
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -6394,17 +6382,17 @@ abstract class GSearchHabitsData_searchHabits_items_comments_items_habit_comment
   @override
   _i2.GAWSDateTime get updatedAt;
   static Serializer<
-          GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items>
+          GSearchHabitsData_listHabits_items_comments_items_habit_comments_items>
       get serializer =>
-          _$gSearchHabitsDataSearchHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
+          _$gSearchHabitsDataListHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items
+      GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
           .serializer,
       this) as Map<String, dynamic>);
-  static GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items?
+  static GSearchHabitsData_listHabits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchHabitsData_searchHabits_items_comments_items_habit_comments_items
+          GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
               .serializer,
           json);
 }
@@ -6426,7 +6414,7 @@ abstract class GAllHabitFields {
 
 abstract class GAllHabitFields_comments {
   String get G__typename;
-  BuiltList<GAllHabitFields_comments_items>? get items;
+  BuiltList<GAllHabitFields_comments_items> get items;
   Map<String, dynamic> toJson();
 }
 
@@ -6440,7 +6428,7 @@ abstract class GAllHabitFields_comments_items implements GAllCommentFields {
   @override
   GAllHabitFields_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllHabitFields_comments_items_habit? get habit;
   @override
@@ -6500,7 +6488,7 @@ abstract class GAllHabitFields_comments_items_habit_comments
   @override
   String get G__typename;
   @override
-  BuiltList<GAllHabitFields_comments_items_habit_comments_items>? get items;
+  BuiltList<GAllHabitFields_comments_items_habit_comments_items> get items;
   @override
   Map<String, dynamic> toJson();
 }
@@ -6514,7 +6502,7 @@ abstract class GAllHabitFields_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -6586,7 +6574,7 @@ abstract class GAllHabitFieldsData_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllHabitFieldsData_comments_items>? get items;
+  BuiltList<GAllHabitFieldsData_comments_items> get items;
   static Serializer<GAllHabitFieldsData_comments> get serializer =>
       _$gAllHabitFieldsDataCommentsSerializer;
   @override
@@ -6621,7 +6609,7 @@ abstract class GAllHabitFieldsData_comments_items
   @override
   GAllHabitFieldsData_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllHabitFieldsData_comments_items_habit? get habit;
   @override
@@ -6747,7 +6735,7 @@ abstract class GAllHabitFieldsData_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllHabitFieldsData_comments_items_habit_comments_items>? get items;
+  BuiltList<GAllHabitFieldsData_comments_items_habit_comments_items> get items;
   static Serializer<GAllHabitFieldsData_comments_items_habit_comments>
       get serializer =>
           _$gAllHabitFieldsDataCommentsItemsHabitCommentsSerializer;
@@ -6785,7 +6773,7 @@ abstract class GAllHabitFieldsData_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -6829,7 +6817,7 @@ abstract class GAllPublicUserFields_avatar {
 
 abstract class GAllPublicUserFields_comments {
   String get G__typename;
-  BuiltList<GAllPublicUserFields_comments_items>? get items;
+  BuiltList<GAllPublicUserFields_comments_items> get items;
   Map<String, dynamic> toJson();
 }
 
@@ -6844,7 +6832,7 @@ abstract class GAllPublicUserFields_comments_items
   @override
   GAllPublicUserFields_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPublicUserFields_comments_items_habit? get habit;
   @override
@@ -6904,8 +6892,7 @@ abstract class GAllPublicUserFields_comments_items_habit_comments
   @override
   String get G__typename;
   @override
-  BuiltList<GAllPublicUserFields_comments_items_habit_comments_items>?
-      get items;
+  BuiltList<GAllPublicUserFields_comments_items_habit_comments_items> get items;
   @override
   Map<String, dynamic> toJson();
 }
@@ -6919,7 +6906,7 @@ abstract class GAllPublicUserFields_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -6932,7 +6919,7 @@ abstract class GAllPublicUserFields_comments_items_habit_comments_items
 
 abstract class GAllPublicUserFields_habits {
   String get G__typename;
-  BuiltList<GAllPublicUserFields_habits_items>? get items;
+  BuiltList<GAllPublicUserFields_habits_items> get items;
   Map<String, dynamic> toJson();
 }
 
@@ -6968,7 +6955,7 @@ abstract class GAllPublicUserFields_habits_items_comments
   @override
   String get G__typename;
   @override
-  BuiltList<GAllPublicUserFields_habits_items_comments_items>? get items;
+  BuiltList<GAllPublicUserFields_habits_items_comments_items> get items;
   @override
   Map<String, dynamic> toJson();
 }
@@ -6984,7 +6971,7 @@ abstract class GAllPublicUserFields_habits_items_comments_items
   @override
   GAllPublicUserFields_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPublicUserFields_habits_items_comments_items_habit? get habit;
   @override
@@ -7047,7 +7034,7 @@ abstract class GAllPublicUserFields_habits_items_comments_items_habit_comments
   String get G__typename;
   @override
   BuiltList<
-          GAllPublicUserFields_habits_items_comments_items_habit_comments_items>?
+          GAllPublicUserFields_habits_items_comments_items_habit_comments_items>
       get items;
   @override
   Map<String, dynamic> toJson();
@@ -7064,7 +7051,7 @@ abstract class GAllPublicUserFields_habits_items_comments_items_habit_comments_i
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -7167,7 +7154,7 @@ abstract class GAllPublicUserFieldsData_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPublicUserFieldsData_comments_items>? get items;
+  BuiltList<GAllPublicUserFieldsData_comments_items> get items;
   static Serializer<GAllPublicUserFieldsData_comments> get serializer =>
       _$gAllPublicUserFieldsDataCommentsSerializer;
   @override
@@ -7205,7 +7192,7 @@ abstract class GAllPublicUserFieldsData_comments_items
   @override
   GAllPublicUserFieldsData_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPublicUserFieldsData_comments_items_habit? get habit;
   @override
@@ -7331,7 +7318,7 @@ abstract class GAllPublicUserFieldsData_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPublicUserFieldsData_comments_items_habit_comments_items>?
+  BuiltList<GAllPublicUserFieldsData_comments_items_habit_comments_items>
       get items;
   static Serializer<GAllPublicUserFieldsData_comments_items_habit_comments>
       get serializer =>
@@ -7374,7 +7361,7 @@ abstract class GAllPublicUserFieldsData_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -7414,7 +7401,7 @@ abstract class GAllPublicUserFieldsData_habits
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPublicUserFieldsData_habits_items>? get items;
+  BuiltList<GAllPublicUserFieldsData_habits_items> get items;
   static Serializer<GAllPublicUserFieldsData_habits> get serializer =>
       _$gAllPublicUserFieldsDataHabitsSerializer;
   @override
@@ -7495,7 +7482,7 @@ abstract class GAllPublicUserFieldsData_habits_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPublicUserFieldsData_habits_items_comments_items>? get items;
+  BuiltList<GAllPublicUserFieldsData_habits_items_comments_items> get items;
   static Serializer<GAllPublicUserFieldsData_habits_items_comments>
       get serializer => _$gAllPublicUserFieldsDataHabitsItemsCommentsSerializer;
   @override
@@ -7534,7 +7521,7 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items
   @override
   GAllPublicUserFieldsData_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPublicUserFieldsData_habits_items_comments_items_habit? get habit;
   @override
@@ -7680,7 +7667,7 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit_commen
   String get G__typename;
   @override
   BuiltList<
-          GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items>?
+          GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GAllPublicUserFieldsData_habits_items_comments_items_habit_comments>
@@ -7727,7 +7714,7 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit_commen
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -7775,7 +7762,7 @@ abstract class GAllPrivateUserFields_avatar {
 
 abstract class GAllPrivateUserFields_comments {
   String get G__typename;
-  BuiltList<GAllPrivateUserFields_comments_items>? get items;
+  BuiltList<GAllPrivateUserFields_comments_items> get items;
   Map<String, dynamic> toJson();
 }
 
@@ -7790,7 +7777,7 @@ abstract class GAllPrivateUserFields_comments_items
   @override
   GAllPrivateUserFields_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPrivateUserFields_comments_items_habit? get habit;
   @override
@@ -7850,7 +7837,7 @@ abstract class GAllPrivateUserFields_comments_items_habit_comments
   @override
   String get G__typename;
   @override
-  BuiltList<GAllPrivateUserFields_comments_items_habit_comments_items>?
+  BuiltList<GAllPrivateUserFields_comments_items_habit_comments_items>
       get items;
   @override
   Map<String, dynamic> toJson();
@@ -7865,7 +7852,7 @@ abstract class GAllPrivateUserFields_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -7878,7 +7865,7 @@ abstract class GAllPrivateUserFields_comments_items_habit_comments_items
 
 abstract class GAllPrivateUserFields_habits {
   String get G__typename;
-  BuiltList<GAllPrivateUserFields_habits_items>? get items;
+  BuiltList<GAllPrivateUserFields_habits_items> get items;
   Map<String, dynamic> toJson();
 }
 
@@ -7914,7 +7901,7 @@ abstract class GAllPrivateUserFields_habits_items_comments
   @override
   String get G__typename;
   @override
-  BuiltList<GAllPrivateUserFields_habits_items_comments_items>? get items;
+  BuiltList<GAllPrivateUserFields_habits_items_comments_items> get items;
   @override
   Map<String, dynamic> toJson();
 }
@@ -7930,7 +7917,7 @@ abstract class GAllPrivateUserFields_habits_items_comments_items
   @override
   GAllPrivateUserFields_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPrivateUserFields_habits_items_comments_items_habit? get habit;
   @override
@@ -7994,7 +7981,7 @@ abstract class GAllPrivateUserFields_habits_items_comments_items_habit_comments
   String get G__typename;
   @override
   BuiltList<
-          GAllPrivateUserFields_habits_items_comments_items_habit_comments_items>?
+          GAllPrivateUserFields_habits_items_comments_items_habit_comments_items>
       get items;
   @override
   Map<String, dynamic> toJson();
@@ -8011,7 +7998,7 @@ abstract class GAllPrivateUserFields_habits_items_comments_items_habit_comments_
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -8119,7 +8106,7 @@ abstract class GAllPrivateUserFieldsData_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPrivateUserFieldsData_comments_items>? get items;
+  BuiltList<GAllPrivateUserFieldsData_comments_items> get items;
   static Serializer<GAllPrivateUserFieldsData_comments> get serializer =>
       _$gAllPrivateUserFieldsDataCommentsSerializer;
   @override
@@ -8157,7 +8144,7 @@ abstract class GAllPrivateUserFieldsData_comments_items
   @override
   GAllPrivateUserFieldsData_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPrivateUserFieldsData_comments_items_habit? get habit;
   @override
@@ -8284,7 +8271,7 @@ abstract class GAllPrivateUserFieldsData_comments_items_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPrivateUserFieldsData_comments_items_habit_comments_items>?
+  BuiltList<GAllPrivateUserFieldsData_comments_items_habit_comments_items>
       get items;
   static Serializer<GAllPrivateUserFieldsData_comments_items_habit_comments>
       get serializer =>
@@ -8327,7 +8314,7 @@ abstract class GAllPrivateUserFieldsData_comments_items_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -8366,7 +8353,7 @@ abstract class GAllPrivateUserFieldsData_habits
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPrivateUserFieldsData_habits_items>? get items;
+  BuiltList<GAllPrivateUserFieldsData_habits_items> get items;
   static Serializer<GAllPrivateUserFieldsData_habits> get serializer =>
       _$gAllPrivateUserFieldsDataHabitsSerializer;
   @override
@@ -8448,7 +8435,7 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllPrivateUserFieldsData_habits_items_comments_items>? get items;
+  BuiltList<GAllPrivateUserFieldsData_habits_items_comments_items> get items;
   static Serializer<GAllPrivateUserFieldsData_habits_items_comments>
       get serializer =>
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsSerializer;
@@ -8488,7 +8475,7 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items
   @override
   GAllPrivateUserFieldsData_habits_items_comments_items_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllPrivateUserFieldsData_habits_items_comments_items_habit? get habit;
   @override
@@ -8635,7 +8622,7 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comme
   String get G__typename;
   @override
   BuiltList<
-          GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items>?
+          GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items>
       get items;
   static Serializer<
           GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments>
@@ -8682,7 +8669,7 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comme
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override
@@ -8710,7 +8697,7 @@ abstract class GAllCommentFields {
   String get id;
   String? get owner;
   GAllCommentFields_by? get by;
-  String get habitId;
+  String? get habitId;
   GAllCommentFields_habit? get habit;
   String get comment;
   _i2.GAWSDateTime get createdAt;
@@ -8743,7 +8730,7 @@ abstract class GAllCommentFields_habit {
 
 abstract class GAllCommentFields_habit_comments {
   String get G__typename;
-  BuiltList<GAllCommentFields_habit_comments_items>? get items;
+  BuiltList<GAllCommentFields_habit_comments_items> get items;
   Map<String, dynamic> toJson();
 }
 
@@ -8751,7 +8738,7 @@ abstract class GAllCommentFields_habit_comments_items {
   String get G__typename;
   String get id;
   String? get owner;
-  String get habitId;
+  String? get habitId;
   String get comment;
   _i2.GAWSDateTime get createdAt;
   _i2.GAWSDateTime get updatedAt;
@@ -8780,7 +8767,7 @@ abstract class GAllCommentFieldsData
   @override
   GAllCommentFieldsData_by? get by;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   GAllCommentFieldsData_habit? get habit;
   @override
@@ -8894,7 +8881,7 @@ abstract class GAllCommentFieldsData_habit_comments
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GAllCommentFieldsData_habit_comments_items>? get items;
+  BuiltList<GAllCommentFieldsData_habit_comments_items> get items;
   static Serializer<GAllCommentFieldsData_habit_comments> get serializer =>
       _$gAllCommentFieldsDataHabitCommentsSerializer;
   @override
@@ -8929,7 +8916,7 @@ abstract class GAllCommentFieldsData_habit_comments_items
   @override
   String? get owner;
   @override
-  String get habitId;
+  String? get habitId;
   @override
   String get comment;
   @override

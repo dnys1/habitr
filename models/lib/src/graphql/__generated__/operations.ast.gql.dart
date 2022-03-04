@@ -1131,7 +1131,7 @@ const SearchUsers = _i1.OperationDefinitionNode(
     directives: [],
     selectionSet: _i1.SelectionSetNode(selections: [
       _i1.FieldNode(
-          name: _i1.NameNode(value: 'searchUsers'),
+          name: _i1.NameNode(value: 'listUsers'),
           alias: null,
           arguments: [
             _i1.ArgumentNode(
@@ -1148,8 +1148,7 @@ const SearchUsers = _i1.OperationDefinitionNode(
                                     name: _i1.NameNode(value: 'username'),
                                     value: _i1.ObjectValueNode(fields: [
                                       _i1.ObjectFieldNode(
-                                          name: _i1.NameNode(
-                                              value: 'matchPhrase'),
+                                          name: _i1.NameNode(value: 'contains'),
                                           value: _i1.VariableNode(
                                               name:
                                                   _i1.NameNode(value: 'query')))
@@ -1161,8 +1160,7 @@ const SearchUsers = _i1.OperationDefinitionNode(
                                         _i1.NameNode(value: 'displayUsername'),
                                     value: _i1.ObjectValueNode(fields: [
                                       _i1.ObjectFieldNode(
-                                          name: _i1.NameNode(
-                                              value: 'matchPhrase'),
+                                          name: _i1.NameNode(value: 'contains'),
                                           value: _i1.VariableNode(
                                               name:
                                                   _i1.NameNode(value: 'query')))
@@ -1173,8 +1171,7 @@ const SearchUsers = _i1.OperationDefinitionNode(
                                     name: _i1.NameNode(value: 'name'),
                                     value: _i1.ObjectValueNode(fields: [
                                       _i1.ObjectFieldNode(
-                                          name: _i1.NameNode(
-                                              value: 'matchPhrasePrefix'),
+                                          name: _i1.NameNode(value: 'contains'),
                                           value: _i1.VariableNode(
                                               name:
                                                   _i1.NameNode(value: 'query')))
@@ -1239,7 +1236,7 @@ const SearchHabits = _i1.OperationDefinitionNode(
     directives: [],
     selectionSet: _i1.SelectionSetNode(selections: [
       _i1.FieldNode(
-          name: _i1.NameNode(value: 'searchHabits'),
+          name: _i1.NameNode(value: 'listHabits'),
           alias: null,
           arguments: [
             _i1.ArgumentNode(
@@ -1253,8 +1250,7 @@ const SearchHabits = _i1.OperationDefinitionNode(
                               name: _i1.NameNode(value: 'tagline'),
                               value: _i1.ObjectValueNode(fields: [
                                 _i1.ObjectFieldNode(
-                                    name: _i1.NameNode(
-                                        value: 'matchPhrasePrefix'),
+                                    name: _i1.NameNode(value: 'contains'),
                                     value: _i1.VariableNode(
                                         name: _i1.NameNode(value: 'query')))
                               ]))
@@ -1264,8 +1260,7 @@ const SearchHabits = _i1.OperationDefinitionNode(
                               name: _i1.NameNode(value: 'details'),
                               value: _i1.ObjectValueNode(fields: [
                                 _i1.ObjectFieldNode(
-                                    name: _i1.NameNode(
-                                        value: 'matchPhrasePrefix'),
+                                    name: _i1.NameNode(value: 'contains'),
                                     value: _i1.VariableNode(
                                         name: _i1.NameNode(value: 'query')))
                               ]))

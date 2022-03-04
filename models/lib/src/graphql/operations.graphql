@@ -238,12 +238,12 @@ subscription SubscribeToVotes {
 ## Search
 
 query SearchUsers($query: String!, $excludeUsername: String!, $limit: Int!) {
-  searchUsers(
+  listUsers(
     filter: { and: {
       or: [
-        { username: { matchPhrase: $query } },
-        { displayUsername: { matchPhrase: $query } },
-        { name: { matchPhrasePrefix: $query } }
+        { username: { contains: $query } },
+        { displayUsername: { contains: $query } },
+        { name: { contains: $query } }
       ]
       displayUsername: { ne: $excludeUsername }
       username: { ne: $excludeUsername }
@@ -257,11 +257,11 @@ query SearchUsers($query: String!, $excludeUsername: String!, $limit: Int!) {
 }
 
 query SearchHabits($query: String!, $limit: Int!) {
-  searchHabits(
+  listHabits(
     filter: { 
       or: [
-        { tagline: { matchPhrasePrefix: $query } }
-        { details: { matchPhrasePrefix: $query } }
+        { tagline: { contains: $query } }
+        { details: { contains: $query } }
       ]
     },
     limit: $limit,

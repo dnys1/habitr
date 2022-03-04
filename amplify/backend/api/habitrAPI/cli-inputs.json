@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "paths": {
+    "/user/exists": {
+      "permissions": {
+        "setting": "open"
+      },
+      "lambdaFunction": "habitrUserExists"
+    },
+    "/user/identity": {
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      },
+      "lambdaFunction": "habitrUserIdentity"
+    }
+  }
+}

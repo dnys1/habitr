@@ -7,8 +7,8 @@ const defer = _i1.DirectiveDefinitionNode(
     args: [],
     locations: [_i1.DirectiveLocation.field],
     repeatable: false);
-const aws_auth = _i1.DirectiveDefinitionNode(
-    name: _i1.NameNode(value: 'aws_auth'),
+const aws_cognito_user_pools = _i1.DirectiveDefinitionNode(
+    name: _i1.NameNode(value: 'aws_cognito_user_pools'),
     args: [
       _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'cognito_groups'),
@@ -19,19 +19,6 @@ const aws_auth = _i1.DirectiveDefinitionNode(
               isNonNull: false),
           defaultValue: null)
     ],
-    locations: [_i1.DirectiveLocation.fieldDefinition],
-    repeatable: false);
-const aws_api_key = _i1.DirectiveDefinitionNode(
-    name: _i1.NameNode(value: 'aws_api_key'),
-    args: [],
-    locations: [
-      _i1.DirectiveLocation.object,
-      _i1.DirectiveLocation.fieldDefinition
-    ],
-    repeatable: false);
-const aws_lambda = _i1.DirectiveDefinitionNode(
-    name: _i1.NameNode(value: 'aws_lambda'),
-    args: [],
     locations: [
       _i1.DirectiveLocation.object,
       _i1.DirectiveLocation.fieldDefinition
@@ -65,16 +52,16 @@ const aws_subscribe = _i1.DirectiveDefinitionNode(
     ],
     locations: [_i1.DirectiveLocation.fieldDefinition],
     repeatable: false);
-const aws_iam = _i1.DirectiveDefinitionNode(
-    name: _i1.NameNode(value: 'aws_iam'),
+const aws_lambda = _i1.DirectiveDefinitionNode(
+    name: _i1.NameNode(value: 'aws_lambda'),
     args: [],
     locations: [
       _i1.DirectiveLocation.object,
       _i1.DirectiveLocation.fieldDefinition
     ],
     repeatable: false);
-const aws_cognito_user_pools = _i1.DirectiveDefinitionNode(
-    name: _i1.NameNode(value: 'aws_cognito_user_pools'),
+const aws_auth = _i1.DirectiveDefinitionNode(
+    name: _i1.NameNode(value: 'aws_auth'),
     args: [
       _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'cognito_groups'),
@@ -85,6 +72,11 @@ const aws_cognito_user_pools = _i1.DirectiveDefinitionNode(
               isNonNull: false),
           defaultValue: null)
     ],
+    locations: [_i1.DirectiveLocation.fieldDefinition],
+    repeatable: false);
+const aws_api_key = _i1.DirectiveDefinitionNode(
+    name: _i1.NameNode(value: 'aws_api_key'),
+    args: [],
     locations: [
       _i1.DirectiveLocation.object,
       _i1.DirectiveLocation.fieldDefinition
@@ -92,6 +84,14 @@ const aws_cognito_user_pools = _i1.DirectiveDefinitionNode(
     repeatable: false);
 const aws_oidc = _i1.DirectiveDefinitionNode(
     name: _i1.NameNode(value: 'aws_oidc'),
+    args: [],
+    locations: [
+      _i1.DirectiveLocation.object,
+      _i1.DirectiveLocation.fieldDefinition
+    ],
+    repeatable: false);
+const aws_iam = _i1.DirectiveDefinitionNode(
+    name: _i1.NameNode(value: 'aws_iam'),
     args: [],
     locations: [
       _i1.DirectiveLocation.object,
@@ -140,13 +140,25 @@ const Comment = _i1.ObjectTypeDefinitionNode(
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+              name: _i1.NameNode(value: 'ID'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'habit'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Habit'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'owner'),
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'by'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'User'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'comment'),
           directives: [],
@@ -164,19 +176,7 @@ const Comment = _i1.ObjectTypeDefinitionNode(
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'by'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'User'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'habit'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Habit'), isNonNull: false))
+              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true))
     ]);
 const CreateCommentInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'CreateCommentInput'),
@@ -192,7 +192,7 @@ const CreateCommentInput = _i1.InputObjectTypeDefinitionNode(
           name: _i1.NameNode(value: 'habitId'),
           directives: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'owner'),
@@ -362,30 +362,6 @@ const Habit = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'owner'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'createdAt'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'updatedAt'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'author'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'User'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'ups'),
           directives: [],
           args: [],
@@ -397,6 +373,18 @@ const Habit = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'owner'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'author'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'User'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'comments'),
           directives: [],
@@ -430,7 +418,19 @@ const Habit = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ModelCommentConnection'),
-              isNonNull: false))
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true))
     ]);
 const ModelAttributeTypes = _i1.EnumTypeDefinitionNode(
     name: _i1.NameNode(value: 'ModelAttributeTypes'),
@@ -515,6 +515,12 @@ const ModelCommentConditionInput = _i1.InputObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ModelIDInput'), isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'owner'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ModelStringInput'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'comment'),
           directives: [],
           type: _i1.NamedTypeNode(
@@ -558,7 +564,7 @@ const ModelCommentConnection = _i1.ObjectTypeDefinitionNode(
           type: _i1.ListTypeNode(
               type: _i1.NamedTypeNode(
                   name: _i1.NameNode(value: 'Comment'), isNonNull: false),
-              isNonNull: false)),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'nextToken'),
           directives: [],
@@ -718,6 +724,12 @@ const ModelHabitConditionInput = _i1.InputObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ModelIntInput'), isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'owner'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ModelStringInput'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'and'),
           directives: [],
           type: _i1.ListTypeNode(
@@ -755,7 +767,7 @@ const ModelHabitConnection = _i1.ObjectTypeDefinitionNode(
           type: _i1.ListTypeNode(
               type: _i1.NamedTypeNode(
                   name: _i1.NameNode(value: 'Habit'), isNonNull: false),
-              isNonNull: false)),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'nextToken'),
           directives: [],
@@ -1237,7 +1249,7 @@ const ModelUserConnection = _i1.ObjectTypeDefinitionNode(
           type: _i1.ListTypeNode(
               type: _i1.NamedTypeNode(
                   name: _i1.NameNode(value: 'User'), isNonNull: false),
-              isNonNull: false)),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'nextToken'),
           directives: [],
@@ -1525,46 +1537,6 @@ const Query = _i1.ObjectTypeDefinitionNode(
     interfaces: [],
     fields: [
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'searchUsers'),
-          directives: [],
-          args: [
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'filter'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'SearchableUserFilterInput'),
-                    isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'sort'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'SearchableUserSortInput'),
-                    isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'limit'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'nextToken'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'from'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null)
-          ],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableUserConnection'),
-              isNonNull: false)),
-      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'getUser'),
           directives: [],
           args: [
@@ -1618,29 +1590,22 @@ const Query = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ModelUserConnection'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'habitsByCategory'),
+          name: _i1.NameNode(value: 'getHabit'),
           directives: [],
           args: [
             _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'category'),
+                name: _i1.NameNode(value: 'id'),
                 directives: [],
                 type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Category'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'ups'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'ModelIntKeyConditionInput'),
-                    isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'sortDirection'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'ModelSortDirection'),
-                    isNonNull: false),
-                defaultValue: null),
+                    name: _i1.NameNode(value: 'ID'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Habit'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'listHabits'),
+          directives: [],
+          args: [
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'filter'),
                 directives: [],
@@ -1665,62 +1630,29 @@ const Query = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ModelHabitConnection'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'searchHabits'),
+          name: _i1.NameNode(value: 'habitsByCategory'),
           directives: [],
           args: [
             _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'filter'),
+                name: _i1.NameNode(value: 'category'),
                 directives: [],
                 type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'SearchableHabitFilterInput'),
+                    name: _i1.NameNode(value: 'Category'), isNonNull: true),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'ups'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ModelIntKeyConditionInput'),
                     isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'sort'),
+                name: _i1.NameNode(value: 'sortDirection'),
                 directives: [],
                 type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'SearchableHabitSortInput'),
+                    name: _i1.NameNode(value: 'ModelSortDirection'),
                     isNonNull: false),
                 defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'limit'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'nextToken'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'from'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null)
-          ],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableHabitConnection'),
-              isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'getHabit'),
-          directives: [],
-          args: [
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'id'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'ID'), isNonNull: true),
-                defaultValue: null)
-          ],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Habit'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'listHabits'),
-          directives: [],
-          args: [
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'filter'),
                 directives: [],
@@ -1854,571 +1786,6 @@ const S3ObjectInput = _i1.InputObjectTypeDefinitionNode(
           directives: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'AccessLevel'), isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableBooleanFilterInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableBooleanFilterInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'eq'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'ne'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableFloatFilterInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableFloatFilterInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'ne'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Float'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Float'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Float'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Float'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Float'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'eq'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Float'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'range'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'Float'), isNonNull: false),
-              isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableHabitConnection = _i1.ObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableHabitConnection'),
-    directives: [],
-    interfaces: [],
-    fields: [
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'items'),
-          directives: [],
-          args: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'Habit'), isNonNull: false),
-              isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'nextToken'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'total'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false))
-    ]);
-const SearchableHabitFilterInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableHabitFilterInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'id'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableIDFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'tagline'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableStringFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'details'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableStringFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'ups'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableIntFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'downs'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableIntFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'owner'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableStringFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'and'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'SearchableHabitFilterInput'),
-                  isNonNull: false),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'or'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'SearchableHabitFilterInput'),
-                  isNonNull: false),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'not'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableHabitFilterInput'),
-              isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableHabitSortableFields = _i1.EnumTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableHabitSortableFields'),
-    directives: [],
-    values: [
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'id'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'tagline'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'details'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'ups'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'downs'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'owner'), directives: [])
-    ]);
-const SearchableHabitSortInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableHabitSortInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'field'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableHabitSortableFields'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'direction'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableSortDirection'),
-              isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableIDFilterInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableIDFilterInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'ne'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'eq'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'match'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'matchPhrase'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'matchPhrasePrefix'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'multiMatch'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'exists'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'wildcard'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'regexp'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'range'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'ID'), isNonNull: false),
-              isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableIntFilterInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableIntFilterInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'ne'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'eq'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'range'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'Int'), isNonNull: false),
-              isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableSortDirection = _i1.EnumTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableSortDirection'),
-    directives: [],
-    values: [
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'asc'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'desc'), directives: [])
-    ]);
-const SearchableStringFilterInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableStringFilterInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'ne'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lt'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'gte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'lte'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'eq'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'match'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'matchPhrase'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'matchPhrasePrefix'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'multiMatch'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'exists'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'wildcard'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'regexp'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'range'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'String'), isNonNull: false),
-              isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableUserConnection = _i1.ObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableUserConnection'),
-    directives: [],
-    interfaces: [],
-    fields: [
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'items'),
-          directives: [],
-          args: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'User'), isNonNull: false),
-              isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'nextToken'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'total'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: false))
-    ]);
-const SearchableUserFilterInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableUserFilterInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'username'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableStringFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'displayUsername'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableStringFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'name'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableStringFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'upvotedHabits'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableIDFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'downvotedHabits'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableIDFilterInput'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'and'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'SearchableUserFilterInput'),
-                  isNonNull: false),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'or'),
-          directives: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'SearchableUserFilterInput'),
-                  isNonNull: false),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'not'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableUserFilterInput'),
-              isNonNull: false),
-          defaultValue: null)
-    ]);
-const SearchableUserSortableFields = _i1.EnumTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableUserSortableFields'),
-    directives: [],
-    values: [
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'username'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'displayUsername'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'name'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'upvotedHabits'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'downvotedHabits'), directives: [])
-    ]);
-const SearchableUserSortInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'SearchableUserSortInput'),
-    directives: [],
-    fields: [
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'field'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableUserSortableFields'),
-              isNonNull: false),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'direction'),
-          directives: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SearchableSortDirection'),
-              isNonNull: false),
           defaultValue: null)
     ]);
 const Subscription = _i1.ObjectTypeDefinitionNode(
@@ -2633,32 +2000,38 @@ const User = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'S3Object'), isNonNull: false)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'createdAt'),
+          name: _i1.NameNode(value: 'comments'),
           directives: [],
-          args: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'filter'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ModelCommentFilterInput'),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sortDirection'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ModelSortDirection'),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'limit'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'nextToken'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'updatedAt'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'upvotedHabits'),
-          directives: [],
-          args: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
-              isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'downvotedHabits'),
-          directives: [],
-          args: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              name: _i1.NameNode(value: 'ModelCommentConnection'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'habits'),
@@ -2695,39 +2068,33 @@ const User = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ModelHabitConnection'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'comments'),
+          name: _i1.NameNode(value: 'upvotedHabits'),
           directives: [],
-          args: [
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'filter'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'ModelCommentFilterInput'),
-                    isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'sortDirection'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'ModelSortDirection'),
-                    isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'limit'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'nextToken'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null)
-          ],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'downvotedHabits'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ModelCommentConnection'),
-              isNonNull: false))
+              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AWSDateTime'), isNonNull: true))
     ]);
 const VoteResult = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'VoteResult'),
@@ -2762,14 +2129,14 @@ const VoteType = _i1.EnumTypeDefinitionNode(
     ]);
 const document = _i1.DocumentNode(definitions: [
   defer,
-  aws_auth,
-  aws_api_key,
-  aws_lambda,
+  aws_cognito_user_pools,
   aws_publish,
   aws_subscribe,
-  aws_iam,
-  aws_cognito_user_pools,
+  aws_lambda,
+  aws_auth,
+  aws_api_key,
   aws_oidc,
+  aws_iam,
   AccessLevel,
   AWSDateTime,
   Category,
@@ -2804,20 +2171,6 @@ const document = _i1.DocumentNode(definitions: [
   Query,
   S3Object,
   S3ObjectInput,
-  SearchableBooleanFilterInput,
-  SearchableFloatFilterInput,
-  SearchableHabitConnection,
-  SearchableHabitFilterInput,
-  SearchableHabitSortableFields,
-  SearchableHabitSortInput,
-  SearchableIDFilterInput,
-  SearchableIntFilterInput,
-  SearchableSortDirection,
-  SearchableStringFilterInput,
-  SearchableUserConnection,
-  SearchableUserFilterInput,
-  SearchableUserSortableFields,
-  SearchableUserSortInput,
   Subscription,
   UpdateCommentInput,
   UpdateHabitInput,

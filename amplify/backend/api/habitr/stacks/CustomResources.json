@@ -38,7 +38,7 @@
         "FunctionVersion": "2018-05-29",
         "RequestMappingTemplateS3Location": {
           "Fn::Sub": [
-            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/pipelineFunctions/${ResolverFileName}",
+            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/${ResolverFileName}",
             {
               "S3DeploymentBucket": {
                 "Ref": "S3DeploymentBucket"
@@ -61,7 +61,7 @@
         },
         "ResponseMappingTemplateS3Location": {
           "Fn::Sub": [
-            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/pipelineFunctions/${ResolverFileName}",
+            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/${ResolverFileName}",
             {
               "S3DeploymentBucket": {
                 "Ref": "S3DeploymentBucket"
@@ -95,7 +95,7 @@
         "FunctionVersion": "2018-05-29",
         "RequestMappingTemplateS3Location": {
           "Fn::Sub": [
-            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/pipelineFunctions/${ResolverFileName}",
+            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/${ResolverFileName}",
             {
               "S3DeploymentBucket": {
                 "Ref": "S3DeploymentBucket"
@@ -118,7 +118,7 @@
         },
         "ResponseMappingTemplateS3Location": {
           "Fn::Sub": [
-            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/pipelineFunctions/${ResolverFileName}",
+            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/${ResolverFileName}",
             {
               "S3DeploymentBucket": {
                 "Ref": "S3DeploymentBucket"
@@ -152,7 +152,7 @@
         "FunctionVersion": "2018-05-29",
         "RequestMappingTemplateS3Location": {
           "Fn::Sub": [
-            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/pipelineFunctions/${ResolverFileName}",
+            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/${ResolverFileName}",
             {
               "S3DeploymentBucket": {
                 "Ref": "S3DeploymentBucket"
@@ -175,7 +175,7 @@
         },
         "ResponseMappingTemplateS3Location": {
           "Fn::Sub": [
-            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/pipelineFunctions/${ResolverFileName}",
+            "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/${ResolverFileName}",
             {
               "S3DeploymentBucket": {
                 "Ref": "S3DeploymentBucket"
