@@ -3,10 +3,7 @@ type User
     # but no subscriptions. This is so that we can create a custom
     # subscription which listens to changes for only one user instead 
     # of for all users (the default).
-    @model(subscriptions: null)
-
-    # Set the primary key/index to "username"
-    @key(fields: ["username"])
+    @model(subscriptions: { level: off })
 
     # Defines the authorization rules for model access
     @auth(rules: [
@@ -24,10 +21,12 @@ type User
     ])
 
     # Enable full-text search on all fields
-    @searchable 
+    # @searchable
 {
     # The user's Cognito username.
     username: String!
+        # Set the primary key/index to "username"
+        @primaryKey
 
     # The user's preferred display name, if different from their
     # auto-generated Cognito username, e.g. with social sign-in.
@@ -42,12 +41,12 @@ type User
     # A list of comments the user has posted.
     comments: [Comment!]
         # Creates a has-many relationship to the user's comments
-        @connection(keyName: "commentsByUser", fields: ["username"])
+        @hasMany(indexName: "commentsByUser", fields: ["username"])
 
     # A list of habits the user has created.
-    habits: [Habit!]
+    habits: [Habit!] 
         # Creates a has-many relationship to the user's posted habits
-        @connection(keyName: "habitsByUser", fields: ["username"])
+        @hasMany(indexName: "habitsByUser", fields: ["username"])
 
     # The habits this user has upvoted, used to keep voting fair.
     upvotedHabits: [ID!]
@@ -71,17 +70,11 @@ type User
 # The available categories for habits.
 enum Category { Health, Finance, Productivity, Relationships }
 
-type Habit 
+type Habit
     # Creates a model with all query, mutation, and subscription fields.
     @model
 
-    # Allows searching and sorting habits by category.
-    @key(name: "habitsByCategory", fields: ["category", "ups"], queryField: "habitsByCategory")
-
-    # Allows searching and sorting habits by their poster.
-    @key(name: "habitsByUser", fields: ["owner"])
-
-    # Defines the authorization rules for model access
+   # Defines the authorization rules for model access
     @auth(rules: [
         # Unrestricted access to members of the "admin" user pool group
         { allow: groups, groups: ["admin"] }
@@ -97,7 +90,8 @@ type Habit
     ])
 
     # Enable full-text search on all fields
-    @searchable {
+    # @searchable 
+{
 
     # The habit's unique ID.
     id: ID!
@@ -107,7 +101,12 @@ type Habit
 
     # The category which the habit belongs to.
     category: Category!
-
+        # Allows searching and sorting habits by category.
+        @index(
+            name: "habitsByCategory"
+            queryField: "habitsByCategory"
+            sortKeyFields: ["ups"]
+        )
     # A long-form description of the habit and the user's steps to achieve it.
     details: String
 
@@ -133,23 +132,19 @@ type Habit
 
     # The username of the user who created the habit.
     owner: String
+        # Allows searching and sorting habits by their poster.
+        @index(name: "habitsByUser")
 
     # The user who created the habit.
     author: User
-        @connection(fields: ["owner"])
+        @belongsTo(fields: ["owner"])
 
     # The list of comments associated with this habit.
-    comments: [Comment!]
-        @connection(keyName: "commentsByHabit", fields: ["id"])
+    comments: [Comment!] 
+        @hasMany(indexName: "commentsByHabit", fields: ["id"])
 }
 
 type Comment @model
-    # Allows searching and sorting comments by the user.
-    @key(name: "commentsByUser", fields: ["owner"])
-
-    # Allows searching and sorting comments by the associated habit.
-    @key(name: "commentsByHabit", fields: ["habitId"])
-
     # Defines the authorization rules for model access
     @auth(rules: [
         # Unrestricted access to members of the "admin" user pool group
@@ -169,18 +164,22 @@ type Comment @model
     id: ID!
 
     # The associated habit ID.
-    habitId: ID!
+    habitId: ID
+        # Allows searching and sorting comments by the associated habit.
+        @index(name: "commentsByHabit")
 
     # The associated habit.
     habit: Habit
-        @connection(fields: ["habitId"])
+        @belongsTo(fields: ["habitId"])
 
     # The author's username.
     owner: String
+        # Allows searching and sorting comments by the user.
+        @index(name: "commentsByUser")
 
     # The author.
     by: User
-        @connection(fields: ["owner"])
+        @belongsTo(fields: ["owner"])
 
     # The content of the comment.
     comment: String!
@@ -240,8 +239,8 @@ type Subscription {
         @aws_cognito_user_pools
 
     # Custom subscription for listening to all voting operations.
-    subscribeToVotes: VoteResult
-        @aws_subscribe(mutations: ["vote"])
-        @aws_api_key
-        @aws_cognito_user_pools
+    # subscribeToVotes: VoteResult
+    #     @aws_subscribe(mutations: ["vote"])
+    #     @aws_api_key
+    #     @aws_cognito_user_pools
 }
