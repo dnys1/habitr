@@ -8,5 +8,5 @@ models:
 
 .PHONY: schema
 schema:
-	npx get-graphql-schema -h 'x-api-key=${GRAPHQL_API_KEY}' ${GRAPHQL_API_ENDPOINT} > models/lib/src/graphql/schema.graphql
-	$(MAKE) models
+	@npx get-graphql-schema -h 'x-api-key=${GRAPHQL_API_KEY}' ${GRAPHQL_API_ENDPOINT} > models/lib/src/graphql/schema.graphql
+	@$(MAKE) models
