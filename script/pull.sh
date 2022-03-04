@@ -4,11 +4,12 @@
 # https://docs.amplify.aws/cli/usage/headless/#amplify-pull-parameters
 #
 # It expects the following environment variables to be set:
-#   - AWS_ACCESS_KEY_ID
-#   - AWS_SECRET_ACCESS_KEY
-#   - AWS_REGION
-#   - AMPLIFY_APP_ID
-#   - AMPLIFY_ENV
+#
+#   - AWS_ACCESS_KEY_ID             # Set automatically when using aws-actions/configure-aws-credentials
+#   - AWS_SECRET_ACCESS_KEY         # Set automatically when using aws-actions/configure-aws-credentials
+#   - AWS_REGION                    # The region where you deployed the Amplify project
+#   - AMPLIFY_APP_ID                # The app ID of the Amplify project
+#   - AMPLIFY_ENV_NAME              # The name of the Amplify environment to pull
 #
 
 set -e
@@ -40,6 +41,8 @@ aws_access_key_id=$AWS_ACCESS_KEY_ID
 aws_secret_access_key=$AWS_SECRET_ACCESS_KEY
 EOF
 
+# While it's recommended to use temporary credentials in CI/CD, it's
+# not required to run this script.
 if [[ -n $AWS_SESSION_TOKEN ]]; then
     echo "aws_session_token=$AWS_SESSION_TOKEN" >> $CREDENTIALS_PATH
 fi
@@ -58,7 +61,7 @@ AWSCLOUDFORMATIONCONFIG="{\
 AMPLIFY="{\
 \"projectName\":\"habitr\",\
 \"appId\":\"$AMPLIFY_APP_ID\",\
-\"envName\":\"$AMPLIFY_ENV\",\
+\"envName\":\"$AMPLIFY_ENV_NAME\",\
 \"defaultEditor\":\"code\"\
 }"
 FRONTEND="{\
@@ -69,7 +72,7 @@ PROVIDERS="{\
 \"awscloudformation\":$AWSCLOUDFORMATIONCONFIG\
 }"
 
-amplify-dev pull \
+amplify pull \
     --verbose \
     --amplify $AMPLIFY \
     --frontend $FRONTEND \
