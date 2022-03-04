@@ -33,7 +33,7 @@ jobs:
         # the pre-compiled version to speed up build.
         run: |
           AMPLIFY_VERSION=$(npm show @aws-amplify/cli version)
-          curl -o amplify.tgz https://github.com/aws-amplify/amplify-cli/releases/download/v${AMPLIFY_VERSION}/amplify-pkg-linux.tgz
+          curl -L -o amplify.tgz https://github.com/aws-amplify/amplify-cli/releases/download/v${AMPLIFY_VERSION}/amplify-pkg-linux.tgz
           tar -xzf amplify.tgz
           chmod +x amplify-pkg-linux
           mv amplify-pkg-linux /usr/local/bin/amplify
