@@ -12,7 +12,7 @@ env:
 
 jobs:
   build:
-    name: Build
+    name: Build (Android)
     runs-on: ubuntu-latest
 
     # Required for AWS credentials action
@@ -26,6 +26,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
+          # Preferred version for Amplify CLI
           node-version: '14'
       - name: Setup Amplify
         run: npm install -g @aws-amplify/cli
@@ -46,5 +47,6 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
+      - run: flutter config --no-analytics
       - run: flutter pub get
-        
+      - run: flutter build apk --debug
