@@ -84,9 +84,9 @@ class AmplifyStorageService extends StorageService {
     var newUrl = await getImageUrl(null, key);
     put(key, newUrl);
     return S3Object(
-      bucket,
-      region,
-      key,
+      bucket: bucket,
+      region: region,
+      key: key,
       accessLevel: AccessLevel.protected,
       cognitoId: await _authService.cognitoIdentityId,
     );

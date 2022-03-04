@@ -71,12 +71,14 @@ class HabitRepositoryImpl extends HabitRepository {
 
     addSubscription(_apiService.voteResults.listen((voteResult) {
       var user = voteResult.user;
-      if (user.username == _user?.username) {
+      if (user != null && user.username == _user?.username) {
         _updateUser(user);
       }
       var habit = voteResult.habit;
-      _updateHabit(habit);
-      setDoneLoading(habit.id);
+      if (habit != null) {
+        _updateHabit(habit);
+        setDoneLoading(habit.id);
+      }
     }));
   }
 
