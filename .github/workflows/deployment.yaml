@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-west-2
-  AMPLIFY_APP_ID: d2im70ka2jctil
+  AMPLIFY_APP_ID: ${{ secrets.AMPLIFY_APP_ID }}
   AMPLIFY_ENV_NAME: dev
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
       - name: Setup AWS
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::135644786197:role/amplify-habitr-cicd-role
+          role-to-assume: ${{ secrets.AMPLIFY_ROLE_ARN }}
           role-session-name: habitr-build
           aws-region: ${{ env.AWS_REGION }}
       - name: Pull Amplify project
