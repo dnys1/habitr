@@ -29,7 +29,14 @@ jobs:
           # Preferred version for Amplify CLI
           node-version: '14'
       - name: Setup Amplify
-        run: npm install -g @aws-amplify/cli
+        # Instead of running `npm install -g @aws-amplify/cli`, download
+        # the pre-compiled version to speed up build.
+        run: |
+          AMPLIFY_VERSION=$(npm show @aws-amplify/cli version)
+          curl -o amplify.tgz https://github.com/aws-amplify/amplify-cli/releases/download/v${AMPLIFY_VERSION}/amplify-pkg-linux.tgz
+          tar -xf amplify.tgz
+          chmod +x amplify-pkg-linux
+          mv amplify-pkg-linux /usr/local/bin/amplify
       - name: Setup AWS
         uses: aws-actions/configure-aws-credentials@v1
         with:
