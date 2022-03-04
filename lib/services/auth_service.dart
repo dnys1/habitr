@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
-import 'package:amplify_flutter/amplify.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:gql/ast.dart' as ast;
 import 'package:gql/language.dart' as gql;
 import 'package:habitr/models/ModelProvider.dart';
@@ -52,7 +52,7 @@ class AmplifyAuthService implements AuthService {
       },
     ))
         .map((event) {
-      final data = event.data;
+      final data = event.data!;
       final userMap = jsonDecode(data) as Map<String, dynamic>;
       return User.fromJson(userMap[operationName]);
     });
@@ -99,7 +99,7 @@ class AmplifyAuthService implements AuthService {
       username: username,
       password: password,
       options: CognitoSignUpOptions(
-        userAttributes: {'email': email},
+        userAttributes: {CognitoUserAttributeKey.email: email},
       ),
     );
   }

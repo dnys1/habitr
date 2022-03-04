@@ -1,5 +1,5 @@
 import 'package:amplify_analytics_pinpoint/amplify_analytics_pinpoint.dart';
-import 'package:amplify_flutter/amplify.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:habitr/services/preferences_service.dart';
 
 abstract class AnalyticsService {

@@ -24,13 +24,15 @@ import 'package:provider/provider.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Bloc.observer = HabitrBlocObserver();
   final preferencesService = SharedPreferencesService();
   await preferencesService.init();
 
-  runApp(MyApp(
-    preferencesService: preferencesService,
-  ));
+  BlocOverrides.runZoned(
+    () => runApp(MyApp(
+      preferencesService: preferencesService,
+    )),
+    blocObserver: HabitrBlocObserver(),
+  );
 }
 
 class MyApp extends StatefulWidget {

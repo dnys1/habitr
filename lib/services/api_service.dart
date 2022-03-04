@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:amplify_api/amplify_api.dart';
-import 'package:amplify_flutter/amplify.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:gql/ast.dart' as ast;
 import 'package:gql/language.dart' as gql;
 import 'package:habitr/models/Category.dart';
@@ -98,7 +98,7 @@ class AmplifyApiService implements ApiService {
     _voteResultStream ??= Amplify.API
         .subscribe<String>(GraphQLRequest(document: gql.printNode(_document)))
         .map((data) {
-      final map = jsonDecode(data.data) as Map<String, dynamic>;
+      final map = jsonDecode(data.data!) as Map<String, dynamic>;
       final voteResult = map[operationName] as Map<String, dynamic>?;
       if (voteResult == null) {
         return null;
