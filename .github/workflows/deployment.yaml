@@ -23,18 +23,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cache Flutter packages
-        uses: actions/cache@v2
-        env:
-          cache-name: pub-cache
-        with:
-          path: |
-            ~/.pub-cache
-            $FLUTTER_HOME/.pub-cache
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/pubspec.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
-            ${{ runner.os }}-
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -54,6 +42,20 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
+        # Optional. Speeds up `flutter pub get` by saving the local
+        # pub cache in between builds.
+      - name: Cache Flutter packages
+        uses: actions/cache@v2
+        env:
+          cache-name: pub-cache
+        with:
+          path: |
+            ~/.pub-cache
+            $FLUTTER_HOME/.pub-cache
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+            ${{ runner.os }}-
       - run: flutter config --no-analytics
       - run: flutter pub get
       - run: flutter build apk --debug
