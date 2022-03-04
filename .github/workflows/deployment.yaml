@@ -58,8 +58,8 @@ jobs:
         with:
           # These variables are set by subosito/flutter-action.
           path: |
-            $PUB_CACHE
-            $FLUTTER_ROOT/.pub-cache
+            ${{ env.PUB_CACHE }}
+            ${{ env.FLUTTER_ROOT }}/.pub-cache
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/pubspec.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
