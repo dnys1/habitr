@@ -1,0 +1,51 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  AWS_REGION: us-west-2
+  AMPLIFY_APP_ID: d2im70ka2jctil
+  AMPLIFY_ENV: dev
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    # Required for AWS credentials action
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Setup Amplify
+        run: npm install -g @aws-amplify/cli
+      - name: Setup AWS
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::135644786197:role/amplify-habitr-cicd-role
+          role-session-name: habitr-build
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Pull Amplify project
+        # run: dart script/pull.dart --appId ${{ env.AMPLIFY_APP_ID }} --env ${{ env.AMPLIFY_ENV }}
+        run: script/pull.sh
+      # - name: Setup Java
+      #   uses: actions/setup-java@v2
+      #   with:
+      #     distribution: 'zulu'
+      #     java-version: '11'
+      # - name: Setup Flutter
+      #   uses: subosito/flutter-action@v2
+      #   with:
+      #     channel: stable
+      # - run: flutter pub get
+        
