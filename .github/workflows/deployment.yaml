@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     # Required for AWS credentials action
     permissions:
@@ -45,7 +45,4 @@ jobs:
             ${{ runner.os }}-
       - run: flutter config --no-analytics
       - run: flutter pub get
-      - name: Build (Android)
-        run: flutter build apk --debug
-      - name: Build (iOS)
-        run: flutter build ios --debug
+      - run: flutter build apk --debug
