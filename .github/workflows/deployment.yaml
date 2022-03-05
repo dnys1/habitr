@@ -7,8 +7,8 @@ on:
 
 jobs:
   build:
-    name: Build (Android)
-    runs-on: ubuntu-latest
+    name: Build
+    runs-on: macos-latest
 
     # Required for AWS credentials action
     permissions:
@@ -23,7 +23,7 @@ jobs:
         with:
           app-id: ${{ secrets.AMPLIFY_APP_ID }}
           role-arn: ${{ secrets.AMPLIFY_ROLE_ARN }}
-          region: us-west-2
+          region: ${{ secrets.AMPLIFY_ENV_NAME }}
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -45,4 +45,7 @@ jobs:
             ${{ runner.os }}-
       - run: flutter config --no-analytics
       - run: flutter pub get
-      - run: flutter build apk --debug
+      - name: Build (Android)
+        run: flutter build apk --debug
+      - name: Build (iOS)
+        run: flutter build ios --debug
