@@ -58,10 +58,8 @@ AWSCLOUDFORMATIONCONFIG="{\
 \"region\":\"$AWS_REGION\"\
 }"
 AMPLIFY="{\
-\"projectName\":\"habitr\",\
 \"appId\":\"$AMPLIFY_APP_ID\",\
 \"envName\":\"$AMPLIFY_ENV_NAME\",\
-\"defaultEditor\":\"code\"\
 }"
 FRONTEND="{\
 \"frontend\":\"flutter\",\
