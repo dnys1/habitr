@@ -1,0 +1,47 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    # Required for AWS credentials action
+    permissions:
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Pull Amplify project
+        uses: dnys1/amplify-flutter-pull-action@v1
+        with:
+          app-id: ${{ secrets.AMPLIFY_APP_ID }}
+          role-arn: ${{ secrets.AMPLIFY_ROLE_ARN }}
+          region: ${{ secrets.AMPLIFY_ENV_NAME }}
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+        # Optional. Speeds up `flutter pub get` by saving the local
+        # pub cache in between builds.
+      - name: Cache Flutter packages
+        uses: actions/cache@v2
+        env:
+          cache-name: pub-cache
+        with:
+          # These variables are set by subosito/flutter-action.
+          path: |
+            ${{ env.PUB_CACHE }}
+            ${{ env.FLUTTER_ROOT }}/.pub-cache
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+            ${{ runner.os }}-
+      - run: flutter config --no-analytics
+      - run: flutter pub get
+      - run: flutter build apk --debug
