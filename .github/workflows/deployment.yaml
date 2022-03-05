@@ -5,11 +5,6 @@ on:
       - main
   pull_request:
 
-env:
-  AWS_REGION: us-west-2
-  AMPLIFY_APP_ID: ${{ secrets.AMPLIFY_APP_ID }}
-  AMPLIFY_ENV_NAME: dev
-
 jobs:
   build:
     name: Build (Android)
@@ -23,28 +18,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          # Preferred version for Amplify CLI
-          node-version: '14'
-      - name: Setup Amplify
-        # Instead of running `npm install -g @aws-amplify/cli`, download
-        # the pre-compiled version to speed up build.
-        run: |
-          AMPLIFY_VERSION=$(npm show @aws-amplify/cli version)
-          curl -L -o amplify.tgz https://github.com/aws-amplify/amplify-cli/releases/download/v${AMPLIFY_VERSION}/amplify-pkg-linux.tgz
-          tar -xzf amplify.tgz
-          chmod +x amplify-pkg-linux
-          mv amplify-pkg-linux /usr/local/bin/amplify
-      - name: Setup AWS
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: ${{ secrets.AMPLIFY_ROLE_ARN }}
-          role-session-name: habitr-build
-          aws-region: ${{ env.AWS_REGION }}
       - name: Pull Amplify project
-        run: script/pull.sh
+        uses: dnys1/amplify-flutter-pull-action@v1
+        with:
+          app-id: ${{ secrets.AMPLIFY_APP_ID }}
+          role-arn: ${{ secrets.AMPLIFY_ROLE_ARN }}
+          region: us-west-2
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
