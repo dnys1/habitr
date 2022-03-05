@@ -13,7 +13,6 @@ jobs:
     # Required for AWS credentials action
     permissions:
       id-token: write
-      contents: read
 
     steps:
       - name: Checkout
