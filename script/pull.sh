@@ -70,7 +70,6 @@ PROVIDERS="{\
 }"
 
 amplify pull \
-    --verbose \
     --amplify $AMPLIFY \
     --frontend $FRONTEND \
     --providers $PROVIDERS \
