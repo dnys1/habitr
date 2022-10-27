@@ -7,9 +7,9 @@ import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class UserListTile extends StatelessWidget {
-  final String username;
+  const UserListTile(this.username, {super.key});
 
-  const UserListTile(this.username, {Key? key}) : super(key: key);
+  final String username;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,8 @@ class UserListTile extends StatelessWidget {
             repo.isLoading(username),
           ),
           builder: (context, userStatus, _) {
-            var user = userStatus.item1;
-            var isLoading = user == null;
+            final user = userStatus.item1;
+            final isLoading = user == null;
             return _UserListTileView(
               user: user,
               isLoading: isLoading,
@@ -40,14 +40,12 @@ class UserListTile extends StatelessWidget {
 }
 
 class _UserListTileView extends StatelessWidget {
-  final User? user;
-  final bool isLoading;
-
   const _UserListTileView({
     required this.user,
     required this.isLoading,
-    Key? key,
-  }) : super(key: key);
+  });
+  final User? user;
+  final bool isLoading;
 
   Widget? get title {
     if (user == null) {
@@ -56,7 +54,7 @@ class _UserListTileView extends StatelessWidget {
     if (user!.name != null) {
       return Text(user!.name!);
     }
-    return Text('@' + (user!.displayUsername ?? user!.username));
+    return Text('@${user!.displayUsername ?? user!.username}');
   }
 
   Widget? get subtitle {
@@ -66,7 +64,7 @@ class _UserListTileView extends StatelessWidget {
     if (user!.name == null) {
       return null;
     }
-    return Text('@' + (user!.displayUsername ?? user!.username));
+    return Text('@${user!.displayUsername ?? user!.username}');
   }
 
   @override
@@ -75,13 +73,15 @@ class _UserListTileView extends StatelessWidget {
       onTap: user == null
           ? null
           : () {
-              Navigator.of(context).push<void>(MaterialPageRoute(
-                builder: (_) => UserInfoScreen(user: user!),
-              ));
+              Navigator.of(context).push<void>(
+                MaterialPageRoute(
+                  builder: (_) => UserInfoScreen(user: user),
+                ),
+              );
             },
       leading: user == null
           ? const CircularProgressIndicator()
-          : UserAvatar(user: user!, isThumbnail: true),
+          : UserAvatar(user: user, isThumbnail: true),
       title: isLoading ? const Text('Loading...') : title,
       trailing: const Icon(Icons.chevron_right),
       subtitle: subtitle,

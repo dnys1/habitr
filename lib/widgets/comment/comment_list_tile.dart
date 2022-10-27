@@ -7,7 +7,7 @@ import 'package:habitr/util/date.dart';
 import 'package:provider/provider.dart';
 
 class CommentListTile extends StatelessWidget {
-  const CommentListTile(this.commentId, {Key? key}) : super(key: key);
+  const CommentListTile(this.commentId, {super.key});
 
   final String commentId;
 
@@ -16,20 +16,22 @@ class CommentListTile extends StatelessWidget {
     return Selector<CommentRepository, Comment>(
       selector: (context, repo) => repo.get(commentId)!,
       builder: (context, comment, child) {
-        var repo = Provider.of<HabitRepository>(context, listen: false);
-        var habit = repo.get(comment.habitId);
+        final repo = Provider.of<HabitRepository>(context, listen: false);
+        final habit = repo.get(comment.habitId);
         return ListTile(
           title: Text(habit!.tagline),
           subtitle: Text(
-            prettyDate(comment.createdAt) + '\n\n' + comment.comment,
+            '${prettyDate(comment.createdAt)}\n\n${comment.comment}',
             overflow: TextOverflow.ellipsis,
           ),
           trailing: const Icon(Icons.chevron_right),
           isThreeLine: true,
           onTap: () {
-            Navigator.of(context).push<void>(MaterialPageRoute(
-              builder: (_) => HabitDetailsScreen(comment.habitId),
-            ));
+            Navigator.of(context).push<void>(
+              MaterialPageRoute(
+                builder: (_) => HabitDetailsScreen(comment.habitId),
+              ),
+            );
           },
         );
       },

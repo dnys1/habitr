@@ -24,10 +24,10 @@ extension HabitX on Habit {
   int get score => (ups ?? 0) - (downs ?? 0);
 }
 
-/** This is an auto generated class representing the Habit type in your schema. */
+/// This is an auto generated class representing the Habit type in your schema.
 @immutable
 class Habit extends Model {
-  static const classType = const _HabitModelType();
+  static const classType = _HabitModelType();
   final String id;
   final String tagline;
   final Category category;
@@ -116,7 +116,7 @@ class Habit extends Model {
 
   @override
   String toString() {
-    var buffer = new StringBuffer();
+    var buffer = StringBuffer();
 
     buffer.write("Habit {");
     buffer.write("id=" + "$id" + ", ");
@@ -167,10 +167,10 @@ class Habit extends Model {
     var owner = json['owner'] as String;
     var author = json['author'] == null
         ? null
-        : User.fromJson(new Map<String, dynamic>.from(json['author']));
+        : User.fromJson(Map<String, dynamic>.from(json['author']));
     var comments = json['comments']?['items'] is List
         ? (json['comments']?['items'] as List)
-            .map((e) => Comment.fromJson(new Map<String, dynamic>.from(e)))
+            .map((e) => Comment.fromJson(Map<String, dynamic>.from(e)))
             .toList()
         : null;
     var createdAt = DateTime.parse(json['createdAt'] as String);

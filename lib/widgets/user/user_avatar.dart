@@ -22,12 +22,11 @@ class UserAvatar extends StatelessWidget {
     this.selectImage,
     this.isThumbnail = false,
     this.isEditing = false,
-    Key? key,
-  })  : assert(
+    super.key,
+  }) : assert(
           user != null || username != null,
           'Either user or username must be provided',
-        ),
-        super(key: key);
+        );
 
   final User? user;
   final String? username;
@@ -80,14 +79,6 @@ class UserAvatar extends StatelessWidget {
 }
 
 class _UserAvatarView extends StatefulWidget {
-  final UserAvatarViewModel viewModel;
-  final FutureOr<void> Function()? selectImage;
-  final void Function()? onTap;
-  final bool canEdit;
-  final bool isEditing;
-  final bool isThumbnail;
-  final File? image;
-
   const _UserAvatarView(
     this.viewModel, {
     this.onTap,
@@ -96,8 +87,15 @@ class _UserAvatarView extends StatefulWidget {
     required this.isEditing,
     required this.isThumbnail,
     this.image,
-    Key? key,
-  }) : super(key: key);
+  });
+
+  final UserAvatarViewModel viewModel;
+  final FutureOr<void> Function()? selectImage;
+  final void Function()? onTap;
+  final bool canEdit;
+  final bool isEditing;
+  final bool isThumbnail;
+  final File? image;
 
   @override
   _UserAvatarViewState createState() => _UserAvatarViewState();
@@ -111,7 +109,7 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
       builder: (context) {
         return GestureDetector(
           onTap: () => Navigator.of(context).pop(),
-          child: Container(
+          child: ColoredBox(
             color: Colors.black,
             child: CachedNetworkImage(imageUrl: url),
           ),
@@ -154,11 +152,11 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
       imageBuilder: (context, imageProvider) {
         return Stack(
           children: [
-            Container(
+            DecoratedBox(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: imageProvider,
-                  // TODO: Make responsive
+                  // TODO(dnys1): Make responsive
                   fit: BoxFit.fitHeight,
                 ),
                 shape: BoxShape.circle,
@@ -185,13 +183,13 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final radius = max(constraints.biggest.shortestSide / 4, 40.0);
+        final radius = max<double>(constraints.biggest.shortestSide / 4, 40);
 
         return Selector2<UserRepository, StorageService, String?>(
           selector: (context, userRepo, storageService) {
             if (widget.viewModel.isBusy) return null;
-            var user = userRepo.get(widget.viewModel.user.username)!;
-            var key = user.avatar?.key;
+            final user = userRepo.get(widget.viewModel.user.username)!;
+            final key = user.avatar?.key;
             if (key == null) {
               return null;
             }

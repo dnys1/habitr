@@ -10,13 +10,12 @@ class UsernameFormField extends StatelessWidget {
     this.controller,
     this.onUpdateRequestFuture,
     this.validator,
-    Key? key,
-  })  : assert(
+    super.key,
+  }) : assert(
           (onChanged != null || controller != null) &&
               (onChanged == null || controller == null),
           'Either onChanged or controller must be provided, but not both.',
-        ),
-        super(key: key);
+        );
 
   final void Function(String)? onChanged;
   final TextEditingController? controller;
@@ -52,8 +51,7 @@ class _UsernameFormFieldView extends StatelessWidget {
     required this.onChanged,
     required this.controller,
     this.validator,
-    Key? key,
-  }) : super(key: key);
+  });
 
   static const _usernameSuffixRadius = 12.0;
 

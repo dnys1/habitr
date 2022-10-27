@@ -21,7 +21,7 @@ class UsernameFormFieldViewModel extends BaseViewModel {
     _usernameExistsController.stream
         .debounce(const Duration(milliseconds: 400))
         .listen((username) {
-      var future = _getUsernameExists(username);
+      final future = _getUsernameExists(username);
       if (onUpdateRequestFuture != null) {
         onUpdateRequestFuture(future);
       }

@@ -4,9 +4,9 @@ import 'package:habitr/blocs/auth/auth_data.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 
 class LoginViewModel extends BaseViewModel {
-  final AuthBloc _authBloc;
-
   LoginViewModel(this._authBloc);
+
+  final AuthBloc _authBloc;
 
   final _formKey = GlobalKey<FormState>();
   GlobalKey<FormState> get formKey => _formKey;

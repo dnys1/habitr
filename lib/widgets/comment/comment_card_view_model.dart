@@ -17,7 +17,7 @@ class CommentCardViewModel extends BaseViewModel {
   Future<void> _init() async {
     setBusy(true);
     try {
-      var comment = await _commentRepository.getComment(commentId);
+      final comment = await _commentRepository.getComment(commentId);
       if (comment == null) {
         throw Exception('Comment not found');
       }

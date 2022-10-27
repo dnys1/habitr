@@ -5,7 +5,7 @@ import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/blocs/auth/auth_data.dart';
 
 class LoginWithAmazonButton extends StatelessWidget {
-  const LoginWithAmazonButton({Key? key}) : super(key: key);
+  const LoginWithAmazonButton({super.key});
 
   void _login(AuthBloc authBloc) {
     authBloc.add(
@@ -37,7 +37,7 @@ class LoginWithAmazonButton extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: LayoutBuilder(
                 builder: (context, constraints) {
-                  var height = constraints.maxHeight / 2;
+                  final height = constraints.maxHeight / 2;
                   return Image.asset(
                     'assets/images/amazon_logo.png',
                     width: height * _imageSize.aspectRatio,

@@ -23,8 +23,7 @@ import 'ModelProvider.dart';
 import 'package:amplify_core/amplify_core.dart';
 import 'package:flutter/foundation.dart';
 
-
-/** This is an auto generated class representing the S3Object type in your schema. */
+/// This is an auto generated class representing the S3Object type in your schema.
 @immutable
 class S3Object {
   final String? _bucket;
@@ -36,146 +35,164 @@ class S3Object {
   String get bucket {
     try {
       return _bucket!;
-    } catch(e) {
-      throw new AmplifyCodeGenModelException(
-          AmplifyExceptionMessages.codeGenRequiredFieldForceCastExceptionMessage,
-          recoverySuggestion:
-            AmplifyExceptionMessages.codeGenRequiredFieldForceCastRecoverySuggestion,
-          underlyingException: e.toString()
-          );
+    } catch (e) {
+      throw AmplifyCodeGenModelException(
+          AmplifyExceptionMessages
+              .codeGenRequiredFieldForceCastExceptionMessage,
+          recoverySuggestion: AmplifyExceptionMessages
+              .codeGenRequiredFieldForceCastRecoverySuggestion,
+          underlyingException: e.toString());
     }
   }
-  
+
   String get region {
     try {
       return _region!;
-    } catch(e) {
-      throw new AmplifyCodeGenModelException(
-          AmplifyExceptionMessages.codeGenRequiredFieldForceCastExceptionMessage,
-          recoverySuggestion:
-            AmplifyExceptionMessages.codeGenRequiredFieldForceCastRecoverySuggestion,
-          underlyingException: e.toString()
-          );
+    } catch (e) {
+      throw AmplifyCodeGenModelException(
+          AmplifyExceptionMessages
+              .codeGenRequiredFieldForceCastExceptionMessage,
+          recoverySuggestion: AmplifyExceptionMessages
+              .codeGenRequiredFieldForceCastRecoverySuggestion,
+          underlyingException: e.toString());
     }
   }
-  
+
   String get key {
     try {
       return _key!;
-    } catch(e) {
-      throw new AmplifyCodeGenModelException(
-          AmplifyExceptionMessages.codeGenRequiredFieldForceCastExceptionMessage,
-          recoverySuggestion:
-            AmplifyExceptionMessages.codeGenRequiredFieldForceCastRecoverySuggestion,
-          underlyingException: e.toString()
-          );
+    } catch (e) {
+      throw AmplifyCodeGenModelException(
+          AmplifyExceptionMessages
+              .codeGenRequiredFieldForceCastExceptionMessage,
+          recoverySuggestion: AmplifyExceptionMessages
+              .codeGenRequiredFieldForceCastRecoverySuggestion,
+          underlyingException: e.toString());
     }
   }
-  
+
   String? get cognitoId {
     return _cognitoId;
   }
-  
+
   AccessLevel? get accessLevel {
     return _accessLevel;
   }
-  
-  const S3Object._internal({required bucket, required region, required key, cognitoId, accessLevel}): _bucket = bucket, _region = region, _key = key, _cognitoId = cognitoId, _accessLevel = accessLevel;
-  
-  factory S3Object({required String bucket, required String region, required String key, String? cognitoId, AccessLevel? accessLevel}) {
+
+  const S3Object._internal(
+      {required bucket, required region, required key, cognitoId, accessLevel})
+      : _bucket = bucket,
+        _region = region,
+        _key = key,
+        _cognitoId = cognitoId,
+        _accessLevel = accessLevel;
+
+  factory S3Object(
+      {required String bucket,
+      required String region,
+      required String key,
+      String? cognitoId,
+      AccessLevel? accessLevel}) {
     return S3Object._internal(
-      bucket: bucket,
-      region: region,
-      key: key,
-      cognitoId: cognitoId,
-      accessLevel: accessLevel);
+        bucket: bucket,
+        region: region,
+        key: key,
+        cognitoId: cognitoId,
+        accessLevel: accessLevel);
   }
-  
+
   bool equals(Object other) {
     return this == other;
   }
-  
+
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is S3Object &&
-      _bucket == other._bucket &&
-      _region == other._region &&
-      _key == other._key &&
-      _cognitoId == other._cognitoId &&
-      _accessLevel == other._accessLevel;
+        _bucket == other._bucket &&
+        _region == other._region &&
+        _key == other._key &&
+        _cognitoId == other._cognitoId &&
+        _accessLevel == other._accessLevel;
   }
-  
+
   @override
   int get hashCode => toString().hashCode;
-  
+
   @override
   String toString() {
-    var buffer = new StringBuffer();
-    
+    var buffer = StringBuffer();
+
     buffer.write("S3Object {");
     buffer.write("bucket=" + "$_bucket" + ", ");
     buffer.write("region=" + "$_region" + ", ");
     buffer.write("key=" + "$_key" + ", ");
     buffer.write("cognitoId=" + "$_cognitoId" + ", ");
-    buffer.write("accessLevel=" + (_accessLevel != null ? enumToString(_accessLevel)! : "null"));
+    buffer.write("accessLevel=" +
+        (_accessLevel != null ? enumToString(_accessLevel)! : "null"));
     buffer.write("}");
-    
+
     return buffer.toString();
   }
-  
-  S3Object copyWith({String? bucket, String? region, String? key, String? cognitoId, AccessLevel? accessLevel}) {
-    return S3Object._internal(
-      bucket: bucket ?? this.bucket,
-      region: region ?? this.region,
-      key: key ?? this.key,
-      cognitoId: cognitoId ?? this.cognitoId,
-      accessLevel: accessLevel ?? this.accessLevel);
-  }
-  
-  S3Object.fromJson(Map<String, dynamic> json)  
-    : _bucket = json['bucket'],
-      _region = json['region'],
-      _key = json['key'],
-      _cognitoId = json['cognitoId'],
-      _accessLevel = enumFromString<AccessLevel>(json['accessLevel'], AccessLevel.values);
-  
-  Map<String, dynamic> toJson() => {
-    'bucket': _bucket, 'region': _region, 'key': _key, 'cognitoId': _cognitoId, 'accessLevel': enumToString(_accessLevel)
-  };
 
-  static var schema = Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
+  S3Object copyWith(
+      {String? bucket,
+      String? region,
+      String? key,
+      String? cognitoId,
+      AccessLevel? accessLevel}) {
+    return S3Object._internal(
+        bucket: bucket ?? this.bucket,
+        region: region ?? this.region,
+        key: key ?? this.key,
+        cognitoId: cognitoId ?? this.cognitoId,
+        accessLevel: accessLevel ?? this.accessLevel);
+  }
+
+  S3Object.fromJson(Map<String, dynamic> json)
+      : _bucket = json['bucket'],
+        _region = json['region'],
+        _key = json['key'],
+        _cognitoId = json['cognitoId'],
+        _accessLevel = enumFromString<AccessLevel>(
+            json['accessLevel'], AccessLevel.values);
+
+  Map<String, dynamic> toJson() => {
+        'bucket': _bucket,
+        'region': _region,
+        'key': _key,
+        'cognitoId': _cognitoId,
+        'accessLevel': enumToString(_accessLevel)
+      };
+
+  static var schema =
+      Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
     modelSchemaDefinition.name = "S3Object";
     modelSchemaDefinition.pluralName = "S3Objects";
-    
+
     modelSchemaDefinition.addField(ModelFieldDefinition.customTypeField(
-      fieldName: 'bucket',
-      isRequired: true,
-      ofType: ModelFieldType(ModelFieldTypeEnum.string)
-    ));
-    
+        fieldName: 'bucket',
+        isRequired: true,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+
     modelSchemaDefinition.addField(ModelFieldDefinition.customTypeField(
-      fieldName: 'region',
-      isRequired: true,
-      ofType: ModelFieldType(ModelFieldTypeEnum.string)
-    ));
-    
+        fieldName: 'region',
+        isRequired: true,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+
     modelSchemaDefinition.addField(ModelFieldDefinition.customTypeField(
-      fieldName: 'key',
-      isRequired: true,
-      ofType: ModelFieldType(ModelFieldTypeEnum.string)
-    ));
-    
+        fieldName: 'key',
+        isRequired: true,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+
     modelSchemaDefinition.addField(ModelFieldDefinition.customTypeField(
-      fieldName: 'cognitoId',
-      isRequired: false,
-      ofType: ModelFieldType(ModelFieldTypeEnum.string)
-    ));
-    
+        fieldName: 'cognitoId',
+        isRequired: false,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+
     modelSchemaDefinition.addField(ModelFieldDefinition.customTypeField(
-      fieldName: 'accessLevel',
-      isRequired: false,
-      ofType: ModelFieldType(ModelFieldTypeEnum.enumeration)
-    ));
+        fieldName: 'accessLevel',
+        isRequired: false,
+        ofType: ModelFieldType(ModelFieldTypeEnum.enumeration)));
   });
 }

@@ -6,14 +6,14 @@ import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
 class VerifyViewModel extends BaseViewModel {
-  final AuthBloc _authBloc;
-  final AuthService _authService;
-
   VerifyViewModel({
     required AuthBloc authBloc,
     required AuthService authService,
   })  : _authBloc = authBloc,
         _authService = authService;
+
+  final AuthBloc _authBloc;
+  final AuthService _authService;
 
   final _formKey = GlobalKey<FormState>();
   GlobalKey<FormState> get formKey => _formKey;

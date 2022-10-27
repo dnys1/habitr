@@ -84,13 +84,13 @@ class _$GListHabitsVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'limit':
           result.limit = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int))! as int;
           break;
         case 'nextToken':
           result.nextToken = serializers.deserialize(value,
@@ -143,17 +143,17 @@ class _$GListHabitsByCategoryVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'limit':
           result.limit = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int))! as int;
           break;
         case 'nextToken':
           result.nextToken = serializers.deserialize(value,
@@ -192,13 +192,13 @@ class _$GGetHabitVarsSerializer implements StructuredSerializer<GGetHabitVars> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'habitId':
           result.habitId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -233,13 +233,13 @@ class _$GGetUserVarsSerializer implements StructuredSerializer<GGetUserVars> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -274,13 +274,13 @@ class _$GGetSelfVarsSerializer implements StructuredSerializer<GGetSelfVars> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -316,13 +316,13 @@ class _$GGetCommentVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'commentId':
           result.commentId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -362,13 +362,13 @@ class _$GSubscribeToUserVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -411,13 +411,13 @@ class _$GCreateUserVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -461,17 +461,17 @@ class _$GCreateCommentVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'habitId':
           result.habitId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -517,17 +517,17 @@ class _$GCreateHabitVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -567,7 +567,7 @@ class _$GUpdateUserVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -610,7 +610,7 @@ class _$GUpdateHabitVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -655,17 +655,17 @@ class _$GDeleteHabitVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'habitId':
           result.habitId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'version':
           result.version = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int))! as int;
           break;
       }
     }
@@ -704,17 +704,17 @@ class _$GVoteForHabitVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'habitId':
           result.habitId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'type':
           result.type = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GVoteType)) as _i2.GVoteType;
+              specifiedType: const FullType(_i2.GVoteType))! as _i2.GVoteType;
           break;
       }
     }
@@ -780,21 +780,21 @@ class _$GSearchUsersVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'query':
           result.query = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'excludeUsername':
           result.excludeUsername = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'limit':
           result.limit = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int))! as int;
           break;
       }
     }
@@ -832,17 +832,17 @@ class _$GSearchHabitsVarsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'query':
           result.query = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'limit':
           result.limit = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int))! as int;
           break;
       }
     }
@@ -983,10 +983,10 @@ class _$GListHabitsVars extends GListHabitsVars {
   final String? nextToken;
 
   factory _$GListHabitsVars([void Function(GListHabitsVarsBuilder)? updates]) =>
-      (new GListHabitsVarsBuilder()..update(updates)).build();
+      (new GListHabitsVarsBuilder()..update(updates))._build();
 
   _$GListHabitsVars._({required this.limit, this.nextToken}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(limit, 'GListHabitsVars', 'limit');
+    BuiltValueNullFieldError.checkNotNull(limit, r'GListHabitsVars', 'limit');
   }
 
   @override
@@ -1012,7 +1012,7 @@ class _$GListHabitsVars extends GListHabitsVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabitsVars')
+    return (newBuiltValueToStringHelper(r'GListHabitsVars')
           ..add('limit', limit)
           ..add('nextToken', nextToken))
         .toString();
@@ -1055,11 +1055,13 @@ class GListHabitsVarsBuilder
   }
 
   @override
-  _$GListHabitsVars build() {
+  GListHabitsVars build() => _build();
+
+  _$GListHabitsVars _build() {
     final _$result = _$v ??
         new _$GListHabitsVars._(
             limit: BuiltValueNullFieldError.checkNotNull(
-                limit, 'GListHabitsVars', 'limit'),
+                limit, r'GListHabitsVars', 'limit'),
             nextToken: nextToken);
     replace(_$result);
     return _$result;
@@ -1076,15 +1078,15 @@ class _$GListHabitsByCategoryVars extends GListHabitsByCategoryVars {
 
   factory _$GListHabitsByCategoryVars(
           [void Function(GListHabitsByCategoryVarsBuilder)? updates]) =>
-      (new GListHabitsByCategoryVarsBuilder()..update(updates)).build();
+      (new GListHabitsByCategoryVarsBuilder()..update(updates))._build();
 
   _$GListHabitsByCategoryVars._(
       {required this.category, required this.limit, this.nextToken})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GListHabitsByCategoryVars', 'category');
+        category, r'GListHabitsByCategoryVars', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        limit, 'GListHabitsByCategoryVars', 'limit');
+        limit, r'GListHabitsByCategoryVars', 'limit');
   }
 
   @override
@@ -1113,7 +1115,7 @@ class _$GListHabitsByCategoryVars extends GListHabitsByCategoryVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabitsByCategoryVars')
+    return (newBuiltValueToStringHelper(r'GListHabitsByCategoryVars')
           ..add('category', category)
           ..add('limit', limit)
           ..add('nextToken', nextToken))
@@ -1163,13 +1165,15 @@ class GListHabitsByCategoryVarsBuilder
   }
 
   @override
-  _$GListHabitsByCategoryVars build() {
+  GListHabitsByCategoryVars build() => _build();
+
+  _$GListHabitsByCategoryVars _build() {
     final _$result = _$v ??
         new _$GListHabitsByCategoryVars._(
             category: BuiltValueNullFieldError.checkNotNull(
-                category, 'GListHabitsByCategoryVars', 'category'),
+                category, r'GListHabitsByCategoryVars', 'category'),
             limit: BuiltValueNullFieldError.checkNotNull(
-                limit, 'GListHabitsByCategoryVars', 'limit'),
+                limit, r'GListHabitsByCategoryVars', 'limit'),
             nextToken: nextToken);
     replace(_$result);
     return _$result;
@@ -1181,10 +1185,10 @@ class _$GGetHabitVars extends GGetHabitVars {
   final String habitId;
 
   factory _$GGetHabitVars([void Function(GGetHabitVarsBuilder)? updates]) =>
-      (new GGetHabitVarsBuilder()..update(updates)).build();
+      (new GGetHabitVarsBuilder()..update(updates))._build();
 
   _$GGetHabitVars._({required this.habitId}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(habitId, 'GGetHabitVars', 'habitId');
+    BuiltValueNullFieldError.checkNotNull(habitId, r'GGetHabitVars', 'habitId');
   }
 
   @override
@@ -1207,7 +1211,7 @@ class _$GGetHabitVars extends GGetHabitVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetHabitVars')
+    return (newBuiltValueToStringHelper(r'GGetHabitVars')
           ..add('habitId', habitId))
         .toString();
   }
@@ -1244,11 +1248,13 @@ class GGetHabitVarsBuilder
   }
 
   @override
-  _$GGetHabitVars build() {
+  GGetHabitVars build() => _build();
+
+  _$GGetHabitVars _build() {
     final _$result = _$v ??
         new _$GGetHabitVars._(
             habitId: BuiltValueNullFieldError.checkNotNull(
-                habitId, 'GGetHabitVars', 'habitId'));
+                habitId, r'GGetHabitVars', 'habitId'));
     replace(_$result);
     return _$result;
   }
@@ -1259,10 +1265,11 @@ class _$GGetUserVars extends GGetUserVars {
   final String username;
 
   factory _$GGetUserVars([void Function(GGetUserVarsBuilder)? updates]) =>
-      (new GGetUserVarsBuilder()..update(updates)).build();
+      (new GGetUserVarsBuilder()..update(updates))._build();
 
   _$GGetUserVars._({required this.username}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(username, 'GGetUserVars', 'username');
+    BuiltValueNullFieldError.checkNotNull(
+        username, r'GGetUserVars', 'username');
   }
 
   @override
@@ -1285,7 +1292,7 @@ class _$GGetUserVars extends GGetUserVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserVars')
+    return (newBuiltValueToStringHelper(r'GGetUserVars')
           ..add('username', username))
         .toString();
   }
@@ -1322,11 +1329,13 @@ class GGetUserVarsBuilder
   }
 
   @override
-  _$GGetUserVars build() {
+  GGetUserVars build() => _build();
+
+  _$GGetUserVars _build() {
     final _$result = _$v ??
         new _$GGetUserVars._(
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GGetUserVars', 'username'));
+                username, r'GGetUserVars', 'username'));
     replace(_$result);
     return _$result;
   }
@@ -1337,10 +1346,11 @@ class _$GGetSelfVars extends GGetSelfVars {
   final String username;
 
   factory _$GGetSelfVars([void Function(GGetSelfVarsBuilder)? updates]) =>
-      (new GGetSelfVarsBuilder()..update(updates)).build();
+      (new GGetSelfVarsBuilder()..update(updates))._build();
 
   _$GGetSelfVars._({required this.username}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(username, 'GGetSelfVars', 'username');
+    BuiltValueNullFieldError.checkNotNull(
+        username, r'GGetSelfVars', 'username');
   }
 
   @override
@@ -1363,7 +1373,7 @@ class _$GGetSelfVars extends GGetSelfVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfVars')
+    return (newBuiltValueToStringHelper(r'GGetSelfVars')
           ..add('username', username))
         .toString();
   }
@@ -1400,11 +1410,13 @@ class GGetSelfVarsBuilder
   }
 
   @override
-  _$GGetSelfVars build() {
+  GGetSelfVars build() => _build();
+
+  _$GGetSelfVars _build() {
     final _$result = _$v ??
         new _$GGetSelfVars._(
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GGetSelfVars', 'username'));
+                username, r'GGetSelfVars', 'username'));
     replace(_$result);
     return _$result;
   }
@@ -1415,11 +1427,11 @@ class _$GGetCommentVars extends GGetCommentVars {
   final String commentId;
 
   factory _$GGetCommentVars([void Function(GGetCommentVarsBuilder)? updates]) =>
-      (new GGetCommentVarsBuilder()..update(updates)).build();
+      (new GGetCommentVarsBuilder()..update(updates))._build();
 
   _$GGetCommentVars._({required this.commentId}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        commentId, 'GGetCommentVars', 'commentId');
+        commentId, r'GGetCommentVars', 'commentId');
   }
 
   @override
@@ -1443,7 +1455,7 @@ class _$GGetCommentVars extends GGetCommentVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetCommentVars')
+    return (newBuiltValueToStringHelper(r'GGetCommentVars')
           ..add('commentId', commentId))
         .toString();
   }
@@ -1480,11 +1492,13 @@ class GGetCommentVarsBuilder
   }
 
   @override
-  _$GGetCommentVars build() {
+  GGetCommentVars build() => _build();
+
+  _$GGetCommentVars _build() {
     final _$result = _$v ??
         new _$GGetCommentVars._(
             commentId: BuiltValueNullFieldError.checkNotNull(
-                commentId, 'GGetCommentVars', 'commentId'));
+                commentId, r'GGetCommentVars', 'commentId'));
     replace(_$result);
     return _$result;
   }
@@ -1496,11 +1510,11 @@ class _$GSubscribeToUserVars extends GSubscribeToUserVars {
 
   factory _$GSubscribeToUserVars(
           [void Function(GSubscribeToUserVarsBuilder)? updates]) =>
-      (new GSubscribeToUserVarsBuilder()..update(updates)).build();
+      (new GSubscribeToUserVarsBuilder()..update(updates))._build();
 
   _$GSubscribeToUserVars._({required this.username}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GSubscribeToUserVars', 'username');
+        username, r'GSubscribeToUserVars', 'username');
   }
 
   @override
@@ -1525,7 +1539,7 @@ class _$GSubscribeToUserVars extends GSubscribeToUserVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSubscribeToUserVars')
+    return (newBuiltValueToStringHelper(r'GSubscribeToUserVars')
           ..add('username', username))
         .toString();
   }
@@ -1562,11 +1576,13 @@ class GSubscribeToUserVarsBuilder
   }
 
   @override
-  _$GSubscribeToUserVars build() {
+  GSubscribeToUserVars build() => _build();
+
+  _$GSubscribeToUserVars _build() {
     final _$result = _$v ??
         new _$GSubscribeToUserVars._(
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GSubscribeToUserVars', 'username'));
+                username, r'GSubscribeToUserVars', 'username'));
     replace(_$result);
     return _$result;
   }
@@ -1579,12 +1595,12 @@ class _$GCreateUserVars extends GCreateUserVars {
   final String? displayUsername;
 
   factory _$GCreateUserVars([void Function(GCreateUserVarsBuilder)? updates]) =>
-      (new GCreateUserVarsBuilder()..update(updates)).build();
+      (new GCreateUserVarsBuilder()..update(updates))._build();
 
   _$GCreateUserVars._({required this.username, this.displayUsername})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GCreateUserVars', 'username');
+        username, r'GCreateUserVars', 'username');
   }
 
   @override
@@ -1610,7 +1626,7 @@ class _$GCreateUserVars extends GCreateUserVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateUserVars')
+    return (newBuiltValueToStringHelper(r'GCreateUserVars')
           ..add('username', username)
           ..add('displayUsername', displayUsername))
         .toString();
@@ -1654,11 +1670,13 @@ class GCreateUserVarsBuilder
   }
 
   @override
-  _$GCreateUserVars build() {
+  GCreateUserVars build() => _build();
+
+  _$GCreateUserVars _build() {
     final _$result = _$v ??
         new _$GCreateUserVars._(
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GCreateUserVars', 'username'),
+                username, r'GCreateUserVars', 'username'),
             displayUsername: displayUsername);
     replace(_$result);
     return _$result;
@@ -1673,14 +1691,14 @@ class _$GCreateCommentVars extends GCreateCommentVars {
 
   factory _$GCreateCommentVars(
           [void Function(GCreateCommentVarsBuilder)? updates]) =>
-      (new GCreateCommentVarsBuilder()..update(updates)).build();
+      (new GCreateCommentVarsBuilder()..update(updates))._build();
 
   _$GCreateCommentVars._({required this.comment, required this.habitId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GCreateCommentVars', 'comment');
+        comment, r'GCreateCommentVars', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        habitId, 'GCreateCommentVars', 'habitId');
+        habitId, r'GCreateCommentVars', 'habitId');
   }
 
   @override
@@ -1707,7 +1725,7 @@ class _$GCreateCommentVars extends GCreateCommentVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateCommentVars')
+    return (newBuiltValueToStringHelper(r'GCreateCommentVars')
           ..add('comment', comment)
           ..add('habitId', habitId))
         .toString();
@@ -1750,13 +1768,15 @@ class GCreateCommentVarsBuilder
   }
 
   @override
-  _$GCreateCommentVars build() {
+  GCreateCommentVars build() => _build();
+
+  _$GCreateCommentVars _build() {
     final _$result = _$v ??
         new _$GCreateCommentVars._(
             comment: BuiltValueNullFieldError.checkNotNull(
-                comment, 'GCreateCommentVars', 'comment'),
+                comment, r'GCreateCommentVars', 'comment'),
             habitId: BuiltValueNullFieldError.checkNotNull(
-                habitId, 'GCreateCommentVars', 'habitId'));
+                habitId, r'GCreateCommentVars', 'habitId'));
     replace(_$result);
     return _$result;
   }
@@ -1772,15 +1792,15 @@ class _$GCreateHabitVars extends GCreateHabitVars {
 
   factory _$GCreateHabitVars(
           [void Function(GCreateHabitVarsBuilder)? updates]) =>
-      (new GCreateHabitVarsBuilder()..update(updates)).build();
+      (new GCreateHabitVarsBuilder()..update(updates))._build();
 
   _$GCreateHabitVars._(
       {required this.tagline, required this.category, this.details})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GCreateHabitVars', 'tagline');
+        tagline, r'GCreateHabitVars', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GCreateHabitVars', 'category');
+        category, r'GCreateHabitVars', 'category');
   }
 
   @override
@@ -1808,7 +1828,7 @@ class _$GCreateHabitVars extends GCreateHabitVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateHabitVars')
+    return (newBuiltValueToStringHelper(r'GCreateHabitVars')
           ..add('tagline', tagline)
           ..add('category', category)
           ..add('details', details))
@@ -1857,13 +1877,15 @@ class GCreateHabitVarsBuilder
   }
 
   @override
-  _$GCreateHabitVars build() {
+  GCreateHabitVars build() => _build();
+
+  _$GCreateHabitVars _build() {
     final _$result = _$v ??
         new _$GCreateHabitVars._(
             tagline: BuiltValueNullFieldError.checkNotNull(
-                tagline, 'GCreateHabitVars', 'tagline'),
+                tagline, r'GCreateHabitVars', 'tagline'),
             category: BuiltValueNullFieldError.checkNotNull(
-                category, 'GCreateHabitVars', 'category'),
+                category, r'GCreateHabitVars', 'category'),
             details: details);
     replace(_$result);
     return _$result;
@@ -1875,10 +1897,10 @@ class _$GUpdateUserVars extends GUpdateUserVars {
   final _i2.GUpdateUserInput input;
 
   factory _$GUpdateUserVars([void Function(GUpdateUserVarsBuilder)? updates]) =>
-      (new GUpdateUserVarsBuilder()..update(updates)).build();
+      (new GUpdateUserVarsBuilder()..update(updates))._build();
 
   _$GUpdateUserVars._({required this.input}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(input, 'GUpdateUserVars', 'input');
+    BuiltValueNullFieldError.checkNotNull(input, r'GUpdateUserVars', 'input');
   }
 
   @override
@@ -1902,7 +1924,8 @@ class _$GUpdateUserVars extends GUpdateUserVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUserVars')..add('input', input))
+    return (newBuiltValueToStringHelper(r'GUpdateUserVars')
+          ..add('input', input))
         .toString();
   }
 }
@@ -1939,7 +1962,9 @@ class GUpdateUserVarsBuilder
   }
 
   @override
-  _$GUpdateUserVars build() {
+  GUpdateUserVars build() => _build();
+
+  _$GUpdateUserVars _build() {
     _$GUpdateUserVars _$result;
     try {
       _$result = _$v ?? new _$GUpdateUserVars._(input: input.build());
@@ -1950,7 +1975,7 @@ class GUpdateUserVarsBuilder
         input.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserVars', _$failedField, e.toString());
+            r'GUpdateUserVars', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1965,10 +1990,10 @@ class _$GUpdateHabitVars extends GUpdateHabitVars {
 
   factory _$GUpdateHabitVars(
           [void Function(GUpdateHabitVarsBuilder)? updates]) =>
-      (new GUpdateHabitVarsBuilder()..update(updates)).build();
+      (new GUpdateHabitVarsBuilder()..update(updates))._build();
 
   _$GUpdateHabitVars._({required this.input}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(input, 'GUpdateHabitVars', 'input');
+    BuiltValueNullFieldError.checkNotNull(input, r'GUpdateHabitVars', 'input');
   }
 
   @override
@@ -1992,7 +2017,7 @@ class _$GUpdateHabitVars extends GUpdateHabitVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateHabitVars')
+    return (newBuiltValueToStringHelper(r'GUpdateHabitVars')
           ..add('input', input))
         .toString();
   }
@@ -2030,7 +2055,9 @@ class GUpdateHabitVarsBuilder
   }
 
   @override
-  _$GUpdateHabitVars build() {
+  GUpdateHabitVars build() => _build();
+
+  _$GUpdateHabitVars _build() {
     _$GUpdateHabitVars _$result;
     try {
       _$result = _$v ?? new _$GUpdateHabitVars._(input: input.build());
@@ -2041,7 +2068,7 @@ class GUpdateHabitVarsBuilder
         input.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitVars', _$failedField, e.toString());
+            r'GUpdateHabitVars', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2058,14 +2085,14 @@ class _$GDeleteHabitVars extends GDeleteHabitVars {
 
   factory _$GDeleteHabitVars(
           [void Function(GDeleteHabitVarsBuilder)? updates]) =>
-      (new GDeleteHabitVarsBuilder()..update(updates)).build();
+      (new GDeleteHabitVarsBuilder()..update(updates))._build();
 
   _$GDeleteHabitVars._({required this.habitId, required this.version})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        habitId, 'GDeleteHabitVars', 'habitId');
+        habitId, r'GDeleteHabitVars', 'habitId');
     BuiltValueNullFieldError.checkNotNull(
-        version, 'GDeleteHabitVars', 'version');
+        version, r'GDeleteHabitVars', 'version');
   }
 
   @override
@@ -2091,7 +2118,7 @@ class _$GDeleteHabitVars extends GDeleteHabitVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GDeleteHabitVars')
+    return (newBuiltValueToStringHelper(r'GDeleteHabitVars')
           ..add('habitId', habitId)
           ..add('version', version))
         .toString();
@@ -2134,13 +2161,15 @@ class GDeleteHabitVarsBuilder
   }
 
   @override
-  _$GDeleteHabitVars build() {
+  GDeleteHabitVars build() => _build();
+
+  _$GDeleteHabitVars _build() {
     final _$result = _$v ??
         new _$GDeleteHabitVars._(
             habitId: BuiltValueNullFieldError.checkNotNull(
-                habitId, 'GDeleteHabitVars', 'habitId'),
+                habitId, r'GDeleteHabitVars', 'habitId'),
             version: BuiltValueNullFieldError.checkNotNull(
-                version, 'GDeleteHabitVars', 'version'));
+                version, r'GDeleteHabitVars', 'version'));
     replace(_$result);
     return _$result;
   }
@@ -2154,13 +2183,13 @@ class _$GVoteForHabitVars extends GVoteForHabitVars {
 
   factory _$GVoteForHabitVars(
           [void Function(GVoteForHabitVarsBuilder)? updates]) =>
-      (new GVoteForHabitVarsBuilder()..update(updates)).build();
+      (new GVoteForHabitVarsBuilder()..update(updates))._build();
 
   _$GVoteForHabitVars._({required this.habitId, required this.type})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        habitId, 'GVoteForHabitVars', 'habitId');
-    BuiltValueNullFieldError.checkNotNull(type, 'GVoteForHabitVars', 'type');
+        habitId, r'GVoteForHabitVars', 'habitId');
+    BuiltValueNullFieldError.checkNotNull(type, r'GVoteForHabitVars', 'type');
   }
 
   @override
@@ -2186,7 +2215,7 @@ class _$GVoteForHabitVars extends GVoteForHabitVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GVoteForHabitVars')
+    return (newBuiltValueToStringHelper(r'GVoteForHabitVars')
           ..add('habitId', habitId)
           ..add('type', type))
         .toString();
@@ -2229,13 +2258,15 @@ class GVoteForHabitVarsBuilder
   }
 
   @override
-  _$GVoteForHabitVars build() {
+  GVoteForHabitVars build() => _build();
+
+  _$GVoteForHabitVars _build() {
     final _$result = _$v ??
         new _$GVoteForHabitVars._(
             habitId: BuiltValueNullFieldError.checkNotNull(
-                habitId, 'GVoteForHabitVars', 'habitId'),
+                habitId, r'GVoteForHabitVars', 'habitId'),
             type: BuiltValueNullFieldError.checkNotNull(
-                type, 'GVoteForHabitVars', 'type'));
+                type, r'GVoteForHabitVars', 'type'));
     replace(_$result);
     return _$result;
   }
@@ -2244,7 +2275,7 @@ class GVoteForHabitVarsBuilder
 class _$GSubscribeToVotesVars extends GSubscribeToVotesVars {
   factory _$GSubscribeToVotesVars(
           [void Function(GSubscribeToVotesVarsBuilder)? updates]) =>
-      (new GSubscribeToVotesVarsBuilder()..update(updates)).build();
+      (new GSubscribeToVotesVarsBuilder()..update(updates))._build();
 
   _$GSubscribeToVotesVars._() : super._();
 
@@ -2270,7 +2301,7 @@ class _$GSubscribeToVotesVars extends GSubscribeToVotesVars {
 
   @override
   String toString() {
-    return newBuiltValueToStringHelper('GSubscribeToVotesVars').toString();
+    return newBuiltValueToStringHelper(r'GSubscribeToVotesVars').toString();
   }
 }
 
@@ -2292,7 +2323,9 @@ class GSubscribeToVotesVarsBuilder
   }
 
   @override
-  _$GSubscribeToVotesVars build() {
+  GSubscribeToVotesVars build() => _build();
+
+  _$GSubscribeToVotesVars _build() {
     final _$result = _$v ?? new _$GSubscribeToVotesVars._();
     replace(_$result);
     return _$result;
@@ -2309,15 +2342,15 @@ class _$GSearchUsersVars extends GSearchUsersVars {
 
   factory _$GSearchUsersVars(
           [void Function(GSearchUsersVarsBuilder)? updates]) =>
-      (new GSearchUsersVarsBuilder()..update(updates)).build();
+      (new GSearchUsersVarsBuilder()..update(updates))._build();
 
   _$GSearchUsersVars._(
       {required this.query, required this.excludeUsername, required this.limit})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(query, 'GSearchUsersVars', 'query');
+    BuiltValueNullFieldError.checkNotNull(query, r'GSearchUsersVars', 'query');
     BuiltValueNullFieldError.checkNotNull(
-        excludeUsername, 'GSearchUsersVars', 'excludeUsername');
-    BuiltValueNullFieldError.checkNotNull(limit, 'GSearchUsersVars', 'limit');
+        excludeUsername, r'GSearchUsersVars', 'excludeUsername');
+    BuiltValueNullFieldError.checkNotNull(limit, r'GSearchUsersVars', 'limit');
   }
 
   @override
@@ -2345,7 +2378,7 @@ class _$GSearchUsersVars extends GSearchUsersVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchUsersVars')
+    return (newBuiltValueToStringHelper(r'GSearchUsersVars')
           ..add('query', query)
           ..add('excludeUsername', excludeUsername)
           ..add('limit', limit))
@@ -2395,15 +2428,17 @@ class GSearchUsersVarsBuilder
   }
 
   @override
-  _$GSearchUsersVars build() {
+  GSearchUsersVars build() => _build();
+
+  _$GSearchUsersVars _build() {
     final _$result = _$v ??
         new _$GSearchUsersVars._(
             query: BuiltValueNullFieldError.checkNotNull(
-                query, 'GSearchUsersVars', 'query'),
+                query, r'GSearchUsersVars', 'query'),
             excludeUsername: BuiltValueNullFieldError.checkNotNull(
-                excludeUsername, 'GSearchUsersVars', 'excludeUsername'),
+                excludeUsername, r'GSearchUsersVars', 'excludeUsername'),
             limit: BuiltValueNullFieldError.checkNotNull(
-                limit, 'GSearchUsersVars', 'limit'));
+                limit, r'GSearchUsersVars', 'limit'));
     replace(_$result);
     return _$result;
   }
@@ -2417,12 +2452,12 @@ class _$GSearchHabitsVars extends GSearchHabitsVars {
 
   factory _$GSearchHabitsVars(
           [void Function(GSearchHabitsVarsBuilder)? updates]) =>
-      (new GSearchHabitsVarsBuilder()..update(updates)).build();
+      (new GSearchHabitsVarsBuilder()..update(updates))._build();
 
   _$GSearchHabitsVars._({required this.query, required this.limit})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(query, 'GSearchHabitsVars', 'query');
-    BuiltValueNullFieldError.checkNotNull(limit, 'GSearchHabitsVars', 'limit');
+    BuiltValueNullFieldError.checkNotNull(query, r'GSearchHabitsVars', 'query');
+    BuiltValueNullFieldError.checkNotNull(limit, r'GSearchHabitsVars', 'limit');
   }
 
   @override
@@ -2448,7 +2483,7 @@ class _$GSearchHabitsVars extends GSearchHabitsVars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchHabitsVars')
+    return (newBuiltValueToStringHelper(r'GSearchHabitsVars')
           ..add('query', query)
           ..add('limit', limit))
         .toString();
@@ -2491,13 +2526,15 @@ class GSearchHabitsVarsBuilder
   }
 
   @override
-  _$GSearchHabitsVars build() {
+  GSearchHabitsVars build() => _build();
+
+  _$GSearchHabitsVars _build() {
     final _$result = _$v ??
         new _$GSearchHabitsVars._(
             query: BuiltValueNullFieldError.checkNotNull(
-                query, 'GSearchHabitsVars', 'query'),
+                query, r'GSearchHabitsVars', 'query'),
             limit: BuiltValueNullFieldError.checkNotNull(
-                limit, 'GSearchHabitsVars', 'limit'));
+                limit, r'GSearchHabitsVars', 'limit'));
     replace(_$result);
     return _$result;
   }
@@ -2506,7 +2543,7 @@ class GSearchHabitsVarsBuilder
 class _$GAllHabitFieldsVars extends GAllHabitFieldsVars {
   factory _$GAllHabitFieldsVars(
           [void Function(GAllHabitFieldsVarsBuilder)? updates]) =>
-      (new GAllHabitFieldsVarsBuilder()..update(updates)).build();
+      (new GAllHabitFieldsVarsBuilder()..update(updates))._build();
 
   _$GAllHabitFieldsVars._() : super._();
 
@@ -2532,7 +2569,7 @@ class _$GAllHabitFieldsVars extends GAllHabitFieldsVars {
 
   @override
   String toString() {
-    return newBuiltValueToStringHelper('GAllHabitFieldsVars').toString();
+    return newBuiltValueToStringHelper(r'GAllHabitFieldsVars').toString();
   }
 }
 
@@ -2554,7 +2591,9 @@ class GAllHabitFieldsVarsBuilder
   }
 
   @override
-  _$GAllHabitFieldsVars build() {
+  GAllHabitFieldsVars build() => _build();
+
+  _$GAllHabitFieldsVars _build() {
     final _$result = _$v ?? new _$GAllHabitFieldsVars._();
     replace(_$result);
     return _$result;
@@ -2564,7 +2603,7 @@ class GAllHabitFieldsVarsBuilder
 class _$GAllPublicUserFieldsVars extends GAllPublicUserFieldsVars {
   factory _$GAllPublicUserFieldsVars(
           [void Function(GAllPublicUserFieldsVarsBuilder)? updates]) =>
-      (new GAllPublicUserFieldsVarsBuilder()..update(updates)).build();
+      (new GAllPublicUserFieldsVarsBuilder()..update(updates))._build();
 
   _$GAllPublicUserFieldsVars._() : super._();
 
@@ -2590,7 +2629,7 @@ class _$GAllPublicUserFieldsVars extends GAllPublicUserFieldsVars {
 
   @override
   String toString() {
-    return newBuiltValueToStringHelper('GAllPublicUserFieldsVars').toString();
+    return newBuiltValueToStringHelper(r'GAllPublicUserFieldsVars').toString();
   }
 }
 
@@ -2613,7 +2652,9 @@ class GAllPublicUserFieldsVarsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsVars build() {
+  GAllPublicUserFieldsVars build() => _build();
+
+  _$GAllPublicUserFieldsVars _build() {
     final _$result = _$v ?? new _$GAllPublicUserFieldsVars._();
     replace(_$result);
     return _$result;
@@ -2623,7 +2664,7 @@ class GAllPublicUserFieldsVarsBuilder
 class _$GAllPrivateUserFieldsVars extends GAllPrivateUserFieldsVars {
   factory _$GAllPrivateUserFieldsVars(
           [void Function(GAllPrivateUserFieldsVarsBuilder)? updates]) =>
-      (new GAllPrivateUserFieldsVarsBuilder()..update(updates)).build();
+      (new GAllPrivateUserFieldsVarsBuilder()..update(updates))._build();
 
   _$GAllPrivateUserFieldsVars._() : super._();
 
@@ -2649,7 +2690,7 @@ class _$GAllPrivateUserFieldsVars extends GAllPrivateUserFieldsVars {
 
   @override
   String toString() {
-    return newBuiltValueToStringHelper('GAllPrivateUserFieldsVars').toString();
+    return newBuiltValueToStringHelper(r'GAllPrivateUserFieldsVars').toString();
   }
 }
 
@@ -2672,7 +2713,9 @@ class GAllPrivateUserFieldsVarsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsVars build() {
+  GAllPrivateUserFieldsVars build() => _build();
+
+  _$GAllPrivateUserFieldsVars _build() {
     final _$result = _$v ?? new _$GAllPrivateUserFieldsVars._();
     replace(_$result);
     return _$result;
@@ -2682,7 +2725,7 @@ class GAllPrivateUserFieldsVarsBuilder
 class _$GAllCommentFieldsVars extends GAllCommentFieldsVars {
   factory _$GAllCommentFieldsVars(
           [void Function(GAllCommentFieldsVarsBuilder)? updates]) =>
-      (new GAllCommentFieldsVarsBuilder()..update(updates)).build();
+      (new GAllCommentFieldsVarsBuilder()..update(updates))._build();
 
   _$GAllCommentFieldsVars._() : super._();
 
@@ -2708,7 +2751,7 @@ class _$GAllCommentFieldsVars extends GAllCommentFieldsVars {
 
   @override
   String toString() {
-    return newBuiltValueToStringHelper('GAllCommentFieldsVars').toString();
+    return newBuiltValueToStringHelper(r'GAllCommentFieldsVars').toString();
   }
 }
 
@@ -2730,7 +2773,9 @@ class GAllCommentFieldsVarsBuilder
   }
 
   @override
-  _$GAllCommentFieldsVars build() {
+  GAllCommentFieldsVars build() => _build();
+
+  _$GAllCommentFieldsVars _build() {
     final _$result = _$v ?? new _$GAllCommentFieldsVars._();
     replace(_$result);
     return _$result;
@@ -2740,7 +2785,7 @@ class GAllCommentFieldsVarsBuilder
 class _$GAllVoteResultFieldsVars extends GAllVoteResultFieldsVars {
   factory _$GAllVoteResultFieldsVars(
           [void Function(GAllVoteResultFieldsVarsBuilder)? updates]) =>
-      (new GAllVoteResultFieldsVarsBuilder()..update(updates)).build();
+      (new GAllVoteResultFieldsVarsBuilder()..update(updates))._build();
 
   _$GAllVoteResultFieldsVars._() : super._();
 
@@ -2766,7 +2811,7 @@ class _$GAllVoteResultFieldsVars extends GAllVoteResultFieldsVars {
 
   @override
   String toString() {
-    return newBuiltValueToStringHelper('GAllVoteResultFieldsVars').toString();
+    return newBuiltValueToStringHelper(r'GAllVoteResultFieldsVars').toString();
   }
 }
 
@@ -2789,11 +2834,13 @@ class GAllVoteResultFieldsVarsBuilder
   }
 
   @override
-  _$GAllVoteResultFieldsVars build() {
+  GAllVoteResultFieldsVars build() => _build();
+
+  _$GAllVoteResultFieldsVars _build() {
     final _$result = _$v ?? new _$GAllVoteResultFieldsVars._();
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -29,14 +29,6 @@ abstract class HabitRepository extends Repository<Habit> {
 }
 
 class HabitRepositoryImpl extends HabitRepository {
-  final ApiService _apiService;
-  final AuthBloc _authBloc;
-  final CommentRepository _commentRepository;
-
-  User? _user;
-  Set<String> _upvotedHabits = {};
-  Set<String> _downvotedHabits = {};
-
   HabitRepositoryImpl({
     required ApiService apiService,
     required AuthBloc authBloc,
@@ -47,39 +39,51 @@ class HabitRepositoryImpl extends HabitRepository {
     init();
   }
 
+  final ApiService _apiService;
+  final AuthBloc _authBloc;
+  final CommentRepository _commentRepository;
+
+  User? _user;
+  Set<String> _upvotedHabits = {};
+  Set<String> _downvotedHabits = {};
+
   Future<void> init() async {
     await _authBloc.isInitialized;
 
-    var state = _authBloc.state;
+    final state = _authBloc.state;
     if (state is AuthLoggedIn) {
       _updateUser(state.user);
     }
-    addSubscription(_authBloc.stream.listen((state) {
-      if (state is AuthLoggedIn) {
-        _updateUser(state.user);
-      }
-    }));
+    addSubscription(
+      _authBloc.stream.listen((state) {
+        if (state is AuthLoggedIn) {
+          _updateUser(state.user);
+        }
+      }),
+    );
 
-    _setupVoteResultSubscription();
+    unawaited(_setupVoteResultSubscription());
   }
 
   Future<void> _setupVoteResultSubscription() async {
-    var state = _authBloc.state;
+    final state = _authBloc.state;
     if (state is! AuthLoggedIn) {
       await _authBloc.stream.firstWhere((state) => state is AuthLoggedIn);
     }
 
-    addSubscription(_apiService.voteResults.listen((voteResult) {
-      var user = voteResult.user;
-      if (user != null && user.username == _user?.username) {
-        _updateUser(user);
-      }
-      var habit = voteResult.habit;
-      if (habit != null) {
-        _updateHabit(habit);
-        setDoneLoading(habit.id);
-      }
-    }));
+    addSubscription(
+      _apiService.voteResults.listen((voteResult) {
+        final user = voteResult.user;
+        if (user != null && user.username == _user?.username) {
+          _updateUser(user);
+        }
+        final habit = voteResult.habit;
+        if (habit != null) {
+          _updateHabit(habit);
+          setDoneLoading(habit.id);
+        }
+      }),
+    );
   }
 
   void _setHabits(List<Habit> habits) {
@@ -118,8 +122,8 @@ class HabitRepositoryImpl extends HabitRepository {
     _upvotedHabits = _user!.upvotedHabits.toSet();
     _downvotedHabits = _user!.downvotedHabits.toSet();
     _setHabits(user.habits);
-    for (var comment in user.comments) {
-      var habit = comment.habit;
+    for (final comment in user.comments) {
+      final habit = comment.habit;
       if (habit != null) {
         put(habit.id, habit);
       }
@@ -213,7 +217,7 @@ class HabitRepositoryImpl extends HabitRepository {
 
   @override
   Future<bool> deleteHabit(String habitId) async {
-    var habit = get(habitId);
+    final habit = get(habitId);
     if (habit == null) {
       return false;
     }

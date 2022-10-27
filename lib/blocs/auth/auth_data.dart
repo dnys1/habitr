@@ -6,15 +6,15 @@ enum AuthScreen { signup, login, verify, addImage }
 
 @immutable
 class AuthData extends Equatable {
-  final String? username;
-  final String? password;
-  final AuthProvider? provider;
-
   const AuthData({
     this.username,
     this.password,
     this.provider,
   });
+
+  final String? username;
+  final String? password;
+  final AuthProvider? provider;
 
   @override
   List<Object?> get props => [username, password, provider];
@@ -40,13 +40,13 @@ class AuthLoginWithProviderData extends AuthData {
 }
 
 class AuthSignupData extends AuthData {
-  final String email;
-
   const AuthSignupData(
     String username,
     String password, {
     required this.email,
   }) : super(username: username, password: password);
+
+  final String email;
 
   @override
   List<Object?> get props => [username, password, email];

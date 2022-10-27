@@ -5,10 +5,6 @@ import 'package:habitr/models/User.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 
 class HomeDrawerViewModel extends BaseViewModel {
-  final AuthBloc _authBloc;
-
-  late final StreamSubscription<AuthState> _authBlocSubscription;
-
   HomeDrawerViewModel({
     required AuthBloc authBloc,
   }) : _authBloc = authBloc {
@@ -18,6 +14,10 @@ class HomeDrawerViewModel extends BaseViewModel {
       }
     });
   }
+
+  final AuthBloc _authBloc;
+
+  late final StreamSubscription<AuthState> _authBlocSubscription;
 
   @override
   void dispose() {

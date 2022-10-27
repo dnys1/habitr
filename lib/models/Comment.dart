@@ -19,10 +19,10 @@ import 'ModelProvider.dart';
 import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_interface.dart';
 import 'package:flutter/foundation.dart';
 
-/** This is an auto generated class representing the Comment type in your schema. */
+/// This is an auto generated class representing the Comment type in your schema.
 @immutable
 class Comment extends Model {
-  static const classType = const _CommentModelType();
+  static const classType = _CommentModelType();
   final String id;
   final String habitId;
   final Habit? habit;
@@ -96,7 +96,7 @@ class Comment extends Model {
 
   @override
   String toString() {
-    var buffer = new StringBuffer();
+    var buffer = StringBuffer();
 
     buffer.write("Comment {");
     buffer.write("id=" + "$id" + ", ");
@@ -127,7 +127,7 @@ class Comment extends Model {
     var habit = json['habit'] == null ? null : Habit.fromJson(json['habit']);
     var by = json['by'] == null
         ? null
-        : User.fromJson(new Map<String, dynamic>.from(json['by']));
+        : User.fromJson(Map<String, dynamic>.from(json['by']));
     var owner = json['owner'] as String;
     var comment = json['comment'];
     var createdAt = DateTime.parse(json['createdAt'] as String);

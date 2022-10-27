@@ -22,10 +22,10 @@ import 'package:flutter/foundation.dart';
 
 import 'S3Object.dart';
 
-/** This is an auto generated class representing the User type in your schema. */
+/// This is an auto generated class representing the User type in your schema.
 @immutable
 class User extends Model {
-  static const classType = const _UserModelType();
+  static const classType = _UserModelType();
   final String id;
   final String username;
   final String? displayUsername;
@@ -106,7 +106,7 @@ class User extends Model {
 
   @override
   String toString() {
-    var buffer = new StringBuffer();
+    var buffer = StringBuffer();
 
     buffer.write("User {");
     buffer.write("id=" + "$id" + ", ");
@@ -157,12 +157,12 @@ class User extends Model {
         json['avatar'] is Map ? S3Object.fromJson(json['avatar']) : null;
     var comments = json['comments']?['items'] is List
         ? (json['comments']?['items'] as List)
-            .map((e) => Comment.fromJson(new Map<String, dynamic>.from(e)))
+            .map((e) => Comment.fromJson(Map<String, dynamic>.from(e)))
             .toList()
         : null;
     var habits = json['habits']?['items'] is List
         ? (json['habits']?['items'] as List)
-            .map((e) => Habit.fromJson(new Map<String, dynamic>.from(e)))
+            .map((e) => Habit.fromJson(Map<String, dynamic>.from(e)))
             .toList()
         : null;
     var upvotedHabits = json['upvotedHabits']?.cast<String>();

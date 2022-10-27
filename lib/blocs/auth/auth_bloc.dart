@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart'
     hide AuthException;
 import 'package:bloc/bloc.dart';
+import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:habitr/blocs/auth/auth_data.dart';
@@ -23,6 +24,15 @@ part 'auth_state.dart';
 part 'auth_bloc.g.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
+  AuthBloc(
+    this._authService,
+    this._backendService,
+    this._preferencesService,
+    this._storageService,
+  ) : super(const AuthInitial()) {
+    on<AuthEvent>(mapEventToState, transformer: sequential());
+  }
+
   static const stateKey = 'auth_bloc_state';
 
   final AuthService _authService;
@@ -39,13 +49,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
     return null;
   }
-
-  AuthBloc(
-    this._authService,
-    this._backendService,
-    this._preferencesService,
-    this._storageService,
-  ) : super(const AuthInitial());
 
   @override
   void onTransition(Transition<AuthEvent, AuthState> transition) {
@@ -90,32 +93,32 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   /// Completes when the initial auth state has been determined.
   Future<void> get isInitialized => _initializedCompleter.future;
 
-  @override
-  Stream<AuthState> mapEventToState(
+  Future<void> mapEventToState(
     AuthEvent event,
-  ) async* {
+    Emitter<AuthState> emit,
+  ) async {
     if (event is AuthLoad) {
-      yield* _loadInitialState();
+      return _loadInitialState(emit);
     } else if (event is AuthLogin) {
-      yield* _login(event.data);
+      return _login(event.data, emit);
     } else if (event is AuthSignUp) {
-      yield* _signup(event.data);
+      return _signup(event.data, emit);
     } else if (event is AuthVerify) {
-      yield* _verify(event.code);
+      return _verify(event.code, emit);
     } else if (event is AuthCompleteSignUp) {
-      yield AuthLoggedIn(event.user);
+      emit(AuthLoggedIn(event.user));
     } else if (event is AuthUserUpdate) {
-      yield AuthLoggedIn(event.user);
+      emit(AuthLoggedIn(event.user));
     } else if (event is AuthLogout) {
-      yield* _logout();
+      return _logout(emit);
     } else if (event is AuthChangeScreen) {
-      yield AuthInFlow(event.screen);
+      emit(AuthInFlow(event.screen));
     }
   }
 
-  Stream<AuthState> _loadInitialState() async* {
+  Future<void> _loadInitialState(Emitter<AuthState> emit) async {
     try {
-      yield const AuthLoading();
+      emit(const AuthLoading());
       try {
         await _backendService.configure();
       } on Exception catch (e) {
@@ -126,7 +129,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         final currentUser = await _authService.currentUser;
         if (currentUser != null) {
           await _storageService.precache(currentUser);
-          yield AuthLoggedIn(currentUser);
+          emit(AuthLoggedIn(currentUser));
           _userUpdates ??= _userEvents.listen(add);
           return;
         }
@@ -136,13 +139,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
       final storedState = _preferencesService.getString(stateKey);
       if (storedState == null) {
-        yield AuthInFlow.login();
+        emit(AuthInFlow.login());
         return;
       }
 
       final authState =
           fromJson(jsonDecode(storedState) as Map<String, dynamic>);
-      yield authState ?? AuthInFlow.login();
+      emit(authState ?? AuthInFlow.login());
     } finally {
       _initializedCompleter.complete();
     }
@@ -153,8 +156,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       // vs. await for (var user in _authService.userUpdates),
       // this method correctly cancels the stream when this
       // generated stream is canceled.
-      var stream = _authService.userUpdates.map((user) => AuthUserUpdate(user));
-      await for (var update in stream) {
+      final stream = _authService.userUpdates.map(AuthUserUpdate.new);
+      await for (final update in stream) {
         yield update;
       }
     } on Exception catch (e) {
@@ -162,7 +165,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  Stream<AuthState> _login(AuthData loginData) async* {
+  Future<void> _login(
+    AuthData loginData,
+    Emitter<AuthState> emit,
+  ) async {
     try {
       _authData = loginData;
       if (loginData is AuthLoginData) {
@@ -171,30 +177,33 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           loginData.password!,
         );
         await _storageService.precache(user);
-        yield AuthLoggedIn(user);
+        emit(AuthLoggedIn(user));
         _userUpdates ??= _userEvents.listen(add);
       } else {
         final user = await _authService.loginWithProvider(loginData.provider!);
         if (user != null) {
           await _storageService.precache(user);
           if (user.displayUsername == null || user.displayUsername!.isEmpty) {
-            yield AuthInFlow.addImage(user);
+            emit(AuthInFlow.addImage(user));
           } else {
-            yield AuthLoggedIn(user);
+            emit(AuthLoggedIn(user));
           }
           _userUpdates ??= _userEvents.listen(add);
         }
       }
     } on UserNotConfirmedException {
-      var username = loginData.username!;
+      final username = loginData.username!;
       await _authService.resendVerificationCode(username);
-      yield AuthInFlow.verify(username);
+      emit(AuthInFlow.verify(username));
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString(), e, st));
     }
   }
 
-  Stream<AuthState> _signup(AuthSignupData signupData) async* {
+  Future<void> _signup(
+    AuthSignupData signupData,
+    Emitter<AuthState> emit,
+  ) async {
     try {
       _authData = signupData;
       await _authService.signUp(
@@ -202,13 +211,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         signupData.password!,
         signupData.email,
       );
-      yield AuthInFlow.verify(signupData.username!);
+      emit(AuthInFlow.verify(signupData.username!));
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString(), e, st));
     }
   }
 
-  Stream<AuthState> _verify(String code) async* {
+  Future<void> _verify(String code, Emitter<AuthState> emit) async {
     assert(state is AuthInFlow);
     final username = (state as AuthInFlow).username;
     assert(username != null);
@@ -219,22 +228,22 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           _authData!.username!,
           _authData!.password!,
         );
-        yield AuthInFlow.addImage(user);
+        emit(AuthInFlow.addImage(user));
       } else {
         showSuccessSnackbar('Signup complete! 🎉');
-        yield AuthInFlow.login();
+        emit(AuthInFlow.login());
       }
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString(), e, st));
     }
   }
 
-  Stream<AuthState> _logout() async* {
+  Future<void> _logout(Emitter<AuthState> emit) async {
     try {
       await _authService.logout();
-      _userUpdates?.cancel();
+      await _userUpdates?.cancel();
       _userUpdates = null;
-      yield AuthInFlow.login();
+      emit(AuthInFlow.login());
     } on Exception catch (e, st) {
       _exceptionController.add(AuthException(e.toString(), e, st));
     }

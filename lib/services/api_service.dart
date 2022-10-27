@@ -2,8 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:amplify_api/amplify_api.dart';
-import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:amplify_flutter/amplify_flutter.dart' hide Category;
 import 'package:gql/ast.dart' as ast;
 import 'package:gql/language.dart' as gql;
 import 'package:habitr/models/ModelProvider.dart';
@@ -87,13 +86,15 @@ class AmplifyApiService implements ApiService {
   @override
   Stream<VoteResult> get voteResults {
     const operationName = 'subscribeToVotes';
-    const _document = ast.DocumentNode(definitions: [
-      AllVoteResultFields,
-      SubscribeToVotes,
-    ]);
+    const document = ast.DocumentNode(
+      definitions: [
+        AllVoteResultFields,
+        SubscribeToVotes,
+      ],
+    );
 
     _voteResultStream ??= Amplify.API
-        .subscribe<String>(GraphQLRequest(document: gql.printNode(_document)))
+        .subscribe<String>(GraphQLRequest(document: gql.printNode(document)))
         .map((data) {
       final map = jsonDecode(data.data!) as Map<String, dynamic>;
       final voteResult = map[operationName] as Map<String, dynamic>?;
@@ -123,13 +124,14 @@ class AmplifyApiService implements ApiService {
       throw Exception(resp.errors.first.toString());
     }
 
-    final Map<String, dynamic>? data =
-        resp.data != null ? jsonDecode(resp.data!) : null;
+    final data = resp.data != null
+        ? jsonDecode(resp.data!) as Map<String, dynamic>
+        : null;
     if (data is! Map<String, dynamic>) {
       return null;
     }
 
-    return data[operationName];
+    return (data[operationName] as Map?)?.cast();
   }
 
   @override
@@ -169,13 +171,14 @@ class AmplifyApiService implements ApiService {
     required int limit,
     String? nextToken,
   }) async {
-    var withCategoryFilter = category != null;
-    var operationName = withCategoryFilter ? 'habitsByCategory' : 'listHabits';
+    final withCategoryFilter = category != null;
+    final operationName =
+        withCategoryFilter ? 'habitsByCategory' : 'listHabits';
     Map<String, dynamic> vars;
     if (withCategoryFilter) {
       final query = GListHabitsByCategory((b) {
         b
-          ..vars.category = GCategory.valueOf(category!.string)
+          ..vars.category = GCategory.valueOf(category.string)
           ..vars.limit = limit;
         if (nextToken != null) {
           b.vars.nextToken = nextToken;
@@ -193,11 +196,13 @@ class AmplifyApiService implements ApiService {
     }
 
     final resp = await _runQuery(
-      ast.DocumentNode(definitions: [
-        AllHabitFields,
-        AllCommentFields,
-        if (withCategoryFilter) ListHabitsByCategory else ListHabits,
-      ]),
+      ast.DocumentNode(
+        definitions: [
+          AllHabitFields,
+          AllCommentFields,
+          if (withCategoryFilter) ListHabitsByCategory else ListHabits,
+        ],
+      ),
       operationName,
       vars,
     );
@@ -211,10 +216,7 @@ class AmplifyApiService implements ApiService {
     }
 
     return ListHabitResults(
-      habits: habits
-          .cast<Map<String, dynamic>>()
-          .map((habit) => Habit.fromJson(habit))
-          .toList(),
+      habits: habits.cast<Map<String, dynamic>>().map(Habit.fromJson).toList(),
       nextToken: resp['nextToken'] as String?,
     );
   }
@@ -244,12 +246,14 @@ class AmplifyApiService implements ApiService {
     });
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        AllHabitFields,
-        AllCommentFields,
-        AllPrivateUserFields,
-        UpdateUser,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          AllHabitFields,
+          AllCommentFields,
+          AllPrivateUserFields,
+          UpdateUser,
+        ],
+      ),
       operationName,
       mutation.vars.toJson(),
     );
@@ -271,10 +275,12 @@ class AmplifyApiService implements ApiService {
     );
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        AllVoteResultFields,
-        VoteForHabit,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          AllVoteResultFields,
+          VoteForHabit,
+        ],
+      ),
       operationName,
       mutation.vars.toJson(),
     );
@@ -290,11 +296,13 @@ class AmplifyApiService implements ApiService {
     final query = GGetHabit((b) => b..vars.habitId = id);
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        AllHabitFields,
-        AllCommentFields,
-        GetHabit,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          AllHabitFields,
+          AllCommentFields,
+          GetHabit,
+        ],
+      ),
       operationName,
       query.vars.toJson(),
     );
@@ -309,10 +317,12 @@ class AmplifyApiService implements ApiService {
   @override
   Future<Comment?> getComment(String commentId) async {
     const operationName = 'getComment';
-    const operation = ast.DocumentNode(definitions: [
-      AllCommentFields,
-      GetComment,
-    ]);
+    const operation = ast.DocumentNode(
+      definitions: [
+        AllCommentFields,
+        GetComment,
+      ],
+    );
     final query = GGetComment((b) => b..vars.commentId = commentId);
 
     final resp = await _runQuery(
@@ -330,7 +340,7 @@ class AmplifyApiService implements ApiService {
 
   @override
   Future<bool> usernameExists(String username) async {
-    var request = UserExistsRequest(username);
+    final request = UserExistsRequest(username);
     final resp = await Amplify.API
         .post(
           restOptions: RestOptions(
@@ -357,24 +367,23 @@ class AmplifyApiService implements ApiService {
     );
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        AllHabitFields,
-        AllCommentFields,
-        SearchHabits,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          AllHabitFields,
+          AllCommentFields,
+          SearchHabits,
+        ],
+      ),
       operationName,
       operation.vars.toJson(),
     );
 
-    var items = resp?['items'] as List?;
+    final items = resp?['items'] as List?;
     if (items is! List) {
       return [];
     }
 
-    return items
-        .cast<Map<String, dynamic>>()
-        .map((json) => Habit.fromJson(json))
-        .toList();
+    return items.cast<Map<String, dynamic>>().map(Habit.fromJson).toList();
   }
 
   @override
@@ -392,25 +401,24 @@ class AmplifyApiService implements ApiService {
     );
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        AllPublicUserFields,
-        AllHabitFields,
-        AllCommentFields,
-        SearchUsers,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          AllPublicUserFields,
+          AllHabitFields,
+          AllCommentFields,
+          SearchUsers,
+        ],
+      ),
       operationName,
       operation.vars.toJson(),
     );
 
-    var items = resp?['items'] as List?;
+    final items = resp?['items'] as List?;
     if (items is! List) {
       return [];
     }
 
-    return items
-        .cast<Map<String, dynamic>>()
-        .map((json) => User.fromJson(json))
-        .toList();
+    return items.cast<Map<String, dynamic>>().map(User.fromJson).toList();
   }
 
   @override
@@ -423,10 +431,12 @@ class AmplifyApiService implements ApiService {
     );
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        AllCommentFields,
-        CreateComment,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          AllCommentFields,
+          CreateComment,
+        ],
+      ),
       operationName,
       mutation.vars.toJson(),
     );
@@ -456,11 +466,13 @@ class AmplifyApiService implements ApiService {
     );
 
     final resp = await _runQuery(
-      const ast.DocumentNode(definitions: [
-        CreateHabit,
-        AllHabitFields,
-        AllCommentFields,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          CreateHabit,
+          AllHabitFields,
+          AllCommentFields,
+        ],
+      ),
       operationName,
       mutation.vars.toJson(),
     );
@@ -480,9 +492,11 @@ class AmplifyApiService implements ApiService {
     );
 
     await _runQuery(
-      const ast.DocumentNode(definitions: [
-        DeleteHabit,
-      ]),
+      const ast.DocumentNode(
+        definitions: [
+          DeleteHabit,
+        ],
+      ),
       operationName,
       mutation.vars.toJson(),
     );

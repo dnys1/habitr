@@ -28,10 +28,6 @@ class AuthLoading extends AuthState {
 /// The bloc is idle at a certain [screen].
 @JsonSerializable()
 class AuthInFlow extends AuthState {
-  final AuthScreen screen;
-  final User? user;
-  final String? username;
-
   const AuthInFlow(this.screen, {this.username, this.user});
 
   factory AuthInFlow.login() => const AuthInFlow(AuthScreen.login);
@@ -45,14 +41,18 @@ class AuthInFlow extends AuthState {
         user: user,
       );
 
+  factory AuthInFlow.fromJson(Map<String, dynamic> json) =>
+      _$AuthInFlowFromJson(json);
+
+  final AuthScreen screen;
+  final User? user;
+  final String? username;
+
   @override
   List<Object?> get props => [screen, user, username];
 
   @override
   Map<String, dynamic> toJson() => _$AuthInFlowToJson(this);
-
-  factory AuthInFlow.fromJson(Map<String, dynamic> json) =>
-      _$AuthInFlowFromJson(json);
 
   @override
   String toString() {
@@ -62,9 +62,9 @@ class AuthInFlow extends AuthState {
 
 /// The bloc is idle with an authenticated [user].
 class AuthLoggedIn extends AuthState {
-  final User user;
-
   const AuthLoggedIn(this.user);
+
+  final User user;
 
   @override
   List<Object?> get props => [user];

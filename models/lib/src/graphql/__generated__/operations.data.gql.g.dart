@@ -643,13 +643,13 @@ class _$GListHabitsDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'listHabits':
           result.listHabits.replace(serializers.deserialize(value,
@@ -705,13 +705,13 @@ class _$GListHabitsData_listHabitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -809,25 +809,25 @@ class _$GListHabitsData_listHabits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -904,13 +904,13 @@ class _$GListHabitsData_listHabits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -998,17 +998,17 @@ class _$GListHabitsData_listHabits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -1032,7 +1032,7 @@ class _$GListHabitsData_listHabits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -1102,17 +1102,17 @@ class _$GListHabitsData_listHabits_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -1212,25 +1212,25 @@ class _$GListHabitsData_listHabits_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -1312,13 +1312,13 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -1396,17 +1396,17 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_comments_itemsSeri
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -1418,7 +1418,7 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_comments_itemsSeri
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -1476,13 +1476,13 @@ class _$GListHabitsByCategoryDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'habitsByCategory':
           result.habitsByCategory.replace(serializers.deserialize(value,
@@ -1541,13 +1541,13 @@ class _$GListHabitsByCategoryData_habitsByCategorySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -1647,25 +1647,25 @@ class _$GListHabitsByCategoryData_habitsByCategory_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -1747,13 +1747,13 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -1845,17 +1845,17 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_itemsSerialize
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -1879,7 +1879,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_itemsSerialize
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -1950,17 +1950,17 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_bySerial
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -2062,25 +2062,25 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habitSer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -2164,13 +2164,13 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -2248,17 +2248,17 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -2270,7 +2270,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -2322,13 +2322,13 @@ class _$GGetHabitDataSerializer implements StructuredSerializer<GGetHabitData> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'getHabit':
           result.getHabit.replace(serializers.deserialize(value,
@@ -2420,25 +2420,25 @@ class _$GGetHabitData_getHabitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -2514,13 +2514,13 @@ class _$GGetHabitData_getHabit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -2607,17 +2607,17 @@ class _$GGetHabitData_getHabit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -2641,7 +2641,7 @@ class _$GGetHabitData_getHabit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -2708,17 +2708,17 @@ class _$GGetHabitData_getHabit_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -2815,25 +2815,25 @@ class _$GGetHabitData_getHabit_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -2915,13 +2915,13 @@ class _$GGetHabitData_getHabit_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -2997,17 +2997,17 @@ class _$GGetHabitData_getHabit_comments_items_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -3019,7 +3019,7 @@ class _$GGetHabitData_getHabit_comments_items_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -3071,13 +3071,13 @@ class _$GGetUserDataSerializer implements StructuredSerializer<GGetUserData> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'getUser':
           result.getUser.replace(serializers.deserialize(value,
@@ -3160,17 +3160,17 @@ class _$GGetUserData_getUserSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -3255,25 +3255,25 @@ class _$GGetUserData_getUser_avatarSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'accessLevel':
           result.accessLevel = serializers.deserialize(value,
@@ -3326,13 +3326,13 @@ class _$GGetUserData_getUser_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -3419,17 +3419,17 @@ class _$GGetUserData_getUser_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -3453,7 +3453,7 @@ class _$GGetUserData_getUser_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -3520,17 +3520,17 @@ class _$GGetUserData_getUser_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -3626,25 +3626,25 @@ class _$GGetUserData_getUser_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -3725,13 +3725,13 @@ class _$GGetUserData_getUser_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -3807,17 +3807,17 @@ class _$GGetUserData_getUser_comments_items_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -3829,7 +3829,7 @@ class _$GGetUserData_getUser_comments_items_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -3883,13 +3883,13 @@ class _$GGetUserData_getUser_habitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -3983,25 +3983,25 @@ class _$GGetUserData_getUser_habits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -4079,13 +4079,13 @@ class _$GGetUserData_getUser_habits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -4174,17 +4174,17 @@ class _$GGetUserData_getUser_habits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -4208,7 +4208,7 @@ class _$GGetUserData_getUser_habits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -4278,17 +4278,17 @@ class _$GGetUserData_getUser_habits_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -4388,25 +4388,25 @@ class _$GGetUserData_getUser_habits_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -4488,13 +4488,13 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_commentsSerialize
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -4572,17 +4572,17 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_comments_itemsSer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -4594,7 +4594,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_comments_itemsSer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -4646,13 +4646,13 @@ class _$GGetSelfDataSerializer implements StructuredSerializer<GGetSelfData> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'getUser':
           result.getUser.replace(serializers.deserialize(value,
@@ -4751,17 +4751,17 @@ class _$GGetSelfData_getUserSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -4858,25 +4858,25 @@ class _$GGetSelfData_getUser_avatarSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'accessLevel':
           result.accessLevel = serializers.deserialize(value,
@@ -4929,13 +4929,13 @@ class _$GGetSelfData_getUser_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -5022,17 +5022,17 @@ class _$GGetSelfData_getUser_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -5056,7 +5056,7 @@ class _$GGetSelfData_getUser_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -5123,17 +5123,17 @@ class _$GGetSelfData_getUser_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -5229,25 +5229,25 @@ class _$GGetSelfData_getUser_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -5328,13 +5328,13 @@ class _$GGetSelfData_getUser_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -5410,17 +5410,17 @@ class _$GGetSelfData_getUser_comments_items_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -5432,7 +5432,7 @@ class _$GGetSelfData_getUser_comments_items_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -5486,13 +5486,13 @@ class _$GGetSelfData_getUser_habitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -5586,25 +5586,25 @@ class _$GGetSelfData_getUser_habits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -5682,13 +5682,13 @@ class _$GGetSelfData_getUser_habits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -5777,17 +5777,17 @@ class _$GGetSelfData_getUser_habits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -5811,7 +5811,7 @@ class _$GGetSelfData_getUser_habits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -5881,17 +5881,17 @@ class _$GGetSelfData_getUser_habits_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -5991,25 +5991,25 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -6091,13 +6091,13 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_commentsSerialize
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -6175,17 +6175,17 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_itemsSer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -6197,7 +6197,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_itemsSer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -6250,13 +6250,13 @@ class _$GGetCommentDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'getComment':
           result.getComment.replace(serializers.deserialize(value,
@@ -6340,17 +6340,17 @@ class _$GGetCommentData_getCommentSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -6373,7 +6373,7 @@ class _$GGetCommentData_getCommentSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -6440,17 +6440,17 @@ class _$GGetCommentData_getComment_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -6546,25 +6546,25 @@ class _$GGetCommentData_getComment_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -6641,13 +6641,13 @@ class _$GGetCommentData_getComment_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -6719,17 +6719,17 @@ class _$GGetCommentData_getComment_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -6741,7 +6741,7 @@ class _$GGetCommentData_getComment_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -6799,13 +6799,13 @@ class _$GSubscribeToUserDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'subscribeToUser':
           result.subscribeToUser.replace(serializers.deserialize(value,
@@ -6908,17 +6908,17 @@ class _$GSubscribeToUserData_subscribeToUserSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -7019,25 +7019,25 @@ class _$GSubscribeToUserData_subscribeToUser_avatarSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'accessLevel':
           result.accessLevel = serializers.deserialize(value,
@@ -7092,13 +7092,13 @@ class _$GSubscribeToUserData_subscribeToUser_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -7189,17 +7189,17 @@ class _$GSubscribeToUserData_subscribeToUser_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -7223,7 +7223,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -7294,17 +7294,17 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -7404,25 +7404,25 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -7504,13 +7504,13 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_commentsSerial
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -7588,17 +7588,17 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -7610,7 +7610,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -7666,13 +7666,13 @@ class _$GSubscribeToUserData_subscribeToUser_habitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -7770,25 +7770,25 @@ class _$GSubscribeToUserData_subscribeToUser_habits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -7870,13 +7870,13 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -7968,17 +7968,17 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_itemsSerializ
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -8002,7 +8002,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_itemsSerializ
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -8075,17 +8075,17 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_bySeria
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -8187,25 +8187,25 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habitSe
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -8289,13 +8289,13 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -8373,17 +8373,17 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -8395,7 +8395,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -8448,13 +8448,13 @@ class _$GCreateUserDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createUser':
           result.createUser.replace(serializers.deserialize(value,
@@ -8502,17 +8502,17 @@ class _$GCreateUserData_createUserSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -8556,13 +8556,13 @@ class _$GCreateCommentDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createComment':
           result.createComment.replace(serializers.deserialize(value,
@@ -8649,17 +8649,17 @@ class _$GCreateCommentData_createCommentSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -8683,7 +8683,7 @@ class _$GCreateCommentData_createCommentSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -8750,17 +8750,17 @@ class _$GCreateCommentData_createComment_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -8856,25 +8856,25 @@ class _$GCreateCommentData_createComment_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -8953,13 +8953,13 @@ class _$GCreateCommentData_createComment_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -9035,17 +9035,17 @@ class _$GCreateCommentData_createComment_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -9057,7 +9057,7 @@ class _$GCreateCommentData_createComment_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -9110,13 +9110,13 @@ class _$GCreateHabitDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createHabit':
           result.createHabit.replace(serializers.deserialize(value,
@@ -9209,25 +9209,25 @@ class _$GCreateHabitData_createHabitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -9304,13 +9304,13 @@ class _$GCreateHabitData_createHabit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -9398,17 +9398,17 @@ class _$GCreateHabitData_createHabit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -9432,7 +9432,7 @@ class _$GCreateHabitData_createHabit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -9500,17 +9500,17 @@ class _$GCreateHabitData_createHabit_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -9609,25 +9609,25 @@ class _$GCreateHabitData_createHabit_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -9709,13 +9709,13 @@ class _$GCreateHabitData_createHabit_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -9791,17 +9791,17 @@ class _$GCreateHabitData_createHabit_comments_items_habit_comments_itemsSerializ
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -9813,7 +9813,7 @@ class _$GCreateHabitData_createHabit_comments_items_habit_comments_itemsSerializ
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -9866,13 +9866,13 @@ class _$GUpdateUserDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'updateUser':
           result.updateUser.replace(serializers.deserialize(value,
@@ -9972,17 +9972,17 @@ class _$GUpdateUserData_updateUserSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -10082,25 +10082,25 @@ class _$GUpdateUserData_updateUser_avatarSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'accessLevel':
           result.accessLevel = serializers.deserialize(value,
@@ -10154,13 +10154,13 @@ class _$GUpdateUserData_updateUser_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -10247,17 +10247,17 @@ class _$GUpdateUserData_updateUser_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -10281,7 +10281,7 @@ class _$GUpdateUserData_updateUser_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -10349,17 +10349,17 @@ class _$GUpdateUserData_updateUser_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -10456,25 +10456,25 @@ class _$GUpdateUserData_updateUser_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -10556,13 +10556,13 @@ class _$GUpdateUserData_updateUser_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -10638,17 +10638,17 @@ class _$GUpdateUserData_updateUser_comments_items_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -10660,7 +10660,7 @@ class _$GUpdateUserData_updateUser_comments_items_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -10714,13 +10714,13 @@ class _$GUpdateUserData_updateUser_habitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -10814,25 +10814,25 @@ class _$GUpdateUserData_updateUser_habits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -10912,13 +10912,13 @@ class _$GUpdateUserData_updateUser_habits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -11010,17 +11010,17 @@ class _$GUpdateUserData_updateUser_habits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -11044,7 +11044,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -11115,17 +11115,17 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -11225,25 +11225,25 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -11327,13 +11327,13 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_commentsSer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -11411,17 +11411,17 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_it
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -11433,7 +11433,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_it
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -11486,13 +11486,13 @@ class _$GUpdateHabitDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'updateHabit':
           result.updateHabit.replace(serializers.deserialize(value,
@@ -11585,25 +11585,25 @@ class _$GUpdateHabitData_updateHabitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -11680,13 +11680,13 @@ class _$GUpdateHabitData_updateHabit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -11774,17 +11774,17 @@ class _$GUpdateHabitData_updateHabit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -11808,7 +11808,7 @@ class _$GUpdateHabitData_updateHabit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -11876,17 +11876,17 @@ class _$GUpdateHabitData_updateHabit_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -11985,25 +11985,25 @@ class _$GUpdateHabitData_updateHabit_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -12085,13 +12085,13 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -12167,17 +12167,17 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_comments_itemsSerializ
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -12189,7 +12189,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_comments_itemsSerializ
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -12242,13 +12242,13 @@ class _$GDeleteHabitDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'deleteHabit':
           result.deleteHabit.replace(serializers.deserialize(value,
@@ -12295,17 +12295,17 @@ class _$GDeleteHabitData_deleteHabitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -12348,13 +12348,13 @@ class _$GVoteForHabitDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'vote':
           result.vote.replace(serializers.deserialize(value,
@@ -12413,13 +12413,13 @@ class _$GVoteForHabitData_voteSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'habit':
           result.habit.replace(serializers.deserialize(value,
@@ -12502,25 +12502,25 @@ class _$GVoteForHabitData_vote_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -12601,17 +12601,17 @@ class _$GVoteForHabitData_vote_userSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'upvotedHabits':
           result.upvotedHabits.replace(serializers.deserialize(value,
@@ -12671,13 +12671,13 @@ class _$GSubscribeToVotesDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'subscribeToVotes':
           result.subscribeToVotes.replace(serializers.deserialize(value,
@@ -12739,13 +12739,13 @@ class _$GSubscribeToVotesData_subscribeToVotesSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'habit':
           result.habit.replace(serializers.deserialize(value,
@@ -12831,25 +12831,25 @@ class _$GSubscribeToVotesData_subscribeToVotes_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -12931,17 +12931,17 @@ class _$GSubscribeToVotesData_subscribeToVotes_userSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'upvotedHabits':
           result.upvotedHabits.replace(serializers.deserialize(value,
@@ -12996,13 +12996,13 @@ class _$GSearchUsersDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'listUsers':
           result.listUsers.replace(serializers.deserialize(value,
@@ -13051,13 +13051,13 @@ class _$GSearchUsersData_listUsersSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -13144,17 +13144,17 @@ class _$GSearchUsersData_listUsers_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -13242,25 +13242,25 @@ class _$GSearchUsersData_listUsers_items_avatarSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'accessLevel':
           result.accessLevel = serializers.deserialize(value,
@@ -13314,13 +13314,13 @@ class _$GSearchUsersData_listUsers_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -13408,17 +13408,17 @@ class _$GSearchUsersData_listUsers_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -13442,7 +13442,7 @@ class _$GSearchUsersData_listUsers_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -13512,17 +13512,17 @@ class _$GSearchUsersData_listUsers_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -13622,25 +13622,25 @@ class _$GSearchUsersData_listUsers_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -13722,13 +13722,13 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -13806,17 +13806,17 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsSeri
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -13828,7 +13828,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsSeri
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -13883,13 +13883,13 @@ class _$GSearchUsersData_listUsers_items_habitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -13984,25 +13984,25 @@ class _$GSearchUsersData_listUsers_items_habits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -14084,13 +14084,13 @@ class _$GSearchUsersData_listUsers_items_habits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -14182,17 +14182,17 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -14216,7 +14216,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -14287,17 +14287,17 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_bySerialize
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -14397,25 +14397,25 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habitSerial
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -14499,13 +14499,13 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -14583,17 +14583,17 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -14605,7 +14605,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -14658,13 +14658,13 @@ class _$GSearchHabitsDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'listHabits':
           result.listHabits.replace(serializers.deserialize(value,
@@ -14713,13 +14713,13 @@ class _$GSearchHabitsData_listHabitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -14813,25 +14813,25 @@ class _$GSearchHabitsData_listHabits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -14909,13 +14909,13 @@ class _$GSearchHabitsData_listHabits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -15006,17 +15006,17 @@ class _$GSearchHabitsData_listHabits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -15040,7 +15040,7 @@ class _$GSearchHabitsData_listHabits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -15111,17 +15111,17 @@ class _$GSearchHabitsData_listHabits_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -15221,25 +15221,25 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -15321,13 +15321,13 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_commentsSerializ
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -15405,17 +15405,17 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsSe
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -15427,7 +15427,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsSe
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -15524,25 +15524,25 @@ class _$GAllHabitFieldsDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -15617,13 +15617,13 @@ class _$GAllHabitFieldsData_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -15710,17 +15710,17 @@ class _$GAllHabitFieldsData_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -15744,7 +15744,7 @@ class _$GAllHabitFieldsData_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -15811,17 +15811,17 @@ class _$GAllHabitFieldsData_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -15917,25 +15917,25 @@ class _$GAllHabitFieldsData_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -16016,13 +16016,13 @@ class _$GAllHabitFieldsData_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -16098,17 +16098,17 @@ class _$GAllHabitFieldsData_comments_items_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -16120,7 +16120,7 @@ class _$GAllHabitFieldsData_comments_items_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -16208,17 +16208,17 @@ class _$GAllPublicUserFieldsDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -16306,25 +16306,25 @@ class _$GAllPublicUserFieldsData_avatarSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'accessLevel':
           result.accessLevel = serializers.deserialize(value,
@@ -16377,13 +16377,13 @@ class _$GAllPublicUserFieldsData_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -16470,17 +16470,17 @@ class _$GAllPublicUserFieldsData_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -16504,7 +16504,7 @@ class _$GAllPublicUserFieldsData_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -16572,17 +16572,17 @@ class _$GAllPublicUserFieldsData_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -16679,25 +16679,25 @@ class _$GAllPublicUserFieldsData_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -16779,13 +16779,13 @@ class _$GAllPublicUserFieldsData_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -16861,17 +16861,17 @@ class _$GAllPublicUserFieldsData_comments_items_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -16883,7 +16883,7 @@ class _$GAllPublicUserFieldsData_comments_items_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -16937,13 +16937,13 @@ class _$GAllPublicUserFieldsData_habitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -17037,25 +17037,25 @@ class _$GAllPublicUserFieldsData_habits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -17133,13 +17133,13 @@ class _$GAllPublicUserFieldsData_habits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -17231,17 +17231,17 @@ class _$GAllPublicUserFieldsData_habits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -17265,7 +17265,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -17336,17 +17336,17 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -17446,25 +17446,25 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -17548,13 +17548,13 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_commentsSeria
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -17632,17 +17632,17 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_item
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -17654,7 +17654,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_item
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -17758,17 +17758,17 @@ class _$GAllPrivateUserFieldsDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -17868,25 +17868,25 @@ class _$GAllPrivateUserFieldsData_avatarSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'accessLevel':
           result.accessLevel = serializers.deserialize(value,
@@ -17940,13 +17940,13 @@ class _$GAllPrivateUserFieldsData_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -18033,17 +18033,17 @@ class _$GAllPrivateUserFieldsData_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -18067,7 +18067,7 @@ class _$GAllPrivateUserFieldsData_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -18135,17 +18135,17 @@ class _$GAllPrivateUserFieldsData_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -18242,25 +18242,25 @@ class _$GAllPrivateUserFieldsData_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -18342,13 +18342,13 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -18424,17 +18424,17 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -18446,7 +18446,7 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -18500,13 +18500,13 @@ class _$GAllPrivateUserFieldsData_habitsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -18600,25 +18600,25 @@ class _$GAllPrivateUserFieldsData_habits_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -18697,13 +18697,13 @@ class _$GAllPrivateUserFieldsData_habits_items_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -18795,17 +18795,17 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -18829,7 +18829,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -18900,17 +18900,17 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -19010,25 +19010,25 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -19112,13 +19112,13 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_commentsSeri
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -19196,17 +19196,17 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_ite
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -19218,7 +19218,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_ite
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -19307,17 +19307,17 @@ class _$GAllCommentFieldsDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -19339,7 +19339,7 @@ class _$GAllCommentFieldsDataSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -19406,17 +19406,17 @@ class _$GAllCommentFieldsData_bySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -19512,25 +19512,25 @@ class _$GAllCommentFieldsData_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -19607,13 +19607,13 @@ class _$GAllCommentFieldsData_habit_commentsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'items':
           result.items.replace(serializers.deserialize(value,
@@ -19685,17 +19685,17 @@ class _$GAllCommentFieldsData_habit_comments_itemsSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -19707,7 +19707,7 @@ class _$GAllCommentFieldsData_habit_comments_itemsSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'createdAt':
           result.createdAt.replace(serializers.deserialize(value,
@@ -19771,13 +19771,13 @@ class _$GAllVoteResultFieldsDataSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'habit':
           result.habit.replace(serializers.deserialize(value,
@@ -19861,25 +19861,25 @@ class _$GAllVoteResultFieldsData_habitSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GCategory)) as _i2.GCategory;
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
           break;
         case 'owner':
           result.owner = serializers.deserialize(value,
@@ -19960,17 +19960,17 @@ class _$GAllVoteResultFieldsData_userSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
           result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'upvotedHabits':
           result.upvotedHabits.replace(serializers.deserialize(value,
@@ -19998,12 +19998,12 @@ class _$GListHabitsData extends GListHabitsData {
   final GListHabitsData_listHabits? listHabits;
 
   factory _$GListHabitsData([void Function(GListHabitsDataBuilder)? updates]) =>
-      (new GListHabitsDataBuilder()..update(updates)).build();
+      (new GListHabitsDataBuilder()..update(updates))._build();
 
   _$GListHabitsData._({required this.G__typename, this.listHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GListHabitsData', 'G__typename');
+        G__typename, r'GListHabitsData', 'G__typename');
   }
 
   @override
@@ -20029,7 +20029,7 @@ class _$GListHabitsData extends GListHabitsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabitsData')
+    return (newBuiltValueToStringHelper(r'GListHabitsData')
           ..add('G__typename', G__typename)
           ..add('listHabits', listHabits))
         .toString();
@@ -20076,13 +20076,15 @@ class GListHabitsDataBuilder
   }
 
   @override
-  _$GListHabitsData build() {
+  GListHabitsData build() => _build();
+
+  _$GListHabitsData _build() {
     _$GListHabitsData _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GListHabitsData', 'G__typename'),
+                  G__typename, r'GListHabitsData', 'G__typename'),
               listHabits: _listHabits?.build());
     } catch (_) {
       late String _$failedField;
@@ -20091,7 +20093,7 @@ class GListHabitsDataBuilder
         _listHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData', _$failedField, e.toString());
+            r'GListHabitsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -20110,15 +20112,15 @@ class _$GListHabitsData_listHabits extends GListHabitsData_listHabits {
 
   factory _$GListHabitsData_listHabits(
           [void Function(GListHabitsData_listHabitsBuilder)? updates]) =>
-      (new GListHabitsData_listHabitsBuilder()..update(updates)).build();
+      (new GListHabitsData_listHabitsBuilder()..update(updates))._build();
 
   _$GListHabitsData_listHabits._(
       {required this.G__typename, required this.items, this.nextToken})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GListHabitsData_listHabits', 'G__typename');
+        G__typename, r'GListHabitsData_listHabits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GListHabitsData_listHabits', 'items');
+        items, r'GListHabitsData_listHabits', 'items');
   }
 
   @override
@@ -20147,7 +20149,7 @@ class _$GListHabitsData_listHabits extends GListHabitsData_listHabits {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabitsData_listHabits')
+    return (newBuiltValueToStringHelper(r'GListHabitsData_listHabits')
           ..add('G__typename', G__typename)
           ..add('items', items)
           ..add('nextToken', nextToken))
@@ -20201,13 +20203,15 @@ class GListHabitsData_listHabitsBuilder
   }
 
   @override
-  _$GListHabitsData_listHabits build() {
+  GListHabitsData_listHabits build() => _build();
+
+  _$GListHabitsData_listHabits _build() {
     _$GListHabitsData_listHabits _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsData_listHabits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GListHabitsData_listHabits', 'G__typename'),
+                  G__typename, r'GListHabitsData_listHabits', 'G__typename'),
               items: items.build(),
               nextToken: nextToken);
     } catch (_) {
@@ -20217,7 +20221,7 @@ class GListHabitsData_listHabitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData_listHabits', _$failedField, e.toString());
+            r'GListHabitsData_listHabits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -20253,7 +20257,7 @@ class _$GListHabitsData_listHabits_items
 
   factory _$GListHabitsData_listHabits_items(
           [void Function(GListHabitsData_listHabits_itemsBuilder)? updates]) =>
-      (new GListHabitsData_listHabits_itemsBuilder()..update(updates)).build();
+      (new GListHabitsData_listHabits_itemsBuilder()..update(updates))._build();
 
   _$GListHabitsData_listHabits_items._(
       {required this.G__typename,
@@ -20269,17 +20273,17 @@ class _$GListHabitsData_listHabits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GListHabitsData_listHabits_items', 'G__typename');
+        G__typename, r'GListHabitsData_listHabits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GListHabitsData_listHabits_items', 'id');
+        id, r'GListHabitsData_listHabits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GListHabitsData_listHabits_items', 'tagline');
+        tagline, r'GListHabitsData_listHabits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GListHabitsData_listHabits_items', 'category');
+        category, r'GListHabitsData_listHabits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GListHabitsData_listHabits_items', 'createdAt');
+        createdAt, r'GListHabitsData_listHabits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GListHabitsData_listHabits_items', 'updatedAt');
+        updatedAt, r'GListHabitsData_listHabits_items', 'updatedAt');
   }
 
   @override
@@ -20334,7 +20338,7 @@ class _$GListHabitsData_listHabits_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabitsData_listHabits_items')
+    return (newBuiltValueToStringHelper(r'GListHabitsData_listHabits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -20442,19 +20446,21 @@ class GListHabitsData_listHabits_itemsBuilder
   }
 
   @override
-  _$GListHabitsData_listHabits_items build() {
+  GListHabitsData_listHabits_items build() => _build();
+
+  _$GListHabitsData_listHabits_items _build() {
     _$GListHabitsData_listHabits_items _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsData_listHabits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GListHabitsData_listHabits_items', 'G__typename'),
+                  r'GListHabitsData_listHabits_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GListHabitsData_listHabits_items', 'id'),
+                  id, r'GListHabitsData_listHabits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GListHabitsData_listHabits_items', 'tagline'),
+                  tagline, r'GListHabitsData_listHabits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GListHabitsData_listHabits_items', 'category'),
+                  category, r'GListHabitsData_listHabits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -20473,7 +20479,7 @@ class GListHabitsData_listHabits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData_listHabits_items', _$failedField, e.toString());
+            r'GListHabitsData_listHabits_items', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -20493,15 +20499,15 @@ class _$GListHabitsData_listHabits_items_comments
           [void Function(GListHabitsData_listHabits_items_commentsBuilder)?
               updates]) =>
       (new GListHabitsData_listHabits_items_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsData_listHabits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GListHabitsData_listHabits_items_comments', 'G__typename');
+        r'GListHabitsData_listHabits_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GListHabitsData_listHabits_items_comments', 'items');
+        items, r'GListHabitsData_listHabits_items_comments', 'items');
   }
 
   @override
@@ -20530,7 +20536,7 @@ class _$GListHabitsData_listHabits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsData_listHabits_items_comments')
+            r'GListHabitsData_listHabits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -20584,13 +20590,15 @@ class GListHabitsData_listHabits_items_commentsBuilder
   }
 
   @override
-  _$GListHabitsData_listHabits_items_comments build() {
+  GListHabitsData_listHabits_items_comments build() => _build();
+
+  _$GListHabitsData_listHabits_items_comments _build() {
     _$GListHabitsData_listHabits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsData_listHabits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GListHabitsData_listHabits_items_comments', 'G__typename'),
+                  r'GListHabitsData_listHabits_items_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -20599,7 +20607,7 @@ class GListHabitsData_listHabits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData_listHabits_items_comments',
+            r'GListHabitsData_listHabits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -20637,7 +20645,7 @@ class _$GListHabitsData_listHabits_items_comments_items
               updates]) =>
       (new GListHabitsData_listHabits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsData_listHabits_items_comments_items._(
       {required this.G__typename,
@@ -20651,15 +20659,15 @@ class _$GListHabitsData_listHabits_items_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GListHabitsData_listHabits_items_comments_items', 'G__typename');
+        r'GListHabitsData_listHabits_items_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GListHabitsData_listHabits_items_comments_items', 'id');
+        id, r'GListHabitsData_listHabits_items_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GListHabitsData_listHabits_items_comments_items', 'comment');
+        comment, r'GListHabitsData_listHabits_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GListHabitsData_listHabits_items_comments_items', 'createdAt');
+        r'GListHabitsData_listHabits_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GListHabitsData_listHabits_items_comments_items', 'updatedAt');
+        r'GListHabitsData_listHabits_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -20709,7 +20717,7 @@ class _$GListHabitsData_listHabits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsData_listHabits_items_comments_items')
+            r'GListHabitsData_listHabits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -20812,23 +20820,27 @@ class GListHabitsData_listHabits_items_comments_itemsBuilder
   }
 
   @override
-  _$GListHabitsData_listHabits_items_comments_items build() {
+  GListHabitsData_listHabits_items_comments_items build() => _build();
+
+  _$GListHabitsData_listHabits_items_comments_items _build() {
     _$GListHabitsData_listHabits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsData_listHabits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsData_listHabits_items_comments_items',
+                  r'GListHabitsData_listHabits_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GListHabitsData_listHabits_items_comments_items', 'id'),
+                  id, r'GListHabitsData_listHabits_items_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
-              comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GListHabitsData_listHabits_items_comments_items', 'comment'),
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GListHabitsData_listHabits_items_comments_items',
+                  'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -20846,7 +20858,7 @@ class GListHabitsData_listHabits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData_listHabits_items_comments_items',
+            r'GListHabitsData_listHabits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -20874,7 +20886,7 @@ class _$GListHabitsData_listHabits_items_comments_items_by
               updates]) =>
       (new GListHabitsData_listHabits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsData_listHabits_items_comments_items_by._(
       {required this.G__typename,
@@ -20883,9 +20895,9 @@ class _$GListHabitsData_listHabits_items_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GListHabitsData_listHabits_items_comments_items_by', 'G__typename');
+        r'GListHabitsData_listHabits_items_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(username,
-        'GListHabitsData_listHabits_items_comments_items_by', 'username');
+        r'GListHabitsData_listHabits_items_comments_items_by', 'username');
   }
 
   @override
@@ -20921,7 +20933,7 @@ class _$GListHabitsData_listHabits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsData_listHabits_items_comments_items_by')
+            r'GListHabitsData_listHabits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -20983,16 +20995,18 @@ class GListHabitsData_listHabits_items_comments_items_byBuilder
   }
 
   @override
-  _$GListHabitsData_listHabits_items_comments_items_by build() {
+  GListHabitsData_listHabits_items_comments_items_by build() => _build();
+
+  _$GListHabitsData_listHabits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GListHabitsData_listHabits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GListHabitsData_listHabits_items_comments_items_by',
+                r'GListHabitsData_listHabits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GListHabitsData_listHabits_items_comments_items_by',
+                r'GListHabitsData_listHabits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -21033,7 +21047,7 @@ class _$GListHabitsData_listHabits_items_comments_items_habit
               updates]) =>
       (new GListHabitsData_listHabits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsData_listHabits_items_comments_items_habit._(
       {required this.G__typename,
@@ -21048,18 +21062,20 @@ class _$GListHabitsData_listHabits_items_comments_items_habit
       this.ups,
       this.downs})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GListHabitsData_listHabits_items_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GListHabitsData_listHabits_items_comments_items_habit', 'id');
+        G__typename,
+        r'GListHabitsData_listHabits_items_comments_items_habit',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GListHabitsData_listHabits_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GListHabitsData_listHabits_items_comments_items_habit', 'tagline');
+        r'GListHabitsData_listHabits_items_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GListHabitsData_listHabits_items_comments_items_habit', 'category');
+        r'GListHabitsData_listHabits_items_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GListHabitsData_listHabits_items_comments_items_habit', 'createdAt');
+        r'GListHabitsData_listHabits_items_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GListHabitsData_listHabits_items_comments_items_habit', 'updatedAt');
+        r'GListHabitsData_listHabits_items_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -21118,7 +21134,7 @@ class _$GListHabitsData_listHabits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsData_listHabits_items_comments_items_habit')
+            r'GListHabitsData_listHabits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -21233,26 +21249,28 @@ class GListHabitsData_listHabits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GListHabitsData_listHabits_items_comments_items_habit build() {
+  GListHabitsData_listHabits_items_comments_items_habit build() => _build();
+
+  _$GListHabitsData_listHabits_items_comments_items_habit _build() {
     _$GListHabitsData_listHabits_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsData_listHabits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsData_listHabits_items_comments_items_habit',
+                  r'GListHabitsData_listHabits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GListHabitsData_listHabits_items_comments_items_habit',
+                  r'GListHabitsData_listHabits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GListHabitsData_listHabits_items_comments_items_habit',
+                  r'GListHabitsData_listHabits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GListHabitsData_listHabits_items_comments_items_habit',
+                  r'GListHabitsData_listHabits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -21272,7 +21290,7 @@ class GListHabitsData_listHabits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData_listHabits_items_comments_items_habit',
+            r'GListHabitsData_listHabits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -21298,18 +21316,18 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_comments
               updates]) =>
       (new GListHabitsData_listHabits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsData_listHabits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsData_listHabits_items_comments_items_habit_comments',
+        r'GListHabitsData_listHabits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GListHabitsData_listHabits_items_comments_items_habit_comments',
+        r'GListHabitsData_listHabits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -21343,7 +21361,7 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsData_listHabits_items_comments_items_habit_comments')
+            r'GListHabitsData_listHabits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -21406,7 +21424,10 @@ class GListHabitsData_listHabits_items_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GListHabitsData_listHabits_items_comments_items_habit_comments build() {
+  GListHabitsData_listHabits_items_comments_items_habit_comments build() =>
+      _build();
+
+  _$GListHabitsData_listHabits_items_comments_items_habit_comments _build() {
     _$GListHabitsData_listHabits_items_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
@@ -21414,7 +21435,7 @@ class GListHabitsData_listHabits_items_comments_items_habit_commentsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsData_listHabits_items_comments_items_habit_comments',
+                  r'GListHabitsData_listHabits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -21424,7 +21445,7 @@ class GListHabitsData_listHabits_items_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData_listHabits_items_comments_items_habit_comments',
+            r'GListHabitsData_listHabits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -21458,7 +21479,7 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_comments_items
               updates]) =>
       (new GListHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsData_listHabits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -21471,23 +21492,23 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -21535,7 +21556,7 @@ class _$GListHabitsData_listHabits_items_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsData_listHabits_items_comments_items_habit_comments_items')
+            r'GListHabitsData_listHabits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -21625,8 +21646,11 @@ class GListHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilde
   }
 
   @override
+  GListHabitsData_listHabits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GListHabitsData_listHabits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GListHabitsData_listHabits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -21635,17 +21659,17 @@ class GListHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilde
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+                  r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+                  r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+                  r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -21658,7 +21682,7 @@ class GListHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilde
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
+            r'GListHabitsData_listHabits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -21677,13 +21701,13 @@ class _$GListHabitsByCategoryData extends GListHabitsByCategoryData {
 
   factory _$GListHabitsByCategoryData(
           [void Function(GListHabitsByCategoryDataBuilder)? updates]) =>
-      (new GListHabitsByCategoryDataBuilder()..update(updates)).build();
+      (new GListHabitsByCategoryDataBuilder()..update(updates))._build();
 
   _$GListHabitsByCategoryData._(
       {required this.G__typename, this.habitsByCategory})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GListHabitsByCategoryData', 'G__typename');
+        G__typename, r'GListHabitsByCategoryData', 'G__typename');
   }
 
   @override
@@ -21710,7 +21734,7 @@ class _$GListHabitsByCategoryData extends GListHabitsByCategoryData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabitsByCategoryData')
+    return (newBuiltValueToStringHelper(r'GListHabitsByCategoryData')
           ..add('G__typename', G__typename)
           ..add('habitsByCategory', habitsByCategory))
         .toString();
@@ -21761,13 +21785,15 @@ class GListHabitsByCategoryDataBuilder
   }
 
   @override
-  _$GListHabitsByCategoryData build() {
+  GListHabitsByCategoryData build() => _build();
+
+  _$GListHabitsByCategoryData _build() {
     _$GListHabitsByCategoryData _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsByCategoryData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GListHabitsByCategoryData', 'G__typename'),
+                  G__typename, r'GListHabitsByCategoryData', 'G__typename'),
               habitsByCategory: _habitsByCategory?.build());
     } catch (_) {
       late String _$failedField;
@@ -21776,7 +21802,7 @@ class GListHabitsByCategoryDataBuilder
         _habitsByCategory?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData', _$failedField, e.toString());
+            r'GListHabitsByCategoryData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -21798,15 +21824,15 @@ class _$GListHabitsByCategoryData_habitsByCategory
           [void Function(GListHabitsByCategoryData_habitsByCategoryBuilder)?
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategoryBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory._(
       {required this.G__typename, required this.items, this.nextToken})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GListHabitsByCategoryData_habitsByCategory', 'G__typename');
+        r'GListHabitsByCategoryData_habitsByCategory', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GListHabitsByCategoryData_habitsByCategory', 'items');
+        items, r'GListHabitsByCategoryData_habitsByCategory', 'items');
   }
 
   @override
@@ -21837,7 +21863,7 @@ class _$GListHabitsByCategoryData_habitsByCategory
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory')
+            r'GListHabitsByCategoryData_habitsByCategory')
           ..add('G__typename', G__typename)
           ..add('items', items)
           ..add('nextToken', nextToken))
@@ -21897,13 +21923,15 @@ class GListHabitsByCategoryData_habitsByCategoryBuilder
   }
 
   @override
-  _$GListHabitsByCategoryData_habitsByCategory build() {
+  GListHabitsByCategoryData_habitsByCategory build() => _build();
+
+  _$GListHabitsByCategoryData_habitsByCategory _build() {
     _$GListHabitsByCategoryData_habitsByCategory _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsByCategoryData_habitsByCategory._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GListHabitsByCategoryData_habitsByCategory', 'G__typename'),
+                  r'GListHabitsByCategoryData_habitsByCategory', 'G__typename'),
               items: items.build(),
               nextToken: nextToken);
     } catch (_) {
@@ -21913,7 +21941,7 @@ class GListHabitsByCategoryData_habitsByCategoryBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData_habitsByCategory',
+            r'GListHabitsByCategoryData_habitsByCategory',
             _$failedField,
             e.toString());
       }
@@ -21955,7 +21983,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategory_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory_items._(
       {required this.G__typename,
@@ -21971,17 +21999,17 @@ class _$GListHabitsByCategoryData_habitsByCategory_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GListHabitsByCategoryData_habitsByCategory_items', 'G__typename');
+        r'GListHabitsByCategoryData_habitsByCategory_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GListHabitsByCategoryData_habitsByCategory_items', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GListHabitsByCategoryData_habitsByCategory_items', 'tagline');
+        id, r'GListHabitsByCategoryData_habitsByCategory_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(tagline,
+        r'GListHabitsByCategoryData_habitsByCategory_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GListHabitsByCategoryData_habitsByCategory_items', 'category');
+        r'GListHabitsByCategoryData_habitsByCategory_items', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GListHabitsByCategoryData_habitsByCategory_items', 'createdAt');
+        r'GListHabitsByCategoryData_habitsByCategory_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GListHabitsByCategoryData_habitsByCategory_items', 'updatedAt');
+        r'GListHabitsByCategoryData_habitsByCategory_items', 'updatedAt');
   }
 
   @override
@@ -22039,7 +22067,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory_items')
+            r'GListHabitsByCategoryData_habitsByCategory_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -22151,24 +22179,26 @@ class GListHabitsByCategoryData_habitsByCategory_itemsBuilder
   }
 
   @override
-  _$GListHabitsByCategoryData_habitsByCategory_items build() {
+  GListHabitsByCategoryData_habitsByCategory_items build() => _build();
+
+  _$GListHabitsByCategoryData_habitsByCategory_items _build() {
     _$GListHabitsByCategoryData_habitsByCategory_items _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsByCategoryData_habitsByCategory_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsByCategoryData_habitsByCategory_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items',
                   'G__typename'),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GListHabitsByCategoryData_habitsByCategory_items', 'id'),
+              id: BuiltValueNullFieldError.checkNotNull(id,
+                  r'GListHabitsByCategoryData_habitsByCategory_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GListHabitsByCategoryData_habitsByCategory_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GListHabitsByCategoryData_habitsByCategory_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items',
                   'category'),
               details: details,
               owner: owner,
@@ -22188,7 +22218,7 @@ class GListHabitsByCategoryData_habitsByCategory_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData_habitsByCategory_items',
+            r'GListHabitsByCategoryData_habitsByCategory_items',
             _$failedField,
             e.toString());
       }
@@ -22213,17 +22243,17 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategory_items_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments', 'items');
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments', 'items');
   }
 
   @override
@@ -22255,7 +22285,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments')
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -22314,14 +22344,16 @@ class GListHabitsByCategoryData_habitsByCategory_items_commentsBuilder
   }
 
   @override
-  _$GListHabitsByCategoryData_habitsByCategory_items_comments build() {
+  GListHabitsByCategoryData_habitsByCategory_items_comments build() => _build();
+
+  _$GListHabitsByCategoryData_habitsByCategory_items_comments _build() {
     _$GListHabitsByCategoryData_habitsByCategory_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsByCategoryData_habitsByCategory_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -22331,7 +22363,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments',
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments',
             _$failedField,
             e.toString());
       }
@@ -22370,7 +22402,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategory_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items._(
       {required this.G__typename,
@@ -22385,23 +22417,23 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
         'updatedAt');
   }
 
@@ -22455,7 +22487,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items')
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -22567,18 +22599,21 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_itemsBuilder
   }
 
   @override
-  _$GListHabitsByCategoryData_habitsByCategory_items_comments_items build() {
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items build() =>
+      _build();
+
+  _$GListHabitsByCategoryData_habitsByCategory_items_comments_items _build() {
     _$GListHabitsByCategoryData_habitsByCategory_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
                   'id'),
               owner: owner,
               by: _by?.build(),
@@ -22586,7 +22621,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_itemsBuilder
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -22605,7 +22640,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -22633,7 +22668,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategory_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by._(
       {required this.G__typename,
@@ -22643,11 +22678,11 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         username,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
         'username');
   }
 
@@ -22686,7 +22721,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by')
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -22755,17 +22790,21 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_byBuilder
   }
 
   @override
-  _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by build() {
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by build() =>
+      _build();
+
+  _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
+      _build() {
     final _$result = _$v ??
         new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
                 ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -22806,7 +22845,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategory_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit._(
       {required this.G__typename,
@@ -22823,27 +22862,27 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         tagline,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
         'tagline');
     BuiltValueNullFieldError.checkNotNull(
         category,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
         'category');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
         'updatedAt');
   }
 
@@ -22905,7 +22944,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit')
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -23025,8 +23064,11 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habitBuild
   }
 
   @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
+      build() => _build();
+
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
-      build() {
+      _build() {
     _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
         _$result;
     try {
@@ -23034,19 +23076,19 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habitBuild
           new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -23066,7 +23108,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habitBuild
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -23092,18 +23134,18 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
         'items');
   }
 
@@ -23138,7 +23180,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments')
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -23204,8 +23246,11 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comm
   }
 
   @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
+      build() => _build();
+
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
-      build() {
+      _build() {
     _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
         _$result;
     try {
@@ -23214,7 +23259,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comm
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -23224,7 +23269,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comm
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -23258,7 +23303,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
               updates]) =>
       (new GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -23271,23 +23316,23 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -23336,7 +23381,7 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_co
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items')
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -23427,8 +23472,11 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comm
   }
 
   @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -23437,17 +23485,17 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comm
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -23460,7 +23508,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comm
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -23478,11 +23526,11 @@ class _$GGetHabitData extends GGetHabitData {
   final GGetHabitData_getHabit? getHabit;
 
   factory _$GGetHabitData([void Function(GGetHabitDataBuilder)? updates]) =>
-      (new GGetHabitDataBuilder()..update(updates)).build();
+      (new GGetHabitDataBuilder()..update(updates))._build();
 
   _$GGetHabitData._({required this.G__typename, this.getHabit}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetHabitData', 'G__typename');
+        G__typename, r'GGetHabitData', 'G__typename');
   }
 
   @override
@@ -23507,7 +23555,7 @@ class _$GGetHabitData extends GGetHabitData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetHabitData')
+    return (newBuiltValueToStringHelper(r'GGetHabitData')
           ..add('G__typename', G__typename)
           ..add('getHabit', getHabit))
         .toString();
@@ -23554,13 +23602,15 @@ class GGetHabitDataBuilder
   }
 
   @override
-  _$GGetHabitData build() {
+  GGetHabitData build() => _build();
+
+  _$GGetHabitData _build() {
     _$GGetHabitData _$result;
     try {
       _$result = _$v ??
           new _$GGetHabitData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetHabitData', 'G__typename'),
+                  G__typename, r'GGetHabitData', 'G__typename'),
               getHabit: _getHabit?.build());
     } catch (_) {
       late String _$failedField;
@@ -23569,7 +23619,7 @@ class GGetHabitDataBuilder
         _getHabit?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabitData', _$failedField, e.toString());
+            r'GGetHabitData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -23604,7 +23654,7 @@ class _$GGetHabitData_getHabit extends GGetHabitData_getHabit {
 
   factory _$GGetHabitData_getHabit(
           [void Function(GGetHabitData_getHabitBuilder)? updates]) =>
-      (new GGetHabitData_getHabitBuilder()..update(updates)).build();
+      (new GGetHabitData_getHabitBuilder()..update(updates))._build();
 
   _$GGetHabitData_getHabit._(
       {required this.G__typename,
@@ -23620,16 +23670,16 @@ class _$GGetHabitData_getHabit extends GGetHabitData_getHabit {
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetHabitData_getHabit', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(id, 'GGetHabitData_getHabit', 'id');
+        G__typename, r'GGetHabitData_getHabit', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(id, r'GGetHabitData_getHabit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GGetHabitData_getHabit', 'tagline');
+        tagline, r'GGetHabitData_getHabit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GGetHabitData_getHabit', 'category');
+        category, r'GGetHabitData_getHabit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetHabitData_getHabit', 'createdAt');
+        createdAt, r'GGetHabitData_getHabit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetHabitData_getHabit', 'updatedAt');
+        updatedAt, r'GGetHabitData_getHabit', 'updatedAt');
   }
 
   @override
@@ -23684,7 +23734,7 @@ class _$GGetHabitData_getHabit extends GGetHabitData_getHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetHabitData_getHabit')
+    return (newBuiltValueToStringHelper(r'GGetHabitData_getHabit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -23789,19 +23839,21 @@ class GGetHabitData_getHabitBuilder
   }
 
   @override
-  _$GGetHabitData_getHabit build() {
+  GGetHabitData_getHabit build() => _build();
+
+  _$GGetHabitData_getHabit _build() {
     _$GGetHabitData_getHabit _$result;
     try {
       _$result = _$v ??
           new _$GGetHabitData_getHabit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetHabitData_getHabit', 'G__typename'),
+                  G__typename, r'GGetHabitData_getHabit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetHabitData_getHabit', 'id'),
+                  id, r'GGetHabitData_getHabit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GGetHabitData_getHabit', 'tagline'),
+                  tagline, r'GGetHabitData_getHabit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GGetHabitData_getHabit', 'category'),
+                  category, r'GGetHabitData_getHabit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -23820,7 +23872,7 @@ class GGetHabitData_getHabitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabitData_getHabit', _$failedField, e.toString());
+            r'GGetHabitData_getHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -23838,15 +23890,15 @@ class _$GGetHabitData_getHabit_comments
 
   factory _$GGetHabitData_getHabit_comments(
           [void Function(GGetHabitData_getHabit_commentsBuilder)? updates]) =>
-      (new GGetHabitData_getHabit_commentsBuilder()..update(updates)).build();
+      (new GGetHabitData_getHabit_commentsBuilder()..update(updates))._build();
 
   _$GGetHabitData_getHabit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetHabitData_getHabit_comments', 'G__typename');
+        G__typename, r'GGetHabitData_getHabit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetHabitData_getHabit_comments', 'items');
+        items, r'GGetHabitData_getHabit_comments', 'items');
   }
 
   @override
@@ -23873,7 +23925,7 @@ class _$GGetHabitData_getHabit_comments
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetHabitData_getHabit_comments')
+    return (newBuiltValueToStringHelper(r'GGetHabitData_getHabit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -23923,13 +23975,15 @@ class GGetHabitData_getHabit_commentsBuilder
   }
 
   @override
-  _$GGetHabitData_getHabit_comments build() {
+  GGetHabitData_getHabit_comments build() => _build();
+
+  _$GGetHabitData_getHabit_comments _build() {
     _$GGetHabitData_getHabit_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetHabitData_getHabit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetHabitData_getHabit_comments', 'G__typename'),
+                  r'GGetHabitData_getHabit_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -23938,7 +23992,7 @@ class GGetHabitData_getHabit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabitData_getHabit_comments', _$failedField, e.toString());
+            r'GGetHabitData_getHabit_comments', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -23972,7 +24026,7 @@ class _$GGetHabitData_getHabit_comments_items
           [void Function(GGetHabitData_getHabit_comments_itemsBuilder)?
               updates]) =>
       (new GGetHabitData_getHabit_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetHabitData_getHabit_comments_items._(
       {required this.G__typename,
@@ -23986,15 +24040,15 @@ class _$GGetHabitData_getHabit_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetHabitData_getHabit_comments_items', 'G__typename');
+        G__typename, r'GGetHabitData_getHabit_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetHabitData_getHabit_comments_items', 'id');
+        id, r'GGetHabitData_getHabit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GGetHabitData_getHabit_comments_items', 'comment');
+        comment, r'GGetHabitData_getHabit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetHabitData_getHabit_comments_items', 'createdAt');
+        createdAt, r'GGetHabitData_getHabit_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetHabitData_getHabit_comments_items', 'updatedAt');
+        updatedAt, r'GGetHabitData_getHabit_comments_items', 'updatedAt');
   }
 
   @override
@@ -24042,7 +24096,8 @@ class _$GGetHabitData_getHabit_comments_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetHabitData_getHabit_comments_items')
+    return (newBuiltValueToStringHelper(
+            r'GGetHabitData_getHabit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -24141,21 +24196,23 @@ class GGetHabitData_getHabit_comments_itemsBuilder
   }
 
   @override
-  _$GGetHabitData_getHabit_comments_items build() {
+  GGetHabitData_getHabit_comments_items build() => _build();
+
+  _$GGetHabitData_getHabit_comments_items _build() {
     _$GGetHabitData_getHabit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetHabitData_getHabit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetHabitData_getHabit_comments_items', 'G__typename'),
+                  r'GGetHabitData_getHabit_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetHabitData_getHabit_comments_items', 'id'),
+                  id, r'GGetHabitData_getHabit_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
-                  comment, 'GGetHabitData_getHabit_comments_items', 'comment'),
+                  comment, r'GGetHabitData_getHabit_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -24173,7 +24230,7 @@ class GGetHabitData_getHabit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabitData_getHabit_comments_items',
+            r'GGetHabitData_getHabit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -24199,7 +24256,7 @@ class _$GGetHabitData_getHabit_comments_items_by
           [void Function(GGetHabitData_getHabit_comments_items_byBuilder)?
               updates]) =>
       (new GGetHabitData_getHabit_comments_items_byBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetHabitData_getHabit_comments_items_by._(
       {required this.G__typename,
@@ -24207,10 +24264,10 @@ class _$GGetHabitData_getHabit_comments_items_by
       this.displayUsername,
       this.name})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GGetHabitData_getHabit_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetHabitData_getHabit_comments_items_by', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        username, 'GGetHabitData_getHabit_comments_items_by', 'username');
+        username, r'GGetHabitData_getHabit_comments_items_by', 'username');
   }
 
   @override
@@ -24244,7 +24301,7 @@ class _$GGetHabitData_getHabit_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetHabitData_getHabit_comments_items_by')
+            r'GGetHabitData_getHabit_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -24305,13 +24362,15 @@ class GGetHabitData_getHabit_comments_items_byBuilder
   }
 
   @override
-  _$GGetHabitData_getHabit_comments_items_by build() {
+  GGetHabitData_getHabit_comments_items_by build() => _build();
+
+  _$GGetHabitData_getHabit_comments_items_by _build() {
     final _$result = _$v ??
         new _$GGetHabitData_getHabit_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GGetHabitData_getHabit_comments_items_by', 'G__typename'),
+                r'GGetHabitData_getHabit_comments_items_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(username,
-                'GGetHabitData_getHabit_comments_items_by', 'username'),
+                r'GGetHabitData_getHabit_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -24349,7 +24408,7 @@ class _$GGetHabitData_getHabit_comments_items_habit
               updates]) =>
       (new GGetHabitData_getHabit_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetHabitData_getHabit_comments_items_habit._(
       {required this.G__typename,
@@ -24365,17 +24424,17 @@ class _$GGetHabitData_getHabit_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetHabitData_getHabit_comments_items_habit', 'G__typename');
+        r'GGetHabitData_getHabit_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetHabitData_getHabit_comments_items_habit', 'id');
+        id, r'GGetHabitData_getHabit_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GGetHabitData_getHabit_comments_items_habit', 'tagline');
+        tagline, r'GGetHabitData_getHabit_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GGetHabitData_getHabit_comments_items_habit', 'category');
+        category, r'GGetHabitData_getHabit_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetHabitData_getHabit_comments_items_habit', 'createdAt');
+        createdAt, r'GGetHabitData_getHabit_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetHabitData_getHabit_comments_items_habit', 'updatedAt');
+        updatedAt, r'GGetHabitData_getHabit_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -24432,7 +24491,7 @@ class _$GGetHabitData_getHabit_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetHabitData_getHabit_comments_items_habit')
+            r'GGetHabitData_getHabit_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -24544,19 +24603,23 @@ class GGetHabitData_getHabit_comments_items_habitBuilder
   }
 
   @override
-  _$GGetHabitData_getHabit_comments_items_habit build() {
+  GGetHabitData_getHabit_comments_items_habit build() => _build();
+
+  _$GGetHabitData_getHabit_comments_items_habit _build() {
     _$GGetHabitData_getHabit_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GGetHabitData_getHabit_comments_items_habit._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetHabitData_getHabit_comments_items_habit', 'G__typename'),
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GGetHabitData_getHabit_comments_items_habit',
+                  'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetHabitData_getHabit_comments_items_habit', 'id'),
+                  id, r'GGetHabitData_getHabit_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GGetHabitData_getHabit_comments_items_habit', 'tagline'),
+                  r'GGetHabitData_getHabit_comments_items_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GGetHabitData_getHabit_comments_items_habit', 'category'),
+                  r'GGetHabitData_getHabit_comments_items_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -24575,7 +24638,7 @@ class GGetHabitData_getHabit_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabitData_getHabit_comments_items_habit',
+            r'GGetHabitData_getHabit_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -24600,15 +24663,15 @@ class _$GGetHabitData_getHabit_comments_items_habit_comments
               updates]) =>
       (new GGetHabitData_getHabit_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetHabitData_getHabit_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetHabitData_getHabit_comments_items_habit_comments', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetHabitData_getHabit_comments_items_habit_comments', 'items');
+        r'GGetHabitData_getHabit_comments_items_habit_comments', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(items,
+        r'GGetHabitData_getHabit_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -24639,7 +24702,7 @@ class _$GGetHabitData_getHabit_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetHabitData_getHabit_comments_items_habit_comments')
+            r'GGetHabitData_getHabit_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -24697,14 +24760,16 @@ class GGetHabitData_getHabit_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GGetHabitData_getHabit_comments_items_habit_comments build() {
+  GGetHabitData_getHabit_comments_items_habit_comments build() => _build();
+
+  _$GGetHabitData_getHabit_comments_items_habit_comments _build() {
     _$GGetHabitData_getHabit_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetHabitData_getHabit_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetHabitData_getHabit_comments_items_habit_comments',
+                  r'GGetHabitData_getHabit_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -24714,7 +24779,7 @@ class GGetHabitData_getHabit_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabitData_getHabit_comments_items_habit_comments',
+            r'GGetHabitData_getHabit_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -24748,7 +24813,7 @@ class _$GGetHabitData_getHabit_comments_items_habit_comments_items
               updates]) =>
       (new GGetHabitData_getHabit_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetHabitData_getHabit_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -24761,21 +24826,21 @@ class _$GGetHabitData_getHabit_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetHabitData_getHabit_comments_items_habit_comments_items',
+        r'GGetHabitData_getHabit_comments_items_habit_comments_items',
         'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetHabitData_getHabit_comments_items_habit_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(id,
+        r'GGetHabitData_getHabit_comments_items_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GGetHabitData_getHabit_comments_items_habit_comments_items',
+        r'GGetHabitData_getHabit_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GGetHabitData_getHabit_comments_items_habit_comments_items',
+        r'GGetHabitData_getHabit_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GGetHabitData_getHabit_comments_items_habit_comments_items',
+        r'GGetHabitData_getHabit_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -24823,7 +24888,7 @@ class _$GGetHabitData_getHabit_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetHabitData_getHabit_comments_items_habit_comments_items')
+            r'GGetHabitData_getHabit_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -24909,24 +24974,27 @@ class GGetHabitData_getHabit_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GGetHabitData_getHabit_comments_items_habit_comments_items build() {
+  GGetHabitData_getHabit_comments_items_habit_comments_items build() =>
+      _build();
+
+  _$GGetHabitData_getHabit_comments_items_habit_comments_items _build() {
     _$GGetHabitData_getHabit_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetHabitData_getHabit_comments_items_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetHabitData_getHabit_comments_items_habit_comments_items',
+                  r'GGetHabitData_getHabit_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GGetHabitData_getHabit_comments_items_habit_comments_items',
+                  r'GGetHabitData_getHabit_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GGetHabitData_getHabit_comments_items_habit_comments_items',
+                  r'GGetHabitData_getHabit_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -24939,7 +25007,7 @@ class GGetHabitData_getHabit_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabitData_getHabit_comments_items_habit_comments_items',
+            r'GGetHabitData_getHabit_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -24957,11 +25025,11 @@ class _$GGetUserData extends GGetUserData {
   final GGetUserData_getUser? getUser;
 
   factory _$GGetUserData([void Function(GGetUserDataBuilder)? updates]) =>
-      (new GGetUserDataBuilder()..update(updates)).build();
+      (new GGetUserDataBuilder()..update(updates))._build();
 
   _$GGetUserData._({required this.G__typename, this.getUser}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData', 'G__typename');
+        G__typename, r'GGetUserData', 'G__typename');
   }
 
   @override
@@ -24986,7 +25054,7 @@ class _$GGetUserData extends GGetUserData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserData')
+    return (newBuiltValueToStringHelper(r'GGetUserData')
           ..add('G__typename', G__typename)
           ..add('getUser', getUser))
         .toString();
@@ -25033,13 +25101,15 @@ class GGetUserDataBuilder
   }
 
   @override
-  _$GGetUserData build() {
+  GGetUserData build() => _build();
+
+  _$GGetUserData _build() {
     _$GGetUserData _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetUserData', 'G__typename'),
+                  G__typename, r'GGetUserData', 'G__typename'),
               getUser: _getUser?.build());
     } catch (_) {
       late String _$failedField;
@@ -25048,7 +25118,7 @@ class GGetUserDataBuilder
         _getUser?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData', _$failedField, e.toString());
+            r'GGetUserData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -25075,7 +25145,7 @@ class _$GGetUserData_getUser extends GGetUserData_getUser {
 
   factory _$GGetUserData_getUser(
           [void Function(GGetUserData_getUserBuilder)? updates]) =>
-      (new GGetUserData_getUserBuilder()..update(updates)).build();
+      (new GGetUserData_getUserBuilder()..update(updates))._build();
 
   _$GGetUserData_getUser._(
       {required this.G__typename,
@@ -25087,9 +25157,9 @@ class _$GGetUserData_getUser extends GGetUserData_getUser {
       this.habits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData_getUser', 'G__typename');
+        G__typename, r'GGetUserData_getUser', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GGetUserData_getUser', 'username');
+        username, r'GGetUserData_getUser', 'username');
   }
 
   @override
@@ -25130,7 +25200,7 @@ class _$GGetUserData_getUser extends GGetUserData_getUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserData_getUser')
+    return (newBuiltValueToStringHelper(r'GGetUserData_getUser')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -25212,15 +25282,17 @@ class GGetUserData_getUserBuilder
   }
 
   @override
-  _$GGetUserData_getUser build() {
+  GGetUserData_getUser build() => _build();
+
+  _$GGetUserData_getUser _build() {
     _$GGetUserData_getUser _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetUserData_getUser', 'G__typename'),
+                  G__typename, r'GGetUserData_getUser', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GGetUserData_getUser', 'username'),
+                  username, r'GGetUserData_getUser', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -25237,7 +25309,7 @@ class GGetUserData_getUserBuilder
         _habits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser', _$failedField, e.toString());
+            r'GGetUserData_getUser', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -25262,7 +25334,7 @@ class _$GGetUserData_getUser_avatar extends GGetUserData_getUser_avatar {
 
   factory _$GGetUserData_getUser_avatar(
           [void Function(GGetUserData_getUser_avatarBuilder)? updates]) =>
-      (new GGetUserData_getUser_avatarBuilder()..update(updates)).build();
+      (new GGetUserData_getUser_avatarBuilder()..update(updates))._build();
 
   _$GGetUserData_getUser_avatar._(
       {required this.G__typename,
@@ -25273,13 +25345,13 @@ class _$GGetUserData_getUser_avatar extends GGetUserData_getUser_avatar {
       this.cognitoId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData_getUser_avatar', 'G__typename');
+        G__typename, r'GGetUserData_getUser_avatar', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        bucket, 'GGetUserData_getUser_avatar', 'bucket');
+        bucket, r'GGetUserData_getUser_avatar', 'bucket');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'GGetUserData_getUser_avatar', 'region');
+        region, r'GGetUserData_getUser_avatar', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        key, 'GGetUserData_getUser_avatar', 'key');
+        key, r'GGetUserData_getUser_avatar', 'key');
   }
 
   @override
@@ -25317,7 +25389,7 @@ class _$GGetUserData_getUser_avatar extends GGetUserData_getUser_avatar {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserData_getUser_avatar')
+    return (newBuiltValueToStringHelper(r'GGetUserData_getUser_avatar')
           ..add('G__typename', G__typename)
           ..add('bucket', bucket)
           ..add('region', region)
@@ -25389,17 +25461,19 @@ class GGetUserData_getUser_avatarBuilder
   }
 
   @override
-  _$GGetUserData_getUser_avatar build() {
+  GGetUserData_getUser_avatar build() => _build();
+
+  _$GGetUserData_getUser_avatar _build() {
     final _$result = _$v ??
         new _$GGetUserData_getUser_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GGetUserData_getUser_avatar', 'G__typename'),
+                G__typename, r'GGetUserData_getUser_avatar', 'G__typename'),
             bucket: BuiltValueNullFieldError.checkNotNull(
-                bucket, 'GGetUserData_getUser_avatar', 'bucket'),
+                bucket, r'GGetUserData_getUser_avatar', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'GGetUserData_getUser_avatar', 'region'),
+                region, r'GGetUserData_getUser_avatar', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GGetUserData_getUser_avatar', 'key'),
+                key, r'GGetUserData_getUser_avatar', 'key'),
             accessLevel: accessLevel,
             cognitoId: cognitoId);
     replace(_$result);
@@ -25415,15 +25489,15 @@ class _$GGetUserData_getUser_comments extends GGetUserData_getUser_comments {
 
   factory _$GGetUserData_getUser_comments(
           [void Function(GGetUserData_getUser_commentsBuilder)? updates]) =>
-      (new GGetUserData_getUser_commentsBuilder()..update(updates)).build();
+      (new GGetUserData_getUser_commentsBuilder()..update(updates))._build();
 
   _$GGetUserData_getUser_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData_getUser_comments', 'G__typename');
+        G__typename, r'GGetUserData_getUser_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetUserData_getUser_comments', 'items');
+        items, r'GGetUserData_getUser_comments', 'items');
   }
 
   @override
@@ -25450,7 +25524,7 @@ class _$GGetUserData_getUser_comments extends GGetUserData_getUser_comments {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserData_getUser_comments')
+    return (newBuiltValueToStringHelper(r'GGetUserData_getUser_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -25499,13 +25573,15 @@ class GGetUserData_getUser_commentsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_comments build() {
+  GGetUserData_getUser_comments build() => _build();
+
+  _$GGetUserData_getUser_comments _build() {
     _$GGetUserData_getUser_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetUserData_getUser_comments', 'G__typename'),
+                  G__typename, r'GGetUserData_getUser_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -25514,7 +25590,7 @@ class GGetUserData_getUser_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_comments', _$failedField, e.toString());
+            r'GGetUserData_getUser_comments', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -25548,7 +25624,7 @@ class _$GGetUserData_getUser_comments_items
           [void Function(GGetUserData_getUser_comments_itemsBuilder)?
               updates]) =>
       (new GGetUserData_getUser_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_comments_items._(
       {required this.G__typename,
@@ -25562,15 +25638,15 @@ class _$GGetUserData_getUser_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData_getUser_comments_items', 'G__typename');
+        G__typename, r'GGetUserData_getUser_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetUserData_getUser_comments_items', 'id');
+        id, r'GGetUserData_getUser_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GGetUserData_getUser_comments_items', 'comment');
+        comment, r'GGetUserData_getUser_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetUserData_getUser_comments_items', 'createdAt');
+        createdAt, r'GGetUserData_getUser_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetUserData_getUser_comments_items', 'updatedAt');
+        updatedAt, r'GGetUserData_getUser_comments_items', 'updatedAt');
   }
 
   @override
@@ -25617,7 +25693,7 @@ class _$GGetUserData_getUser_comments_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserData_getUser_comments_items')
+    return (newBuiltValueToStringHelper(r'GGetUserData_getUser_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -25714,21 +25790,23 @@ class GGetUserData_getUser_comments_itemsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_comments_items build() {
+  GGetUserData_getUser_comments_items build() => _build();
+
+  _$GGetUserData_getUser_comments_items _build() {
     _$GGetUserData_getUser_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetUserData_getUser_comments_items', 'G__typename'),
+                  r'GGetUserData_getUser_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetUserData_getUser_comments_items', 'id'),
+                  id, r'GGetUserData_getUser_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
-                  comment, 'GGetUserData_getUser_comments_items', 'comment'),
+                  comment, r'GGetUserData_getUser_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -25746,7 +25824,9 @@ class GGetUserData_getUser_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_comments_items', _$failedField, e.toString());
+            r'GGetUserData_getUser_comments_items',
+            _$failedField,
+            e.toString());
       }
       rethrow;
     }
@@ -25770,7 +25850,7 @@ class _$GGetUserData_getUser_comments_items_by
           [void Function(GGetUserData_getUser_comments_items_byBuilder)?
               updates]) =>
       (new GGetUserData_getUser_comments_items_byBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_comments_items_by._(
       {required this.G__typename,
@@ -25779,9 +25859,9 @@ class _$GGetUserData_getUser_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData_getUser_comments_items_by', 'G__typename');
+        G__typename, r'GGetUserData_getUser_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GGetUserData_getUser_comments_items_by', 'username');
+        username, r'GGetUserData_getUser_comments_items_by', 'username');
   }
 
   @override
@@ -25815,7 +25895,7 @@ class _$GGetUserData_getUser_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_comments_items_by')
+            r'GGetUserData_getUser_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -25876,13 +25956,15 @@ class GGetUserData_getUser_comments_items_byBuilder
   }
 
   @override
-  _$GGetUserData_getUser_comments_items_by build() {
+  GGetUserData_getUser_comments_items_by build() => _build();
+
+  _$GGetUserData_getUser_comments_items_by _build() {
     final _$result = _$v ??
         new _$GGetUserData_getUser_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GGetUserData_getUser_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GGetUserData_getUser_comments_items_by', 'username'),
+                r'GGetUserData_getUser_comments_items_by', 'G__typename'),
+            username: BuiltValueNullFieldError.checkNotNull(username,
+                r'GGetUserData_getUser_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -25919,7 +26001,7 @@ class _$GGetUserData_getUser_comments_items_habit
           [void Function(GGetUserData_getUser_comments_items_habitBuilder)?
               updates]) =>
       (new GGetUserData_getUser_comments_items_habitBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_comments_items_habit._(
       {required this.G__typename,
@@ -25935,17 +26017,17 @@ class _$GGetUserData_getUser_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetUserData_getUser_comments_items_habit', 'G__typename');
+        r'GGetUserData_getUser_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetUserData_getUser_comments_items_habit', 'id');
+        id, r'GGetUserData_getUser_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GGetUserData_getUser_comments_items_habit', 'tagline');
+        tagline, r'GGetUserData_getUser_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GGetUserData_getUser_comments_items_habit', 'category');
+        category, r'GGetUserData_getUser_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetUserData_getUser_comments_items_habit', 'createdAt');
+        createdAt, r'GGetUserData_getUser_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetUserData_getUser_comments_items_habit', 'updatedAt');
+        updatedAt, r'GGetUserData_getUser_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -26002,7 +26084,7 @@ class _$GGetUserData_getUser_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_comments_items_habit')
+            r'GGetUserData_getUser_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -26114,19 +26196,21 @@ class GGetUserData_getUser_comments_items_habitBuilder
   }
 
   @override
-  _$GGetUserData_getUser_comments_items_habit build() {
+  GGetUserData_getUser_comments_items_habit build() => _build();
+
+  _$GGetUserData_getUser_comments_items_habit _build() {
     _$GGetUserData_getUser_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetUserData_getUser_comments_items_habit', 'G__typename'),
+                  r'GGetUserData_getUser_comments_items_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetUserData_getUser_comments_items_habit', 'id'),
+                  id, r'GGetUserData_getUser_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GGetUserData_getUser_comments_items_habit', 'tagline'),
+                  r'GGetUserData_getUser_comments_items_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GGetUserData_getUser_comments_items_habit', 'category'),
+                  r'GGetUserData_getUser_comments_items_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -26145,7 +26229,7 @@ class GGetUserData_getUser_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_comments_items_habit',
+            r'GGetUserData_getUser_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -26170,15 +26254,15 @@ class _$GGetUserData_getUser_comments_items_habit_comments
               updates]) =>
       (new GGetUserData_getUser_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetUserData_getUser_comments_items_habit_comments', 'G__typename');
+        r'GGetUserData_getUser_comments_items_habit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetUserData_getUser_comments_items_habit_comments', 'items');
+        items, r'GGetUserData_getUser_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -26209,7 +26293,7 @@ class _$GGetUserData_getUser_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_comments_items_habit_comments')
+            r'GGetUserData_getUser_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -26263,14 +26347,16 @@ class GGetUserData_getUser_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_comments_items_habit_comments build() {
+  GGetUserData_getUser_comments_items_habit_comments build() => _build();
+
+  _$GGetUserData_getUser_comments_items_habit_comments _build() {
     _$GGetUserData_getUser_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetUserData_getUser_comments_items_habit_comments',
+                  r'GGetUserData_getUser_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -26280,7 +26366,7 @@ class GGetUserData_getUser_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_comments_items_habit_comments',
+            r'GGetUserData_getUser_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -26314,7 +26400,7 @@ class _$GGetUserData_getUser_comments_items_habit_comments_items
               updates]) =>
       (new GGetUserData_getUser_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -26327,19 +26413,19 @@ class _$GGetUserData_getUser_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetUserData_getUser_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetUserData_getUser_comments_items_habit_comments_items', 'id');
+        id, r'GGetUserData_getUser_comments_items_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GGetUserData_getUser_comments_items_habit_comments_items', 'comment');
+        r'GGetUserData_getUser_comments_items_habit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GGetUserData_getUser_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GGetUserData_getUser_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -26385,7 +26471,7 @@ class _$GGetUserData_getUser_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_comments_items_habit_comments_items')
+            r'GGetUserData_getUser_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -26470,24 +26556,26 @@ class GGetUserData_getUser_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_comments_items_habit_comments_items build() {
+  GGetUserData_getUser_comments_items_habit_comments_items build() => _build();
+
+  _$GGetUserData_getUser_comments_items_habit_comments_items _build() {
     _$GGetUserData_getUser_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_comments_items_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetUserData_getUser_comments_items_habit_comments_items',
+                  r'GGetUserData_getUser_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GGetUserData_getUser_comments_items_habit_comments_items',
+                  r'GGetUserData_getUser_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GGetUserData_getUser_comments_items_habit_comments_items',
+                  r'GGetUserData_getUser_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -26500,7 +26588,7 @@ class GGetUserData_getUser_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_comments_items_habit_comments_items',
+            r'GGetUserData_getUser_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -26519,15 +26607,15 @@ class _$GGetUserData_getUser_habits extends GGetUserData_getUser_habits {
 
   factory _$GGetUserData_getUser_habits(
           [void Function(GGetUserData_getUser_habitsBuilder)? updates]) =>
-      (new GGetUserData_getUser_habitsBuilder()..update(updates)).build();
+      (new GGetUserData_getUser_habitsBuilder()..update(updates))._build();
 
   _$GGetUserData_getUser_habits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData_getUser_habits', 'G__typename');
+        G__typename, r'GGetUserData_getUser_habits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetUserData_getUser_habits', 'items');
+        items, r'GGetUserData_getUser_habits', 'items');
   }
 
   @override
@@ -26554,7 +26642,7 @@ class _$GGetUserData_getUser_habits extends GGetUserData_getUser_habits {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserData_getUser_habits')
+    return (newBuiltValueToStringHelper(r'GGetUserData_getUser_habits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -26603,13 +26691,15 @@ class GGetUserData_getUser_habitsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_habits build() {
+  GGetUserData_getUser_habits build() => _build();
+
+  _$GGetUserData_getUser_habits _build() {
     _$GGetUserData_getUser_habits _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_habits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetUserData_getUser_habits', 'G__typename'),
+                  G__typename, r'GGetUserData_getUser_habits', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -26618,7 +26708,7 @@ class GGetUserData_getUser_habitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_habits', _$failedField, e.toString());
+            r'GGetUserData_getUser_habits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -26654,7 +26744,8 @@ class _$GGetUserData_getUser_habits_items
 
   factory _$GGetUserData_getUser_habits_items(
           [void Function(GGetUserData_getUser_habits_itemsBuilder)? updates]) =>
-      (new GGetUserData_getUser_habits_itemsBuilder()..update(updates)).build();
+      (new GGetUserData_getUser_habits_itemsBuilder()..update(updates))
+          ._build();
 
   _$GGetUserData_getUser_habits_items._(
       {required this.G__typename,
@@ -26670,17 +26761,17 @@ class _$GGetUserData_getUser_habits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetUserData_getUser_habits_items', 'G__typename');
+        G__typename, r'GGetUserData_getUser_habits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetUserData_getUser_habits_items', 'id');
+        id, r'GGetUserData_getUser_habits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GGetUserData_getUser_habits_items', 'tagline');
+        tagline, r'GGetUserData_getUser_habits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GGetUserData_getUser_habits_items', 'category');
+        category, r'GGetUserData_getUser_habits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetUserData_getUser_habits_items', 'createdAt');
+        createdAt, r'GGetUserData_getUser_habits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetUserData_getUser_habits_items', 'updatedAt');
+        updatedAt, r'GGetUserData_getUser_habits_items', 'updatedAt');
   }
 
   @override
@@ -26735,7 +26826,7 @@ class _$GGetUserData_getUser_habits_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUserData_getUser_habits_items')
+    return (newBuiltValueToStringHelper(r'GGetUserData_getUser_habits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -26844,19 +26935,21 @@ class GGetUserData_getUser_habits_itemsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_habits_items build() {
+  GGetUserData_getUser_habits_items build() => _build();
+
+  _$GGetUserData_getUser_habits_items _build() {
     _$GGetUserData_getUser_habits_items _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_habits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetUserData_getUser_habits_items', 'G__typename'),
+                  r'GGetUserData_getUser_habits_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetUserData_getUser_habits_items', 'id'),
+                  id, r'GGetUserData_getUser_habits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GGetUserData_getUser_habits_items', 'tagline'),
+                  tagline, r'GGetUserData_getUser_habits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GGetUserData_getUser_habits_items', 'category'),
+                  category, r'GGetUserData_getUser_habits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -26875,7 +26968,7 @@ class GGetUserData_getUser_habits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_habits_items', _$failedField, e.toString());
+            r'GGetUserData_getUser_habits_items', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -26895,15 +26988,15 @@ class _$GGetUserData_getUser_habits_items_comments
           [void Function(GGetUserData_getUser_habits_items_commentsBuilder)?
               updates]) =>
       (new GGetUserData_getUser_habits_items_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_habits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetUserData_getUser_habits_items_comments', 'G__typename');
+        r'GGetUserData_getUser_habits_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetUserData_getUser_habits_items_comments', 'items');
+        items, r'GGetUserData_getUser_habits_items_comments', 'items');
   }
 
   @override
@@ -26932,7 +27025,7 @@ class _$GGetUserData_getUser_habits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_habits_items_comments')
+            r'GGetUserData_getUser_habits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -26986,13 +27079,15 @@ class GGetUserData_getUser_habits_items_commentsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_habits_items_comments build() {
+  GGetUserData_getUser_habits_items_comments build() => _build();
+
+  _$GGetUserData_getUser_habits_items_comments _build() {
     _$GGetUserData_getUser_habits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_habits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetUserData_getUser_habits_items_comments', 'G__typename'),
+                  r'GGetUserData_getUser_habits_items_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -27001,7 +27096,7 @@ class GGetUserData_getUser_habits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_habits_items_comments',
+            r'GGetUserData_getUser_habits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -27039,7 +27134,7 @@ class _$GGetUserData_getUser_habits_items_comments_items
               updates]) =>
       (new GGetUserData_getUser_habits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_habits_items_comments_items._(
       {required this.G__typename,
@@ -27053,15 +27148,15 @@ class _$GGetUserData_getUser_habits_items_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetUserData_getUser_habits_items_comments_items', 'G__typename');
+        r'GGetUserData_getUser_habits_items_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetUserData_getUser_habits_items_comments_items', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        comment, 'GGetUserData_getUser_habits_items_comments_items', 'comment');
+        id, r'GGetUserData_getUser_habits_items_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(comment,
+        r'GGetUserData_getUser_habits_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GGetUserData_getUser_habits_items_comments_items', 'createdAt');
+        r'GGetUserData_getUser_habits_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GGetUserData_getUser_habits_items_comments_items', 'updatedAt');
+        r'GGetUserData_getUser_habits_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -27111,7 +27206,7 @@ class _$GGetUserData_getUser_habits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_habits_items_comments_items')
+            r'GGetUserData_getUser_habits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -27214,24 +27309,26 @@ class GGetUserData_getUser_habits_items_comments_itemsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_habits_items_comments_items build() {
+  GGetUserData_getUser_habits_items_comments_items build() => _build();
+
+  _$GGetUserData_getUser_habits_items_comments_items _build() {
     _$GGetUserData_getUser_habits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_habits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetUserData_getUser_habits_items_comments_items',
+                  r'GGetUserData_getUser_habits_items_comments_items',
                   'G__typename'),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetUserData_getUser_habits_items_comments_items', 'id'),
+              id: BuiltValueNullFieldError.checkNotNull(id,
+                  r'GGetUserData_getUser_habits_items_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GGetUserData_getUser_habits_items_comments_items',
+                  r'GGetUserData_getUser_habits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -27250,7 +27347,7 @@ class GGetUserData_getUser_habits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_habits_items_comments_items',
+            r'GGetUserData_getUser_habits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -27278,7 +27375,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_by
               updates]) =>
       (new GGetUserData_getUser_habits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_habits_items_comments_items_by._(
       {required this.G__typename,
@@ -27287,9 +27384,9 @@ class _$GGetUserData_getUser_habits_items_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetUserData_getUser_habits_items_comments_items_by', 'G__typename');
+        r'GGetUserData_getUser_habits_items_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(username,
-        'GGetUserData_getUser_habits_items_comments_items_by', 'username');
+        r'GGetUserData_getUser_habits_items_comments_items_by', 'username');
   }
 
   @override
@@ -27325,7 +27422,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_habits_items_comments_items_by')
+            r'GGetUserData_getUser_habits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -27388,16 +27485,18 @@ class GGetUserData_getUser_habits_items_comments_items_byBuilder
   }
 
   @override
-  _$GGetUserData_getUser_habits_items_comments_items_by build() {
+  GGetUserData_getUser_habits_items_comments_items_by build() => _build();
+
+  _$GGetUserData_getUser_habits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GGetUserData_getUser_habits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GGetUserData_getUser_habits_items_comments_items_by',
+                r'GGetUserData_getUser_habits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GGetUserData_getUser_habits_items_comments_items_by',
+                r'GGetUserData_getUser_habits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -27438,7 +27537,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit
               updates]) =>
       (new GGetUserData_getUser_habits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_habits_items_comments_items_habit._(
       {required this.G__typename,
@@ -27455,18 +27554,18 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetUserData_getUser_habits_items_comments_items_habit',
+        r'GGetUserData_getUser_habits_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetUserData_getUser_habits_items_comments_items_habit', 'id');
+        id, r'GGetUserData_getUser_habits_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GGetUserData_getUser_habits_items_comments_items_habit', 'tagline');
+        r'GGetUserData_getUser_habits_items_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GGetUserData_getUser_habits_items_comments_items_habit', 'category');
+        r'GGetUserData_getUser_habits_items_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GGetUserData_getUser_habits_items_comments_items_habit', 'createdAt');
+        r'GGetUserData_getUser_habits_items_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GGetUserData_getUser_habits_items_comments_items_habit', 'updatedAt');
+        r'GGetUserData_getUser_habits_items_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -27525,7 +27624,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_habits_items_comments_items_habit')
+            r'GGetUserData_getUser_habits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -27640,26 +27739,28 @@ class GGetUserData_getUser_habits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GGetUserData_getUser_habits_items_comments_items_habit build() {
+  GGetUserData_getUser_habits_items_comments_items_habit build() => _build();
+
+  _$GGetUserData_getUser_habits_items_comments_items_habit _build() {
     _$GGetUserData_getUser_habits_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GGetUserData_getUser_habits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetUserData_getUser_habits_items_comments_items_habit',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GGetUserData_getUser_habits_items_comments_items_habit',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GGetUserData_getUser_habits_items_comments_items_habit',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GGetUserData_getUser_habits_items_comments_items_habit',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -27679,7 +27780,7 @@ class GGetUserData_getUser_habits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_habits_items_comments_items_habit',
+            r'GGetUserData_getUser_habits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -27705,18 +27806,18 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_comments
               updates]) =>
       (new GGetUserData_getUser_habits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_habits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetUserData_getUser_habits_items_comments_items_habit_comments',
+        r'GGetUserData_getUser_habits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GGetUserData_getUser_habits_items_comments_items_habit_comments',
+        r'GGetUserData_getUser_habits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -27750,7 +27851,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_habits_items_comments_items_habit_comments')
+            r'GGetUserData_getUser_habits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -27813,7 +27914,10 @@ class GGetUserData_getUser_habits_items_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GGetUserData_getUser_habits_items_comments_items_habit_comments build() {
+  GGetUserData_getUser_habits_items_comments_items_habit_comments build() =>
+      _build();
+
+  _$GGetUserData_getUser_habits_items_comments_items_habit_comments _build() {
     _$GGetUserData_getUser_habits_items_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
@@ -27821,7 +27925,7 @@ class GGetUserData_getUser_habits_items_comments_items_habit_commentsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetUserData_getUser_habits_items_comments_items_habit_comments',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -27831,7 +27935,7 @@ class GGetUserData_getUser_habits_items_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_habits_items_comments_items_habit_comments',
+            r'GGetUserData_getUser_habits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -27865,7 +27969,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_comments_items
               updates]) =>
       (new GGetUserData_getUser_habits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetUserData_getUser_habits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -27878,23 +27982,23 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -27942,7 +28046,7 @@ class _$GGetUserData_getUser_habits_items_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetUserData_getUser_habits_items_comments_items_habit_comments_items')
+            r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -28032,8 +28136,11 @@ class GGetUserData_getUser_habits_items_comments_items_habit_comments_itemsBuild
   }
 
   @override
+  GGetUserData_getUser_habits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GGetUserData_getUser_habits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GGetUserData_getUser_habits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -28042,17 +28149,17 @@ class GGetUserData_getUser_habits_items_comments_items_habit_comments_itemsBuild
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+                  r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -28065,7 +28172,7 @@ class GGetUserData_getUser_habits_items_comments_items_habit_comments_itemsBuild
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
+            r'GGetUserData_getUser_habits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -28083,11 +28190,11 @@ class _$GGetSelfData extends GGetSelfData {
   final GGetSelfData_getUser? getUser;
 
   factory _$GGetSelfData([void Function(GGetSelfDataBuilder)? updates]) =>
-      (new GGetSelfDataBuilder()..update(updates)).build();
+      (new GGetSelfDataBuilder()..update(updates))._build();
 
   _$GGetSelfData._({required this.G__typename, this.getUser}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData', 'G__typename');
+        G__typename, r'GGetSelfData', 'G__typename');
   }
 
   @override
@@ -28112,7 +28219,7 @@ class _$GGetSelfData extends GGetSelfData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfData')
+    return (newBuiltValueToStringHelper(r'GGetSelfData')
           ..add('G__typename', G__typename)
           ..add('getUser', getUser))
         .toString();
@@ -28159,13 +28266,15 @@ class GGetSelfDataBuilder
   }
 
   @override
-  _$GGetSelfData build() {
+  GGetSelfData build() => _build();
+
+  _$GGetSelfData _build() {
     _$GGetSelfData _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetSelfData', 'G__typename'),
+                  G__typename, r'GGetSelfData', 'G__typename'),
               getUser: _getUser?.build());
     } catch (_) {
       late String _$failedField;
@@ -28174,7 +28283,7 @@ class GGetSelfDataBuilder
         _getUser?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData', _$failedField, e.toString());
+            r'GGetSelfData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -28205,7 +28314,7 @@ class _$GGetSelfData_getUser extends GGetSelfData_getUser {
 
   factory _$GGetSelfData_getUser(
           [void Function(GGetSelfData_getUserBuilder)? updates]) =>
-      (new GGetSelfData_getUserBuilder()..update(updates)).build();
+      (new GGetSelfData_getUserBuilder()..update(updates))._build();
 
   _$GGetSelfData_getUser._(
       {required this.G__typename,
@@ -28219,9 +28328,9 @@ class _$GGetSelfData_getUser extends GGetSelfData_getUser {
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData_getUser', 'G__typename');
+        G__typename, r'GGetSelfData_getUser', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GGetSelfData_getUser', 'username');
+        username, r'GGetSelfData_getUser', 'username');
   }
 
   @override
@@ -28270,7 +28379,7 @@ class _$GGetSelfData_getUser extends GGetSelfData_getUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfData_getUser')
+    return (newBuiltValueToStringHelper(r'GGetSelfData_getUser')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -28368,15 +28477,17 @@ class GGetSelfData_getUserBuilder
   }
 
   @override
-  _$GGetSelfData_getUser build() {
+  GGetSelfData_getUser build() => _build();
+
+  _$GGetSelfData_getUser _build() {
     _$GGetSelfData_getUser _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetSelfData_getUser', 'G__typename'),
+                  G__typename, r'GGetSelfData_getUser', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GGetSelfData_getUser', 'username'),
+                  username, r'GGetSelfData_getUser', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -28399,7 +28510,7 @@ class GGetSelfData_getUserBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser', _$failedField, e.toString());
+            r'GGetSelfData_getUser', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -28424,7 +28535,7 @@ class _$GGetSelfData_getUser_avatar extends GGetSelfData_getUser_avatar {
 
   factory _$GGetSelfData_getUser_avatar(
           [void Function(GGetSelfData_getUser_avatarBuilder)? updates]) =>
-      (new GGetSelfData_getUser_avatarBuilder()..update(updates)).build();
+      (new GGetSelfData_getUser_avatarBuilder()..update(updates))._build();
 
   _$GGetSelfData_getUser_avatar._(
       {required this.G__typename,
@@ -28435,13 +28546,13 @@ class _$GGetSelfData_getUser_avatar extends GGetSelfData_getUser_avatar {
       this.cognitoId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData_getUser_avatar', 'G__typename');
+        G__typename, r'GGetSelfData_getUser_avatar', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        bucket, 'GGetSelfData_getUser_avatar', 'bucket');
+        bucket, r'GGetSelfData_getUser_avatar', 'bucket');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'GGetSelfData_getUser_avatar', 'region');
+        region, r'GGetSelfData_getUser_avatar', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        key, 'GGetSelfData_getUser_avatar', 'key');
+        key, r'GGetSelfData_getUser_avatar', 'key');
   }
 
   @override
@@ -28479,7 +28590,7 @@ class _$GGetSelfData_getUser_avatar extends GGetSelfData_getUser_avatar {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfData_getUser_avatar')
+    return (newBuiltValueToStringHelper(r'GGetSelfData_getUser_avatar')
           ..add('G__typename', G__typename)
           ..add('bucket', bucket)
           ..add('region', region)
@@ -28551,17 +28662,19 @@ class GGetSelfData_getUser_avatarBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_avatar build() {
+  GGetSelfData_getUser_avatar build() => _build();
+
+  _$GGetSelfData_getUser_avatar _build() {
     final _$result = _$v ??
         new _$GGetSelfData_getUser_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GGetSelfData_getUser_avatar', 'G__typename'),
+                G__typename, r'GGetSelfData_getUser_avatar', 'G__typename'),
             bucket: BuiltValueNullFieldError.checkNotNull(
-                bucket, 'GGetSelfData_getUser_avatar', 'bucket'),
+                bucket, r'GGetSelfData_getUser_avatar', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'GGetSelfData_getUser_avatar', 'region'),
+                region, r'GGetSelfData_getUser_avatar', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GGetSelfData_getUser_avatar', 'key'),
+                key, r'GGetSelfData_getUser_avatar', 'key'),
             accessLevel: accessLevel,
             cognitoId: cognitoId);
     replace(_$result);
@@ -28577,15 +28690,15 @@ class _$GGetSelfData_getUser_comments extends GGetSelfData_getUser_comments {
 
   factory _$GGetSelfData_getUser_comments(
           [void Function(GGetSelfData_getUser_commentsBuilder)? updates]) =>
-      (new GGetSelfData_getUser_commentsBuilder()..update(updates)).build();
+      (new GGetSelfData_getUser_commentsBuilder()..update(updates))._build();
 
   _$GGetSelfData_getUser_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData_getUser_comments', 'G__typename');
+        G__typename, r'GGetSelfData_getUser_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetSelfData_getUser_comments', 'items');
+        items, r'GGetSelfData_getUser_comments', 'items');
   }
 
   @override
@@ -28612,7 +28725,7 @@ class _$GGetSelfData_getUser_comments extends GGetSelfData_getUser_comments {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfData_getUser_comments')
+    return (newBuiltValueToStringHelper(r'GGetSelfData_getUser_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -28661,13 +28774,15 @@ class GGetSelfData_getUser_commentsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_comments build() {
+  GGetSelfData_getUser_comments build() => _build();
+
+  _$GGetSelfData_getUser_comments _build() {
     _$GGetSelfData_getUser_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetSelfData_getUser_comments', 'G__typename'),
+                  G__typename, r'GGetSelfData_getUser_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -28676,7 +28791,7 @@ class GGetSelfData_getUser_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_comments', _$failedField, e.toString());
+            r'GGetSelfData_getUser_comments', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -28710,7 +28825,7 @@ class _$GGetSelfData_getUser_comments_items
           [void Function(GGetSelfData_getUser_comments_itemsBuilder)?
               updates]) =>
       (new GGetSelfData_getUser_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_comments_items._(
       {required this.G__typename,
@@ -28724,15 +28839,15 @@ class _$GGetSelfData_getUser_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData_getUser_comments_items', 'G__typename');
+        G__typename, r'GGetSelfData_getUser_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetSelfData_getUser_comments_items', 'id');
+        id, r'GGetSelfData_getUser_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GGetSelfData_getUser_comments_items', 'comment');
+        comment, r'GGetSelfData_getUser_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetSelfData_getUser_comments_items', 'createdAt');
+        createdAt, r'GGetSelfData_getUser_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetSelfData_getUser_comments_items', 'updatedAt');
+        updatedAt, r'GGetSelfData_getUser_comments_items', 'updatedAt');
   }
 
   @override
@@ -28779,7 +28894,7 @@ class _$GGetSelfData_getUser_comments_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfData_getUser_comments_items')
+    return (newBuiltValueToStringHelper(r'GGetSelfData_getUser_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -28876,21 +28991,23 @@ class GGetSelfData_getUser_comments_itemsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_comments_items build() {
+  GGetSelfData_getUser_comments_items build() => _build();
+
+  _$GGetSelfData_getUser_comments_items _build() {
     _$GGetSelfData_getUser_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetSelfData_getUser_comments_items', 'G__typename'),
+                  r'GGetSelfData_getUser_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetSelfData_getUser_comments_items', 'id'),
+                  id, r'GGetSelfData_getUser_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
-                  comment, 'GGetSelfData_getUser_comments_items', 'comment'),
+                  comment, r'GGetSelfData_getUser_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -28908,7 +29025,9 @@ class GGetSelfData_getUser_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_comments_items', _$failedField, e.toString());
+            r'GGetSelfData_getUser_comments_items',
+            _$failedField,
+            e.toString());
       }
       rethrow;
     }
@@ -28932,7 +29051,7 @@ class _$GGetSelfData_getUser_comments_items_by
           [void Function(GGetSelfData_getUser_comments_items_byBuilder)?
               updates]) =>
       (new GGetSelfData_getUser_comments_items_byBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_comments_items_by._(
       {required this.G__typename,
@@ -28941,9 +29060,9 @@ class _$GGetSelfData_getUser_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData_getUser_comments_items_by', 'G__typename');
+        G__typename, r'GGetSelfData_getUser_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GGetSelfData_getUser_comments_items_by', 'username');
+        username, r'GGetSelfData_getUser_comments_items_by', 'username');
   }
 
   @override
@@ -28977,7 +29096,7 @@ class _$GGetSelfData_getUser_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_comments_items_by')
+            r'GGetSelfData_getUser_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -29038,13 +29157,15 @@ class GGetSelfData_getUser_comments_items_byBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_comments_items_by build() {
+  GGetSelfData_getUser_comments_items_by build() => _build();
+
+  _$GGetSelfData_getUser_comments_items_by _build() {
     final _$result = _$v ??
         new _$GGetSelfData_getUser_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GGetSelfData_getUser_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GGetSelfData_getUser_comments_items_by', 'username'),
+                r'GGetSelfData_getUser_comments_items_by', 'G__typename'),
+            username: BuiltValueNullFieldError.checkNotNull(username,
+                r'GGetSelfData_getUser_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -29081,7 +29202,7 @@ class _$GGetSelfData_getUser_comments_items_habit
           [void Function(GGetSelfData_getUser_comments_items_habitBuilder)?
               updates]) =>
       (new GGetSelfData_getUser_comments_items_habitBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_comments_items_habit._(
       {required this.G__typename,
@@ -29097,17 +29218,17 @@ class _$GGetSelfData_getUser_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetSelfData_getUser_comments_items_habit', 'G__typename');
+        r'GGetSelfData_getUser_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetSelfData_getUser_comments_items_habit', 'id');
+        id, r'GGetSelfData_getUser_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GGetSelfData_getUser_comments_items_habit', 'tagline');
+        tagline, r'GGetSelfData_getUser_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GGetSelfData_getUser_comments_items_habit', 'category');
+        category, r'GGetSelfData_getUser_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetSelfData_getUser_comments_items_habit', 'createdAt');
+        createdAt, r'GGetSelfData_getUser_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetSelfData_getUser_comments_items_habit', 'updatedAt');
+        updatedAt, r'GGetSelfData_getUser_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -29164,7 +29285,7 @@ class _$GGetSelfData_getUser_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_comments_items_habit')
+            r'GGetSelfData_getUser_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -29276,19 +29397,21 @@ class GGetSelfData_getUser_comments_items_habitBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_comments_items_habit build() {
+  GGetSelfData_getUser_comments_items_habit build() => _build();
+
+  _$GGetSelfData_getUser_comments_items_habit _build() {
     _$GGetSelfData_getUser_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetSelfData_getUser_comments_items_habit', 'G__typename'),
+                  r'GGetSelfData_getUser_comments_items_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetSelfData_getUser_comments_items_habit', 'id'),
+                  id, r'GGetSelfData_getUser_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GGetSelfData_getUser_comments_items_habit', 'tagline'),
+                  r'GGetSelfData_getUser_comments_items_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GGetSelfData_getUser_comments_items_habit', 'category'),
+                  r'GGetSelfData_getUser_comments_items_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -29307,7 +29430,7 @@ class GGetSelfData_getUser_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_comments_items_habit',
+            r'GGetSelfData_getUser_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -29332,15 +29455,15 @@ class _$GGetSelfData_getUser_comments_items_habit_comments
               updates]) =>
       (new GGetSelfData_getUser_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetSelfData_getUser_comments_items_habit_comments', 'G__typename');
+        r'GGetSelfData_getUser_comments_items_habit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetSelfData_getUser_comments_items_habit_comments', 'items');
+        items, r'GGetSelfData_getUser_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -29371,7 +29494,7 @@ class _$GGetSelfData_getUser_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_comments_items_habit_comments')
+            r'GGetSelfData_getUser_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -29425,14 +29548,16 @@ class GGetSelfData_getUser_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_comments_items_habit_comments build() {
+  GGetSelfData_getUser_comments_items_habit_comments build() => _build();
+
+  _$GGetSelfData_getUser_comments_items_habit_comments _build() {
     _$GGetSelfData_getUser_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetSelfData_getUser_comments_items_habit_comments',
+                  r'GGetSelfData_getUser_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -29442,7 +29567,7 @@ class GGetSelfData_getUser_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_comments_items_habit_comments',
+            r'GGetSelfData_getUser_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -29476,7 +29601,7 @@ class _$GGetSelfData_getUser_comments_items_habit_comments_items
               updates]) =>
       (new GGetSelfData_getUser_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -29489,19 +29614,19 @@ class _$GGetSelfData_getUser_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetSelfData_getUser_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetSelfData_getUser_comments_items_habit_comments_items', 'id');
+        id, r'GGetSelfData_getUser_comments_items_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GGetSelfData_getUser_comments_items_habit_comments_items', 'comment');
+        r'GGetSelfData_getUser_comments_items_habit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GGetSelfData_getUser_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GGetSelfData_getUser_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -29547,7 +29672,7 @@ class _$GGetSelfData_getUser_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_comments_items_habit_comments_items')
+            r'GGetSelfData_getUser_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -29632,24 +29757,26 @@ class GGetSelfData_getUser_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_comments_items_habit_comments_items build() {
+  GGetSelfData_getUser_comments_items_habit_comments_items build() => _build();
+
+  _$GGetSelfData_getUser_comments_items_habit_comments_items _build() {
     _$GGetSelfData_getUser_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_comments_items_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetSelfData_getUser_comments_items_habit_comments_items',
+                  r'GGetSelfData_getUser_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GGetSelfData_getUser_comments_items_habit_comments_items',
+                  r'GGetSelfData_getUser_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GGetSelfData_getUser_comments_items_habit_comments_items',
+                  r'GGetSelfData_getUser_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -29662,7 +29789,7 @@ class GGetSelfData_getUser_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_comments_items_habit_comments_items',
+            r'GGetSelfData_getUser_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -29681,15 +29808,15 @@ class _$GGetSelfData_getUser_habits extends GGetSelfData_getUser_habits {
 
   factory _$GGetSelfData_getUser_habits(
           [void Function(GGetSelfData_getUser_habitsBuilder)? updates]) =>
-      (new GGetSelfData_getUser_habitsBuilder()..update(updates)).build();
+      (new GGetSelfData_getUser_habitsBuilder()..update(updates))._build();
 
   _$GGetSelfData_getUser_habits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData_getUser_habits', 'G__typename');
+        G__typename, r'GGetSelfData_getUser_habits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetSelfData_getUser_habits', 'items');
+        items, r'GGetSelfData_getUser_habits', 'items');
   }
 
   @override
@@ -29716,7 +29843,7 @@ class _$GGetSelfData_getUser_habits extends GGetSelfData_getUser_habits {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfData_getUser_habits')
+    return (newBuiltValueToStringHelper(r'GGetSelfData_getUser_habits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -29765,13 +29892,15 @@ class GGetSelfData_getUser_habitsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_habits build() {
+  GGetSelfData_getUser_habits build() => _build();
+
+  _$GGetSelfData_getUser_habits _build() {
     _$GGetSelfData_getUser_habits _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_habits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetSelfData_getUser_habits', 'G__typename'),
+                  G__typename, r'GGetSelfData_getUser_habits', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -29780,7 +29909,7 @@ class GGetSelfData_getUser_habitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_habits', _$failedField, e.toString());
+            r'GGetSelfData_getUser_habits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -29816,7 +29945,8 @@ class _$GGetSelfData_getUser_habits_items
 
   factory _$GGetSelfData_getUser_habits_items(
           [void Function(GGetSelfData_getUser_habits_itemsBuilder)? updates]) =>
-      (new GGetSelfData_getUser_habits_itemsBuilder()..update(updates)).build();
+      (new GGetSelfData_getUser_habits_itemsBuilder()..update(updates))
+          ._build();
 
   _$GGetSelfData_getUser_habits_items._(
       {required this.G__typename,
@@ -29832,17 +29962,17 @@ class _$GGetSelfData_getUser_habits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetSelfData_getUser_habits_items', 'G__typename');
+        G__typename, r'GGetSelfData_getUser_habits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetSelfData_getUser_habits_items', 'id');
+        id, r'GGetSelfData_getUser_habits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GGetSelfData_getUser_habits_items', 'tagline');
+        tagline, r'GGetSelfData_getUser_habits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GGetSelfData_getUser_habits_items', 'category');
+        category, r'GGetSelfData_getUser_habits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetSelfData_getUser_habits_items', 'createdAt');
+        createdAt, r'GGetSelfData_getUser_habits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetSelfData_getUser_habits_items', 'updatedAt');
+        updatedAt, r'GGetSelfData_getUser_habits_items', 'updatedAt');
   }
 
   @override
@@ -29897,7 +30027,7 @@ class _$GGetSelfData_getUser_habits_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelfData_getUser_habits_items')
+    return (newBuiltValueToStringHelper(r'GGetSelfData_getUser_habits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -30006,19 +30136,21 @@ class GGetSelfData_getUser_habits_itemsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_habits_items build() {
+  GGetSelfData_getUser_habits_items build() => _build();
+
+  _$GGetSelfData_getUser_habits_items _build() {
     _$GGetSelfData_getUser_habits_items _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_habits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetSelfData_getUser_habits_items', 'G__typename'),
+                  r'GGetSelfData_getUser_habits_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetSelfData_getUser_habits_items', 'id'),
+                  id, r'GGetSelfData_getUser_habits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GGetSelfData_getUser_habits_items', 'tagline'),
+                  tagline, r'GGetSelfData_getUser_habits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GGetSelfData_getUser_habits_items', 'category'),
+                  category, r'GGetSelfData_getUser_habits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -30037,7 +30169,7 @@ class GGetSelfData_getUser_habits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_habits_items', _$failedField, e.toString());
+            r'GGetSelfData_getUser_habits_items', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -30057,15 +30189,15 @@ class _$GGetSelfData_getUser_habits_items_comments
           [void Function(GGetSelfData_getUser_habits_items_commentsBuilder)?
               updates]) =>
       (new GGetSelfData_getUser_habits_items_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_habits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetSelfData_getUser_habits_items_comments', 'G__typename');
+        r'GGetSelfData_getUser_habits_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetSelfData_getUser_habits_items_comments', 'items');
+        items, r'GGetSelfData_getUser_habits_items_comments', 'items');
   }
 
   @override
@@ -30094,7 +30226,7 @@ class _$GGetSelfData_getUser_habits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_habits_items_comments')
+            r'GGetSelfData_getUser_habits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -30148,13 +30280,15 @@ class GGetSelfData_getUser_habits_items_commentsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_habits_items_comments build() {
+  GGetSelfData_getUser_habits_items_comments build() => _build();
+
+  _$GGetSelfData_getUser_habits_items_comments _build() {
     _$GGetSelfData_getUser_habits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_habits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetSelfData_getUser_habits_items_comments', 'G__typename'),
+                  r'GGetSelfData_getUser_habits_items_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -30163,7 +30297,7 @@ class GGetSelfData_getUser_habits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_habits_items_comments',
+            r'GGetSelfData_getUser_habits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -30201,7 +30335,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items
               updates]) =>
       (new GGetSelfData_getUser_habits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_habits_items_comments_items._(
       {required this.G__typename,
@@ -30215,15 +30349,15 @@ class _$GGetSelfData_getUser_habits_items_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetSelfData_getUser_habits_items_comments_items', 'G__typename');
+        r'GGetSelfData_getUser_habits_items_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetSelfData_getUser_habits_items_comments_items', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        comment, 'GGetSelfData_getUser_habits_items_comments_items', 'comment');
+        id, r'GGetSelfData_getUser_habits_items_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(comment,
+        r'GGetSelfData_getUser_habits_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GGetSelfData_getUser_habits_items_comments_items', 'createdAt');
+        r'GGetSelfData_getUser_habits_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GGetSelfData_getUser_habits_items_comments_items', 'updatedAt');
+        r'GGetSelfData_getUser_habits_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -30273,7 +30407,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_habits_items_comments_items')
+            r'GGetSelfData_getUser_habits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -30376,24 +30510,26 @@ class GGetSelfData_getUser_habits_items_comments_itemsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_habits_items_comments_items build() {
+  GGetSelfData_getUser_habits_items_comments_items build() => _build();
+
+  _$GGetSelfData_getUser_habits_items_comments_items _build() {
     _$GGetSelfData_getUser_habits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_habits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetSelfData_getUser_habits_items_comments_items',
+                  r'GGetSelfData_getUser_habits_items_comments_items',
                   'G__typename'),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetSelfData_getUser_habits_items_comments_items', 'id'),
+              id: BuiltValueNullFieldError.checkNotNull(id,
+                  r'GGetSelfData_getUser_habits_items_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GGetSelfData_getUser_habits_items_comments_items',
+                  r'GGetSelfData_getUser_habits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -30412,7 +30548,7 @@ class GGetSelfData_getUser_habits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_habits_items_comments_items',
+            r'GGetSelfData_getUser_habits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -30440,7 +30576,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_by
               updates]) =>
       (new GGetSelfData_getUser_habits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_habits_items_comments_items_by._(
       {required this.G__typename,
@@ -30449,9 +30585,9 @@ class _$GGetSelfData_getUser_habits_items_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetSelfData_getUser_habits_items_comments_items_by', 'G__typename');
+        r'GGetSelfData_getUser_habits_items_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(username,
-        'GGetSelfData_getUser_habits_items_comments_items_by', 'username');
+        r'GGetSelfData_getUser_habits_items_comments_items_by', 'username');
   }
 
   @override
@@ -30487,7 +30623,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_habits_items_comments_items_by')
+            r'GGetSelfData_getUser_habits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -30550,16 +30686,18 @@ class GGetSelfData_getUser_habits_items_comments_items_byBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_habits_items_comments_items_by build() {
+  GGetSelfData_getUser_habits_items_comments_items_by build() => _build();
+
+  _$GGetSelfData_getUser_habits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GGetSelfData_getUser_habits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GGetSelfData_getUser_habits_items_comments_items_by',
+                r'GGetSelfData_getUser_habits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GGetSelfData_getUser_habits_items_comments_items_by',
+                r'GGetSelfData_getUser_habits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -30600,7 +30738,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit
               updates]) =>
       (new GGetSelfData_getUser_habits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_habits_items_comments_items_habit._(
       {required this.G__typename,
@@ -30617,18 +30755,18 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetSelfData_getUser_habits_items_comments_items_habit',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetSelfData_getUser_habits_items_comments_items_habit', 'id');
+        id, r'GGetSelfData_getUser_habits_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GGetSelfData_getUser_habits_items_comments_items_habit', 'tagline');
+        r'GGetSelfData_getUser_habits_items_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GGetSelfData_getUser_habits_items_comments_items_habit', 'category');
+        r'GGetSelfData_getUser_habits_items_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GGetSelfData_getUser_habits_items_comments_items_habit', 'createdAt');
+        r'GGetSelfData_getUser_habits_items_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GGetSelfData_getUser_habits_items_comments_items_habit', 'updatedAt');
+        r'GGetSelfData_getUser_habits_items_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -30687,7 +30825,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_habits_items_comments_items_habit')
+            r'GGetSelfData_getUser_habits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -30802,26 +30940,28 @@ class GGetSelfData_getUser_habits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_habits_items_comments_items_habit build() {
+  GGetSelfData_getUser_habits_items_comments_items_habit build() => _build();
+
+  _$GGetSelfData_getUser_habits_items_comments_items_habit _build() {
     _$GGetSelfData_getUser_habits_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GGetSelfData_getUser_habits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -30841,7 +30981,7 @@ class GGetSelfData_getUser_habits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_habits_items_comments_items_habit',
+            r'GGetSelfData_getUser_habits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -30867,18 +31007,18 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_comments
               updates]) =>
       (new GGetSelfData_getUser_habits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_habits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -30912,7 +31052,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_habits_items_comments_items_habit_comments')
+            r'GGetSelfData_getUser_habits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -30975,7 +31115,10 @@ class GGetSelfData_getUser_habits_items_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GGetSelfData_getUser_habits_items_comments_items_habit_comments build() {
+  GGetSelfData_getUser_habits_items_comments_items_habit_comments build() =>
+      _build();
+
+  _$GGetSelfData_getUser_habits_items_comments_items_habit_comments _build() {
     _$GGetSelfData_getUser_habits_items_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
@@ -30983,7 +31126,7 @@ class GGetSelfData_getUser_habits_items_comments_items_habit_commentsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -30993,7 +31136,7 @@ class GGetSelfData_getUser_habits_items_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
+            r'GGetSelfData_getUser_habits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -31027,7 +31170,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
               updates]) =>
       (new GGetSelfData_getUser_habits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -31040,23 +31183,23 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+        r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -31104,7 +31247,7 @@ class _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items')
+            r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -31194,8 +31337,11 @@ class GGetSelfData_getUser_habits_items_comments_items_habit_comments_itemsBuild
   }
 
   @override
+  GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -31204,17 +31350,17 @@ class GGetSelfData_getUser_habits_items_comments_items_habit_comments_itemsBuild
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+                  r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -31227,7 +31373,7 @@ class GGetSelfData_getUser_habits_items_comments_items_habit_comments_itemsBuild
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
+            r'GGetSelfData_getUser_habits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -31245,12 +31391,12 @@ class _$GGetCommentData extends GGetCommentData {
   final GGetCommentData_getComment? getComment;
 
   factory _$GGetCommentData([void Function(GGetCommentDataBuilder)? updates]) =>
-      (new GGetCommentDataBuilder()..update(updates)).build();
+      (new GGetCommentDataBuilder()..update(updates))._build();
 
   _$GGetCommentData._({required this.G__typename, this.getComment})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetCommentData', 'G__typename');
+        G__typename, r'GGetCommentData', 'G__typename');
   }
 
   @override
@@ -31276,7 +31422,7 @@ class _$GGetCommentData extends GGetCommentData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetCommentData')
+    return (newBuiltValueToStringHelper(r'GGetCommentData')
           ..add('G__typename', G__typename)
           ..add('getComment', getComment))
         .toString();
@@ -31323,13 +31469,15 @@ class GGetCommentDataBuilder
   }
 
   @override
-  _$GGetCommentData build() {
+  GGetCommentData build() => _build();
+
+  _$GGetCommentData _build() {
     _$GGetCommentData _$result;
     try {
       _$result = _$v ??
           new _$GGetCommentData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetCommentData', 'G__typename'),
+                  G__typename, r'GGetCommentData', 'G__typename'),
               getComment: _getComment?.build());
     } catch (_) {
       late String _$failedField;
@@ -31338,7 +31486,7 @@ class GGetCommentDataBuilder
         _getComment?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetCommentData', _$failedField, e.toString());
+            r'GGetCommentData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -31369,7 +31517,7 @@ class _$GGetCommentData_getComment extends GGetCommentData_getComment {
 
   factory _$GGetCommentData_getComment(
           [void Function(GGetCommentData_getCommentBuilder)? updates]) =>
-      (new GGetCommentData_getCommentBuilder()..update(updates)).build();
+      (new GGetCommentData_getCommentBuilder()..update(updates))._build();
 
   _$GGetCommentData_getComment._(
       {required this.G__typename,
@@ -31383,15 +31531,15 @@ class _$GGetCommentData_getComment extends GGetCommentData_getComment {
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetCommentData_getComment', 'G__typename');
+        G__typename, r'GGetCommentData_getComment', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetCommentData_getComment', 'id');
+        id, r'GGetCommentData_getComment', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GGetCommentData_getComment', 'comment');
+        comment, r'GGetCommentData_getComment', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetCommentData_getComment', 'createdAt');
+        createdAt, r'GGetCommentData_getComment', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetCommentData_getComment', 'updatedAt');
+        updatedAt, r'GGetCommentData_getComment', 'updatedAt');
   }
 
   @override
@@ -31438,7 +31586,7 @@ class _$GGetCommentData_getComment extends GGetCommentData_getComment {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetCommentData_getComment')
+    return (newBuiltValueToStringHelper(r'GGetCommentData_getComment')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -31533,21 +31681,23 @@ class GGetCommentData_getCommentBuilder
   }
 
   @override
-  _$GGetCommentData_getComment build() {
+  GGetCommentData_getComment build() => _build();
+
+  _$GGetCommentData_getComment _build() {
     _$GGetCommentData_getComment _$result;
     try {
       _$result = _$v ??
           new _$GGetCommentData_getComment._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GGetCommentData_getComment', 'G__typename'),
+                  G__typename, r'GGetCommentData_getComment', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetCommentData_getComment', 'id'),
+                  id, r'GGetCommentData_getComment', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
-                  comment, 'GGetCommentData_getComment', 'comment'),
+                  comment, r'GGetCommentData_getComment', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -31565,7 +31715,7 @@ class GGetCommentData_getCommentBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetCommentData_getComment', _$failedField, e.toString());
+            r'GGetCommentData_getComment', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -31586,7 +31736,7 @@ class _$GGetCommentData_getComment_by extends GGetCommentData_getComment_by {
 
   factory _$GGetCommentData_getComment_by(
           [void Function(GGetCommentData_getComment_byBuilder)? updates]) =>
-      (new GGetCommentData_getComment_byBuilder()..update(updates)).build();
+      (new GGetCommentData_getComment_byBuilder()..update(updates))._build();
 
   _$GGetCommentData_getComment_by._(
       {required this.G__typename,
@@ -31595,9 +31745,9 @@ class _$GGetCommentData_getComment_by extends GGetCommentData_getComment_by {
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetCommentData_getComment_by', 'G__typename');
+        G__typename, r'GGetCommentData_getComment_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GGetCommentData_getComment_by', 'username');
+        username, r'GGetCommentData_getComment_by', 'username');
   }
 
   @override
@@ -31629,7 +31779,7 @@ class _$GGetCommentData_getComment_by extends GGetCommentData_getComment_by {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetCommentData_getComment_by')
+    return (newBuiltValueToStringHelper(r'GGetCommentData_getComment_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -31689,13 +31839,15 @@ class GGetCommentData_getComment_byBuilder
   }
 
   @override
-  _$GGetCommentData_getComment_by build() {
+  GGetCommentData_getComment_by build() => _build();
+
+  _$GGetCommentData_getComment_by _build() {
     final _$result = _$v ??
         new _$GGetCommentData_getComment_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GGetCommentData_getComment_by', 'G__typename'),
+                G__typename, r'GGetCommentData_getComment_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GGetCommentData_getComment_by', 'username'),
+                username, r'GGetCommentData_getComment_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -31730,7 +31882,7 @@ class _$GGetCommentData_getComment_habit
 
   factory _$GGetCommentData_getComment_habit(
           [void Function(GGetCommentData_getComment_habitBuilder)? updates]) =>
-      (new GGetCommentData_getComment_habitBuilder()..update(updates)).build();
+      (new GGetCommentData_getComment_habitBuilder()..update(updates))._build();
 
   _$GGetCommentData_getComment_habit._(
       {required this.G__typename,
@@ -31746,17 +31898,17 @@ class _$GGetCommentData_getComment_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GGetCommentData_getComment_habit', 'G__typename');
+        G__typename, r'GGetCommentData_getComment_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetCommentData_getComment_habit', 'id');
+        id, r'GGetCommentData_getComment_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GGetCommentData_getComment_habit', 'tagline');
+        tagline, r'GGetCommentData_getComment_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GGetCommentData_getComment_habit', 'category');
+        category, r'GGetCommentData_getComment_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GGetCommentData_getComment_habit', 'createdAt');
+        createdAt, r'GGetCommentData_getComment_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GGetCommentData_getComment_habit', 'updatedAt');
+        updatedAt, r'GGetCommentData_getComment_habit', 'updatedAt');
   }
 
   @override
@@ -31811,7 +31963,7 @@ class _$GGetCommentData_getComment_habit
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetCommentData_getComment_habit')
+    return (newBuiltValueToStringHelper(r'GGetCommentData_getComment_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -31919,19 +32071,21 @@ class GGetCommentData_getComment_habitBuilder
   }
 
   @override
-  _$GGetCommentData_getComment_habit build() {
+  GGetCommentData_getComment_habit build() => _build();
+
+  _$GGetCommentData_getComment_habit _build() {
     _$GGetCommentData_getComment_habit _$result;
     try {
       _$result = _$v ??
           new _$GGetCommentData_getComment_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetCommentData_getComment_habit', 'G__typename'),
+                  r'GGetCommentData_getComment_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetCommentData_getComment_habit', 'id'),
+                  id, r'GGetCommentData_getComment_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GGetCommentData_getComment_habit', 'tagline'),
+                  tagline, r'GGetCommentData_getComment_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GGetCommentData_getComment_habit', 'category'),
+                  category, r'GGetCommentData_getComment_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -31950,7 +32104,7 @@ class GGetCommentData_getComment_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetCommentData_getComment_habit', _$failedField, e.toString());
+            r'GGetCommentData_getComment_habit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -31970,15 +32124,15 @@ class _$GGetCommentData_getComment_habit_comments
           [void Function(GGetCommentData_getComment_habit_commentsBuilder)?
               updates]) =>
       (new GGetCommentData_getComment_habit_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GGetCommentData_getComment_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetCommentData_getComment_habit_comments', 'G__typename');
+        r'GGetCommentData_getComment_habit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GGetCommentData_getComment_habit_comments', 'items');
+        items, r'GGetCommentData_getComment_habit_comments', 'items');
   }
 
   @override
@@ -32007,7 +32161,7 @@ class _$GGetCommentData_getComment_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetCommentData_getComment_habit_comments')
+            r'GGetCommentData_getComment_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -32061,13 +32215,15 @@ class GGetCommentData_getComment_habit_commentsBuilder
   }
 
   @override
-  _$GGetCommentData_getComment_habit_comments build() {
+  GGetCommentData_getComment_habit_comments build() => _build();
+
+  _$GGetCommentData_getComment_habit_comments _build() {
     _$GGetCommentData_getComment_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GGetCommentData_getComment_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GGetCommentData_getComment_habit_comments', 'G__typename'),
+                  r'GGetCommentData_getComment_habit_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -32076,7 +32232,7 @@ class GGetCommentData_getComment_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetCommentData_getComment_habit_comments',
+            r'GGetCommentData_getComment_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -32110,7 +32266,7 @@ class _$GGetCommentData_getComment_habit_comments_items
               updates]) =>
       (new GGetCommentData_getComment_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GGetCommentData_getComment_habit_comments_items._(
       {required this.G__typename,
@@ -32122,15 +32278,15 @@ class _$GGetCommentData_getComment_habit_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GGetCommentData_getComment_habit_comments_items', 'G__typename');
+        r'GGetCommentData_getComment_habit_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GGetCommentData_getComment_habit_comments_items', 'id');
+        id, r'GGetCommentData_getComment_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GGetCommentData_getComment_habit_comments_items', 'comment');
+        comment, r'GGetCommentData_getComment_habit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GGetCommentData_getComment_habit_comments_items', 'createdAt');
+        r'GGetCommentData_getComment_habit_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GGetCommentData_getComment_habit_comments_items', 'updatedAt');
+        r'GGetCommentData_getComment_habit_comments_items', 'updatedAt');
   }
 
   @override
@@ -32174,7 +32330,7 @@ class _$GGetCommentData_getComment_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GGetCommentData_getComment_habit_comments_items')
+            r'GGetCommentData_getComment_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -32257,21 +32413,25 @@ class GGetCommentData_getComment_habit_comments_itemsBuilder
   }
 
   @override
-  _$GGetCommentData_getComment_habit_comments_items build() {
+  GGetCommentData_getComment_habit_comments_items build() => _build();
+
+  _$GGetCommentData_getComment_habit_comments_items _build() {
     _$GGetCommentData_getComment_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GGetCommentData_getComment_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GGetCommentData_getComment_habit_comments_items',
+                  r'GGetCommentData_getComment_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GGetCommentData_getComment_habit_comments_items', 'id'),
+                  id, r'GGetCommentData_getComment_habit_comments_items', 'id'),
               owner: owner,
               habitId: habitId,
-              comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GGetCommentData_getComment_habit_comments_items', 'comment'),
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GGetCommentData_getComment_habit_comments_items',
+                  'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -32283,7 +32443,7 @@ class GGetCommentData_getComment_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetCommentData_getComment_habit_comments_items',
+            r'GGetCommentData_getComment_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -32302,12 +32462,12 @@ class _$GSubscribeToUserData extends GSubscribeToUserData {
 
   factory _$GSubscribeToUserData(
           [void Function(GSubscribeToUserDataBuilder)? updates]) =>
-      (new GSubscribeToUserDataBuilder()..update(updates)).build();
+      (new GSubscribeToUserDataBuilder()..update(updates))._build();
 
   _$GSubscribeToUserData._({required this.G__typename, this.subscribeToUser})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSubscribeToUserData', 'G__typename');
+        G__typename, r'GSubscribeToUserData', 'G__typename');
   }
 
   @override
@@ -32334,7 +32494,7 @@ class _$GSubscribeToUserData extends GSubscribeToUserData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSubscribeToUserData')
+    return (newBuiltValueToStringHelper(r'GSubscribeToUserData')
           ..add('G__typename', G__typename)
           ..add('subscribeToUser', subscribeToUser))
         .toString();
@@ -32383,13 +32543,15 @@ class GSubscribeToUserDataBuilder
   }
 
   @override
-  _$GSubscribeToUserData build() {
+  GSubscribeToUserData build() => _build();
+
+  _$GSubscribeToUserData _build() {
     _$GSubscribeToUserData _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GSubscribeToUserData', 'G__typename'),
+                  G__typename, r'GSubscribeToUserData', 'G__typename'),
               subscribeToUser: _subscribeToUser?.build());
     } catch (_) {
       late String _$failedField;
@@ -32398,7 +32560,7 @@ class GSubscribeToUserDataBuilder
         _subscribeToUser?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData', _$failedField, e.toString());
+            r'GSubscribeToUserData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -32432,7 +32594,7 @@ class _$GSubscribeToUserData_subscribeToUser
           [void Function(GSubscribeToUserData_subscribeToUserBuilder)?
               updates]) =>
       (new GSubscribeToUserData_subscribeToUserBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser._(
       {required this.G__typename,
@@ -32446,9 +32608,9 @@ class _$GSubscribeToUserData_subscribeToUser
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSubscribeToUserData_subscribeToUser', 'G__typename');
+        G__typename, r'GSubscribeToUserData_subscribeToUser', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GSubscribeToUserData_subscribeToUser', 'username');
+        username, r'GSubscribeToUserData_subscribeToUser', 'username');
   }
 
   @override
@@ -32497,7 +32659,7 @@ class _$GSubscribeToUserData_subscribeToUser
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSubscribeToUserData_subscribeToUser')
+    return (newBuiltValueToStringHelper(r'GSubscribeToUserData_subscribeToUser')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -32602,15 +32764,17 @@ class GSubscribeToUserData_subscribeToUserBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser build() {
+  GSubscribeToUserData_subscribeToUser build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser _build() {
     _$GSubscribeToUserData_subscribeToUser _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData_subscribeToUser._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSubscribeToUserData_subscribeToUser', 'G__typename'),
-              username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GSubscribeToUserData_subscribeToUser', 'username'),
+                  r'GSubscribeToUserData_subscribeToUser', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GSubscribeToUserData_subscribeToUser', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -32633,7 +32797,7 @@ class GSubscribeToUserData_subscribeToUserBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser',
+            r'GSubscribeToUserData_subscribeToUser',
             _$failedField,
             e.toString());
       }
@@ -32664,7 +32828,7 @@ class _$GSubscribeToUserData_subscribeToUser_avatar
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_avatarBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_avatar._(
       {required this.G__typename,
@@ -32675,13 +32839,13 @@ class _$GSubscribeToUserData_subscribeToUser_avatar
       this.cognitoId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSubscribeToUserData_subscribeToUser_avatar', 'G__typename');
+        r'GSubscribeToUserData_subscribeToUser_avatar', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        bucket, 'GSubscribeToUserData_subscribeToUser_avatar', 'bucket');
+        bucket, r'GSubscribeToUserData_subscribeToUser_avatar', 'bucket');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'GSubscribeToUserData_subscribeToUser_avatar', 'region');
+        region, r'GSubscribeToUserData_subscribeToUser_avatar', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        key, 'GSubscribeToUserData_subscribeToUser_avatar', 'key');
+        key, r'GSubscribeToUserData_subscribeToUser_avatar', 'key');
   }
 
   @override
@@ -32721,7 +32885,7 @@ class _$GSubscribeToUserData_subscribeToUser_avatar
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_avatar')
+            r'GSubscribeToUserData_subscribeToUser_avatar')
           ..add('G__typename', G__typename)
           ..add('bucket', bucket)
           ..add('region', region)
@@ -32795,17 +32959,19 @@ class GSubscribeToUserData_subscribeToUser_avatarBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_avatar build() {
+  GSubscribeToUserData_subscribeToUser_avatar build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_avatar _build() {
     final _$result = _$v ??
         new _$GSubscribeToUserData_subscribeToUser_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GSubscribeToUserData_subscribeToUser_avatar', 'G__typename'),
+                r'GSubscribeToUserData_subscribeToUser_avatar', 'G__typename'),
             bucket: BuiltValueNullFieldError.checkNotNull(bucket,
-                'GSubscribeToUserData_subscribeToUser_avatar', 'bucket'),
+                r'GSubscribeToUserData_subscribeToUser_avatar', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(region,
-                'GSubscribeToUserData_subscribeToUser_avatar', 'region'),
+                r'GSubscribeToUserData_subscribeToUser_avatar', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GSubscribeToUserData_subscribeToUser_avatar', 'key'),
+                key, r'GSubscribeToUserData_subscribeToUser_avatar', 'key'),
             accessLevel: accessLevel,
             cognitoId: cognitoId);
     replace(_$result);
@@ -32825,15 +32991,15 @@ class _$GSubscribeToUserData_subscribeToUser_comments
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSubscribeToUserData_subscribeToUser_comments', 'G__typename');
+        r'GSubscribeToUserData_subscribeToUser_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GSubscribeToUserData_subscribeToUser_comments', 'items');
+        items, r'GSubscribeToUserData_subscribeToUser_comments', 'items');
   }
 
   @override
@@ -32862,7 +33028,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_comments')
+            r'GSubscribeToUserData_subscribeToUser_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -32917,14 +33083,16 @@ class GSubscribeToUserData_subscribeToUser_commentsBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_comments build() {
+  GSubscribeToUserData_subscribeToUser_comments build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_comments _build() {
     _$GSubscribeToUserData_subscribeToUser_comments _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData_subscribeToUser_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_comments',
+                  r'GSubscribeToUserData_subscribeToUser_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -32934,7 +33102,7 @@ class GSubscribeToUserData_subscribeToUser_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_comments',
+            r'GSubscribeToUserData_subscribeToUser_comments',
             _$failedField,
             e.toString());
       }
@@ -32972,7 +33140,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_comments_items._(
       {required this.G__typename,
@@ -32986,15 +33154,15 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSubscribeToUserData_subscribeToUser_comments_items', 'G__typename');
+        r'GSubscribeToUserData_subscribeToUser_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSubscribeToUserData_subscribeToUser_comments_items', 'id');
+        id, r'GSubscribeToUserData_subscribeToUser_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GSubscribeToUserData_subscribeToUser_comments_items', 'comment');
+        r'GSubscribeToUserData_subscribeToUser_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GSubscribeToUserData_subscribeToUser_comments_items', 'createdAt');
+        r'GSubscribeToUserData_subscribeToUser_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GSubscribeToUserData_subscribeToUser_comments_items', 'updatedAt');
+        r'GSubscribeToUserData_subscribeToUser_comments_items', 'updatedAt');
   }
 
   @override
@@ -33045,7 +33213,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_comments_items')
+            r'GSubscribeToUserData_subscribeToUser_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -33149,24 +33317,26 @@ class GSubscribeToUserData_subscribeToUser_comments_itemsBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_comments_items build() {
+  GSubscribeToUserData_subscribeToUser_comments_items build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_comments_items _build() {
     _$GSubscribeToUserData_subscribeToUser_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData_subscribeToUser_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(id,
-                  'GSubscribeToUserData_subscribeToUser_comments_items', 'id'),
+                  r'GSubscribeToUserData_subscribeToUser_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSubscribeToUserData_subscribeToUser_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -33185,7 +33355,7 @@ class GSubscribeToUserData_subscribeToUser_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_comments_items',
+            r'GSubscribeToUserData_subscribeToUser_comments_items',
             _$failedField,
             e.toString());
       }
@@ -33213,7 +33383,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_by
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_comments_items_by._(
       {required this.G__typename,
@@ -33223,10 +33393,10 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_by
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_comments_items_by',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_by',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(username,
-        'GSubscribeToUserData_subscribeToUser_comments_items_by', 'username');
+        r'GSubscribeToUserData_subscribeToUser_comments_items_by', 'username');
   }
 
   @override
@@ -33262,7 +33432,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_comments_items_by')
+            r'GSubscribeToUserData_subscribeToUser_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -33326,16 +33496,18 @@ class GSubscribeToUserData_subscribeToUser_comments_items_byBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_comments_items_by build() {
+  GSubscribeToUserData_subscribeToUser_comments_items_by build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_comments_items_by _build() {
     final _$result = _$v ??
         new _$GSubscribeToUserData_subscribeToUser_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GSubscribeToUserData_subscribeToUser_comments_items_by',
+                r'GSubscribeToUserData_subscribeToUser_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GSubscribeToUserData_subscribeToUser_comments_items_by',
+                r'GSubscribeToUserData_subscribeToUser_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -33376,7 +33548,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_comments_items_habit._(
       {required this.G__typename,
@@ -33393,23 +33565,25 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSubscribeToUserData_subscribeToUser_comments_items_habit', 'id');
-    BuiltValueNullFieldError.checkNotNull(tagline,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit', 'tagline');
+        id, r'GSubscribeToUserData_subscribeToUser_comments_items_habit', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        tagline,
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+        'tagline');
     BuiltValueNullFieldError.checkNotNull(
         category,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
         'category');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
         'updatedAt');
   }
 
@@ -33470,7 +33644,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_comments_items_habit')
+            r'GSubscribeToUserData_subscribeToUser_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -33586,26 +33760,28 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habitBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_comments_items_habit build() {
+  GSubscribeToUserData_subscribeToUser_comments_items_habit build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_comments_items_habit _build() {
     _$GSubscribeToUserData_subscribeToUser_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData_subscribeToUser_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -33625,7 +33801,7 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_comments_items_habit',
+            r'GSubscribeToUserData_subscribeToUser_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -33651,18 +33827,18 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
         'items');
   }
 
@@ -33696,7 +33872,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments')
+            r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -33761,7 +33937,11 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments build() {
+  GSubscribeToUserData_subscribeToUser_comments_items_habit_comments build() =>
+      _build();
+
+  _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
+      _build() {
     _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
         _$result;
     try {
@@ -33770,7 +33950,7 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habit_commentsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -33780,7 +33960,7 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
+            r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -33814,7 +33994,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -33827,23 +34007,23 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -33891,7 +34071,7 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items')
+            r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -33982,8 +34162,11 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_itemsBu
   }
 
   @override
+  GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
+      build() => _build();
+
   _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
         _$result;
     try {
@@ -33992,17 +34175,17 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_itemsBu
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -34015,7 +34198,7 @@ class GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_itemsBu
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
+            r'GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -34038,15 +34221,15 @@ class _$GSubscribeToUserData_subscribeToUser_habits
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habitsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits', 'G__typename');
+        r'GSubscribeToUserData_subscribeToUser_habits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GSubscribeToUserData_subscribeToUser_habits', 'items');
+        items, r'GSubscribeToUserData_subscribeToUser_habits', 'items');
   }
 
   @override
@@ -34075,7 +34258,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits')
+            r'GSubscribeToUserData_subscribeToUser_habits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -34129,13 +34312,17 @@ class GSubscribeToUserData_subscribeToUser_habitsBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_habits build() {
+  GSubscribeToUserData_subscribeToUser_habits build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_habits _build() {
     _$GSubscribeToUserData_subscribeToUser_habits _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData_subscribeToUser_habits._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSubscribeToUserData_subscribeToUser_habits', 'G__typename'),
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSubscribeToUserData_subscribeToUser_habits',
+                  'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -34144,7 +34331,7 @@ class GSubscribeToUserData_subscribeToUser_habitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_habits',
+            r'GSubscribeToUserData_subscribeToUser_habits',
             _$failedField,
             e.toString());
       }
@@ -34186,7 +34373,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habits_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits_items._(
       {required this.G__typename,
@@ -34202,17 +34389,17 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits_items', 'G__typename');
+        r'GSubscribeToUserData_subscribeToUser_habits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSubscribeToUserData_subscribeToUser_habits_items', 'id');
+        id, r'GSubscribeToUserData_subscribeToUser_habits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GSubscribeToUserData_subscribeToUser_habits_items', 'tagline');
+        r'GSubscribeToUserData_subscribeToUser_habits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GSubscribeToUserData_subscribeToUser_habits_items', 'category');
+        r'GSubscribeToUserData_subscribeToUser_habits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items', 'createdAt');
+        r'GSubscribeToUserData_subscribeToUser_habits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items', 'updatedAt');
+        r'GSubscribeToUserData_subscribeToUser_habits_items', 'updatedAt');
   }
 
   @override
@@ -34271,7 +34458,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits_items')
+            r'GSubscribeToUserData_subscribeToUser_habits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -34383,24 +34570,26 @@ class GSubscribeToUserData_subscribeToUser_habits_itemsBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_habits_items build() {
+  GSubscribeToUserData_subscribeToUser_habits_items build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_habits_items _build() {
     _$GSubscribeToUserData_subscribeToUser_habits_items _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData_subscribeToUser_habits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_habits_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(id,
-                  'GSubscribeToUserData_subscribeToUser_habits_items', 'id'),
+                  r'GSubscribeToUserData_subscribeToUser_habits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GSubscribeToUserData_subscribeToUser_habits_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GSubscribeToUserData_subscribeToUser_habits_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items',
                   'category'),
               details: details,
               owner: owner,
@@ -34420,7 +34609,7 @@ class GSubscribeToUserData_subscribeToUser_habits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_habits_items',
+            r'GSubscribeToUserData_subscribeToUser_habits_items',
             _$failedField,
             e.toString());
       }
@@ -34445,17 +34634,17 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habits_items_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments', 'items');
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments', 'items');
   }
 
   @override
@@ -34488,7 +34677,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments')
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -34547,14 +34736,17 @@ class GSubscribeToUserData_subscribeToUser_habits_items_commentsBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_habits_items_comments build() {
+  GSubscribeToUserData_subscribeToUser_habits_items_comments build() =>
+      _build();
+
+  _$GSubscribeToUserData_subscribeToUser_habits_items_comments _build() {
     _$GSubscribeToUserData_subscribeToUser_habits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUserData_subscribeToUser_habits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -34564,7 +34756,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments',
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -34603,7 +34795,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items._(
       {required this.G__typename,
@@ -34618,23 +34810,23 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
         'updatedAt');
   }
 
@@ -34688,7 +34880,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items')
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -34801,7 +34993,10 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_itemsBuilder
   }
 
   @override
-  _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items build() {
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items build() =>
+      _build();
+
+  _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items _build() {
     _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items _$result;
     try {
       _$result = _$v ??
@@ -34809,11 +35004,11 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_itemsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
                   'id'),
               owner: owner,
               by: _by?.build(),
@@ -34821,7 +35016,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_itemsBuilder
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -34840,7 +35035,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -34868,7 +35063,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by._(
       {required this.G__typename,
@@ -34878,11 +35073,11 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         username,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
         'username');
   }
 
@@ -34921,7 +35116,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by')
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -34990,18 +35185,21 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_byBuilder
   }
 
   @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by build() =>
+      _build();
+
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
-      build() {
+      _build() {
     final _$result = _$v ??
         new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
                 ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -35042,7 +35240,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit._(
       {required this.G__typename,
@@ -35059,27 +35257,27 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         tagline,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
         'tagline');
     BuiltValueNullFieldError.checkNotNull(
         category,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
         'category');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
         'updatedAt');
   }
 
@@ -35141,7 +35339,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit')
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -35261,8 +35459,11 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habitBuil
   }
 
   @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
+      build() => _build();
+
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
-      build() {
+      _build() {
     _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
         _$result;
     try {
@@ -35270,19 +35471,19 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habitBuil
           new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -35302,7 +35503,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habitBuil
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -35328,18 +35529,18 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -35374,7 +35575,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments')
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -35440,8 +35641,11 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_com
   }
 
   @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
+      build() => _build();
+
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
-      build() {
+      _build() {
     _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
         _$result;
     try {
@@ -35450,7 +35654,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_com
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -35460,7 +35664,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_com
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -35494,7 +35698,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
               updates]) =>
       (new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -35507,23 +35711,23 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -35572,7 +35776,7 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items')
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -35663,8 +35867,11 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_com
   }
 
   @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -35673,17 +35880,17 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_com
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -35696,7 +35903,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_com
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -35714,12 +35921,12 @@ class _$GCreateUserData extends GCreateUserData {
   final GCreateUserData_createUser? createUser;
 
   factory _$GCreateUserData([void Function(GCreateUserDataBuilder)? updates]) =>
-      (new GCreateUserDataBuilder()..update(updates)).build();
+      (new GCreateUserDataBuilder()..update(updates))._build();
 
   _$GCreateUserData._({required this.G__typename, this.createUser})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateUserData', 'G__typename');
+        G__typename, r'GCreateUserData', 'G__typename');
   }
 
   @override
@@ -35745,7 +35952,7 @@ class _$GCreateUserData extends GCreateUserData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateUserData')
+    return (newBuiltValueToStringHelper(r'GCreateUserData')
           ..add('G__typename', G__typename)
           ..add('createUser', createUser))
         .toString();
@@ -35792,13 +35999,15 @@ class GCreateUserDataBuilder
   }
 
   @override
-  _$GCreateUserData build() {
+  GCreateUserData build() => _build();
+
+  _$GCreateUserData _build() {
     _$GCreateUserData _$result;
     try {
       _$result = _$v ??
           new _$GCreateUserData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GCreateUserData', 'G__typename'),
+                  G__typename, r'GCreateUserData', 'G__typename'),
               createUser: _createUser?.build());
     } catch (_) {
       late String _$failedField;
@@ -35807,7 +36016,7 @@ class GCreateUserDataBuilder
         _createUser?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateUserData', _$failedField, e.toString());
+            r'GCreateUserData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -35824,15 +36033,15 @@ class _$GCreateUserData_createUser extends GCreateUserData_createUser {
 
   factory _$GCreateUserData_createUser(
           [void Function(GCreateUserData_createUserBuilder)? updates]) =>
-      (new GCreateUserData_createUserBuilder()..update(updates)).build();
+      (new GCreateUserData_createUserBuilder()..update(updates))._build();
 
   _$GCreateUserData_createUser._(
       {required this.G__typename, required this.username})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateUserData_createUser', 'G__typename');
+        G__typename, r'GCreateUserData_createUser', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GCreateUserData_createUser', 'username');
+        username, r'GCreateUserData_createUser', 'username');
   }
 
   @override
@@ -35859,7 +36068,7 @@ class _$GCreateUserData_createUser extends GCreateUserData_createUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateUserData_createUser')
+    return (newBuiltValueToStringHelper(r'GCreateUserData_createUser')
           ..add('G__typename', G__typename)
           ..add('username', username))
         .toString();
@@ -35905,13 +36114,15 @@ class GCreateUserData_createUserBuilder
   }
 
   @override
-  _$GCreateUserData_createUser build() {
+  GCreateUserData_createUser build() => _build();
+
+  _$GCreateUserData_createUser _build() {
     final _$result = _$v ??
         new _$GCreateUserData_createUser._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GCreateUserData_createUser', 'G__typename'),
+                G__typename, r'GCreateUserData_createUser', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GCreateUserData_createUser', 'username'));
+                username, r'GCreateUserData_createUser', 'username'));
     replace(_$result);
     return _$result;
   }
@@ -35925,12 +36136,12 @@ class _$GCreateCommentData extends GCreateCommentData {
 
   factory _$GCreateCommentData(
           [void Function(GCreateCommentDataBuilder)? updates]) =>
-      (new GCreateCommentDataBuilder()..update(updates)).build();
+      (new GCreateCommentDataBuilder()..update(updates))._build();
 
   _$GCreateCommentData._({required this.G__typename, this.createComment})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateCommentData', 'G__typename');
+        G__typename, r'GCreateCommentData', 'G__typename');
   }
 
   @override
@@ -35957,7 +36168,7 @@ class _$GCreateCommentData extends GCreateCommentData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateCommentData')
+    return (newBuiltValueToStringHelper(r'GCreateCommentData')
           ..add('G__typename', G__typename)
           ..add('createComment', createComment))
         .toString();
@@ -36004,13 +36215,15 @@ class GCreateCommentDataBuilder
   }
 
   @override
-  _$GCreateCommentData build() {
+  GCreateCommentData build() => _build();
+
+  _$GCreateCommentData _build() {
     _$GCreateCommentData _$result;
     try {
       _$result = _$v ??
           new _$GCreateCommentData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GCreateCommentData', 'G__typename'),
+                  G__typename, r'GCreateCommentData', 'G__typename'),
               createComment: _createComment?.build());
     } catch (_) {
       late String _$failedField;
@@ -36019,7 +36232,7 @@ class GCreateCommentDataBuilder
         _createComment?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateCommentData', _$failedField, e.toString());
+            r'GCreateCommentData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -36051,7 +36264,7 @@ class _$GCreateCommentData_createComment
 
   factory _$GCreateCommentData_createComment(
           [void Function(GCreateCommentData_createCommentBuilder)? updates]) =>
-      (new GCreateCommentData_createCommentBuilder()..update(updates)).build();
+      (new GCreateCommentData_createCommentBuilder()..update(updates))._build();
 
   _$GCreateCommentData_createComment._(
       {required this.G__typename,
@@ -36065,15 +36278,15 @@ class _$GCreateCommentData_createComment
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateCommentData_createComment', 'G__typename');
+        G__typename, r'GCreateCommentData_createComment', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GCreateCommentData_createComment', 'id');
+        id, r'GCreateCommentData_createComment', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GCreateCommentData_createComment', 'comment');
+        comment, r'GCreateCommentData_createComment', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GCreateCommentData_createComment', 'createdAt');
+        createdAt, r'GCreateCommentData_createComment', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GCreateCommentData_createComment', 'updatedAt');
+        updatedAt, r'GCreateCommentData_createComment', 'updatedAt');
   }
 
   @override
@@ -36120,7 +36333,7 @@ class _$GCreateCommentData_createComment
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateCommentData_createComment')
+    return (newBuiltValueToStringHelper(r'GCreateCommentData_createComment')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -36216,21 +36429,23 @@ class GCreateCommentData_createCommentBuilder
   }
 
   @override
-  _$GCreateCommentData_createComment build() {
+  GCreateCommentData_createComment build() => _build();
+
+  _$GCreateCommentData_createComment _build() {
     _$GCreateCommentData_createComment _$result;
     try {
       _$result = _$v ??
           new _$GCreateCommentData_createComment._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GCreateCommentData_createComment', 'G__typename'),
+                  r'GCreateCommentData_createComment', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GCreateCommentData_createComment', 'id'),
+                  id, r'GCreateCommentData_createComment', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
-                  comment, 'GCreateCommentData_createComment', 'comment'),
+                  comment, r'GCreateCommentData_createComment', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -36248,7 +36463,7 @@ class GCreateCommentData_createCommentBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateCommentData_createComment', _$failedField, e.toString());
+            r'GCreateCommentData_createComment', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -36272,7 +36487,7 @@ class _$GCreateCommentData_createComment_by
           [void Function(GCreateCommentData_createComment_byBuilder)?
               updates]) =>
       (new GCreateCommentData_createComment_byBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GCreateCommentData_createComment_by._(
       {required this.G__typename,
@@ -36281,9 +36496,9 @@ class _$GCreateCommentData_createComment_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateCommentData_createComment_by', 'G__typename');
+        G__typename, r'GCreateCommentData_createComment_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GCreateCommentData_createComment_by', 'username');
+        username, r'GCreateCommentData_createComment_by', 'username');
   }
 
   @override
@@ -36315,7 +36530,7 @@ class _$GCreateCommentData_createComment_by
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateCommentData_createComment_by')
+    return (newBuiltValueToStringHelper(r'GCreateCommentData_createComment_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -36376,13 +36591,15 @@ class GCreateCommentData_createComment_byBuilder
   }
 
   @override
-  _$GCreateCommentData_createComment_by build() {
+  GCreateCommentData_createComment_by build() => _build();
+
+  _$GCreateCommentData_createComment_by _build() {
     final _$result = _$v ??
         new _$GCreateCommentData_createComment_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GCreateCommentData_createComment_by', 'G__typename'),
+                r'GCreateCommentData_createComment_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GCreateCommentData_createComment_by', 'username'),
+                username, r'GCreateCommentData_createComment_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -36419,7 +36636,7 @@ class _$GCreateCommentData_createComment_habit
           [void Function(GCreateCommentData_createComment_habitBuilder)?
               updates]) =>
       (new GCreateCommentData_createComment_habitBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GCreateCommentData_createComment_habit._(
       {required this.G__typename,
@@ -36435,17 +36652,17 @@ class _$GCreateCommentData_createComment_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateCommentData_createComment_habit', 'G__typename');
+        G__typename, r'GCreateCommentData_createComment_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GCreateCommentData_createComment_habit', 'id');
+        id, r'GCreateCommentData_createComment_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GCreateCommentData_createComment_habit', 'tagline');
+        tagline, r'GCreateCommentData_createComment_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GCreateCommentData_createComment_habit', 'category');
+        category, r'GCreateCommentData_createComment_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GCreateCommentData_createComment_habit', 'createdAt');
+        createdAt, r'GCreateCommentData_createComment_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GCreateCommentData_createComment_habit', 'updatedAt');
+        updatedAt, r'GCreateCommentData_createComment_habit', 'updatedAt');
   }
 
   @override
@@ -36502,7 +36719,7 @@ class _$GCreateCommentData_createComment_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateCommentData_createComment_habit')
+            r'GCreateCommentData_createComment_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -36612,19 +36829,21 @@ class GCreateCommentData_createComment_habitBuilder
   }
 
   @override
-  _$GCreateCommentData_createComment_habit build() {
+  GCreateCommentData_createComment_habit build() => _build();
+
+  _$GCreateCommentData_createComment_habit _build() {
     _$GCreateCommentData_createComment_habit _$result;
     try {
       _$result = _$v ??
           new _$GCreateCommentData_createComment_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GCreateCommentData_createComment_habit', 'G__typename'),
+                  r'GCreateCommentData_createComment_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GCreateCommentData_createComment_habit', 'id'),
-              tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GCreateCommentData_createComment_habit', 'tagline'),
+                  id, r'GCreateCommentData_createComment_habit', 'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(tagline,
+                  r'GCreateCommentData_createComment_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GCreateCommentData_createComment_habit', 'category'),
+                  r'GCreateCommentData_createComment_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -36643,7 +36862,7 @@ class GCreateCommentData_createComment_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateCommentData_createComment_habit',
+            r'GCreateCommentData_createComment_habit',
             _$failedField,
             e.toString());
       }
@@ -36667,15 +36886,15 @@ class _$GCreateCommentData_createComment_habit_comments
               updates]) =>
       (new GCreateCommentData_createComment_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GCreateCommentData_createComment_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GCreateCommentData_createComment_habit_comments', 'G__typename');
+        r'GCreateCommentData_createComment_habit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GCreateCommentData_createComment_habit_comments', 'items');
+        items, r'GCreateCommentData_createComment_habit_comments', 'items');
   }
 
   @override
@@ -36705,7 +36924,7 @@ class _$GCreateCommentData_createComment_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateCommentData_createComment_habit_comments')
+            r'GCreateCommentData_createComment_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -36760,14 +36979,16 @@ class GCreateCommentData_createComment_habit_commentsBuilder
   }
 
   @override
-  _$GCreateCommentData_createComment_habit_comments build() {
+  GCreateCommentData_createComment_habit_comments build() => _build();
+
+  _$GCreateCommentData_createComment_habit_comments _build() {
     _$GCreateCommentData_createComment_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GCreateCommentData_createComment_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GCreateCommentData_createComment_habit_comments',
+                  r'GCreateCommentData_createComment_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -36777,7 +36998,7 @@ class GCreateCommentData_createComment_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateCommentData_createComment_habit_comments',
+            r'GCreateCommentData_createComment_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -36811,7 +37032,7 @@ class _$GCreateCommentData_createComment_habit_comments_items
               updates]) =>
       (new GCreateCommentData_createComment_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GCreateCommentData_createComment_habit_comments_items._(
       {required this.G__typename,
@@ -36822,16 +37043,18 @@ class _$GCreateCommentData_createComment_habit_comments_items
       required this.createdAt,
       required this.updatedAt})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GCreateCommentData_createComment_habit_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GCreateCommentData_createComment_habit_comments_items', 'id');
+        G__typename,
+        r'GCreateCommentData_createComment_habit_comments_items',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GCreateCommentData_createComment_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GCreateCommentData_createComment_habit_comments_items', 'comment');
+        r'GCreateCommentData_createComment_habit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GCreateCommentData_createComment_habit_comments_items', 'createdAt');
+        r'GCreateCommentData_createComment_habit_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GCreateCommentData_createComment_habit_comments_items', 'updatedAt');
+        r'GCreateCommentData_createComment_habit_comments_items', 'updatedAt');
   }
 
   @override
@@ -36876,7 +37099,7 @@ class _$GCreateCommentData_createComment_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateCommentData_createComment_habit_comments_items')
+            r'GCreateCommentData_createComment_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -36961,24 +37184,26 @@ class GCreateCommentData_createComment_habit_comments_itemsBuilder
   }
 
   @override
-  _$GCreateCommentData_createComment_habit_comments_items build() {
+  GCreateCommentData_createComment_habit_comments_items build() => _build();
+
+  _$GCreateCommentData_createComment_habit_comments_items _build() {
     _$GCreateCommentData_createComment_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GCreateCommentData_createComment_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GCreateCommentData_createComment_habit_comments_items',
+                  r'GCreateCommentData_createComment_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GCreateCommentData_createComment_habit_comments_items',
+                  r'GCreateCommentData_createComment_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GCreateCommentData_createComment_habit_comments_items',
+                  r'GCreateCommentData_createComment_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -36991,7 +37216,7 @@ class GCreateCommentData_createComment_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateCommentData_createComment_habit_comments_items',
+            r'GCreateCommentData_createComment_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -37010,12 +37235,12 @@ class _$GCreateHabitData extends GCreateHabitData {
 
   factory _$GCreateHabitData(
           [void Function(GCreateHabitDataBuilder)? updates]) =>
-      (new GCreateHabitDataBuilder()..update(updates)).build();
+      (new GCreateHabitDataBuilder()..update(updates))._build();
 
   _$GCreateHabitData._({required this.G__typename, this.createHabit})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateHabitData', 'G__typename');
+        G__typename, r'GCreateHabitData', 'G__typename');
   }
 
   @override
@@ -37041,7 +37266,7 @@ class _$GCreateHabitData extends GCreateHabitData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateHabitData')
+    return (newBuiltValueToStringHelper(r'GCreateHabitData')
           ..add('G__typename', G__typename)
           ..add('createHabit', createHabit))
         .toString();
@@ -37088,13 +37313,15 @@ class GCreateHabitDataBuilder
   }
 
   @override
-  _$GCreateHabitData build() {
+  GCreateHabitData build() => _build();
+
+  _$GCreateHabitData _build() {
     _$GCreateHabitData _$result;
     try {
       _$result = _$v ??
           new _$GCreateHabitData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GCreateHabitData', 'G__typename'),
+                  G__typename, r'GCreateHabitData', 'G__typename'),
               createHabit: _createHabit?.build());
     } catch (_) {
       late String _$failedField;
@@ -37103,7 +37330,7 @@ class GCreateHabitDataBuilder
         _createHabit?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabitData', _$failedField, e.toString());
+            r'GCreateHabitData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -37138,7 +37365,7 @@ class _$GCreateHabitData_createHabit extends GCreateHabitData_createHabit {
 
   factory _$GCreateHabitData_createHabit(
           [void Function(GCreateHabitData_createHabitBuilder)? updates]) =>
-      (new GCreateHabitData_createHabitBuilder()..update(updates)).build();
+      (new GCreateHabitData_createHabitBuilder()..update(updates))._build();
 
   _$GCreateHabitData_createHabit._(
       {required this.G__typename,
@@ -37154,17 +37381,17 @@ class _$GCreateHabitData_createHabit extends GCreateHabitData_createHabit {
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateHabitData_createHabit', 'G__typename');
+        G__typename, r'GCreateHabitData_createHabit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GCreateHabitData_createHabit', 'id');
+        id, r'GCreateHabitData_createHabit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GCreateHabitData_createHabit', 'tagline');
+        tagline, r'GCreateHabitData_createHabit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GCreateHabitData_createHabit', 'category');
+        category, r'GCreateHabitData_createHabit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GCreateHabitData_createHabit', 'createdAt');
+        createdAt, r'GCreateHabitData_createHabit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GCreateHabitData_createHabit', 'updatedAt');
+        updatedAt, r'GCreateHabitData_createHabit', 'updatedAt');
   }
 
   @override
@@ -37219,7 +37446,7 @@ class _$GCreateHabitData_createHabit extends GCreateHabitData_createHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateHabitData_createHabit')
+    return (newBuiltValueToStringHelper(r'GCreateHabitData_createHabit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -37326,19 +37553,21 @@ class GCreateHabitData_createHabitBuilder
   }
 
   @override
-  _$GCreateHabitData_createHabit build() {
+  GCreateHabitData_createHabit build() => _build();
+
+  _$GCreateHabitData_createHabit _build() {
     _$GCreateHabitData_createHabit _$result;
     try {
       _$result = _$v ??
           new _$GCreateHabitData_createHabit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GCreateHabitData_createHabit', 'G__typename'),
+                  G__typename, r'GCreateHabitData_createHabit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GCreateHabitData_createHabit', 'id'),
+                  id, r'GCreateHabitData_createHabit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GCreateHabitData_createHabit', 'tagline'),
+                  tagline, r'GCreateHabitData_createHabit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GCreateHabitData_createHabit', 'category'),
+                  category, r'GCreateHabitData_createHabit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -37357,7 +37586,7 @@ class GCreateHabitData_createHabitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabitData_createHabit', _$failedField, e.toString());
+            r'GCreateHabitData_createHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -37377,15 +37606,15 @@ class _$GCreateHabitData_createHabit_comments
           [void Function(GCreateHabitData_createHabit_commentsBuilder)?
               updates]) =>
       (new GCreateHabitData_createHabit_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GCreateHabitData_createHabit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GCreateHabitData_createHabit_comments', 'G__typename');
+        G__typename, r'GCreateHabitData_createHabit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GCreateHabitData_createHabit_comments', 'items');
+        items, r'GCreateHabitData_createHabit_comments', 'items');
   }
 
   @override
@@ -37413,7 +37642,8 @@ class _$GCreateHabitData_createHabit_comments
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateHabitData_createHabit_comments')
+    return (newBuiltValueToStringHelper(
+            r'GCreateHabitData_createHabit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -37464,13 +37694,15 @@ class GCreateHabitData_createHabit_commentsBuilder
   }
 
   @override
-  _$GCreateHabitData_createHabit_comments build() {
+  GCreateHabitData_createHabit_comments build() => _build();
+
+  _$GCreateHabitData_createHabit_comments _build() {
     _$GCreateHabitData_createHabit_comments _$result;
     try {
       _$result = _$v ??
           new _$GCreateHabitData_createHabit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GCreateHabitData_createHabit_comments', 'G__typename'),
+                  r'GCreateHabitData_createHabit_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -37479,7 +37711,7 @@ class GCreateHabitData_createHabit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabitData_createHabit_comments',
+            r'GCreateHabitData_createHabit_comments',
             _$failedField,
             e.toString());
       }
@@ -37516,7 +37748,7 @@ class _$GCreateHabitData_createHabit_comments_items
               updates]) =>
       (new GCreateHabitData_createHabit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GCreateHabitData_createHabit_comments_items._(
       {required this.G__typename,
@@ -37530,15 +37762,15 @@ class _$GCreateHabitData_createHabit_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GCreateHabitData_createHabit_comments_items', 'G__typename');
+        r'GCreateHabitData_createHabit_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GCreateHabitData_createHabit_comments_items', 'id');
+        id, r'GCreateHabitData_createHabit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GCreateHabitData_createHabit_comments_items', 'comment');
+        comment, r'GCreateHabitData_createHabit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GCreateHabitData_createHabit_comments_items', 'createdAt');
+        createdAt, r'GCreateHabitData_createHabit_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GCreateHabitData_createHabit_comments_items', 'updatedAt');
+        updatedAt, r'GCreateHabitData_createHabit_comments_items', 'updatedAt');
   }
 
   @override
@@ -37587,7 +37819,7 @@ class _$GCreateHabitData_createHabit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateHabitData_createHabit_comments_items')
+            r'GCreateHabitData_createHabit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -37687,21 +37919,25 @@ class GCreateHabitData_createHabit_comments_itemsBuilder
   }
 
   @override
-  _$GCreateHabitData_createHabit_comments_items build() {
+  GCreateHabitData_createHabit_comments_items build() => _build();
+
+  _$GCreateHabitData_createHabit_comments_items _build() {
     _$GCreateHabitData_createHabit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GCreateHabitData_createHabit_comments_items._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GCreateHabitData_createHabit_comments_items', 'G__typename'),
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GCreateHabitData_createHabit_comments_items',
+                  'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GCreateHabitData_createHabit_comments_items', 'id'),
+                  id, r'GCreateHabitData_createHabit_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GCreateHabitData_createHabit_comments_items', 'comment'),
+                  r'GCreateHabitData_createHabit_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -37719,7 +37955,7 @@ class GCreateHabitData_createHabit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabitData_createHabit_comments_items',
+            r'GCreateHabitData_createHabit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -37746,7 +37982,7 @@ class _$GCreateHabitData_createHabit_comments_items_by
               updates]) =>
       (new GCreateHabitData_createHabit_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GCreateHabitData_createHabit_comments_items_by._(
       {required this.G__typename,
@@ -37755,9 +37991,9 @@ class _$GCreateHabitData_createHabit_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GCreateHabitData_createHabit_comments_items_by', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        username, 'GCreateHabitData_createHabit_comments_items_by', 'username');
+        r'GCreateHabitData_createHabit_comments_items_by', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(username,
+        r'GCreateHabitData_createHabit_comments_items_by', 'username');
   }
 
   @override
@@ -37792,7 +38028,7 @@ class _$GCreateHabitData_createHabit_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateHabitData_createHabit_comments_items_by')
+            r'GCreateHabitData_createHabit_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -37854,15 +38090,17 @@ class GCreateHabitData_createHabit_comments_items_byBuilder
   }
 
   @override
-  _$GCreateHabitData_createHabit_comments_items_by build() {
+  GCreateHabitData_createHabit_comments_items_by build() => _build();
+
+  _$GCreateHabitData_createHabit_comments_items_by _build() {
     final _$result = _$v ??
         new _$GCreateHabitData_createHabit_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GCreateHabitData_createHabit_comments_items_by',
+                r'GCreateHabitData_createHabit_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(username,
-                'GCreateHabitData_createHabit_comments_items_by', 'username'),
+                r'GCreateHabitData_createHabit_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -37901,7 +38139,7 @@ class _$GCreateHabitData_createHabit_comments_items_habit
               updates]) =>
       (new GCreateHabitData_createHabit_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GCreateHabitData_createHabit_comments_items_habit._(
       {required this.G__typename,
@@ -37917,17 +38155,17 @@ class _$GCreateHabitData_createHabit_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GCreateHabitData_createHabit_comments_items_habit', 'G__typename');
+        r'GCreateHabitData_createHabit_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GCreateHabitData_createHabit_comments_items_habit', 'id');
+        id, r'GCreateHabitData_createHabit_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GCreateHabitData_createHabit_comments_items_habit', 'tagline');
+        r'GCreateHabitData_createHabit_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GCreateHabitData_createHabit_comments_items_habit', 'category');
+        r'GCreateHabitData_createHabit_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GCreateHabitData_createHabit_comments_items_habit', 'createdAt');
+        r'GCreateHabitData_createHabit_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GCreateHabitData_createHabit_comments_items_habit', 'updatedAt');
+        r'GCreateHabitData_createHabit_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -37986,7 +38224,7 @@ class _$GCreateHabitData_createHabit_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateHabitData_createHabit_comments_items_habit')
+            r'GCreateHabitData_createHabit_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -38098,24 +38336,26 @@ class GCreateHabitData_createHabit_comments_items_habitBuilder
   }
 
   @override
-  _$GCreateHabitData_createHabit_comments_items_habit build() {
+  GCreateHabitData_createHabit_comments_items_habit build() => _build();
+
+  _$GCreateHabitData_createHabit_comments_items_habit _build() {
     _$GCreateHabitData_createHabit_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GCreateHabitData_createHabit_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GCreateHabitData_createHabit_comments_items_habit',
+                  r'GCreateHabitData_createHabit_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(id,
-                  'GCreateHabitData_createHabit_comments_items_habit', 'id'),
+                  r'GCreateHabitData_createHabit_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GCreateHabitData_createHabit_comments_items_habit',
+                  r'GCreateHabitData_createHabit_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GCreateHabitData_createHabit_comments_items_habit',
+                  r'GCreateHabitData_createHabit_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -38135,7 +38375,7 @@ class GCreateHabitData_createHabit_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabitData_createHabit_comments_items_habit',
+            r'GCreateHabitData_createHabit_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -38160,17 +38400,17 @@ class _$GCreateHabitData_createHabit_comments_items_habit_comments
               updates]) =>
       (new GCreateHabitData_createHabit_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GCreateHabitData_createHabit_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GCreateHabitData_createHabit_comments_items_habit_comments',
+        r'GCreateHabitData_createHabit_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GCreateHabitData_createHabit_comments_items_habit_comments', 'items');
+        r'GCreateHabitData_createHabit_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -38203,7 +38443,7 @@ class _$GCreateHabitData_createHabit_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateHabitData_createHabit_comments_items_habit_comments')
+            r'GCreateHabitData_createHabit_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -38262,14 +38502,17 @@ class GCreateHabitData_createHabit_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GCreateHabitData_createHabit_comments_items_habit_comments build() {
+  GCreateHabitData_createHabit_comments_items_habit_comments build() =>
+      _build();
+
+  _$GCreateHabitData_createHabit_comments_items_habit_comments _build() {
     _$GCreateHabitData_createHabit_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GCreateHabitData_createHabit_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GCreateHabitData_createHabit_comments_items_habit_comments',
+                  r'GCreateHabitData_createHabit_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -38279,7 +38522,7 @@ class GCreateHabitData_createHabit_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabitData_createHabit_comments_items_habit_comments',
+            r'GCreateHabitData_createHabit_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -38313,7 +38556,7 @@ class _$GCreateHabitData_createHabit_comments_items_habit_comments_items
               updates]) =>
       (new GCreateHabitData_createHabit_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GCreateHabitData_createHabit_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -38326,23 +38569,23 @@ class _$GCreateHabitData_createHabit_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+        r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+        r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+        r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+        r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+        r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -38390,7 +38633,7 @@ class _$GCreateHabitData_createHabit_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GCreateHabitData_createHabit_comments_items_habit_comments_items')
+            r'GCreateHabitData_createHabit_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -38479,7 +38722,10 @@ class GCreateHabitData_createHabit_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GCreateHabitData_createHabit_comments_items_habit_comments_items build() {
+  GCreateHabitData_createHabit_comments_items_habit_comments_items build() =>
+      _build();
+
+  _$GCreateHabitData_createHabit_comments_items_habit_comments_items _build() {
     _$GCreateHabitData_createHabit_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
@@ -38487,17 +38733,17 @@ class GCreateHabitData_createHabit_comments_items_habit_comments_itemsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+                  r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+                  r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+                  r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -38510,7 +38756,7 @@ class GCreateHabitData_createHabit_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabitData_createHabit_comments_items_habit_comments_items',
+            r'GCreateHabitData_createHabit_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -38528,12 +38774,12 @@ class _$GUpdateUserData extends GUpdateUserData {
   final GUpdateUserData_updateUser? updateUser;
 
   factory _$GUpdateUserData([void Function(GUpdateUserDataBuilder)? updates]) =>
-      (new GUpdateUserDataBuilder()..update(updates)).build();
+      (new GUpdateUserDataBuilder()..update(updates))._build();
 
   _$GUpdateUserData._({required this.G__typename, this.updateUser})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateUserData', 'G__typename');
+        G__typename, r'GUpdateUserData', 'G__typename');
   }
 
   @override
@@ -38559,7 +38805,7 @@ class _$GUpdateUserData extends GUpdateUserData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUserData')
+    return (newBuiltValueToStringHelper(r'GUpdateUserData')
           ..add('G__typename', G__typename)
           ..add('updateUser', updateUser))
         .toString();
@@ -38606,13 +38852,15 @@ class GUpdateUserDataBuilder
   }
 
   @override
-  _$GUpdateUserData build() {
+  GUpdateUserData build() => _build();
+
+  _$GUpdateUserData _build() {
     _$GUpdateUserData _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GUpdateUserData', 'G__typename'),
+                  G__typename, r'GUpdateUserData', 'G__typename'),
               updateUser: _updateUser?.build());
     } catch (_) {
       late String _$failedField;
@@ -38621,7 +38869,7 @@ class GUpdateUserDataBuilder
         _updateUser?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData', _$failedField, e.toString());
+            r'GUpdateUserData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -38652,7 +38900,7 @@ class _$GUpdateUserData_updateUser extends GUpdateUserData_updateUser {
 
   factory _$GUpdateUserData_updateUser(
           [void Function(GUpdateUserData_updateUserBuilder)? updates]) =>
-      (new GUpdateUserData_updateUserBuilder()..update(updates)).build();
+      (new GUpdateUserData_updateUserBuilder()..update(updates))._build();
 
   _$GUpdateUserData_updateUser._(
       {required this.G__typename,
@@ -38666,9 +38914,9 @@ class _$GUpdateUserData_updateUser extends GUpdateUserData_updateUser {
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateUserData_updateUser', 'G__typename');
+        G__typename, r'GUpdateUserData_updateUser', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GUpdateUserData_updateUser', 'username');
+        username, r'GUpdateUserData_updateUser', 'username');
   }
 
   @override
@@ -38717,7 +38965,7 @@ class _$GUpdateUserData_updateUser extends GUpdateUserData_updateUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUserData_updateUser')
+    return (newBuiltValueToStringHelper(r'GUpdateUserData_updateUser')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -38816,15 +39064,17 @@ class GUpdateUserData_updateUserBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser build() {
+  GUpdateUserData_updateUser build() => _build();
+
+  _$GUpdateUserData_updateUser _build() {
     _$GUpdateUserData_updateUser _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GUpdateUserData_updateUser', 'G__typename'),
+                  G__typename, r'GUpdateUserData_updateUser', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GUpdateUserData_updateUser', 'username'),
+                  username, r'GUpdateUserData_updateUser', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -38847,7 +39097,7 @@ class GUpdateUserData_updateUserBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser', _$failedField, e.toString());
+            r'GUpdateUserData_updateUser', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -38873,7 +39123,8 @@ class _$GUpdateUserData_updateUser_avatar
 
   factory _$GUpdateUserData_updateUser_avatar(
           [void Function(GUpdateUserData_updateUser_avatarBuilder)? updates]) =>
-      (new GUpdateUserData_updateUser_avatarBuilder()..update(updates)).build();
+      (new GUpdateUserData_updateUser_avatarBuilder()..update(updates))
+          ._build();
 
   _$GUpdateUserData_updateUser_avatar._(
       {required this.G__typename,
@@ -38884,13 +39135,13 @@ class _$GUpdateUserData_updateUser_avatar
       this.cognitoId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateUserData_updateUser_avatar', 'G__typename');
+        G__typename, r'GUpdateUserData_updateUser_avatar', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        bucket, 'GUpdateUserData_updateUser_avatar', 'bucket');
+        bucket, r'GUpdateUserData_updateUser_avatar', 'bucket');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'GUpdateUserData_updateUser_avatar', 'region');
+        region, r'GUpdateUserData_updateUser_avatar', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        key, 'GUpdateUserData_updateUser_avatar', 'key');
+        key, r'GUpdateUserData_updateUser_avatar', 'key');
   }
 
   @override
@@ -38928,7 +39179,7 @@ class _$GUpdateUserData_updateUser_avatar
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUserData_updateUser_avatar')
+    return (newBuiltValueToStringHelper(r'GUpdateUserData_updateUser_avatar')
           ..add('G__typename', G__typename)
           ..add('bucket', bucket)
           ..add('region', region)
@@ -39001,17 +39252,19 @@ class GUpdateUserData_updateUser_avatarBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_avatar build() {
+  GUpdateUserData_updateUser_avatar build() => _build();
+
+  _$GUpdateUserData_updateUser_avatar _build() {
     final _$result = _$v ??
         new _$GUpdateUserData_updateUser_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GUpdateUserData_updateUser_avatar', 'G__typename'),
+                r'GUpdateUserData_updateUser_avatar', 'G__typename'),
             bucket: BuiltValueNullFieldError.checkNotNull(
-                bucket, 'GUpdateUserData_updateUser_avatar', 'bucket'),
+                bucket, r'GUpdateUserData_updateUser_avatar', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'GUpdateUserData_updateUser_avatar', 'region'),
+                region, r'GUpdateUserData_updateUser_avatar', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GUpdateUserData_updateUser_avatar', 'key'),
+                key, r'GUpdateUserData_updateUser_avatar', 'key'),
             accessLevel: accessLevel,
             cognitoId: cognitoId);
     replace(_$result);
@@ -39030,15 +39283,15 @@ class _$GUpdateUserData_updateUser_comments
           [void Function(GUpdateUserData_updateUser_commentsBuilder)?
               updates]) =>
       (new GUpdateUserData_updateUser_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateUserData_updateUser_comments', 'G__typename');
+        G__typename, r'GUpdateUserData_updateUser_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GUpdateUserData_updateUser_comments', 'items');
+        items, r'GUpdateUserData_updateUser_comments', 'items');
   }
 
   @override
@@ -39065,7 +39318,7 @@ class _$GUpdateUserData_updateUser_comments
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUserData_updateUser_comments')
+    return (newBuiltValueToStringHelper(r'GUpdateUserData_updateUser_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -39116,13 +39369,15 @@ class GUpdateUserData_updateUser_commentsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_comments build() {
+  GUpdateUserData_updateUser_comments build() => _build();
+
+  _$GUpdateUserData_updateUser_comments _build() {
     _$GUpdateUserData_updateUser_comments _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GUpdateUserData_updateUser_comments', 'G__typename'),
+                  r'GUpdateUserData_updateUser_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -39131,7 +39386,9 @@ class GUpdateUserData_updateUser_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_comments', _$failedField, e.toString());
+            r'GUpdateUserData_updateUser_comments',
+            _$failedField,
+            e.toString());
       }
       rethrow;
     }
@@ -39165,7 +39422,7 @@ class _$GUpdateUserData_updateUser_comments_items
           [void Function(GUpdateUserData_updateUser_comments_itemsBuilder)?
               updates]) =>
       (new GUpdateUserData_updateUser_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_comments_items._(
       {required this.G__typename,
@@ -39179,15 +39436,15 @@ class _$GUpdateUserData_updateUser_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GUpdateUserData_updateUser_comments_items', 'G__typename');
+        r'GUpdateUserData_updateUser_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GUpdateUserData_updateUser_comments_items', 'id');
+        id, r'GUpdateUserData_updateUser_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GUpdateUserData_updateUser_comments_items', 'comment');
+        comment, r'GUpdateUserData_updateUser_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GUpdateUserData_updateUser_comments_items', 'createdAt');
+        createdAt, r'GUpdateUserData_updateUser_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GUpdateUserData_updateUser_comments_items', 'updatedAt');
+        updatedAt, r'GUpdateUserData_updateUser_comments_items', 'updatedAt');
   }
 
   @override
@@ -39236,7 +39493,7 @@ class _$GUpdateUserData_updateUser_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_comments_items')
+            r'GUpdateUserData_updateUser_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -39336,21 +39593,23 @@ class GUpdateUserData_updateUser_comments_itemsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_comments_items build() {
+  GUpdateUserData_updateUser_comments_items build() => _build();
+
+  _$GUpdateUserData_updateUser_comments_items _build() {
     _$GUpdateUserData_updateUser_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GUpdateUserData_updateUser_comments_items', 'G__typename'),
+                  r'GUpdateUserData_updateUser_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GUpdateUserData_updateUser_comments_items', 'id'),
+                  id, r'GUpdateUserData_updateUser_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GUpdateUserData_updateUser_comments_items', 'comment'),
+                  r'GUpdateUserData_updateUser_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -39368,7 +39627,7 @@ class GUpdateUserData_updateUser_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_comments_items',
+            r'GUpdateUserData_updateUser_comments_items',
             _$failedField,
             e.toString());
       }
@@ -39395,7 +39654,7 @@ class _$GUpdateUserData_updateUser_comments_items_by
               updates]) =>
       (new GUpdateUserData_updateUser_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_comments_items_by._(
       {required this.G__typename,
@@ -39404,9 +39663,9 @@ class _$GUpdateUserData_updateUser_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GUpdateUserData_updateUser_comments_items_by', 'G__typename');
+        r'GUpdateUserData_updateUser_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GUpdateUserData_updateUser_comments_items_by', 'username');
+        username, r'GUpdateUserData_updateUser_comments_items_by', 'username');
   }
 
   @override
@@ -39440,7 +39699,7 @@ class _$GUpdateUserData_updateUser_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_comments_items_by')
+            r'GUpdateUserData_updateUser_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -39502,13 +39761,15 @@ class GUpdateUserData_updateUser_comments_items_byBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_comments_items_by build() {
+  GUpdateUserData_updateUser_comments_items_by build() => _build();
+
+  _$GUpdateUserData_updateUser_comments_items_by _build() {
     final _$result = _$v ??
         new _$GUpdateUserData_updateUser_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GUpdateUserData_updateUser_comments_items_by', 'G__typename'),
+                r'GUpdateUserData_updateUser_comments_items_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(username,
-                'GUpdateUserData_updateUser_comments_items_by', 'username'),
+                r'GUpdateUserData_updateUser_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -39547,7 +39808,7 @@ class _$GUpdateUserData_updateUser_comments_items_habit
               updates]) =>
       (new GUpdateUserData_updateUser_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_comments_items_habit._(
       {required this.G__typename,
@@ -39563,17 +39824,17 @@ class _$GUpdateUserData_updateUser_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GUpdateUserData_updateUser_comments_items_habit', 'G__typename');
+        r'GUpdateUserData_updateUser_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GUpdateUserData_updateUser_comments_items_habit', 'id');
+        id, r'GUpdateUserData_updateUser_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GUpdateUserData_updateUser_comments_items_habit', 'tagline');
+        tagline, r'GUpdateUserData_updateUser_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GUpdateUserData_updateUser_comments_items_habit', 'category');
+        r'GUpdateUserData_updateUser_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GUpdateUserData_updateUser_comments_items_habit', 'createdAt');
+        r'GUpdateUserData_updateUser_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GUpdateUserData_updateUser_comments_items_habit', 'updatedAt');
+        r'GUpdateUserData_updateUser_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -39631,7 +39892,7 @@ class _$GUpdateUserData_updateUser_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_comments_items_habit')
+            r'GUpdateUserData_updateUser_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -39743,22 +40004,26 @@ class GUpdateUserData_updateUser_comments_items_habitBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_comments_items_habit build() {
+  GUpdateUserData_updateUser_comments_items_habit build() => _build();
+
+  _$GUpdateUserData_updateUser_comments_items_habit _build() {
     _$GUpdateUserData_updateUser_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_comments_items_habit',
+                  r'GUpdateUserData_updateUser_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GUpdateUserData_updateUser_comments_items_habit', 'id'),
-              tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GUpdateUserData_updateUser_comments_items_habit', 'tagline'),
+                  id, r'GUpdateUserData_updateUser_comments_items_habit', 'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(
+                  tagline,
+                  r'GUpdateUserData_updateUser_comments_items_habit',
+                  'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GUpdateUserData_updateUser_comments_items_habit',
+                  r'GUpdateUserData_updateUser_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -39778,7 +40043,7 @@ class GUpdateUserData_updateUser_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_comments_items_habit',
+            r'GUpdateUserData_updateUser_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -39803,17 +40068,17 @@ class _$GUpdateUserData_updateUser_comments_items_habit_comments
               updates]) =>
       (new GUpdateUserData_updateUser_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateUserData_updateUser_comments_items_habit_comments',
+        r'GUpdateUserData_updateUser_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GUpdateUserData_updateUser_comments_items_habit_comments', 'items');
+        r'GUpdateUserData_updateUser_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -39844,7 +40109,7 @@ class _$GUpdateUserData_updateUser_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_comments_items_habit_comments')
+            r'GUpdateUserData_updateUser_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -39902,14 +40167,16 @@ class GUpdateUserData_updateUser_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_comments_items_habit_comments build() {
+  GUpdateUserData_updateUser_comments_items_habit_comments build() => _build();
+
+  _$GUpdateUserData_updateUser_comments_items_habit_comments _build() {
     _$GUpdateUserData_updateUser_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_comments_items_habit_comments',
+                  r'GUpdateUserData_updateUser_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -39919,7 +40186,7 @@ class GUpdateUserData_updateUser_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_comments_items_habit_comments',
+            r'GUpdateUserData_updateUser_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -39953,7 +40220,7 @@ class _$GUpdateUserData_updateUser_comments_items_habit_comments_items
               updates]) =>
       (new GUpdateUserData_updateUser_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -39966,21 +40233,23 @@ class _$GUpdateUserData_updateUser_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
         'G__typename');
-    BuiltValueNullFieldError.checkNotNull(id,
-        'GUpdateUserData_updateUser_comments_items_habit_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        id,
+        r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+        'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -40028,7 +40297,7 @@ class _$GUpdateUserData_updateUser_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_comments_items_habit_comments_items')
+            r'GUpdateUserData_updateUser_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -40116,7 +40385,10 @@ class GUpdateUserData_updateUser_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_comments_items_habit_comments_items build() {
+  GUpdateUserData_updateUser_comments_items_habit_comments_items build() =>
+      _build();
+
+  _$GUpdateUserData_updateUser_comments_items_habit_comments_items _build() {
     _$GUpdateUserData_updateUser_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
@@ -40124,17 +40396,17 @@ class GUpdateUserData_updateUser_comments_items_habit_comments_itemsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+                  r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+                  r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+                  r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -40147,7 +40419,7 @@ class GUpdateUserData_updateUser_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_comments_items_habit_comments_items',
+            r'GUpdateUserData_updateUser_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -40167,15 +40439,16 @@ class _$GUpdateUserData_updateUser_habits
 
   factory _$GUpdateUserData_updateUser_habits(
           [void Function(GUpdateUserData_updateUser_habitsBuilder)? updates]) =>
-      (new GUpdateUserData_updateUser_habitsBuilder()..update(updates)).build();
+      (new GUpdateUserData_updateUser_habitsBuilder()..update(updates))
+          ._build();
 
   _$GUpdateUserData_updateUser_habits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateUserData_updateUser_habits', 'G__typename');
+        G__typename, r'GUpdateUserData_updateUser_habits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GUpdateUserData_updateUser_habits', 'items');
+        items, r'GUpdateUserData_updateUser_habits', 'items');
   }
 
   @override
@@ -40202,7 +40475,7 @@ class _$GUpdateUserData_updateUser_habits
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUserData_updateUser_habits')
+    return (newBuiltValueToStringHelper(r'GUpdateUserData_updateUser_habits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -40253,13 +40526,15 @@ class GUpdateUserData_updateUser_habitsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_habits build() {
+  GUpdateUserData_updateUser_habits build() => _build();
+
+  _$GUpdateUserData_updateUser_habits _build() {
     _$GUpdateUserData_updateUser_habits _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_habits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GUpdateUserData_updateUser_habits', 'G__typename'),
+                  r'GUpdateUserData_updateUser_habits', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -40268,7 +40543,7 @@ class GUpdateUserData_updateUser_habitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_habits', _$failedField, e.toString());
+            r'GUpdateUserData_updateUser_habits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -40306,7 +40581,7 @@ class _$GUpdateUserData_updateUser_habits_items
           [void Function(GUpdateUserData_updateUser_habits_itemsBuilder)?
               updates]) =>
       (new GUpdateUserData_updateUser_habits_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_habits_items._(
       {required this.G__typename,
@@ -40322,17 +40597,17 @@ class _$GUpdateUserData_updateUser_habits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateUserData_updateUser_habits_items', 'G__typename');
+        G__typename, r'GUpdateUserData_updateUser_habits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GUpdateUserData_updateUser_habits_items', 'id');
+        id, r'GUpdateUserData_updateUser_habits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GUpdateUserData_updateUser_habits_items', 'tagline');
+        tagline, r'GUpdateUserData_updateUser_habits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GUpdateUserData_updateUser_habits_items', 'category');
+        category, r'GUpdateUserData_updateUser_habits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GUpdateUserData_updateUser_habits_items', 'createdAt');
+        createdAt, r'GUpdateUserData_updateUser_habits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GUpdateUserData_updateUser_habits_items', 'updatedAt');
+        updatedAt, r'GUpdateUserData_updateUser_habits_items', 'updatedAt');
   }
 
   @override
@@ -40389,7 +40664,7 @@ class _$GUpdateUserData_updateUser_habits_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_habits_items')
+            r'GUpdateUserData_updateUser_habits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -40499,19 +40774,21 @@ class GUpdateUserData_updateUser_habits_itemsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_habits_items build() {
+  GUpdateUserData_updateUser_habits_items build() => _build();
+
+  _$GUpdateUserData_updateUser_habits_items _build() {
     _$GUpdateUserData_updateUser_habits_items _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_habits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GUpdateUserData_updateUser_habits_items', 'G__typename'),
+                  r'GUpdateUserData_updateUser_habits_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GUpdateUserData_updateUser_habits_items', 'id'),
+                  id, r'GUpdateUserData_updateUser_habits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GUpdateUserData_updateUser_habits_items', 'tagline'),
+                  r'GUpdateUserData_updateUser_habits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GUpdateUserData_updateUser_habits_items', 'category'),
+                  r'GUpdateUserData_updateUser_habits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -40530,7 +40807,7 @@ class GUpdateUserData_updateUser_habits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_habits_items',
+            r'GUpdateUserData_updateUser_habits_items',
             _$failedField,
             e.toString());
       }
@@ -40554,15 +40831,15 @@ class _$GUpdateUserData_updateUser_habits_items_comments
               updates]) =>
       (new GUpdateUserData_updateUser_habits_items_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_habits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GUpdateUserData_updateUser_habits_items_comments', 'G__typename');
+        r'GUpdateUserData_updateUser_habits_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GUpdateUserData_updateUser_habits_items_comments', 'items');
+        items, r'GUpdateUserData_updateUser_habits_items_comments', 'items');
   }
 
   @override
@@ -40592,7 +40869,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_habits_items_comments')
+            r'GUpdateUserData_updateUser_habits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -40646,14 +40923,16 @@ class GUpdateUserData_updateUser_habits_items_commentsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_habits_items_comments build() {
+  GUpdateUserData_updateUser_habits_items_comments build() => _build();
+
+  _$GUpdateUserData_updateUser_habits_items_comments _build() {
     _$GUpdateUserData_updateUser_habits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_habits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_habits_items_comments',
+                  r'GUpdateUserData_updateUser_habits_items_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -40663,7 +40942,7 @@ class GUpdateUserData_updateUser_habits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_habits_items_comments',
+            r'GUpdateUserData_updateUser_habits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -40701,7 +40980,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items
               updates]) =>
       (new GUpdateUserData_updateUser_habits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_habits_items_comments_items._(
       {required this.G__typename,
@@ -40716,16 +40995,16 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateUserData_updateUser_habits_items_comments_items',
+        r'GUpdateUserData_updateUser_habits_items_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GUpdateUserData_updateUser_habits_items_comments_items', 'id');
+        id, r'GUpdateUserData_updateUser_habits_items_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GUpdateUserData_updateUser_habits_items_comments_items', 'comment');
+        r'GUpdateUserData_updateUser_habits_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GUpdateUserData_updateUser_habits_items_comments_items', 'createdAt');
+        r'GUpdateUserData_updateUser_habits_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GUpdateUserData_updateUser_habits_items_comments_items', 'updatedAt');
+        r'GUpdateUserData_updateUser_habits_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -40776,7 +41055,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_habits_items_comments_items')
+            r'GUpdateUserData_updateUser_habits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -40883,18 +41162,20 @@ class GUpdateUserData_updateUser_habits_items_comments_itemsBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_habits_items_comments_items build() {
+  GUpdateUserData_updateUser_habits_items_comments_items build() => _build();
+
+  _$GUpdateUserData_updateUser_habits_items_comments_items _build() {
     _$GUpdateUserData_updateUser_habits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_habits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_habits_items_comments_items',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GUpdateUserData_updateUser_habits_items_comments_items',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items',
                   'id'),
               owner: owner,
               by: _by?.build(),
@@ -40902,7 +41183,7 @@ class GUpdateUserData_updateUser_habits_items_comments_itemsBuilder
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GUpdateUserData_updateUser_habits_items_comments_items',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -40921,7 +41202,7 @@ class GUpdateUserData_updateUser_habits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_habits_items_comments_items',
+            r'GUpdateUserData_updateUser_habits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -40949,7 +41230,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_by
               updates]) =>
       (new GUpdateUserData_updateUser_habits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_habits_items_comments_items_by._(
       {required this.G__typename,
@@ -40959,11 +41240,11 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_by
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateUserData_updateUser_habits_items_comments_items_by',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_by',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         username,
-        'GUpdateUserData_updateUser_habits_items_comments_items_by',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_by',
         'username');
   }
 
@@ -41001,7 +41282,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_habits_items_comments_items_by')
+            r'GUpdateUserData_updateUser_habits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -41066,16 +41347,18 @@ class GUpdateUserData_updateUser_habits_items_comments_items_byBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_habits_items_comments_items_by build() {
+  GUpdateUserData_updateUser_habits_items_comments_items_by build() => _build();
+
+  _$GUpdateUserData_updateUser_habits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GUpdateUserData_updateUser_habits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GUpdateUserData_updateUser_habits_items_comments_items_by',
+                r'GUpdateUserData_updateUser_habits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GUpdateUserData_updateUser_habits_items_comments_items_by',
+                r'GUpdateUserData_updateUser_habits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -41116,7 +41399,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit
               updates]) =>
       (new GUpdateUserData_updateUser_habits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_habits_items_comments_items_habit._(
       {required this.G__typename,
@@ -41133,25 +41416,25 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(id,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit', 'id');
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
         tagline,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
         'tagline');
     BuiltValueNullFieldError.checkNotNull(
         category,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
         'category');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
         'updatedAt');
   }
 
@@ -41213,7 +41496,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_habits_items_comments_items_habit')
+            r'GUpdateUserData_updateUser_habits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -41331,26 +41614,29 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GUpdateUserData_updateUser_habits_items_comments_items_habit build() {
+  GUpdateUserData_updateUser_habits_items_comments_items_habit build() =>
+      _build();
+
+  _$GUpdateUserData_updateUser_habits_items_comments_items_habit _build() {
     _$GUpdateUserData_updateUser_habits_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserData_updateUser_habits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -41370,7 +41656,7 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_habits_items_comments_items_habit',
+            r'GUpdateUserData_updateUser_habits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -41396,18 +41682,18 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
               updates]) =>
       (new GUpdateUserData_updateUser_habits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -41441,7 +41727,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments')
+            r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -41506,8 +41792,11 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habit_commentsBuild
   }
 
   @override
+  GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
+      build() => _build();
+
   _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
-      build() {
+      _build() {
     _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
         _$result;
     try {
@@ -41516,7 +41805,7 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habit_commentsBuild
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -41526,7 +41815,7 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habit_commentsBuild
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
+            r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -41560,7 +41849,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_it
               updates]) =>
       (new GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -41573,23 +41862,23 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_it
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+        r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -41638,7 +41927,7 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_it
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items')
+            r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -41729,8 +42018,11 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_item
   }
 
   @override
+  GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -41739,17 +42031,17 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_item
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -41762,7 +42054,7 @@ class GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_item
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
+            r'GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -41781,12 +42073,12 @@ class _$GUpdateHabitData extends GUpdateHabitData {
 
   factory _$GUpdateHabitData(
           [void Function(GUpdateHabitDataBuilder)? updates]) =>
-      (new GUpdateHabitDataBuilder()..update(updates)).build();
+      (new GUpdateHabitDataBuilder()..update(updates))._build();
 
   _$GUpdateHabitData._({required this.G__typename, this.updateHabit})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateHabitData', 'G__typename');
+        G__typename, r'GUpdateHabitData', 'G__typename');
   }
 
   @override
@@ -41812,7 +42104,7 @@ class _$GUpdateHabitData extends GUpdateHabitData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateHabitData')
+    return (newBuiltValueToStringHelper(r'GUpdateHabitData')
           ..add('G__typename', G__typename)
           ..add('updateHabit', updateHabit))
         .toString();
@@ -41859,13 +42151,15 @@ class GUpdateHabitDataBuilder
   }
 
   @override
-  _$GUpdateHabitData build() {
+  GUpdateHabitData build() => _build();
+
+  _$GUpdateHabitData _build() {
     _$GUpdateHabitData _$result;
     try {
       _$result = _$v ??
           new _$GUpdateHabitData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GUpdateHabitData', 'G__typename'),
+                  G__typename, r'GUpdateHabitData', 'G__typename'),
               updateHabit: _updateHabit?.build());
     } catch (_) {
       late String _$failedField;
@@ -41874,7 +42168,7 @@ class GUpdateHabitDataBuilder
         _updateHabit?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitData', _$failedField, e.toString());
+            r'GUpdateHabitData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -41909,7 +42203,7 @@ class _$GUpdateHabitData_updateHabit extends GUpdateHabitData_updateHabit {
 
   factory _$GUpdateHabitData_updateHabit(
           [void Function(GUpdateHabitData_updateHabitBuilder)? updates]) =>
-      (new GUpdateHabitData_updateHabitBuilder()..update(updates)).build();
+      (new GUpdateHabitData_updateHabitBuilder()..update(updates))._build();
 
   _$GUpdateHabitData_updateHabit._(
       {required this.G__typename,
@@ -41925,17 +42219,17 @@ class _$GUpdateHabitData_updateHabit extends GUpdateHabitData_updateHabit {
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateHabitData_updateHabit', 'G__typename');
+        G__typename, r'GUpdateHabitData_updateHabit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GUpdateHabitData_updateHabit', 'id');
+        id, r'GUpdateHabitData_updateHabit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GUpdateHabitData_updateHabit', 'tagline');
+        tagline, r'GUpdateHabitData_updateHabit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GUpdateHabitData_updateHabit', 'category');
+        category, r'GUpdateHabitData_updateHabit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GUpdateHabitData_updateHabit', 'createdAt');
+        createdAt, r'GUpdateHabitData_updateHabit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GUpdateHabitData_updateHabit', 'updatedAt');
+        updatedAt, r'GUpdateHabitData_updateHabit', 'updatedAt');
   }
 
   @override
@@ -41990,7 +42284,7 @@ class _$GUpdateHabitData_updateHabit extends GUpdateHabitData_updateHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateHabitData_updateHabit')
+    return (newBuiltValueToStringHelper(r'GUpdateHabitData_updateHabit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -42097,19 +42391,21 @@ class GUpdateHabitData_updateHabitBuilder
   }
 
   @override
-  _$GUpdateHabitData_updateHabit build() {
+  GUpdateHabitData_updateHabit build() => _build();
+
+  _$GUpdateHabitData_updateHabit _build() {
     _$GUpdateHabitData_updateHabit _$result;
     try {
       _$result = _$v ??
           new _$GUpdateHabitData_updateHabit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GUpdateHabitData_updateHabit', 'G__typename'),
+                  G__typename, r'GUpdateHabitData_updateHabit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GUpdateHabitData_updateHabit', 'id'),
+                  id, r'GUpdateHabitData_updateHabit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GUpdateHabitData_updateHabit', 'tagline'),
+                  tagline, r'GUpdateHabitData_updateHabit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GUpdateHabitData_updateHabit', 'category'),
+                  category, r'GUpdateHabitData_updateHabit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -42128,7 +42424,7 @@ class GUpdateHabitData_updateHabitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitData_updateHabit', _$failedField, e.toString());
+            r'GUpdateHabitData_updateHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -42148,15 +42444,15 @@ class _$GUpdateHabitData_updateHabit_comments
           [void Function(GUpdateHabitData_updateHabit_commentsBuilder)?
               updates]) =>
       (new GUpdateHabitData_updateHabit_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateHabitData_updateHabit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GUpdateHabitData_updateHabit_comments', 'G__typename');
+        G__typename, r'GUpdateHabitData_updateHabit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GUpdateHabitData_updateHabit_comments', 'items');
+        items, r'GUpdateHabitData_updateHabit_comments', 'items');
   }
 
   @override
@@ -42184,7 +42480,8 @@ class _$GUpdateHabitData_updateHabit_comments
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateHabitData_updateHabit_comments')
+    return (newBuiltValueToStringHelper(
+            r'GUpdateHabitData_updateHabit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -42235,13 +42532,15 @@ class GUpdateHabitData_updateHabit_commentsBuilder
   }
 
   @override
-  _$GUpdateHabitData_updateHabit_comments build() {
+  GUpdateHabitData_updateHabit_comments build() => _build();
+
+  _$GUpdateHabitData_updateHabit_comments _build() {
     _$GUpdateHabitData_updateHabit_comments _$result;
     try {
       _$result = _$v ??
           new _$GUpdateHabitData_updateHabit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GUpdateHabitData_updateHabit_comments', 'G__typename'),
+                  r'GUpdateHabitData_updateHabit_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -42250,7 +42549,7 @@ class GUpdateHabitData_updateHabit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitData_updateHabit_comments',
+            r'GUpdateHabitData_updateHabit_comments',
             _$failedField,
             e.toString());
       }
@@ -42287,7 +42586,7 @@ class _$GUpdateHabitData_updateHabit_comments_items
               updates]) =>
       (new GUpdateHabitData_updateHabit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateHabitData_updateHabit_comments_items._(
       {required this.G__typename,
@@ -42301,15 +42600,15 @@ class _$GUpdateHabitData_updateHabit_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GUpdateHabitData_updateHabit_comments_items', 'G__typename');
+        r'GUpdateHabitData_updateHabit_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GUpdateHabitData_updateHabit_comments_items', 'id');
+        id, r'GUpdateHabitData_updateHabit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GUpdateHabitData_updateHabit_comments_items', 'comment');
+        comment, r'GUpdateHabitData_updateHabit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GUpdateHabitData_updateHabit_comments_items', 'createdAt');
+        createdAt, r'GUpdateHabitData_updateHabit_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GUpdateHabitData_updateHabit_comments_items', 'updatedAt');
+        updatedAt, r'GUpdateHabitData_updateHabit_comments_items', 'updatedAt');
   }
 
   @override
@@ -42358,7 +42657,7 @@ class _$GUpdateHabitData_updateHabit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateHabitData_updateHabit_comments_items')
+            r'GUpdateHabitData_updateHabit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -42458,21 +42757,25 @@ class GUpdateHabitData_updateHabit_comments_itemsBuilder
   }
 
   @override
-  _$GUpdateHabitData_updateHabit_comments_items build() {
+  GUpdateHabitData_updateHabit_comments_items build() => _build();
+
+  _$GUpdateHabitData_updateHabit_comments_items _build() {
     _$GUpdateHabitData_updateHabit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GUpdateHabitData_updateHabit_comments_items._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GUpdateHabitData_updateHabit_comments_items', 'G__typename'),
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GUpdateHabitData_updateHabit_comments_items',
+                  'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GUpdateHabitData_updateHabit_comments_items', 'id'),
+                  id, r'GUpdateHabitData_updateHabit_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GUpdateHabitData_updateHabit_comments_items', 'comment'),
+                  r'GUpdateHabitData_updateHabit_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -42490,7 +42793,7 @@ class GUpdateHabitData_updateHabit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitData_updateHabit_comments_items',
+            r'GUpdateHabitData_updateHabit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -42517,7 +42820,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_by
               updates]) =>
       (new GUpdateHabitData_updateHabit_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateHabitData_updateHabit_comments_items_by._(
       {required this.G__typename,
@@ -42526,9 +42829,9 @@ class _$GUpdateHabitData_updateHabit_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GUpdateHabitData_updateHabit_comments_items_by', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        username, 'GUpdateHabitData_updateHabit_comments_items_by', 'username');
+        r'GUpdateHabitData_updateHabit_comments_items_by', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(username,
+        r'GUpdateHabitData_updateHabit_comments_items_by', 'username');
   }
 
   @override
@@ -42563,7 +42866,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateHabitData_updateHabit_comments_items_by')
+            r'GUpdateHabitData_updateHabit_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -42625,15 +42928,17 @@ class GUpdateHabitData_updateHabit_comments_items_byBuilder
   }
 
   @override
-  _$GUpdateHabitData_updateHabit_comments_items_by build() {
+  GUpdateHabitData_updateHabit_comments_items_by build() => _build();
+
+  _$GUpdateHabitData_updateHabit_comments_items_by _build() {
     final _$result = _$v ??
         new _$GUpdateHabitData_updateHabit_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GUpdateHabitData_updateHabit_comments_items_by',
+                r'GUpdateHabitData_updateHabit_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(username,
-                'GUpdateHabitData_updateHabit_comments_items_by', 'username'),
+                r'GUpdateHabitData_updateHabit_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -42672,7 +42977,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit
               updates]) =>
       (new GUpdateHabitData_updateHabit_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateHabitData_updateHabit_comments_items_habit._(
       {required this.G__typename,
@@ -42688,17 +42993,17 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GUpdateHabitData_updateHabit_comments_items_habit', 'G__typename');
+        r'GUpdateHabitData_updateHabit_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GUpdateHabitData_updateHabit_comments_items_habit', 'id');
+        id, r'GUpdateHabitData_updateHabit_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GUpdateHabitData_updateHabit_comments_items_habit', 'tagline');
+        r'GUpdateHabitData_updateHabit_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GUpdateHabitData_updateHabit_comments_items_habit', 'category');
+        r'GUpdateHabitData_updateHabit_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GUpdateHabitData_updateHabit_comments_items_habit', 'createdAt');
+        r'GUpdateHabitData_updateHabit_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GUpdateHabitData_updateHabit_comments_items_habit', 'updatedAt');
+        r'GUpdateHabitData_updateHabit_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -42757,7 +43062,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateHabitData_updateHabit_comments_items_habit')
+            r'GUpdateHabitData_updateHabit_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -42869,24 +43174,26 @@ class GUpdateHabitData_updateHabit_comments_items_habitBuilder
   }
 
   @override
-  _$GUpdateHabitData_updateHabit_comments_items_habit build() {
+  GUpdateHabitData_updateHabit_comments_items_habit build() => _build();
+
+  _$GUpdateHabitData_updateHabit_comments_items_habit _build() {
     _$GUpdateHabitData_updateHabit_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GUpdateHabitData_updateHabit_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateHabitData_updateHabit_comments_items_habit',
+                  r'GUpdateHabitData_updateHabit_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(id,
-                  'GUpdateHabitData_updateHabit_comments_items_habit', 'id'),
+                  r'GUpdateHabitData_updateHabit_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GUpdateHabitData_updateHabit_comments_items_habit',
+                  r'GUpdateHabitData_updateHabit_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GUpdateHabitData_updateHabit_comments_items_habit',
+                  r'GUpdateHabitData_updateHabit_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -42906,7 +43213,7 @@ class GUpdateHabitData_updateHabit_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitData_updateHabit_comments_items_habit',
+            r'GUpdateHabitData_updateHabit_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -42931,17 +43238,17 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_comments
               updates]) =>
       (new GUpdateHabitData_updateHabit_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateHabitData_updateHabit_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateHabitData_updateHabit_comments_items_habit_comments',
+        r'GUpdateHabitData_updateHabit_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GUpdateHabitData_updateHabit_comments_items_habit_comments', 'items');
+        r'GUpdateHabitData_updateHabit_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -42974,7 +43281,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateHabitData_updateHabit_comments_items_habit_comments')
+            r'GUpdateHabitData_updateHabit_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -43033,14 +43340,17 @@ class GUpdateHabitData_updateHabit_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GUpdateHabitData_updateHabit_comments_items_habit_comments build() {
+  GUpdateHabitData_updateHabit_comments_items_habit_comments build() =>
+      _build();
+
+  _$GUpdateHabitData_updateHabit_comments_items_habit_comments _build() {
     _$GUpdateHabitData_updateHabit_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GUpdateHabitData_updateHabit_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateHabitData_updateHabit_comments_items_habit_comments',
+                  r'GUpdateHabitData_updateHabit_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -43050,7 +43360,7 @@ class GUpdateHabitData_updateHabit_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitData_updateHabit_comments_items_habit_comments',
+            r'GUpdateHabitData_updateHabit_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -43084,7 +43394,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_comments_items
               updates]) =>
       (new GUpdateHabitData_updateHabit_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GUpdateHabitData_updateHabit_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -43097,23 +43407,23 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+        r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+        r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+        r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+        r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+        r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -43161,7 +43471,7 @@ class _$GUpdateHabitData_updateHabit_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GUpdateHabitData_updateHabit_comments_items_habit_comments_items')
+            r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -43250,7 +43560,10 @@ class GUpdateHabitData_updateHabit_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GUpdateHabitData_updateHabit_comments_items_habit_comments_items build() {
+  GUpdateHabitData_updateHabit_comments_items_habit_comments_items build() =>
+      _build();
+
+  _$GUpdateHabitData_updateHabit_comments_items_habit_comments_items _build() {
     _$GUpdateHabitData_updateHabit_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
@@ -43258,17 +43571,17 @@ class GUpdateHabitData_updateHabit_comments_items_habit_comments_itemsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+                  r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+                  r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+                  r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -43281,7 +43594,7 @@ class GUpdateHabitData_updateHabit_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
+            r'GUpdateHabitData_updateHabit_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -43300,12 +43613,12 @@ class _$GDeleteHabitData extends GDeleteHabitData {
 
   factory _$GDeleteHabitData(
           [void Function(GDeleteHabitDataBuilder)? updates]) =>
-      (new GDeleteHabitDataBuilder()..update(updates)).build();
+      (new GDeleteHabitDataBuilder()..update(updates))._build();
 
   _$GDeleteHabitData._({required this.G__typename, this.deleteHabit})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GDeleteHabitData', 'G__typename');
+        G__typename, r'GDeleteHabitData', 'G__typename');
   }
 
   @override
@@ -43331,7 +43644,7 @@ class _$GDeleteHabitData extends GDeleteHabitData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GDeleteHabitData')
+    return (newBuiltValueToStringHelper(r'GDeleteHabitData')
           ..add('G__typename', G__typename)
           ..add('deleteHabit', deleteHabit))
         .toString();
@@ -43378,13 +43691,15 @@ class GDeleteHabitDataBuilder
   }
 
   @override
-  _$GDeleteHabitData build() {
+  GDeleteHabitData build() => _build();
+
+  _$GDeleteHabitData _build() {
     _$GDeleteHabitData _$result;
     try {
       _$result = _$v ??
           new _$GDeleteHabitData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GDeleteHabitData', 'G__typename'),
+                  G__typename, r'GDeleteHabitData', 'G__typename'),
               deleteHabit: _deleteHabit?.build());
     } catch (_) {
       late String _$failedField;
@@ -43393,7 +43708,7 @@ class GDeleteHabitDataBuilder
         _deleteHabit?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GDeleteHabitData', _$failedField, e.toString());
+            r'GDeleteHabitData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -43410,15 +43725,15 @@ class _$GDeleteHabitData_deleteHabit extends GDeleteHabitData_deleteHabit {
 
   factory _$GDeleteHabitData_deleteHabit(
           [void Function(GDeleteHabitData_deleteHabitBuilder)? updates]) =>
-      (new GDeleteHabitData_deleteHabitBuilder()..update(updates)).build();
+      (new GDeleteHabitData_deleteHabitBuilder()..update(updates))._build();
 
   _$GDeleteHabitData_deleteHabit._(
       {required this.G__typename, required this.id})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GDeleteHabitData_deleteHabit', 'G__typename');
+        G__typename, r'GDeleteHabitData_deleteHabit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GDeleteHabitData_deleteHabit', 'id');
+        id, r'GDeleteHabitData_deleteHabit', 'id');
   }
 
   @override
@@ -43445,7 +43760,7 @@ class _$GDeleteHabitData_deleteHabit extends GDeleteHabitData_deleteHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GDeleteHabitData_deleteHabit')
+    return (newBuiltValueToStringHelper(r'GDeleteHabitData_deleteHabit')
           ..add('G__typename', G__typename)
           ..add('id', id))
         .toString();
@@ -43492,13 +43807,15 @@ class GDeleteHabitData_deleteHabitBuilder
   }
 
   @override
-  _$GDeleteHabitData_deleteHabit build() {
+  GDeleteHabitData_deleteHabit build() => _build();
+
+  _$GDeleteHabitData_deleteHabit _build() {
     final _$result = _$v ??
         new _$GDeleteHabitData_deleteHabit._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GDeleteHabitData_deleteHabit', 'G__typename'),
+                G__typename, r'GDeleteHabitData_deleteHabit', 'G__typename'),
             id: BuiltValueNullFieldError.checkNotNull(
-                id, 'GDeleteHabitData_deleteHabit', 'id'));
+                id, r'GDeleteHabitData_deleteHabit', 'id'));
     replace(_$result);
     return _$result;
   }
@@ -43512,11 +43829,11 @@ class _$GVoteForHabitData extends GVoteForHabitData {
 
   factory _$GVoteForHabitData(
           [void Function(GVoteForHabitDataBuilder)? updates]) =>
-      (new GVoteForHabitDataBuilder()..update(updates)).build();
+      (new GVoteForHabitDataBuilder()..update(updates))._build();
 
   _$GVoteForHabitData._({required this.G__typename, this.vote}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GVoteForHabitData', 'G__typename');
+        G__typename, r'GVoteForHabitData', 'G__typename');
   }
 
   @override
@@ -43542,7 +43859,7 @@ class _$GVoteForHabitData extends GVoteForHabitData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GVoteForHabitData')
+    return (newBuiltValueToStringHelper(r'GVoteForHabitData')
           ..add('G__typename', G__typename)
           ..add('vote', vote))
         .toString();
@@ -43588,13 +43905,15 @@ class GVoteForHabitDataBuilder
   }
 
   @override
-  _$GVoteForHabitData build() {
+  GVoteForHabitData build() => _build();
+
+  _$GVoteForHabitData _build() {
     _$GVoteForHabitData _$result;
     try {
       _$result = _$v ??
           new _$GVoteForHabitData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GVoteForHabitData', 'G__typename'),
+                  G__typename, r'GVoteForHabitData', 'G__typename'),
               vote: _vote?.build());
     } catch (_) {
       late String _$failedField;
@@ -43603,7 +43922,7 @@ class GVoteForHabitDataBuilder
         _vote?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GVoteForHabitData', _$failedField, e.toString());
+            r'GVoteForHabitData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -43622,12 +43941,12 @@ class _$GVoteForHabitData_vote extends GVoteForHabitData_vote {
 
   factory _$GVoteForHabitData_vote(
           [void Function(GVoteForHabitData_voteBuilder)? updates]) =>
-      (new GVoteForHabitData_voteBuilder()..update(updates)).build();
+      (new GVoteForHabitData_voteBuilder()..update(updates))._build();
 
   _$GVoteForHabitData_vote._({required this.G__typename, this.habit, this.user})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GVoteForHabitData_vote', 'G__typename');
+        G__typename, r'GVoteForHabitData_vote', 'G__typename');
   }
 
   @override
@@ -43656,7 +43975,7 @@ class _$GVoteForHabitData_vote extends GVoteForHabitData_vote {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GVoteForHabitData_vote')
+    return (newBuiltValueToStringHelper(r'GVoteForHabitData_vote')
           ..add('G__typename', G__typename)
           ..add('habit', habit)
           ..add('user', user))
@@ -43710,13 +44029,15 @@ class GVoteForHabitData_voteBuilder
   }
 
   @override
-  _$GVoteForHabitData_vote build() {
+  GVoteForHabitData_vote build() => _build();
+
+  _$GVoteForHabitData_vote _build() {
     _$GVoteForHabitData_vote _$result;
     try {
       _$result = _$v ??
           new _$GVoteForHabitData_vote._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GVoteForHabitData_vote', 'G__typename'),
+                  G__typename, r'GVoteForHabitData_vote', 'G__typename'),
               habit: _habit?.build(),
               user: _user?.build());
     } catch (_) {
@@ -43728,7 +44049,7 @@ class GVoteForHabitData_voteBuilder
         _user?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GVoteForHabitData_vote', _$failedField, e.toString());
+            r'GVoteForHabitData_vote', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -43759,7 +44080,7 @@ class _$GVoteForHabitData_vote_habit extends GVoteForHabitData_vote_habit {
 
   factory _$GVoteForHabitData_vote_habit(
           [void Function(GVoteForHabitData_vote_habitBuilder)? updates]) =>
-      (new GVoteForHabitData_vote_habitBuilder()..update(updates)).build();
+      (new GVoteForHabitData_vote_habitBuilder()..update(updates))._build();
 
   _$GVoteForHabitData_vote_habit._(
       {required this.G__typename,
@@ -43773,17 +44094,17 @@ class _$GVoteForHabitData_vote_habit extends GVoteForHabitData_vote_habit {
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GVoteForHabitData_vote_habit', 'G__typename');
+        G__typename, r'GVoteForHabitData_vote_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GVoteForHabitData_vote_habit', 'id');
+        id, r'GVoteForHabitData_vote_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GVoteForHabitData_vote_habit', 'tagline');
+        tagline, r'GVoteForHabitData_vote_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GVoteForHabitData_vote_habit', 'category');
+        category, r'GVoteForHabitData_vote_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GVoteForHabitData_vote_habit', 'createdAt');
+        createdAt, r'GVoteForHabitData_vote_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GVoteForHabitData_vote_habit', 'updatedAt');
+        updatedAt, r'GVoteForHabitData_vote_habit', 'updatedAt');
   }
 
   @override
@@ -43830,7 +44151,7 @@ class _$GVoteForHabitData_vote_habit extends GVoteForHabitData_vote_habit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GVoteForHabitData_vote_habit')
+    return (newBuiltValueToStringHelper(r'GVoteForHabitData_vote_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -43923,19 +44244,21 @@ class GVoteForHabitData_vote_habitBuilder
   }
 
   @override
-  _$GVoteForHabitData_vote_habit build() {
+  GVoteForHabitData_vote_habit build() => _build();
+
+  _$GVoteForHabitData_vote_habit _build() {
     _$GVoteForHabitData_vote_habit _$result;
     try {
       _$result = _$v ??
           new _$GVoteForHabitData_vote_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GVoteForHabitData_vote_habit', 'G__typename'),
+                  G__typename, r'GVoteForHabitData_vote_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GVoteForHabitData_vote_habit', 'id'),
+                  id, r'GVoteForHabitData_vote_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GVoteForHabitData_vote_habit', 'tagline'),
+                  tagline, r'GVoteForHabitData_vote_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GVoteForHabitData_vote_habit', 'category'),
+                  category, r'GVoteForHabitData_vote_habit', 'category'),
               owner: owner,
               ups: ups,
               downs: downs,
@@ -43950,7 +44273,7 @@ class GVoteForHabitData_vote_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GVoteForHabitData_vote_habit', _$failedField, e.toString());
+            r'GVoteForHabitData_vote_habit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -43971,7 +44294,7 @@ class _$GVoteForHabitData_vote_user extends GVoteForHabitData_vote_user {
 
   factory _$GVoteForHabitData_vote_user(
           [void Function(GVoteForHabitData_vote_userBuilder)? updates]) =>
-      (new GVoteForHabitData_vote_userBuilder()..update(updates)).build();
+      (new GVoteForHabitData_vote_userBuilder()..update(updates))._build();
 
   _$GVoteForHabitData_vote_user._(
       {required this.G__typename,
@@ -43980,9 +44303,9 @@ class _$GVoteForHabitData_vote_user extends GVoteForHabitData_vote_user {
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GVoteForHabitData_vote_user', 'G__typename');
+        G__typename, r'GVoteForHabitData_vote_user', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GVoteForHabitData_vote_user', 'username');
+        username, r'GVoteForHabitData_vote_user', 'username');
   }
 
   @override
@@ -44014,7 +44337,7 @@ class _$GVoteForHabitData_vote_user extends GVoteForHabitData_vote_user {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GVoteForHabitData_vote_user')
+    return (newBuiltValueToStringHelper(r'GVoteForHabitData_vote_user')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('upvotedHabits', upvotedHabits)
@@ -44077,15 +44400,17 @@ class GVoteForHabitData_vote_userBuilder
   }
 
   @override
-  _$GVoteForHabitData_vote_user build() {
+  GVoteForHabitData_vote_user build() => _build();
+
+  _$GVoteForHabitData_vote_user _build() {
     _$GVoteForHabitData_vote_user _$result;
     try {
       _$result = _$v ??
           new _$GVoteForHabitData_vote_user._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GVoteForHabitData_vote_user', 'G__typename'),
+                  G__typename, r'GVoteForHabitData_vote_user', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GVoteForHabitData_vote_user', 'username'),
+                  username, r'GVoteForHabitData_vote_user', 'username'),
               upvotedHabits: _upvotedHabits?.build(),
               downvotedHabits: _downvotedHabits?.build());
     } catch (_) {
@@ -44097,7 +44422,7 @@ class GVoteForHabitData_vote_userBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GVoteForHabitData_vote_user', _$failedField, e.toString());
+            r'GVoteForHabitData_vote_user', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -44114,12 +44439,12 @@ class _$GSubscribeToVotesData extends GSubscribeToVotesData {
 
   factory _$GSubscribeToVotesData(
           [void Function(GSubscribeToVotesDataBuilder)? updates]) =>
-      (new GSubscribeToVotesDataBuilder()..update(updates)).build();
+      (new GSubscribeToVotesDataBuilder()..update(updates))._build();
 
   _$GSubscribeToVotesData._({required this.G__typename, this.subscribeToVotes})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSubscribeToVotesData', 'G__typename');
+        G__typename, r'GSubscribeToVotesData', 'G__typename');
   }
 
   @override
@@ -44146,7 +44471,7 @@ class _$GSubscribeToVotesData extends GSubscribeToVotesData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSubscribeToVotesData')
+    return (newBuiltValueToStringHelper(r'GSubscribeToVotesData')
           ..add('G__typename', G__typename)
           ..add('subscribeToVotes', subscribeToVotes))
         .toString();
@@ -44195,13 +44520,15 @@ class GSubscribeToVotesDataBuilder
   }
 
   @override
-  _$GSubscribeToVotesData build() {
+  GSubscribeToVotesData build() => _build();
+
+  _$GSubscribeToVotesData _build() {
     _$GSubscribeToVotesData _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToVotesData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GSubscribeToVotesData', 'G__typename'),
+                  G__typename, r'GSubscribeToVotesData', 'G__typename'),
               subscribeToVotes: _subscribeToVotes?.build());
     } catch (_) {
       late String _$failedField;
@@ -44210,7 +44537,7 @@ class GSubscribeToVotesDataBuilder
         _subscribeToVotes?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToVotesData', _$failedField, e.toString());
+            r'GSubscribeToVotesData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -44232,13 +44559,13 @@ class _$GSubscribeToVotesData_subscribeToVotes
           [void Function(GSubscribeToVotesData_subscribeToVotesBuilder)?
               updates]) =>
       (new GSubscribeToVotesData_subscribeToVotesBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToVotesData_subscribeToVotes._(
       {required this.G__typename, this.habit, this.user})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSubscribeToVotesData_subscribeToVotes', 'G__typename');
+        G__typename, r'GSubscribeToVotesData_subscribeToVotes', 'G__typename');
   }
 
   @override
@@ -44269,7 +44596,7 @@ class _$GSubscribeToVotesData_subscribeToVotes
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToVotesData_subscribeToVotes')
+            r'GSubscribeToVotesData_subscribeToVotes')
           ..add('G__typename', G__typename)
           ..add('habit', habit)
           ..add('user', user))
@@ -44328,13 +44655,15 @@ class GSubscribeToVotesData_subscribeToVotesBuilder
   }
 
   @override
-  _$GSubscribeToVotesData_subscribeToVotes build() {
+  GSubscribeToVotesData_subscribeToVotes build() => _build();
+
+  _$GSubscribeToVotesData_subscribeToVotes _build() {
     _$GSubscribeToVotesData_subscribeToVotes _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToVotesData_subscribeToVotes._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSubscribeToVotesData_subscribeToVotes', 'G__typename'),
+                  r'GSubscribeToVotesData_subscribeToVotes', 'G__typename'),
               habit: _habit?.build(),
               user: _user?.build());
     } catch (_) {
@@ -44346,7 +44675,7 @@ class GSubscribeToVotesData_subscribeToVotesBuilder
         _user?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToVotesData_subscribeToVotes',
+            r'GSubscribeToVotesData_subscribeToVotes',
             _$failedField,
             e.toString());
       }
@@ -44383,7 +44712,7 @@ class _$GSubscribeToVotesData_subscribeToVotes_habit
               updates]) =>
       (new GSubscribeToVotesData_subscribeToVotes_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToVotesData_subscribeToVotes_habit._(
       {required this.G__typename,
@@ -44397,17 +44726,17 @@ class _$GSubscribeToVotesData_subscribeToVotes_habit
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSubscribeToVotesData_subscribeToVotes_habit', 'G__typename');
+        r'GSubscribeToVotesData_subscribeToVotes_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSubscribeToVotesData_subscribeToVotes_habit', 'id');
+        id, r'GSubscribeToVotesData_subscribeToVotes_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GSubscribeToVotesData_subscribeToVotes_habit', 'tagline');
+        tagline, r'GSubscribeToVotesData_subscribeToVotes_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GSubscribeToVotesData_subscribeToVotes_habit', 'category');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GSubscribeToVotesData_subscribeToVotes_habit', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GSubscribeToVotesData_subscribeToVotes_habit', 'updatedAt');
+        category, r'GSubscribeToVotesData_subscribeToVotes_habit', 'category');
+    BuiltValueNullFieldError.checkNotNull(createdAt,
+        r'GSubscribeToVotesData_subscribeToVotes_habit', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(updatedAt,
+        r'GSubscribeToVotesData_subscribeToVotes_habit', 'updatedAt');
   }
 
   @override
@@ -44456,7 +44785,7 @@ class _$GSubscribeToVotesData_subscribeToVotes_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToVotesData_subscribeToVotes_habit')
+            r'GSubscribeToVotesData_subscribeToVotes_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -44551,21 +44880,23 @@ class GSubscribeToVotesData_subscribeToVotes_habitBuilder
   }
 
   @override
-  _$GSubscribeToVotesData_subscribeToVotes_habit build() {
+  GSubscribeToVotesData_subscribeToVotes_habit build() => _build();
+
+  _$GSubscribeToVotesData_subscribeToVotes_habit _build() {
     _$GSubscribeToVotesData_subscribeToVotes_habit _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToVotesData_subscribeToVotes_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSubscribeToVotesData_subscribeToVotes_habit',
+                  r'GSubscribeToVotesData_subscribeToVotes_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GSubscribeToVotesData_subscribeToVotes_habit', 'id'),
+                  id, r'GSubscribeToVotesData_subscribeToVotes_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GSubscribeToVotesData_subscribeToVotes_habit', 'tagline'),
+                  r'GSubscribeToVotesData_subscribeToVotes_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GSubscribeToVotesData_subscribeToVotes_habit', 'category'),
+                  r'GSubscribeToVotesData_subscribeToVotes_habit', 'category'),
               owner: owner,
               ups: ups,
               downs: downs,
@@ -44580,7 +44911,7 @@ class GSubscribeToVotesData_subscribeToVotes_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToVotesData_subscribeToVotes_habit',
+            r'GSubscribeToVotesData_subscribeToVotes_habit',
             _$failedField,
             e.toString());
       }
@@ -44607,7 +44938,7 @@ class _$GSubscribeToVotesData_subscribeToVotes_user
               updates]) =>
       (new GSubscribeToVotesData_subscribeToVotes_userBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSubscribeToVotesData_subscribeToVotes_user._(
       {required this.G__typename,
@@ -44616,9 +44947,9 @@ class _$GSubscribeToVotesData_subscribeToVotes_user
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSubscribeToVotesData_subscribeToVotes_user', 'G__typename');
+        r'GSubscribeToVotesData_subscribeToVotes_user', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GSubscribeToVotesData_subscribeToVotes_user', 'username');
+        username, r'GSubscribeToVotesData_subscribeToVotes_user', 'username');
   }
 
   @override
@@ -44652,7 +44983,7 @@ class _$GSubscribeToVotesData_subscribeToVotes_user
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSubscribeToVotesData_subscribeToVotes_user')
+            r'GSubscribeToVotesData_subscribeToVotes_user')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('upvotedHabits', upvotedHabits)
@@ -44717,15 +45048,19 @@ class GSubscribeToVotesData_subscribeToVotes_userBuilder
   }
 
   @override
-  _$GSubscribeToVotesData_subscribeToVotes_user build() {
+  GSubscribeToVotesData_subscribeToVotes_user build() => _build();
+
+  _$GSubscribeToVotesData_subscribeToVotes_user _build() {
     _$GSubscribeToVotesData_subscribeToVotes_user _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToVotesData_subscribeToVotes_user._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSubscribeToVotesData_subscribeToVotes_user', 'G__typename'),
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSubscribeToVotesData_subscribeToVotes_user',
+                  'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(username,
-                  'GSubscribeToVotesData_subscribeToVotes_user', 'username'),
+                  r'GSubscribeToVotesData_subscribeToVotes_user', 'username'),
               upvotedHabits: _upvotedHabits?.build(),
               downvotedHabits: _downvotedHabits?.build());
     } catch (_) {
@@ -44737,7 +45072,7 @@ class GSubscribeToVotesData_subscribeToVotes_userBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToVotesData_subscribeToVotes_user',
+            r'GSubscribeToVotesData_subscribeToVotes_user',
             _$failedField,
             e.toString());
       }
@@ -44756,12 +45091,12 @@ class _$GSearchUsersData extends GSearchUsersData {
 
   factory _$GSearchUsersData(
           [void Function(GSearchUsersDataBuilder)? updates]) =>
-      (new GSearchUsersDataBuilder()..update(updates)).build();
+      (new GSearchUsersDataBuilder()..update(updates))._build();
 
   _$GSearchUsersData._({required this.G__typename, this.listUsers})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchUsersData', 'G__typename');
+        G__typename, r'GSearchUsersData', 'G__typename');
   }
 
   @override
@@ -44787,7 +45122,7 @@ class _$GSearchUsersData extends GSearchUsersData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchUsersData')
+    return (newBuiltValueToStringHelper(r'GSearchUsersData')
           ..add('G__typename', G__typename)
           ..add('listUsers', listUsers))
         .toString();
@@ -44834,13 +45169,15 @@ class GSearchUsersDataBuilder
   }
 
   @override
-  _$GSearchUsersData build() {
+  GSearchUsersData build() => _build();
+
+  _$GSearchUsersData _build() {
     _$GSearchUsersData _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GSearchUsersData', 'G__typename'),
+                  G__typename, r'GSearchUsersData', 'G__typename'),
               listUsers: _listUsers?.build());
     } catch (_) {
       late String _$failedField;
@@ -44849,7 +45186,7 @@ class GSearchUsersDataBuilder
         _listUsers?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData', _$failedField, e.toString());
+            r'GSearchUsersData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -44866,15 +45203,15 @@ class _$GSearchUsersData_listUsers extends GSearchUsersData_listUsers {
 
   factory _$GSearchUsersData_listUsers(
           [void Function(GSearchUsersData_listUsersBuilder)? updates]) =>
-      (new GSearchUsersData_listUsersBuilder()..update(updates)).build();
+      (new GSearchUsersData_listUsersBuilder()..update(updates))._build();
 
   _$GSearchUsersData_listUsers._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchUsersData_listUsers', 'G__typename');
+        G__typename, r'GSearchUsersData_listUsers', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GSearchUsersData_listUsers', 'items');
+        items, r'GSearchUsersData_listUsers', 'items');
   }
 
   @override
@@ -44901,7 +45238,7 @@ class _$GSearchUsersData_listUsers extends GSearchUsersData_listUsers {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchUsersData_listUsers')
+    return (newBuiltValueToStringHelper(r'GSearchUsersData_listUsers')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -44949,13 +45286,15 @@ class GSearchUsersData_listUsersBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers build() {
+  GSearchUsersData_listUsers build() => _build();
+
+  _$GSearchUsersData_listUsers _build() {
     _$GSearchUsersData_listUsers _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GSearchUsersData_listUsers', 'G__typename'),
+                  G__typename, r'GSearchUsersData_listUsers', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -44964,7 +45303,7 @@ class GSearchUsersData_listUsersBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers', _$failedField, e.toString());
+            r'GSearchUsersData_listUsers', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -44992,7 +45331,7 @@ class _$GSearchUsersData_listUsers_items
 
   factory _$GSearchUsersData_listUsers_items(
           [void Function(GSearchUsersData_listUsers_itemsBuilder)? updates]) =>
-      (new GSearchUsersData_listUsers_itemsBuilder()..update(updates)).build();
+      (new GSearchUsersData_listUsers_itemsBuilder()..update(updates))._build();
 
   _$GSearchUsersData_listUsers_items._(
       {required this.G__typename,
@@ -45004,9 +45343,9 @@ class _$GSearchUsersData_listUsers_items
       this.habits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchUsersData_listUsers_items', 'G__typename');
+        G__typename, r'GSearchUsersData_listUsers_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GSearchUsersData_listUsers_items', 'username');
+        username, r'GSearchUsersData_listUsers_items', 'username');
   }
 
   @override
@@ -45047,7 +45386,7 @@ class _$GSearchUsersData_listUsers_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchUsersData_listUsers_items')
+    return (newBuiltValueToStringHelper(r'GSearchUsersData_listUsers_items')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -45132,15 +45471,17 @@ class GSearchUsersData_listUsers_itemsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items build() {
+  GSearchUsersData_listUsers_items build() => _build();
+
+  _$GSearchUsersData_listUsers_items _build() {
     _$GSearchUsersData_listUsers_items _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSearchUsersData_listUsers_items', 'G__typename'),
+                  r'GSearchUsersData_listUsers_items', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GSearchUsersData_listUsers_items', 'username'),
+                  username, r'GSearchUsersData_listUsers_items', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -45157,7 +45498,7 @@ class GSearchUsersData_listUsers_itemsBuilder
         _habits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items', _$failedField, e.toString());
+            r'GSearchUsersData_listUsers_items', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -45185,7 +45526,7 @@ class _$GSearchUsersData_listUsers_items_avatar
           [void Function(GSearchUsersData_listUsers_items_avatarBuilder)?
               updates]) =>
       (new GSearchUsersData_listUsers_items_avatarBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_avatar._(
       {required this.G__typename,
@@ -45196,13 +45537,13 @@ class _$GSearchUsersData_listUsers_items_avatar
       this.cognitoId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchUsersData_listUsers_items_avatar', 'G__typename');
+        G__typename, r'GSearchUsersData_listUsers_items_avatar', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        bucket, 'GSearchUsersData_listUsers_items_avatar', 'bucket');
+        bucket, r'GSearchUsersData_listUsers_items_avatar', 'bucket');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'GSearchUsersData_listUsers_items_avatar', 'region');
+        region, r'GSearchUsersData_listUsers_items_avatar', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        key, 'GSearchUsersData_listUsers_items_avatar', 'key');
+        key, r'GSearchUsersData_listUsers_items_avatar', 'key');
   }
 
   @override
@@ -45242,7 +45583,7 @@ class _$GSearchUsersData_listUsers_items_avatar
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_avatar')
+            r'GSearchUsersData_listUsers_items_avatar')
           ..add('G__typename', G__typename)
           ..add('bucket', bucket)
           ..add('region', region)
@@ -45315,17 +45656,19 @@ class GSearchUsersData_listUsers_items_avatarBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_avatar build() {
+  GSearchUsersData_listUsers_items_avatar build() => _build();
+
+  _$GSearchUsersData_listUsers_items_avatar _build() {
     final _$result = _$v ??
         new _$GSearchUsersData_listUsers_items_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GSearchUsersData_listUsers_items_avatar', 'G__typename'),
+                r'GSearchUsersData_listUsers_items_avatar', 'G__typename'),
             bucket: BuiltValueNullFieldError.checkNotNull(
-                bucket, 'GSearchUsersData_listUsers_items_avatar', 'bucket'),
+                bucket, r'GSearchUsersData_listUsers_items_avatar', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'GSearchUsersData_listUsers_items_avatar', 'region'),
+                region, r'GSearchUsersData_listUsers_items_avatar', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GSearchUsersData_listUsers_items_avatar', 'key'),
+                key, r'GSearchUsersData_listUsers_items_avatar', 'key'),
             accessLevel: accessLevel,
             cognitoId: cognitoId);
     replace(_$result);
@@ -45344,15 +45687,15 @@ class _$GSearchUsersData_listUsers_items_comments
           [void Function(GSearchUsersData_listUsers_items_commentsBuilder)?
               updates]) =>
       (new GSearchUsersData_listUsers_items_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchUsersData_listUsers_items_comments', 'G__typename');
+        r'GSearchUsersData_listUsers_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GSearchUsersData_listUsers_items_comments', 'items');
+        items, r'GSearchUsersData_listUsers_items_comments', 'items');
   }
 
   @override
@@ -45381,7 +45724,7 @@ class _$GSearchUsersData_listUsers_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_comments')
+            r'GSearchUsersData_listUsers_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -45435,13 +45778,15 @@ class GSearchUsersData_listUsers_items_commentsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_comments build() {
+  GSearchUsersData_listUsers_items_comments build() => _build();
+
+  _$GSearchUsersData_listUsers_items_comments _build() {
     _$GSearchUsersData_listUsers_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSearchUsersData_listUsers_items_comments', 'G__typename'),
+                  r'GSearchUsersData_listUsers_items_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -45450,7 +45795,7 @@ class GSearchUsersData_listUsers_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_comments',
+            r'GSearchUsersData_listUsers_items_comments',
             _$failedField,
             e.toString());
       }
@@ -45488,7 +45833,7 @@ class _$GSearchUsersData_listUsers_items_comments_items
               updates]) =>
       (new GSearchUsersData_listUsers_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_comments_items._(
       {required this.G__typename,
@@ -45502,15 +45847,15 @@ class _$GSearchUsersData_listUsers_items_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchUsersData_listUsers_items_comments_items', 'G__typename');
+        r'GSearchUsersData_listUsers_items_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSearchUsersData_listUsers_items_comments_items', 'id');
+        id, r'GSearchUsersData_listUsers_items_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GSearchUsersData_listUsers_items_comments_items', 'comment');
+        comment, r'GSearchUsersData_listUsers_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GSearchUsersData_listUsers_items_comments_items', 'createdAt');
+        r'GSearchUsersData_listUsers_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GSearchUsersData_listUsers_items_comments_items', 'updatedAt');
+        r'GSearchUsersData_listUsers_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -45560,7 +45905,7 @@ class _$GSearchUsersData_listUsers_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_comments_items')
+            r'GSearchUsersData_listUsers_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -45663,23 +46008,27 @@ class GSearchUsersData_listUsers_items_comments_itemsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_comments_items build() {
+  GSearchUsersData_listUsers_items_comments_items build() => _build();
+
+  _$GSearchUsersData_listUsers_items_comments_items _build() {
     _$GSearchUsersData_listUsers_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_comments_items',
+                  r'GSearchUsersData_listUsers_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GSearchUsersData_listUsers_items_comments_items', 'id'),
+                  id, r'GSearchUsersData_listUsers_items_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
-              comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GSearchUsersData_listUsers_items_comments_items', 'comment'),
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GSearchUsersData_listUsers_items_comments_items',
+                  'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -45697,7 +46046,7 @@ class GSearchUsersData_listUsers_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_comments_items',
+            r'GSearchUsersData_listUsers_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -45725,7 +46074,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_by
               updates]) =>
       (new GSearchUsersData_listUsers_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_comments_items_by._(
       {required this.G__typename,
@@ -45734,9 +46083,9 @@ class _$GSearchUsersData_listUsers_items_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchUsersData_listUsers_items_comments_items_by', 'G__typename');
+        r'GSearchUsersData_listUsers_items_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(username,
-        'GSearchUsersData_listUsers_items_comments_items_by', 'username');
+        r'GSearchUsersData_listUsers_items_comments_items_by', 'username');
   }
 
   @override
@@ -45772,7 +46121,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_comments_items_by')
+            r'GSearchUsersData_listUsers_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -45834,16 +46183,18 @@ class GSearchUsersData_listUsers_items_comments_items_byBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_comments_items_by build() {
+  GSearchUsersData_listUsers_items_comments_items_by build() => _build();
+
+  _$GSearchUsersData_listUsers_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GSearchUsersData_listUsers_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GSearchUsersData_listUsers_items_comments_items_by',
+                r'GSearchUsersData_listUsers_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GSearchUsersData_listUsers_items_comments_items_by',
+                r'GSearchUsersData_listUsers_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -45884,7 +46235,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit
               updates]) =>
       (new GSearchUsersData_listUsers_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_comments_items_habit._(
       {required this.G__typename,
@@ -45899,18 +46250,20 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit
       this.ups,
       this.downs})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchUsersData_listUsers_items_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSearchUsersData_listUsers_items_comments_items_habit', 'id');
+        G__typename,
+        r'GSearchUsersData_listUsers_items_comments_items_habit',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GSearchUsersData_listUsers_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GSearchUsersData_listUsers_items_comments_items_habit', 'tagline');
+        r'GSearchUsersData_listUsers_items_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GSearchUsersData_listUsers_items_comments_items_habit', 'category');
+        r'GSearchUsersData_listUsers_items_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GSearchUsersData_listUsers_items_comments_items_habit', 'createdAt');
+        r'GSearchUsersData_listUsers_items_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GSearchUsersData_listUsers_items_comments_items_habit', 'updatedAt');
+        r'GSearchUsersData_listUsers_items_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -45969,7 +46322,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_comments_items_habit')
+            r'GSearchUsersData_listUsers_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -46084,26 +46437,28 @@ class GSearchUsersData_listUsers_items_comments_items_habitBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_comments_items_habit build() {
+  GSearchUsersData_listUsers_items_comments_items_habit build() => _build();
+
+  _$GSearchUsersData_listUsers_items_comments_items_habit _build() {
     _$GSearchUsersData_listUsers_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSearchUsersData_listUsers_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GSearchUsersData_listUsers_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GSearchUsersData_listUsers_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -46123,7 +46478,7 @@ class GSearchUsersData_listUsers_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_comments_items_habit',
+            r'GSearchUsersData_listUsers_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -46149,18 +46504,18 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_comments
               updates]) =>
       (new GSearchUsersData_listUsers_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_comments_items_habit_comments',
+        r'GSearchUsersData_listUsers_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GSearchUsersData_listUsers_items_comments_items_habit_comments',
+        r'GSearchUsersData_listUsers_items_comments_items_habit_comments',
         'items');
   }
 
@@ -46194,7 +46549,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_comments_items_habit_comments')
+            r'GSearchUsersData_listUsers_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -46257,7 +46612,10 @@ class GSearchUsersData_listUsers_items_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_comments_items_habit_comments build() {
+  GSearchUsersData_listUsers_items_comments_items_habit_comments build() =>
+      _build();
+
+  _$GSearchUsersData_listUsers_items_comments_items_habit_comments _build() {
     _$GSearchUsersData_listUsers_items_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
@@ -46265,7 +46623,7 @@ class GSearchUsersData_listUsers_items_comments_items_habit_commentsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_comments_items_habit_comments',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -46275,7 +46633,7 @@ class GSearchUsersData_listUsers_items_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_comments_items_habit_comments',
+            r'GSearchUsersData_listUsers_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -46309,7 +46667,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_comments_items
               updates]) =>
       (new GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -46322,23 +46680,23 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -46386,7 +46744,7 @@ class _$GSearchUsersData_listUsers_items_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_comments_items_habit_comments_items')
+            r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -46476,8 +46834,11 @@ class GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsBuilde
   }
 
   @override
+  GSearchUsersData_listUsers_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GSearchUsersData_listUsers_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GSearchUsersData_listUsers_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -46486,17 +46847,17 @@ class GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsBuilde
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+                  r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -46509,7 +46870,7 @@ class GSearchUsersData_listUsers_items_comments_items_habit_comments_itemsBuilde
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
+            r'GSearchUsersData_listUsers_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -46531,15 +46892,15 @@ class _$GSearchUsersData_listUsers_items_habits
           [void Function(GSearchUsersData_listUsers_items_habitsBuilder)?
               updates]) =>
       (new GSearchUsersData_listUsers_items_habitsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchUsersData_listUsers_items_habits', 'G__typename');
+        G__typename, r'GSearchUsersData_listUsers_items_habits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GSearchUsersData_listUsers_items_habits', 'items');
+        items, r'GSearchUsersData_listUsers_items_habits', 'items');
   }
 
   @override
@@ -46568,7 +46929,7 @@ class _$GSearchUsersData_listUsers_items_habits
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits')
+            r'GSearchUsersData_listUsers_items_habits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -46620,13 +46981,15 @@ class GSearchUsersData_listUsers_items_habitsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_habits build() {
+  GSearchUsersData_listUsers_items_habits build() => _build();
+
+  _$GSearchUsersData_listUsers_items_habits _build() {
     _$GSearchUsersData_listUsers_items_habits _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items_habits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSearchUsersData_listUsers_items_habits', 'G__typename'),
+                  r'GSearchUsersData_listUsers_items_habits', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -46635,7 +46998,7 @@ class GSearchUsersData_listUsers_items_habitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_habits',
+            r'GSearchUsersData_listUsers_items_habits',
             _$failedField,
             e.toString());
       }
@@ -46676,7 +47039,7 @@ class _$GSearchUsersData_listUsers_items_habits_items
               updates]) =>
       (new GSearchUsersData_listUsers_items_habits_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits_items._(
       {required this.G__typename,
@@ -46692,17 +47055,17 @@ class _$GSearchUsersData_listUsers_items_habits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchUsersData_listUsers_items_habits_items', 'G__typename');
+        r'GSearchUsersData_listUsers_items_habits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSearchUsersData_listUsers_items_habits_items', 'id');
+        id, r'GSearchUsersData_listUsers_items_habits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GSearchUsersData_listUsers_items_habits_items', 'tagline');
+        tagline, r'GSearchUsersData_listUsers_items_habits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GSearchUsersData_listUsers_items_habits_items', 'category');
+        category, r'GSearchUsersData_listUsers_items_habits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GSearchUsersData_listUsers_items_habits_items', 'createdAt');
+        r'GSearchUsersData_listUsers_items_habits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GSearchUsersData_listUsers_items_habits_items', 'updatedAt');
+        r'GSearchUsersData_listUsers_items_habits_items', 'updatedAt');
   }
 
   @override
@@ -46759,7 +47122,7 @@ class _$GSearchUsersData_listUsers_items_habits_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits_items')
+            r'GSearchUsersData_listUsers_items_habits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -46871,21 +47234,23 @@ class GSearchUsersData_listUsers_items_habits_itemsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_habits_items build() {
+  GSearchUsersData_listUsers_items_habits_items build() => _build();
+
+  _$GSearchUsersData_listUsers_items_habits_items _build() {
     _$GSearchUsersData_listUsers_items_habits_items _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items_habits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_habits_items',
+                  r'GSearchUsersData_listUsers_items_habits_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GSearchUsersData_listUsers_items_habits_items', 'id'),
+                  id, r'GSearchUsersData_listUsers_items_habits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GSearchUsersData_listUsers_items_habits_items', 'tagline'),
+                  r'GSearchUsersData_listUsers_items_habits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GSearchUsersData_listUsers_items_habits_items', 'category'),
+                  r'GSearchUsersData_listUsers_items_habits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -46904,7 +47269,7 @@ class GSearchUsersData_listUsers_items_habits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_habits_items',
+            r'GSearchUsersData_listUsers_items_habits_items',
             _$failedField,
             e.toString());
       }
@@ -46929,17 +47294,17 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments
               updates]) =>
       (new GSearchUsersData_listUsers_items_habits_items_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_habits_items_comments',
+        r'GSearchUsersData_listUsers_items_habits_items_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GSearchUsersData_listUsers_items_habits_items_comments', 'items');
+        r'GSearchUsersData_listUsers_items_habits_items_comments', 'items');
   }
 
   @override
@@ -46970,7 +47335,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits_items_comments')
+            r'GSearchUsersData_listUsers_items_habits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -47028,14 +47393,16 @@ class GSearchUsersData_listUsers_items_habits_items_commentsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_habits_items_comments build() {
+  GSearchUsersData_listUsers_items_habits_items_comments build() => _build();
+
+  _$GSearchUsersData_listUsers_items_habits_items_comments _build() {
     _$GSearchUsersData_listUsers_items_habits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items_habits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_habits_items_comments',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -47045,7 +47412,7 @@ class GSearchUsersData_listUsers_items_habits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_habits_items_comments',
+            r'GSearchUsersData_listUsers_items_habits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -47084,7 +47451,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items
               updates]) =>
       (new GSearchUsersData_listUsers_items_habits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits_items_comments_items._(
       {required this.G__typename,
@@ -47099,21 +47466,21 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(id,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items', 'id');
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items',
         'updatedAt');
   }
 
@@ -47167,7 +47534,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items')
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -47278,18 +47645,21 @@ class GSearchUsersData_listUsers_items_habits_items_comments_itemsBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_habits_items_comments_items build() {
+  GSearchUsersData_listUsers_items_habits_items_comments_items build() =>
+      _build();
+
+  _$GSearchUsersData_listUsers_items_habits_items_comments_items _build() {
     _$GSearchUsersData_listUsers_items_habits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsersData_listUsers_items_habits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items',
                   'id'),
               owner: owner,
               by: _by?.build(),
@@ -47297,7 +47667,7 @@ class GSearchUsersData_listUsers_items_habits_items_comments_itemsBuilder
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -47316,7 +47686,7 @@ class GSearchUsersData_listUsers_items_habits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items',
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -47344,7 +47714,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
               updates]) =>
       (new GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits_items_comments_items_by._(
       {required this.G__typename,
@@ -47354,11 +47724,11 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         username,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
         'username');
   }
 
@@ -47397,7 +47767,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items_by')
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -47464,16 +47834,19 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_habits_items_comments_items_by build() {
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by build() =>
+      _build();
+
+  _$GSearchUsersData_listUsers_items_habits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GSearchUsersData_listUsers_items_habits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -47514,7 +47887,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit
               updates]) =>
       (new GSearchUsersData_listUsers_items_habits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit._(
       {required this.G__typename,
@@ -47531,27 +47904,27 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         tagline,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
         'tagline');
     BuiltValueNullFieldError.checkNotNull(
         category,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
         'category');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
         'updatedAt');
   }
 
@@ -47613,7 +47986,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items_habit')
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -47733,7 +48106,11 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit build() {
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit build() =>
+      _build();
+
+  _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit
+      _build() {
     _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit
         _$result;
     try {
@@ -47741,19 +48118,19 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habitBuilder
           new _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -47773,7 +48150,7 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -47799,18 +48176,18 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
               updates]) =>
       (new GSearchUsersData_listUsers_items_habits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -47845,7 +48222,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments')
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -47911,8 +48288,11 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comment
   }
 
   @override
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
+      build() => _build();
+
   _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
-      build() {
+      _build() {
     _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
         _$result;
     try {
@@ -47921,7 +48301,7 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comment
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -47931,7 +48311,7 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comment
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -47965,7 +48345,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
               updates]) =>
       (new GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -47978,23 +48358,23 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -48043,7 +48423,7 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comme
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items')
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -48134,8 +48514,11 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comment
   }
 
   @override
+  GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -48144,17 +48527,17 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comment
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -48167,7 +48550,7 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comment
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -48186,12 +48569,12 @@ class _$GSearchHabitsData extends GSearchHabitsData {
 
   factory _$GSearchHabitsData(
           [void Function(GSearchHabitsDataBuilder)? updates]) =>
-      (new GSearchHabitsDataBuilder()..update(updates)).build();
+      (new GSearchHabitsDataBuilder()..update(updates))._build();
 
   _$GSearchHabitsData._({required this.G__typename, this.listHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchHabitsData', 'G__typename');
+        G__typename, r'GSearchHabitsData', 'G__typename');
   }
 
   @override
@@ -48217,7 +48600,7 @@ class _$GSearchHabitsData extends GSearchHabitsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchHabitsData')
+    return (newBuiltValueToStringHelper(r'GSearchHabitsData')
           ..add('G__typename', G__typename)
           ..add('listHabits', listHabits))
         .toString();
@@ -48264,13 +48647,15 @@ class GSearchHabitsDataBuilder
   }
 
   @override
-  _$GSearchHabitsData build() {
+  GSearchHabitsData build() => _build();
+
+  _$GSearchHabitsData _build() {
     _$GSearchHabitsData _$result;
     try {
       _$result = _$v ??
           new _$GSearchHabitsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GSearchHabitsData', 'G__typename'),
+                  G__typename, r'GSearchHabitsData', 'G__typename'),
               listHabits: _listHabits?.build());
     } catch (_) {
       late String _$failedField;
@@ -48279,7 +48664,7 @@ class GSearchHabitsDataBuilder
         _listHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData', _$failedField, e.toString());
+            r'GSearchHabitsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -48296,15 +48681,15 @@ class _$GSearchHabitsData_listHabits extends GSearchHabitsData_listHabits {
 
   factory _$GSearchHabitsData_listHabits(
           [void Function(GSearchHabitsData_listHabitsBuilder)? updates]) =>
-      (new GSearchHabitsData_listHabitsBuilder()..update(updates)).build();
+      (new GSearchHabitsData_listHabitsBuilder()..update(updates))._build();
 
   _$GSearchHabitsData_listHabits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchHabitsData_listHabits', 'G__typename');
+        G__typename, r'GSearchHabitsData_listHabits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GSearchHabitsData_listHabits', 'items');
+        items, r'GSearchHabitsData_listHabits', 'items');
   }
 
   @override
@@ -48331,7 +48716,7 @@ class _$GSearchHabitsData_listHabits extends GSearchHabitsData_listHabits {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchHabitsData_listHabits')
+    return (newBuiltValueToStringHelper(r'GSearchHabitsData_listHabits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -48380,13 +48765,15 @@ class GSearchHabitsData_listHabitsBuilder
   }
 
   @override
-  _$GSearchHabitsData_listHabits build() {
+  GSearchHabitsData_listHabits build() => _build();
+
+  _$GSearchHabitsData_listHabits _build() {
     _$GSearchHabitsData_listHabits _$result;
     try {
       _$result = _$v ??
           new _$GSearchHabitsData_listHabits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GSearchHabitsData_listHabits', 'G__typename'),
+                  G__typename, r'GSearchHabitsData_listHabits', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -48395,7 +48782,7 @@ class GSearchHabitsData_listHabitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData_listHabits', _$failedField, e.toString());
+            r'GSearchHabitsData_listHabits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -48433,7 +48820,7 @@ class _$GSearchHabitsData_listHabits_items
           [void Function(GSearchHabitsData_listHabits_itemsBuilder)?
               updates]) =>
       (new GSearchHabitsData_listHabits_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GSearchHabitsData_listHabits_items._(
       {required this.G__typename,
@@ -48449,17 +48836,17 @@ class _$GSearchHabitsData_listHabits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GSearchHabitsData_listHabits_items', 'G__typename');
+        G__typename, r'GSearchHabitsData_listHabits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSearchHabitsData_listHabits_items', 'id');
+        id, r'GSearchHabitsData_listHabits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GSearchHabitsData_listHabits_items', 'tagline');
+        tagline, r'GSearchHabitsData_listHabits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GSearchHabitsData_listHabits_items', 'category');
+        category, r'GSearchHabitsData_listHabits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GSearchHabitsData_listHabits_items', 'createdAt');
+        createdAt, r'GSearchHabitsData_listHabits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GSearchHabitsData_listHabits_items', 'updatedAt');
+        updatedAt, r'GSearchHabitsData_listHabits_items', 'updatedAt');
   }
 
   @override
@@ -48514,7 +48901,7 @@ class _$GSearchHabitsData_listHabits_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchHabitsData_listHabits_items')
+    return (newBuiltValueToStringHelper(r'GSearchHabitsData_listHabits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -48623,19 +49010,21 @@ class GSearchHabitsData_listHabits_itemsBuilder
   }
 
   @override
-  _$GSearchHabitsData_listHabits_items build() {
+  GSearchHabitsData_listHabits_items build() => _build();
+
+  _$GSearchHabitsData_listHabits_items _build() {
     _$GSearchHabitsData_listHabits_items _$result;
     try {
       _$result = _$v ??
           new _$GSearchHabitsData_listHabits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSearchHabitsData_listHabits_items', 'G__typename'),
+                  r'GSearchHabitsData_listHabits_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GSearchHabitsData_listHabits_items', 'id'),
+                  id, r'GSearchHabitsData_listHabits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GSearchHabitsData_listHabits_items', 'tagline'),
+                  tagline, r'GSearchHabitsData_listHabits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GSearchHabitsData_listHabits_items', 'category'),
+                  category, r'GSearchHabitsData_listHabits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -48654,7 +49043,7 @@ class GSearchHabitsData_listHabits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData_listHabits_items', _$failedField, e.toString());
+            r'GSearchHabitsData_listHabits_items', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -48675,15 +49064,15 @@ class _$GSearchHabitsData_listHabits_items_comments
               updates]) =>
       (new GSearchHabitsData_listHabits_items_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchHabitsData_listHabits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchHabitsData_listHabits_items_comments', 'G__typename');
+        r'GSearchHabitsData_listHabits_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GSearchHabitsData_listHabits_items_comments', 'items');
+        items, r'GSearchHabitsData_listHabits_items_comments', 'items');
   }
 
   @override
@@ -48712,7 +49101,7 @@ class _$GSearchHabitsData_listHabits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchHabitsData_listHabits_items_comments')
+            r'GSearchHabitsData_listHabits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -48766,13 +49155,17 @@ class GSearchHabitsData_listHabits_items_commentsBuilder
   }
 
   @override
-  _$GSearchHabitsData_listHabits_items_comments build() {
+  GSearchHabitsData_listHabits_items_comments build() => _build();
+
+  _$GSearchHabitsData_listHabits_items_comments _build() {
     _$GSearchHabitsData_listHabits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GSearchHabitsData_listHabits_items_comments._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GSearchHabitsData_listHabits_items_comments', 'G__typename'),
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSearchHabitsData_listHabits_items_comments',
+                  'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -48781,7 +49174,7 @@ class GSearchHabitsData_listHabits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData_listHabits_items_comments',
+            r'GSearchHabitsData_listHabits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -48819,7 +49212,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items
               updates]) =>
       (new GSearchHabitsData_listHabits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchHabitsData_listHabits_items_comments_items._(
       {required this.G__typename,
@@ -48833,15 +49226,15 @@ class _$GSearchHabitsData_listHabits_items_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchHabitsData_listHabits_items_comments_items', 'G__typename');
+        r'GSearchHabitsData_listHabits_items_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSearchHabitsData_listHabits_items_comments_items', 'id');
+        id, r'GSearchHabitsData_listHabits_items_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GSearchHabitsData_listHabits_items_comments_items', 'comment');
+        r'GSearchHabitsData_listHabits_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GSearchHabitsData_listHabits_items_comments_items', 'createdAt');
+        r'GSearchHabitsData_listHabits_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GSearchHabitsData_listHabits_items_comments_items', 'updatedAt');
+        r'GSearchHabitsData_listHabits_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -48892,7 +49285,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchHabitsData_listHabits_items_comments_items')
+            r'GSearchHabitsData_listHabits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -48995,24 +49388,26 @@ class GSearchHabitsData_listHabits_items_comments_itemsBuilder
   }
 
   @override
-  _$GSearchHabitsData_listHabits_items_comments_items build() {
+  GSearchHabitsData_listHabits_items_comments_items build() => _build();
+
+  _$GSearchHabitsData_listHabits_items_comments_items _build() {
     _$GSearchHabitsData_listHabits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GSearchHabitsData_listHabits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchHabitsData_listHabits_items_comments_items',
+                  r'GSearchHabitsData_listHabits_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(id,
-                  'GSearchHabitsData_listHabits_items_comments_items', 'id'),
+                  r'GSearchHabitsData_listHabits_items_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSearchHabitsData_listHabits_items_comments_items',
+                  r'GSearchHabitsData_listHabits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -49031,7 +49426,7 @@ class GSearchHabitsData_listHabits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData_listHabits_items_comments_items',
+            r'GSearchHabitsData_listHabits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -49059,7 +49454,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_by
               updates]) =>
       (new GSearchHabitsData_listHabits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchHabitsData_listHabits_items_comments_items_by._(
       {required this.G__typename,
@@ -49068,9 +49463,9 @@ class _$GSearchHabitsData_listHabits_items_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GSearchHabitsData_listHabits_items_comments_items_by', 'G__typename');
+        r'GSearchHabitsData_listHabits_items_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(username,
-        'GSearchHabitsData_listHabits_items_comments_items_by', 'username');
+        r'GSearchHabitsData_listHabits_items_comments_items_by', 'username');
   }
 
   @override
@@ -49106,7 +49501,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchHabitsData_listHabits_items_comments_items_by')
+            r'GSearchHabitsData_listHabits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -49170,16 +49565,18 @@ class GSearchHabitsData_listHabits_items_comments_items_byBuilder
   }
 
   @override
-  _$GSearchHabitsData_listHabits_items_comments_items_by build() {
+  GSearchHabitsData_listHabits_items_comments_items_by build() => _build();
+
+  _$GSearchHabitsData_listHabits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GSearchHabitsData_listHabits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GSearchHabitsData_listHabits_items_comments_items_by',
+                r'GSearchHabitsData_listHabits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GSearchHabitsData_listHabits_items_comments_items_by',
+                r'GSearchHabitsData_listHabits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -49220,7 +49617,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit
               updates]) =>
       (new GSearchHabitsData_listHabits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchHabitsData_listHabits_items_comments_items_habit._(
       {required this.G__typename,
@@ -49237,18 +49634,22 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchHabitsData_listHabits_items_comments_items_habit',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GSearchHabitsData_listHabits_items_comments_items_habit', 'id');
+        id, r'GSearchHabitsData_listHabits_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(tagline,
-        'GSearchHabitsData_listHabits_items_comments_items_habit', 'tagline');
+        r'GSearchHabitsData_listHabits_items_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(category,
-        'GSearchHabitsData_listHabits_items_comments_items_habit', 'category');
-    BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GSearchHabitsData_listHabits_items_comments_items_habit', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GSearchHabitsData_listHabits_items_comments_items_habit', 'updatedAt');
+        r'GSearchHabitsData_listHabits_items_comments_items_habit', 'category');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt,
+        r'GSearchHabitsData_listHabits_items_comments_items_habit',
+        'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt,
+        r'GSearchHabitsData_listHabits_items_comments_items_habit',
+        'updatedAt');
   }
 
   @override
@@ -49307,7 +49708,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchHabitsData_listHabits_items_comments_items_habit')
+            r'GSearchHabitsData_listHabits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -49422,26 +49823,30 @@ class GSearchHabitsData_listHabits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GSearchHabitsData_listHabits_items_comments_items_habit build() {
+  GSearchHabitsData_listHabits_items_comments_items_habit build() => _build();
+
+  _$GSearchHabitsData_listHabits_items_comments_items_habit _build() {
     _$GSearchHabitsData_listHabits_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GSearchHabitsData_listHabits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit',
+                  r'GSearchHabitsData_listHabits_items_comments_items_habit',
                   'G__typename'),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit',
-                  'id'),
-              tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit',
-                  'tagline'),
+              id:
+                  BuiltValueNullFieldError.checkNotNull(
+                      id,
+                      r'GSearchHabitsData_listHabits_items_comments_items_habit',
+                      'id'),
+              tagline:
+                  BuiltValueNullFieldError.checkNotNull(
+                      tagline,
+                      r'GSearchHabitsData_listHabits_items_comments_items_habit',
+                      'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit',
+                  r'GSearchHabitsData_listHabits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -49461,7 +49866,7 @@ class GSearchHabitsData_listHabits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData_listHabits_items_comments_items_habit',
+            r'GSearchHabitsData_listHabits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -49487,18 +49892,18 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_comments
               updates]) =>
       (new GSearchHabitsData_listHabits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchHabitsData_listHabits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -49532,7 +49937,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchHabitsData_listHabits_items_comments_items_habit_comments')
+            r'GSearchHabitsData_listHabits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -49596,7 +50001,10 @@ class GSearchHabitsData_listHabits_items_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GSearchHabitsData_listHabits_items_comments_items_habit_comments build() {
+  GSearchHabitsData_listHabits_items_comments_items_habit_comments build() =>
+      _build();
+
+  _$GSearchHabitsData_listHabits_items_comments_items_habit_comments _build() {
     _$GSearchHabitsData_listHabits_items_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
@@ -49604,7 +50012,7 @@ class GSearchHabitsData_listHabits_items_comments_items_habit_commentsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
+                  r'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -49614,7 +50022,7 @@ class GSearchHabitsData_listHabits_items_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
+            r'GSearchHabitsData_listHabits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -49648,7 +50056,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
               updates]) =>
       (new GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -49661,23 +50069,23 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+        r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -49725,7 +50133,7 @@ class _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items')
+            r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -49815,8 +50223,11 @@ class GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsBuil
   }
 
   @override
+  GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -49825,17 +50236,17 @@ class GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsBuil
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+                  r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+                  r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+                  r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -49848,7 +50259,7 @@ class GSearchHabitsData_listHabits_items_comments_items_habit_comments_itemsBuil
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
+            r'GSearchHabitsData_listHabits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -49885,7 +50296,7 @@ class _$GAllHabitFieldsData extends GAllHabitFieldsData {
 
   factory _$GAllHabitFieldsData(
           [void Function(GAllHabitFieldsDataBuilder)? updates]) =>
-      (new GAllHabitFieldsDataBuilder()..update(updates)).build();
+      (new GAllHabitFieldsDataBuilder()..update(updates))._build();
 
   _$GAllHabitFieldsData._(
       {required this.G__typename,
@@ -49901,16 +50312,16 @@ class _$GAllHabitFieldsData extends GAllHabitFieldsData {
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllHabitFieldsData', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(id, 'GAllHabitFieldsData', 'id');
+        G__typename, r'GAllHabitFieldsData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(id, r'GAllHabitFieldsData', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllHabitFieldsData', 'tagline');
+        tagline, r'GAllHabitFieldsData', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllHabitFieldsData', 'category');
+        category, r'GAllHabitFieldsData', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllHabitFieldsData', 'createdAt');
+        createdAt, r'GAllHabitFieldsData', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllHabitFieldsData', 'updatedAt');
+        updatedAt, r'GAllHabitFieldsData', 'updatedAt');
   }
 
   @override
@@ -49965,7 +50376,7 @@ class _$GAllHabitFieldsData extends GAllHabitFieldsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllHabitFieldsData')
+    return (newBuiltValueToStringHelper(r'GAllHabitFieldsData')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -50070,19 +50481,21 @@ class GAllHabitFieldsDataBuilder
   }
 
   @override
-  _$GAllHabitFieldsData build() {
+  GAllHabitFieldsData build() => _build();
+
+  _$GAllHabitFieldsData _build() {
     _$GAllHabitFieldsData _$result;
     try {
       _$result = _$v ??
           new _$GAllHabitFieldsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllHabitFieldsData', 'G__typename'),
+                  G__typename, r'GAllHabitFieldsData', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllHabitFieldsData', 'id'),
+                  id, r'GAllHabitFieldsData', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GAllHabitFieldsData', 'tagline'),
+                  tagline, r'GAllHabitFieldsData', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GAllHabitFieldsData', 'category'),
+                  category, r'GAllHabitFieldsData', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -50101,7 +50514,7 @@ class GAllHabitFieldsDataBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllHabitFieldsData', _$failedField, e.toString());
+            r'GAllHabitFieldsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -50118,15 +50531,15 @@ class _$GAllHabitFieldsData_comments extends GAllHabitFieldsData_comments {
 
   factory _$GAllHabitFieldsData_comments(
           [void Function(GAllHabitFieldsData_commentsBuilder)? updates]) =>
-      (new GAllHabitFieldsData_commentsBuilder()..update(updates)).build();
+      (new GAllHabitFieldsData_commentsBuilder()..update(updates))._build();
 
   _$GAllHabitFieldsData_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllHabitFieldsData_comments', 'G__typename');
+        G__typename, r'GAllHabitFieldsData_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllHabitFieldsData_comments', 'items');
+        items, r'GAllHabitFieldsData_comments', 'items');
   }
 
   @override
@@ -50153,7 +50566,7 @@ class _$GAllHabitFieldsData_comments extends GAllHabitFieldsData_comments {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllHabitFieldsData_comments')
+    return (newBuiltValueToStringHelper(r'GAllHabitFieldsData_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -50202,13 +50615,15 @@ class GAllHabitFieldsData_commentsBuilder
   }
 
   @override
-  _$GAllHabitFieldsData_comments build() {
+  GAllHabitFieldsData_comments build() => _build();
+
+  _$GAllHabitFieldsData_comments _build() {
     _$GAllHabitFieldsData_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllHabitFieldsData_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllHabitFieldsData_comments', 'G__typename'),
+                  G__typename, r'GAllHabitFieldsData_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -50217,7 +50632,7 @@ class GAllHabitFieldsData_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllHabitFieldsData_comments', _$failedField, e.toString());
+            r'GAllHabitFieldsData_comments', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -50251,7 +50666,7 @@ class _$GAllHabitFieldsData_comments_items
           [void Function(GAllHabitFieldsData_comments_itemsBuilder)?
               updates]) =>
       (new GAllHabitFieldsData_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllHabitFieldsData_comments_items._(
       {required this.G__typename,
@@ -50265,15 +50680,15 @@ class _$GAllHabitFieldsData_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllHabitFieldsData_comments_items', 'G__typename');
+        G__typename, r'GAllHabitFieldsData_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllHabitFieldsData_comments_items', 'id');
+        id, r'GAllHabitFieldsData_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GAllHabitFieldsData_comments_items', 'comment');
+        comment, r'GAllHabitFieldsData_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllHabitFieldsData_comments_items', 'createdAt');
+        createdAt, r'GAllHabitFieldsData_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllHabitFieldsData_comments_items', 'updatedAt');
+        updatedAt, r'GAllHabitFieldsData_comments_items', 'updatedAt');
   }
 
   @override
@@ -50320,7 +50735,7 @@ class _$GAllHabitFieldsData_comments_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllHabitFieldsData_comments_items')
+    return (newBuiltValueToStringHelper(r'GAllHabitFieldsData_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -50417,21 +50832,23 @@ class GAllHabitFieldsData_comments_itemsBuilder
   }
 
   @override
-  _$GAllHabitFieldsData_comments_items build() {
+  GAllHabitFieldsData_comments_items build() => _build();
+
+  _$GAllHabitFieldsData_comments_items _build() {
     _$GAllHabitFieldsData_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllHabitFieldsData_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllHabitFieldsData_comments_items', 'G__typename'),
+                  r'GAllHabitFieldsData_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllHabitFieldsData_comments_items', 'id'),
+                  id, r'GAllHabitFieldsData_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
-                  comment, 'GAllHabitFieldsData_comments_items', 'comment'),
+                  comment, r'GAllHabitFieldsData_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -50449,7 +50866,7 @@ class GAllHabitFieldsData_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllHabitFieldsData_comments_items', _$failedField, e.toString());
+            r'GAllHabitFieldsData_comments_items', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -50473,7 +50890,7 @@ class _$GAllHabitFieldsData_comments_items_by
           [void Function(GAllHabitFieldsData_comments_items_byBuilder)?
               updates]) =>
       (new GAllHabitFieldsData_comments_items_byBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllHabitFieldsData_comments_items_by._(
       {required this.G__typename,
@@ -50482,9 +50899,9 @@ class _$GAllHabitFieldsData_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllHabitFieldsData_comments_items_by', 'G__typename');
+        G__typename, r'GAllHabitFieldsData_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GAllHabitFieldsData_comments_items_by', 'username');
+        username, r'GAllHabitFieldsData_comments_items_by', 'username');
   }
 
   @override
@@ -50517,7 +50934,8 @@ class _$GAllHabitFieldsData_comments_items_by
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllHabitFieldsData_comments_items_by')
+    return (newBuiltValueToStringHelper(
+            r'GAllHabitFieldsData_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -50578,13 +50996,15 @@ class GAllHabitFieldsData_comments_items_byBuilder
   }
 
   @override
-  _$GAllHabitFieldsData_comments_items_by build() {
+  GAllHabitFieldsData_comments_items_by build() => _build();
+
+  _$GAllHabitFieldsData_comments_items_by _build() {
     final _$result = _$v ??
         new _$GAllHabitFieldsData_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GAllHabitFieldsData_comments_items_by', 'G__typename'),
+                r'GAllHabitFieldsData_comments_items_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GAllHabitFieldsData_comments_items_by', 'username'),
+                username, r'GAllHabitFieldsData_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -50621,7 +51041,7 @@ class _$GAllHabitFieldsData_comments_items_habit
           [void Function(GAllHabitFieldsData_comments_items_habitBuilder)?
               updates]) =>
       (new GAllHabitFieldsData_comments_items_habitBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllHabitFieldsData_comments_items_habit._(
       {required this.G__typename,
@@ -50636,18 +51056,18 @@ class _$GAllHabitFieldsData_comments_items_habit
       this.ups,
       this.downs})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GAllHabitFieldsData_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllHabitFieldsData_comments_items_habit', 'G__typename');
+        id, r'GAllHabitFieldsData_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllHabitFieldsData_comments_items_habit', 'id');
+        tagline, r'GAllHabitFieldsData_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllHabitFieldsData_comments_items_habit', 'tagline');
+        category, r'GAllHabitFieldsData_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllHabitFieldsData_comments_items_habit', 'category');
+        createdAt, r'GAllHabitFieldsData_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllHabitFieldsData_comments_items_habit', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllHabitFieldsData_comments_items_habit', 'updatedAt');
+        updatedAt, r'GAllHabitFieldsData_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -50704,7 +51124,7 @@ class _$GAllHabitFieldsData_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllHabitFieldsData_comments_items_habit')
+            r'GAllHabitFieldsData_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -50814,19 +51234,21 @@ class GAllHabitFieldsData_comments_items_habitBuilder
   }
 
   @override
-  _$GAllHabitFieldsData_comments_items_habit build() {
+  GAllHabitFieldsData_comments_items_habit build() => _build();
+
+  _$GAllHabitFieldsData_comments_items_habit _build() {
     _$GAllHabitFieldsData_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GAllHabitFieldsData_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllHabitFieldsData_comments_items_habit', 'G__typename'),
+                  r'GAllHabitFieldsData_comments_items_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllHabitFieldsData_comments_items_habit', 'id'),
+                  id, r'GAllHabitFieldsData_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GAllHabitFieldsData_comments_items_habit', 'tagline'),
+                  r'GAllHabitFieldsData_comments_items_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GAllHabitFieldsData_comments_items_habit', 'category'),
+                  r'GAllHabitFieldsData_comments_items_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -50845,7 +51267,7 @@ class GAllHabitFieldsData_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllHabitFieldsData_comments_items_habit',
+            r'GAllHabitFieldsData_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -50870,15 +51292,15 @@ class _$GAllHabitFieldsData_comments_items_habit_comments
               updates]) =>
       (new GAllHabitFieldsData_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllHabitFieldsData_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllHabitFieldsData_comments_items_habit_comments', 'G__typename');
+        r'GAllHabitFieldsData_comments_items_habit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllHabitFieldsData_comments_items_habit_comments', 'items');
+        items, r'GAllHabitFieldsData_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -50909,7 +51331,7 @@ class _$GAllHabitFieldsData_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllHabitFieldsData_comments_items_habit_comments')
+            r'GAllHabitFieldsData_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -50963,14 +51385,16 @@ class GAllHabitFieldsData_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GAllHabitFieldsData_comments_items_habit_comments build() {
+  GAllHabitFieldsData_comments_items_habit_comments build() => _build();
+
+  _$GAllHabitFieldsData_comments_items_habit_comments _build() {
     _$GAllHabitFieldsData_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllHabitFieldsData_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllHabitFieldsData_comments_items_habit_comments',
+                  r'GAllHabitFieldsData_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -50980,7 +51404,7 @@ class GAllHabitFieldsData_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllHabitFieldsData_comments_items_habit_comments',
+            r'GAllHabitFieldsData_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -51014,7 +51438,7 @@ class _$GAllHabitFieldsData_comments_items_habit_comments_items
               updates]) =>
       (new GAllHabitFieldsData_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllHabitFieldsData_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -51027,16 +51451,20 @@ class _$GAllHabitFieldsData_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllHabitFieldsData_comments_items_habit_comments_items',
+        r'GAllHabitFieldsData_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllHabitFieldsData_comments_items_habit_comments_items', 'id');
+        id, r'GAllHabitFieldsData_comments_items_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GAllHabitFieldsData_comments_items_habit_comments_items', 'comment');
-    BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GAllHabitFieldsData_comments_items_habit_comments_items', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GAllHabitFieldsData_comments_items_habit_comments_items', 'updatedAt');
+        r'GAllHabitFieldsData_comments_items_habit_comments_items', 'comment');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt,
+        r'GAllHabitFieldsData_comments_items_habit_comments_items',
+        'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt,
+        r'GAllHabitFieldsData_comments_items_habit_comments_items',
+        'updatedAt');
   }
 
   @override
@@ -51081,7 +51509,7 @@ class _$GAllHabitFieldsData_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllHabitFieldsData_comments_items_habit_comments_items')
+            r'GAllHabitFieldsData_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -51166,24 +51594,26 @@ class GAllHabitFieldsData_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GAllHabitFieldsData_comments_items_habit_comments_items build() {
+  GAllHabitFieldsData_comments_items_habit_comments_items build() => _build();
+
+  _$GAllHabitFieldsData_comments_items_habit_comments_items _build() {
     _$GAllHabitFieldsData_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllHabitFieldsData_comments_items_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllHabitFieldsData_comments_items_habit_comments_items',
+                  r'GAllHabitFieldsData_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllHabitFieldsData_comments_items_habit_comments_items',
+                  r'GAllHabitFieldsData_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GAllHabitFieldsData_comments_items_habit_comments_items',
+                  r'GAllHabitFieldsData_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -51196,7 +51626,7 @@ class GAllHabitFieldsData_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllHabitFieldsData_comments_items_habit_comments_items',
+            r'GAllHabitFieldsData_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -51225,7 +51655,7 @@ class _$GAllPublicUserFieldsData extends GAllPublicUserFieldsData {
 
   factory _$GAllPublicUserFieldsData(
           [void Function(GAllPublicUserFieldsDataBuilder)? updates]) =>
-      (new GAllPublicUserFieldsDataBuilder()..update(updates)).build();
+      (new GAllPublicUserFieldsDataBuilder()..update(updates))._build();
 
   _$GAllPublicUserFieldsData._(
       {required this.G__typename,
@@ -51237,9 +51667,9 @@ class _$GAllPublicUserFieldsData extends GAllPublicUserFieldsData {
       this.habits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPublicUserFieldsData', 'G__typename');
+        G__typename, r'GAllPublicUserFieldsData', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GAllPublicUserFieldsData', 'username');
+        username, r'GAllPublicUserFieldsData', 'username');
   }
 
   @override
@@ -51280,7 +51710,7 @@ class _$GAllPublicUserFieldsData extends GAllPublicUserFieldsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPublicUserFieldsData')
+    return (newBuiltValueToStringHelper(r'GAllPublicUserFieldsData')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -51363,15 +51793,17 @@ class GAllPublicUserFieldsDataBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData build() {
+  GAllPublicUserFieldsData build() => _build();
+
+  _$GAllPublicUserFieldsData _build() {
     _$GAllPublicUserFieldsData _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllPublicUserFieldsData', 'G__typename'),
+                  G__typename, r'GAllPublicUserFieldsData', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GAllPublicUserFieldsData', 'username'),
+                  username, r'GAllPublicUserFieldsData', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -51388,7 +51820,7 @@ class GAllPublicUserFieldsDataBuilder
         _habits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData', _$failedField, e.toString());
+            r'GAllPublicUserFieldsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -51414,7 +51846,7 @@ class _$GAllPublicUserFieldsData_avatar
 
   factory _$GAllPublicUserFieldsData_avatar(
           [void Function(GAllPublicUserFieldsData_avatarBuilder)? updates]) =>
-      (new GAllPublicUserFieldsData_avatarBuilder()..update(updates)).build();
+      (new GAllPublicUserFieldsData_avatarBuilder()..update(updates))._build();
 
   _$GAllPublicUserFieldsData_avatar._(
       {required this.G__typename,
@@ -51425,13 +51857,13 @@ class _$GAllPublicUserFieldsData_avatar
       this.cognitoId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPublicUserFieldsData_avatar', 'G__typename');
+        G__typename, r'GAllPublicUserFieldsData_avatar', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        bucket, 'GAllPublicUserFieldsData_avatar', 'bucket');
+        bucket, r'GAllPublicUserFieldsData_avatar', 'bucket');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'GAllPublicUserFieldsData_avatar', 'region');
+        region, r'GAllPublicUserFieldsData_avatar', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        key, 'GAllPublicUserFieldsData_avatar', 'key');
+        key, r'GAllPublicUserFieldsData_avatar', 'key');
   }
 
   @override
@@ -51469,7 +51901,7 @@ class _$GAllPublicUserFieldsData_avatar
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPublicUserFieldsData_avatar')
+    return (newBuiltValueToStringHelper(r'GAllPublicUserFieldsData_avatar')
           ..add('G__typename', G__typename)
           ..add('bucket', bucket)
           ..add('region', region)
@@ -51541,17 +51973,19 @@ class GAllPublicUserFieldsData_avatarBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_avatar build() {
+  GAllPublicUserFieldsData_avatar build() => _build();
+
+  _$GAllPublicUserFieldsData_avatar _build() {
     final _$result = _$v ??
         new _$GAllPublicUserFieldsData_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GAllPublicUserFieldsData_avatar', 'G__typename'),
+                G__typename, r'GAllPublicUserFieldsData_avatar', 'G__typename'),
             bucket: BuiltValueNullFieldError.checkNotNull(
-                bucket, 'GAllPublicUserFieldsData_avatar', 'bucket'),
+                bucket, r'GAllPublicUserFieldsData_avatar', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'GAllPublicUserFieldsData_avatar', 'region'),
+                region, r'GAllPublicUserFieldsData_avatar', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GAllPublicUserFieldsData_avatar', 'key'),
+                key, r'GAllPublicUserFieldsData_avatar', 'key'),
             accessLevel: accessLevel,
             cognitoId: cognitoId);
     replace(_$result);
@@ -51568,15 +52002,16 @@ class _$GAllPublicUserFieldsData_comments
 
   factory _$GAllPublicUserFieldsData_comments(
           [void Function(GAllPublicUserFieldsData_commentsBuilder)? updates]) =>
-      (new GAllPublicUserFieldsData_commentsBuilder()..update(updates)).build();
+      (new GAllPublicUserFieldsData_commentsBuilder()..update(updates))
+          ._build();
 
   _$GAllPublicUserFieldsData_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPublicUserFieldsData_comments', 'G__typename');
+        G__typename, r'GAllPublicUserFieldsData_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllPublicUserFieldsData_comments', 'items');
+        items, r'GAllPublicUserFieldsData_comments', 'items');
   }
 
   @override
@@ -51603,7 +52038,7 @@ class _$GAllPublicUserFieldsData_comments
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPublicUserFieldsData_comments')
+    return (newBuiltValueToStringHelper(r'GAllPublicUserFieldsData_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -51654,13 +52089,15 @@ class GAllPublicUserFieldsData_commentsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_comments build() {
+  GAllPublicUserFieldsData_comments build() => _build();
+
+  _$GAllPublicUserFieldsData_comments _build() {
     _$GAllPublicUserFieldsData_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPublicUserFieldsData_comments', 'G__typename'),
+                  r'GAllPublicUserFieldsData_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -51669,7 +52106,7 @@ class GAllPublicUserFieldsData_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_comments', _$failedField, e.toString());
+            r'GAllPublicUserFieldsData_comments', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -51703,7 +52140,7 @@ class _$GAllPublicUserFieldsData_comments_items
           [void Function(GAllPublicUserFieldsData_comments_itemsBuilder)?
               updates]) =>
       (new GAllPublicUserFieldsData_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_comments_items._(
       {required this.G__typename,
@@ -51717,15 +52154,15 @@ class _$GAllPublicUserFieldsData_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPublicUserFieldsData_comments_items', 'G__typename');
+        G__typename, r'GAllPublicUserFieldsData_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPublicUserFieldsData_comments_items', 'id');
+        id, r'GAllPublicUserFieldsData_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GAllPublicUserFieldsData_comments_items', 'comment');
+        comment, r'GAllPublicUserFieldsData_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllPublicUserFieldsData_comments_items', 'createdAt');
+        createdAt, r'GAllPublicUserFieldsData_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllPublicUserFieldsData_comments_items', 'updatedAt');
+        updatedAt, r'GAllPublicUserFieldsData_comments_items', 'updatedAt');
   }
 
   @override
@@ -51774,7 +52211,7 @@ class _$GAllPublicUserFieldsData_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_comments_items')
+            r'GAllPublicUserFieldsData_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -51873,21 +52310,23 @@ class GAllPublicUserFieldsData_comments_itemsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_comments_items build() {
+  GAllPublicUserFieldsData_comments_items build() => _build();
+
+  _$GAllPublicUserFieldsData_comments_items _build() {
     _$GAllPublicUserFieldsData_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPublicUserFieldsData_comments_items', 'G__typename'),
+                  r'GAllPublicUserFieldsData_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllPublicUserFieldsData_comments_items', 'id'),
+                  id, r'GAllPublicUserFieldsData_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GAllPublicUserFieldsData_comments_items', 'comment'),
+                  r'GAllPublicUserFieldsData_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -51905,7 +52344,7 @@ class GAllPublicUserFieldsData_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_comments_items',
+            r'GAllPublicUserFieldsData_comments_items',
             _$failedField,
             e.toString());
       }
@@ -51931,7 +52370,7 @@ class _$GAllPublicUserFieldsData_comments_items_by
           [void Function(GAllPublicUserFieldsData_comments_items_byBuilder)?
               updates]) =>
       (new GAllPublicUserFieldsData_comments_items_byBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_comments_items_by._(
       {required this.G__typename,
@@ -51940,9 +52379,9 @@ class _$GAllPublicUserFieldsData_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPublicUserFieldsData_comments_items_by', 'G__typename');
+        r'GAllPublicUserFieldsData_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GAllPublicUserFieldsData_comments_items_by', 'username');
+        username, r'GAllPublicUserFieldsData_comments_items_by', 'username');
   }
 
   @override
@@ -51976,7 +52415,7 @@ class _$GAllPublicUserFieldsData_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_comments_items_by')
+            r'GAllPublicUserFieldsData_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -52038,13 +52477,15 @@ class GAllPublicUserFieldsData_comments_items_byBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_comments_items_by build() {
+  GAllPublicUserFieldsData_comments_items_by build() => _build();
+
+  _$GAllPublicUserFieldsData_comments_items_by _build() {
     final _$result = _$v ??
         new _$GAllPublicUserFieldsData_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GAllPublicUserFieldsData_comments_items_by', 'G__typename'),
+                r'GAllPublicUserFieldsData_comments_items_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(username,
-                'GAllPublicUserFieldsData_comments_items_by', 'username'),
+                r'GAllPublicUserFieldsData_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -52082,7 +52523,7 @@ class _$GAllPublicUserFieldsData_comments_items_habit
               updates]) =>
       (new GAllPublicUserFieldsData_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_comments_items_habit._(
       {required this.G__typename,
@@ -52098,17 +52539,17 @@ class _$GAllPublicUserFieldsData_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPublicUserFieldsData_comments_items_habit', 'G__typename');
+        r'GAllPublicUserFieldsData_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPublicUserFieldsData_comments_items_habit', 'id');
+        id, r'GAllPublicUserFieldsData_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllPublicUserFieldsData_comments_items_habit', 'tagline');
+        tagline, r'GAllPublicUserFieldsData_comments_items_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllPublicUserFieldsData_comments_items_habit', 'category');
+        category, r'GAllPublicUserFieldsData_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GAllPublicUserFieldsData_comments_items_habit', 'createdAt');
+        r'GAllPublicUserFieldsData_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GAllPublicUserFieldsData_comments_items_habit', 'updatedAt');
+        r'GAllPublicUserFieldsData_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -52165,7 +52606,7 @@ class _$GAllPublicUserFieldsData_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_comments_items_habit')
+            r'GAllPublicUserFieldsData_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -52277,21 +52718,23 @@ class GAllPublicUserFieldsData_comments_items_habitBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_comments_items_habit build() {
+  GAllPublicUserFieldsData_comments_items_habit build() => _build();
+
+  _$GAllPublicUserFieldsData_comments_items_habit _build() {
     _$GAllPublicUserFieldsData_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_comments_items_habit',
+                  r'GAllPublicUserFieldsData_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllPublicUserFieldsData_comments_items_habit', 'id'),
+                  id, r'GAllPublicUserFieldsData_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GAllPublicUserFieldsData_comments_items_habit', 'tagline'),
+                  r'GAllPublicUserFieldsData_comments_items_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GAllPublicUserFieldsData_comments_items_habit', 'category'),
+                  r'GAllPublicUserFieldsData_comments_items_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -52310,7 +52753,7 @@ class GAllPublicUserFieldsData_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_comments_items_habit',
+            r'GAllPublicUserFieldsData_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -52335,17 +52778,17 @@ class _$GAllPublicUserFieldsData_comments_items_habit_comments
               updates]) =>
       (new GAllPublicUserFieldsData_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPublicUserFieldsData_comments_items_habit_comments',
+        r'GAllPublicUserFieldsData_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GAllPublicUserFieldsData_comments_items_habit_comments', 'items');
+        r'GAllPublicUserFieldsData_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -52376,7 +52819,7 @@ class _$GAllPublicUserFieldsData_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_comments_items_habit_comments')
+            r'GAllPublicUserFieldsData_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -52434,14 +52877,16 @@ class GAllPublicUserFieldsData_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_comments_items_habit_comments build() {
+  GAllPublicUserFieldsData_comments_items_habit_comments build() => _build();
+
+  _$GAllPublicUserFieldsData_comments_items_habit_comments _build() {
     _$GAllPublicUserFieldsData_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_comments_items_habit_comments',
+                  r'GAllPublicUserFieldsData_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -52451,7 +52896,7 @@ class GAllPublicUserFieldsData_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_comments_items_habit_comments',
+            r'GAllPublicUserFieldsData_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -52485,7 +52930,7 @@ class _$GAllPublicUserFieldsData_comments_items_habit_comments_items
               updates]) =>
       (new GAllPublicUserFieldsData_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -52498,21 +52943,21 @@ class _$GAllPublicUserFieldsData_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(id,
-        'GAllPublicUserFieldsData_comments_items_habit_comments_items', 'id');
+        r'GAllPublicUserFieldsData_comments_items_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -52560,7 +53005,7 @@ class _$GAllPublicUserFieldsData_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_comments_items_habit_comments_items')
+            r'GAllPublicUserFieldsData_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -52648,24 +53093,27 @@ class GAllPublicUserFieldsData_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_comments_items_habit_comments_items build() {
+  GAllPublicUserFieldsData_comments_items_habit_comments_items build() =>
+      _build();
+
+  _$GAllPublicUserFieldsData_comments_items_habit_comments_items _build() {
     _$GAllPublicUserFieldsData_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_comments_items_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+                  r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+                  r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+                  r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -52678,7 +53126,7 @@ class GAllPublicUserFieldsData_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_comments_items_habit_comments_items',
+            r'GAllPublicUserFieldsData_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -52698,15 +53146,15 @@ class _$GAllPublicUserFieldsData_habits
 
   factory _$GAllPublicUserFieldsData_habits(
           [void Function(GAllPublicUserFieldsData_habitsBuilder)? updates]) =>
-      (new GAllPublicUserFieldsData_habitsBuilder()..update(updates)).build();
+      (new GAllPublicUserFieldsData_habitsBuilder()..update(updates))._build();
 
   _$GAllPublicUserFieldsData_habits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPublicUserFieldsData_habits', 'G__typename');
+        G__typename, r'GAllPublicUserFieldsData_habits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllPublicUserFieldsData_habits', 'items');
+        items, r'GAllPublicUserFieldsData_habits', 'items');
   }
 
   @override
@@ -52733,7 +53181,7 @@ class _$GAllPublicUserFieldsData_habits
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPublicUserFieldsData_habits')
+    return (newBuiltValueToStringHelper(r'GAllPublicUserFieldsData_habits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -52783,13 +53231,15 @@ class GAllPublicUserFieldsData_habitsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_habits build() {
+  GAllPublicUserFieldsData_habits build() => _build();
+
+  _$GAllPublicUserFieldsData_habits _build() {
     _$GAllPublicUserFieldsData_habits _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_habits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPublicUserFieldsData_habits', 'G__typename'),
+                  r'GAllPublicUserFieldsData_habits', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -52798,7 +53248,7 @@ class GAllPublicUserFieldsData_habitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_habits', _$failedField, e.toString());
+            r'GAllPublicUserFieldsData_habits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -52836,7 +53286,7 @@ class _$GAllPublicUserFieldsData_habits_items
           [void Function(GAllPublicUserFieldsData_habits_itemsBuilder)?
               updates]) =>
       (new GAllPublicUserFieldsData_habits_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_habits_items._(
       {required this.G__typename,
@@ -52852,17 +53302,17 @@ class _$GAllPublicUserFieldsData_habits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPublicUserFieldsData_habits_items', 'G__typename');
+        G__typename, r'GAllPublicUserFieldsData_habits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPublicUserFieldsData_habits_items', 'id');
+        id, r'GAllPublicUserFieldsData_habits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllPublicUserFieldsData_habits_items', 'tagline');
+        tagline, r'GAllPublicUserFieldsData_habits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllPublicUserFieldsData_habits_items', 'category');
+        category, r'GAllPublicUserFieldsData_habits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllPublicUserFieldsData_habits_items', 'createdAt');
+        createdAt, r'GAllPublicUserFieldsData_habits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllPublicUserFieldsData_habits_items', 'updatedAt');
+        updatedAt, r'GAllPublicUserFieldsData_habits_items', 'updatedAt');
   }
 
   @override
@@ -52918,7 +53368,8 @@ class _$GAllPublicUserFieldsData_habits_items
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPublicUserFieldsData_habits_items')
+    return (newBuiltValueToStringHelper(
+            r'GAllPublicUserFieldsData_habits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -53028,19 +53479,21 @@ class GAllPublicUserFieldsData_habits_itemsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_habits_items build() {
+  GAllPublicUserFieldsData_habits_items build() => _build();
+
+  _$GAllPublicUserFieldsData_habits_items _build() {
     _$GAllPublicUserFieldsData_habits_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_habits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPublicUserFieldsData_habits_items', 'G__typename'),
+                  r'GAllPublicUserFieldsData_habits_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllPublicUserFieldsData_habits_items', 'id'),
+                  id, r'GAllPublicUserFieldsData_habits_items', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GAllPublicUserFieldsData_habits_items', 'tagline'),
+                  tagline, r'GAllPublicUserFieldsData_habits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GAllPublicUserFieldsData_habits_items', 'category'),
+                  r'GAllPublicUserFieldsData_habits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -53059,7 +53512,7 @@ class GAllPublicUserFieldsData_habits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_habits_items',
+            r'GAllPublicUserFieldsData_habits_items',
             _$failedField,
             e.toString());
       }
@@ -53082,15 +53535,15 @@ class _$GAllPublicUserFieldsData_habits_items_comments
               updates]) =>
       (new GAllPublicUserFieldsData_habits_items_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_habits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPublicUserFieldsData_habits_items_comments', 'G__typename');
+        r'GAllPublicUserFieldsData_habits_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllPublicUserFieldsData_habits_items_comments', 'items');
+        items, r'GAllPublicUserFieldsData_habits_items_comments', 'items');
   }
 
   @override
@@ -53120,7 +53573,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_habits_items_comments')
+            r'GAllPublicUserFieldsData_habits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -53175,14 +53628,16 @@ class GAllPublicUserFieldsData_habits_items_commentsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_habits_items_comments build() {
+  GAllPublicUserFieldsData_habits_items_comments build() => _build();
+
+  _$GAllPublicUserFieldsData_habits_items_comments _build() {
     _$GAllPublicUserFieldsData_habits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_habits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_habits_items_comments',
+                  r'GAllPublicUserFieldsData_habits_items_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -53192,7 +53647,7 @@ class GAllPublicUserFieldsData_habits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_habits_items_comments',
+            r'GAllPublicUserFieldsData_habits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -53230,7 +53685,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items
               updates]) =>
       (new GAllPublicUserFieldsData_habits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_habits_items_comments_items._(
       {required this.G__typename,
@@ -53244,15 +53699,15 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPublicUserFieldsData_habits_items_comments_items', 'G__typename');
+        r'GAllPublicUserFieldsData_habits_items_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPublicUserFieldsData_habits_items_comments_items', 'id');
+        id, r'GAllPublicUserFieldsData_habits_items_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GAllPublicUserFieldsData_habits_items_comments_items', 'comment');
+        r'GAllPublicUserFieldsData_habits_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GAllPublicUserFieldsData_habits_items_comments_items', 'createdAt');
+        r'GAllPublicUserFieldsData_habits_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GAllPublicUserFieldsData_habits_items_comments_items', 'updatedAt');
+        r'GAllPublicUserFieldsData_habits_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -53303,7 +53758,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_habits_items_comments_items')
+            r'GAllPublicUserFieldsData_habits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -53408,24 +53863,28 @@ class GAllPublicUserFieldsData_habits_items_comments_itemsBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_habits_items_comments_items build() {
+  GAllPublicUserFieldsData_habits_items_comments_items build() => _build();
+
+  _$GAllPublicUserFieldsData_habits_items_comments_items _build() {
     _$GAllPublicUserFieldsData_habits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_habits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_habits_items_comments_items',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items',
                   'G__typename'),
-              id: BuiltValueNullFieldError.checkNotNull(id,
-                  'GAllPublicUserFieldsData_habits_items_comments_items', 'id'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id,
+                  r'GAllPublicUserFieldsData_habits_items_comments_items',
+                  'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GAllPublicUserFieldsData_habits_items_comments_items',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -53444,7 +53903,7 @@ class GAllPublicUserFieldsData_habits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_habits_items_comments_items',
+            r'GAllPublicUserFieldsData_habits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -53472,7 +53931,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_by
               updates]) =>
       (new GAllPublicUserFieldsData_habits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_habits_items_comments_items_by._(
       {required this.G__typename,
@@ -53482,10 +53941,10 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_by
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPublicUserFieldsData_habits_items_comments_items_by',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_by',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(username,
-        'GAllPublicUserFieldsData_habits_items_comments_items_by', 'username');
+        r'GAllPublicUserFieldsData_habits_items_comments_items_by', 'username');
   }
 
   @override
@@ -53521,7 +53980,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_habits_items_comments_items_by')
+            r'GAllPublicUserFieldsData_habits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -53585,16 +54044,18 @@ class GAllPublicUserFieldsData_habits_items_comments_items_byBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_habits_items_comments_items_by build() {
+  GAllPublicUserFieldsData_habits_items_comments_items_by build() => _build();
+
+  _$GAllPublicUserFieldsData_habits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GAllPublicUserFieldsData_habits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GAllPublicUserFieldsData_habits_items_comments_items_by',
+                r'GAllPublicUserFieldsData_habits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GAllPublicUserFieldsData_habits_items_comments_items_by',
+                r'GAllPublicUserFieldsData_habits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -53635,7 +54096,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit
               updates]) =>
       (new GAllPublicUserFieldsData_habits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_habits_items_comments_items_habit._(
       {required this.G__typename,
@@ -53652,25 +54113,25 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
         'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPublicUserFieldsData_habits_items_comments_items_habit', 'id');
+    BuiltValueNullFieldError.checkNotNull(id,
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
         tagline,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
         'tagline');
     BuiltValueNullFieldError.checkNotNull(
         category,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
         'category');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
         'updatedAt');
   }
 
@@ -53732,7 +54193,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_habits_items_comments_items_habit')
+            r'GAllPublicUserFieldsData_habits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -53848,26 +54309,29 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GAllPublicUserFieldsData_habits_items_comments_items_habit build() {
+  GAllPublicUserFieldsData_habits_items_comments_items_habit build() =>
+      _build();
+
+  _$GAllPublicUserFieldsData_habits_items_comments_items_habit _build() {
     _$GAllPublicUserFieldsData_habits_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GAllPublicUserFieldsData_habits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -53887,7 +54351,7 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_habits_items_comments_items_habit',
+            r'GAllPublicUserFieldsData_habits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -53913,18 +54377,18 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
               updates]) =>
       (new GAllPublicUserFieldsData_habits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -53958,7 +54422,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments')
+            r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -54023,8 +54487,11 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habit_commentsBuilder
   }
 
   @override
+  GAllPublicUserFieldsData_habits_items_comments_items_habit_comments build() =>
+      _build();
+
   _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
-      build() {
+      _build() {
     _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
         _$result;
     try {
@@ -54033,7 +54500,7 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habit_commentsBuilder
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -54043,7 +54510,7 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
+            r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -54077,7 +54544,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_item
               updates]) =>
       (new GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -54090,23 +54557,23 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_item
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -54154,7 +54621,7 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_item
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items')
+            r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -54245,8 +54712,11 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_itemsB
   }
 
   @override
+  GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -54255,17 +54725,17 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_itemsB
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -54278,7 +54748,7 @@ class GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_itemsB
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
+            r'GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -54311,7 +54781,7 @@ class _$GAllPrivateUserFieldsData extends GAllPrivateUserFieldsData {
 
   factory _$GAllPrivateUserFieldsData(
           [void Function(GAllPrivateUserFieldsDataBuilder)? updates]) =>
-      (new GAllPrivateUserFieldsDataBuilder()..update(updates)).build();
+      (new GAllPrivateUserFieldsDataBuilder()..update(updates))._build();
 
   _$GAllPrivateUserFieldsData._(
       {required this.G__typename,
@@ -54325,9 +54795,9 @@ class _$GAllPrivateUserFieldsData extends GAllPrivateUserFieldsData {
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPrivateUserFieldsData', 'G__typename');
+        G__typename, r'GAllPrivateUserFieldsData', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GAllPrivateUserFieldsData', 'username');
+        username, r'GAllPrivateUserFieldsData', 'username');
   }
 
   @override
@@ -54376,7 +54846,7 @@ class _$GAllPrivateUserFieldsData extends GAllPrivateUserFieldsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPrivateUserFieldsData')
+    return (newBuiltValueToStringHelper(r'GAllPrivateUserFieldsData')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -54475,15 +54945,17 @@ class GAllPrivateUserFieldsDataBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData build() {
+  GAllPrivateUserFieldsData build() => _build();
+
+  _$GAllPrivateUserFieldsData _build() {
     _$GAllPrivateUserFieldsData _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllPrivateUserFieldsData', 'G__typename'),
+                  G__typename, r'GAllPrivateUserFieldsData', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GAllPrivateUserFieldsData', 'username'),
+                  username, r'GAllPrivateUserFieldsData', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -54506,7 +54978,7 @@ class GAllPrivateUserFieldsDataBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData', _$failedField, e.toString());
+            r'GAllPrivateUserFieldsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -54532,7 +55004,7 @@ class _$GAllPrivateUserFieldsData_avatar
 
   factory _$GAllPrivateUserFieldsData_avatar(
           [void Function(GAllPrivateUserFieldsData_avatarBuilder)? updates]) =>
-      (new GAllPrivateUserFieldsData_avatarBuilder()..update(updates)).build();
+      (new GAllPrivateUserFieldsData_avatarBuilder()..update(updates))._build();
 
   _$GAllPrivateUserFieldsData_avatar._(
       {required this.G__typename,
@@ -54543,13 +55015,13 @@ class _$GAllPrivateUserFieldsData_avatar
       this.cognitoId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPrivateUserFieldsData_avatar', 'G__typename');
+        G__typename, r'GAllPrivateUserFieldsData_avatar', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        bucket, 'GAllPrivateUserFieldsData_avatar', 'bucket');
+        bucket, r'GAllPrivateUserFieldsData_avatar', 'bucket');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'GAllPrivateUserFieldsData_avatar', 'region');
+        region, r'GAllPrivateUserFieldsData_avatar', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        key, 'GAllPrivateUserFieldsData_avatar', 'key');
+        key, r'GAllPrivateUserFieldsData_avatar', 'key');
   }
 
   @override
@@ -54587,7 +55059,7 @@ class _$GAllPrivateUserFieldsData_avatar
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPrivateUserFieldsData_avatar')
+    return (newBuiltValueToStringHelper(r'GAllPrivateUserFieldsData_avatar')
           ..add('G__typename', G__typename)
           ..add('bucket', bucket)
           ..add('region', region)
@@ -54659,17 +55131,19 @@ class GAllPrivateUserFieldsData_avatarBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_avatar build() {
+  GAllPrivateUserFieldsData_avatar build() => _build();
+
+  _$GAllPrivateUserFieldsData_avatar _build() {
     final _$result = _$v ??
         new _$GAllPrivateUserFieldsData_avatar._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GAllPrivateUserFieldsData_avatar', 'G__typename'),
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GAllPrivateUserFieldsData_avatar', 'G__typename'),
             bucket: BuiltValueNullFieldError.checkNotNull(
-                bucket, 'GAllPrivateUserFieldsData_avatar', 'bucket'),
+                bucket, r'GAllPrivateUserFieldsData_avatar', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'GAllPrivateUserFieldsData_avatar', 'region'),
+                region, r'GAllPrivateUserFieldsData_avatar', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GAllPrivateUserFieldsData_avatar', 'key'),
+                key, r'GAllPrivateUserFieldsData_avatar', 'key'),
             accessLevel: accessLevel,
             cognitoId: cognitoId);
     replace(_$result);
@@ -54688,15 +55162,15 @@ class _$GAllPrivateUserFieldsData_comments
           [void Function(GAllPrivateUserFieldsData_commentsBuilder)?
               updates]) =>
       (new GAllPrivateUserFieldsData_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPrivateUserFieldsData_comments', 'G__typename');
+        G__typename, r'GAllPrivateUserFieldsData_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllPrivateUserFieldsData_comments', 'items');
+        items, r'GAllPrivateUserFieldsData_comments', 'items');
   }
 
   @override
@@ -54723,7 +55197,7 @@ class _$GAllPrivateUserFieldsData_comments
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPrivateUserFieldsData_comments')
+    return (newBuiltValueToStringHelper(r'GAllPrivateUserFieldsData_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -54774,13 +55248,15 @@ class GAllPrivateUserFieldsData_commentsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_comments build() {
+  GAllPrivateUserFieldsData_comments build() => _build();
+
+  _$GAllPrivateUserFieldsData_comments _build() {
     _$GAllPrivateUserFieldsData_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPrivateUserFieldsData_comments', 'G__typename'),
+                  r'GAllPrivateUserFieldsData_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -54789,7 +55265,7 @@ class GAllPrivateUserFieldsData_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_comments', _$failedField, e.toString());
+            r'GAllPrivateUserFieldsData_comments', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -54823,7 +55299,7 @@ class _$GAllPrivateUserFieldsData_comments_items
           [void Function(GAllPrivateUserFieldsData_comments_itemsBuilder)?
               updates]) =>
       (new GAllPrivateUserFieldsData_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_comments_items._(
       {required this.G__typename,
@@ -54836,16 +55312,16 @@ class _$GAllPrivateUserFieldsData_comments_items
       required this.createdAt,
       required this.updatedAt})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GAllPrivateUserFieldsData_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPrivateUserFieldsData_comments_items', 'G__typename');
+        id, r'GAllPrivateUserFieldsData_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPrivateUserFieldsData_comments_items', 'id');
+        comment, r'GAllPrivateUserFieldsData_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GAllPrivateUserFieldsData_comments_items', 'comment');
+        createdAt, r'GAllPrivateUserFieldsData_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllPrivateUserFieldsData_comments_items', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllPrivateUserFieldsData_comments_items', 'updatedAt');
+        updatedAt, r'GAllPrivateUserFieldsData_comments_items', 'updatedAt');
   }
 
   @override
@@ -54894,7 +55370,7 @@ class _$GAllPrivateUserFieldsData_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_comments_items')
+            r'GAllPrivateUserFieldsData_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -54993,21 +55469,23 @@ class GAllPrivateUserFieldsData_comments_itemsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_comments_items build() {
+  GAllPrivateUserFieldsData_comments_items build() => _build();
+
+  _$GAllPrivateUserFieldsData_comments_items _build() {
     _$GAllPrivateUserFieldsData_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPrivateUserFieldsData_comments_items', 'G__typename'),
+                  r'GAllPrivateUserFieldsData_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllPrivateUserFieldsData_comments_items', 'id'),
+                  id, r'GAllPrivateUserFieldsData_comments_items', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GAllPrivateUserFieldsData_comments_items', 'comment'),
+                  r'GAllPrivateUserFieldsData_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -55025,7 +55503,7 @@ class GAllPrivateUserFieldsData_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_comments_items',
+            r'GAllPrivateUserFieldsData_comments_items',
             _$failedField,
             e.toString());
       }
@@ -55052,7 +55530,7 @@ class _$GAllPrivateUserFieldsData_comments_items_by
               updates]) =>
       (new GAllPrivateUserFieldsData_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_comments_items_by._(
       {required this.G__typename,
@@ -55061,9 +55539,9 @@ class _$GAllPrivateUserFieldsData_comments_items_by
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPrivateUserFieldsData_comments_items_by', 'G__typename');
+        r'GAllPrivateUserFieldsData_comments_items_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GAllPrivateUserFieldsData_comments_items_by', 'username');
+        username, r'GAllPrivateUserFieldsData_comments_items_by', 'username');
   }
 
   @override
@@ -55097,7 +55575,7 @@ class _$GAllPrivateUserFieldsData_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_comments_items_by')
+            r'GAllPrivateUserFieldsData_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -55159,13 +55637,15 @@ class GAllPrivateUserFieldsData_comments_items_byBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_comments_items_by build() {
+  GAllPrivateUserFieldsData_comments_items_by build() => _build();
+
+  _$GAllPrivateUserFieldsData_comments_items_by _build() {
     final _$result = _$v ??
         new _$GAllPrivateUserFieldsData_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                'GAllPrivateUserFieldsData_comments_items_by', 'G__typename'),
+                r'GAllPrivateUserFieldsData_comments_items_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(username,
-                'GAllPrivateUserFieldsData_comments_items_by', 'username'),
+                r'GAllPrivateUserFieldsData_comments_items_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -55203,7 +55683,7 @@ class _$GAllPrivateUserFieldsData_comments_items_habit
               updates]) =>
       (new GAllPrivateUserFieldsData_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_comments_items_habit._(
       {required this.G__typename,
@@ -55219,17 +55699,17 @@ class _$GAllPrivateUserFieldsData_comments_items_habit
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPrivateUserFieldsData_comments_items_habit', 'G__typename');
+        r'GAllPrivateUserFieldsData_comments_items_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPrivateUserFieldsData_comments_items_habit', 'id');
+        id, r'GAllPrivateUserFieldsData_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllPrivateUserFieldsData_comments_items_habit', 'tagline');
-    BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllPrivateUserFieldsData_comments_items_habit', 'category');
+        tagline, r'GAllPrivateUserFieldsData_comments_items_habit', 'tagline');
+    BuiltValueNullFieldError.checkNotNull(category,
+        r'GAllPrivateUserFieldsData_comments_items_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GAllPrivateUserFieldsData_comments_items_habit', 'createdAt');
+        r'GAllPrivateUserFieldsData_comments_items_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GAllPrivateUserFieldsData_comments_items_habit', 'updatedAt');
+        r'GAllPrivateUserFieldsData_comments_items_habit', 'updatedAt');
   }
 
   @override
@@ -55287,7 +55767,7 @@ class _$GAllPrivateUserFieldsData_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_comments_items_habit')
+            r'GAllPrivateUserFieldsData_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -55399,21 +55879,25 @@ class GAllPrivateUserFieldsData_comments_items_habitBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_comments_items_habit build() {
+  GAllPrivateUserFieldsData_comments_items_habit build() => _build();
+
+  _$GAllPrivateUserFieldsData_comments_items_habit _build() {
     _$GAllPrivateUserFieldsData_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_comments_items_habit',
+                  r'GAllPrivateUserFieldsData_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllPrivateUserFieldsData_comments_items_habit', 'id'),
+                  id, r'GAllPrivateUserFieldsData_comments_items_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(tagline,
-                  'GAllPrivateUserFieldsData_comments_items_habit', 'tagline'),
-              category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GAllPrivateUserFieldsData_comments_items_habit', 'category'),
+                  r'GAllPrivateUserFieldsData_comments_items_habit', 'tagline'),
+              category: BuiltValueNullFieldError.checkNotNull(
+                  category,
+                  r'GAllPrivateUserFieldsData_comments_items_habit',
+                  'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -55432,7 +55916,7 @@ class GAllPrivateUserFieldsData_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_comments_items_habit',
+            r'GAllPrivateUserFieldsData_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -55457,17 +55941,17 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_comments
               updates]) =>
       (new GAllPrivateUserFieldsData_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPrivateUserFieldsData_comments_items_habit_comments',
+        r'GAllPrivateUserFieldsData_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(items,
-        'GAllPrivateUserFieldsData_comments_items_habit_comments', 'items');
+        r'GAllPrivateUserFieldsData_comments_items_habit_comments', 'items');
   }
 
   @override
@@ -55498,7 +55982,7 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_comments_items_habit_comments')
+            r'GAllPrivateUserFieldsData_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -55556,14 +56040,16 @@ class GAllPrivateUserFieldsData_comments_items_habit_commentsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_comments_items_habit_comments build() {
+  GAllPrivateUserFieldsData_comments_items_habit_comments build() => _build();
+
+  _$GAllPrivateUserFieldsData_comments_items_habit_comments _build() {
     _$GAllPrivateUserFieldsData_comments_items_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_comments_items_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_comments_items_habit_comments',
+                  r'GAllPrivateUserFieldsData_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -55573,7 +56059,7 @@ class GAllPrivateUserFieldsData_comments_items_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_comments_items_habit_comments',
+            r'GAllPrivateUserFieldsData_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -55607,7 +56093,7 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_comments_items
               updates]) =>
       (new GAllPrivateUserFieldsData_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -55620,21 +56106,21 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_comments_items
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(id,
-        'GAllPrivateUserFieldsData_comments_items_habit_comments_items', 'id');
+        r'GAllPrivateUserFieldsData_comments_items_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -55682,7 +56168,7 @@ class _$GAllPrivateUserFieldsData_comments_items_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_comments_items_habit_comments_items')
+            r'GAllPrivateUserFieldsData_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -55770,24 +56256,27 @@ class GAllPrivateUserFieldsData_comments_items_habit_comments_itemsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_comments_items_habit_comments_items build() {
+  GAllPrivateUserFieldsData_comments_items_habit_comments_items build() =>
+      _build();
+
+  _$GAllPrivateUserFieldsData_comments_items_habit_comments_items _build() {
     _$GAllPrivateUserFieldsData_comments_items_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_comments_items_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+                  r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+                  r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+                  r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -55800,7 +56289,7 @@ class GAllPrivateUserFieldsData_comments_items_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
+            r'GAllPrivateUserFieldsData_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -55820,15 +56309,15 @@ class _$GAllPrivateUserFieldsData_habits
 
   factory _$GAllPrivateUserFieldsData_habits(
           [void Function(GAllPrivateUserFieldsData_habitsBuilder)? updates]) =>
-      (new GAllPrivateUserFieldsData_habitsBuilder()..update(updates)).build();
+      (new GAllPrivateUserFieldsData_habitsBuilder()..update(updates))._build();
 
   _$GAllPrivateUserFieldsData_habits._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPrivateUserFieldsData_habits', 'G__typename');
+        G__typename, r'GAllPrivateUserFieldsData_habits', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllPrivateUserFieldsData_habits', 'items');
+        items, r'GAllPrivateUserFieldsData_habits', 'items');
   }
 
   @override
@@ -55855,7 +56344,7 @@ class _$GAllPrivateUserFieldsData_habits
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllPrivateUserFieldsData_habits')
+    return (newBuiltValueToStringHelper(r'GAllPrivateUserFieldsData_habits')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -55905,13 +56394,15 @@ class GAllPrivateUserFieldsData_habitsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_habits build() {
+  GAllPrivateUserFieldsData_habits build() => _build();
+
+  _$GAllPrivateUserFieldsData_habits _build() {
     _$GAllPrivateUserFieldsData_habits _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_habits._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPrivateUserFieldsData_habits', 'G__typename'),
+                  r'GAllPrivateUserFieldsData_habits', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -55920,7 +56411,7 @@ class GAllPrivateUserFieldsData_habitsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_habits', _$failedField, e.toString());
+            r'GAllPrivateUserFieldsData_habits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -55958,7 +56449,7 @@ class _$GAllPrivateUserFieldsData_habits_items
           [void Function(GAllPrivateUserFieldsData_habits_itemsBuilder)?
               updates]) =>
       (new GAllPrivateUserFieldsData_habits_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_habits_items._(
       {required this.G__typename,
@@ -55974,17 +56465,17 @@ class _$GAllPrivateUserFieldsData_habits_items
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllPrivateUserFieldsData_habits_items', 'G__typename');
+        G__typename, r'GAllPrivateUserFieldsData_habits_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPrivateUserFieldsData_habits_items', 'id');
+        id, r'GAllPrivateUserFieldsData_habits_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllPrivateUserFieldsData_habits_items', 'tagline');
+        tagline, r'GAllPrivateUserFieldsData_habits_items', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllPrivateUserFieldsData_habits_items', 'category');
+        category, r'GAllPrivateUserFieldsData_habits_items', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllPrivateUserFieldsData_habits_items', 'createdAt');
+        createdAt, r'GAllPrivateUserFieldsData_habits_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllPrivateUserFieldsData_habits_items', 'updatedAt');
+        updatedAt, r'GAllPrivateUserFieldsData_habits_items', 'updatedAt');
   }
 
   @override
@@ -56041,7 +56532,7 @@ class _$GAllPrivateUserFieldsData_habits_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_habits_items')
+            r'GAllPrivateUserFieldsData_habits_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -56151,19 +56642,21 @@ class GAllPrivateUserFieldsData_habits_itemsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_habits_items build() {
+  GAllPrivateUserFieldsData_habits_items build() => _build();
+
+  _$GAllPrivateUserFieldsData_habits_items _build() {
     _$GAllPrivateUserFieldsData_habits_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_habits_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllPrivateUserFieldsData_habits_items', 'G__typename'),
+                  r'GAllPrivateUserFieldsData_habits_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllPrivateUserFieldsData_habits_items', 'id'),
-              tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GAllPrivateUserFieldsData_habits_items', 'tagline'),
+                  id, r'GAllPrivateUserFieldsData_habits_items', 'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(tagline,
+                  r'GAllPrivateUserFieldsData_habits_items', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(category,
-                  'GAllPrivateUserFieldsData_habits_items', 'category'),
+                  r'GAllPrivateUserFieldsData_habits_items', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -56182,7 +56675,7 @@ class GAllPrivateUserFieldsData_habits_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_habits_items',
+            r'GAllPrivateUserFieldsData_habits_items',
             _$failedField,
             e.toString());
       }
@@ -56206,15 +56699,15 @@ class _$GAllPrivateUserFieldsData_habits_items_comments
               updates]) =>
       (new GAllPrivateUserFieldsData_habits_items_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_habits_items_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPrivateUserFieldsData_habits_items_comments', 'G__typename');
+        r'GAllPrivateUserFieldsData_habits_items_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllPrivateUserFieldsData_habits_items_comments', 'items');
+        items, r'GAllPrivateUserFieldsData_habits_items_comments', 'items');
   }
 
   @override
@@ -56244,7 +56737,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_habits_items_comments')
+            r'GAllPrivateUserFieldsData_habits_items_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -56299,14 +56792,16 @@ class GAllPrivateUserFieldsData_habits_items_commentsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_habits_items_comments build() {
+  GAllPrivateUserFieldsData_habits_items_comments build() => _build();
+
+  _$GAllPrivateUserFieldsData_habits_items_comments _build() {
     _$GAllPrivateUserFieldsData_habits_items_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_habits_items_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_habits_items_comments',
+                  r'GAllPrivateUserFieldsData_habits_items_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -56316,7 +56811,7 @@ class GAllPrivateUserFieldsData_habits_items_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_habits_items_comments',
+            r'GAllPrivateUserFieldsData_habits_items_comments',
             _$failedField,
             e.toString());
       }
@@ -56354,7 +56849,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items
               updates]) =>
       (new GAllPrivateUserFieldsData_habits_items_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_habits_items_comments_items._(
       {required this.G__typename,
@@ -56367,16 +56862,18 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items
       required this.createdAt,
       required this.updatedAt})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllPrivateUserFieldsData_habits_items_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllPrivateUserFieldsData_habits_items_comments_items', 'id');
+        G__typename,
+        r'GAllPrivateUserFieldsData_habits_items_comments_items',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GAllPrivateUserFieldsData_habits_items_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(comment,
-        'GAllPrivateUserFieldsData_habits_items_comments_items', 'comment');
+        r'GAllPrivateUserFieldsData_habits_items_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(createdAt,
-        'GAllPrivateUserFieldsData_habits_items_comments_items', 'createdAt');
+        r'GAllPrivateUserFieldsData_habits_items_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt,
-        'GAllPrivateUserFieldsData_habits_items_comments_items', 'updatedAt');
+        r'GAllPrivateUserFieldsData_habits_items_comments_items', 'updatedAt');
   }
 
   @override
@@ -56427,7 +56924,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_habits_items_comments_items')
+            r'GAllPrivateUserFieldsData_habits_items_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -56532,18 +57029,20 @@ class GAllPrivateUserFieldsData_habits_items_comments_itemsBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_habits_items_comments_items build() {
+  GAllPrivateUserFieldsData_habits_items_comments_items build() => _build();
+
+  _$GAllPrivateUserFieldsData_habits_items_comments_items _build() {
     _$GAllPrivateUserFieldsData_habits_items_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_habits_items_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items',
                   'id'),
               owner: owner,
               by: _by?.build(),
@@ -56551,7 +57050,7 @@ class GAllPrivateUserFieldsData_habits_items_comments_itemsBuilder
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -56570,7 +57069,7 @@ class GAllPrivateUserFieldsData_habits_items_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_habits_items_comments_items',
+            r'GAllPrivateUserFieldsData_habits_items_comments_items',
             _$failedField,
             e.toString());
       }
@@ -56598,7 +57097,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_by
               updates]) =>
       (new GAllPrivateUserFieldsData_habits_items_comments_items_byBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_habits_items_comments_items_by._(
       {required this.G__typename,
@@ -56608,10 +57107,12 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_by
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
         'G__typename');
-    BuiltValueNullFieldError.checkNotNull(username,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_by', 'username');
+    BuiltValueNullFieldError.checkNotNull(
+        username,
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+        'username');
   }
 
   @override
@@ -56647,7 +57148,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_by
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_habits_items_comments_items_by')
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -56711,16 +57212,18 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_byBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_habits_items_comments_items_by build() {
+  GAllPrivateUserFieldsData_habits_items_comments_items_by build() => _build();
+
+  _$GAllPrivateUserFieldsData_habits_items_comments_items_by _build() {
     final _$result = _$v ??
         new _$GAllPrivateUserFieldsData_habits_items_comments_items_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+                r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
                 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username,
-                'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+                r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
                 'username'),
             displayUsername: displayUsername,
             name: name);
@@ -56761,7 +57264,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit
               updates]) =>
       (new GAllPrivateUserFieldsData_habits_items_comments_items_habitBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_habits_items_comments_items_habit._(
       {required this.G__typename,
@@ -56778,25 +57281,25 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(id,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit', 'id');
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
         tagline,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
         'tagline');
     BuiltValueNullFieldError.checkNotNull(
         category,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
         'category');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
         'updatedAt');
   }
 
@@ -56858,7 +57361,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_habits_items_comments_items_habit')
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -56976,26 +57479,29 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habitBuilder
   }
 
   @override
-  _$GAllPrivateUserFieldsData_habits_items_comments_items_habit build() {
+  GAllPrivateUserFieldsData_habits_items_comments_items_habit build() =>
+      _build();
+
+  _$GAllPrivateUserFieldsData_habits_items_comments_items_habit _build() {
     _$GAllPrivateUserFieldsData_habits_items_comments_items_habit _$result;
     try {
       _$result = _$v ??
           new _$GAllPrivateUserFieldsData_habits_items_comments_items_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
                   'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
                   tagline,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
                   'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
                   category,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
                   'category'),
               details: details,
               owner: owner,
@@ -57015,7 +57521,7 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_habit',
             _$failedField,
             e.toString());
       }
@@ -57041,18 +57547,18 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
               updates]) =>
       (new GAllPrivateUserFieldsData_habits_items_comments_items_habit_commentsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         items,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
         'items');
   }
 
@@ -57086,7 +57592,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments')
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -57151,8 +57657,11 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habit_commentsBuilde
   }
 
   @override
+  GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
+      build() => _build();
+
   _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
-      build() {
+      _build() {
     _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
         _$result;
     try {
@@ -57161,7 +57670,7 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habit_commentsBuilde
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
                   'G__typename'),
               items: items.build());
     } catch (_) {
@@ -57171,7 +57680,7 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habit_commentsBuilde
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -57205,7 +57714,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_ite
               updates]) =>
       (new GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_itemsBuilder()
             ..update(updates))
-          .build();
+          ._build();
 
   _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items._(
       {required this.G__typename,
@@ -57218,23 +57727,23 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_ite
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         id,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
         'id');
     BuiltValueNullFieldError.checkNotNull(
         comment,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
         'comment');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt,
-        'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
         'updatedAt');
   }
 
@@ -57283,7 +57792,7 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_ite
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items')
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -57374,8 +57883,11 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
   }
 
   @override
+  GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
+      build() => _build();
+
   _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
-      build() {
+      _build() {
     _$GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
         _$result;
     try {
@@ -57384,17 +57896,17 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
                   ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
                   'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
                   'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(
                   comment,
-                  'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
                   'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
@@ -57407,7 +57919,7 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -57440,7 +57952,7 @@ class _$GAllCommentFieldsData extends GAllCommentFieldsData {
 
   factory _$GAllCommentFieldsData(
           [void Function(GAllCommentFieldsDataBuilder)? updates]) =>
-      (new GAllCommentFieldsDataBuilder()..update(updates)).build();
+      (new GAllCommentFieldsDataBuilder()..update(updates))._build();
 
   _$GAllCommentFieldsData._(
       {required this.G__typename,
@@ -57454,14 +57966,14 @@ class _$GAllCommentFieldsData extends GAllCommentFieldsData {
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllCommentFieldsData', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(id, 'GAllCommentFieldsData', 'id');
+        G__typename, r'GAllCommentFieldsData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(id, r'GAllCommentFieldsData', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GAllCommentFieldsData', 'comment');
+        comment, r'GAllCommentFieldsData', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllCommentFieldsData', 'createdAt');
+        createdAt, r'GAllCommentFieldsData', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllCommentFieldsData', 'updatedAt');
+        updatedAt, r'GAllCommentFieldsData', 'updatedAt');
   }
 
   @override
@@ -57508,7 +58020,7 @@ class _$GAllCommentFieldsData extends GAllCommentFieldsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllCommentFieldsData')
+    return (newBuiltValueToStringHelper(r'GAllCommentFieldsData')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -57601,21 +58113,23 @@ class GAllCommentFieldsDataBuilder
   }
 
   @override
-  _$GAllCommentFieldsData build() {
+  GAllCommentFieldsData build() => _build();
+
+  _$GAllCommentFieldsData _build() {
     _$GAllCommentFieldsData _$result;
     try {
       _$result = _$v ??
           new _$GAllCommentFieldsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllCommentFieldsData', 'G__typename'),
+                  G__typename, r'GAllCommentFieldsData', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllCommentFieldsData', 'id'),
+                  id, r'GAllCommentFieldsData', 'id'),
               owner: owner,
               by: _by?.build(),
               habitId: habitId,
               habit: _habit?.build(),
               comment: BuiltValueNullFieldError.checkNotNull(
-                  comment, 'GAllCommentFieldsData', 'comment'),
+                  comment, r'GAllCommentFieldsData', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -57633,7 +58147,7 @@ class GAllCommentFieldsDataBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllCommentFieldsData', _$failedField, e.toString());
+            r'GAllCommentFieldsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -57654,7 +58168,7 @@ class _$GAllCommentFieldsData_by extends GAllCommentFieldsData_by {
 
   factory _$GAllCommentFieldsData_by(
           [void Function(GAllCommentFieldsData_byBuilder)? updates]) =>
-      (new GAllCommentFieldsData_byBuilder()..update(updates)).build();
+      (new GAllCommentFieldsData_byBuilder()..update(updates))._build();
 
   _$GAllCommentFieldsData_by._(
       {required this.G__typename,
@@ -57663,9 +58177,9 @@ class _$GAllCommentFieldsData_by extends GAllCommentFieldsData_by {
       this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllCommentFieldsData_by', 'G__typename');
+        G__typename, r'GAllCommentFieldsData_by', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GAllCommentFieldsData_by', 'username');
+        username, r'GAllCommentFieldsData_by', 'username');
   }
 
   @override
@@ -57697,7 +58211,7 @@ class _$GAllCommentFieldsData_by extends GAllCommentFieldsData_by {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllCommentFieldsData_by')
+    return (newBuiltValueToStringHelper(r'GAllCommentFieldsData_by')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
@@ -57756,13 +58270,15 @@ class GAllCommentFieldsData_byBuilder
   }
 
   @override
-  _$GAllCommentFieldsData_by build() {
+  GAllCommentFieldsData_by build() => _build();
+
+  _$GAllCommentFieldsData_by _build() {
     final _$result = _$v ??
         new _$GAllCommentFieldsData_by._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, 'GAllCommentFieldsData_by', 'G__typename'),
+                G__typename, r'GAllCommentFieldsData_by', 'G__typename'),
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GAllCommentFieldsData_by', 'username'),
+                username, r'GAllCommentFieldsData_by', 'username'),
             displayUsername: displayUsername,
             name: name);
     replace(_$result);
@@ -57796,7 +58312,7 @@ class _$GAllCommentFieldsData_habit extends GAllCommentFieldsData_habit {
 
   factory _$GAllCommentFieldsData_habit(
           [void Function(GAllCommentFieldsData_habitBuilder)? updates]) =>
-      (new GAllCommentFieldsData_habitBuilder()..update(updates)).build();
+      (new GAllCommentFieldsData_habitBuilder()..update(updates))._build();
 
   _$GAllCommentFieldsData_habit._(
       {required this.G__typename,
@@ -57812,17 +58328,17 @@ class _$GAllCommentFieldsData_habit extends GAllCommentFieldsData_habit {
       this.downs})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllCommentFieldsData_habit', 'G__typename');
+        G__typename, r'GAllCommentFieldsData_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllCommentFieldsData_habit', 'id');
+        id, r'GAllCommentFieldsData_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllCommentFieldsData_habit', 'tagline');
+        tagline, r'GAllCommentFieldsData_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllCommentFieldsData_habit', 'category');
+        category, r'GAllCommentFieldsData_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllCommentFieldsData_habit', 'createdAt');
+        createdAt, r'GAllCommentFieldsData_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllCommentFieldsData_habit', 'updatedAt');
+        updatedAt, r'GAllCommentFieldsData_habit', 'updatedAt');
   }
 
   @override
@@ -57877,7 +58393,7 @@ class _$GAllCommentFieldsData_habit extends GAllCommentFieldsData_habit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllCommentFieldsData_habit')
+    return (newBuiltValueToStringHelper(r'GAllCommentFieldsData_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -57984,19 +58500,21 @@ class GAllCommentFieldsData_habitBuilder
   }
 
   @override
-  _$GAllCommentFieldsData_habit build() {
+  GAllCommentFieldsData_habit build() => _build();
+
+  _$GAllCommentFieldsData_habit _build() {
     _$GAllCommentFieldsData_habit _$result;
     try {
       _$result = _$v ??
           new _$GAllCommentFieldsData_habit._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllCommentFieldsData_habit', 'G__typename'),
+                  G__typename, r'GAllCommentFieldsData_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllCommentFieldsData_habit', 'id'),
+                  id, r'GAllCommentFieldsData_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GAllCommentFieldsData_habit', 'tagline'),
+                  tagline, r'GAllCommentFieldsData_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GAllCommentFieldsData_habit', 'category'),
+                  category, r'GAllCommentFieldsData_habit', 'category'),
               details: details,
               owner: owner,
               comments: _comments?.build(),
@@ -58015,7 +58533,7 @@ class GAllCommentFieldsData_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllCommentFieldsData_habit', _$failedField, e.toString());
+            r'GAllCommentFieldsData_habit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -58035,15 +58553,15 @@ class _$GAllCommentFieldsData_habit_comments
           [void Function(GAllCommentFieldsData_habit_commentsBuilder)?
               updates]) =>
       (new GAllCommentFieldsData_habit_commentsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllCommentFieldsData_habit_comments._(
       {required this.G__typename, required this.items})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllCommentFieldsData_habit_comments', 'G__typename');
+        G__typename, r'GAllCommentFieldsData_habit_comments', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        items, 'GAllCommentFieldsData_habit_comments', 'items');
+        items, r'GAllCommentFieldsData_habit_comments', 'items');
   }
 
   @override
@@ -58070,7 +58588,7 @@ class _$GAllCommentFieldsData_habit_comments
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllCommentFieldsData_habit_comments')
+    return (newBuiltValueToStringHelper(r'GAllCommentFieldsData_habit_comments')
           ..add('G__typename', G__typename)
           ..add('items', items))
         .toString();
@@ -58121,13 +58639,15 @@ class GAllCommentFieldsData_habit_commentsBuilder
   }
 
   @override
-  _$GAllCommentFieldsData_habit_comments build() {
+  GAllCommentFieldsData_habit_comments build() => _build();
+
+  _$GAllCommentFieldsData_habit_comments _build() {
     _$GAllCommentFieldsData_habit_comments _$result;
     try {
       _$result = _$v ??
           new _$GAllCommentFieldsData_habit_comments._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllCommentFieldsData_habit_comments', 'G__typename'),
+                  r'GAllCommentFieldsData_habit_comments', 'G__typename'),
               items: items.build());
     } catch (_) {
       late String _$failedField;
@@ -58136,7 +58656,7 @@ class GAllCommentFieldsData_habit_commentsBuilder
         items.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllCommentFieldsData_habit_comments',
+            r'GAllCommentFieldsData_habit_comments',
             _$failedField,
             e.toString());
       }
@@ -58168,7 +58688,7 @@ class _$GAllCommentFieldsData_habit_comments_items
           [void Function(GAllCommentFieldsData_habit_comments_itemsBuilder)?
               updates]) =>
       (new GAllCommentFieldsData_habit_comments_itemsBuilder()..update(updates))
-          .build();
+          ._build();
 
   _$GAllCommentFieldsData_habit_comments_items._(
       {required this.G__typename,
@@ -58180,15 +58700,15 @@ class _$GAllCommentFieldsData_habit_comments_items
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        'GAllCommentFieldsData_habit_comments_items', 'G__typename');
+        r'GAllCommentFieldsData_habit_comments_items', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllCommentFieldsData_habit_comments_items', 'id');
+        id, r'GAllCommentFieldsData_habit_comments_items', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GAllCommentFieldsData_habit_comments_items', 'comment');
+        comment, r'GAllCommentFieldsData_habit_comments_items', 'comment');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllCommentFieldsData_habit_comments_items', 'createdAt');
+        createdAt, r'GAllCommentFieldsData_habit_comments_items', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllCommentFieldsData_habit_comments_items', 'updatedAt');
+        updatedAt, r'GAllCommentFieldsData_habit_comments_items', 'updatedAt');
   }
 
   @override
@@ -58231,7 +58751,7 @@ class _$GAllCommentFieldsData_habit_comments_items
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            'GAllCommentFieldsData_habit_comments_items')
+            r'GAllCommentFieldsData_habit_comments_items')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('owner', owner)
@@ -58314,19 +58834,21 @@ class GAllCommentFieldsData_habit_comments_itemsBuilder
   }
 
   @override
-  _$GAllCommentFieldsData_habit_comments_items build() {
+  GAllCommentFieldsData_habit_comments_items build() => _build();
+
+  _$GAllCommentFieldsData_habit_comments_items _build() {
     _$GAllCommentFieldsData_habit_comments_items _$result;
     try {
       _$result = _$v ??
           new _$GAllCommentFieldsData_habit_comments_items._(
               G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  'GAllCommentFieldsData_habit_comments_items', 'G__typename'),
+                  r'GAllCommentFieldsData_habit_comments_items', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllCommentFieldsData_habit_comments_items', 'id'),
+                  id, r'GAllCommentFieldsData_habit_comments_items', 'id'),
               owner: owner,
               habitId: habitId,
               comment: BuiltValueNullFieldError.checkNotNull(comment,
-                  'GAllCommentFieldsData_habit_comments_items', 'comment'),
+                  r'GAllCommentFieldsData_habit_comments_items', 'comment'),
               createdAt: createdAt.build(),
               updatedAt: updatedAt.build());
     } catch (_) {
@@ -58338,7 +58860,7 @@ class GAllCommentFieldsData_habit_comments_itemsBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllCommentFieldsData_habit_comments_items',
+            r'GAllCommentFieldsData_habit_comments_items',
             _$failedField,
             e.toString());
       }
@@ -58359,13 +58881,13 @@ class _$GAllVoteResultFieldsData extends GAllVoteResultFieldsData {
 
   factory _$GAllVoteResultFieldsData(
           [void Function(GAllVoteResultFieldsDataBuilder)? updates]) =>
-      (new GAllVoteResultFieldsDataBuilder()..update(updates)).build();
+      (new GAllVoteResultFieldsDataBuilder()..update(updates))._build();
 
   _$GAllVoteResultFieldsData._(
       {required this.G__typename, this.habit, this.user})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllVoteResultFieldsData', 'G__typename');
+        G__typename, r'GAllVoteResultFieldsData', 'G__typename');
   }
 
   @override
@@ -58394,7 +58916,7 @@ class _$GAllVoteResultFieldsData extends GAllVoteResultFieldsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllVoteResultFieldsData')
+    return (newBuiltValueToStringHelper(r'GAllVoteResultFieldsData')
           ..add('G__typename', G__typename)
           ..add('habit', habit)
           ..add('user', user))
@@ -58449,13 +58971,15 @@ class GAllVoteResultFieldsDataBuilder
   }
 
   @override
-  _$GAllVoteResultFieldsData build() {
+  GAllVoteResultFieldsData build() => _build();
+
+  _$GAllVoteResultFieldsData _build() {
     _$GAllVoteResultFieldsData _$result;
     try {
       _$result = _$v ??
           new _$GAllVoteResultFieldsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllVoteResultFieldsData', 'G__typename'),
+                  G__typename, r'GAllVoteResultFieldsData', 'G__typename'),
               habit: _habit?.build(),
               user: _user?.build());
     } catch (_) {
@@ -58467,7 +58991,7 @@ class GAllVoteResultFieldsDataBuilder
         _user?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllVoteResultFieldsData', _$failedField, e.toString());
+            r'GAllVoteResultFieldsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -58498,7 +59022,7 @@ class _$GAllVoteResultFieldsData_habit extends GAllVoteResultFieldsData_habit {
 
   factory _$GAllVoteResultFieldsData_habit(
           [void Function(GAllVoteResultFieldsData_habitBuilder)? updates]) =>
-      (new GAllVoteResultFieldsData_habitBuilder()..update(updates)).build();
+      (new GAllVoteResultFieldsData_habitBuilder()..update(updates))._build();
 
   _$GAllVoteResultFieldsData_habit._(
       {required this.G__typename,
@@ -58512,17 +59036,17 @@ class _$GAllVoteResultFieldsData_habit extends GAllVoteResultFieldsData_habit {
       required this.updatedAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllVoteResultFieldsData_habit', 'G__typename');
+        G__typename, r'GAllVoteResultFieldsData_habit', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, 'GAllVoteResultFieldsData_habit', 'id');
+        id, r'GAllVoteResultFieldsData_habit', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GAllVoteResultFieldsData_habit', 'tagline');
+        tagline, r'GAllVoteResultFieldsData_habit', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GAllVoteResultFieldsData_habit', 'category');
+        category, r'GAllVoteResultFieldsData_habit', 'category');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'GAllVoteResultFieldsData_habit', 'createdAt');
+        createdAt, r'GAllVoteResultFieldsData_habit', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
-        updatedAt, 'GAllVoteResultFieldsData_habit', 'updatedAt');
+        updatedAt, r'GAllVoteResultFieldsData_habit', 'updatedAt');
   }
 
   @override
@@ -58569,7 +59093,7 @@ class _$GAllVoteResultFieldsData_habit extends GAllVoteResultFieldsData_habit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllVoteResultFieldsData_habit')
+    return (newBuiltValueToStringHelper(r'GAllVoteResultFieldsData_habit')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('tagline', tagline)
@@ -58662,19 +59186,21 @@ class GAllVoteResultFieldsData_habitBuilder
   }
 
   @override
-  _$GAllVoteResultFieldsData_habit build() {
+  GAllVoteResultFieldsData_habit build() => _build();
+
+  _$GAllVoteResultFieldsData_habit _build() {
     _$GAllVoteResultFieldsData_habit _$result;
     try {
       _$result = _$v ??
           new _$GAllVoteResultFieldsData_habit._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllVoteResultFieldsData_habit', 'G__typename'),
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GAllVoteResultFieldsData_habit', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, 'GAllVoteResultFieldsData_habit', 'id'),
+                  id, r'GAllVoteResultFieldsData_habit', 'id'),
               tagline: BuiltValueNullFieldError.checkNotNull(
-                  tagline, 'GAllVoteResultFieldsData_habit', 'tagline'),
+                  tagline, r'GAllVoteResultFieldsData_habit', 'tagline'),
               category: BuiltValueNullFieldError.checkNotNull(
-                  category, 'GAllVoteResultFieldsData_habit', 'category'),
+                  category, r'GAllVoteResultFieldsData_habit', 'category'),
               owner: owner,
               ups: ups,
               downs: downs,
@@ -58689,7 +59215,7 @@ class GAllVoteResultFieldsData_habitBuilder
         updatedAt.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllVoteResultFieldsData_habit', _$failedField, e.toString());
+            r'GAllVoteResultFieldsData_habit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -58710,7 +59236,7 @@ class _$GAllVoteResultFieldsData_user extends GAllVoteResultFieldsData_user {
 
   factory _$GAllVoteResultFieldsData_user(
           [void Function(GAllVoteResultFieldsData_userBuilder)? updates]) =>
-      (new GAllVoteResultFieldsData_userBuilder()..update(updates)).build();
+      (new GAllVoteResultFieldsData_userBuilder()..update(updates))._build();
 
   _$GAllVoteResultFieldsData_user._(
       {required this.G__typename,
@@ -58719,9 +59245,9 @@ class _$GAllVoteResultFieldsData_user extends GAllVoteResultFieldsData_user {
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, 'GAllVoteResultFieldsData_user', 'G__typename');
+        G__typename, r'GAllVoteResultFieldsData_user', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GAllVoteResultFieldsData_user', 'username');
+        username, r'GAllVoteResultFieldsData_user', 'username');
   }
 
   @override
@@ -58753,7 +59279,7 @@ class _$GAllVoteResultFieldsData_user extends GAllVoteResultFieldsData_user {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAllVoteResultFieldsData_user')
+    return (newBuiltValueToStringHelper(r'GAllVoteResultFieldsData_user')
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('upvotedHabits', upvotedHabits)
@@ -58816,15 +59342,17 @@ class GAllVoteResultFieldsData_userBuilder
   }
 
   @override
-  _$GAllVoteResultFieldsData_user build() {
+  GAllVoteResultFieldsData_user build() => _build();
+
+  _$GAllVoteResultFieldsData_user _build() {
     _$GAllVoteResultFieldsData_user _$result;
     try {
       _$result = _$v ??
           new _$GAllVoteResultFieldsData_user._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, 'GAllVoteResultFieldsData_user', 'G__typename'),
+                  G__typename, r'GAllVoteResultFieldsData_user', 'G__typename'),
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GAllVoteResultFieldsData_user', 'username'),
+                  username, r'GAllVoteResultFieldsData_user', 'username'),
               upvotedHabits: _upvotedHabits?.build(),
               downvotedHabits: _downvotedHabits?.build());
     } catch (_) {
@@ -58836,7 +59364,7 @@ class GAllVoteResultFieldsData_userBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GAllVoteResultFieldsData_user', _$failedField, e.toString());
+            r'GAllVoteResultFieldsData_user', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -58845,4 +59373,4 @@ class GAllVoteResultFieldsData_userBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

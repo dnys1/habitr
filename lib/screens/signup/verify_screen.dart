@@ -7,7 +7,7 @@ import 'package:habitr/util/validators.dart';
 import 'package:provider/provider.dart';
 
 class VerifyScreen extends StatelessWidget {
-  const VerifyScreen({Key? key}) : super(key: key);
+  const VerifyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,9 @@ class VerifyScreen extends StatelessWidget {
 }
 
 class _VerifyView extends StatelessWidget {
-  final VerifyViewModel viewModel;
+  const _VerifyView({required this.viewModel});
 
-  const _VerifyView({Key? key, required this.viewModel}) : super(key: key);
+  final VerifyViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _VerifyView extends StatelessWidget {
                 child: Form(
                   key: viewModel.formKey,
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,

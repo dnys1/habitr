@@ -24,19 +24,21 @@ class CommentRepositoryImpl extends CommentRepository {
   Future<void> _init() async {
     await _authBloc.isInitialized;
 
-    var state = _authBloc.state;
+    final state = _authBloc.state;
     if (state is AuthLoggedIn) {
       _updateUser(state.user);
     }
-    addSubscription(_authBloc.stream.listen((state) {
-      if (state is AuthLoggedIn) {
-        _updateUser(state.user);
-      }
-    }));
+    addSubscription(
+      _authBloc.stream.listen((state) {
+        if (state is AuthLoggedIn) {
+          _updateUser(state.user);
+        }
+      }),
+    );
   }
 
   void _updateUser(User user) {
-    for (var comment in user.comments) {
+    for (final comment in user.comments) {
       put(comment.id, comment);
     }
   }

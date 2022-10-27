@@ -9,15 +9,15 @@ abstract class Repository<T> extends ChangeNotifier {
   final Set<String> _loading = {};
   bool isLoading(String id) => _loading.contains(id);
 
-  final List<StreamSubscription> _subscriptions = [];
-  void addSubscription(StreamSubscription subscription) {
+  final List<StreamSubscription<Object?>> _subscriptions = [];
+  void addSubscription(StreamSubscription<Object?> subscription) {
     _subscriptions.add(subscription);
   }
 
   @protected
   T put(String id, T value) {
     _cache[id] = value;
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       notifyListeners();
     });
     return value;
@@ -26,7 +26,7 @@ abstract class Repository<T> extends ChangeNotifier {
   @protected
   void putAll(Map<String, T> other) {
     _cache.addAll(other);
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       notifyListeners();
     });
   }
@@ -37,7 +37,7 @@ abstract class Repository<T> extends ChangeNotifier {
   @protected
   void setLoading(String id) {
     _loading.add(id);
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       notifyListeners();
     });
   }
@@ -45,7 +45,7 @@ abstract class Repository<T> extends ChangeNotifier {
   @protected
   void setDoneLoading(String id) {
     _loading.remove(id);
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       notifyListeners();
     });
   }
@@ -56,7 +56,7 @@ abstract class Repository<T> extends ChangeNotifier {
   @override
   void dispose() {
     _mounted = false;
-    for (var subscription in _subscriptions) {
+    for (final subscription in _subscriptions) {
       subscription.cancel();
     }
     super.dispose();

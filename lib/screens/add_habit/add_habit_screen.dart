@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:habitr/models/Category.dart';
 import 'package:habitr/repos/habit_repository.dart';
@@ -8,7 +10,7 @@ import 'package:habitr/util/validators.dart';
 import 'package:provider/provider.dart';
 
 class AddHabitScreen extends StatelessWidget {
-  const AddHabitScreen({Key? key}) : super(key: key);
+  const AddHabitScreen({super.key});
 
   static final route = PageRouteBuilder<void>(
     pageBuilder: (context, animation, secondaryAnimation) =>
@@ -34,7 +36,7 @@ class AddHabitScreen extends StatelessWidget {
 }
 
 class _AddHabitScreenView extends StatelessWidget {
-  const _AddHabitScreenView(this.viewModel, {Key? key}) : super(key: key);
+  const _AddHabitScreenView(this.viewModel);
 
   final AddHabitViewModel viewModel;
 
@@ -55,7 +57,7 @@ class _AddHabitScreenView extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20),
           child: SizedBox.expand(
             child: Stack(
               children: [
@@ -110,15 +112,21 @@ class _AddHabitScreenView extends StatelessWidget {
                   left: 0,
                   right: 0,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: ElevatedButton(
                       onPressed: () async {
-                        var habit = await viewModel.save();
+                        final habit = await viewModel.save();
                         if (habit != null) {
+                          // ignore: use_build_context_synchronously
                           Navigator.of(context).pop();
-                          Navigator.of(context).push<void>(MaterialPageRoute(
-                            builder: (_) => HabitDetailsScreen(habit.id),
-                          ));
+                          unawaited(
+                            // ignore: use_build_context_synchronously
+                            Navigator.of(context).push<void>(
+                              MaterialPageRoute(
+                                builder: (_) => HabitDetailsScreen(habit.id),
+                              ),
+                            ),
+                          );
                         }
                       },
                       child: const Text('Submit'),

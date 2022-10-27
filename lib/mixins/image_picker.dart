@@ -30,15 +30,10 @@ mixin ImagePickerMixin on BaseViewModel {
   Future<void> pickImage() async {
     _setIsLoadingImage(true);
     try {
-      final pickedImage = await Future.any<PickedFile?>([
-        _imagePicker.getImage(
-          source: ImageSource.gallery,
-          imageQuality: 25,
-        ),
-
-        // Workaround for https://github.com/flutter/flutter/issues/82519
-        Future.delayed(const Duration(seconds: 30)),
-      ]);
+      final pickedImage = await _imagePicker.pickImage(
+        source: ImageSource.gallery,
+        imageQuality: 25,
+      );
 
       if (pickedImage != null) {
         setImage(File(pickedImage.path));

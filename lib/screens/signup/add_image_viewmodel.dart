@@ -13,11 +13,6 @@ import 'package:habitr/util/scaffold.dart';
 
 class AddImageViewModel extends BaseViewModel
     with ImagePickerMixin, UsernameFormMixin {
-  final AuthBloc _authBloc;
-  final AuthService _authService;
-  final ApiService _apiService;
-  final StorageService _storageService;
-
   AddImageViewModel({
     required AuthBloc authBloc,
     required AuthService authService,
@@ -28,8 +23,13 @@ class AddImageViewModel extends BaseViewModel
         _apiService = apiService,
         _storageService = storageService;
 
+  final AuthBloc _authBloc;
+  final AuthService _authService;
+  final ApiService _apiService;
+  final StorageService _storageService;
+
   User get user {
-    var state = _authBloc.state;
+    final state = _authBloc.state;
     if (state is AuthLoggedIn) {
       return state.user;
     } else {

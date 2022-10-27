@@ -20,12 +20,6 @@ abstract class UserRepository extends Repository<User?> {
 }
 
 class UserRepositoryImpl extends UserRepository {
-  final ApiService _apiService;
-  final AuthBloc _authBloc;
-  final HabitRepository _habitRepository;
-  final CommentRepository _commentRepository;
-  final StorageService _storageService;
-
   UserRepositoryImpl({
     required ApiService apiService,
     required AuthBloc authBloc,
@@ -40,18 +34,26 @@ class UserRepositoryImpl extends UserRepository {
     _init();
   }
 
+  final ApiService _apiService;
+  final AuthBloc _authBloc;
+  final HabitRepository _habitRepository;
+  final CommentRepository _commentRepository;
+  final StorageService _storageService;
+
   Future<void> _init() async {
     await _authBloc.isInitialized;
 
-    var state = _authBloc.state;
+    final state = _authBloc.state;
     if (state is AuthLoggedIn) {
       _updateUser(state.user);
     }
-    addSubscription(_authBloc.stream.listen((state) {
-      if (state is AuthLoggedIn) {
-        _updateUser(state.user);
-      }
-    }));
+    addSubscription(
+      _authBloc.stream.listen((state) {
+        if (state is AuthLoggedIn) {
+          _updateUser(state.user);
+        }
+      }),
+    );
   }
 
   void _updateUser(User user) {
@@ -66,7 +68,7 @@ class UserRepositoryImpl extends UserRepository {
     _commentRepository.putAll({
       for (var comment in value?.comments ?? <Comment>[]) comment.id: comment,
     });
-    var avatar = value?.avatar;
+    final avatar = value?.avatar;
     if (avatar != null) {
       _storageService.getImageUrl(avatar.cognitoId, avatar.key);
     }
@@ -79,7 +81,7 @@ class UserRepositoryImpl extends UserRepository {
       return get(username);
     }
     if (_authBloc.state is AuthLoggedIn) {
-      var currentUser = (_authBloc.state as AuthLoggedIn).user;
+      final currentUser = (_authBloc.state as AuthLoggedIn).user;
       if (username == currentUser.username) {
         return put(username, currentUser);
       }
@@ -91,7 +93,7 @@ class UserRepositoryImpl extends UserRepository {
   @override
   Future<List<User>> searchUsers(String query) async {
     if (query.isEmpty) return [];
-    var currentUsername = (_authBloc.state as AuthLoggedIn).user.username;
+    final currentUsername = (_authBloc.state as AuthLoggedIn).user.username;
     final searchResults = await _apiService.searchUsers(
       query,
       currentUsername,
@@ -101,7 +103,7 @@ class UserRepositoryImpl extends UserRepository {
       searchResults.map((user) => getUser(user.username)),
     );
     final users = userObjs.whereType<User>().toList();
-    for (var user in users) {
+    for (final user in users) {
       put(user.username, user);
     }
     return users;
@@ -114,7 +116,7 @@ class UserRepositoryImpl extends UserRepository {
     S3Object? avatar,
   }) async {
     if (name == null && username == null && avatar == null) return;
-    var updatedUser = await _apiService.updateUser(
+    final updatedUser = await _apiService.updateUser(
       (_authBloc.state as AuthLoggedIn).user,
       name: name,
       username: username,

@@ -23,8 +23,7 @@ import 'ModelProvider.dart';
 import 'package:amplify_core/amplify_core.dart';
 import 'package:flutter/foundation.dart';
 
-
-/** This is an auto generated class representing the VoteResult type in your schema. */
+/// This is an auto generated class representing the VoteResult type in your schema.
 @immutable
 class VoteResult {
   final Habit? _habit;
@@ -33,78 +32,78 @@ class VoteResult {
   Habit? get habit {
     return _habit;
   }
-  
+
   User? get user {
     return _user;
   }
-  
-  const VoteResult._internal({habit, user}): _habit = habit, _user = user;
-  
+
+  const VoteResult._internal({habit, user})
+      : _habit = habit,
+        _user = user;
+
   factory VoteResult({Habit? habit, User? user}) {
-    return VoteResult._internal(
-      habit: habit,
-      user: user);
+    return VoteResult._internal(habit: habit, user: user);
   }
-  
+
   bool equals(Object other) {
     return this == other;
   }
-  
+
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is VoteResult &&
-      _habit == other._habit &&
-      _user == other._user;
+        _habit == other._habit &&
+        _user == other._user;
   }
-  
+
   @override
   int get hashCode => toString().hashCode;
-  
+
   @override
   String toString() {
-    var buffer = new StringBuffer();
-    
+    var buffer = StringBuffer();
+
     buffer.write("VoteResult {");
-    buffer.write("habit=" + (_habit != null ? _habit!.toString() : "null") + ", ");
+    buffer.write(
+        "habit=" + (_habit != null ? _habit!.toString() : "null") + ", ");
     buffer.write("user=" + (_user != null ? _user!.toString() : "null"));
     buffer.write("}");
-    
+
     return buffer.toString();
   }
-  
+
   VoteResult copyWith({Habit? habit, User? user}) {
     return VoteResult._internal(
-      habit: habit ?? this.habit,
-      user: user ?? this.user);
+        habit: habit ?? this.habit, user: user ?? this.user);
   }
-  
-  VoteResult.fromJson(Map<String, dynamic> json)  
-    : _habit = json['habit']?['serializedData'] != null
-        ? Habit.fromJson(new Map<String, dynamic>.from(json['habit']['serializedData']))
-        : null,
-      _user = json['user']?['serializedData'] != null
-        ? User.fromJson(new Map<String, dynamic>.from(json['user']['serializedData']))
-        : null;
-  
-  Map<String, dynamic> toJson() => {
-    'habit': _habit?.toJson(), 'user': _user?.toJson()
-  };
 
-  static var schema = Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
+  VoteResult.fromJson(Map<String, dynamic> json)
+      : _habit = json['habit']?['serializedData'] != null
+            ? Habit.fromJson(
+                Map<String, dynamic>.from(json['habit']['serializedData']))
+            : null,
+        _user = json['user']?['serializedData'] != null
+            ? User.fromJson(
+                Map<String, dynamic>.from(json['user']['serializedData']))
+            : null;
+
+  Map<String, dynamic> toJson() =>
+      {'habit': _habit?.toJson(), 'user': _user?.toJson()};
+
+  static var schema =
+      Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
     modelSchemaDefinition.name = "VoteResult";
     modelSchemaDefinition.pluralName = "VoteResults";
-    
+
     modelSchemaDefinition.addField(ModelFieldDefinition.customTypeField(
-      fieldName: 'habit',
-      isRequired: false,
-      ofType: ModelFieldType(ModelFieldTypeEnum.string)
-    ));
-    
+        fieldName: 'habit',
+        isRequired: false,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+
     modelSchemaDefinition.addField(ModelFieldDefinition.customTypeField(
-      fieldName: 'user',
-      isRequired: false,
-      ofType: ModelFieldType(ModelFieldTypeEnum.string)
-    ));
+        fieldName: 'user',
+        isRequired: false,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
   });
 }

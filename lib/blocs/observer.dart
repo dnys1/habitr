@@ -3,7 +3,10 @@ import 'package:habitr/util/print.dart';
 
 class HabitrBlocObserver extends BlocObserver {
   @override
-  void onTransition(Bloc bloc, Transition transition) {
+  void onTransition(
+    Bloc<Object?, Object?> bloc,
+    Transition<Object?, Object?> transition,
+  ) {
     safePrint('[${bloc.runtimeType}]: $transition');
     super.onTransition(bloc, transition);
   }

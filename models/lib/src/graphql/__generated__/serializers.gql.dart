@@ -571,6 +571,6 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GVoteForHabitData_vote_habit,
   GVoteForHabitData_vote_user,
   GVoteForHabitVars,
-  GVoteType
+  GVoteType,
 ])
 final Serializers serializers = _serializersBuilder.build();

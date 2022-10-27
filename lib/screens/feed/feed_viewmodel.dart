@@ -11,8 +11,6 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 enum CategorySort { createdAt, updatedAt, ups, score }
 
 class FeedViewModel extends BaseViewModel {
-  final HabitRepository _habitRepository;
-
   FeedViewModel({
     Category? category,
     CategorySort sortField = CategorySort.createdAt,
@@ -28,6 +26,8 @@ class FeedViewModel extends BaseViewModel {
       );
     });
   }
+
+  final HabitRepository _habitRepository;
 
   final Category? _category;
   final int _limit = 20;

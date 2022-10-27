@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:habitr_models/src/graphql/__generated__/schema.schema.gql.dart'
@@ -20,11 +22,15 @@ abstract class GListHabitsVars
   String? get nextToken;
   static Serializer<GListHabitsVars> get serializer =>
       _$gListHabitsVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GListHabitsVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GListHabitsVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GListHabitsVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GListHabitsVars.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsByCategoryVars
@@ -41,12 +47,15 @@ abstract class GListHabitsByCategoryVars
   String? get nextToken;
   static Serializer<GListHabitsByCategoryVars> get serializer =>
       _$gListHabitsByCategoryVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GListHabitsByCategoryVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GListHabitsByCategoryVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GListHabitsByCategoryVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GListHabitsByCategoryVars.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitVars
@@ -58,11 +67,15 @@ abstract class GGetHabitVars
 
   String get habitId;
   static Serializer<GGetHabitVars> get serializer => _$gGetHabitVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetHabitVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetHabitVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetHabitVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetHabitVars.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserVars
@@ -74,11 +87,15 @@ abstract class GGetUserVars
 
   String get username;
   static Serializer<GGetUserVars> get serializer => _$gGetUserVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetUserVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetUserVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetUserVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetUserVars.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfVars
@@ -90,11 +107,15 @@ abstract class GGetSelfVars
 
   String get username;
   static Serializer<GGetSelfVars> get serializer => _$gGetSelfVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetSelfVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetSelfVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetSelfVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetSelfVars.serializer,
+        json,
+      );
 }
 
 abstract class GGetCommentVars
@@ -107,11 +128,15 @@ abstract class GGetCommentVars
   String get commentId;
   static Serializer<GGetCommentVars> get serializer =>
       _$gGetCommentVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetCommentVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetCommentVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetCommentVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetCommentVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetCommentVars.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserVars
@@ -125,11 +150,15 @@ abstract class GSubscribeToUserVars
   String get username;
   static Serializer<GSubscribeToUserVars> get serializer =>
       _$gSubscribeToUserVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSubscribeToUserVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSubscribeToUserVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSubscribeToUserVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSubscribeToUserVars.serializer,
+        json,
+      );
 }
 
 abstract class GCreateUserVars
@@ -143,11 +172,15 @@ abstract class GCreateUserVars
   String? get displayUsername;
   static Serializer<GCreateUserVars> get serializer =>
       _$gCreateUserVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GCreateUserVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateUserVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateUserVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GCreateUserVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateUserVars.serializer,
+        json,
+      );
 }
 
 abstract class GCreateCommentVars
@@ -161,11 +194,15 @@ abstract class GCreateCommentVars
   String get habitId;
   static Serializer<GCreateCommentVars> get serializer =>
       _$gCreateCommentVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GCreateCommentVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateCommentVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GCreateCommentVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateCommentVars.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitVars
@@ -180,11 +217,15 @@ abstract class GCreateHabitVars
   String? get details;
   static Serializer<GCreateHabitVars> get serializer =>
       _$gCreateHabitVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GCreateHabitVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateHabitVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GCreateHabitVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateHabitVars.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserVars
@@ -197,11 +238,15 @@ abstract class GUpdateUserVars
   _i2.GUpdateUserInput get input;
   static Serializer<GUpdateUserVars> get serializer =>
       _$gUpdateUserVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GUpdateUserVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateUserVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GUpdateUserVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateUserVars.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitVars
@@ -214,11 +259,15 @@ abstract class GUpdateHabitVars
   _i2.GUpdateHabitInput get input;
   static Serializer<GUpdateHabitVars> get serializer =>
       _$gUpdateHabitVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GUpdateHabitVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateHabitVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GUpdateHabitVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateHabitVars.serializer,
+        json,
+      );
 }
 
 abstract class GDeleteHabitVars
@@ -232,11 +281,15 @@ abstract class GDeleteHabitVars
   int get version;
   static Serializer<GDeleteHabitVars> get serializer =>
       _$gDeleteHabitVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GDeleteHabitVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GDeleteHabitVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GDeleteHabitVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GDeleteHabitVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GDeleteHabitVars.serializer,
+        json,
+      );
 }
 
 abstract class GVoteForHabitVars
@@ -250,11 +303,15 @@ abstract class GVoteForHabitVars
   _i2.GVoteType get type;
   static Serializer<GVoteForHabitVars> get serializer =>
       _$gVoteForHabitVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GVoteForHabitVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GVoteForHabitVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GVoteForHabitVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GVoteForHabitVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GVoteForHabitVars.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToVotesVars
@@ -267,11 +324,15 @@ abstract class GSubscribeToVotesVars
 
   static Serializer<GSubscribeToVotesVars> get serializer =>
       _$gSubscribeToVotesVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSubscribeToVotesVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSubscribeToVotesVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToVotesVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSubscribeToVotesVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSubscribeToVotesVars.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersVars
@@ -286,11 +347,15 @@ abstract class GSearchUsersVars
   int get limit;
   static Serializer<GSearchUsersVars> get serializer =>
       _$gSearchUsersVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSearchUsersVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchUsersVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSearchUsersVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchUsersVars.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsVars
@@ -304,11 +369,15 @@ abstract class GSearchHabitsVars
   int get limit;
   static Serializer<GSearchHabitsVars> get serializer =>
       _$gSearchHabitsVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSearchHabitsVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchHabitsVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSearchHabitsVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchHabitsVars.serializer,
+        json,
+      );
 }
 
 abstract class GAllHabitFieldsVars
@@ -320,11 +389,15 @@ abstract class GAllHabitFieldsVars
 
   static Serializer<GAllHabitFieldsVars> get serializer =>
       _$gAllHabitFieldsVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllHabitFieldsVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllHabitFieldsVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GAllHabitFieldsVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllHabitFieldsVars.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsVars
@@ -338,12 +411,15 @@ abstract class GAllPublicUserFieldsVars
 
   static Serializer<GAllPublicUserFieldsVars> get serializer =>
       _$gAllPublicUserFieldsVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllPublicUserFieldsVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPublicUserFieldsVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPublicUserFieldsVars.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsVars
@@ -357,12 +433,15 @@ abstract class GAllPrivateUserFieldsVars
 
   static Serializer<GAllPrivateUserFieldsVars> get serializer =>
       _$gAllPrivateUserFieldsVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllPrivateUserFieldsVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPrivateUserFieldsVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPrivateUserFieldsVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPrivateUserFieldsVars.serializer,
+        json,
+      );
 }
 
 abstract class GAllCommentFieldsVars
@@ -375,11 +454,15 @@ abstract class GAllCommentFieldsVars
 
   static Serializer<GAllCommentFieldsVars> get serializer =>
       _$gAllCommentFieldsVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllCommentFieldsVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllCommentFieldsVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllCommentFieldsVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GAllCommentFieldsVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllCommentFieldsVars.serializer,
+        json,
+      );
 }
 
 abstract class GAllVoteResultFieldsVars
@@ -393,10 +476,13 @@ abstract class GAllVoteResultFieldsVars
 
   static Serializer<GAllVoteResultFieldsVars> get serializer =>
       _$gAllVoteResultFieldsVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllVoteResultFieldsVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllVoteResultFieldsVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllVoteResultFieldsVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllVoteResultFieldsVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllVoteResultFieldsVars.serializer,
+        json,
+      );
 }

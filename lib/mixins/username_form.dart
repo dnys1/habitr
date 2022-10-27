@@ -1,3 +1,5 @@
+// ignore_for_file: use_setters_to_change_properties
+
 import 'package:habitr/util/base_viewmodel.dart';
 
 mixin UsernameFormMixin on BaseViewModel {

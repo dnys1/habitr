@@ -47,14 +47,14 @@ class HabitDetailsViewModel extends BaseViewModel {
   Future<void> _init() async {
     setBusy(true);
     try {
-      var habit = await _habitRepository.getHabit(habitId);
+      final habit = await _habitRepository.getHabit(habitId);
       if (habit == null) {
         throw Exception('Habit not found');
       }
       _habit = habit;
       _commentController.addListener(notifyListeners);
 
-      var authState = _authBloc.state as AuthLoggedIn;
+      final authState = _authBloc.state as AuthLoggedIn;
       if (authState.user.username == _habit.owner) {
         _userOwnsHabit = true;
       }

@@ -12,9 +12,9 @@ import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class HabitDetailsScreen extends StatelessWidget {
-  final String habitId;
+  const HabitDetailsScreen(this.habitId, {super.key});
 
-  const HabitDetailsScreen(this.habitId, {Key? key}) : super(key: key);
+  final String habitId;
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +40,7 @@ class HabitDetailsScreen extends StatelessWidget {
 }
 
 class _HabitDetailScreenView extends StatelessWidget {
-  const _HabitDetailScreenView(
-    this.viewModel, {
-    Key? key,
-  }) : super(key: key);
+  const _HabitDetailScreenView(this.viewModel);
 
   final HabitDetailsViewModel viewModel;
 
@@ -61,7 +58,7 @@ class _HabitDetailScreenView extends StatelessWidget {
                   viewModel.habit.tagline,
                   overflow: TextOverflow.ellipsis,
                 ),
-          // TODO: Re-enable when DataStore is resolved
+          // TODO(dnys1): Re-enable when DataStore is resolved
           // actions: [
           //   if (viewModel.userOwnsHabit)
           //     IconButton(
@@ -84,9 +81,9 @@ class _HabitDetailScreenView extends StatelessWidget {
                   repo.isUpvoted(viewModel.habit.id),
                 ),
                 builder: (context, habitStatus, _) {
-                  var habit = habitStatus.item1;
-                  var isProcessing = habitStatus.item2;
-                  var isUpvoted = habitStatus.item3;
+                  final habit = habitStatus.item1;
+                  final isProcessing = habitStatus.item2;
+                  final isUpvoted = habitStatus.item3;
 
                   return _HabitDetailScreenBody(
                     viewModel: viewModel,
@@ -102,27 +99,26 @@ class _HabitDetailScreenView extends StatelessWidget {
 }
 
 class _HabitDetailScreenBody extends StatelessWidget {
-  final HabitDetailsViewModel viewModel;
-  final Habit habit;
-  final bool isProcessing;
-  final bool? isUpvoted;
-
   const _HabitDetailScreenBody({
     required this.viewModel,
     required this.habit,
     required this.isProcessing,
     required this.isUpvoted,
-    Key? key,
-  }) : super(key: key);
+  });
+
+  final HabitDetailsViewModel viewModel;
+  final Habit habit;
+  final bool isProcessing;
+  final bool? isUpvoted;
 
   @override
   Widget build(BuildContext context) {
-    var category = habit.category;
-    var author = habit.owner;
-    var details = habit.details;
-    var hasDetails = details != null && details.isNotEmpty;
+    final category = habit.category;
+    final author = habit.owner;
+    final details = habit.details;
+    final hasDetails = details != null && details.isNotEmpty;
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(12),
       child: SingleChildScrollView(
         child: Form(
           child: Column(
@@ -147,8 +143,8 @@ class _HabitDetailScreenBody extends StatelessWidget {
               const SizedBox(height: 10),
               Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text(hasDetails ? details! : 'No details.'),
+                  padding: const EdgeInsets.all(12),
+                  child: Text(hasDetails ? details : 'No details.'),
                 ),
               ),
               const SizedBox(height: 20),
@@ -174,8 +170,7 @@ class _AddCommentTextField extends StatelessWidget {
   const _AddCommentTextField({
     required this.controller,
     required this.onSend,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final TextEditingController controller;
   final FutureOr<void> Function()? onSend;
@@ -198,10 +193,9 @@ class _AddCommentTextField extends StatelessWidget {
 
 class _Detail extends StatelessWidget {
   const _Detail({
-    Key? key,
     required this.label,
     required this.value,
-  }) : super(key: key);
+  });
 
   final String label;
   final String value;
@@ -224,7 +218,7 @@ class _Detail extends StatelessWidget {
 }
 
 class _CommentList extends StatelessWidget {
-  const _CommentList(this.habitId, {Key? key}) : super(key: key);
+  const _CommentList(this.habitId);
 
   final String habitId;
 

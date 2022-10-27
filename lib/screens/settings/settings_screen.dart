@@ -6,7 +6,7 @@ import 'package:habitr/services/theme_service.dart';
 import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({super.key});
 
   static const route = '/settings';
 
@@ -33,9 +33,8 @@ class SettingsScreen extends StatelessWidget {
 
 class _SettingsScreenView extends StatelessWidget {
   const _SettingsScreenView({
-    Key? key,
     required this.viewModel,
-  }) : super(key: key);
+  });
 
   final SettingsViewModel viewModel;
 
@@ -46,7 +45,7 @@ class _SettingsScreenView extends StatelessWidget {
         title: const Text('Settings'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8),
         child: Column(
           children: [
             SwitchListTile.adaptive(

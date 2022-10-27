@@ -5,11 +5,6 @@ import 'package:habitr/util/base_viewmodel.dart';
 import 'package:habitr/util/print.dart';
 
 class UserAvatarViewModel extends BaseViewModel {
-  final AuthService _authService;
-  final UserRepository _userRepository;
-
-  late final User user;
-
   UserAvatarViewModel({
     required UserRepository userRepository,
     required AuthService authService,
@@ -20,6 +15,11 @@ class UserAvatarViewModel extends BaseViewModel {
     _init();
   }
 
+  final AuthService _authService;
+  final UserRepository _userRepository;
+
+  late final User user;
+
   final String _username;
 
   bool _canEditPhoto = false;
@@ -28,7 +28,7 @@ class UserAvatarViewModel extends BaseViewModel {
   Future<void> _init() async {
     setBusy(true);
     try {
-      var user = await _userRepository.getUser(_username);
+      final user = await _userRepository.getUser(_username);
       if (user == null) {
         throw Exception('User not found');
       }

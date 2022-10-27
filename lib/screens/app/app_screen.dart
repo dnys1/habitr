@@ -12,7 +12,7 @@ import 'package:habitr/services/api_service.dart';
 import 'package:provider/provider.dart';
 
 class AppScreen extends StatefulWidget {
-  const AppScreen({Key? key}) : super(key: key);
+  const AppScreen({super.key});
 
   static final _routeBuilders = <String, Route<dynamic> Function()>{
     SettingsScreen.route: () => MaterialPageRoute<void>(
@@ -24,7 +24,7 @@ class AppScreen extends StatefulWidget {
   };
 
   @override
-  _AppScreenState createState() => _AppScreenState();
+  State<AppScreen> createState() => _AppScreenState();
 }
 
 class _AppScreenState extends State<AppScreen> {
@@ -36,8 +36,8 @@ class _AppScreenState extends State<AppScreen> {
   void initState() {
     super.initState();
 
-    var apiService = Provider.of<ApiService>(context, listen: false);
-    var authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
+    final apiService = Provider.of<ApiService>(context, listen: false);
+    final authBloc = BlocProvider.of<AuthBloc>(context, listen: false);
 
     _commentRepository = CommentRepositoryImpl(
       apiService: apiService,
@@ -82,7 +82,7 @@ class _AppScreenState extends State<AppScreen> {
         buildWhen: (previous, current) =>
             previous.runtimeType != current.runtimeType,
         builder: (context, authState) {
-          var navigatorState = Provider.of<AppNavigatorState>(context);
+          final navigatorState = Provider.of<AppNavigatorState>(context);
           return Navigator(
             pages: [
               if (authState is AuthInFlow)

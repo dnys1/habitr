@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -26,22 +27,21 @@ abstract class StorageService extends Repository<String> {
 }
 
 class AmplifyStorageService extends StorageService {
-  static final _parsedConfig =
-      jsonDecode(amplifyconfig) as Map<String, dynamic>;
-  static final bucket = _parsedConfig['storage']['plugins']
-      ['awsS3StoragePlugin']['bucket'] as String;
-  static final region = _parsedConfig['storage']['plugins']
-      ['awsS3StoragePlugin']['region'] as String;
+  AmplifyStorageService(
+    this._analyticsService,
+    this._authService,
+  );
+
+  static final _parsedConfig = AmplifyConfig.fromJson(
+    jsonDecode(amplifyconfig) as Map<String, dynamic>,
+  );
+  static final bucket = _parsedConfig.storage!.awsPlugin!.bucket;
+  static final region = _parsedConfig.storage!.awsPlugin!.region;
 
   static final _imagePicker = ImagePicker();
 
   final AuthService _authService;
   final AnalyticsService _analyticsService;
-
-  AmplifyStorageService(
-    this._analyticsService,
-    this._authService,
-  );
 
   File? _lostFile;
   @override
@@ -52,7 +52,7 @@ class AmplifyStorageService extends StorageService {
     // See discussion about Android crashes:
     // https://pub.dev/packages/image_picker
     if (Platform.isAndroid) {
-      final LostData response = await _imagePicker.getLostData();
+      final response = await _imagePicker.retrieveLostData();
       if (!response.isEmpty && response.file != null) {
         _lostFile = File(response.file!.path);
       }
@@ -61,7 +61,7 @@ class AmplifyStorageService extends StorageService {
 
   @override
   Future<void> precache(User user) async {
-    var avatar = user.avatar;
+    final avatar = user.avatar;
     if (avatar != null) {
       await getImageUrl(
         avatar.cognitoId ?? (await _authService.cognitoIdentityId)!,
@@ -80,8 +80,8 @@ class AmplifyStorageService extends StorageService {
         accessLevel: StorageAccessLevel.protected,
       ),
     );
-    _analyticsService.recordEvent('photoUpload');
-    var newUrl = await getImageUrl(null, key);
+    unawaited(_analyticsService.recordEvent('photoUpload'));
+    final newUrl = await getImageUrl(null, key);
     put(key, newUrl);
     return S3Object(
       bucket: bucket,
@@ -94,12 +94,12 @@ class AmplifyStorageService extends StorageService {
 
   @override
   Future<String> getImageUrl(String? identityId, String key) async {
-    var url = get(key);
+    final url = get(key);
     if (url != null) {
       return url;
     }
     identityId ??= await _authService.cognitoIdentityId;
-    final GetUrlResult result = await Amplify.Storage.getUrl(
+    final result = await Amplify.Storage.getUrl(
       key: key,
       options: S3GetUrlOptions(
         targetIdentityId: identityId,

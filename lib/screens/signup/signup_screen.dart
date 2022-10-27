@@ -8,7 +8,7 @@ import 'package:habitr/widgets/username_form_field/username_form_field.dart';
 import 'package:provider/provider.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SignupScreen extends StatelessWidget {
 }
 
 class _SignupView extends StatelessWidget {
-  const _SignupView({Key? key, required this.viewModel}) : super(key: key);
+  const _SignupView({required this.viewModel});
 
   final SignupViewModel viewModel;
 
@@ -44,7 +44,7 @@ class _SignupView extends StatelessWidget {
             child: Form(
               key: viewModel.formKey,
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -81,7 +81,9 @@ class _SignupView extends StatelessWidget {
                       onChanged: viewModel.setPassword,
                       validator: (String? passwordRetype) =>
                           validatePasswordRetype(
-                              viewModel.password, passwordRetype),
+                        viewModel.password,
+                        passwordRetype,
+                      ),
                       decoration: const InputDecoration(
                         labelText: 'Retype',
                         prefixIcon: Icon(Icons.lock),
@@ -99,8 +101,8 @@ class _SignupView extends StatelessWidget {
                       ),
                     const Spacer(flex: 4),
                     TextButton(
-                      child: const Text('Login'),
                       onPressed: viewModel.goToLogin,
+                      child: const Text('Login'),
                     ),
                     const SizedBox(height: 20),
                   ],

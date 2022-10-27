@@ -62,7 +62,7 @@ class _$GListHabitsSerializer implements StructuredSerializer<GListHabits> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -73,7 +73,7 @@ class _$GListHabitsSerializer implements StructuredSerializer<GListHabits> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -116,7 +116,7 @@ class _$GListHabitsByCategorySerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -127,7 +127,7 @@ class _$GListHabitsByCategorySerializer
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -164,7 +164,7 @@ class _$GGetHabitSerializer implements StructuredSerializer<GGetHabit> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -175,7 +175,7 @@ class _$GGetHabitSerializer implements StructuredSerializer<GGetHabit> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -212,7 +212,7 @@ class _$GGetUserSerializer implements StructuredSerializer<GGetUser> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -223,7 +223,7 @@ class _$GGetUserSerializer implements StructuredSerializer<GGetUser> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -260,7 +260,7 @@ class _$GGetSelfSerializer implements StructuredSerializer<GGetSelf> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -271,7 +271,7 @@ class _$GGetSelfSerializer implements StructuredSerializer<GGetSelf> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -308,7 +308,7 @@ class _$GGetCommentSerializer implements StructuredSerializer<GGetComment> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -319,7 +319,7 @@ class _$GGetCommentSerializer implements StructuredSerializer<GGetComment> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -358,7 +358,7 @@ class _$GSubscribeToUserSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -369,7 +369,7 @@ class _$GSubscribeToUserSerializer
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -406,7 +406,7 @@ class _$GCreateUserSerializer implements StructuredSerializer<GCreateUser> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -417,7 +417,7 @@ class _$GCreateUserSerializer implements StructuredSerializer<GCreateUser> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -456,7 +456,7 @@ class _$GCreateCommentSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -467,7 +467,7 @@ class _$GCreateCommentSerializer
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -505,7 +505,7 @@ class _$GCreateHabitSerializer implements StructuredSerializer<GCreateHabit> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -516,7 +516,7 @@ class _$GCreateHabitSerializer implements StructuredSerializer<GCreateHabit> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -553,7 +553,7 @@ class _$GUpdateUserSerializer implements StructuredSerializer<GUpdateUser> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -564,7 +564,7 @@ class _$GUpdateUserSerializer implements StructuredSerializer<GUpdateUser> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -602,7 +602,7 @@ class _$GUpdateHabitSerializer implements StructuredSerializer<GUpdateHabit> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -613,7 +613,7 @@ class _$GUpdateHabitSerializer implements StructuredSerializer<GUpdateHabit> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -651,7 +651,7 @@ class _$GDeleteHabitSerializer implements StructuredSerializer<GDeleteHabit> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -662,7 +662,7 @@ class _$GDeleteHabitSerializer implements StructuredSerializer<GDeleteHabit> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -700,7 +700,7 @@ class _$GVoteForHabitSerializer implements StructuredSerializer<GVoteForHabit> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -711,7 +711,7 @@ class _$GVoteForHabitSerializer implements StructuredSerializer<GVoteForHabit> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -750,7 +750,7 @@ class _$GSubscribeToVotesSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -761,7 +761,7 @@ class _$GSubscribeToVotesSerializer
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -799,7 +799,7 @@ class _$GSearchUsersSerializer implements StructuredSerializer<GSearchUsers> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -810,7 +810,7 @@ class _$GSearchUsersSerializer implements StructuredSerializer<GSearchUsers> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -848,7 +848,7 @@ class _$GSearchHabitsSerializer implements StructuredSerializer<GSearchHabits> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -859,7 +859,7 @@ class _$GSearchHabitsSerializer implements StructuredSerializer<GSearchHabits> {
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
-              specifiedType: const FullType(_i1.Operation)) as _i1.Operation;
+              specifiedType: const FullType(_i1.Operation))! as _i1.Operation;
           break;
       }
     }
@@ -875,12 +875,12 @@ class _$GListHabits extends GListHabits {
   final _i1.Operation operation;
 
   factory _$GListHabits([void Function(GListHabitsBuilder)? updates]) =>
-      (new GListHabitsBuilder()..update(updates)).build();
+      (new GListHabitsBuilder()..update(updates))._build();
 
   _$GListHabits._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GListHabits', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GListHabits', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GListHabits', 'operation');
+        operation, r'GListHabits', 'operation');
   }
 
   @override
@@ -905,7 +905,7 @@ class _$GListHabits extends GListHabits {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabits')
+    return (newBuiltValueToStringHelper(r'GListHabits')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -950,14 +950,16 @@ class GListHabitsBuilder implements Builder<GListHabits, GListHabitsBuilder> {
   }
 
   @override
-  _$GListHabits build() {
+  GListHabits build() => _build();
+
+  _$GListHabits _build() {
     _$GListHabits _$result;
     try {
       _$result = _$v ??
           new _$GListHabits._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GListHabits', 'operation'));
+                  operation, r'GListHabits', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -965,7 +967,7 @@ class GListHabitsBuilder implements Builder<GListHabits, GListHabitsBuilder> {
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabits', _$failedField, e.toString());
+            r'GListHabits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -982,14 +984,14 @@ class _$GListHabitsByCategory extends GListHabitsByCategory {
 
   factory _$GListHabitsByCategory(
           [void Function(GListHabitsByCategoryBuilder)? updates]) =>
-      (new GListHabitsByCategoryBuilder()..update(updates)).build();
+      (new GListHabitsByCategoryBuilder()..update(updates))._build();
 
   _$GListHabitsByCategory._({required this.vars, required this.operation})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        vars, 'GListHabitsByCategory', 'vars');
+        vars, r'GListHabitsByCategory', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GListHabitsByCategory', 'operation');
+        operation, r'GListHabitsByCategory', 'operation');
   }
 
   @override
@@ -1016,7 +1018,7 @@ class _$GListHabitsByCategory extends GListHabitsByCategory {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GListHabitsByCategory')
+    return (newBuiltValueToStringHelper(r'GListHabitsByCategory')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1062,14 +1064,16 @@ class GListHabitsByCategoryBuilder
   }
 
   @override
-  _$GListHabitsByCategory build() {
+  GListHabitsByCategory build() => _build();
+
+  _$GListHabitsByCategory _build() {
     _$GListHabitsByCategory _$result;
     try {
       _$result = _$v ??
           new _$GListHabitsByCategory._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GListHabitsByCategory', 'operation'));
+                  operation, r'GListHabitsByCategory', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1077,7 +1081,7 @@ class GListHabitsByCategoryBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GListHabitsByCategory', _$failedField, e.toString());
+            r'GListHabitsByCategory', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1093,11 +1097,11 @@ class _$GGetHabit extends GGetHabit {
   final _i1.Operation operation;
 
   factory _$GGetHabit([void Function(GGetHabitBuilder)? updates]) =>
-      (new GGetHabitBuilder()..update(updates)).build();
+      (new GGetHabitBuilder()..update(updates))._build();
 
   _$GGetHabit._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GGetHabit', 'vars');
-    BuiltValueNullFieldError.checkNotNull(operation, 'GGetHabit', 'operation');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GGetHabit', 'vars');
+    BuiltValueNullFieldError.checkNotNull(operation, r'GGetHabit', 'operation');
   }
 
   @override
@@ -1122,7 +1126,7 @@ class _$GGetHabit extends GGetHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetHabit')
+    return (newBuiltValueToStringHelper(r'GGetHabit')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1167,14 +1171,16 @@ class GGetHabitBuilder implements Builder<GGetHabit, GGetHabitBuilder> {
   }
 
   @override
-  _$GGetHabit build() {
+  GGetHabit build() => _build();
+
+  _$GGetHabit _build() {
     _$GGetHabit _$result;
     try {
       _$result = _$v ??
           new _$GGetHabit._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GGetHabit', 'operation'));
+                  operation, r'GGetHabit', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1182,7 +1188,7 @@ class GGetHabitBuilder implements Builder<GGetHabit, GGetHabitBuilder> {
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetHabit', _$failedField, e.toString());
+            r'GGetHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1198,11 +1204,11 @@ class _$GGetUser extends GGetUser {
   final _i1.Operation operation;
 
   factory _$GGetUser([void Function(GGetUserBuilder)? updates]) =>
-      (new GGetUserBuilder()..update(updates)).build();
+      (new GGetUserBuilder()..update(updates))._build();
 
   _$GGetUser._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GGetUser', 'vars');
-    BuiltValueNullFieldError.checkNotNull(operation, 'GGetUser', 'operation');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GGetUser', 'vars');
+    BuiltValueNullFieldError.checkNotNull(operation, r'GGetUser', 'operation');
   }
 
   @override
@@ -1227,7 +1233,7 @@ class _$GGetUser extends GGetUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetUser')
+    return (newBuiltValueToStringHelper(r'GGetUser')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1272,14 +1278,16 @@ class GGetUserBuilder implements Builder<GGetUser, GGetUserBuilder> {
   }
 
   @override
-  _$GGetUser build() {
+  GGetUser build() => _build();
+
+  _$GGetUser _build() {
     _$GGetUser _$result;
     try {
       _$result = _$v ??
           new _$GGetUser._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GGetUser', 'operation'));
+                  operation, r'GGetUser', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1287,7 +1295,7 @@ class GGetUserBuilder implements Builder<GGetUser, GGetUserBuilder> {
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetUser', _$failedField, e.toString());
+            r'GGetUser', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1303,11 +1311,11 @@ class _$GGetSelf extends GGetSelf {
   final _i1.Operation operation;
 
   factory _$GGetSelf([void Function(GGetSelfBuilder)? updates]) =>
-      (new GGetSelfBuilder()..update(updates)).build();
+      (new GGetSelfBuilder()..update(updates))._build();
 
   _$GGetSelf._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GGetSelf', 'vars');
-    BuiltValueNullFieldError.checkNotNull(operation, 'GGetSelf', 'operation');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GGetSelf', 'vars');
+    BuiltValueNullFieldError.checkNotNull(operation, r'GGetSelf', 'operation');
   }
 
   @override
@@ -1332,7 +1340,7 @@ class _$GGetSelf extends GGetSelf {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetSelf')
+    return (newBuiltValueToStringHelper(r'GGetSelf')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1377,14 +1385,16 @@ class GGetSelfBuilder implements Builder<GGetSelf, GGetSelfBuilder> {
   }
 
   @override
-  _$GGetSelf build() {
+  GGetSelf build() => _build();
+
+  _$GGetSelf _build() {
     _$GGetSelf _$result;
     try {
       _$result = _$v ??
           new _$GGetSelf._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GGetSelf', 'operation'));
+                  operation, r'GGetSelf', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1392,7 +1402,7 @@ class GGetSelfBuilder implements Builder<GGetSelf, GGetSelfBuilder> {
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetSelf', _$failedField, e.toString());
+            r'GGetSelf', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1408,12 +1418,12 @@ class _$GGetComment extends GGetComment {
   final _i1.Operation operation;
 
   factory _$GGetComment([void Function(GGetCommentBuilder)? updates]) =>
-      (new GGetCommentBuilder()..update(updates)).build();
+      (new GGetCommentBuilder()..update(updates))._build();
 
   _$GGetComment._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GGetComment', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GGetComment', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GGetComment', 'operation');
+        operation, r'GGetComment', 'operation');
   }
 
   @override
@@ -1438,7 +1448,7 @@ class _$GGetComment extends GGetComment {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GGetComment')
+    return (newBuiltValueToStringHelper(r'GGetComment')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1483,14 +1493,16 @@ class GGetCommentBuilder implements Builder<GGetComment, GGetCommentBuilder> {
   }
 
   @override
-  _$GGetComment build() {
+  GGetComment build() => _build();
+
+  _$GGetComment _build() {
     _$GGetComment _$result;
     try {
       _$result = _$v ??
           new _$GGetComment._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GGetComment', 'operation'));
+                  operation, r'GGetComment', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1498,7 +1510,7 @@ class GGetCommentBuilder implements Builder<GGetComment, GGetCommentBuilder> {
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GGetComment', _$failedField, e.toString());
+            r'GGetComment', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1515,13 +1527,13 @@ class _$GSubscribeToUser extends GSubscribeToUser {
 
   factory _$GSubscribeToUser(
           [void Function(GSubscribeToUserBuilder)? updates]) =>
-      (new GSubscribeToUserBuilder()..update(updates)).build();
+      (new GSubscribeToUserBuilder()..update(updates))._build();
 
   _$GSubscribeToUser._({required this.vars, required this.operation})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GSubscribeToUser', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GSubscribeToUser', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GSubscribeToUser', 'operation');
+        operation, r'GSubscribeToUser', 'operation');
   }
 
   @override
@@ -1547,7 +1559,7 @@ class _$GSubscribeToUser extends GSubscribeToUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSubscribeToUser')
+    return (newBuiltValueToStringHelper(r'GSubscribeToUser')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1593,14 +1605,16 @@ class GSubscribeToUserBuilder
   }
 
   @override
-  _$GSubscribeToUser build() {
+  GSubscribeToUser build() => _build();
+
+  _$GSubscribeToUser _build() {
     _$GSubscribeToUser _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToUser._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GSubscribeToUser', 'operation'));
+                  operation, r'GSubscribeToUser', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1608,7 +1622,7 @@ class GSubscribeToUserBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToUser', _$failedField, e.toString());
+            r'GSubscribeToUser', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1624,12 +1638,12 @@ class _$GCreateUser extends GCreateUser {
   final _i1.Operation operation;
 
   factory _$GCreateUser([void Function(GCreateUserBuilder)? updates]) =>
-      (new GCreateUserBuilder()..update(updates)).build();
+      (new GCreateUserBuilder()..update(updates))._build();
 
   _$GCreateUser._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GCreateUser', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GCreateUser', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GCreateUser', 'operation');
+        operation, r'GCreateUser', 'operation');
   }
 
   @override
@@ -1654,7 +1668,7 @@ class _$GCreateUser extends GCreateUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateUser')
+    return (newBuiltValueToStringHelper(r'GCreateUser')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1699,14 +1713,16 @@ class GCreateUserBuilder implements Builder<GCreateUser, GCreateUserBuilder> {
   }
 
   @override
-  _$GCreateUser build() {
+  GCreateUser build() => _build();
+
+  _$GCreateUser _build() {
     _$GCreateUser _$result;
     try {
       _$result = _$v ??
           new _$GCreateUser._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GCreateUser', 'operation'));
+                  operation, r'GCreateUser', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1714,7 +1730,7 @@ class GCreateUserBuilder implements Builder<GCreateUser, GCreateUserBuilder> {
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateUser', _$failedField, e.toString());
+            r'GCreateUser', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1730,13 +1746,13 @@ class _$GCreateComment extends GCreateComment {
   final _i1.Operation operation;
 
   factory _$GCreateComment([void Function(GCreateCommentBuilder)? updates]) =>
-      (new GCreateCommentBuilder()..update(updates)).build();
+      (new GCreateCommentBuilder()..update(updates))._build();
 
   _$GCreateComment._({required this.vars, required this.operation})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GCreateComment', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GCreateComment', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GCreateComment', 'operation');
+        operation, r'GCreateComment', 'operation');
   }
 
   @override
@@ -1762,7 +1778,7 @@ class _$GCreateComment extends GCreateComment {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateComment')
+    return (newBuiltValueToStringHelper(r'GCreateComment')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1808,14 +1824,16 @@ class GCreateCommentBuilder
   }
 
   @override
-  _$GCreateComment build() {
+  GCreateComment build() => _build();
+
+  _$GCreateComment _build() {
     _$GCreateComment _$result;
     try {
       _$result = _$v ??
           new _$GCreateComment._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GCreateComment', 'operation'));
+                  operation, r'GCreateComment', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1823,7 +1841,7 @@ class GCreateCommentBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateComment', _$failedField, e.toString());
+            r'GCreateComment', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1839,12 +1857,12 @@ class _$GCreateHabit extends GCreateHabit {
   final _i1.Operation operation;
 
   factory _$GCreateHabit([void Function(GCreateHabitBuilder)? updates]) =>
-      (new GCreateHabitBuilder()..update(updates)).build();
+      (new GCreateHabitBuilder()..update(updates))._build();
 
   _$GCreateHabit._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GCreateHabit', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GCreateHabit', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GCreateHabit', 'operation');
+        operation, r'GCreateHabit', 'operation');
   }
 
   @override
@@ -1869,7 +1887,7 @@ class _$GCreateHabit extends GCreateHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateHabit')
+    return (newBuiltValueToStringHelper(r'GCreateHabit')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -1915,14 +1933,16 @@ class GCreateHabitBuilder
   }
 
   @override
-  _$GCreateHabit build() {
+  GCreateHabit build() => _build();
+
+  _$GCreateHabit _build() {
     _$GCreateHabit _$result;
     try {
       _$result = _$v ??
           new _$GCreateHabit._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GCreateHabit', 'operation'));
+                  operation, r'GCreateHabit', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -1930,7 +1950,7 @@ class GCreateHabitBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateHabit', _$failedField, e.toString());
+            r'GCreateHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -1946,12 +1966,12 @@ class _$GUpdateUser extends GUpdateUser {
   final _i1.Operation operation;
 
   factory _$GUpdateUser([void Function(GUpdateUserBuilder)? updates]) =>
-      (new GUpdateUserBuilder()..update(updates)).build();
+      (new GUpdateUserBuilder()..update(updates))._build();
 
   _$GUpdateUser._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GUpdateUser', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GUpdateUser', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GUpdateUser', 'operation');
+        operation, r'GUpdateUser', 'operation');
   }
 
   @override
@@ -1976,7 +1996,7 @@ class _$GUpdateUser extends GUpdateUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUser')
+    return (newBuiltValueToStringHelper(r'GUpdateUser')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -2021,14 +2041,16 @@ class GUpdateUserBuilder implements Builder<GUpdateUser, GUpdateUserBuilder> {
   }
 
   @override
-  _$GUpdateUser build() {
+  GUpdateUser build() => _build();
+
+  _$GUpdateUser _build() {
     _$GUpdateUser _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUser._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GUpdateUser', 'operation'));
+                  operation, r'GUpdateUser', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -2036,7 +2058,7 @@ class GUpdateUserBuilder implements Builder<GUpdateUser, GUpdateUserBuilder> {
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUser', _$failedField, e.toString());
+            r'GUpdateUser', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2052,12 +2074,12 @@ class _$GUpdateHabit extends GUpdateHabit {
   final _i1.Operation operation;
 
   factory _$GUpdateHabit([void Function(GUpdateHabitBuilder)? updates]) =>
-      (new GUpdateHabitBuilder()..update(updates)).build();
+      (new GUpdateHabitBuilder()..update(updates))._build();
 
   _$GUpdateHabit._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GUpdateHabit', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GUpdateHabit', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GUpdateHabit', 'operation');
+        operation, r'GUpdateHabit', 'operation');
   }
 
   @override
@@ -2082,7 +2104,7 @@ class _$GUpdateHabit extends GUpdateHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateHabit')
+    return (newBuiltValueToStringHelper(r'GUpdateHabit')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -2128,14 +2150,16 @@ class GUpdateHabitBuilder
   }
 
   @override
-  _$GUpdateHabit build() {
+  GUpdateHabit build() => _build();
+
+  _$GUpdateHabit _build() {
     _$GUpdateHabit _$result;
     try {
       _$result = _$v ??
           new _$GUpdateHabit._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GUpdateHabit', 'operation'));
+                  operation, r'GUpdateHabit', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -2143,7 +2167,7 @@ class GUpdateHabitBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateHabit', _$failedField, e.toString());
+            r'GUpdateHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2159,12 +2183,12 @@ class _$GDeleteHabit extends GDeleteHabit {
   final _i1.Operation operation;
 
   factory _$GDeleteHabit([void Function(GDeleteHabitBuilder)? updates]) =>
-      (new GDeleteHabitBuilder()..update(updates)).build();
+      (new GDeleteHabitBuilder()..update(updates))._build();
 
   _$GDeleteHabit._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GDeleteHabit', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GDeleteHabit', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GDeleteHabit', 'operation');
+        operation, r'GDeleteHabit', 'operation');
   }
 
   @override
@@ -2189,7 +2213,7 @@ class _$GDeleteHabit extends GDeleteHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GDeleteHabit')
+    return (newBuiltValueToStringHelper(r'GDeleteHabit')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -2235,14 +2259,16 @@ class GDeleteHabitBuilder
   }
 
   @override
-  _$GDeleteHabit build() {
+  GDeleteHabit build() => _build();
+
+  _$GDeleteHabit _build() {
     _$GDeleteHabit _$result;
     try {
       _$result = _$v ??
           new _$GDeleteHabit._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GDeleteHabit', 'operation'));
+                  operation, r'GDeleteHabit', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -2250,7 +2276,7 @@ class GDeleteHabitBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GDeleteHabit', _$failedField, e.toString());
+            r'GDeleteHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2266,12 +2292,12 @@ class _$GVoteForHabit extends GVoteForHabit {
   final _i1.Operation operation;
 
   factory _$GVoteForHabit([void Function(GVoteForHabitBuilder)? updates]) =>
-      (new GVoteForHabitBuilder()..update(updates)).build();
+      (new GVoteForHabitBuilder()..update(updates))._build();
 
   _$GVoteForHabit._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GVoteForHabit', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GVoteForHabit', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GVoteForHabit', 'operation');
+        operation, r'GVoteForHabit', 'operation');
   }
 
   @override
@@ -2296,7 +2322,7 @@ class _$GVoteForHabit extends GVoteForHabit {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GVoteForHabit')
+    return (newBuiltValueToStringHelper(r'GVoteForHabit')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -2342,14 +2368,16 @@ class GVoteForHabitBuilder
   }
 
   @override
-  _$GVoteForHabit build() {
+  GVoteForHabit build() => _build();
+
+  _$GVoteForHabit _build() {
     _$GVoteForHabit _$result;
     try {
       _$result = _$v ??
           new _$GVoteForHabit._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GVoteForHabit', 'operation'));
+                  operation, r'GVoteForHabit', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -2357,7 +2385,7 @@ class GVoteForHabitBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GVoteForHabit', _$failedField, e.toString());
+            r'GVoteForHabit', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2374,13 +2402,13 @@ class _$GSubscribeToVotes extends GSubscribeToVotes {
 
   factory _$GSubscribeToVotes(
           [void Function(GSubscribeToVotesBuilder)? updates]) =>
-      (new GSubscribeToVotesBuilder()..update(updates)).build();
+      (new GSubscribeToVotesBuilder()..update(updates))._build();
 
   _$GSubscribeToVotes._({required this.vars, required this.operation})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GSubscribeToVotes', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GSubscribeToVotes', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GSubscribeToVotes', 'operation');
+        operation, r'GSubscribeToVotes', 'operation');
   }
 
   @override
@@ -2406,7 +2434,7 @@ class _$GSubscribeToVotes extends GSubscribeToVotes {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSubscribeToVotes')
+    return (newBuiltValueToStringHelper(r'GSubscribeToVotes')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -2452,14 +2480,16 @@ class GSubscribeToVotesBuilder
   }
 
   @override
-  _$GSubscribeToVotes build() {
+  GSubscribeToVotes build() => _build();
+
+  _$GSubscribeToVotes _build() {
     _$GSubscribeToVotes _$result;
     try {
       _$result = _$v ??
           new _$GSubscribeToVotes._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GSubscribeToVotes', 'operation'));
+                  operation, r'GSubscribeToVotes', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -2467,7 +2497,7 @@ class GSubscribeToVotesBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSubscribeToVotes', _$failedField, e.toString());
+            r'GSubscribeToVotes', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2483,12 +2513,12 @@ class _$GSearchUsers extends GSearchUsers {
   final _i1.Operation operation;
 
   factory _$GSearchUsers([void Function(GSearchUsersBuilder)? updates]) =>
-      (new GSearchUsersBuilder()..update(updates)).build();
+      (new GSearchUsersBuilder()..update(updates))._build();
 
   _$GSearchUsers._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GSearchUsers', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GSearchUsers', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GSearchUsers', 'operation');
+        operation, r'GSearchUsers', 'operation');
   }
 
   @override
@@ -2513,7 +2543,7 @@ class _$GSearchUsers extends GSearchUsers {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchUsers')
+    return (newBuiltValueToStringHelper(r'GSearchUsers')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -2559,14 +2589,16 @@ class GSearchUsersBuilder
   }
 
   @override
-  _$GSearchUsers build() {
+  GSearchUsers build() => _build();
+
+  _$GSearchUsers _build() {
     _$GSearchUsers _$result;
     try {
       _$result = _$v ??
           new _$GSearchUsers._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GSearchUsers', 'operation'));
+                  operation, r'GSearchUsers', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -2574,7 +2606,7 @@ class GSearchUsersBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchUsers', _$failedField, e.toString());
+            r'GSearchUsers', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2590,12 +2622,12 @@ class _$GSearchHabits extends GSearchHabits {
   final _i1.Operation operation;
 
   factory _$GSearchHabits([void Function(GSearchHabitsBuilder)? updates]) =>
-      (new GSearchHabitsBuilder()..update(updates)).build();
+      (new GSearchHabitsBuilder()..update(updates))._build();
 
   _$GSearchHabits._({required this.vars, required this.operation}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, 'GSearchHabits', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GSearchHabits', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, 'GSearchHabits', 'operation');
+        operation, r'GSearchHabits', 'operation');
   }
 
   @override
@@ -2620,7 +2652,7 @@ class _$GSearchHabits extends GSearchHabits {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GSearchHabits')
+    return (newBuiltValueToStringHelper(r'GSearchHabits')
           ..add('vars', vars)
           ..add('operation', operation))
         .toString();
@@ -2666,14 +2698,16 @@ class GSearchHabitsBuilder
   }
 
   @override
-  _$GSearchHabits build() {
+  GSearchHabits build() => _build();
+
+  _$GSearchHabits _build() {
     _$GSearchHabits _$result;
     try {
       _$result = _$v ??
           new _$GSearchHabits._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, 'GSearchHabits', 'operation'));
+                  operation, r'GSearchHabits', 'operation'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -2681,7 +2715,7 @@ class GSearchHabitsBuilder
         vars.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GSearchHabits', _$failedField, e.toString());
+            r'GSearchHabits', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -2690,4 +2724,4 @@ class GSearchHabitsBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -29,22 +29,14 @@ Future<void> main() async {
   final preferencesService = SharedPreferencesService();
   await preferencesService.init();
 
-  runApp(MyApp(
-    preferencesService: preferencesService,
-  ));
+  runApp(
+    MyApp(preferencesService: preferencesService),
+  );
 }
 
 class MyApp extends StatefulWidget {
-  late final AuthService _authService;
-  final ApiService _apiService;
-  final BackendService _backendService;
-  late final StorageService _storageService;
-  late final AnalyticsService _analyticsService;
-  final PreferencesService _preferencesService;
-  late final ThemeService _themeService;
-
   MyApp({
-    Key? key,
+    super.key,
     AuthService? authService,
     ApiService? apiService,
     BackendService? backendService,
@@ -54,8 +46,7 @@ class MyApp extends StatefulWidget {
     ThemeService? themeService,
   })  : _apiService = apiService ?? AmplifyApiService(),
         _backendService = backendService ?? AmplifyBackendService(),
-        _preferencesService = preferencesService ?? SharedPreferencesService(),
-        super(key: key) {
+        _preferencesService = preferencesService ?? SharedPreferencesService() {
     _analyticsService = analyticsService ??
         AmplifyAnalyticsService(
           preferencesService: _preferencesService,
@@ -75,8 +66,16 @@ class MyApp extends StatefulWidget {
         );
   }
 
+  late final AuthService _authService;
+  final ApiService _apiService;
+  final BackendService _backendService;
+  late final StorageService _storageService;
+  late final AnalyticsService _analyticsService;
+  final PreferencesService _preferencesService;
+  late final ThemeService _themeService;
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -137,7 +136,7 @@ class _MyAppState extends State<MyApp> {
                 initialData: const AuthLoading(),
                 stream: _authBloc.stream,
                 builder: (context, state) {
-                  var authState = state.data;
+                  final authState = state.data;
                   return Navigator(
                     pages: [
                       if (authState is AuthLoading)

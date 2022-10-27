@@ -43,15 +43,15 @@ Future<void> main(List<String> args) async {
 
   final values = parser.parse(args);
 
-  graphQLEndpoint ??= values['endpoint'];
-  apiKey ??= values['api-key'];
+  graphQLEndpoint ??= values['endpoint'] as String;
+  apiKey ??= values['api-key'] as String;
 
   final user = values['user'] as String;
 
   final link = HttpLink(
-    graphQLEndpoint!,
+    graphQLEndpoint,
     defaultHeaders: {
-      'x-api-key': apiKey!,
+      'x-api-key': apiKey,
     },
   );
 
@@ -59,7 +59,9 @@ Future<void> main(List<String> args) async {
 }
 
 class GCreateHabit extends Operation {
-  GCreateHabit() : super(document: parseString(r'''
+  GCreateHabit()
+      : super(
+          document: parseString(r'''
       mutation CreateHabit(
         $tagline: String!, 
         $category: Category!, 
@@ -77,7 +79,8 @@ class GCreateHabit extends Operation {
           id
         }
       }
-    '''));
+    '''),
+        );
 }
 
 Future<void> seedDB(HttpLink link, {required String user}) async {
@@ -103,13 +106,13 @@ Future<void> seedDB(HttpLink link, {required String user}) async {
 
     final didErrorOccur = resp.errors?.isNotEmpty ?? false;
     if (didErrorOccur) {
-      for (var error in resp.errors!) {
+      for (final error in resp.errors!) {
         print('Error creating habit: $error');
       }
       return;
     }
 
-    final id = resp.data?['createHabit']?['id'] as String?;
+    final id = (resp.data?['createHabit'] as Map?)?['id'] as String?;
     print('Created habit with ID: $id');
   }
 }

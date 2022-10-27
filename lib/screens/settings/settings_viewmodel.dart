@@ -5,14 +5,14 @@ import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
 class SettingsViewModel extends BaseViewModel {
-  final PreferencesService _preferencesService;
-  final AnalyticsService _analyticsService;
-
   SettingsViewModel({
     required PreferencesService preferencesService,
     required AnalyticsService analyticsService,
   })  : _preferencesService = preferencesService,
         _analyticsService = analyticsService;
+
+  final PreferencesService _preferencesService;
+  final AnalyticsService _analyticsService;
 
   bool get analyticsEnabled =>
       _preferencesService.getBool(AnalyticsService.analyticsEnabledKey) ?? true;
@@ -28,7 +28,9 @@ class SettingsViewModel extends BaseViewModel {
     } on Exception catch (e) {
       safePrint('Error enabling analytics: $e');
       showErrorSnackbar(
-          'Error ${enable ? "enabling" : "disabling"} analytics. Please try again later.');
+        'Error ${enable ? "enabling" : "disabling"} analytics. '
+        'Please try again later.',
+      );
     }
   }
 }

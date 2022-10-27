@@ -9,9 +9,9 @@ import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class HabitListTile extends StatelessWidget {
-  final String habitId;
+  const HabitListTile(this.habitId, {super.key});
 
-  const HabitListTile(this.habitId, {Key? key}) : super(key: key);
+  final String habitId;
 
   Future<void> _vote(HabitRepository repo, String habitId, bool upvote) async {
     try {
@@ -38,10 +38,10 @@ class HabitListTile extends StatelessWidget {
             repo.isUpvoted(habitId),
           ),
           builder: (context, habitStatus, _) {
-            var habit = habitStatus.item1;
-            var isLoading = habit == null;
-            var isProcessing = habitStatus.item2;
-            var isUpvoted = habitStatus.item3;
+            final habit = habitStatus.item1;
+            final isLoading = habit == null;
+            final isProcessing = habitStatus.item2;
+            final isUpvoted = habitStatus.item3;
             return _HabitListTileView(
               habit: habit,
               isLoading: isLoading,
@@ -58,6 +58,15 @@ class HabitListTile extends StatelessWidget {
 }
 
 class _HabitListTileView extends StatelessWidget {
+  const _HabitListTileView({
+    required this.habit,
+    required this.isLoading,
+    required this.isProcessing,
+    required this.isUpvoted,
+    required this.onClickUpvote,
+    required this.onClickDownvote,
+  });
+
   static final loadingColor = Colors.grey[300]!;
 
   final Habit? habit;
@@ -67,26 +76,16 @@ class _HabitListTileView extends StatelessWidget {
   final void Function()? onClickUpvote;
   final void Function()? onClickDownvote;
 
-  const _HabitListTileView({
-    required this.habit,
-    required this.isLoading,
-    required this.isProcessing,
-    required this.isUpvoted,
-    required this.onClickUpvote,
-    required this.onClickDownvote,
-    Key? key,
-  }) : super(key: key);
-
   Widget? get _subtitle {
     if (isLoading) {
       return null;
     }
-    var owner = habit!.owner;
-    var category = habit!.category;
+    final owner = habit!.owner;
+    final category = habit!.category;
     return Row(
       children: [
         Text(category.string),
-        Text(' \u2022 @' + owner),
+        Text(' \u2022 @$owner'),
       ],
     );
   }
@@ -97,9 +96,11 @@ class _HabitListTileView extends StatelessWidget {
       onTap: isLoading
           ? null
           : () {
-              Navigator.of(context).push<void>(MaterialPageRoute(
-                builder: (_) => HabitDetailsScreen(habit!.id),
-              ));
+              Navigator.of(context).push<void>(
+                MaterialPageRoute(
+                  builder: (_) => HabitDetailsScreen(habit!.id),
+                ),
+              );
             },
       leading: Column(
         children: [
@@ -110,7 +111,7 @@ class _HabitListTileView extends StatelessWidget {
                 Icons.expand_less,
                 color: isLoading || isProcessing
                     ? loadingColor
-                    : isUpvoted == true
+                    : isUpvoted ?? false
                         ? Colors.amber
                         : null,
               ),

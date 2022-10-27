@@ -9,9 +9,6 @@ import 'package:habitr/widgets/search_results/search_results.dart';
 import 'package:stream_transform/stream_transform.dart';
 
 class SearchService extends SearchDelegate<void> {
-  final HabitRepository _habitRepository;
-  final UserRepository _userRepository;
-
   SearchService({
     required HabitRepository habitRepository,
     required UserRepository userRepository,
@@ -30,10 +27,13 @@ class SearchService extends SearchDelegate<void> {
       }
       yield const SearchResults.loading();
       try {
-        final result = await Future.wait([
-          _habitRepository.searchHabits(query),
-          _userRepository.searchUsers(query),
-        ], eagerError: true);
+        final result = await Future.wait(
+          [
+            _habitRepository.searchHabits(query),
+            _userRepository.searchUsers(query),
+          ],
+          eagerError: true,
+        );
         final habits = result[0] as List<Habit>;
         final users = result[1] as List<User>;
 
@@ -47,9 +47,12 @@ class SearchService extends SearchDelegate<void> {
     });
   }
 
+  final HabitRepository _habitRepository;
+  final UserRepository _userRepository;
+
   static const _errorWidget = Center(
     child: Padding(
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(10),
       child: Text('Error performing search. Please try again.'),
     ),
   );

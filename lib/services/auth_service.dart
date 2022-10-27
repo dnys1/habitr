@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:gql/ast.dart' as ast;
@@ -25,36 +24,39 @@ abstract class AuthService {
 }
 
 class AmplifyAuthService implements AuthService {
-  final ApiService _apiService;
-
   AmplifyAuthService({
     required ApiService apiService,
   }) : _apiService = apiService;
 
+  final ApiService _apiService;
   Stream<User>? _userStream;
 
   @override
   Stream<User> get userUpdates async* {
     const operationName = 'subscribeToUser';
-    const _document = ast.DocumentNode(definitions: [
-      AllPrivateUserFields,
-      AllCommentFields,
-      AllHabitFields,
-      SubscribeToUser,
-    ]);
-    final request = gql.printNode(_document);
+    const document = ast.DocumentNode(
+      definitions: [
+        AllPrivateUserFields,
+        AllCommentFields,
+        AllHabitFields,
+        SubscribeToUser,
+      ],
+    );
+    final request = gql.printNode(document);
 
     _userStream ??= Amplify.API
-        .subscribe<String>(GraphQLRequest(
-      document: request,
-      variables: <String, dynamic>{
-        'username': await username,
-      },
-    ))
+        .subscribe<String>(
+      GraphQLRequest(
+        document: request,
+        variables: <String, dynamic>{
+          'username': await username,
+        },
+      ),
+    )
         .map((event) {
       final data = event.data!;
       final userMap = jsonDecode(data) as Map<String, dynamic>;
-      return User.fromJson(userMap[operationName]);
+      return User.fromJson((userMap[operationName] as Map).cast());
     });
 
     yield* _userStream!;
@@ -140,7 +142,7 @@ class AmplifyAuthService implements AuthService {
         )
         .response;
     final body = jsonDecode(utf8.decode(resp.data)) as Map<String, dynamic>;
-    return body['identityId'];
+    return body['identityId'] as String?;
   }
 
   @override
@@ -169,15 +171,15 @@ class AmplifyAuthService implements AuthService {
 }
 
 class AuthException implements Exception {
-  final String message;
-  final Object? wrappedException;
-  final StackTrace? stackTrace;
-
   const AuthException([
     this.message = 'An unknown error occurred.',
     this.wrappedException,
     this.stackTrace,
   ]);
+
+  final String message;
+  final Object? wrappedException;
+  final StackTrace? stackTrace;
 
   @override
   String toString() => 'AuthException{ message: "$message" }';

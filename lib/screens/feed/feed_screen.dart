@@ -9,7 +9,7 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 
 class FeedScreen extends StatelessWidget {
-  const FeedScreen({Key? key}) : super(key: key);
+  const FeedScreen({super.key});
 
   static const page = MaterialPage<void>(child: FeedScreen());
 
@@ -31,9 +31,9 @@ class FeedScreen extends StatelessWidget {
 }
 
 class _FeedView extends StatelessWidget {
-  final FeedViewModel viewModel;
+  const _FeedView({required this.viewModel});
 
-  const _FeedView({Key? key, required this.viewModel}) : super(key: key);
+  final FeedViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +49,7 @@ class _FeedView extends StatelessWidget {
         },
       ),
       body: RefreshIndicator(
+        onRefresh: viewModel.refresh,
         child: PagedListView<String?, Habit>(
           pagingController: viewModel.pagingController,
           builderDelegate: PagedChildBuilderDelegate<Habit>(
@@ -62,7 +63,6 @@ class _FeedView extends StatelessWidget {
             },
           ),
         ),
-        onRefresh: viewModel.refresh,
       ),
     );
   }

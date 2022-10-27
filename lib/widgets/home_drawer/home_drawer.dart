@@ -16,7 +16,7 @@ import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class HomeDrawer extends StatelessWidget {
-  const HomeDrawer({Key? key}) : super(key: key);
+  const HomeDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +36,11 @@ class HomeDrawer extends StatelessWidget {
 }
 
 class _HomeDrawerView extends StatelessWidget {
-  final HomeDrawerViewModel viewModel;
-
   const _HomeDrawerView({
-    Key? key,
     required this.viewModel,
-  }) : super(key: key);
+  });
+
+  final HomeDrawerViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -101,41 +100,42 @@ class _HomeDrawerView extends StatelessWidget {
 
 class _HomeDrawerHeader extends StatelessWidget {
   const _HomeDrawerHeader({
-    Key? key,
     required this.viewModel,
-  }) : super(key: key);
+  });
 
   final HomeDrawerViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
-    var isDarkModeEnabled =
+    final isDarkModeEnabled =
         Provider.of<ThemeService>(context).isDarkModeEnabled;
     return DrawerHeader(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16),
       child: Column(
         children: [
           Expanded(
             child: SizedBox.expand(
               child: UserAvatar(
                 user: viewModel.currentUser,
-                onTap: () => Navigator.of(context).push<void>(MaterialPageRoute(
-                  builder: (_) => UserInfoScreen(
-                    user: viewModel.currentUser,
+                onTap: () => Navigator.of(context).push<void>(
+                  MaterialPageRoute(
+                    builder: (_) => UserInfoScreen(
+                      user: viewModel.currentUser,
+                    ),
                   ),
-                )),
+                ),
               ),
             ),
           ),
           const SizedBox(height: 10),
           Selector<UserRepository, Tuple2<String, String?>>(
             selector: (context, repo) {
-              var user = repo.get(viewModel.currentUser.username)!;
+              final user = repo.get(viewModel.currentUser.username)!;
               return Tuple2(user.displayUsername ?? user.username, user.name);
             },
             builder: (context, names, child) {
-              var username = names.item1;
-              var name = names.item2;
+              final username = names.item1;
+              final name = names.item2;
               return Text(
                 name ?? '@$username',
                 style: Theme.of(context).textTheme.headline6!.copyWith(

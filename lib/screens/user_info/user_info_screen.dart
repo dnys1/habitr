@@ -21,18 +21,17 @@ import 'package:tuple/tuple.dart';
 const _defaultPadding = SizedBox(height: 20);
 
 class UserInfoScreen extends StatelessWidget {
-  final String? username;
-  final User? user;
-
   const UserInfoScreen({
-    Key? key,
+    super.key,
     this.username,
     this.user,
-  })  : assert(
+  }) : assert(
           username != null || user != null,
           'Either username or user must be provided.',
-        ),
-        super(key: key);
+        );
+
+  final String? username;
+  final User? user;
 
   @override
   Widget build(BuildContext context) {
@@ -60,12 +59,11 @@ class UserInfoScreen extends StatelessWidget {
 }
 
 class _UserInfoView extends StatelessWidget {
-  final UserInfoViewModel viewModel;
-
   const _UserInfoView({
-    Key? key,
     required this.viewModel,
-  }) : super(key: key);
+  });
+
+  final UserInfoViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +80,8 @@ class _UserInfoView extends StatelessWidget {
                       user.name ?? '@${user.displayUsername ?? user.username}',
                     ),
                   );
-                }),
+                },
+              ),
         actions: [
           if (viewModel.canEditProfile)
             if (viewModel.isEditing) ...[
@@ -107,7 +106,7 @@ class _UserInfoView extends StatelessWidget {
 }
 
 class _UserInfoBody extends StatelessWidget {
-  const _UserInfoBody(this.viewModel, {Key? key}) : super(key: key);
+  const _UserInfoBody(this.viewModel);
 
   final UserInfoViewModel viewModel;
 
@@ -123,10 +122,10 @@ class _UserInfoBody extends StatelessWidget {
       );
     }
 
-    var user = viewModel.user;
+    final user = viewModel.user;
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20),
         child: Form(
           key: viewModel.formKey,
           child: Column(
@@ -184,7 +183,7 @@ class _UserInfoBody extends StatelessWidget {
 }
 
 class _UserHabitsAndComments extends StatefulWidget {
-  const _UserHabitsAndComments(this.username, {Key? key}) : super(key: key);
+  const _UserHabitsAndComments(this.username);
 
   final String username;
 

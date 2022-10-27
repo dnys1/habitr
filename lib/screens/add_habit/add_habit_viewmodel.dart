@@ -38,7 +38,7 @@ class AddHabitViewModel extends BaseViewModel {
     if (!_formKey.currentState!.validate()) return null;
     setBusy(true);
     try {
-      var habit = await _habitRepository.createHabit(
+      final habit = await _habitRepository.createHabit(
         tagline: _tagline,
         category: _category!,
         details: _details,

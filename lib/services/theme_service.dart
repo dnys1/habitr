@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:habitr/services/preferences_service.dart';
 
 class ThemeService extends ChangeNotifier {
-  static const darkModeEnabledKey = 'theme:dark_mode_enabled';
-
   ThemeService({
     required PreferencesService preferencesService,
   }) : _preferencesService = preferencesService;
+
+  static const darkModeEnabledKey = 'theme:dark_mode_enabled';
 
   final PreferencesService _preferencesService;
 

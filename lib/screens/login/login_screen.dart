@@ -7,7 +7,7 @@ import 'package:habitr/widgets/logo/habitr_logo.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,9 @@ class LoginScreen extends StatelessWidget {
 }
 
 class _LoginView extends StatelessWidget {
-  final LoginViewModel viewModel;
+  const _LoginView({required this.viewModel});
 
-  const _LoginView({Key? key, required this.viewModel}) : super(key: key);
+  final LoginViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class _LoginView extends StatelessWidget {
             child: Form(
               key: viewModel.formKey,
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
                     const Spacer(flex: 3),
@@ -70,14 +70,14 @@ class _LoginView extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     SizedBox(
-                      height: 40.0,
+                      height: 40,
                       child: viewModel.isBusy
                           ? const Padding(
-                              padding: EdgeInsets.only(bottom: 4.0),
+                              padding: EdgeInsets.only(bottom: 4),
                               child: CircularProgressIndicator(),
                             )
                           : Padding(
-                              padding: const EdgeInsets.only(bottom: 4.0),
+                              padding: const EdgeInsets.only(bottom: 4),
                               child: ElevatedButton(
                                 onPressed: viewModel.login,
                                 child: const Text('Login'),
@@ -87,8 +87,8 @@ class _LoginView extends StatelessWidget {
                     const SizedBox(height: 5),
                     const Spacer(flex: 4),
                     TextButton(
-                      child: const Text('Sign Up'),
                       onPressed: viewModel.goToSignUp,
+                      child: const Text('Sign Up'),
                     ),
                     const SizedBox(height: 20),
                   ],

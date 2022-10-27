@@ -70,13 +70,13 @@ class UserInfoViewModel extends BaseViewModel
   Future<void> _init(String username) async {
     setBusy(true);
     try {
-      var user = await _loadUser(username);
+      final user = await _loadUser(username);
 
       if (user == null) {
         return;
       }
 
-      var authState = _authBloc.state as AuthLoggedIn;
+      final authState = _authBloc.state as AuthLoggedIn;
       if (_user.username == authState.user.username) {
         _canEditProfile = true;
       }
@@ -104,11 +104,11 @@ class UserInfoViewModel extends BaseViewModel
       if (image != null) {
         avatar = await _storageService.putImage(_user, image!);
       }
-      var name = _nameController.text;
-      var displayUsername = _usernameController.text;
-      var includeName = name != _user.name;
-      var includeUsername = displayUsername != _user.username;
-      var includeAvatar = avatar != null;
+      final name = _nameController.text;
+      final displayUsername = _usernameController.text;
+      final includeName = name != _user.name;
+      final includeUsername = displayUsername != _user.username;
+      final includeAvatar = avatar != null;
       if (includeName || includeUsername || includeAvatar) {
         await _userRepository.updateUser(
           name: includeName ? name : null,

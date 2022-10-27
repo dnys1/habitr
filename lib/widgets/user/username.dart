@@ -4,7 +4,7 @@ import 'package:habitr/repos/user_repository.dart';
 import 'package:provider/provider.dart';
 
 class UsernameText extends StatelessWidget {
-  const UsernameText(this.user, {Key? key}) : super(key: key);
+  const UsernameText(this.user, {super.key});
 
   final User user;
 
@@ -12,7 +12,7 @@ class UsernameText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Selector<UserRepository, String?>(
       selector: (context, repo) {
-        var repoUser = repo.get(user.username)!;
+        final repoUser = repo.get(user.username)!;
         return repoUser.displayUsername;
       },
       builder: (context, displayUsername, child) {

@@ -9,14 +9,13 @@ import 'package:provider/provider.dart';
 
 class CommentCard extends StatelessWidget {
   const CommentCard({
-    Key? key,
+    super.key,
     this.comment,
     this.commentId,
-  })  : assert(
+  }) : assert(
           commentId != null || comment != null,
           'Either comment or commentId must be provided.',
-        ),
-        super(key: key);
+        );
 
   final String? commentId;
   final Comment? comment;
@@ -40,7 +39,7 @@ class CommentCard extends StatelessWidget {
 }
 
 class _CommentCardView extends StatelessWidget {
-  const _CommentCardView(this.viewModel, {Key? key}) : super(key: key);
+  const _CommentCardView(this.viewModel);
 
   final CommentCardViewModel viewModel;
 
@@ -49,20 +48,22 @@ class _CommentCardView extends StatelessWidget {
     if (viewModel.isBusy) {
       return const SizedBox.shrink();
     }
-    var comment = viewModel.comment;
-    var author = comment.by;
+    final comment = viewModel.comment;
+    final author = comment.by;
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
               onTap: () {
-                Navigator.of(context).push<void>(MaterialPageRoute(
-                  builder: (_) => UserInfoScreen(username: comment.owner),
-                ));
+                Navigator.of(context).push<void>(
+                  MaterialPageRoute(
+                    builder: (_) => UserInfoScreen(username: comment.owner),
+                  ),
+                );
               },
               leading: UserAvatar(
                 username: comment.owner,
@@ -72,7 +73,7 @@ class _CommentCardView extends StatelessWidget {
               subtitle: Text(prettyDate(comment.createdAt)),
             ),
             Padding(
-              padding: const EdgeInsets.all(12.0),
+              padding: const EdgeInsets.all(12),
               child: Text(comment.comment),
             ),
           ],

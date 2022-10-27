@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -24,11 +26,15 @@ abstract class GListHabitsData
   GListHabitsData_listHabits? get listHabits;
   static Serializer<GListHabitsData> get serializer =>
       _$gListHabitsDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GListHabitsData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GListHabitsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GListHabitsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GListHabitsData.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsData_listHabits
@@ -49,10 +55,14 @@ abstract class GListHabitsData_listHabits
   static Serializer<GListHabitsData_listHabits> get serializer =>
       _$gListHabitsDataListHabitsSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsData_listHabits.serializer, this) as Map<String, dynamic>);
+        GListHabitsData_listHabits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GListHabitsData_listHabits.serializer, json);
+      _i1.serializers.deserializeWith(
+        GListHabitsData_listHabits.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsData_listHabits_items
@@ -94,13 +104,16 @@ abstract class GListHabitsData_listHabits_items
   static Serializer<GListHabitsData_listHabits_items> get serializer =>
       _$gListHabitsDataListHabitsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GListHabitsData_listHabits_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GListHabitsData_listHabits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits_items? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GListHabitsData_listHabits_items.serializer, json);
+      _i1.serializers.deserializeWith(
+        GListHabitsData_listHabits_items.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsData_listHabits_items_comments
@@ -126,12 +139,15 @@ abstract class GListHabitsData_listHabits_items_comments
       _$gListHabitsDataListHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GListHabitsData_listHabits_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GListHabitsData_listHabits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GListHabitsData_listHabits_items_comments.serializer, json);
+        GListHabitsData_listHabits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsData_listHabits_items_comments_items
@@ -172,12 +188,15 @@ abstract class GListHabitsData_listHabits_items_comments_items
       get serializer => _$gListHabitsDataListHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GListHabitsData_listHabits_items_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GListHabitsData_listHabits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GListHabitsData_listHabits_items_comments_items.serializer, json);
+        GListHabitsData_listHabits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsData_listHabits_items_comments_items_by
@@ -209,12 +228,15 @@ abstract class GListHabitsData_listHabits_items_comments_items_by
           _$gListHabitsDataListHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GListHabitsData_listHabits_items_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GListHabitsData_listHabits_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GListHabitsData_listHabits_items_comments_items_by.serializer, json);
+        GListHabitsData_listHabits_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsData_listHabits_items_comments_items_habit
@@ -260,13 +282,15 @@ abstract class GListHabitsData_listHabits_items_comments_items_habit
           _$gListHabitsDataListHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsData_listHabits_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsData_listHabits_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GListHabitsData_listHabits_items_comments_items_habit.serializer,
-          json);
+        GListHabitsData_listHabits_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsData_listHabits_items_comments_items_habit_comments
@@ -301,13 +325,16 @@ abstract class GListHabitsData_listHabits_items_comments_items_habit_comments
           _$gListHabitsDataListHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsData_listHabits_items_comments_items_habit_comments.serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsData_listHabits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GListHabitsData_listHabits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GListHabitsData_listHabits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GListHabitsData_listHabits_items_comments_items_habit_comments_items
@@ -351,14 +378,16 @@ abstract class GListHabitsData_listHabits_items_comments_items_habit_comments_it
           _$gListHabitsDataListHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsData_listHabits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsData_listHabits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsData_listHabits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GListHabitsData_listHabits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GListHabitsData_listHabits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GListHabitsByCategoryData
@@ -377,12 +406,15 @@ abstract class GListHabitsByCategoryData
   GListHabitsByCategoryData_habitsByCategory? get habitsByCategory;
   static Serializer<GListHabitsByCategoryData> get serializer =>
       _$gListHabitsByCategoryDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GListHabitsByCategoryData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GListHabitsByCategoryData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GListHabitsByCategoryData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GListHabitsByCategoryData.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory
@@ -405,12 +437,15 @@ abstract class GListHabitsByCategoryData_habitsByCategory
   static Serializer<GListHabitsByCategoryData_habitsByCategory>
       get serializer => _$gListHabitsByCategoryDataHabitsByCategorySerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GListHabitsByCategoryData_habitsByCategory.serializer, this)
-      as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory.serializer, json);
+        GListHabitsByCategoryData_habitsByCategory.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory_items
@@ -455,12 +490,15 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items
           _$gListHabitsByCategoryDataHabitsByCategoryItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items.serializer, this)
-      as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items.serializer, json);
+        GListHabitsByCategoryData_habitsByCategory_items.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory_items_comments
@@ -490,13 +528,15 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments
           _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsByCategoryData_habitsByCategory_items_comments.serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items_comments.serializer,
-          json);
+        GListHabitsByCategoryData_habitsByCategory_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items
@@ -544,14 +584,16 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items
           _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsByCategoryData_habitsByCategory_items_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory_items_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory_items_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items_comments_items
-              .serializer,
-          json);
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
@@ -589,14 +631,16 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_b
           _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
-          .serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory_items_comments_items_by?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
-              .serializer,
-          json);
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
+                .serializer,
+            json,
+          );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
@@ -649,14 +693,16 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_h
           _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
-          .serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
-              .serializer,
-          json);
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
+                .serializer,
+            json,
+          );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
@@ -692,14 +738,16 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_h
           _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
@@ -743,14 +791,16 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_h
           _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GGetHabitData
@@ -766,11 +816,15 @@ abstract class GGetHabitData
   String get G__typename;
   GGetHabitData_getHabit? get getHabit;
   static Serializer<GGetHabitData> get serializer => _$gGetHabitDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetHabitData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetHabitData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetHabitData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetHabitData.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitData_getHabit
@@ -811,11 +865,15 @@ abstract class GGetHabitData_getHabit
   static Serializer<GGetHabitData_getHabit> get serializer =>
       _$gGetHabitDataGetHabitSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetHabitData_getHabit.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetHabitData_getHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData_getHabit? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetHabitData_getHabit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetHabitData_getHabit.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitData_getHabit_comments
@@ -839,12 +897,15 @@ abstract class GGetHabitData_getHabit_comments
   static Serializer<GGetHabitData_getHabit_comments> get serializer =>
       _$gGetHabitDataGetHabitCommentsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GGetHabitData_getHabit_comments.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetHabitData_getHabit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData_getHabit_comments? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetHabitData_getHabit_comments.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetHabitData_getHabit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitData_getHabit_comments_items
@@ -884,13 +945,16 @@ abstract class GGetHabitData_getHabit_comments_items
   static Serializer<GGetHabitData_getHabit_comments_items> get serializer =>
       _$gGetHabitDataGetHabitCommentsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GGetHabitData_getHabit_comments_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetHabitData_getHabit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData_getHabit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetHabitData_getHabit_comments_items.serializer, json);
+        GGetHabitData_getHabit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitData_getHabit_comments_items_by
@@ -921,12 +985,15 @@ abstract class GGetHabitData_getHabit_comments_items_by
       _$gGetHabitDataGetHabitCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetHabitData_getHabit_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GGetHabitData_getHabit_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData_getHabit_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetHabitData_getHabit_comments_items_by.serializer, json);
+        GGetHabitData_getHabit_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitData_getHabit_comments_items_habit
@@ -971,12 +1038,15 @@ abstract class GGetHabitData_getHabit_comments_items_habit
       get serializer => _$gGetHabitDataGetHabitCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetHabitData_getHabit_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GGetHabitData_getHabit_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData_getHabit_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetHabitData_getHabit_comments_items_habit.serializer, json);
+        GGetHabitData_getHabit_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitData_getHabit_comments_items_habit_comments
@@ -1005,13 +1075,15 @@ abstract class GGetHabitData_getHabit_comments_items_habit_comments
           _$gGetHabitDataGetHabitCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetHabitData_getHabit_comments_items_habit_comments.serializer, this)
-      as Map<String, dynamic>);
+        GGetHabitData_getHabit_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData_getHabit_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetHabitData_getHabit_comments_items_habit_comments.serializer,
-          json);
+        GGetHabitData_getHabit_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetHabitData_getHabit_comments_items_habit_comments_items
@@ -1052,13 +1124,15 @@ abstract class GGetHabitData_getHabit_comments_items_habit_comments_items
           _$gGetHabitDataGetHabitCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetHabitData_getHabit_comments_items_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GGetHabitData_getHabit_comments_items_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetHabitData_getHabit_comments_items_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetHabitData_getHabit_comments_items_habit_comments_items.serializer,
-          json);
+        GGetHabitData_getHabit_comments_items_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData
@@ -1074,11 +1148,15 @@ abstract class GGetUserData
   String get G__typename;
   GGetUserData_getUser? get getUser;
   static Serializer<GGetUserData> get serializer => _$gGetUserDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetUserData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetUserData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetUserData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetUserData.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser
@@ -1111,11 +1189,15 @@ abstract class GGetUserData_getUser
   static Serializer<GGetUserData_getUser> get serializer =>
       _$gGetUserDataGetUserSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetUserData_getUser.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetUserData_getUser.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetUserData_getUser.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetUserData_getUser.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_avatar
@@ -1147,10 +1229,14 @@ abstract class GGetUserData_getUser_avatar
       _$gGetUserDataGetUserAvatarSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetUserData_getUser_avatar.serializer, this) as Map<String, dynamic>);
+        GGetUserData_getUser_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_avatar? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetUserData_getUser_avatar.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetUserData_getUser_avatar.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_comments
@@ -1175,10 +1261,14 @@ abstract class GGetUserData_getUser_comments
       _$gGetUserDataGetUserCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetUserData_getUser_comments.serializer, this) as Map<String, dynamic>);
+        GGetUserData_getUser_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_comments? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetUserData_getUser_comments.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetUserData_getUser_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_comments_items
@@ -1218,13 +1308,16 @@ abstract class GGetUserData_getUser_comments_items
   static Serializer<GGetUserData_getUser_comments_items> get serializer =>
       _$gGetUserDataGetUserCommentsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GGetUserData_getUser_comments_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetUserData_getUser_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_comments_items.serializer, json);
+        GGetUserData_getUser_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_comments_items_by
@@ -1255,12 +1348,15 @@ abstract class GGetUserData_getUser_comments_items_by
       _$gGetUserDataGetUserCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetUserData_getUser_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GGetUserData_getUser_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_comments_items_by.serializer, json);
+        GGetUserData_getUser_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_comments_items_habit
@@ -1305,12 +1401,15 @@ abstract class GGetUserData_getUser_comments_items_habit
       _$gGetUserDataGetUserCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetUserData_getUser_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GGetUserData_getUser_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_comments_items_habit.serializer, json);
+        GGetUserData_getUser_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_comments_items_habit_comments
@@ -1338,12 +1437,15 @@ abstract class GGetUserData_getUser_comments_items_habit_comments
           _$gGetUserDataGetUserCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetUserData_getUser_comments_items_habit_comments.serializer, this)
-      as Map<String, dynamic>);
+        GGetUserData_getUser_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_comments_items_habit_comments.serializer, json);
+        GGetUserData_getUser_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_comments_items_habit_comments_items
@@ -1382,13 +1484,15 @@ abstract class GGetUserData_getUser_comments_items_habit_comments_items
           _$gGetUserDataGetUserCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetUserData_getUser_comments_items_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GGetUserData_getUser_comments_items_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_comments_items_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_comments_items_habit_comments_items.serializer,
-          json);
+        GGetUserData_getUser_comments_items_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_habits
@@ -1412,10 +1516,14 @@ abstract class GGetUserData_getUser_habits
       _$gGetUserDataGetUserHabitsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetUserData_getUser_habits.serializer, this) as Map<String, dynamic>);
+        GGetUserData_getUser_habits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetUserData_getUser_habits.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetUserData_getUser_habits.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_habits_items
@@ -1458,13 +1566,16 @@ abstract class GGetUserData_getUser_habits_items
   static Serializer<GGetUserData_getUser_habits_items> get serializer =>
       _$gGetUserDataGetUserHabitsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GGetUserData_getUser_habits_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetUserData_getUser_habits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits_items? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetUserData_getUser_habits_items.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetUserData_getUser_habits_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_habits_items_comments
@@ -1491,12 +1602,15 @@ abstract class GGetUserData_getUser_habits_items_comments
       get serializer => _$gGetUserDataGetUserHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetUserData_getUser_habits_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GGetUserData_getUser_habits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_habits_items_comments.serializer, json);
+        GGetUserData_getUser_habits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_habits_items_comments_items
@@ -1538,12 +1652,15 @@ abstract class GGetUserData_getUser_habits_items_comments_items
       get serializer => _$gGetUserDataGetUserHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetUserData_getUser_habits_items_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GGetUserData_getUser_habits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_habits_items_comments_items.serializer, json);
+        GGetUserData_getUser_habits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_habits_items_comments_items_by
@@ -1576,12 +1693,15 @@ abstract class GGetUserData_getUser_habits_items_comments_items_by
           _$gGetUserDataGetUserHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetUserData_getUser_habits_items_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GGetUserData_getUser_habits_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_habits_items_comments_items_by.serializer, json);
+        GGetUserData_getUser_habits_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_habits_items_comments_items_habit
@@ -1628,13 +1748,15 @@ abstract class GGetUserData_getUser_habits_items_comments_items_habit
           _$gGetUserDataGetUserHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetUserData_getUser_habits_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GGetUserData_getUser_habits_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetUserData_getUser_habits_items_comments_items_habit.serializer,
-          json);
+        GGetUserData_getUser_habits_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GGetUserData_getUser_habits_items_comments_items_habit_comments
@@ -1670,14 +1792,16 @@ abstract class GGetUserData_getUser_habits_items_comments_items_habit_comments
           _$gGetUserDataGetUserHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetUserData_getUser_habits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GGetUserData_getUser_habits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GGetUserData_getUser_habits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GGetUserData_getUser_habits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GGetUserData_getUser_habits_items_comments_items_habit_comments_items
@@ -1722,14 +1846,16 @@ abstract class GGetUserData_getUser_habits_items_comments_items_habit_comments_i
           _$gGetUserDataGetUserHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetUserData_getUser_habits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GGetUserData_getUser_habits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetUserData_getUser_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GGetUserData_getUser_habits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GGetUserData_getUser_habits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GGetSelfData
@@ -1745,11 +1871,15 @@ abstract class GGetSelfData
   String get G__typename;
   GGetSelfData_getUser? get getUser;
   static Serializer<GGetSelfData> get serializer => _$gGetSelfDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetSelfData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetSelfData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetSelfData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetSelfData.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser
@@ -1786,11 +1916,15 @@ abstract class GGetSelfData_getUser
   static Serializer<GGetSelfData_getUser> get serializer =>
       _$gGetSelfDataGetUserSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetSelfData_getUser.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetSelfData_getUser.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetSelfData_getUser.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetSelfData_getUser.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_avatar
@@ -1822,10 +1956,14 @@ abstract class GGetSelfData_getUser_avatar
       _$gGetSelfDataGetUserAvatarSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetSelfData_getUser_avatar.serializer, this) as Map<String, dynamic>);
+        GGetSelfData_getUser_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_avatar? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetSelfData_getUser_avatar.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetSelfData_getUser_avatar.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_comments
@@ -1850,10 +1988,14 @@ abstract class GGetSelfData_getUser_comments
       _$gGetSelfDataGetUserCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetSelfData_getUser_comments.serializer, this) as Map<String, dynamic>);
+        GGetSelfData_getUser_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_comments? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetSelfData_getUser_comments.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetSelfData_getUser_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_comments_items
@@ -1893,13 +2035,16 @@ abstract class GGetSelfData_getUser_comments_items
   static Serializer<GGetSelfData_getUser_comments_items> get serializer =>
       _$gGetSelfDataGetUserCommentsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GGetSelfData_getUser_comments_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetSelfData_getUser_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_comments_items.serializer, json);
+        GGetSelfData_getUser_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_comments_items_by
@@ -1930,12 +2075,15 @@ abstract class GGetSelfData_getUser_comments_items_by
       _$gGetSelfDataGetUserCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetSelfData_getUser_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GGetSelfData_getUser_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_comments_items_by.serializer, json);
+        GGetSelfData_getUser_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_comments_items_habit
@@ -1980,12 +2128,15 @@ abstract class GGetSelfData_getUser_comments_items_habit
       _$gGetSelfDataGetUserCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetSelfData_getUser_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GGetSelfData_getUser_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_comments_items_habit.serializer, json);
+        GGetSelfData_getUser_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_comments_items_habit_comments
@@ -2013,12 +2164,15 @@ abstract class GGetSelfData_getUser_comments_items_habit_comments
           _$gGetSelfDataGetUserCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetSelfData_getUser_comments_items_habit_comments.serializer, this)
-      as Map<String, dynamic>);
+        GGetSelfData_getUser_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_comments_items_habit_comments.serializer, json);
+        GGetSelfData_getUser_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_comments_items_habit_comments_items
@@ -2057,13 +2211,15 @@ abstract class GGetSelfData_getUser_comments_items_habit_comments_items
           _$gGetSelfDataGetUserCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetSelfData_getUser_comments_items_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GGetSelfData_getUser_comments_items_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_comments_items_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_comments_items_habit_comments_items.serializer,
-          json);
+        GGetSelfData_getUser_comments_items_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_habits
@@ -2087,10 +2243,14 @@ abstract class GGetSelfData_getUser_habits
       _$gGetSelfDataGetUserHabitsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetSelfData_getUser_habits.serializer, this) as Map<String, dynamic>);
+        GGetSelfData_getUser_habits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetSelfData_getUser_habits.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetSelfData_getUser_habits.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_habits_items
@@ -2133,13 +2293,16 @@ abstract class GGetSelfData_getUser_habits_items
   static Serializer<GGetSelfData_getUser_habits_items> get serializer =>
       _$gGetSelfDataGetUserHabitsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GGetSelfData_getUser_habits_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetSelfData_getUser_habits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits_items? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetSelfData_getUser_habits_items.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetSelfData_getUser_habits_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_habits_items_comments
@@ -2166,12 +2329,15 @@ abstract class GGetSelfData_getUser_habits_items_comments
       get serializer => _$gGetSelfDataGetUserHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetSelfData_getUser_habits_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GGetSelfData_getUser_habits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_habits_items_comments.serializer, json);
+        GGetSelfData_getUser_habits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_habits_items_comments_items
@@ -2213,12 +2379,15 @@ abstract class GGetSelfData_getUser_habits_items_comments_items
       get serializer => _$gGetSelfDataGetUserHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetSelfData_getUser_habits_items_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GGetSelfData_getUser_habits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_habits_items_comments_items.serializer, json);
+        GGetSelfData_getUser_habits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_habits_items_comments_items_by
@@ -2251,12 +2420,15 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_by
           _$gGetSelfDataGetUserHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetSelfData_getUser_habits_items_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GGetSelfData_getUser_habits_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_habits_items_comments_items_by.serializer, json);
+        GGetSelfData_getUser_habits_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_habits_items_comments_items_habit
@@ -2303,13 +2475,15 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_habit
           _$gGetSelfDataGetUserHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetSelfData_getUser_habits_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GGetSelfData_getUser_habits_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_habits_items_comments_items_habit.serializer,
-          json);
+        GGetSelfData_getUser_habits_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GGetSelfData_getUser_habits_items_comments_items_habit_comments
@@ -2345,14 +2519,16 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_habit_comments
           _$gGetSelfDataGetUserHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetSelfData_getUser_habits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GGetSelfData_getUser_habits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_habits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GGetSelfData_getUser_habits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
@@ -2397,14 +2573,16 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_habit_comments_i
           _$gGetSelfDataGetUserHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetSelfData_getUser_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GGetSelfData_getUser_habits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GGetCommentData
@@ -2421,11 +2599,15 @@ abstract class GGetCommentData
   GGetCommentData_getComment? get getComment;
   static Serializer<GGetCommentData> get serializer =>
       _$gGetCommentDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GGetCommentData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetCommentData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetCommentData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GGetCommentData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetCommentData.serializer,
+        json,
+      );
 }
 
 abstract class GGetCommentData_getComment
@@ -2463,10 +2645,14 @@ abstract class GGetCommentData_getComment
       _$gGetCommentDataGetCommentSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetCommentData_getComment.serializer, this) as Map<String, dynamic>);
+        GGetCommentData_getComment.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetCommentData_getComment? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetCommentData_getComment.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetCommentData_getComment.serializer,
+        json,
+      );
 }
 
 abstract class GGetCommentData_getComment_by
@@ -2495,10 +2681,14 @@ abstract class GGetCommentData_getComment_by
       _$gGetCommentDataGetCommentBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GGetCommentData_getComment_by.serializer, this) as Map<String, dynamic>);
+        GGetCommentData_getComment_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetCommentData_getComment_by? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetCommentData_getComment_by.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetCommentData_getComment_by.serializer,
+        json,
+      );
 }
 
 abstract class GGetCommentData_getComment_habit
@@ -2540,13 +2730,16 @@ abstract class GGetCommentData_getComment_habit
   static Serializer<GGetCommentData_getComment_habit> get serializer =>
       _$gGetCommentDataGetCommentHabitSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GGetCommentData_getComment_habit.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetCommentData_getComment_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetCommentData_getComment_habit? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GGetCommentData_getComment_habit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GGetCommentData_getComment_habit.serializer,
+        json,
+      );
 }
 
 abstract class GGetCommentData_getComment_habit_comments
@@ -2572,12 +2765,15 @@ abstract class GGetCommentData_getComment_habit_comments
       _$gGetCommentDataGetCommentHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetCommentData_getComment_habit_comments.serializer, this)
-      as Map<String, dynamic>);
+        GGetCommentData_getComment_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetCommentData_getComment_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetCommentData_getComment_habit_comments.serializer, json);
+        GGetCommentData_getComment_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GGetCommentData_getComment_habit_comments_items
@@ -2613,12 +2809,15 @@ abstract class GGetCommentData_getComment_habit_comments_items
       get serializer => _$gGetCommentDataGetCommentHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GGetCommentData_getComment_habit_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GGetCommentData_getComment_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GGetCommentData_getComment_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GGetCommentData_getComment_habit_comments_items.serializer, json);
+        GGetCommentData_getComment_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData
@@ -2636,11 +2835,15 @@ abstract class GSubscribeToUserData
   GSubscribeToUserData_subscribeToUser? get subscribeToUser;
   static Serializer<GSubscribeToUserData> get serializer =>
       _$gSubscribeToUserDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSubscribeToUserData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSubscribeToUserData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSubscribeToUserData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSubscribeToUserData.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser
@@ -2679,13 +2882,16 @@ abstract class GSubscribeToUserData_subscribeToUser
   static Serializer<GSubscribeToUserData_subscribeToUser> get serializer =>
       _$gSubscribeToUserDataSubscribeToUserSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GSubscribeToUserData_subscribeToUser.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSubscribeToUserData_subscribeToUser.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser.serializer, json);
+        GSubscribeToUserData_subscribeToUser.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_avatar
@@ -2719,12 +2925,15 @@ abstract class GSubscribeToUserData_subscribeToUser_avatar
       get serializer => _$gSubscribeToUserDataSubscribeToUserAvatarSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToUserData_subscribeToUser_avatar.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_avatar? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_avatar.serializer, json);
+        GSubscribeToUserData_subscribeToUser_avatar.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_comments
@@ -2750,12 +2959,15 @@ abstract class GSubscribeToUserData_subscribeToUser_comments
       get serializer => _$gSubscribeToUserDataSubscribeToUserCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToUserData_subscribeToUser_comments.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_comments.serializer, json);
+        GSubscribeToUserData_subscribeToUser_comments.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_comments_items
@@ -2797,12 +3009,15 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items
           _$gSubscribeToUserDataSubscribeToUserCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToUserData_subscribeToUser_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_comments_items.serializer, json);
+        GSubscribeToUserData_subscribeToUser_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_comments_items_by
@@ -2834,13 +3049,15 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_by
           _$gSubscribeToUserDataSubscribeToUserCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_comments_items_by.serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_comments_items_by.serializer,
-          json);
+        GSubscribeToUserData_subscribeToUser_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit
@@ -2889,13 +3106,15 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit
           _$gSubscribeToUserDataSubscribeToUserCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_comments_items_habit.serializer,
-          json);
+        GSubscribeToUserData_subscribeToUser_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
@@ -2931,14 +3150,16 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit_comment
           _$gSubscribeToUserDataSubscribeToUserCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
-              .serializer,
-          json);
+            GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
@@ -2982,14 +3203,16 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit_comment
           _$gSubscribeToUserDataSubscribeToUserCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GSubscribeToUserData_subscribeToUser_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits
@@ -3015,12 +3238,15 @@ abstract class GSubscribeToUserData_subscribeToUser_habits
       get serializer => _$gSubscribeToUserDataSubscribeToUserHabitsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToUserData_subscribeToUser_habits.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits.serializer, json);
+        GSubscribeToUserData_subscribeToUser_habits.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits_items
@@ -3066,12 +3292,15 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items
           _$gSubscribeToUserDataSubscribeToUserHabitsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items.serializer, json);
+        GSubscribeToUserData_subscribeToUser_habits_items.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments
@@ -3103,13 +3332,15 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments
           _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_habits_items_comments.serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items_comments.serializer,
-          json);
+        GSubscribeToUserData_subscribeToUser_habits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items
@@ -3158,14 +3389,16 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items
           _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_habits_items_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits_items_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits_items_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items_comments_items
-              .serializer,
-          json);
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
@@ -3204,14 +3437,16 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
           _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
-              .serializer,
-          json);
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
@@ -3265,14 +3500,16 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
           _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
-              .serializer,
-          json);
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
@@ -3309,14 +3546,16 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
           _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
@@ -3361,14 +3600,16 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
           _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GCreateUserData
@@ -3385,11 +3626,15 @@ abstract class GCreateUserData
   GCreateUserData_createUser? get createUser;
   static Serializer<GCreateUserData> get serializer =>
       _$gCreateUserDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GCreateUserData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateUserData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateUserData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GCreateUserData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateUserData.serializer,
+        json,
+      );
 }
 
 abstract class GCreateUserData_createUser
@@ -3409,10 +3654,14 @@ abstract class GCreateUserData_createUser
   static Serializer<GCreateUserData_createUser> get serializer =>
       _$gCreateUserDataCreateUserSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GCreateUserData_createUser.serializer, this) as Map<String, dynamic>);
+        GCreateUserData_createUser.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateUserData_createUser? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GCreateUserData_createUser.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateUserData_createUser.serializer,
+        json,
+      );
 }
 
 abstract class GCreateCommentData
@@ -3429,11 +3678,15 @@ abstract class GCreateCommentData
   GCreateCommentData_createComment? get createComment;
   static Serializer<GCreateCommentData> get serializer =>
       _$gCreateCommentDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GCreateCommentData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateCommentData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GCreateCommentData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateCommentData.serializer,
+        json,
+      );
 }
 
 abstract class GCreateCommentData_createComment
@@ -3471,13 +3724,16 @@ abstract class GCreateCommentData_createComment
   static Serializer<GCreateCommentData_createComment> get serializer =>
       _$gCreateCommentDataCreateCommentSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GCreateCommentData_createComment.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateCommentData_createComment.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentData_createComment? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GCreateCommentData_createComment.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateCommentData_createComment.serializer,
+        json,
+      );
 }
 
 abstract class GCreateCommentData_createComment_by
@@ -3506,13 +3762,16 @@ abstract class GCreateCommentData_createComment_by
   static Serializer<GCreateCommentData_createComment_by> get serializer =>
       _$gCreateCommentDataCreateCommentBySerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GCreateCommentData_createComment_by.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateCommentData_createComment_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentData_createComment_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateCommentData_createComment_by.serializer, json);
+        GCreateCommentData_createComment_by.serializer,
+        json,
+      );
 }
 
 abstract class GCreateCommentData_createComment_habit
@@ -3556,12 +3815,15 @@ abstract class GCreateCommentData_createComment_habit
       _$gCreateCommentDataCreateCommentHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GCreateCommentData_createComment_habit.serializer, this)
-      as Map<String, dynamic>);
+        GCreateCommentData_createComment_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentData_createComment_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateCommentData_createComment_habit.serializer, json);
+        GCreateCommentData_createComment_habit.serializer,
+        json,
+      );
 }
 
 abstract class GCreateCommentData_createComment_habit_comments
@@ -3588,12 +3850,15 @@ abstract class GCreateCommentData_createComment_habit_comments
           _$gCreateCommentDataCreateCommentHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GCreateCommentData_createComment_habit_comments.serializer, this)
-      as Map<String, dynamic>);
+        GCreateCommentData_createComment_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentData_createComment_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateCommentData_createComment_habit_comments.serializer, json);
+        GCreateCommentData_createComment_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GCreateCommentData_createComment_habit_comments_items
@@ -3630,13 +3895,15 @@ abstract class GCreateCommentData_createComment_habit_comments_items
           _$gCreateCommentDataCreateCommentHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GCreateCommentData_createComment_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GCreateCommentData_createComment_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentData_createComment_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateCommentData_createComment_habit_comments_items.serializer,
-          json);
+        GCreateCommentData_createComment_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData
@@ -3653,11 +3920,15 @@ abstract class GCreateHabitData
   GCreateHabitData_createHabit? get createHabit;
   static Serializer<GCreateHabitData> get serializer =>
       _$gCreateHabitDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GCreateHabitData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateHabitData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GCreateHabitData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateHabitData.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData_createHabit
@@ -3700,10 +3971,14 @@ abstract class GCreateHabitData_createHabit
       _$gCreateHabitDataCreateHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GCreateHabitData_createHabit.serializer, this) as Map<String, dynamic>);
+        GCreateHabitData_createHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData_createHabit? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GCreateHabitData_createHabit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GCreateHabitData_createHabit.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData_createHabit_comments
@@ -3728,13 +4003,16 @@ abstract class GCreateHabitData_createHabit_comments
   static Serializer<GCreateHabitData_createHabit_comments> get serializer =>
       _$gCreateHabitDataCreateHabitCommentsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GCreateHabitData_createHabit_comments.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateHabitData_createHabit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData_createHabit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateHabitData_createHabit_comments.serializer, json);
+        GCreateHabitData_createHabit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData_createHabit_comments_items
@@ -3775,12 +4053,15 @@ abstract class GCreateHabitData_createHabit_comments_items
       get serializer => _$gCreateHabitDataCreateHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GCreateHabitData_createHabit_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GCreateHabitData_createHabit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData_createHabit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateHabitData_createHabit_comments_items.serializer, json);
+        GCreateHabitData_createHabit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData_createHabit_comments_items_by
@@ -3811,12 +4092,15 @@ abstract class GCreateHabitData_createHabit_comments_items_by
       get serializer => _$gCreateHabitDataCreateHabitCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GCreateHabitData_createHabit_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GCreateHabitData_createHabit_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData_createHabit_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateHabitData_createHabit_comments_items_by.serializer, json);
+        GCreateHabitData_createHabit_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData_createHabit_comments_items_habit
@@ -3862,12 +4146,15 @@ abstract class GCreateHabitData_createHabit_comments_items_habit
           _$gCreateHabitDataCreateHabitCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GCreateHabitData_createHabit_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GCreateHabitData_createHabit_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData_createHabit_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateHabitData_createHabit_comments_items_habit.serializer, json);
+        GCreateHabitData_createHabit_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData_createHabit_comments_items_habit_comments
@@ -3899,13 +4186,15 @@ abstract class GCreateHabitData_createHabit_comments_items_habit_comments
           _$gCreateHabitDataCreateHabitCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GCreateHabitData_createHabit_comments_items_habit_comments.serializer,
-      this) as Map<String, dynamic>);
+        GCreateHabitData_createHabit_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData_createHabit_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GCreateHabitData_createHabit_comments_items_habit_comments.serializer,
-          json);
+        GCreateHabitData_createHabit_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitData_createHabit_comments_items_habit_comments_items
@@ -3948,14 +4237,16 @@ abstract class GCreateHabitData_createHabit_comments_items_habit_comments_items
           _$gCreateHabitDataCreateHabitCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GCreateHabitData_createHabit_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GCreateHabitData_createHabit_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitData_createHabit_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GCreateHabitData_createHabit_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GCreateHabitData_createHabit_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GUpdateUserData
@@ -3972,11 +4263,15 @@ abstract class GUpdateUserData
   GUpdateUserData_updateUser? get updateUser;
   static Serializer<GUpdateUserData> get serializer =>
       _$gUpdateUserDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GUpdateUserData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateUserData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GUpdateUserData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateUserData.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser
@@ -4014,10 +4309,14 @@ abstract class GUpdateUserData_updateUser
       _$gUpdateUserDataUpdateUserSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser.serializer, this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GUpdateUserData_updateUser.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateUserData_updateUser.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_avatar
@@ -4049,13 +4348,16 @@ abstract class GUpdateUserData_updateUser_avatar
   static Serializer<GUpdateUserData_updateUser_avatar> get serializer =>
       _$gUpdateUserDataUpdateUserAvatarSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GUpdateUserData_updateUser_avatar.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateUserData_updateUser_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_avatar? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GUpdateUserData_updateUser_avatar.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateUserData_updateUser_avatar.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_comments
@@ -4080,13 +4382,16 @@ abstract class GUpdateUserData_updateUser_comments
   static Serializer<GUpdateUserData_updateUser_comments> get serializer =>
       _$gUpdateUserDataUpdateUserCommentsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GUpdateUserData_updateUser_comments.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateUserData_updateUser_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_comments.serializer, json);
+        GUpdateUserData_updateUser_comments.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_comments_items
@@ -4127,12 +4432,15 @@ abstract class GUpdateUserData_updateUser_comments_items
       _$gUpdateUserDataUpdateUserCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateUserData_updateUser_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateUserData_updateUser_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_comments_items.serializer, json);
+        GUpdateUserData_updateUser_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_comments_items_by
@@ -4163,12 +4471,15 @@ abstract class GUpdateUserData_updateUser_comments_items_by
       get serializer => _$gUpdateUserDataUpdateUserCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateUserData_updateUser_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateUserData_updateUser_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_comments_items_by.serializer, json);
+        GUpdateUserData_updateUser_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_comments_items_habit
@@ -4213,12 +4524,15 @@ abstract class GUpdateUserData_updateUser_comments_items_habit
       get serializer => _$gUpdateUserDataUpdateUserCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateUserData_updateUser_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateUserData_updateUser_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_comments_items_habit.serializer, json);
+        GUpdateUserData_updateUser_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_comments_items_habit_comments
@@ -4248,13 +4562,15 @@ abstract class GUpdateUserData_updateUser_comments_items_habit_comments
           _$gUpdateUserDataUpdateUserCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser_comments_items_habit_comments.serializer,
-      this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_comments_items_habit_comments.serializer,
-          json);
+        GUpdateUserData_updateUser_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_comments_items_habit_comments_items
@@ -4297,13 +4613,16 @@ abstract class GUpdateUserData_updateUser_comments_items_habit_comments_items
           _$gUpdateUserDataUpdateUserCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser_comments_items_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GUpdateUserData_updateUser_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GUpdateUserData_updateUser_habits
@@ -4327,13 +4646,16 @@ abstract class GUpdateUserData_updateUser_habits
   static Serializer<GUpdateUserData_updateUser_habits> get serializer =>
       _$gUpdateUserDataUpdateUserHabitsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GUpdateUserData_updateUser_habits.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateUserData_updateUser_habits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GUpdateUserData_updateUser_habits.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateUserData_updateUser_habits.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items
@@ -4378,12 +4700,15 @@ abstract class GUpdateUserData_updateUser_habits_items
       _$gUpdateUserDataUpdateUserHabitsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateUserData_updateUser_habits_items.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateUserData_updateUser_habits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_habits_items.serializer, json);
+        GUpdateUserData_updateUser_habits_items.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items_comments
@@ -4411,12 +4736,15 @@ abstract class GUpdateUserData_updateUser_habits_items_comments
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateUserData_updateUser_habits_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateUserData_updateUser_habits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_habits_items_comments.serializer, json);
+        GUpdateUserData_updateUser_habits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items_comments_items
@@ -4459,13 +4787,15 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser_habits_items_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser_habits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_habits_items_comments_items.serializer,
-          json);
+        GUpdateUserData_updateUser_habits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items_comments_items_by
@@ -4500,13 +4830,15 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_by
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser_habits_items_comments_items_by.serializer,
-      this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser_habits_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_habits_items_comments_items_by.serializer,
-          json);
+        GUpdateUserData_updateUser_habits_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit
@@ -4559,14 +4891,15 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser_habits_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser_habits_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_habits_items_comments_items_habit
-              .serializer,
-          json);
+        GUpdateUserData_updateUser_habits_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
@@ -4603,14 +4936,16 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit_comm
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GUpdateUserData_updateUser_habits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
@@ -4655,14 +4990,16 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit_comm
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GUpdateUserData_updateUser_habits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GUpdateHabitData
@@ -4679,11 +5016,15 @@ abstract class GUpdateHabitData
   GUpdateHabitData_updateHabit? get updateHabit;
   static Serializer<GUpdateHabitData> get serializer =>
       _$gUpdateHabitDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GUpdateHabitData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateHabitData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GUpdateHabitData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateHabitData.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitData_updateHabit
@@ -4726,10 +5067,14 @@ abstract class GUpdateHabitData_updateHabit
       _$gUpdateHabitDataUpdateHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateHabitData_updateHabit.serializer, this) as Map<String, dynamic>);
+        GUpdateHabitData_updateHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData_updateHabit? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GUpdateHabitData_updateHabit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GUpdateHabitData_updateHabit.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitData_updateHabit_comments
@@ -4754,13 +5099,16 @@ abstract class GUpdateHabitData_updateHabit_comments
   static Serializer<GUpdateHabitData_updateHabit_comments> get serializer =>
       _$gUpdateHabitDataUpdateHabitCommentsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GUpdateHabitData_updateHabit_comments.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateHabitData_updateHabit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData_updateHabit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateHabitData_updateHabit_comments.serializer, json);
+        GUpdateHabitData_updateHabit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitData_updateHabit_comments_items
@@ -4801,12 +5149,15 @@ abstract class GUpdateHabitData_updateHabit_comments_items
       get serializer => _$gUpdateHabitDataUpdateHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateHabitData_updateHabit_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateHabitData_updateHabit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData_updateHabit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateHabitData_updateHabit_comments_items.serializer, json);
+        GUpdateHabitData_updateHabit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitData_updateHabit_comments_items_by
@@ -4837,12 +5188,15 @@ abstract class GUpdateHabitData_updateHabit_comments_items_by
       get serializer => _$gUpdateHabitDataUpdateHabitCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateHabitData_updateHabit_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateHabitData_updateHabit_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData_updateHabit_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateHabitData_updateHabit_comments_items_by.serializer, json);
+        GUpdateHabitData_updateHabit_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitData_updateHabit_comments_items_habit
@@ -4888,12 +5242,15 @@ abstract class GUpdateHabitData_updateHabit_comments_items_habit
           _$gUpdateHabitDataUpdateHabitCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GUpdateHabitData_updateHabit_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GUpdateHabitData_updateHabit_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData_updateHabit_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateHabitData_updateHabit_comments_items_habit.serializer, json);
+        GUpdateHabitData_updateHabit_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitData_updateHabit_comments_items_habit_comments
@@ -4925,13 +5282,15 @@ abstract class GUpdateHabitData_updateHabit_comments_items_habit_comments
           _$gUpdateHabitDataUpdateHabitCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateHabitData_updateHabit_comments_items_habit_comments.serializer,
-      this) as Map<String, dynamic>);
+        GUpdateHabitData_updateHabit_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData_updateHabit_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GUpdateHabitData_updateHabit_comments_items_habit_comments.serializer,
-          json);
+        GUpdateHabitData_updateHabit_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitData_updateHabit_comments_items_habit_comments_items
@@ -4974,14 +5333,16 @@ abstract class GUpdateHabitData_updateHabit_comments_items_habit_comments_items
           _$gUpdateHabitDataUpdateHabitCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GUpdateHabitData_updateHabit_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GUpdateHabitData_updateHabit_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitData_updateHabit_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GUpdateHabitData_updateHabit_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GUpdateHabitData_updateHabit_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GDeleteHabitData
@@ -4998,11 +5359,15 @@ abstract class GDeleteHabitData
   GDeleteHabitData_deleteHabit? get deleteHabit;
   static Serializer<GDeleteHabitData> get serializer =>
       _$gDeleteHabitDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GDeleteHabitData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GDeleteHabitData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GDeleteHabitData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GDeleteHabitData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GDeleteHabitData.serializer,
+        json,
+      );
 }
 
 abstract class GDeleteHabitData_deleteHabit
@@ -5023,10 +5388,14 @@ abstract class GDeleteHabitData_deleteHabit
   static Serializer<GDeleteHabitData_deleteHabit> get serializer =>
       _$gDeleteHabitDataDeleteHabitSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GDeleteHabitData_deleteHabit.serializer, this) as Map<String, dynamic>);
+        GDeleteHabitData_deleteHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GDeleteHabitData_deleteHabit? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GDeleteHabitData_deleteHabit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GDeleteHabitData_deleteHabit.serializer,
+        json,
+      );
 }
 
 abstract class GVoteForHabitData
@@ -5043,11 +5412,15 @@ abstract class GVoteForHabitData
   GVoteForHabitData_vote? get vote;
   static Serializer<GVoteForHabitData> get serializer =>
       _$gVoteForHabitDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GVoteForHabitData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GVoteForHabitData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GVoteForHabitData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GVoteForHabitData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GVoteForHabitData.serializer,
+        json,
+      );
 }
 
 abstract class GVoteForHabitData_vote
@@ -5072,11 +5445,15 @@ abstract class GVoteForHabitData_vote
   static Serializer<GVoteForHabitData_vote> get serializer =>
       _$gVoteForHabitDataVoteSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GVoteForHabitData_vote.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GVoteForHabitData_vote.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GVoteForHabitData_vote? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GVoteForHabitData_vote.serializer, json);
+      _i1.serializers.deserializeWith(
+        GVoteForHabitData_vote.serializer,
+        json,
+      );
 }
 
 abstract class GVoteForHabitData_vote_habit
@@ -5115,10 +5492,14 @@ abstract class GVoteForHabitData_vote_habit
       _$gVoteForHabitDataVoteHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GVoteForHabitData_vote_habit.serializer, this) as Map<String, dynamic>);
+        GVoteForHabitData_vote_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GVoteForHabitData_vote_habit? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GVoteForHabitData_vote_habit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GVoteForHabitData_vote_habit.serializer,
+        json,
+      );
 }
 
 abstract class GVoteForHabitData_vote_user
@@ -5146,10 +5527,14 @@ abstract class GVoteForHabitData_vote_user
       _$gVoteForHabitDataVoteUserSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GVoteForHabitData_vote_user.serializer, this) as Map<String, dynamic>);
+        GVoteForHabitData_vote_user.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GVoteForHabitData_vote_user? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GVoteForHabitData_vote_user.serializer, json);
+      _i1.serializers.deserializeWith(
+        GVoteForHabitData_vote_user.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToVotesData
@@ -5167,11 +5552,15 @@ abstract class GSubscribeToVotesData
   GSubscribeToVotesData_subscribeToVotes? get subscribeToVotes;
   static Serializer<GSubscribeToVotesData> get serializer =>
       _$gSubscribeToVotesDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSubscribeToVotesData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSubscribeToVotesData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToVotesData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSubscribeToVotesData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSubscribeToVotesData.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToVotesData_subscribeToVotes
@@ -5199,12 +5588,15 @@ abstract class GSubscribeToVotesData_subscribeToVotes
       _$gSubscribeToVotesDataSubscribeToVotesSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToVotesData_subscribeToVotes.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToVotesData_subscribeToVotes.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToVotesData_subscribeToVotes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToVotesData_subscribeToVotes.serializer, json);
+        GSubscribeToVotesData_subscribeToVotes.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToVotesData_subscribeToVotes_habit
@@ -5244,12 +5636,15 @@ abstract class GSubscribeToVotesData_subscribeToVotes_habit
       get serializer => _$gSubscribeToVotesDataSubscribeToVotesHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToVotesData_subscribeToVotes_habit.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToVotesData_subscribeToVotes_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToVotesData_subscribeToVotes_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToVotesData_subscribeToVotes_habit.serializer, json);
+        GSubscribeToVotesData_subscribeToVotes_habit.serializer,
+        json,
+      );
 }
 
 abstract class GSubscribeToVotesData_subscribeToVotes_user
@@ -5279,12 +5674,15 @@ abstract class GSubscribeToVotesData_subscribeToVotes_user
       get serializer => _$gSubscribeToVotesDataSubscribeToVotesUserSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSubscribeToVotesData_subscribeToVotes_user.serializer, this)
-      as Map<String, dynamic>);
+        GSubscribeToVotesData_subscribeToVotes_user.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSubscribeToVotesData_subscribeToVotes_user? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSubscribeToVotesData_subscribeToVotes_user.serializer, json);
+        GSubscribeToVotesData_subscribeToVotes_user.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData
@@ -5301,11 +5699,15 @@ abstract class GSearchUsersData
   GSearchUsersData_listUsers? get listUsers;
   static Serializer<GSearchUsersData> get serializer =>
       _$gSearchUsersDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSearchUsersData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchUsersData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSearchUsersData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchUsersData.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers
@@ -5325,10 +5727,14 @@ abstract class GSearchUsersData_listUsers
   static Serializer<GSearchUsersData_listUsers> get serializer =>
       _$gSearchUsersDataListUsersSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers.serializer, this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GSearchUsersData_listUsers.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchUsersData_listUsers.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items
@@ -5362,13 +5768,16 @@ abstract class GSearchUsersData_listUsers_items
   static Serializer<GSearchUsersData_listUsers_items> get serializer =>
       _$gSearchUsersDataListUsersItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GSearchUsersData_listUsers_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchUsersData_listUsers_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GSearchUsersData_listUsers_items.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchUsersData_listUsers_items.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_avatar
@@ -5402,12 +5811,15 @@ abstract class GSearchUsersData_listUsers_items_avatar
       _$gSearchUsersDataListUsersItemsAvatarSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_listUsers_items_avatar.serializer, this)
-      as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_avatar? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_avatar.serializer, json);
+        GSearchUsersData_listUsers_items_avatar.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_comments
@@ -5433,12 +5845,15 @@ abstract class GSearchUsersData_listUsers_items_comments
       _$gSearchUsersDataListUsersItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_listUsers_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_comments.serializer, json);
+        GSearchUsersData_listUsers_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_comments_items
@@ -5479,12 +5894,15 @@ abstract class GSearchUsersData_listUsers_items_comments_items
       get serializer => _$gSearchUsersDataListUsersItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_listUsers_items_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_comments_items.serializer, json);
+        GSearchUsersData_listUsers_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_comments_items_by
@@ -5516,12 +5934,15 @@ abstract class GSearchUsersData_listUsers_items_comments_items_by
           _$gSearchUsersDataListUsersItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_listUsers_items_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_comments_items_by.serializer, json);
+        GSearchUsersData_listUsers_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_comments_items_habit
@@ -5567,13 +5988,15 @@ abstract class GSearchUsersData_listUsers_items_comments_items_habit
           _$gSearchUsersDataListUsersItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_comments_items_habit.serializer,
-          json);
+        GSearchUsersData_listUsers_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_comments_items_habit_comments
@@ -5608,13 +6031,16 @@ abstract class GSearchUsersData_listUsers_items_comments_items_habit_comments
           _$gSearchUsersDataListUsersItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_comments_items_habit_comments.serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GSearchUsersData_listUsers_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSearchUsersData_listUsers_items_comments_items_habit_comments_items
@@ -5658,14 +6084,16 @@ abstract class GSearchUsersData_listUsers_items_comments_items_habit_comments_it
           _$gSearchUsersDataListUsersItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GSearchUsersData_listUsers_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits
@@ -5691,12 +6119,15 @@ abstract class GSearchUsersData_listUsers_items_habits
       _$gSearchUsersDataListUsersItemsHabitsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_listUsers_items_habits.serializer, this)
-      as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits.serializer, json);
+        GSearchUsersData_listUsers_items_habits.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits_items
@@ -5741,12 +6172,15 @@ abstract class GSearchUsersData_listUsers_items_habits_items
       get serializer => _$gSearchUsersDataListUsersItemsHabitsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchUsersData_listUsers_items_habits_items.serializer, this)
-      as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits_items.serializer, json);
+        GSearchUsersData_listUsers_items_habits_items.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits_items_comments
@@ -5775,13 +6209,15 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments
           _$gSearchUsersDataListUsersItemsHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_habits_items_comments.serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits_items_comments.serializer,
-          json);
+        GSearchUsersData_listUsers_items_habits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits_items_comments_items
@@ -5829,14 +6265,15 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments_items
           _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_habits_items_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits_items_comments_items
-              .serializer,
-          json);
+        GSearchUsersData_listUsers_items_habits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_by
@@ -5874,14 +6311,16 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_by
           _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_habits_items_comments_items_by
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits_items_comments_items_by
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits_items_comments_items_by?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits_items_comments_items_by
-              .serializer,
-          json);
+            GSearchUsersData_listUsers_items_habits_items_comments_items_by
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habit
@@ -5935,14 +6374,16 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habi
           _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_habits_items_comments_items_habit
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits_items_comments_items_habit
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits_items_comments_items_habit?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits_items_comments_items_habit
-              .serializer,
-          json);
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
@@ -5979,14 +6420,16 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habi
           _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
@@ -6031,14 +6474,16 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_habi
           _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GSearchUsersData_listUsers_items_habits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSearchHabitsData
@@ -6055,11 +6500,15 @@ abstract class GSearchHabitsData
   GSearchHabitsData_listHabits? get listHabits;
   static Serializer<GSearchHabitsData> get serializer =>
       _$gSearchHabitsDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GSearchHabitsData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchHabitsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GSearchHabitsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchHabitsData.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsData_listHabits
@@ -6080,10 +6529,14 @@ abstract class GSearchHabitsData_listHabits
   static Serializer<GSearchHabitsData_listHabits> get serializer =>
       _$gSearchHabitsDataListHabitsSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_listHabits.serializer, this) as Map<String, dynamic>);
+        GSearchHabitsData_listHabits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GSearchHabitsData_listHabits.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchHabitsData_listHabits.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsData_listHabits_items
@@ -6125,13 +6578,16 @@ abstract class GSearchHabitsData_listHabits_items
   static Serializer<GSearchHabitsData_listHabits_items> get serializer =>
       _$gSearchHabitsDataListHabitsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GSearchHabitsData_listHabits_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchHabitsData_listHabits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits_items? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GSearchHabitsData_listHabits_items.serializer, json);
+      _i1.serializers.deserializeWith(
+        GSearchHabitsData_listHabits_items.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsData_listHabits_items_comments
@@ -6157,12 +6613,15 @@ abstract class GSearchHabitsData_listHabits_items_comments
       get serializer => _$gSearchHabitsDataListHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchHabitsData_listHabits_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GSearchHabitsData_listHabits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_listHabits_items_comments.serializer, json);
+        GSearchHabitsData_listHabits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsData_listHabits_items_comments_items
@@ -6204,12 +6663,15 @@ abstract class GSearchHabitsData_listHabits_items_comments_items
           _$gSearchHabitsDataListHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchHabitsData_listHabits_items_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GSearchHabitsData_listHabits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_listHabits_items_comments_items.serializer, json);
+        GSearchHabitsData_listHabits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsData_listHabits_items_comments_items_by
@@ -6241,13 +6703,15 @@ abstract class GSearchHabitsData_listHabits_items_comments_items_by
           _$gSearchHabitsDataListHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GSearchHabitsData_listHabits_items_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GSearchHabitsData_listHabits_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_listHabits_items_comments_items_by.serializer,
-          json);
+        GSearchHabitsData_listHabits_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsData_listHabits_items_comments_items_habit
@@ -6295,13 +6759,15 @@ abstract class GSearchHabitsData_listHabits_items_comments_items_habit
           _$gSearchHabitsDataListHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_listHabits_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GSearchHabitsData_listHabits_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GSearchHabitsData_listHabits_items_comments_items_habit.serializer,
-          json);
+        GSearchHabitsData_listHabits_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GSearchHabitsData_listHabits_items_comments_items_habit_comments
@@ -6336,14 +6802,16 @@ abstract class GSearchHabitsData_listHabits_items_comments_items_habit_comments
           _$gSearchHabitsDataListHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_listHabits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSearchHabitsData_listHabits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchHabitsData_listHabits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GSearchHabitsData_listHabits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
@@ -6387,14 +6855,16 @@ abstract class GSearchHabitsData_listHabits_items_comments_items_habit_comments_
           _$gSearchHabitsDataListHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GSearchHabitsData_listHabits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GSearchHabitsData_listHabits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllHabitFields {
@@ -6550,11 +7020,15 @@ abstract class GAllHabitFieldsData
   static Serializer<GAllHabitFieldsData> get serializer =>
       _$gAllHabitFieldsDataSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllHabitFieldsData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllHabitFieldsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GAllHabitFieldsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllHabitFieldsData.serializer,
+        json,
+      );
 }
 
 abstract class GAllHabitFieldsData_comments
@@ -6579,10 +7053,14 @@ abstract class GAllHabitFieldsData_comments
       _$gAllHabitFieldsDataCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllHabitFieldsData_comments.serializer, this) as Map<String, dynamic>);
+        GAllHabitFieldsData_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsData_comments? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllHabitFieldsData_comments.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllHabitFieldsData_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllHabitFieldsData_comments_items
@@ -6621,13 +7099,16 @@ abstract class GAllHabitFieldsData_comments_items
   static Serializer<GAllHabitFieldsData_comments_items> get serializer =>
       _$gAllHabitFieldsDataCommentsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllHabitFieldsData_comments_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllHabitFieldsData_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsData_comments_items? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllHabitFieldsData_comments_items.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllHabitFieldsData_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllHabitFieldsData_comments_items_by
@@ -6657,13 +7138,16 @@ abstract class GAllHabitFieldsData_comments_items_by
   static Serializer<GAllHabitFieldsData_comments_items_by> get serializer =>
       _$gAllHabitFieldsDataCommentsItemsBySerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllHabitFieldsData_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllHabitFieldsData_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsData_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllHabitFieldsData_comments_items_by.serializer, json);
+        GAllHabitFieldsData_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GAllHabitFieldsData_comments_items_habit
@@ -6708,12 +7192,15 @@ abstract class GAllHabitFieldsData_comments_items_habit
       _$gAllHabitFieldsDataCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllHabitFieldsData_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GAllHabitFieldsData_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsData_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllHabitFieldsData_comments_items_habit.serializer, json);
+        GAllHabitFieldsData_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GAllHabitFieldsData_comments_items_habit_comments
@@ -6741,12 +7228,15 @@ abstract class GAllHabitFieldsData_comments_items_habit_comments
           _$gAllHabitFieldsDataCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllHabitFieldsData_comments_items_habit_comments.serializer, this)
-      as Map<String, dynamic>);
+        GAllHabitFieldsData_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsData_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllHabitFieldsData_comments_items_habit_comments.serializer, json);
+        GAllHabitFieldsData_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllHabitFieldsData_comments_items_habit_comments_items
@@ -6785,13 +7275,15 @@ abstract class GAllHabitFieldsData_comments_items_habit_comments_items
           _$gAllHabitFieldsDataCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllHabitFieldsData_comments_items_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GAllHabitFieldsData_comments_items_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllHabitFieldsData_comments_items_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllHabitFieldsData_comments_items_habit_comments_items.serializer,
-          json);
+        GAllHabitFieldsData_comments_items_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFields {
@@ -7092,12 +7584,15 @@ abstract class GAllPublicUserFieldsData
   static Serializer<GAllPublicUserFieldsData> get serializer =>
       _$gAllPublicUserFieldsDataSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllPublicUserFieldsData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPublicUserFieldsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPublicUserFieldsData.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_avatar
@@ -7129,12 +7624,15 @@ abstract class GAllPublicUserFieldsData_avatar
   static Serializer<GAllPublicUserFieldsData_avatar> get serializer =>
       _$gAllPublicUserFieldsDataAvatarSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllPublicUserFieldsData_avatar.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsData_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_avatar? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPublicUserFieldsData_avatar.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPublicUserFieldsData_avatar.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_comments
@@ -7158,13 +7656,16 @@ abstract class GAllPublicUserFieldsData_comments
   static Serializer<GAllPublicUserFieldsData_comments> get serializer =>
       _$gAllPublicUserFieldsDataCommentsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllPublicUserFieldsData_comments.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsData_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_comments? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPublicUserFieldsData_comments.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPublicUserFieldsData_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_comments_items
@@ -7205,12 +7706,15 @@ abstract class GAllPublicUserFieldsData_comments_items
       _$gAllPublicUserFieldsDataCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPublicUserFieldsData_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GAllPublicUserFieldsData_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_comments_items.serializer, json);
+        GAllPublicUserFieldsData_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_comments_items_by
@@ -7241,12 +7745,15 @@ abstract class GAllPublicUserFieldsData_comments_items_by
       get serializer => _$gAllPublicUserFieldsDataCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPublicUserFieldsData_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GAllPublicUserFieldsData_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_comments_items_by.serializer, json);
+        GAllPublicUserFieldsData_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_comments_items_habit
@@ -7291,12 +7798,15 @@ abstract class GAllPublicUserFieldsData_comments_items_habit
       get serializer => _$gAllPublicUserFieldsDataCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPublicUserFieldsData_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GAllPublicUserFieldsData_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_comments_items_habit.serializer, json);
+        GAllPublicUserFieldsData_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_comments_items_habit_comments
@@ -7325,13 +7835,15 @@ abstract class GAllPublicUserFieldsData_comments_items_habit_comments
           _$gAllPublicUserFieldsDataCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPublicUserFieldsData_comments_items_habit_comments.serializer,
-      this) as Map<String, dynamic>);
+        GAllPublicUserFieldsData_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_comments_items_habit_comments.serializer,
-          json);
+        GAllPublicUserFieldsData_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_comments_items_habit_comments_items
@@ -7374,14 +7886,15 @@ abstract class GAllPublicUserFieldsData_comments_items_habit_comments_items
           _$gAllPublicUserFieldsDataCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPublicUserFieldsData_comments_items_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GAllPublicUserFieldsData_comments_items_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_comments_items_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_comments_items_habit_comments_items
-              .serializer,
-          json);
+        GAllPublicUserFieldsData_comments_items_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_habits
@@ -7405,12 +7918,15 @@ abstract class GAllPublicUserFieldsData_habits
   static Serializer<GAllPublicUserFieldsData_habits> get serializer =>
       _$gAllPublicUserFieldsDataHabitsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllPublicUserFieldsData_habits.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsData_habits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPublicUserFieldsData_habits.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPublicUserFieldsData_habits.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items
@@ -7454,13 +7970,16 @@ abstract class GAllPublicUserFieldsData_habits_items
   static Serializer<GAllPublicUserFieldsData_habits_items> get serializer =>
       _$gAllPublicUserFieldsDataHabitsItemsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllPublicUserFieldsData_habits_items.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsData_habits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_habits_items.serializer, json);
+        GAllPublicUserFieldsData_habits_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items_comments
@@ -7487,12 +8006,15 @@ abstract class GAllPublicUserFieldsData_habits_items_comments
       get serializer => _$gAllPublicUserFieldsDataHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPublicUserFieldsData_habits_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GAllPublicUserFieldsData_habits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_habits_items_comments.serializer, json);
+        GAllPublicUserFieldsData_habits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items_comments_items
@@ -7535,13 +8057,15 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items
           _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPublicUserFieldsData_habits_items_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GAllPublicUserFieldsData_habits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_habits_items_comments_items.serializer,
-          json);
+        GAllPublicUserFieldsData_habits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items_comments_items_by
@@ -7575,13 +8099,15 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_by
           _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPublicUserFieldsData_habits_items_comments_items_by.serializer,
-      this) as Map<String, dynamic>);
+        GAllPublicUserFieldsData_habits_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_habits_items_comments_items_by.serializer,
-          json);
+        GAllPublicUserFieldsData_habits_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit
@@ -7632,13 +8158,15 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit
           _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPublicUserFieldsData_habits_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GAllPublicUserFieldsData_habits_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_habits_items_comments_items_habit.serializer,
-          json);
+        GAllPublicUserFieldsData_habits_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
@@ -7675,14 +8203,16 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit_commen
           _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
@@ -7727,14 +8257,16 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit_commen
           _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GAllPublicUserFieldsData_habits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllPrivateUserFields {
@@ -8043,12 +8575,15 @@ abstract class GAllPrivateUserFieldsData
   static Serializer<GAllPrivateUserFieldsData> get serializer =>
       _$gAllPrivateUserFieldsDataSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllPrivateUserFieldsData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPrivateUserFieldsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPrivateUserFieldsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPrivateUserFieldsData.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_avatar
@@ -8080,13 +8615,16 @@ abstract class GAllPrivateUserFieldsData_avatar
   static Serializer<GAllPrivateUserFieldsData_avatar> get serializer =>
       _$gAllPrivateUserFieldsDataAvatarSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllPrivateUserFieldsData_avatar.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPrivateUserFieldsData_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_avatar? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPrivateUserFieldsData_avatar.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPrivateUserFieldsData_avatar.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_comments
@@ -8110,13 +8648,16 @@ abstract class GAllPrivateUserFieldsData_comments
   static Serializer<GAllPrivateUserFieldsData_comments> get serializer =>
       _$gAllPrivateUserFieldsDataCommentsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllPrivateUserFieldsData_comments.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPrivateUserFieldsData_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_comments? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPrivateUserFieldsData_comments.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPrivateUserFieldsData_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_comments_items
@@ -8157,12 +8698,15 @@ abstract class GAllPrivateUserFieldsData_comments_items
       _$gAllPrivateUserFieldsDataCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPrivateUserFieldsData_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_comments_items.serializer, json);
+        GAllPrivateUserFieldsData_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_comments_items_by
@@ -8193,12 +8737,15 @@ abstract class GAllPrivateUserFieldsData_comments_items_by
       get serializer => _$gAllPrivateUserFieldsDataCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPrivateUserFieldsData_comments_items_by.serializer, this)
-      as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_comments_items_by.serializer, json);
+        GAllPrivateUserFieldsData_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_comments_items_habit
@@ -8243,12 +8790,15 @@ abstract class GAllPrivateUserFieldsData_comments_items_habit
       get serializer => _$gAllPrivateUserFieldsDataCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPrivateUserFieldsData_comments_items_habit.serializer, this)
-      as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_comments_items_habit.serializer, json);
+        GAllPrivateUserFieldsData_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_comments_items_habit_comments
@@ -8278,13 +8828,15 @@ abstract class GAllPrivateUserFieldsData_comments_items_habit_comments
           _$gAllPrivateUserFieldsDataCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPrivateUserFieldsData_comments_items_habit_comments.serializer,
-      this) as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_comments_items_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_comments_items_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_comments_items_habit_comments.serializer,
-          json);
+        GAllPrivateUserFieldsData_comments_items_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_comments_items_habit_comments_items
@@ -8327,13 +8879,16 @@ abstract class GAllPrivateUserFieldsData_comments_items_habit_comments_items
           _$gAllPrivateUserFieldsDataCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPrivateUserFieldsData_comments_items_habit_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GAllPrivateUserFieldsData_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllPrivateUserFieldsData_habits
@@ -8357,13 +8912,16 @@ abstract class GAllPrivateUserFieldsData_habits
   static Serializer<GAllPrivateUserFieldsData_habits> get serializer =>
       _$gAllPrivateUserFieldsDataHabitsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllPrivateUserFieldsData_habits.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPrivateUserFieldsData_habits.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllPrivateUserFieldsData_habits.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllPrivateUserFieldsData_habits.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items
@@ -8408,12 +8966,15 @@ abstract class GAllPrivateUserFieldsData_habits_items
       _$gAllPrivateUserFieldsDataHabitsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPrivateUserFieldsData_habits_items.serializer, this)
-      as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_habits_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_habits_items.serializer, json);
+        GAllPrivateUserFieldsData_habits_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items_comments
@@ -8441,12 +9002,15 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllPrivateUserFieldsData_habits_items_comments.serializer, this)
-      as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_habits_items_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits_items_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_habits_items_comments.serializer, json);
+        GAllPrivateUserFieldsData_habits_items_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items_comments_items
@@ -8489,13 +9053,15 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPrivateUserFieldsData_habits_items_comments_items.serializer,
-      this) as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_habits_items_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits_items_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_habits_items_comments_items.serializer,
-          json);
+        GAllPrivateUserFieldsData_habits_items_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items_comments_items_by
@@ -8529,13 +9095,15 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_by
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsBySerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPrivateUserFieldsData_habits_items_comments_items_by.serializer,
-      this) as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_habits_items_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits_items_comments_items_by? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_habits_items_comments_items_by.serializer,
-          json);
+        GAllPrivateUserFieldsData_habits_items_comments_items_by.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit
@@ -8586,14 +9154,15 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPrivateUserFieldsData_habits_items_comments_items_habit.serializer,
-      this) as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_habits_items_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits_items_comments_items_habit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_habits_items_comments_items_habit
-              .serializer,
-          json);
+        GAllPrivateUserFieldsData_habits_items_comments_items_habit.serializer,
+        json,
+      );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
@@ -8630,14 +9199,16 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comme
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsHabitCommentsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
-          .serializer,
-      this) as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
-              .serializer,
-          json);
+            GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
@@ -8682,14 +9253,16 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit_comme
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
-          .serializer,
-      this) as Map<String, dynamic>);
+        GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-          GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
-              .serializer,
-          json);
+            GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllCommentFields {
@@ -8779,11 +9352,15 @@ abstract class GAllCommentFieldsData
   static Serializer<GAllCommentFieldsData> get serializer =>
       _$gAllCommentFieldsDataSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllCommentFieldsData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllCommentFieldsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllCommentFieldsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GAllCommentFieldsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllCommentFieldsData.serializer,
+        json,
+      );
 }
 
 abstract class GAllCommentFieldsData_by
@@ -8810,12 +9387,15 @@ abstract class GAllCommentFieldsData_by
   static Serializer<GAllCommentFieldsData_by> get serializer =>
       _$gAllCommentFieldsDataBySerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllCommentFieldsData_by.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllCommentFieldsData_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllCommentFieldsData_by? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllCommentFieldsData_by.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllCommentFieldsData_by.serializer,
+        json,
+      );
 }
 
 abstract class GAllCommentFieldsData_habit
@@ -8857,10 +9437,14 @@ abstract class GAllCommentFieldsData_habit
       _$gAllCommentFieldsDataHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllCommentFieldsData_habit.serializer, this) as Map<String, dynamic>);
+        GAllCommentFieldsData_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllCommentFieldsData_habit? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllCommentFieldsData_habit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllCommentFieldsData_habit.serializer,
+        json,
+      );
 }
 
 abstract class GAllCommentFieldsData_habit_comments
@@ -8885,13 +9469,16 @@ abstract class GAllCommentFieldsData_habit_comments
   static Serializer<GAllCommentFieldsData_habit_comments> get serializer =>
       _$gAllCommentFieldsDataHabitCommentsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GAllCommentFieldsData_habit_comments.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllCommentFieldsData_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllCommentFieldsData_habit_comments? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllCommentFieldsData_habit_comments.serializer, json);
+        GAllCommentFieldsData_habit_comments.serializer,
+        json,
+      );
 }
 
 abstract class GAllCommentFieldsData_habit_comments_items
@@ -8927,12 +9514,15 @@ abstract class GAllCommentFieldsData_habit_comments_items
       get serializer => _$gAllCommentFieldsDataHabitCommentsItemsSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GAllCommentFieldsData_habit_comments_items.serializer, this)
-      as Map<String, dynamic>);
+        GAllCommentFieldsData_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllCommentFieldsData_habit_comments_items? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GAllCommentFieldsData_habit_comments_items.serializer, json);
+        GAllCommentFieldsData_habit_comments_items.serializer,
+        json,
+      );
 }
 
 abstract class GAllVoteResultFields {
@@ -8985,12 +9575,15 @@ abstract class GAllVoteResultFieldsData
   static Serializer<GAllVoteResultFieldsData> get serializer =>
       _$gAllVoteResultFieldsDataSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GAllVoteResultFieldsData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllVoteResultFieldsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllVoteResultFieldsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllVoteResultFieldsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllVoteResultFieldsData.serializer,
+        json,
+      );
 }
 
 abstract class GAllVoteResultFieldsData_habit
@@ -9029,10 +9622,14 @@ abstract class GAllVoteResultFieldsData_habit
       _$gAllVoteResultFieldsDataHabitSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllVoteResultFieldsData_habit.serializer, this) as Map<String, dynamic>);
+        GAllVoteResultFieldsData_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllVoteResultFieldsData_habit? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllVoteResultFieldsData_habit.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllVoteResultFieldsData_habit.serializer,
+        json,
+      );
 }
 
 abstract class GAllVoteResultFieldsData_user
@@ -9061,8 +9658,12 @@ abstract class GAllVoteResultFieldsData_user
       _$gAllVoteResultFieldsDataUserSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GAllVoteResultFieldsData_user.serializer, this) as Map<String, dynamic>);
+        GAllVoteResultFieldsData_user.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GAllVoteResultFieldsData_user? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GAllVoteResultFieldsData_user.serializer, json);
+      _i1.serializers.deserializeWith(
+        GAllVoteResultFieldsData_user.serializer,
+        json,
+      );
 }

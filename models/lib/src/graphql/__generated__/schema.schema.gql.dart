@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -67,11 +69,15 @@ abstract class GCreateCommentInput
   String get comment;
   static Serializer<GCreateCommentInput> get serializer =>
       _$gCreateCommentInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GCreateCommentInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GCreateCommentInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateCommentInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GCreateCommentInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GCreateCommentInput.serializer,
+        json,
+      );
 }
 
 abstract class GCreateHabitInput
@@ -90,11 +96,15 @@ abstract class GCreateHabitInput
   String? get owner;
   static Serializer<GCreateHabitInput> get serializer =>
       _$gCreateHabitInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GCreateHabitInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GCreateHabitInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateHabitInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GCreateHabitInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GCreateHabitInput.serializer,
+        json,
+      );
 }
 
 abstract class GCreateUserInput
@@ -112,11 +122,15 @@ abstract class GCreateUserInput
   BuiltList<String>? get downvotedHabits;
   static Serializer<GCreateUserInput> get serializer =>
       _$gCreateUserInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GCreateUserInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GCreateUserInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GCreateUserInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GCreateUserInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GCreateUserInput.serializer,
+        json,
+      );
 }
 
 abstract class GDeleteCommentInput
@@ -129,11 +143,15 @@ abstract class GDeleteCommentInput
   String get id;
   static Serializer<GDeleteCommentInput> get serializer =>
       _$gDeleteCommentInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GDeleteCommentInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GDeleteCommentInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GDeleteCommentInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GDeleteCommentInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GDeleteCommentInput.serializer,
+        json,
+      );
 }
 
 abstract class GDeleteHabitInput
@@ -146,11 +164,15 @@ abstract class GDeleteHabitInput
   String get id;
   static Serializer<GDeleteHabitInput> get serializer =>
       _$gDeleteHabitInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GDeleteHabitInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GDeleteHabitInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GDeleteHabitInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GDeleteHabitInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GDeleteHabitInput.serializer,
+        json,
+      );
 }
 
 abstract class GDeleteUserInput
@@ -163,11 +185,15 @@ abstract class GDeleteUserInput
   String get username;
   static Serializer<GDeleteUserInput> get serializer =>
       _$gDeleteUserInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GDeleteUserInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GDeleteUserInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GDeleteUserInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GDeleteUserInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GDeleteUserInput.serializer,
+        json,
+      );
 }
 
 class GModelAttributeTypes extends EnumClass {
@@ -216,11 +242,15 @@ abstract class GModelBooleanInput
   GModelAttributeTypes? get attributeType;
   static Serializer<GModelBooleanInput> get serializer =>
       _$gModelBooleanInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelBooleanInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelBooleanInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelBooleanInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelBooleanInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelBooleanInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelCategoryInput
@@ -234,11 +264,15 @@ abstract class GModelCategoryInput
   GCategory? get ne;
   static Serializer<GModelCategoryInput> get serializer =>
       _$gModelCategoryInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelCategoryInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelCategoryInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelCategoryInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelCategoryInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelCategoryInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelCommentConditionInput
@@ -259,10 +293,14 @@ abstract class GModelCommentConditionInput
   static Serializer<GModelCommentConditionInput> get serializer =>
       _$gModelCommentConditionInputSerializer;
   Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-      GModelCommentConditionInput.serializer, this) as Map<String, dynamic>);
+        GModelCommentConditionInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelCommentConditionInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers
-          .deserializeWith(GModelCommentConditionInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelCommentConditionInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelCommentFilterInput
@@ -283,12 +321,15 @@ abstract class GModelCommentFilterInput
   GModelCommentFilterInput? get not;
   static Serializer<GModelCommentFilterInput> get serializer =>
       _$gModelCommentFilterInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelCommentFilterInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelCommentFilterInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelCommentFilterInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers
-          .deserializeWith(GModelCommentFilterInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelCommentFilterInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelFloatInput
@@ -309,11 +350,15 @@ abstract class GModelFloatInput
   GModelAttributeTypes? get attributeType;
   static Serializer<GModelFloatInput> get serializer =>
       _$gModelFloatInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelFloatInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelFloatInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelFloatInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelFloatInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelFloatInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelHabitConditionInput
@@ -336,12 +381,15 @@ abstract class GModelHabitConditionInput
   GModelHabitConditionInput? get not;
   static Serializer<GModelHabitConditionInput> get serializer =>
       _$gModelHabitConditionInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelHabitConditionInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelHabitConditionInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelHabitConditionInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers
-          .deserializeWith(GModelHabitConditionInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelHabitConditionInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelHabitFilterInput
@@ -364,11 +412,15 @@ abstract class GModelHabitFilterInput
   GModelHabitFilterInput? get not;
   static Serializer<GModelHabitFilterInput> get serializer =>
       _$gModelHabitFilterInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelHabitFilterInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelHabitFilterInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelHabitFilterInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelHabitFilterInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelHabitFilterInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelIDInput
@@ -392,11 +444,15 @@ abstract class GModelIDInput
   GModelAttributeTypes? get attributeType;
   GModelSizeInput? get size;
   static Serializer<GModelIDInput> get serializer => _$gModelIDInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelIDInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelIDInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelIDInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelIDInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelIDInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelIntInput
@@ -417,11 +473,15 @@ abstract class GModelIntInput
   GModelAttributeTypes? get attributeType;
   static Serializer<GModelIntInput> get serializer =>
       _$gModelIntInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelIntInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelIntInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelIntInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelIntInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelIntInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelIntKeyConditionInput
@@ -442,10 +502,14 @@ abstract class GModelIntKeyConditionInput
   static Serializer<GModelIntKeyConditionInput> get serializer =>
       _$gModelIntKeyConditionInputSerializer;
   Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-      GModelIntKeyConditionInput.serializer, this) as Map<String, dynamic>);
+        GModelIntKeyConditionInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelIntKeyConditionInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers
-          .deserializeWith(GModelIntKeyConditionInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelIntKeyConditionInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelSizeInput
@@ -464,11 +528,15 @@ abstract class GModelSizeInput
   BuiltList<int>? get between;
   static Serializer<GModelSizeInput> get serializer =>
       _$gModelSizeInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelSizeInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelSizeInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelSizeInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelSizeInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelSizeInput.serializer,
+        json,
+      );
 }
 
 class GModelSortDirection extends EnumClass {
@@ -508,11 +576,15 @@ abstract class GModelStringInput
   GModelSizeInput? get size;
   static Serializer<GModelStringInput> get serializer =>
       _$gModelStringInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelStringInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelStringInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelStringInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelStringInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelStringInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelUserConditionInput
@@ -533,12 +605,15 @@ abstract class GModelUserConditionInput
   GModelUserConditionInput? get not;
   static Serializer<GModelUserConditionInput> get serializer =>
       _$gModelUserConditionInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelUserConditionInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelUserConditionInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelUserConditionInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers
-          .deserializeWith(GModelUserConditionInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelUserConditionInput.serializer,
+        json,
+      );
 }
 
 abstract class GModelUserFilterInput
@@ -559,11 +634,15 @@ abstract class GModelUserFilterInput
   GModelUserFilterInput? get not;
   static Serializer<GModelUserFilterInput> get serializer =>
       _$gModelUserFilterInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GModelUserFilterInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GModelUserFilterInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GModelUserFilterInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GModelUserFilterInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GModelUserFilterInput.serializer,
+        json,
+      );
 }
 
 abstract class GS3ObjectInput
@@ -580,11 +659,15 @@ abstract class GS3ObjectInput
   GAccessLevel? get accessLevel;
   static Serializer<GS3ObjectInput> get serializer =>
       _$gS3ObjectInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GS3ObjectInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GS3ObjectInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GS3ObjectInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GS3ObjectInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GS3ObjectInput.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateCommentInput
@@ -600,11 +683,15 @@ abstract class GUpdateCommentInput
   String? get comment;
   static Serializer<GUpdateCommentInput> get serializer =>
       _$gUpdateCommentInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GUpdateCommentInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GUpdateCommentInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateCommentInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GUpdateCommentInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GUpdateCommentInput.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateHabitInput
@@ -623,11 +710,15 @@ abstract class GUpdateHabitInput
   String? get owner;
   static Serializer<GUpdateHabitInput> get serializer =>
       _$gUpdateHabitInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GUpdateHabitInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GUpdateHabitInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateHabitInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GUpdateHabitInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GUpdateHabitInput.serializer,
+        json,
+      );
 }
 
 abstract class GUpdateUserInput
@@ -645,11 +736,15 @@ abstract class GUpdateUserInput
   BuiltList<String>? get downvotedHabits;
   static Serializer<GUpdateUserInput> get serializer =>
       _$gUpdateUserInputSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i2.serializers.serializeWith(GUpdateUserInput.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GUpdateUserInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GUpdateUserInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(GUpdateUserInput.serializer, json);
+      _i2.serializers.deserializeWith(
+        GUpdateUserInput.serializer,
+        json,
+      );
 }
 
 class GVoteType extends EnumClass {
@@ -667,3 +762,5 @@ class GVoteType extends EnumClass {
   static BuiltSet<GVoteType> get values => _$gVoteTypeValues;
   static GVoteType valueOf(String name) => _$gVoteTypeValueOf(name);
 }
+
+const Map<String, Set<String>> possibleTypesMap = {};

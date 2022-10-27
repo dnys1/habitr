@@ -7,9 +7,9 @@ import 'package:habitr/mixins/username_form.dart';
 import 'package:habitr/util/base_viewmodel.dart';
 
 class SignupViewModel extends BaseViewModel with UsernameFormMixin {
-  final AuthBloc _authBloc;
-
   SignupViewModel(this._authBloc);
+
+  final AuthBloc _authBloc;
 
   final _formKey = GlobalKey<FormState>();
   GlobalKey<FormState> get formKey => _formKey;

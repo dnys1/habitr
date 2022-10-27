@@ -8,7 +8,7 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 
 class CategoryDetailsScreen extends StatelessWidget {
-  const CategoryDetailsScreen(this.category, {Key? key}) : super(key: key);
+  const CategoryDetailsScreen(this.category, {super.key});
 
   final Category category;
 
@@ -34,8 +34,7 @@ class _CategoryDetailsView extends StatelessWidget {
   const _CategoryDetailsView(
     this.viewModel, {
     required this.category,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final Category category;
   final CategoryDetailsViewModel viewModel;

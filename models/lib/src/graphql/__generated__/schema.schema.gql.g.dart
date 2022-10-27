@@ -314,7 +314,7 @@ class _$GCreateCommentInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -332,7 +332,7 @@ class _$GCreateCommentInputSerializer
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -404,7 +404,7 @@ class _$GCreateHabitInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -414,11 +414,11 @@ class _$GCreateHabitInputSerializer
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(GCategory)) as GCategory;
+              specifiedType: const FullType(GCategory))! as GCategory;
           break;
         case 'details':
           result.details = serializers.deserialize(value,
@@ -507,13 +507,13 @@ class _$GCreateUserInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -577,13 +577,13 @@ class _$GDeleteCommentInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -618,13 +618,13 @@ class _$GDeleteHabitInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -660,13 +660,13 @@ class _$GDeleteUserInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
       }
     }
@@ -755,7 +755,7 @@ class _$GModelBooleanInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -824,7 +824,7 @@ class _$GModelCategoryInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -914,7 +914,7 @@ class _$GModelCommentConditionInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -1034,7 +1034,7 @@ class _$GModelCommentFilterInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -1167,7 +1167,7 @@ class _$GModelFloatInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -1309,7 +1309,7 @@ class _$GModelHabitConditionInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -1466,7 +1466,7 @@ class _$GModelHabitFilterInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -1642,7 +1642,7 @@ class _$GModelIDInputSerializer implements StructuredSerializer<GModelIDInput> {
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -1790,7 +1790,7 @@ class _$GModelIntInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -1905,7 +1905,7 @@ class _$GModelIntKeyConditionInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -2009,7 +2009,7 @@ class _$GModelSizeInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -2183,7 +2183,7 @@ class _$GModelStringInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -2328,7 +2328,7 @@ class _$GModelUserConditionInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -2459,7 +2459,7 @@ class _$GModelUserFilterInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
@@ -2556,21 +2556,21 @@ class _$GS3ObjectInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'bucket':
           result.bucket = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'region':
           result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'key':
           result.key = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'cognitoId':
           result.cognitoId = serializers.deserialize(value,
@@ -2638,13 +2638,13 @@ class _$GUpdateCommentInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'habitId':
           result.habitId = serializers.deserialize(value,
@@ -2731,13 +2731,13 @@ class _$GUpdateHabitInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'tagline':
           result.tagline = serializers.deserialize(value,
@@ -2834,13 +2834,13 @@ class _$GUpdateUserInputSerializer
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
         case 'username':
           result.username = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String))! as String;
           break;
         case 'displayUsername':
           result.displayUsername = serializers.deserialize(value,
@@ -2896,10 +2896,10 @@ class _$GAWSDateTime extends GAWSDateTime {
   final String value;
 
   factory _$GAWSDateTime([void Function(GAWSDateTimeBuilder)? updates]) =>
-      (new GAWSDateTimeBuilder()..update(updates)).build();
+      (new GAWSDateTimeBuilder()..update(updates))._build();
 
   _$GAWSDateTime._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, 'GAWSDateTime', 'value');
+    BuiltValueNullFieldError.checkNotNull(value, r'GAWSDateTime', 'value');
   }
 
   @override
@@ -2922,7 +2922,7 @@ class _$GAWSDateTime extends GAWSDateTime {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GAWSDateTime')..add('value', value))
+    return (newBuiltValueToStringHelper(r'GAWSDateTime')..add('value', value))
         .toString();
   }
 }
@@ -2958,11 +2958,13 @@ class GAWSDateTimeBuilder
   }
 
   @override
-  _$GAWSDateTime build() {
+  GAWSDateTime build() => _build();
+
+  _$GAWSDateTime _build() {
     final _$result = _$v ??
         new _$GAWSDateTime._(
             value: BuiltValueNullFieldError.checkNotNull(
-                value, 'GAWSDateTime', 'value'));
+                value, r'GAWSDateTime', 'value'));
     replace(_$result);
     return _$result;
   }
@@ -2980,13 +2982,13 @@ class _$GCreateCommentInput extends GCreateCommentInput {
 
   factory _$GCreateCommentInput(
           [void Function(GCreateCommentInputBuilder)? updates]) =>
-      (new GCreateCommentInputBuilder()..update(updates)).build();
+      (new GCreateCommentInputBuilder()..update(updates))._build();
 
   _$GCreateCommentInput._(
       {this.id, this.habitId, this.owner, required this.comment})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        comment, 'GCreateCommentInput', 'comment');
+        comment, r'GCreateCommentInput', 'comment');
   }
 
   @override
@@ -3017,7 +3019,7 @@ class _$GCreateCommentInput extends GCreateCommentInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateCommentInput')
+    return (newBuiltValueToStringHelper(r'GCreateCommentInput')
           ..add('id', id)
           ..add('habitId', habitId)
           ..add('owner', owner)
@@ -3072,14 +3074,16 @@ class GCreateCommentInputBuilder
   }
 
   @override
-  _$GCreateCommentInput build() {
+  GCreateCommentInput build() => _build();
+
+  _$GCreateCommentInput _build() {
     final _$result = _$v ??
         new _$GCreateCommentInput._(
             id: id,
             habitId: habitId,
             owner: owner,
             comment: BuiltValueNullFieldError.checkNotNull(
-                comment, 'GCreateCommentInput', 'comment'));
+                comment, r'GCreateCommentInput', 'comment'));
     replace(_$result);
     return _$result;
   }
@@ -3103,7 +3107,7 @@ class _$GCreateHabitInput extends GCreateHabitInput {
 
   factory _$GCreateHabitInput(
           [void Function(GCreateHabitInputBuilder)? updates]) =>
-      (new GCreateHabitInputBuilder()..update(updates)).build();
+      (new GCreateHabitInputBuilder()..update(updates))._build();
 
   _$GCreateHabitInput._(
       {this.id,
@@ -3115,9 +3119,9 @@ class _$GCreateHabitInput extends GCreateHabitInput {
       this.owner})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        tagline, 'GCreateHabitInput', 'tagline');
+        tagline, r'GCreateHabitInput', 'tagline');
     BuiltValueNullFieldError.checkNotNull(
-        category, 'GCreateHabitInput', 'category');
+        category, r'GCreateHabitInput', 'category');
   }
 
   @override
@@ -3157,7 +3161,7 @@ class _$GCreateHabitInput extends GCreateHabitInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateHabitInput')
+    return (newBuiltValueToStringHelper(r'GCreateHabitInput')
           ..add('id', id)
           ..add('tagline', tagline)
           ..add('category', category)
@@ -3230,14 +3234,16 @@ class GCreateHabitInputBuilder
   }
 
   @override
-  _$GCreateHabitInput build() {
+  GCreateHabitInput build() => _build();
+
+  _$GCreateHabitInput _build() {
     final _$result = _$v ??
         new _$GCreateHabitInput._(
             id: id,
             tagline: BuiltValueNullFieldError.checkNotNull(
-                tagline, 'GCreateHabitInput', 'tagline'),
+                tagline, r'GCreateHabitInput', 'tagline'),
             category: BuiltValueNullFieldError.checkNotNull(
-                category, 'GCreateHabitInput', 'category'),
+                category, r'GCreateHabitInput', 'category'),
             details: details,
             ups: ups,
             downs: downs,
@@ -3263,7 +3269,7 @@ class _$GCreateUserInput extends GCreateUserInput {
 
   factory _$GCreateUserInput(
           [void Function(GCreateUserInputBuilder)? updates]) =>
-      (new GCreateUserInputBuilder()..update(updates)).build();
+      (new GCreateUserInputBuilder()..update(updates))._build();
 
   _$GCreateUserInput._(
       {required this.username,
@@ -3274,7 +3280,7 @@ class _$GCreateUserInput extends GCreateUserInput {
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GCreateUserInput', 'username');
+        username, r'GCreateUserInput', 'username');
   }
 
   @override
@@ -3311,7 +3317,7 @@ class _$GCreateUserInput extends GCreateUserInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateUserInput')
+    return (newBuiltValueToStringHelper(r'GCreateUserInput')
           ..add('username', username)
           ..add('displayUsername', displayUsername)
           ..add('name', name)
@@ -3384,13 +3390,15 @@ class GCreateUserInputBuilder
   }
 
   @override
-  _$GCreateUserInput build() {
+  GCreateUserInput build() => _build();
+
+  _$GCreateUserInput _build() {
     _$GCreateUserInput _$result;
     try {
       _$result = _$v ??
           new _$GCreateUserInput._(
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GCreateUserInput', 'username'),
+                  username, r'GCreateUserInput', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -3407,7 +3415,7 @@ class GCreateUserInputBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GCreateUserInput', _$failedField, e.toString());
+            r'GCreateUserInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -3422,10 +3430,10 @@ class _$GDeleteCommentInput extends GDeleteCommentInput {
 
   factory _$GDeleteCommentInput(
           [void Function(GDeleteCommentInputBuilder)? updates]) =>
-      (new GDeleteCommentInputBuilder()..update(updates)).build();
+      (new GDeleteCommentInputBuilder()..update(updates))._build();
 
   _$GDeleteCommentInput._({required this.id}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, 'GDeleteCommentInput', 'id');
+    BuiltValueNullFieldError.checkNotNull(id, r'GDeleteCommentInput', 'id');
   }
 
   @override
@@ -3450,7 +3458,7 @@ class _$GDeleteCommentInput extends GDeleteCommentInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GDeleteCommentInput')..add('id', id))
+    return (newBuiltValueToStringHelper(r'GDeleteCommentInput')..add('id', id))
         .toString();
   }
 }
@@ -3486,11 +3494,13 @@ class GDeleteCommentInputBuilder
   }
 
   @override
-  _$GDeleteCommentInput build() {
+  GDeleteCommentInput build() => _build();
+
+  _$GDeleteCommentInput _build() {
     final _$result = _$v ??
         new _$GDeleteCommentInput._(
             id: BuiltValueNullFieldError.checkNotNull(
-                id, 'GDeleteCommentInput', 'id'));
+                id, r'GDeleteCommentInput', 'id'));
     replace(_$result);
     return _$result;
   }
@@ -3502,10 +3512,10 @@ class _$GDeleteHabitInput extends GDeleteHabitInput {
 
   factory _$GDeleteHabitInput(
           [void Function(GDeleteHabitInputBuilder)? updates]) =>
-      (new GDeleteHabitInputBuilder()..update(updates)).build();
+      (new GDeleteHabitInputBuilder()..update(updates))._build();
 
   _$GDeleteHabitInput._({required this.id}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, 'GDeleteHabitInput', 'id');
+    BuiltValueNullFieldError.checkNotNull(id, r'GDeleteHabitInput', 'id');
   }
 
   @override
@@ -3529,7 +3539,7 @@ class _$GDeleteHabitInput extends GDeleteHabitInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GDeleteHabitInput')..add('id', id))
+    return (newBuiltValueToStringHelper(r'GDeleteHabitInput')..add('id', id))
         .toString();
   }
 }
@@ -3565,11 +3575,13 @@ class GDeleteHabitInputBuilder
   }
 
   @override
-  _$GDeleteHabitInput build() {
+  GDeleteHabitInput build() => _build();
+
+  _$GDeleteHabitInput _build() {
     final _$result = _$v ??
         new _$GDeleteHabitInput._(
             id: BuiltValueNullFieldError.checkNotNull(
-                id, 'GDeleteHabitInput', 'id'));
+                id, r'GDeleteHabitInput', 'id'));
     replace(_$result);
     return _$result;
   }
@@ -3581,11 +3593,11 @@ class _$GDeleteUserInput extends GDeleteUserInput {
 
   factory _$GDeleteUserInput(
           [void Function(GDeleteUserInputBuilder)? updates]) =>
-      (new GDeleteUserInputBuilder()..update(updates)).build();
+      (new GDeleteUserInputBuilder()..update(updates))._build();
 
   _$GDeleteUserInput._({required this.username}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GDeleteUserInput', 'username');
+        username, r'GDeleteUserInput', 'username');
   }
 
   @override
@@ -3609,7 +3621,7 @@ class _$GDeleteUserInput extends GDeleteUserInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GDeleteUserInput')
+    return (newBuiltValueToStringHelper(r'GDeleteUserInput')
           ..add('username', username))
         .toString();
   }
@@ -3646,11 +3658,13 @@ class GDeleteUserInputBuilder
   }
 
   @override
-  _$GDeleteUserInput build() {
+  GDeleteUserInput build() => _build();
+
+  _$GDeleteUserInput _build() {
     final _$result = _$v ??
         new _$GDeleteUserInput._(
             username: BuiltValueNullFieldError.checkNotNull(
-                username, 'GDeleteUserInput', 'username'));
+                username, r'GDeleteUserInput', 'username'));
     replace(_$result);
     return _$result;
   }
@@ -3668,7 +3682,7 @@ class _$GModelBooleanInput extends GModelBooleanInput {
 
   factory _$GModelBooleanInput(
           [void Function(GModelBooleanInputBuilder)? updates]) =>
-      (new GModelBooleanInputBuilder()..update(updates)).build();
+      (new GModelBooleanInputBuilder()..update(updates))._build();
 
   _$GModelBooleanInput._(
       {this.ne, this.eq, this.attributeExists, this.attributeType})
@@ -3702,7 +3716,7 @@ class _$GModelBooleanInput extends GModelBooleanInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelBooleanInput')
+    return (newBuiltValueToStringHelper(r'GModelBooleanInput')
           ..add('ne', ne)
           ..add('eq', eq)
           ..add('attributeExists', attributeExists)
@@ -3759,7 +3773,9 @@ class GModelBooleanInputBuilder
   }
 
   @override
-  _$GModelBooleanInput build() {
+  GModelBooleanInput build() => _build();
+
+  _$GModelBooleanInput _build() {
     final _$result = _$v ??
         new _$GModelBooleanInput._(
             ne: ne,
@@ -3779,7 +3795,7 @@ class _$GModelCategoryInput extends GModelCategoryInput {
 
   factory _$GModelCategoryInput(
           [void Function(GModelCategoryInputBuilder)? updates]) =>
-      (new GModelCategoryInputBuilder()..update(updates)).build();
+      (new GModelCategoryInputBuilder()..update(updates))._build();
 
   _$GModelCategoryInput._({this.eq, this.ne}) : super._();
 
@@ -3805,7 +3821,7 @@ class _$GModelCategoryInput extends GModelCategoryInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelCategoryInput')
+    return (newBuiltValueToStringHelper(r'GModelCategoryInput')
           ..add('eq', eq)
           ..add('ne', ne))
         .toString();
@@ -3848,7 +3864,9 @@ class GModelCategoryInputBuilder
   }
 
   @override
-  _$GModelCategoryInput build() {
+  GModelCategoryInput build() => _build();
+
+  _$GModelCategoryInput _build() {
     final _$result = _$v ?? new _$GModelCategoryInput._(eq: eq, ne: ne);
     replace(_$result);
     return _$result;
@@ -3871,7 +3889,7 @@ class _$GModelCommentConditionInput extends GModelCommentConditionInput {
 
   factory _$GModelCommentConditionInput(
           [void Function(GModelCommentConditionInputBuilder)? updates]) =>
-      (new GModelCommentConditionInputBuilder()..update(updates)).build();
+      (new GModelCommentConditionInputBuilder()..update(updates))._build();
 
   _$GModelCommentConditionInput._(
       {this.habitId, this.owner, this.comment, this.and, this.or, this.not})
@@ -3912,7 +3930,7 @@ class _$GModelCommentConditionInput extends GModelCommentConditionInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelCommentConditionInput')
+    return (newBuiltValueToStringHelper(r'GModelCommentConditionInput')
           ..add('habitId', habitId)
           ..add('owner', owner)
           ..add('comment', comment)
@@ -3987,7 +4005,9 @@ class GModelCommentConditionInputBuilder
   }
 
   @override
-  _$GModelCommentConditionInput build() {
+  GModelCommentConditionInput build() => _build();
+
+  _$GModelCommentConditionInput _build() {
     _$GModelCommentConditionInput _$result;
     try {
       _$result = _$v ??
@@ -4015,7 +4035,7 @@ class GModelCommentConditionInputBuilder
         _not?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelCommentConditionInput', _$failedField, e.toString());
+            r'GModelCommentConditionInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -4042,7 +4062,7 @@ class _$GModelCommentFilterInput extends GModelCommentFilterInput {
 
   factory _$GModelCommentFilterInput(
           [void Function(GModelCommentFilterInputBuilder)? updates]) =>
-      (new GModelCommentFilterInputBuilder()..update(updates)).build();
+      (new GModelCommentFilterInputBuilder()..update(updates))._build();
 
   _$GModelCommentFilterInput._(
       {this.id,
@@ -4092,7 +4112,7 @@ class _$GModelCommentFilterInput extends GModelCommentFilterInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelCommentFilterInput')
+    return (newBuiltValueToStringHelper(r'GModelCommentFilterInput')
           ..add('id', id)
           ..add('habitId', habitId)
           ..add('owner', owner)
@@ -4172,7 +4192,9 @@ class GModelCommentFilterInputBuilder
   }
 
   @override
-  _$GModelCommentFilterInput build() {
+  GModelCommentFilterInput build() => _build();
+
+  _$GModelCommentFilterInput _build() {
     _$GModelCommentFilterInput _$result;
     try {
       _$result = _$v ??
@@ -4203,7 +4225,7 @@ class GModelCommentFilterInputBuilder
         _not?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelCommentFilterInput', _$failedField, e.toString());
+            r'GModelCommentFilterInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -4234,7 +4256,7 @@ class _$GModelFloatInput extends GModelFloatInput {
 
   factory _$GModelFloatInput(
           [void Function(GModelFloatInputBuilder)? updates]) =>
-      (new GModelFloatInputBuilder()..update(updates)).build();
+      (new GModelFloatInputBuilder()..update(updates))._build();
 
   _$GModelFloatInput._(
       {this.ne,
@@ -4291,7 +4313,7 @@ class _$GModelFloatInput extends GModelFloatInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelFloatInput')
+    return (newBuiltValueToStringHelper(r'GModelFloatInput')
           ..add('ne', ne)
           ..add('eq', eq)
           ..add('le', le)
@@ -4379,7 +4401,9 @@ class GModelFloatInputBuilder
   }
 
   @override
-  _$GModelFloatInput build() {
+  GModelFloatInput build() => _build();
+
+  _$GModelFloatInput _build() {
     _$GModelFloatInput _$result;
     try {
       _$result = _$v ??
@@ -4400,7 +4424,7 @@ class GModelFloatInputBuilder
         _between?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelFloatInput', _$failedField, e.toString());
+            r'GModelFloatInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -4431,7 +4455,7 @@ class _$GModelHabitConditionInput extends GModelHabitConditionInput {
 
   factory _$GModelHabitConditionInput(
           [void Function(GModelHabitConditionInputBuilder)? updates]) =>
-      (new GModelHabitConditionInputBuilder()..update(updates)).build();
+      (new GModelHabitConditionInputBuilder()..update(updates))._build();
 
   _$GModelHabitConditionInput._(
       {this.tagline,
@@ -4491,7 +4515,7 @@ class _$GModelHabitConditionInput extends GModelHabitConditionInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelHabitConditionInput')
+    return (newBuiltValueToStringHelper(r'GModelHabitConditionInput')
           ..add('tagline', tagline)
           ..add('category', category)
           ..add('details', details)
@@ -4586,7 +4610,9 @@ class GModelHabitConditionInputBuilder
   }
 
   @override
-  _$GModelHabitConditionInput build() {
+  GModelHabitConditionInput build() => _build();
+
+  _$GModelHabitConditionInput _build() {
     _$GModelHabitConditionInput _$result;
     try {
       _$result = _$v ??
@@ -4623,7 +4649,7 @@ class GModelHabitConditionInputBuilder
         _not?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelHabitConditionInput', _$failedField, e.toString());
+            r'GModelHabitConditionInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -4656,7 +4682,7 @@ class _$GModelHabitFilterInput extends GModelHabitFilterInput {
 
   factory _$GModelHabitFilterInput(
           [void Function(GModelHabitFilterInputBuilder)? updates]) =>
-      (new GModelHabitFilterInputBuilder()..update(updates)).build();
+      (new GModelHabitFilterInputBuilder()..update(updates))._build();
 
   _$GModelHabitFilterInput._(
       {this.id,
@@ -4718,7 +4744,7 @@ class _$GModelHabitFilterInput extends GModelHabitFilterInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelHabitFilterInput')
+    return (newBuiltValueToStringHelper(r'GModelHabitFilterInput')
           ..add('id', id)
           ..add('tagline', tagline)
           ..add('category', category)
@@ -4818,7 +4844,9 @@ class GModelHabitFilterInputBuilder
   }
 
   @override
-  _$GModelHabitFilterInput build() {
+  GModelHabitFilterInput build() => _build();
+
+  _$GModelHabitFilterInput _build() {
     _$GModelHabitFilterInput _$result;
     try {
       _$result = _$v ??
@@ -4858,7 +4886,7 @@ class GModelHabitFilterInputBuilder
         _not?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelHabitFilterInput', _$failedField, e.toString());
+            r'GModelHabitFilterInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -4896,7 +4924,7 @@ class _$GModelIDInput extends GModelIDInput {
   final GModelSizeInput? size;
 
   factory _$GModelIDInput([void Function(GModelIDInputBuilder)? updates]) =>
-      (new GModelIDInputBuilder()..update(updates)).build();
+      (new GModelIDInputBuilder()..update(updates))._build();
 
   _$GModelIDInput._(
       {this.ne,
@@ -4970,7 +4998,7 @@ class _$GModelIDInput extends GModelIDInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelIDInput')
+    return (newBuiltValueToStringHelper(r'GModelIDInput')
           ..add('ne', ne)
           ..add('eq', eq)
           ..add('le', le)
@@ -5083,7 +5111,9 @@ class GModelIDInputBuilder
   }
 
   @override
-  _$GModelIDInput build() {
+  GModelIDInput build() => _build();
+
+  _$GModelIDInput _build() {
     _$GModelIDInput _$result;
     try {
       _$result = _$v ??
@@ -5111,7 +5141,7 @@ class GModelIDInputBuilder
         _size?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelIDInput', _$failedField, e.toString());
+            r'GModelIDInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -5141,7 +5171,7 @@ class _$GModelIntInput extends GModelIntInput {
   final GModelAttributeTypes? attributeType;
 
   factory _$GModelIntInput([void Function(GModelIntInputBuilder)? updates]) =>
-      (new GModelIntInputBuilder()..update(updates)).build();
+      (new GModelIntInputBuilder()..update(updates))._build();
 
   _$GModelIntInput._(
       {this.ne,
@@ -5198,7 +5228,7 @@ class _$GModelIntInput extends GModelIntInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelIntInput')
+    return (newBuiltValueToStringHelper(r'GModelIntInput')
           ..add('ne', ne)
           ..add('eq', eq)
           ..add('le', le)
@@ -5285,7 +5315,9 @@ class GModelIntInputBuilder
   }
 
   @override
-  _$GModelIntInput build() {
+  GModelIntInput build() => _build();
+
+  _$GModelIntInput _build() {
     _$GModelIntInput _$result;
     try {
       _$result = _$v ??
@@ -5306,7 +5338,7 @@ class GModelIntInputBuilder
         _between?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelIntInput', _$failedField, e.toString());
+            r'GModelIntInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -5331,7 +5363,7 @@ class _$GModelIntKeyConditionInput extends GModelIntKeyConditionInput {
 
   factory _$GModelIntKeyConditionInput(
           [void Function(GModelIntKeyConditionInputBuilder)? updates]) =>
-      (new GModelIntKeyConditionInputBuilder()..update(updates)).build();
+      (new GModelIntKeyConditionInputBuilder()..update(updates))._build();
 
   _$GModelIntKeyConditionInput._(
       {this.eq, this.le, this.lt, this.ge, this.gt, this.between})
@@ -5370,7 +5402,7 @@ class _$GModelIntKeyConditionInput extends GModelIntKeyConditionInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelIntKeyConditionInput')
+    return (newBuiltValueToStringHelper(r'GModelIntKeyConditionInput')
           ..add('eq', eq)
           ..add('le', le)
           ..add('lt', lt)
@@ -5438,7 +5470,9 @@ class GModelIntKeyConditionInputBuilder
   }
 
   @override
-  _$GModelIntKeyConditionInput build() {
+  GModelIntKeyConditionInput build() => _build();
+
+  _$GModelIntKeyConditionInput _build() {
     _$GModelIntKeyConditionInput _$result;
     try {
       _$result = _$v ??
@@ -5456,7 +5490,7 @@ class GModelIntKeyConditionInputBuilder
         _between?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelIntKeyConditionInput', _$failedField, e.toString());
+            r'GModelIntKeyConditionInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -5482,7 +5516,7 @@ class _$GModelSizeInput extends GModelSizeInput {
   final BuiltList<int>? between;
 
   factory _$GModelSizeInput([void Function(GModelSizeInputBuilder)? updates]) =>
-      (new GModelSizeInputBuilder()..update(updates)).build();
+      (new GModelSizeInputBuilder()..update(updates))._build();
 
   _$GModelSizeInput._(
       {this.ne, this.eq, this.le, this.lt, this.ge, this.gt, this.between})
@@ -5523,7 +5557,7 @@ class _$GModelSizeInput extends GModelSizeInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelSizeInput')
+    return (newBuiltValueToStringHelper(r'GModelSizeInput')
           ..add('ne', ne)
           ..add('eq', eq)
           ..add('le', le)
@@ -5596,7 +5630,9 @@ class GModelSizeInputBuilder
   }
 
   @override
-  _$GModelSizeInput build() {
+  GModelSizeInput build() => _build();
+
+  _$GModelSizeInput _build() {
     _$GModelSizeInput _$result;
     try {
       _$result = _$v ??
@@ -5615,7 +5651,7 @@ class GModelSizeInputBuilder
         _between?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelSizeInput', _$failedField, e.toString());
+            r'GModelSizeInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -5654,7 +5690,7 @@ class _$GModelStringInput extends GModelStringInput {
 
   factory _$GModelStringInput(
           [void Function(GModelStringInputBuilder)? updates]) =>
-      (new GModelStringInputBuilder()..update(updates)).build();
+      (new GModelStringInputBuilder()..update(updates))._build();
 
   _$GModelStringInput._(
       {this.ne,
@@ -5729,7 +5765,7 @@ class _$GModelStringInput extends GModelStringInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelStringInput')
+    return (newBuiltValueToStringHelper(r'GModelStringInput')
           ..add('ne', ne)
           ..add('eq', eq)
           ..add('le', le)
@@ -5842,7 +5878,9 @@ class GModelStringInputBuilder
   }
 
   @override
-  _$GModelStringInput build() {
+  GModelStringInput build() => _build();
+
+  _$GModelStringInput _build() {
     _$GModelStringInput _$result;
     try {
       _$result = _$v ??
@@ -5870,7 +5908,7 @@ class GModelStringInputBuilder
         _size?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelStringInput', _$failedField, e.toString());
+            r'GModelStringInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -5897,7 +5935,7 @@ class _$GModelUserConditionInput extends GModelUserConditionInput {
 
   factory _$GModelUserConditionInput(
           [void Function(GModelUserConditionInputBuilder)? updates]) =>
-      (new GModelUserConditionInputBuilder()..update(updates)).build();
+      (new GModelUserConditionInputBuilder()..update(updates))._build();
 
   _$GModelUserConditionInput._(
       {this.displayUsername,
@@ -5947,7 +5985,7 @@ class _$GModelUserConditionInput extends GModelUserConditionInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelUserConditionInput')
+    return (newBuiltValueToStringHelper(r'GModelUserConditionInput')
           ..add('displayUsername', displayUsername)
           ..add('name', name)
           ..add('upvotedHabits', upvotedHabits)
@@ -6031,7 +6069,9 @@ class GModelUserConditionInputBuilder
   }
 
   @override
-  _$GModelUserConditionInput build() {
+  GModelUserConditionInput build() => _build();
+
+  _$GModelUserConditionInput _build() {
     _$GModelUserConditionInput _$result;
     try {
       _$result = _$v ??
@@ -6062,7 +6102,7 @@ class GModelUserConditionInputBuilder
         _not?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelUserConditionInput', _$failedField, e.toString());
+            r'GModelUserConditionInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -6091,7 +6131,7 @@ class _$GModelUserFilterInput extends GModelUserFilterInput {
 
   factory _$GModelUserFilterInput(
           [void Function(GModelUserFilterInputBuilder)? updates]) =>
-      (new GModelUserFilterInputBuilder()..update(updates)).build();
+      (new GModelUserFilterInputBuilder()..update(updates))._build();
 
   _$GModelUserFilterInput._(
       {this.username,
@@ -6147,7 +6187,7 @@ class _$GModelUserFilterInput extends GModelUserFilterInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GModelUserFilterInput')
+    return (newBuiltValueToStringHelper(r'GModelUserFilterInput')
           ..add('username', username)
           ..add('displayUsername', displayUsername)
           ..add('name', name)
@@ -6238,7 +6278,9 @@ class GModelUserFilterInputBuilder
   }
 
   @override
-  _$GModelUserFilterInput build() {
+  GModelUserFilterInput build() => _build();
+
+  _$GModelUserFilterInput _build() {
     _$GModelUserFilterInput _$result;
     try {
       _$result = _$v ??
@@ -6272,7 +6314,7 @@ class GModelUserFilterInputBuilder
         _not?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GModelUserFilterInput', _$failedField, e.toString());
+            r'GModelUserFilterInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -6294,7 +6336,7 @@ class _$GS3ObjectInput extends GS3ObjectInput {
   final GAccessLevel? accessLevel;
 
   factory _$GS3ObjectInput([void Function(GS3ObjectInputBuilder)? updates]) =>
-      (new GS3ObjectInputBuilder()..update(updates)).build();
+      (new GS3ObjectInputBuilder()..update(updates))._build();
 
   _$GS3ObjectInput._(
       {required this.bucket,
@@ -6303,9 +6345,9 @@ class _$GS3ObjectInput extends GS3ObjectInput {
       this.cognitoId,
       this.accessLevel})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(bucket, 'GS3ObjectInput', 'bucket');
-    BuiltValueNullFieldError.checkNotNull(region, 'GS3ObjectInput', 'region');
-    BuiltValueNullFieldError.checkNotNull(key, 'GS3ObjectInput', 'key');
+    BuiltValueNullFieldError.checkNotNull(bucket, r'GS3ObjectInput', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region, r'GS3ObjectInput', 'region');
+    BuiltValueNullFieldError.checkNotNull(key, r'GS3ObjectInput', 'key');
   }
 
   @override
@@ -6337,7 +6379,7 @@ class _$GS3ObjectInput extends GS3ObjectInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GS3ObjectInput')
+    return (newBuiltValueToStringHelper(r'GS3ObjectInput')
           ..add('bucket', bucket)
           ..add('region', region)
           ..add('key', key)
@@ -6399,15 +6441,17 @@ class GS3ObjectInputBuilder
   }
 
   @override
-  _$GS3ObjectInput build() {
+  GS3ObjectInput build() => _build();
+
+  _$GS3ObjectInput _build() {
     final _$result = _$v ??
         new _$GS3ObjectInput._(
             bucket: BuiltValueNullFieldError.checkNotNull(
-                bucket, 'GS3ObjectInput', 'bucket'),
+                bucket, r'GS3ObjectInput', 'bucket'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'GS3ObjectInput', 'region'),
+                region, r'GS3ObjectInput', 'region'),
             key: BuiltValueNullFieldError.checkNotNull(
-                key, 'GS3ObjectInput', 'key'),
+                key, r'GS3ObjectInput', 'key'),
             cognitoId: cognitoId,
             accessLevel: accessLevel);
     replace(_$result);
@@ -6427,12 +6471,12 @@ class _$GUpdateCommentInput extends GUpdateCommentInput {
 
   factory _$GUpdateCommentInput(
           [void Function(GUpdateCommentInputBuilder)? updates]) =>
-      (new GUpdateCommentInputBuilder()..update(updates)).build();
+      (new GUpdateCommentInputBuilder()..update(updates))._build();
 
   _$GUpdateCommentInput._(
       {required this.id, this.habitId, this.owner, this.comment})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, 'GUpdateCommentInput', 'id');
+    BuiltValueNullFieldError.checkNotNull(id, r'GUpdateCommentInput', 'id');
   }
 
   @override
@@ -6463,7 +6507,7 @@ class _$GUpdateCommentInput extends GUpdateCommentInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateCommentInput')
+    return (newBuiltValueToStringHelper(r'GUpdateCommentInput')
           ..add('id', id)
           ..add('habitId', habitId)
           ..add('owner', owner)
@@ -6518,11 +6562,13 @@ class GUpdateCommentInputBuilder
   }
 
   @override
-  _$GUpdateCommentInput build() {
+  GUpdateCommentInput build() => _build();
+
+  _$GUpdateCommentInput _build() {
     final _$result = _$v ??
         new _$GUpdateCommentInput._(
             id: BuiltValueNullFieldError.checkNotNull(
-                id, 'GUpdateCommentInput', 'id'),
+                id, r'GUpdateCommentInput', 'id'),
             habitId: habitId,
             owner: owner,
             comment: comment);
@@ -6549,7 +6595,7 @@ class _$GUpdateHabitInput extends GUpdateHabitInput {
 
   factory _$GUpdateHabitInput(
           [void Function(GUpdateHabitInputBuilder)? updates]) =>
-      (new GUpdateHabitInputBuilder()..update(updates)).build();
+      (new GUpdateHabitInputBuilder()..update(updates))._build();
 
   _$GUpdateHabitInput._(
       {required this.id,
@@ -6560,7 +6606,7 @@ class _$GUpdateHabitInput extends GUpdateHabitInput {
       this.downs,
       this.owner})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, 'GUpdateHabitInput', 'id');
+    BuiltValueNullFieldError.checkNotNull(id, r'GUpdateHabitInput', 'id');
   }
 
   @override
@@ -6600,7 +6646,7 @@ class _$GUpdateHabitInput extends GUpdateHabitInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateHabitInput')
+    return (newBuiltValueToStringHelper(r'GUpdateHabitInput')
           ..add('id', id)
           ..add('tagline', tagline)
           ..add('category', category)
@@ -6673,11 +6719,13 @@ class GUpdateHabitInputBuilder
   }
 
   @override
-  _$GUpdateHabitInput build() {
+  GUpdateHabitInput build() => _build();
+
+  _$GUpdateHabitInput _build() {
     final _$result = _$v ??
         new _$GUpdateHabitInput._(
             id: BuiltValueNullFieldError.checkNotNull(
-                id, 'GUpdateHabitInput', 'id'),
+                id, r'GUpdateHabitInput', 'id'),
             tagline: tagline,
             category: category,
             details: details,
@@ -6705,7 +6753,7 @@ class _$GUpdateUserInput extends GUpdateUserInput {
 
   factory _$GUpdateUserInput(
           [void Function(GUpdateUserInputBuilder)? updates]) =>
-      (new GUpdateUserInputBuilder()..update(updates)).build();
+      (new GUpdateUserInputBuilder()..update(updates))._build();
 
   _$GUpdateUserInput._(
       {required this.username,
@@ -6716,7 +6764,7 @@ class _$GUpdateUserInput extends GUpdateUserInput {
       this.downvotedHabits})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        username, 'GUpdateUserInput', 'username');
+        username, r'GUpdateUserInput', 'username');
   }
 
   @override
@@ -6753,7 +6801,7 @@ class _$GUpdateUserInput extends GUpdateUserInput {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GUpdateUserInput')
+    return (newBuiltValueToStringHelper(r'GUpdateUserInput')
           ..add('username', username)
           ..add('displayUsername', displayUsername)
           ..add('name', name)
@@ -6826,13 +6874,15 @@ class GUpdateUserInputBuilder
   }
 
   @override
-  _$GUpdateUserInput build() {
+  GUpdateUserInput build() => _build();
+
+  _$GUpdateUserInput _build() {
     _$GUpdateUserInput _$result;
     try {
       _$result = _$v ??
           new _$GUpdateUserInput._(
               username: BuiltValueNullFieldError.checkNotNull(
-                  username, 'GUpdateUserInput', 'username'),
+                  username, r'GUpdateUserInput', 'username'),
               displayUsername: displayUsername,
               name: name,
               avatar: _avatar?.build(),
@@ -6849,7 +6899,7 @@ class GUpdateUserInputBuilder
         _downvotedHabits?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'GUpdateUserInput', _$failedField, e.toString());
+            r'GUpdateUserInput', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -6858,4 +6908,4 @@ class GUpdateUserInputBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -10,7 +10,7 @@ import 'package:habitr/widgets/username_form_field/username_form_field.dart';
 import 'package:provider/provider.dart';
 
 class AddImageScreen extends StatelessWidget {
-  const AddImageScreen({Key? key}) : super(key: key);
+  const AddImageScreen({super.key});
 
   static const page = MaterialPage<void>(child: AddImageScreen());
 
@@ -38,12 +38,9 @@ class AddImageScreen extends StatelessWidget {
 }
 
 class _AddImageView extends StatelessWidget {
-  final AddImageViewModel viewModel;
+  const _AddImageView(this.viewModel);
 
-  const _AddImageView(
-    this.viewModel, {
-    Key? key,
-  }) : super(key: key);
+  final AddImageViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +52,7 @@ class _AddImageView extends StatelessWidget {
         body: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Center(
                 child: ConstrainedBox(
                   constraints: BoxConstraints.tightFor(
@@ -115,7 +112,7 @@ class _AddImageView extends StatelessWidget {
               ),
             ),
             if (viewModel.isBusy)
-              Container(
+              DecoratedBox(
                 decoration: BoxDecoration(
                   color: Colors.grey[200]!.withOpacity(0.8),
                 ),

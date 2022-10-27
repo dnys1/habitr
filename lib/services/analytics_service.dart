@@ -1,11 +1,10 @@
-import 'package:amplify_analytics_pinpoint/amplify_analytics_pinpoint.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:habitr/services/preferences_service.dart';
 
 abstract class AnalyticsService {
-  static const analyticsEnabledKey = 'analytics:enabled';
-
   const AnalyticsService();
+
+  static const analyticsEnabledKey = 'analytics:enabled';
 
   Future<void> init() async {}
   Future<void> recordEvent(
@@ -17,11 +16,11 @@ abstract class AnalyticsService {
 }
 
 class AmplifyAnalyticsService extends AnalyticsService {
-  final PreferencesService _preferencesService;
-
   const AmplifyAnalyticsService({
     required PreferencesService preferencesService,
   }) : _preferencesService = preferencesService;
+
+  final PreferencesService _preferencesService;
 
   @override
   Future<void> init() async {
@@ -39,9 +38,9 @@ class AmplifyAnalyticsService extends AnalyticsService {
     Map<String, dynamic> properties = const <String, dynamic>{},
   }) async {
     final event = AnalyticsEvent(name);
-    for (var entry in properties.entries) {
-      var key = entry.key;
-      dynamic value = entry.value;
+    for (final entry in properties.entries) {
+      final key = entry.key;
+      final dynamic value = entry.value;
       switch (value.runtimeType) {
         case bool:
           event.properties.addBoolProperty(key, value as bool);
@@ -63,14 +62,18 @@ class AmplifyAnalyticsService extends AnalyticsService {
   @override
   Future<void> disable() async {
     await _preferencesService.setBool(
-        AnalyticsService.analyticsEnabledKey, false);
+      AnalyticsService.analyticsEnabledKey,
+      false,
+    );
     return Amplify.Analytics.disable();
   }
 
   @override
   Future<void> enable() async {
     await _preferencesService.setBool(
-        AnalyticsService.analyticsEnabledKey, true);
+      AnalyticsService.analyticsEnabledKey,
+      true,
+    );
     return Amplify.Analytics.enable();
   }
 }
