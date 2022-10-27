@@ -18,30 +18,33 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 0.1.0
 
 environment:
-  sdk: ">=2.14.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
-  amplify_analytics_pinpoint: ^0.4.0
-  amplify_api: ^0.4.0
-  amplify_auth_cognito: ^0.4.0
-  amplify_flutter: ^0.4.0
-  amplify_storage_s3: ^0.4.0
+  amplify_analytics_pinpoint: ^1.0.0-0
+  amplify_api: ^1.0.0-0
+  amplify_auth_cognito: ^1.0.0-0
+  amplify_flutter: ^1.0.0-0
+  amplify_storage_s3: ^1.0.0-0
+  bloc: ^8.1.0
+  bloc_concurrency: ^0.2.0
   cached_network_image: ^3.0.0
   cupertino_icons: ^1.0.2
   date_format: ^2.0.2
   equatable: ^2.0.2
   flutter:
     sdk: flutter
-  flutter_bloc: ^7.0.0
-  google_fonts: ^2.1.0
-  gql: ^0.13.1-0
-  gql_exec: ^0.4.1-0
-  gql_http_link: ^0.4.3-0
+  flutter_bloc: ^8.1.1
+  google_fonts: ^3.0.1
+  gql: ^0.14.0
+  gql_exec: ^0.4.1
+  gql_http_link: ^0.4.4
   habitr_models:
     path: models
   image_picker: ^0.8.0
   infinite_scroll_pagination: ^3.0.1+1
-  json_annotation: ^4.4.0
+  json_annotation: ^4.7.0
+  meta: ^1.8.0
   provider: ^6.0.2
   shared_preferences: ^2.0.6
   stream_transform: ^2.0.0
@@ -49,13 +52,13 @@ dependencies:
   uuid: ^3.0.4
 
 dev_dependencies:
-  amplify_lints: ^1.0.0
+  amplify_lints: ^2.0.1
   args: ^2.1.1
   build_runner: ^2.0.4
   flutter_lorem: ^2.0.0
   flutter_test:
     sdk: flutter
-  json_serializable: ^6.1.0
+  json_serializable: ^6.5.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
