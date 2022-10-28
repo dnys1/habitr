@@ -124,7 +124,7 @@ class _MyAppState extends State<MyApp> {
         child: Builder(
           builder: (context) {
             return MaterialApp(
-              title: 'Flutter Demo',
+              title: 'Habitr',
               theme: ThemeData(
                 primarySwatch: Colors.deepPurple,
                 brightness: Provider.of<ThemeService>(context).isDarkModeEnabled

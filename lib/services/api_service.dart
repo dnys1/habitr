@@ -64,6 +64,12 @@ abstract class ApiService {
   /// Callers must ensure they close the stream upon logout.
   Stream<VoteResult> get voteResults;
 
+  /// Streams the creation and update of habits.
+  Stream<Habit> get habitUpdates;
+
+  /// Streams the creation and update of comments.
+  Stream<Comment> get commentUpdates;
+
   /// Returns true if the given [username] is taken.
   Future<bool> usernameExists(String username);
 
@@ -83,6 +89,8 @@ class AmplifyApiService
     with AWSDebuggable, AWSLoggerMixin
     implements ApiService {
   Stream<VoteResult>? _voteResultStream;
+  Stream<Habit>? _habitStream;
+  Stream<Comment>? _commentStream;
 
   @override
   Stream<VoteResult> get voteResults {
@@ -111,6 +119,114 @@ class AmplifyApiService
         })
         .whereType<VoteResult>()
         .asBroadcastStream(onCancel: (_) => _voteResultStream = null);
+  }
+
+  @override
+  Stream<Habit> get habitUpdates {
+    const onCreateHabitName = 'onCreateHabit';
+    const onCreateHabit = ast.DocumentNode(
+      definitions: [
+        AllCommentFields,
+        AllHabitFields,
+        OnCreateHabit,
+      ],
+    );
+    const onUpdateHabitName = 'onUpdateHabit';
+    const onUpdateHabit = ast.DocumentNode(
+      definitions: [
+        AllCommentFields,
+        AllHabitFields,
+        OnUpdateHabit,
+      ],
+    );
+
+    final onCreateStream = Amplify.API
+        .subscribe<Habit>(
+      GraphQLRequest(
+        document: gql.printNode(onCreateHabit),
+        decodePath: onCreateHabitName,
+        modelType: Habit.classType,
+      ),
+      onEstablished: () => logger.debug(
+        'onCreateHabit subscription established',
+      ),
+    )
+        .map((event) {
+      logger.info('Got event: ${event.data}, ${event.errors}');
+      return event.data;
+    }).whereType<Habit>();
+    final onUpdateStream = Amplify.API
+        .subscribe<Habit>(
+      GraphQLRequest(
+        document: gql.printNode(onUpdateHabit),
+        decodePath: onUpdateHabitName,
+        modelType: Habit.classType,
+      ),
+      onEstablished: () => logger.debug(
+        'onUpdateHabit subscription established',
+      ),
+    )
+        .map((event) {
+      logger.info('Got event: ${event.data}, ${event.errors}');
+      return event.data;
+    }).whereType<Habit>();
+
+    return _habitStream ??= onCreateStream
+        .merge(onUpdateStream)
+        .asBroadcastStream(onCancel: (_) => _habitStream = null);
+  }
+
+  @override
+  Stream<Comment> get commentUpdates {
+    const onCreateCommentName = 'onCreateComment';
+    const onCreateComment = ast.DocumentNode(
+      definitions: [
+        AllCommentFields,
+        OnCreateComment,
+      ],
+    );
+    const onUpdateCommentName = 'onUpdateComment';
+    const onUpdateComment = ast.DocumentNode(
+      definitions: [
+        AllCommentFields,
+        OnUpdateComment,
+      ],
+    );
+
+    final onCreateStream = Amplify.API
+        .subscribe<Comment>(
+      GraphQLRequest(
+        document: gql.printNode(onCreateComment),
+        decodePath: onCreateCommentName,
+        modelType: Comment.classType,
+      ),
+      onEstablished: () => logger.debug(
+        'onCreateComment subscription established',
+      ),
+    )
+        .map((event) {
+      logger.info('Got event: ${event.data}, ${event.errors}');
+      return event.data;
+    }).whereType<Comment>();
+    final onUpdateStream = Amplify.API
+        .subscribe<Comment>(
+      GraphQLRequest(
+        document: gql.printNode(onUpdateComment),
+        decodePath: onUpdateCommentName,
+        modelType: Comment.classType,
+      ),
+      onEstablished: () => logger.debug(
+        'onUpdateComment subscription established',
+      ),
+    )
+        .map((event) {
+      logger.info('Got event: ${event.data}, ${event.errors}');
+      return event.data;
+    }).whereType<Comment>();
+
+    return _commentStream ??= onCreateStream
+        .merge(onUpdateStream)
+        .asBroadcastStream(onCancel: (_) => _commentStream = null);
   }
 
   Future<Map<String, dynamic>?> _runQuery(

@@ -20,6 +20,14 @@ Serializer<GGetCommentVars> _$gGetCommentVarsSerializer =
     new _$GGetCommentVarsSerializer();
 Serializer<GSubscribeToUserVars> _$gSubscribeToUserVarsSerializer =
     new _$GSubscribeToUserVarsSerializer();
+Serializer<GOnCreateCommentVars> _$gOnCreateCommentVarsSerializer =
+    new _$GOnCreateCommentVarsSerializer();
+Serializer<GOnUpdateCommentVars> _$gOnUpdateCommentVarsSerializer =
+    new _$GOnUpdateCommentVarsSerializer();
+Serializer<GOnCreateHabitVars> _$gOnCreateHabitVarsSerializer =
+    new _$GOnCreateHabitVarsSerializer();
+Serializer<GOnUpdateHabitVars> _$gOnUpdateHabitVarsSerializer =
+    new _$GOnUpdateHabitVarsSerializer();
 Serializer<GCreateUserVars> _$gCreateUserVarsSerializer =
     new _$GCreateUserVarsSerializer();
 Serializer<GCreateCommentVars> _$gCreateCommentVarsSerializer =
@@ -374,6 +382,100 @@ class _$GSubscribeToUserVarsSerializer
     }
 
     return result.build();
+  }
+}
+
+class _$GOnCreateCommentVarsSerializer
+    implements StructuredSerializer<GOnCreateCommentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentVars,
+    _$GOnCreateCommentVars
+  ];
+  @override
+  final String wireName = 'GOnCreateCommentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateCommentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GOnCreateCommentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GOnCreateCommentVarsBuilder().build();
+  }
+}
+
+class _$GOnUpdateCommentVarsSerializer
+    implements StructuredSerializer<GOnUpdateCommentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentVars,
+    _$GOnUpdateCommentVars
+  ];
+  @override
+  final String wireName = 'GOnUpdateCommentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateCommentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GOnUpdateCommentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GOnUpdateCommentVarsBuilder().build();
+  }
+}
+
+class _$GOnCreateHabitVarsSerializer
+    implements StructuredSerializer<GOnCreateHabitVars> {
+  @override
+  final Iterable<Type> types = const [GOnCreateHabitVars, _$GOnCreateHabitVars];
+  @override
+  final String wireName = 'GOnCreateHabitVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateHabitVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GOnCreateHabitVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GOnCreateHabitVarsBuilder().build();
+  }
+}
+
+class _$GOnUpdateHabitVarsSerializer
+    implements StructuredSerializer<GOnUpdateHabitVars> {
+  @override
+  final Iterable<Type> types = const [GOnUpdateHabitVars, _$GOnUpdateHabitVars];
+  @override
+  final String wireName = 'GOnUpdateHabitVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateHabitVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GOnUpdateHabitVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GOnUpdateHabitVarsBuilder().build();
   }
 }
 
@@ -1583,6 +1685,246 @@ class GSubscribeToUserVarsBuilder
         new _$GSubscribeToUserVars._(
             username: BuiltValueNullFieldError.checkNotNull(
                 username, r'GSubscribeToUserVars', 'username'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateCommentVars extends GOnCreateCommentVars {
+  factory _$GOnCreateCommentVars(
+          [void Function(GOnCreateCommentVarsBuilder)? updates]) =>
+      (new GOnCreateCommentVarsBuilder()..update(updates))._build();
+
+  _$GOnCreateCommentVars._() : super._();
+
+  @override
+  GOnCreateCommentVars rebuild(
+          void Function(GOnCreateCommentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentVarsBuilder toBuilder() =>
+      new GOnCreateCommentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 469751187;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GOnCreateCommentVars').toString();
+  }
+}
+
+class GOnCreateCommentVarsBuilder
+    implements Builder<GOnCreateCommentVars, GOnCreateCommentVarsBuilder> {
+  _$GOnCreateCommentVars? _$v;
+
+  GOnCreateCommentVarsBuilder();
+
+  @override
+  void replace(GOnCreateCommentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentVars;
+  }
+
+  @override
+  void update(void Function(GOnCreateCommentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentVars build() => _build();
+
+  _$GOnCreateCommentVars _build() {
+    final _$result = _$v ?? new _$GOnCreateCommentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentVars extends GOnUpdateCommentVars {
+  factory _$GOnUpdateCommentVars(
+          [void Function(GOnUpdateCommentVarsBuilder)? updates]) =>
+      (new GOnUpdateCommentVarsBuilder()..update(updates))._build();
+
+  _$GOnUpdateCommentVars._() : super._();
+
+  @override
+  GOnUpdateCommentVars rebuild(
+          void Function(GOnUpdateCommentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentVarsBuilder toBuilder() =>
+      new GOnUpdateCommentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 1063762449;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GOnUpdateCommentVars').toString();
+  }
+}
+
+class GOnUpdateCommentVarsBuilder
+    implements Builder<GOnUpdateCommentVars, GOnUpdateCommentVarsBuilder> {
+  _$GOnUpdateCommentVars? _$v;
+
+  GOnUpdateCommentVarsBuilder();
+
+  @override
+  void replace(GOnUpdateCommentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentVars;
+  }
+
+  @override
+  void update(void Function(GOnUpdateCommentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentVars build() => _build();
+
+  _$GOnUpdateCommentVars _build() {
+    final _$result = _$v ?? new _$GOnUpdateCommentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitVars extends GOnCreateHabitVars {
+  factory _$GOnCreateHabitVars(
+          [void Function(GOnCreateHabitVarsBuilder)? updates]) =>
+      (new GOnCreateHabitVarsBuilder()..update(updates))._build();
+
+  _$GOnCreateHabitVars._() : super._();
+
+  @override
+  GOnCreateHabitVars rebuild(
+          void Function(GOnCreateHabitVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitVarsBuilder toBuilder() =>
+      new GOnCreateHabitVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitVars;
+  }
+
+  @override
+  int get hashCode {
+    return 420926477;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GOnCreateHabitVars').toString();
+  }
+}
+
+class GOnCreateHabitVarsBuilder
+    implements Builder<GOnCreateHabitVars, GOnCreateHabitVarsBuilder> {
+  _$GOnCreateHabitVars? _$v;
+
+  GOnCreateHabitVarsBuilder();
+
+  @override
+  void replace(GOnCreateHabitVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitVars;
+  }
+
+  @override
+  void update(void Function(GOnCreateHabitVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitVars build() => _build();
+
+  _$GOnCreateHabitVars _build() {
+    final _$result = _$v ?? new _$GOnCreateHabitVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitVars extends GOnUpdateHabitVars {
+  factory _$GOnUpdateHabitVars(
+          [void Function(GOnUpdateHabitVarsBuilder)? updates]) =>
+      (new GOnUpdateHabitVarsBuilder()..update(updates))._build();
+
+  _$GOnUpdateHabitVars._() : super._();
+
+  @override
+  GOnUpdateHabitVars rebuild(
+          void Function(GOnUpdateHabitVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitVarsBuilder toBuilder() =>
+      new GOnUpdateHabitVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitVars;
+  }
+
+  @override
+  int get hashCode {
+    return 695664335;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GOnUpdateHabitVars').toString();
+  }
+}
+
+class GOnUpdateHabitVarsBuilder
+    implements Builder<GOnUpdateHabitVars, GOnUpdateHabitVarsBuilder> {
+  _$GOnUpdateHabitVars? _$v;
+
+  GOnUpdateHabitVarsBuilder();
+
+  @override
+  void replace(GOnUpdateHabitVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitVars;
+  }
+
+  @override
+  void update(void Function(GOnUpdateHabitVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitVars build() => _build();
+
+  _$GOnUpdateHabitVars _build() {
+    final _$result = _$v ?? new _$GOnUpdateHabitVars._();
     replace(_$result);
     return _$result;
   }

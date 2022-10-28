@@ -392,6 +392,49 @@ const AllCommentFields = _i1.FragmentDefinitionNode(
           directives: [],
           selectionSet: null,
         ),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'avatar'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'bucket'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'region'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'key'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'accessLevel'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'cognitoId'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ]),
+        ),
       ]),
     ),
     _i1.FieldNode(
@@ -865,6 +908,86 @@ const SubscribeToUser = _i1.OperationDefinitionNode(
       selectionSet: _i1.SelectionSetNode(selections: [
         _i1.FragmentSpreadNode(
           name: _i1.NameNode(value: 'AllPrivateUserFields'),
+          directives: [],
+        )
+      ]),
+    )
+  ]),
+);
+const OnCreateComment = _i1.OperationDefinitionNode(
+  type: _i1.OperationType.subscription,
+  name: _i1.NameNode(value: 'OnCreateComment'),
+  variableDefinitions: [],
+  directives: [],
+  selectionSet: _i1.SelectionSetNode(selections: [
+    _i1.FieldNode(
+      name: _i1.NameNode(value: 'onCreateComment'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: _i1.SelectionSetNode(selections: [
+        _i1.FragmentSpreadNode(
+          name: _i1.NameNode(value: 'AllCommentFields'),
+          directives: [],
+        )
+      ]),
+    )
+  ]),
+);
+const OnUpdateComment = _i1.OperationDefinitionNode(
+  type: _i1.OperationType.subscription,
+  name: _i1.NameNode(value: 'OnUpdateComment'),
+  variableDefinitions: [],
+  directives: [],
+  selectionSet: _i1.SelectionSetNode(selections: [
+    _i1.FieldNode(
+      name: _i1.NameNode(value: 'onUpdateComment'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: _i1.SelectionSetNode(selections: [
+        _i1.FragmentSpreadNode(
+          name: _i1.NameNode(value: 'AllCommentFields'),
+          directives: [],
+        )
+      ]),
+    )
+  ]),
+);
+const OnCreateHabit = _i1.OperationDefinitionNode(
+  type: _i1.OperationType.subscription,
+  name: _i1.NameNode(value: 'OnCreateHabit'),
+  variableDefinitions: [],
+  directives: [],
+  selectionSet: _i1.SelectionSetNode(selections: [
+    _i1.FieldNode(
+      name: _i1.NameNode(value: 'onCreateHabit'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: _i1.SelectionSetNode(selections: [
+        _i1.FragmentSpreadNode(
+          name: _i1.NameNode(value: 'AllHabitFields'),
+          directives: [],
+        )
+      ]),
+    )
+  ]),
+);
+const OnUpdateHabit = _i1.OperationDefinitionNode(
+  type: _i1.OperationType.subscription,
+  name: _i1.NameNode(value: 'OnUpdateHabit'),
+  variableDefinitions: [],
+  directives: [],
+  selectionSet: _i1.SelectionSetNode(selections: [
+    _i1.FieldNode(
+      name: _i1.NameNode(value: 'onUpdateHabit'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: _i1.SelectionSetNode(selections: [
+        _i1.FragmentSpreadNode(
+          name: _i1.NameNode(value: 'AllHabitFields'),
           directives: [],
         )
       ]),
@@ -1579,6 +1702,10 @@ const document = _i1.DocumentNode(definitions: [
   GetSelf,
   GetComment,
   SubscribeToUser,
+  OnCreateComment,
+  OnUpdateComment,
+  OnCreateHabit,
+  OnUpdateHabit,
   CreateUser,
   CreateComment,
   CreateHabit,

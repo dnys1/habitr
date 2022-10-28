@@ -61,6 +61,9 @@ class HabitRepositoryImpl extends HabitRepository {
         }
       }),
     );
+    addSubscription(
+      _apiService.habitUpdates.listen(_updateHabit),
+    );
 
     unawaited(_setupVoteResultSubscription());
   }

@@ -223,6 +223,8 @@ abstract class GListHabitsData_listHabits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GListHabitsData_listHabits_items_comments_items_by_avatar? get avatar;
   static Serializer<GListHabitsData_listHabits_items_comments_items_by>
       get serializer =>
           _$gListHabitsDataListHabitsItemsCommentsItemsBySerializer;
@@ -235,6 +237,52 @@ abstract class GListHabitsData_listHabits_items_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GListHabitsData_listHabits_items_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GListHabitsData_listHabits_items_comments_items_by_avatar
+    implements
+        Built<GListHabitsData_listHabits_items_comments_items_by_avatar,
+            GListHabitsData_listHabits_items_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GListHabitsData_listHabits_items_comments_items_by_avatar._();
+
+  factory GListHabitsData_listHabits_items_comments_items_by_avatar(
+      [Function(
+              GListHabitsData_listHabits_items_comments_items_by_avatarBuilder
+                  b)
+          updates]) = _$GListHabitsData_listHabits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GListHabitsData_listHabits_items_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GListHabitsData_listHabits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gListHabitsDataListHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GListHabitsData_listHabits_items_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GListHabitsData_listHabits_items_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GListHabitsData_listHabits_items_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -625,6 +673,9 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_b
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar?
+      get avatar;
   static Serializer<
           GListHabitsByCategoryData_habitsByCategory_items_comments_items_by>
       get serializer =>
@@ -638,6 +689,57 @@ abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_b
   static GListHabitsByCategoryData_habitsByCategory_items_comments_items_by?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
+                .serializer,
+            json,
+          );
+}
+
+abstract class GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+    implements
+        Built<
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar,
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar._();
+
+  factory GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar(
+          [Function(
+                  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder
+                      b)
+              updates]) =
+      _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<
+          GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar>
+      get serializer =>
+          _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
                 .serializer,
             json,
           );
@@ -981,6 +1083,8 @@ abstract class GGetHabitData_getHabit_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GGetHabitData_getHabit_comments_items_by_avatar? get avatar;
   static Serializer<GGetHabitData_getHabit_comments_items_by> get serializer =>
       _$gGetHabitDataGetHabitCommentsItemsBySerializer;
   @override
@@ -992,6 +1096,49 @@ abstract class GGetHabitData_getHabit_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGetHabitData_getHabit_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GGetHabitData_getHabit_comments_items_by_avatar
+    implements
+        Built<GGetHabitData_getHabit_comments_items_by_avatar,
+            GGetHabitData_getHabit_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GGetHabitData_getHabit_comments_items_by_avatar._();
+
+  factory GGetHabitData_getHabit_comments_items_by_avatar(
+      [Function(GGetHabitData_getHabit_comments_items_by_avatarBuilder b)
+          updates]) = _$GGetHabitData_getHabit_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GGetHabitData_getHabit_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GGetHabitData_getHabit_comments_items_by_avatar>
+      get serializer => _$gGetHabitDataGetHabitCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetHabitData_getHabit_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetHabitData_getHabit_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetHabitData_getHabit_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -1344,6 +1491,8 @@ abstract class GGetUserData_getUser_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GGetUserData_getUser_comments_items_by_avatar? get avatar;
   static Serializer<GGetUserData_getUser_comments_items_by> get serializer =>
       _$gGetUserDataGetUserCommentsItemsBySerializer;
   @override
@@ -1355,6 +1504,49 @@ abstract class GGetUserData_getUser_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGetUserData_getUser_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GGetUserData_getUser_comments_items_by_avatar
+    implements
+        Built<GGetUserData_getUser_comments_items_by_avatar,
+            GGetUserData_getUser_comments_items_by_avatarBuilder>,
+        GAllPublicUserFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GGetUserData_getUser_comments_items_by_avatar._();
+
+  factory GGetUserData_getUser_comments_items_by_avatar(
+      [Function(GGetUserData_getUser_comments_items_by_avatarBuilder b)
+          updates]) = _$GGetUserData_getUser_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GGetUserData_getUser_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GGetUserData_getUser_comments_items_by_avatar>
+      get serializer => _$gGetUserDataGetUserCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetUserData_getUser_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetUserData_getUser_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetUserData_getUser_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -1688,6 +1880,8 @@ abstract class GGetUserData_getUser_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GGetUserData_getUser_habits_items_comments_items_by_avatar? get avatar;
   static Serializer<GGetUserData_getUser_habits_items_comments_items_by>
       get serializer =>
           _$gGetUserDataGetUserHabitsItemsCommentsItemsBySerializer;
@@ -1700,6 +1894,54 @@ abstract class GGetUserData_getUser_habits_items_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGetUserData_getUser_habits_items_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GGetUserData_getUser_habits_items_comments_items_by_avatar
+    implements
+        Built<GGetUserData_getUser_habits_items_comments_items_by_avatar,
+            GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder>,
+        GAllPublicUserFields_habits_items_comments_items_by_avatar,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GGetUserData_getUser_habits_items_comments_items_by_avatar._();
+
+  factory GGetUserData_getUser_habits_items_comments_items_by_avatar(
+      [Function(
+              GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder
+                  b)
+          updates]) = _$GGetUserData_getUser_habits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GGetUserData_getUser_habits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gGetUserDataGetUserHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetUserData_getUser_habits_items_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetUserData_getUser_habits_items_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetUserData_getUser_habits_items_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -2071,6 +2313,8 @@ abstract class GGetSelfData_getUser_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GGetSelfData_getUser_comments_items_by_avatar? get avatar;
   static Serializer<GGetSelfData_getUser_comments_items_by> get serializer =>
       _$gGetSelfDataGetUserCommentsItemsBySerializer;
   @override
@@ -2082,6 +2326,49 @@ abstract class GGetSelfData_getUser_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGetSelfData_getUser_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GGetSelfData_getUser_comments_items_by_avatar
+    implements
+        Built<GGetSelfData_getUser_comments_items_by_avatar,
+            GGetSelfData_getUser_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GGetSelfData_getUser_comments_items_by_avatar._();
+
+  factory GGetSelfData_getUser_comments_items_by_avatar(
+      [Function(GGetSelfData_getUser_comments_items_by_avatarBuilder b)
+          updates]) = _$GGetSelfData_getUser_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GGetSelfData_getUser_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GGetSelfData_getUser_comments_items_by_avatar>
+      get serializer => _$gGetSelfDataGetUserCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetSelfData_getUser_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetSelfData_getUser_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetSelfData_getUser_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -2415,6 +2702,8 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GGetSelfData_getUser_habits_items_comments_items_by_avatar? get avatar;
   static Serializer<GGetSelfData_getUser_habits_items_comments_items_by>
       get serializer =>
           _$gGetSelfDataGetUserHabitsItemsCommentsItemsBySerializer;
@@ -2427,6 +2716,54 @@ abstract class GGetSelfData_getUser_habits_items_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGetSelfData_getUser_habits_items_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GGetSelfData_getUser_habits_items_comments_items_by_avatar
+    implements
+        Built<GGetSelfData_getUser_habits_items_comments_items_by_avatar,
+            GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_habits_items_comments_items_by_avatar,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GGetSelfData_getUser_habits_items_comments_items_by_avatar._();
+
+  factory GGetSelfData_getUser_habits_items_comments_items_by_avatar(
+      [Function(
+              GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder
+                  b)
+          updates]) = _$GGetSelfData_getUser_habits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GGetSelfData_getUser_habits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gGetSelfDataGetUserHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetSelfData_getUser_habits_items_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetSelfData_getUser_habits_items_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetSelfData_getUser_habits_items_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -2677,6 +3014,8 @@ abstract class GGetCommentData_getComment_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GGetCommentData_getComment_by_avatar? get avatar;
   static Serializer<GGetCommentData_getComment_by> get serializer =>
       _$gGetCommentDataGetCommentBySerializer;
   @override
@@ -2687,6 +3026,48 @@ abstract class GGetCommentData_getComment_by
   static GGetCommentData_getComment_by? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGetCommentData_getComment_by.serializer,
+        json,
+      );
+}
+
+abstract class GGetCommentData_getComment_by_avatar
+    implements
+        Built<GGetCommentData_getComment_by_avatar,
+            GGetCommentData_getComment_by_avatarBuilder>,
+        GAllCommentFields_by_avatar {
+  GGetCommentData_getComment_by_avatar._();
+
+  factory GGetCommentData_getComment_by_avatar(
+          [Function(GGetCommentData_getComment_by_avatarBuilder b) updates]) =
+      _$GGetCommentData_getComment_by_avatar;
+
+  static void _initializeBuilder(
+          GGetCommentData_getComment_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GGetCommentData_getComment_by_avatar> get serializer =>
+      _$gGetCommentDataGetCommentByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetCommentData_getComment_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetCommentData_getComment_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetCommentData_getComment_by_avatar.serializer,
         json,
       );
 }
@@ -3044,6 +3425,8 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatar? get avatar;
   static Serializer<GSubscribeToUserData_subscribeToUser_comments_items_by>
       get serializer =>
           _$gSubscribeToUserDataSubscribeToUserCommentsItemsBySerializer;
@@ -3058,6 +3441,56 @@ abstract class GSubscribeToUserData_subscribeToUser_comments_items_by
         GSubscribeToUserData_subscribeToUser_comments_items_by.serializer,
         json,
       );
+}
+
+abstract class GSubscribeToUserData_subscribeToUser_comments_items_by_avatar
+    implements
+        Built<GSubscribeToUserData_subscribeToUser_comments_items_by_avatar,
+            GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatar._();
+
+  factory GSubscribeToUserData_subscribeToUser_comments_items_by_avatar(
+          [Function(
+                  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder
+                      b)
+              updates]) =
+      _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<
+          GSubscribeToUserData_subscribeToUser_comments_items_by_avatar>
+      get serializer =>
+          _$gSubscribeToUserDataSubscribeToUserCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSubscribeToUserData_subscribeToUser_comments_items_by_avatar
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GSubscribeToUserData_subscribeToUser_comments_items_by_avatar?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GSubscribeToUserData_subscribeToUser_comments_items_by_avatar
+                .serializer,
+            json,
+          );
 }
 
 abstract class GSubscribeToUserData_subscribeToUser_comments_items_habit
@@ -3431,6 +3864,9 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar?
+      get avatar;
   static Serializer<
           GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by>
       get serializer =>
@@ -3444,6 +3880,58 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
   static GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
+                .serializer,
+            json,
+          );
+}
+
+abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+    implements
+        Built<
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar,
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_habits_items_comments_items_by_avatar,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar._();
+
+  factory GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar(
+          [Function(
+                  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder
+                      b)
+              updates]) =
+      _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<
+          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
                 .serializer,
             json,
           );
@@ -3612,6 +4100,1386 @@ abstract class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_
           );
 }
 
+abstract class GOnCreateCommentData
+    implements Built<GOnCreateCommentData, GOnCreateCommentDataBuilder> {
+  GOnCreateCommentData._();
+
+  factory GOnCreateCommentData(
+          [Function(GOnCreateCommentDataBuilder b) updates]) =
+      _$GOnCreateCommentData;
+
+  static void _initializeBuilder(GOnCreateCommentDataBuilder b) =>
+      b..G__typename = 'Subscription';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GOnCreateCommentData_onCreateComment? get onCreateComment;
+  static Serializer<GOnCreateCommentData> get serializer =>
+      _$gOnCreateCommentDataSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateCommentData.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateCommentData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateCommentData.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateCommentData_onCreateComment
+    implements
+        Built<GOnCreateCommentData_onCreateComment,
+            GOnCreateCommentData_onCreateCommentBuilder>,
+        GAllCommentFields {
+  GOnCreateCommentData_onCreateComment._();
+
+  factory GOnCreateCommentData_onCreateComment(
+          [Function(GOnCreateCommentData_onCreateCommentBuilder b) updates]) =
+      _$GOnCreateCommentData_onCreateComment;
+
+  static void _initializeBuilder(
+          GOnCreateCommentData_onCreateCommentBuilder b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  GOnCreateCommentData_onCreateComment_by? get by;
+  @override
+  String? get habitId;
+  @override
+  GOnCreateCommentData_onCreateComment_habit? get habit;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<GOnCreateCommentData_onCreateComment> get serializer =>
+      _$gOnCreateCommentDataOnCreateCommentSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateCommentData_onCreateComment.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateCommentData_onCreateComment? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateCommentData_onCreateComment.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateCommentData_onCreateComment_by
+    implements
+        Built<GOnCreateCommentData_onCreateComment_by,
+            GOnCreateCommentData_onCreateComment_byBuilder>,
+        GAllCommentFields_by {
+  GOnCreateCommentData_onCreateComment_by._();
+
+  factory GOnCreateCommentData_onCreateComment_by(
+      [Function(GOnCreateCommentData_onCreateComment_byBuilder b)
+          updates]) = _$GOnCreateCommentData_onCreateComment_by;
+
+  static void _initializeBuilder(
+          GOnCreateCommentData_onCreateComment_byBuilder b) =>
+      b..G__typename = 'User';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get username;
+  @override
+  String? get displayUsername;
+  @override
+  String? get name;
+  @override
+  GOnCreateCommentData_onCreateComment_by_avatar? get avatar;
+  static Serializer<GOnCreateCommentData_onCreateComment_by> get serializer =>
+      _$gOnCreateCommentDataOnCreateCommentBySerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateCommentData_onCreateComment_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateCommentData_onCreateComment_by? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateCommentData_onCreateComment_by.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateCommentData_onCreateComment_by_avatar
+    implements
+        Built<GOnCreateCommentData_onCreateComment_by_avatar,
+            GOnCreateCommentData_onCreateComment_by_avatarBuilder>,
+        GAllCommentFields_by_avatar {
+  GOnCreateCommentData_onCreateComment_by_avatar._();
+
+  factory GOnCreateCommentData_onCreateComment_by_avatar(
+      [Function(GOnCreateCommentData_onCreateComment_by_avatarBuilder b)
+          updates]) = _$GOnCreateCommentData_onCreateComment_by_avatar;
+
+  static void _initializeBuilder(
+          GOnCreateCommentData_onCreateComment_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GOnCreateCommentData_onCreateComment_by_avatar>
+      get serializer => _$gOnCreateCommentDataOnCreateCommentByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateCommentData_onCreateComment_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateCommentData_onCreateComment_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateCommentData_onCreateComment_by_avatar.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateCommentData_onCreateComment_habit
+    implements
+        Built<GOnCreateCommentData_onCreateComment_habit,
+            GOnCreateCommentData_onCreateComment_habitBuilder>,
+        GAllCommentFields_habit {
+  GOnCreateCommentData_onCreateComment_habit._();
+
+  factory GOnCreateCommentData_onCreateComment_habit(
+      [Function(GOnCreateCommentData_onCreateComment_habitBuilder b)
+          updates]) = _$GOnCreateCommentData_onCreateComment_habit;
+
+  static void _initializeBuilder(
+          GOnCreateCommentData_onCreateComment_habitBuilder b) =>
+      b..G__typename = 'Habit';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get tagline;
+  @override
+  _i2.GCategory get category;
+  @override
+  String? get details;
+  @override
+  String? get owner;
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments? get comments;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  @override
+  int? get ups;
+  @override
+  int? get downs;
+  static Serializer<GOnCreateCommentData_onCreateComment_habit>
+      get serializer => _$gOnCreateCommentDataOnCreateCommentHabitSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateCommentData_onCreateComment_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateCommentData_onCreateComment_habit? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateCommentData_onCreateComment_habit.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateCommentData_onCreateComment_habit_comments
+    implements
+        Built<GOnCreateCommentData_onCreateComment_habit_comments,
+            GOnCreateCommentData_onCreateComment_habit_commentsBuilder>,
+        GAllCommentFields_habit_comments {
+  GOnCreateCommentData_onCreateComment_habit_comments._();
+
+  factory GOnCreateCommentData_onCreateComment_habit_comments(
+      [Function(GOnCreateCommentData_onCreateComment_habit_commentsBuilder b)
+          updates]) = _$GOnCreateCommentData_onCreateComment_habit_comments;
+
+  static void _initializeBuilder(
+          GOnCreateCommentData_onCreateComment_habit_commentsBuilder b) =>
+      b..G__typename = 'ModelCommentConnection';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GOnCreateCommentData_onCreateComment_habit_comments_items>
+      get items;
+  static Serializer<GOnCreateCommentData_onCreateComment_habit_comments>
+      get serializer =>
+          _$gOnCreateCommentDataOnCreateCommentHabitCommentsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateCommentData_onCreateComment_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateCommentData_onCreateComment_habit_comments? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateCommentData_onCreateComment_habit_comments.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateCommentData_onCreateComment_habit_comments_items
+    implements
+        Built<GOnCreateCommentData_onCreateComment_habit_comments_items,
+            GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder>,
+        GAllCommentFields_habit_comments_items {
+  GOnCreateCommentData_onCreateComment_habit_comments_items._();
+
+  factory GOnCreateCommentData_onCreateComment_habit_comments_items(
+      [Function(
+              GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder
+                  b)
+          updates]) = _$GOnCreateCommentData_onCreateComment_habit_comments_items;
+
+  static void _initializeBuilder(
+          GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  String? get habitId;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<GOnCreateCommentData_onCreateComment_habit_comments_items>
+      get serializer =>
+          _$gOnCreateCommentDataOnCreateCommentHabitCommentsItemsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateCommentData_onCreateComment_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateCommentData_onCreateComment_habit_comments_items? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateCommentData_onCreateComment_habit_comments_items.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateCommentData
+    implements Built<GOnUpdateCommentData, GOnUpdateCommentDataBuilder> {
+  GOnUpdateCommentData._();
+
+  factory GOnUpdateCommentData(
+          [Function(GOnUpdateCommentDataBuilder b) updates]) =
+      _$GOnUpdateCommentData;
+
+  static void _initializeBuilder(GOnUpdateCommentDataBuilder b) =>
+      b..G__typename = 'Subscription';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GOnUpdateCommentData_onUpdateComment? get onUpdateComment;
+  static Serializer<GOnUpdateCommentData> get serializer =>
+      _$gOnUpdateCommentDataSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateCommentData.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateCommentData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateCommentData.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateCommentData_onUpdateComment
+    implements
+        Built<GOnUpdateCommentData_onUpdateComment,
+            GOnUpdateCommentData_onUpdateCommentBuilder>,
+        GAllCommentFields {
+  GOnUpdateCommentData_onUpdateComment._();
+
+  factory GOnUpdateCommentData_onUpdateComment(
+          [Function(GOnUpdateCommentData_onUpdateCommentBuilder b) updates]) =
+      _$GOnUpdateCommentData_onUpdateComment;
+
+  static void _initializeBuilder(
+          GOnUpdateCommentData_onUpdateCommentBuilder b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  GOnUpdateCommentData_onUpdateComment_by? get by;
+  @override
+  String? get habitId;
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit? get habit;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<GOnUpdateCommentData_onUpdateComment> get serializer =>
+      _$gOnUpdateCommentDataOnUpdateCommentSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateCommentData_onUpdateComment.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateCommentData_onUpdateComment? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateCommentData_onUpdateComment.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateCommentData_onUpdateComment_by
+    implements
+        Built<GOnUpdateCommentData_onUpdateComment_by,
+            GOnUpdateCommentData_onUpdateComment_byBuilder>,
+        GAllCommentFields_by {
+  GOnUpdateCommentData_onUpdateComment_by._();
+
+  factory GOnUpdateCommentData_onUpdateComment_by(
+      [Function(GOnUpdateCommentData_onUpdateComment_byBuilder b)
+          updates]) = _$GOnUpdateCommentData_onUpdateComment_by;
+
+  static void _initializeBuilder(
+          GOnUpdateCommentData_onUpdateComment_byBuilder b) =>
+      b..G__typename = 'User';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get username;
+  @override
+  String? get displayUsername;
+  @override
+  String? get name;
+  @override
+  GOnUpdateCommentData_onUpdateComment_by_avatar? get avatar;
+  static Serializer<GOnUpdateCommentData_onUpdateComment_by> get serializer =>
+      _$gOnUpdateCommentDataOnUpdateCommentBySerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateCommentData_onUpdateComment_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateCommentData_onUpdateComment_by? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateCommentData_onUpdateComment_by.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateCommentData_onUpdateComment_by_avatar
+    implements
+        Built<GOnUpdateCommentData_onUpdateComment_by_avatar,
+            GOnUpdateCommentData_onUpdateComment_by_avatarBuilder>,
+        GAllCommentFields_by_avatar {
+  GOnUpdateCommentData_onUpdateComment_by_avatar._();
+
+  factory GOnUpdateCommentData_onUpdateComment_by_avatar(
+      [Function(GOnUpdateCommentData_onUpdateComment_by_avatarBuilder b)
+          updates]) = _$GOnUpdateCommentData_onUpdateComment_by_avatar;
+
+  static void _initializeBuilder(
+          GOnUpdateCommentData_onUpdateComment_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GOnUpdateCommentData_onUpdateComment_by_avatar>
+      get serializer => _$gOnUpdateCommentDataOnUpdateCommentByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateCommentData_onUpdateComment_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateCommentData_onUpdateComment_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateCommentData_onUpdateComment_by_avatar.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateCommentData_onUpdateComment_habit
+    implements
+        Built<GOnUpdateCommentData_onUpdateComment_habit,
+            GOnUpdateCommentData_onUpdateComment_habitBuilder>,
+        GAllCommentFields_habit {
+  GOnUpdateCommentData_onUpdateComment_habit._();
+
+  factory GOnUpdateCommentData_onUpdateComment_habit(
+      [Function(GOnUpdateCommentData_onUpdateComment_habitBuilder b)
+          updates]) = _$GOnUpdateCommentData_onUpdateComment_habit;
+
+  static void _initializeBuilder(
+          GOnUpdateCommentData_onUpdateComment_habitBuilder b) =>
+      b..G__typename = 'Habit';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get tagline;
+  @override
+  _i2.GCategory get category;
+  @override
+  String? get details;
+  @override
+  String? get owner;
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments? get comments;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  @override
+  int? get ups;
+  @override
+  int? get downs;
+  static Serializer<GOnUpdateCommentData_onUpdateComment_habit>
+      get serializer => _$gOnUpdateCommentDataOnUpdateCommentHabitSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateCommentData_onUpdateComment_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateCommentData_onUpdateComment_habit? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateCommentData_onUpdateComment_habit.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateCommentData_onUpdateComment_habit_comments
+    implements
+        Built<GOnUpdateCommentData_onUpdateComment_habit_comments,
+            GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder>,
+        GAllCommentFields_habit_comments {
+  GOnUpdateCommentData_onUpdateComment_habit_comments._();
+
+  factory GOnUpdateCommentData_onUpdateComment_habit_comments(
+      [Function(GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder b)
+          updates]) = _$GOnUpdateCommentData_onUpdateComment_habit_comments;
+
+  static void _initializeBuilder(
+          GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder b) =>
+      b..G__typename = 'ModelCommentConnection';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GOnUpdateCommentData_onUpdateComment_habit_comments_items>
+      get items;
+  static Serializer<GOnUpdateCommentData_onUpdateComment_habit_comments>
+      get serializer =>
+          _$gOnUpdateCommentDataOnUpdateCommentHabitCommentsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateCommentData_onUpdateComment_habit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateCommentData_onUpdateComment_habit_comments? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateCommentData_onUpdateComment_habit_comments.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateCommentData_onUpdateComment_habit_comments_items
+    implements
+        Built<GOnUpdateCommentData_onUpdateComment_habit_comments_items,
+            GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder>,
+        GAllCommentFields_habit_comments_items {
+  GOnUpdateCommentData_onUpdateComment_habit_comments_items._();
+
+  factory GOnUpdateCommentData_onUpdateComment_habit_comments_items(
+      [Function(
+              GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder
+                  b)
+          updates]) = _$GOnUpdateCommentData_onUpdateComment_habit_comments_items;
+
+  static void _initializeBuilder(
+          GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  String? get habitId;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<GOnUpdateCommentData_onUpdateComment_habit_comments_items>
+      get serializer =>
+          _$gOnUpdateCommentDataOnUpdateCommentHabitCommentsItemsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateCommentData_onUpdateComment_habit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateCommentData_onUpdateComment_habit_comments_items? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateCommentData_onUpdateComment_habit_comments_items.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData
+    implements Built<GOnCreateHabitData, GOnCreateHabitDataBuilder> {
+  GOnCreateHabitData._();
+
+  factory GOnCreateHabitData([Function(GOnCreateHabitDataBuilder b) updates]) =
+      _$GOnCreateHabitData;
+
+  static void _initializeBuilder(GOnCreateHabitDataBuilder b) =>
+      b..G__typename = 'Subscription';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GOnCreateHabitData_onCreateHabit? get onCreateHabit;
+  static Serializer<GOnCreateHabitData> get serializer =>
+      _$gOnCreateHabitDataSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateHabitData.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit
+    implements
+        Built<GOnCreateHabitData_onCreateHabit,
+            GOnCreateHabitData_onCreateHabitBuilder>,
+        GAllHabitFields {
+  GOnCreateHabitData_onCreateHabit._();
+
+  factory GOnCreateHabitData_onCreateHabit(
+          [Function(GOnCreateHabitData_onCreateHabitBuilder b) updates]) =
+      _$GOnCreateHabitData_onCreateHabit;
+
+  static void _initializeBuilder(GOnCreateHabitData_onCreateHabitBuilder b) =>
+      b..G__typename = 'Habit';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get tagline;
+  @override
+  _i2.GCategory get category;
+  @override
+  String? get details;
+  @override
+  String? get owner;
+  @override
+  GOnCreateHabitData_onCreateHabit_comments? get comments;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  @override
+  int? get ups;
+  @override
+  int? get downs;
+  static Serializer<GOnCreateHabitData_onCreateHabit> get serializer =>
+      _$gOnCreateHabitDataOnCreateHabitSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateHabitData_onCreateHabit.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit_comments
+    implements
+        Built<GOnCreateHabitData_onCreateHabit_comments,
+            GOnCreateHabitData_onCreateHabit_commentsBuilder>,
+        GAllHabitFields_comments {
+  GOnCreateHabitData_onCreateHabit_comments._();
+
+  factory GOnCreateHabitData_onCreateHabit_comments(
+      [Function(GOnCreateHabitData_onCreateHabit_commentsBuilder b)
+          updates]) = _$GOnCreateHabitData_onCreateHabit_comments;
+
+  static void _initializeBuilder(
+          GOnCreateHabitData_onCreateHabit_commentsBuilder b) =>
+      b..G__typename = 'ModelCommentConnection';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GOnCreateHabitData_onCreateHabit_comments_items> get items;
+  static Serializer<GOnCreateHabitData_onCreateHabit_comments> get serializer =>
+      _$gOnCreateHabitDataOnCreateHabitCommentsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit_comments? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateHabitData_onCreateHabit_comments.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit_comments_items
+    implements
+        Built<GOnCreateHabitData_onCreateHabit_comments_items,
+            GOnCreateHabitData_onCreateHabit_comments_itemsBuilder>,
+        GAllHabitFields_comments_items,
+        GAllCommentFields {
+  GOnCreateHabitData_onCreateHabit_comments_items._();
+
+  factory GOnCreateHabitData_onCreateHabit_comments_items(
+      [Function(GOnCreateHabitData_onCreateHabit_comments_itemsBuilder b)
+          updates]) = _$GOnCreateHabitData_onCreateHabit_comments_items;
+
+  static void _initializeBuilder(
+          GOnCreateHabitData_onCreateHabit_comments_itemsBuilder b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by? get by;
+  @override
+  String? get habitId;
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit? get habit;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<GOnCreateHabitData_onCreateHabit_comments_items>
+      get serializer =>
+          _$gOnCreateHabitDataOnCreateHabitCommentsItemsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit_comments_items? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit_comments_items_by
+    implements
+        Built<GOnCreateHabitData_onCreateHabit_comments_items_by,
+            GOnCreateHabitData_onCreateHabit_comments_items_byBuilder>,
+        GAllHabitFields_comments_items_by,
+        GAllCommentFields_by {
+  GOnCreateHabitData_onCreateHabit_comments_items_by._();
+
+  factory GOnCreateHabitData_onCreateHabit_comments_items_by(
+      [Function(GOnCreateHabitData_onCreateHabit_comments_items_byBuilder b)
+          updates]) = _$GOnCreateHabitData_onCreateHabit_comments_items_by;
+
+  static void _initializeBuilder(
+          GOnCreateHabitData_onCreateHabit_comments_items_byBuilder b) =>
+      b..G__typename = 'User';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get username;
+  @override
+  String? get displayUsername;
+  @override
+  String? get name;
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatar? get avatar;
+  static Serializer<GOnCreateHabitData_onCreateHabit_comments_items_by>
+      get serializer =>
+          _$gOnCreateHabitDataOnCreateHabitCommentsItemsBySerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit_comments_items_by? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit_comments_items_by_avatar
+    implements
+        Built<GOnCreateHabitData_onCreateHabit_comments_items_by_avatar,
+            GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatar._();
+
+  factory GOnCreateHabitData_onCreateHabit_comments_items_by_avatar(
+      [Function(
+              GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder
+                  b)
+          updates]) = _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GOnCreateHabitData_onCreateHabit_comments_items_by_avatar>
+      get serializer =>
+          _$gOnCreateHabitDataOnCreateHabitCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_by_avatar.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit_comments_items_habit
+    implements
+        Built<GOnCreateHabitData_onCreateHabit_comments_items_habit,
+            GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder>,
+        GAllHabitFields_comments_items_habit,
+        GAllCommentFields_habit {
+  GOnCreateHabitData_onCreateHabit_comments_items_habit._();
+
+  factory GOnCreateHabitData_onCreateHabit_comments_items_habit(
+      [Function(GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder b)
+          updates]) = _$GOnCreateHabitData_onCreateHabit_comments_items_habit;
+
+  static void _initializeBuilder(
+          GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder b) =>
+      b..G__typename = 'Habit';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get tagline;
+  @override
+  _i2.GCategory get category;
+  @override
+  String? get details;
+  @override
+  String? get owner;
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments? get comments;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  @override
+  int? get ups;
+  @override
+  int? get downs;
+  static Serializer<GOnCreateHabitData_onCreateHabit_comments_items_habit>
+      get serializer =>
+          _$gOnCreateHabitDataOnCreateHabitCommentsItemsHabitSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit_comments_items_habit? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_habit.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+    implements
+        Built<GOnCreateHabitData_onCreateHabit_comments_items_habit_comments,
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder>,
+        GAllHabitFields_comments_items_habit_comments,
+        GAllCommentFields_habit_comments {
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments._();
+
+  factory GOnCreateHabitData_onCreateHabit_comments_items_habit_comments(
+          [Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder
+                      b)
+              updates]) =
+      _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments;
+
+  static void _initializeBuilder(
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder
+              b) =>
+      b..G__typename = 'ModelCommentConnection';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>
+      get items;
+  static Serializer<
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments>
+      get serializer =>
+          _$gOnCreateHabitDataOnCreateHabitCommentsItemsHabitCommentsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit_comments_items_habit_comments?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+                .serializer,
+            json,
+          );
+}
+
+abstract class GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+    implements
+        Built<
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items,
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder>,
+        GAllHabitFields_comments_items_habit_comments_items,
+        GAllCommentFields_habit_comments_items {
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items._();
+
+  factory GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items(
+          [Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder
+                      b)
+              updates]) =
+      _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items;
+
+  static void _initializeBuilder(
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder
+              b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  String? get habitId;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>
+      get serializer =>
+          _$gOnCreateHabitDataOnCreateHabitCommentsItemsHabitCommentsItemsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
+}
+
+abstract class GOnUpdateHabitData
+    implements Built<GOnUpdateHabitData, GOnUpdateHabitDataBuilder> {
+  GOnUpdateHabitData._();
+
+  factory GOnUpdateHabitData([Function(GOnUpdateHabitDataBuilder b) updates]) =
+      _$GOnUpdateHabitData;
+
+  static void _initializeBuilder(GOnUpdateHabitDataBuilder b) =>
+      b..G__typename = 'Subscription';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GOnUpdateHabitData_onUpdateHabit? get onUpdateHabit;
+  static Serializer<GOnUpdateHabitData> get serializer =>
+      _$gOnUpdateHabitDataSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateHabitData.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit
+    implements
+        Built<GOnUpdateHabitData_onUpdateHabit,
+            GOnUpdateHabitData_onUpdateHabitBuilder>,
+        GAllHabitFields {
+  GOnUpdateHabitData_onUpdateHabit._();
+
+  factory GOnUpdateHabitData_onUpdateHabit(
+          [Function(GOnUpdateHabitData_onUpdateHabitBuilder b) updates]) =
+      _$GOnUpdateHabitData_onUpdateHabit;
+
+  static void _initializeBuilder(GOnUpdateHabitData_onUpdateHabitBuilder b) =>
+      b..G__typename = 'Habit';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get tagline;
+  @override
+  _i2.GCategory get category;
+  @override
+  String? get details;
+  @override
+  String? get owner;
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments? get comments;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  @override
+  int? get ups;
+  @override
+  int? get downs;
+  static Serializer<GOnUpdateHabitData_onUpdateHabit> get serializer =>
+      _$gOnUpdateHabitDataOnUpdateHabitSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateHabitData_onUpdateHabit.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit_comments
+    implements
+        Built<GOnUpdateHabitData_onUpdateHabit_comments,
+            GOnUpdateHabitData_onUpdateHabit_commentsBuilder>,
+        GAllHabitFields_comments {
+  GOnUpdateHabitData_onUpdateHabit_comments._();
+
+  factory GOnUpdateHabitData_onUpdateHabit_comments(
+      [Function(GOnUpdateHabitData_onUpdateHabit_commentsBuilder b)
+          updates]) = _$GOnUpdateHabitData_onUpdateHabit_comments;
+
+  static void _initializeBuilder(
+          GOnUpdateHabitData_onUpdateHabit_commentsBuilder b) =>
+      b..G__typename = 'ModelCommentConnection';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GOnUpdateHabitData_onUpdateHabit_comments_items> get items;
+  static Serializer<GOnUpdateHabitData_onUpdateHabit_comments> get serializer =>
+      _$gOnUpdateHabitDataOnUpdateHabitCommentsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit_comments? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit_comments_items
+    implements
+        Built<GOnUpdateHabitData_onUpdateHabit_comments_items,
+            GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder>,
+        GAllHabitFields_comments_items,
+        GAllCommentFields {
+  GOnUpdateHabitData_onUpdateHabit_comments_items._();
+
+  factory GOnUpdateHabitData_onUpdateHabit_comments_items(
+      [Function(GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder b)
+          updates]) = _$GOnUpdateHabitData_onUpdateHabit_comments_items;
+
+  static void _initializeBuilder(
+          GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by? get by;
+  @override
+  String? get habitId;
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit? get habit;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items>
+      get serializer =>
+          _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit_comments_items? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit_comments_items_by
+    implements
+        Built<GOnUpdateHabitData_onUpdateHabit_comments_items_by,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder>,
+        GAllHabitFields_comments_items_by,
+        GAllCommentFields_by {
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by._();
+
+  factory GOnUpdateHabitData_onUpdateHabit_comments_items_by(
+      [Function(GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder b)
+          updates]) = _$GOnUpdateHabitData_onUpdateHabit_comments_items_by;
+
+  static void _initializeBuilder(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder b) =>
+      b..G__typename = 'User';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get username;
+  @override
+  String? get displayUsername;
+  @override
+  String? get name;
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar? get avatar;
+  static Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_by>
+      get serializer =>
+          _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsBySerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_by.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit_comments_items_by? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar
+    implements
+        Built<GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar._();
+
+  factory GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar(
+      [Function(
+              GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder
+                  b)
+          updates]) = _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar>
+      get serializer =>
+          _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit_comments_items_habit
+    implements
+        Built<GOnUpdateHabitData_onUpdateHabit_comments_items_habit,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder>,
+        GAllHabitFields_comments_items_habit,
+        GAllCommentFields_habit {
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit._();
+
+  factory GOnUpdateHabitData_onUpdateHabit_comments_items_habit(
+      [Function(GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder b)
+          updates]) = _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit;
+
+  static void _initializeBuilder(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder b) =>
+      b..G__typename = 'Habit';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get tagline;
+  @override
+  _i2.GCategory get category;
+  @override
+  String? get details;
+  @override
+  String? get owner;
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments? get comments;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  @override
+  int? get ups;
+  @override
+  int? get downs;
+  static Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_habit>
+      get serializer =>
+          _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsHabitSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_habit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit_comments_items_habit? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_habit.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+    implements
+        Built<GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder>,
+        GAllHabitFields_comments_items_habit_comments,
+        GAllCommentFields_habit_comments {
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments._();
+
+  factory GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments(
+          [Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder
+                      b)
+              updates]) =
+      _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments;
+
+  static void _initializeBuilder(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder
+              b) =>
+      b..G__typename = 'ModelCommentConnection';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>
+      get items;
+  static Serializer<
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments>
+      get serializer =>
+          _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsHabitCommentsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+                .serializer,
+            json,
+          );
+}
+
+abstract class GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+    implements
+        Built<
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder>,
+        GAllHabitFields_comments_items_habit_comments_items,
+        GAllCommentFields_habit_comments_items {
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items._();
+
+  factory GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items(
+          [Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder
+                      b)
+              updates]) =
+      _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items;
+
+  static void _initializeBuilder(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder
+              b) =>
+      b..G__typename = 'Comment';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String? get owner;
+  @override
+  String? get habitId;
+  @override
+  String get comment;
+  @override
+  _i2.GAWSDateTime get createdAt;
+  @override
+  _i2.GAWSDateTime get updatedAt;
+  static Serializer<
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>
+      get serializer =>
+          _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsHabitCommentsItemsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+                .serializer,
+            json,
+          );
+}
+
 abstract class GCreateUserData
     implements Built<GCreateUserData, GCreateUserDataBuilder> {
   GCreateUserData._();
@@ -3759,6 +5627,8 @@ abstract class GCreateCommentData_createComment_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GCreateCommentData_createComment_by_avatar? get avatar;
   static Serializer<GCreateCommentData_createComment_by> get serializer =>
       _$gCreateCommentDataCreateCommentBySerializer;
   @override
@@ -3770,6 +5640,48 @@ abstract class GCreateCommentData_createComment_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateCommentData_createComment_by.serializer,
+        json,
+      );
+}
+
+abstract class GCreateCommentData_createComment_by_avatar
+    implements
+        Built<GCreateCommentData_createComment_by_avatar,
+            GCreateCommentData_createComment_by_avatarBuilder>,
+        GAllCommentFields_by_avatar {
+  GCreateCommentData_createComment_by_avatar._();
+
+  factory GCreateCommentData_createComment_by_avatar(
+      [Function(GCreateCommentData_createComment_by_avatarBuilder b)
+          updates]) = _$GCreateCommentData_createComment_by_avatar;
+
+  static void _initializeBuilder(
+          GCreateCommentData_createComment_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GCreateCommentData_createComment_by_avatar>
+      get serializer => _$gCreateCommentDataCreateCommentByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateCommentData_createComment_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GCreateCommentData_createComment_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GCreateCommentData_createComment_by_avatar.serializer,
         json,
       );
 }
@@ -4088,6 +6000,8 @@ abstract class GCreateHabitData_createHabit_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GCreateHabitData_createHabit_comments_items_by_avatar? get avatar;
   static Serializer<GCreateHabitData_createHabit_comments_items_by>
       get serializer => _$gCreateHabitDataCreateHabitCommentsItemsBySerializer;
   @override
@@ -4099,6 +6013,50 @@ abstract class GCreateHabitData_createHabit_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateHabitData_createHabit_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GCreateHabitData_createHabit_comments_items_by_avatar
+    implements
+        Built<GCreateHabitData_createHabit_comments_items_by_avatar,
+            GCreateHabitData_createHabit_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GCreateHabitData_createHabit_comments_items_by_avatar._();
+
+  factory GCreateHabitData_createHabit_comments_items_by_avatar(
+      [Function(GCreateHabitData_createHabit_comments_items_by_avatarBuilder b)
+          updates]) = _$GCreateHabitData_createHabit_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GCreateHabitData_createHabit_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GCreateHabitData_createHabit_comments_items_by_avatar>
+      get serializer =>
+          _$gCreateHabitDataCreateHabitCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GCreateHabitData_createHabit_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GCreateHabitData_createHabit_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GCreateHabitData_createHabit_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -4467,6 +6425,8 @@ abstract class GUpdateUserData_updateUser_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GUpdateUserData_updateUser_comments_items_by_avatar? get avatar;
   static Serializer<GUpdateUserData_updateUser_comments_items_by>
       get serializer => _$gUpdateUserDataUpdateUserCommentsItemsBySerializer;
   @override
@@ -4478,6 +6438,50 @@ abstract class GUpdateUserData_updateUser_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateUserData_updateUser_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GUpdateUserData_updateUser_comments_items_by_avatar
+    implements
+        Built<GUpdateUserData_updateUser_comments_items_by_avatar,
+            GUpdateUserData_updateUser_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GUpdateUserData_updateUser_comments_items_by_avatar._();
+
+  factory GUpdateUserData_updateUser_comments_items_by_avatar(
+      [Function(GUpdateUserData_updateUser_comments_items_by_avatarBuilder b)
+          updates]) = _$GUpdateUserData_updateUser_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GUpdateUserData_updateUser_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GUpdateUserData_updateUser_comments_items_by_avatar>
+      get serializer =>
+          _$gUpdateUserDataUpdateUserCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateUserData_updateUser_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GUpdateUserData_updateUser_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GUpdateUserData_updateUser_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -4825,6 +6829,8 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatar? get avatar;
   static Serializer<GUpdateUserData_updateUser_habits_items_comments_items_by>
       get serializer =>
           _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsBySerializer;
@@ -4839,6 +6845,57 @@ abstract class GUpdateUserData_updateUser_habits_items_comments_items_by
         GUpdateUserData_updateUser_habits_items_comments_items_by.serializer,
         json,
       );
+}
+
+abstract class GUpdateUserData_updateUser_habits_items_comments_items_by_avatar
+    implements
+        Built<GUpdateUserData_updateUser_habits_items_comments_items_by_avatar,
+            GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_habits_items_comments_items_by_avatar,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatar._();
+
+  factory GUpdateUserData_updateUser_habits_items_comments_items_by_avatar(
+          [Function(
+                  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder
+                      b)
+              updates]) =
+      _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<
+          GUpdateUserData_updateUser_habits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateUserData_updateUser_habits_items_comments_items_by_avatar
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GUpdateUserData_updateUser_habits_items_comments_items_by_avatar?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GUpdateUserData_updateUser_habits_items_comments_items_by_avatar
+                .serializer,
+            json,
+          );
 }
 
 abstract class GUpdateUserData_updateUser_habits_items_comments_items_habit
@@ -5184,6 +7241,8 @@ abstract class GUpdateHabitData_updateHabit_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GUpdateHabitData_updateHabit_comments_items_by_avatar? get avatar;
   static Serializer<GUpdateHabitData_updateHabit_comments_items_by>
       get serializer => _$gUpdateHabitDataUpdateHabitCommentsItemsBySerializer;
   @override
@@ -5195,6 +7254,50 @@ abstract class GUpdateHabitData_updateHabit_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateHabitData_updateHabit_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GUpdateHabitData_updateHabit_comments_items_by_avatar
+    implements
+        Built<GUpdateHabitData_updateHabit_comments_items_by_avatar,
+            GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GUpdateHabitData_updateHabit_comments_items_by_avatar._();
+
+  factory GUpdateHabitData_updateHabit_comments_items_by_avatar(
+      [Function(GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder b)
+          updates]) = _$GUpdateHabitData_updateHabit_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GUpdateHabitData_updateHabit_comments_items_by_avatar>
+      get serializer =>
+          _$gUpdateHabitDataUpdateHabitCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GUpdateHabitData_updateHabit_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GUpdateHabitData_updateHabit_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GUpdateHabitData_updateHabit_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -5929,6 +8032,8 @@ abstract class GSearchUsersData_listUsers_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GSearchUsersData_listUsers_items_comments_items_by_avatar? get avatar;
   static Serializer<GSearchUsersData_listUsers_items_comments_items_by>
       get serializer =>
           _$gSearchUsersDataListUsersItemsCommentsItemsBySerializer;
@@ -5941,6 +8046,52 @@ abstract class GSearchUsersData_listUsers_items_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSearchUsersData_listUsers_items_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GSearchUsersData_listUsers_items_comments_items_by_avatar
+    implements
+        Built<GSearchUsersData_listUsers_items_comments_items_by_avatar,
+            GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder>,
+        GAllPublicUserFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GSearchUsersData_listUsers_items_comments_items_by_avatar._();
+
+  factory GSearchUsersData_listUsers_items_comments_items_by_avatar(
+      [Function(
+              GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder
+                  b)
+          updates]) = _$GSearchUsersData_listUsers_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GSearchUsersData_listUsers_items_comments_items_by_avatar>
+      get serializer =>
+          _$gSearchUsersDataListUsersItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchUsersData_listUsers_items_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GSearchUsersData_listUsers_items_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GSearchUsersData_listUsers_items_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -6305,6 +8456,9 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar?
+      get avatar;
   static Serializer<
           GSearchUsersData_listUsers_items_habits_items_comments_items_by>
       get serializer =>
@@ -6318,6 +8472,58 @@ abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_by
   static GSearchUsersData_listUsers_items_habits_items_comments_items_by?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GSearchUsersData_listUsers_items_habits_items_comments_items_by
+                .serializer,
+            json,
+          );
+}
+
+abstract class GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+    implements
+        Built<
+            GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder>,
+        GAllPublicUserFields_habits_items_comments_items_by_avatar,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar._();
+
+  factory GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar(
+          [Function(
+                  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder
+                      b)
+              updates]) =
+      _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<
+          GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
                 .serializer,
             json,
           );
@@ -6698,6 +8904,8 @@ abstract class GSearchHabitsData_listHabits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GSearchHabitsData_listHabits_items_comments_items_by_avatar? get avatar;
   static Serializer<GSearchHabitsData_listHabits_items_comments_items_by>
       get serializer =>
           _$gSearchHabitsDataListHabitsItemsCommentsItemsBySerializer;
@@ -6710,6 +8918,53 @@ abstract class GSearchHabitsData_listHabits_items_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSearchHabitsData_listHabits_items_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GSearchHabitsData_listHabits_items_comments_items_by_avatar
+    implements
+        Built<GSearchHabitsData_listHabits_items_comments_items_by_avatar,
+            GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GSearchHabitsData_listHabits_items_comments_items_by_avatar._();
+
+  factory GSearchHabitsData_listHabits_items_comments_items_by_avatar(
+      [Function(
+              GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder
+                  b)
+          updates]) = _$GSearchHabitsData_listHabits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GSearchHabitsData_listHabits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gSearchHabitsDataListHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GSearchHabitsData_listHabits_items_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GSearchHabitsData_listHabits_items_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GSearchHabitsData_listHabits_items_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -6921,6 +9176,26 @@ abstract class GAllHabitFields_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllHabitFields_comments_items_by_avatar? get avatar;
+  @override
+  Map<String, dynamic> toJson();
+}
+
+abstract class GAllHabitFields_comments_items_by_avatar
+    implements GAllCommentFields_by_avatar {
+  @override
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
   @override
   Map<String, dynamic> toJson();
 }
@@ -7135,6 +9410,8 @@ abstract class GAllHabitFieldsData_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllHabitFieldsData_comments_items_by_avatar? get avatar;
   static Serializer<GAllHabitFieldsData_comments_items_by> get serializer =>
       _$gAllHabitFieldsDataCommentsItemsBySerializer;
   @override
@@ -7146,6 +9423,49 @@ abstract class GAllHabitFieldsData_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAllHabitFieldsData_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GAllHabitFieldsData_comments_items_by_avatar
+    implements
+        Built<GAllHabitFieldsData_comments_items_by_avatar,
+            GAllHabitFieldsData_comments_items_by_avatarBuilder>,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GAllHabitFieldsData_comments_items_by_avatar._();
+
+  factory GAllHabitFieldsData_comments_items_by_avatar(
+      [Function(GAllHabitFieldsData_comments_items_by_avatarBuilder b)
+          updates]) = _$GAllHabitFieldsData_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GAllHabitFieldsData_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GAllHabitFieldsData_comments_items_by_avatar>
+      get serializer => _$gAllHabitFieldsDataCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllHabitFieldsData_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GAllHabitFieldsData_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GAllHabitFieldsData_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -7348,6 +9668,26 @@ abstract class GAllPublicUserFields_comments_items_by
   @override
   String? get name;
   @override
+  GAllPublicUserFields_comments_items_by_avatar? get avatar;
+  @override
+  Map<String, dynamic> toJson();
+}
+
+abstract class GAllPublicUserFields_comments_items_by_avatar
+    implements GAllCommentFields_by_avatar {
+  @override
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  @override
   Map<String, dynamic> toJson();
 }
 
@@ -7486,6 +9826,28 @@ abstract class GAllPublicUserFields_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllPublicUserFields_habits_items_comments_items_by_avatar? get avatar;
+  @override
+  Map<String, dynamic> toJson();
+}
+
+abstract class GAllPublicUserFields_habits_items_comments_items_by_avatar
+    implements
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  @override
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
   @override
   Map<String, dynamic> toJson();
 }
@@ -7741,6 +10103,8 @@ abstract class GAllPublicUserFieldsData_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllPublicUserFieldsData_comments_items_by_avatar? get avatar;
   static Serializer<GAllPublicUserFieldsData_comments_items_by>
       get serializer => _$gAllPublicUserFieldsDataCommentsItemsBySerializer;
   @override
@@ -7752,6 +10116,50 @@ abstract class GAllPublicUserFieldsData_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAllPublicUserFieldsData_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GAllPublicUserFieldsData_comments_items_by_avatar
+    implements
+        Built<GAllPublicUserFieldsData_comments_items_by_avatar,
+            GAllPublicUserFieldsData_comments_items_by_avatarBuilder>,
+        GAllPublicUserFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GAllPublicUserFieldsData_comments_items_by_avatar._();
+
+  factory GAllPublicUserFieldsData_comments_items_by_avatar(
+      [Function(GAllPublicUserFieldsData_comments_items_by_avatarBuilder b)
+          updates]) = _$GAllPublicUserFieldsData_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GAllPublicUserFieldsData_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GAllPublicUserFieldsData_comments_items_by_avatar>
+      get serializer =>
+          _$gAllPublicUserFieldsDataCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsData_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GAllPublicUserFieldsData_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GAllPublicUserFieldsData_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -8094,6 +10502,8 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatar? get avatar;
   static Serializer<GAllPublicUserFieldsData_habits_items_comments_items_by>
       get serializer =>
           _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsBySerializer;
@@ -8108,6 +10518,57 @@ abstract class GAllPublicUserFieldsData_habits_items_comments_items_by
         GAllPublicUserFieldsData_habits_items_comments_items_by.serializer,
         json,
       );
+}
+
+abstract class GAllPublicUserFieldsData_habits_items_comments_items_by_avatar
+    implements
+        Built<GAllPublicUserFieldsData_habits_items_comments_items_by_avatar,
+            GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder>,
+        GAllPublicUserFields_habits_items_comments_items_by_avatar,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatar._();
+
+  factory GAllPublicUserFieldsData_habits_items_comments_items_by_avatar(
+          [Function(
+                  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder
+                      b)
+              updates]) =
+      _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<
+          GAllPublicUserFieldsData_habits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPublicUserFieldsData_habits_items_comments_items_by_avatar
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GAllPublicUserFieldsData_habits_items_comments_items_by_avatar?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GAllPublicUserFieldsData_habits_items_comments_items_by_avatar
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllPublicUserFieldsData_habits_items_comments_items_habit
@@ -8333,6 +10794,26 @@ abstract class GAllPrivateUserFields_comments_items_by
   @override
   String? get name;
   @override
+  GAllPrivateUserFields_comments_items_by_avatar? get avatar;
+  @override
+  Map<String, dynamic> toJson();
+}
+
+abstract class GAllPrivateUserFields_comments_items_by_avatar
+    implements GAllCommentFields_by_avatar {
+  @override
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  @override
   Map<String, dynamic> toJson();
 }
 
@@ -8472,6 +10953,28 @@ abstract class GAllPrivateUserFields_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllPrivateUserFields_habits_items_comments_items_by_avatar? get avatar;
+  @override
+  Map<String, dynamic> toJson();
+}
+
+abstract class GAllPrivateUserFields_habits_items_comments_items_by_avatar
+    implements
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  @override
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
   @override
   Map<String, dynamic> toJson();
 }
@@ -8733,6 +11236,8 @@ abstract class GAllPrivateUserFieldsData_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllPrivateUserFieldsData_comments_items_by_avatar? get avatar;
   static Serializer<GAllPrivateUserFieldsData_comments_items_by>
       get serializer => _$gAllPrivateUserFieldsDataCommentsItemsBySerializer;
   @override
@@ -8744,6 +11249,50 @@ abstract class GAllPrivateUserFieldsData_comments_items_by
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAllPrivateUserFieldsData_comments_items_by.serializer,
+        json,
+      );
+}
+
+abstract class GAllPrivateUserFieldsData_comments_items_by_avatar
+    implements
+        Built<GAllPrivateUserFieldsData_comments_items_by_avatar,
+            GAllPrivateUserFieldsData_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GAllPrivateUserFieldsData_comments_items_by_avatar._();
+
+  factory GAllPrivateUserFieldsData_comments_items_by_avatar(
+      [Function(GAllPrivateUserFieldsData_comments_items_by_avatarBuilder b)
+          updates]) = _$GAllPrivateUserFieldsData_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GAllPrivateUserFieldsData_comments_items_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GAllPrivateUserFieldsData_comments_items_by_avatar>
+      get serializer =>
+          _$gAllPrivateUserFieldsDataCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPrivateUserFieldsData_comments_items_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GAllPrivateUserFieldsData_comments_items_by_avatar? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GAllPrivateUserFieldsData_comments_items_by_avatar.serializer,
         json,
       );
 }
@@ -9090,6 +11639,8 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar? get avatar;
   static Serializer<GAllPrivateUserFieldsData_habits_items_comments_items_by>
       get serializer =>
           _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsBySerializer;
@@ -9104,6 +11655,57 @@ abstract class GAllPrivateUserFieldsData_habits_items_comments_items_by
         GAllPrivateUserFieldsData_habits_items_comments_items_by.serializer,
         json,
       );
+}
+
+abstract class GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar
+    implements
+        Built<GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar,
+            GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder>,
+        GAllPrivateUserFields_habits_items_comments_items_by_avatar,
+        GAllHabitFields_comments_items_by_avatar,
+        GAllCommentFields_by_avatar {
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar._();
+
+  factory GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar(
+          [Function(
+                  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder
+                      b)
+              updates]) =
+      _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar;
+
+  static void _initializeBuilder(
+          GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder
+              b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<
+          GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar>
+      get serializer =>
+          _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar
+                .serializer,
+            json,
+          );
 }
 
 abstract class GAllPrivateUserFieldsData_habits_items_comments_items_habit
@@ -9283,6 +11885,17 @@ abstract class GAllCommentFields_by {
   String get username;
   String? get displayUsername;
   String? get name;
+  GAllCommentFields_by_avatar? get avatar;
+  Map<String, dynamic> toJson();
+}
+
+abstract class GAllCommentFields_by_avatar {
+  String get G__typename;
+  String get bucket;
+  String get region;
+  String get key;
+  _i2.GAccessLevel? get accessLevel;
+  String? get cognitoId;
   Map<String, dynamic> toJson();
 }
 
@@ -9384,6 +11997,8 @@ abstract class GAllCommentFieldsData_by
   String? get displayUsername;
   @override
   String? get name;
+  @override
+  GAllCommentFieldsData_by_avatar? get avatar;
   static Serializer<GAllCommentFieldsData_by> get serializer =>
       _$gAllCommentFieldsDataBySerializer;
   @override
@@ -9394,6 +12009,46 @@ abstract class GAllCommentFieldsData_by
   static GAllCommentFieldsData_by? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAllCommentFieldsData_by.serializer,
+        json,
+      );
+}
+
+abstract class GAllCommentFieldsData_by_avatar
+    implements
+        Built<GAllCommentFieldsData_by_avatar,
+            GAllCommentFieldsData_by_avatarBuilder>,
+        GAllCommentFields_by_avatar {
+  GAllCommentFieldsData_by_avatar._();
+
+  factory GAllCommentFieldsData_by_avatar(
+          [Function(GAllCommentFieldsData_by_avatarBuilder b) updates]) =
+      _$GAllCommentFieldsData_by_avatar;
+
+  static void _initializeBuilder(GAllCommentFieldsData_by_avatarBuilder b) =>
+      b..G__typename = 'S3Object';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get bucket;
+  @override
+  String get region;
+  @override
+  String get key;
+  @override
+  _i2.GAccessLevel? get accessLevel;
+  @override
+  String? get cognitoId;
+  static Serializer<GAllCommentFieldsData_by_avatar> get serializer =>
+      _$gAllCommentFieldsDataByAvatarSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GAllCommentFieldsData_by_avatar.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GAllCommentFieldsData_by_avatar? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GAllCommentFieldsData_by_avatar.serializer,
         json,
       );
 }

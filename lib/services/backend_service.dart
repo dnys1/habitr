@@ -4,6 +4,7 @@ import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:habitr/amplifyconfiguration.dart';
+import 'package:habitr/models/ModelProvider.dart';
 
 abstract class BackendService {
   Future<void> configure();
@@ -18,7 +19,9 @@ class AmplifyBackendService implements BackendService {
 
     try {
       await Amplify.addPlugins([
-        AmplifyAPI(),
+        AmplifyAPI(
+          modelProvider: ModelProvider.instance,
+        ),
         AmplifyAuthCognito(),
         AmplifyStorageS3(),
         AmplifyAnalyticsPinpoint(),

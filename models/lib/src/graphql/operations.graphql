@@ -70,6 +70,13 @@ fragment AllCommentFields on Comment {
     username
     displayUsername
     name
+    avatar {
+      bucket
+      region
+      key
+      accessLevel
+      cognitoId
+    }
   }
   habitId
   habit {
@@ -149,6 +156,30 @@ query GetComment($commentId: ID!) {
 subscription SubscribeToUser($username: String!) {
   subscribeToUser(username: $username) {
     ...AllPrivateUserFields
+  }
+}
+
+subscription OnCreateComment {
+  onCreateComment {
+    ...AllCommentFields
+  }
+}
+
+subscription OnUpdateComment {
+  onUpdateComment {
+    ...AllCommentFields
+  }
+}
+
+subscription OnCreateHabit {
+  onCreateHabit {
+    ...AllHabitFields
+  }
+}
+
+subscription OnUpdateHabit {
+  onUpdateHabit {
+    ...AllHabitFields
   }
 }
 

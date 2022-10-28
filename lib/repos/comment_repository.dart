@@ -35,6 +35,11 @@ class CommentRepositoryImpl extends CommentRepository {
         }
       }),
     );
+    addSubscription(
+      _apiService.commentUpdates.listen((comment) {
+        put(comment.id, comment);
+      }),
+    );
   }
 
   void _updateUser(User user) {

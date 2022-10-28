@@ -125,9 +125,10 @@ class Comment extends Model {
     var id = json['id'];
     var habitId = json['habitId'];
     var habit = json['habit'] == null ? null : Habit.fromJson(json['habit']);
-    var by = json['by'] == null
+    var by = json['by'] == null && json['by']?['serializedData'] == null
         ? null
-        : User.fromJson(Map<String, dynamic>.from(json['by']));
+        : User.fromJson(Map<String, dynamic>.from(
+            json['by']?['serializedData'] ?? json['by']));
     var owner = json['owner'] as String;
     var comment = json['comment'];
     var createdAt = DateTime.parse(json['createdAt'] as String);
@@ -157,8 +158,7 @@ class Comment extends Model {
   static final QueryField HABITID = QueryField(fieldName: "habitId");
   static final QueryField BY = QueryField(
       fieldName: "by",
-      fieldType: ModelFieldType(ModelFieldTypeEnum.model,
-          ofModelName: (User).toString()));
+      fieldType: ModelFieldType(ModelFieldTypeEnum.model, ofModelName: 'User'));
   static final QueryField COMMENT = QueryField(fieldName: "comment");
   static var schema =
       Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
@@ -209,7 +209,7 @@ class Comment extends Model {
         key: Comment.BY,
         isRequired: false,
         targetName: "owner",
-        ofModelName: (User).toString()));
+        ofModelName: 'User'));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
         key: Comment.COMMENT,
@@ -225,4 +225,7 @@ class _CommentModelType extends ModelType<Comment> {
   Comment fromJson(Map<String, dynamic> jsonData) {
     return Comment.fromJson(jsonData);
   }
+
+  @override
+  String modelName() => 'Comment';
 }

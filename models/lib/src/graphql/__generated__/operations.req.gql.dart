@@ -189,6 +189,114 @@ abstract class GSubscribeToUser
       );
 }
 
+abstract class GOnCreateComment
+    implements Built<GOnCreateComment, GOnCreateCommentBuilder> {
+  GOnCreateComment._();
+
+  factory GOnCreateComment([Function(GOnCreateCommentBuilder b) updates]) =
+      _$GOnCreateComment;
+
+  static void _initializeBuilder(GOnCreateCommentBuilder b) => b
+    ..operation = _i1.Operation(
+      document: _i2.document,
+      operationName: 'OnCreateComment',
+    );
+  _i3.GOnCreateCommentVars get vars;
+  _i1.Operation get operation;
+  static Serializer<GOnCreateComment> get serializer =>
+      _$gOnCreateCommentSerializer;
+  Map<String, dynamic> toJson() => (_i4.serializers.serializeWith(
+        GOnCreateComment.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateComment? fromJson(Map<String, dynamic> json) =>
+      _i4.serializers.deserializeWith(
+        GOnCreateComment.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateComment
+    implements Built<GOnUpdateComment, GOnUpdateCommentBuilder> {
+  GOnUpdateComment._();
+
+  factory GOnUpdateComment([Function(GOnUpdateCommentBuilder b) updates]) =
+      _$GOnUpdateComment;
+
+  static void _initializeBuilder(GOnUpdateCommentBuilder b) => b
+    ..operation = _i1.Operation(
+      document: _i2.document,
+      operationName: 'OnUpdateComment',
+    );
+  _i3.GOnUpdateCommentVars get vars;
+  _i1.Operation get operation;
+  static Serializer<GOnUpdateComment> get serializer =>
+      _$gOnUpdateCommentSerializer;
+  Map<String, dynamic> toJson() => (_i4.serializers.serializeWith(
+        GOnUpdateComment.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateComment? fromJson(Map<String, dynamic> json) =>
+      _i4.serializers.deserializeWith(
+        GOnUpdateComment.serializer,
+        json,
+      );
+}
+
+abstract class GOnCreateHabit
+    implements Built<GOnCreateHabit, GOnCreateHabitBuilder> {
+  GOnCreateHabit._();
+
+  factory GOnCreateHabit([Function(GOnCreateHabitBuilder b) updates]) =
+      _$GOnCreateHabit;
+
+  static void _initializeBuilder(GOnCreateHabitBuilder b) => b
+    ..operation = _i1.Operation(
+      document: _i2.document,
+      operationName: 'OnCreateHabit',
+    );
+  _i3.GOnCreateHabitVars get vars;
+  _i1.Operation get operation;
+  static Serializer<GOnCreateHabit> get serializer =>
+      _$gOnCreateHabitSerializer;
+  Map<String, dynamic> toJson() => (_i4.serializers.serializeWith(
+        GOnCreateHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnCreateHabit? fromJson(Map<String, dynamic> json) =>
+      _i4.serializers.deserializeWith(
+        GOnCreateHabit.serializer,
+        json,
+      );
+}
+
+abstract class GOnUpdateHabit
+    implements Built<GOnUpdateHabit, GOnUpdateHabitBuilder> {
+  GOnUpdateHabit._();
+
+  factory GOnUpdateHabit([Function(GOnUpdateHabitBuilder b) updates]) =
+      _$GOnUpdateHabit;
+
+  static void _initializeBuilder(GOnUpdateHabitBuilder b) => b
+    ..operation = _i1.Operation(
+      document: _i2.document,
+      operationName: 'OnUpdateHabit',
+    );
+  _i3.GOnUpdateHabitVars get vars;
+  _i1.Operation get operation;
+  static Serializer<GOnUpdateHabit> get serializer =>
+      _$gOnUpdateHabitSerializer;
+  Map<String, dynamic> toJson() => (_i4.serializers.serializeWith(
+        GOnUpdateHabit.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GOnUpdateHabit? fromJson(Map<String, dynamic> json) =>
+      _i4.serializers.deserializeWith(
+        GOnUpdateHabit.serializer,
+        json,
+      );
+}
+
 abstract class GCreateUser implements Built<GCreateUser, GCreateUserBuilder> {
   GCreateUser._();
 

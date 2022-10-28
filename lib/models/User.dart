@@ -198,12 +198,12 @@ class User extends Model {
   static final QueryField AVATAR = QueryField(fieldName: "avatar");
   static final QueryField COMMENTS = QueryField(
       fieldName: "comments",
-      fieldType: ModelFieldType(ModelFieldTypeEnum.model,
-          ofModelName: (Comment).toString()));
+      fieldType:
+          ModelFieldType(ModelFieldTypeEnum.model, ofModelName: 'Comment'));
   static final QueryField HABITS = QueryField(
       fieldName: "habits",
-      fieldType: ModelFieldType(ModelFieldTypeEnum.model,
-          ofModelName: (Habit).toString()));
+      fieldType:
+          ModelFieldType(ModelFieldTypeEnum.model, ofModelName: 'Habit'));
   static final QueryField UPVOTEDHABITS =
       QueryField(fieldName: "upvotedHabits");
   static final QueryField DOWNVOTEDHABITS =
@@ -262,13 +262,13 @@ class User extends Model {
     modelSchemaDefinition.addField(ModelFieldDefinition.hasMany(
         key: User.COMMENTS,
         isRequired: true,
-        ofModelName: (Comment).toString(),
+        ofModelName: 'Comment',
         associatedKey: Comment.BY));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.hasMany(
         key: User.HABITS,
         isRequired: true,
-        ofModelName: (Habit).toString(),
+        ofModelName: 'Habit',
         associatedKey: Habit.AUTHOR));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
@@ -294,4 +294,7 @@ class _UserModelType extends ModelType<User> {
   User fromJson(Map<String, dynamic> jsonData) {
     return User.fromJson(jsonData);
   }
+
+  @override
+  String modelName() => 'User';
 }

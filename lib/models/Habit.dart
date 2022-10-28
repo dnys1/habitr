@@ -212,12 +212,11 @@ class Habit extends Model {
   static final QueryField DOWNS = QueryField(fieldName: "downs");
   static final QueryField AUTHOR = QueryField(
       fieldName: "author",
-      fieldType: ModelFieldType(ModelFieldTypeEnum.model,
-          ofModelName: (User).toString()));
+      fieldType: ModelFieldType(ModelFieldTypeEnum.model, ofModelName: 'User'));
   static final QueryField COMMENTS = QueryField(
       fieldName: "comments",
-      fieldType: ModelFieldType(ModelFieldTypeEnum.model,
-          ofModelName: (Comment).toString()));
+      fieldType:
+          ModelFieldType(ModelFieldTypeEnum.model, ofModelName: 'Comment'));
   static var schema =
       Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
     modelSchemaDefinition.name = "Habit";
@@ -283,12 +282,12 @@ class Habit extends Model {
         key: Habit.AUTHOR,
         isRequired: false,
         targetName: "owner",
-        ofModelName: (User).toString()));
+        ofModelName: 'User'));
 
     modelSchemaDefinition.addField(ModelFieldDefinition.hasMany(
         key: Habit.COMMENTS,
         isRequired: true,
-        ofModelName: (Comment).toString(),
+        ofModelName: 'Comment',
         associatedKey: Comment.HABITID));
   });
 }
@@ -300,4 +299,7 @@ class _HabitModelType extends ModelType<Habit> {
   Habit fromJson(Map<String, dynamic> jsonData) {
     return Habit.fromJson(jsonData);
   }
+
+  @override
+  String modelName() => 'Habit';
 }

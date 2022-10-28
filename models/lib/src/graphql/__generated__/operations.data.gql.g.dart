@@ -22,6 +22,9 @@ Serializer<GListHabitsData_listHabits_items_comments_items>
 Serializer<GListHabitsData_listHabits_items_comments_items_by>
     _$gListHabitsDataListHabitsItemsCommentsItemsBySerializer =
     new _$GListHabitsData_listHabits_items_comments_items_bySerializer();
+Serializer<GListHabitsData_listHabits_items_comments_items_by_avatar>
+    _$gListHabitsDataListHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GListHabitsData_listHabits_items_comments_items_by_avatarSerializer();
 Serializer<GListHabitsData_listHabits_items_comments_items_habit>
     _$gListHabitsDataListHabitsItemsCommentsItemsHabitSerializer =
     new _$GListHabitsData_listHabits_items_comments_items_habitSerializer();
@@ -49,6 +52,10 @@ Serializer<GListHabitsByCategoryData_habitsByCategory_items_comments_items_by>
     _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsBySerializer =
     new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_bySerializer();
 Serializer<
+        GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar>
+    _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsByAvatarSerializer =
+    new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarSerializer();
+Serializer<
         GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit>
     _$gListHabitsByCategoryDataHabitsByCategoryItemsCommentsItemsHabitSerializer =
     new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_habitSerializer();
@@ -73,6 +80,9 @@ Serializer<GGetHabitData_getHabit_comments_items>
 Serializer<GGetHabitData_getHabit_comments_items_by>
     _$gGetHabitDataGetHabitCommentsItemsBySerializer =
     new _$GGetHabitData_getHabit_comments_items_bySerializer();
+Serializer<GGetHabitData_getHabit_comments_items_by_avatar>
+    _$gGetHabitDataGetHabitCommentsItemsByAvatarSerializer =
+    new _$GGetHabitData_getHabit_comments_items_by_avatarSerializer();
 Serializer<GGetHabitData_getHabit_comments_items_habit>
     _$gGetHabitDataGetHabitCommentsItemsHabitSerializer =
     new _$GGetHabitData_getHabit_comments_items_habitSerializer();
@@ -97,6 +107,9 @@ Serializer<GGetUserData_getUser_comments_items>
 Serializer<GGetUserData_getUser_comments_items_by>
     _$gGetUserDataGetUserCommentsItemsBySerializer =
     new _$GGetUserData_getUser_comments_items_bySerializer();
+Serializer<GGetUserData_getUser_comments_items_by_avatar>
+    _$gGetUserDataGetUserCommentsItemsByAvatarSerializer =
+    new _$GGetUserData_getUser_comments_items_by_avatarSerializer();
 Serializer<GGetUserData_getUser_comments_items_habit>
     _$gGetUserDataGetUserCommentsItemsHabitSerializer =
     new _$GGetUserData_getUser_comments_items_habitSerializer();
@@ -120,6 +133,9 @@ Serializer<GGetUserData_getUser_habits_items_comments_items>
 Serializer<GGetUserData_getUser_habits_items_comments_items_by>
     _$gGetUserDataGetUserHabitsItemsCommentsItemsBySerializer =
     new _$GGetUserData_getUser_habits_items_comments_items_bySerializer();
+Serializer<GGetUserData_getUser_habits_items_comments_items_by_avatar>
+    _$gGetUserDataGetUserHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GGetUserData_getUser_habits_items_comments_items_by_avatarSerializer();
 Serializer<GGetUserData_getUser_habits_items_comments_items_habit>
     _$gGetUserDataGetUserHabitsItemsCommentsItemsHabitSerializer =
     new _$GGetUserData_getUser_habits_items_comments_items_habitSerializer();
@@ -145,6 +161,9 @@ Serializer<GGetSelfData_getUser_comments_items>
 Serializer<GGetSelfData_getUser_comments_items_by>
     _$gGetSelfDataGetUserCommentsItemsBySerializer =
     new _$GGetSelfData_getUser_comments_items_bySerializer();
+Serializer<GGetSelfData_getUser_comments_items_by_avatar>
+    _$gGetSelfDataGetUserCommentsItemsByAvatarSerializer =
+    new _$GGetSelfData_getUser_comments_items_by_avatarSerializer();
 Serializer<GGetSelfData_getUser_comments_items_habit>
     _$gGetSelfDataGetUserCommentsItemsHabitSerializer =
     new _$GGetSelfData_getUser_comments_items_habitSerializer();
@@ -168,6 +187,9 @@ Serializer<GGetSelfData_getUser_habits_items_comments_items>
 Serializer<GGetSelfData_getUser_habits_items_comments_items_by>
     _$gGetSelfDataGetUserHabitsItemsCommentsItemsBySerializer =
     new _$GGetSelfData_getUser_habits_items_comments_items_bySerializer();
+Serializer<GGetSelfData_getUser_habits_items_comments_items_by_avatar>
+    _$gGetSelfDataGetUserHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GGetSelfData_getUser_habits_items_comments_items_by_avatarSerializer();
 Serializer<GGetSelfData_getUser_habits_items_comments_items_habit>
     _$gGetSelfDataGetUserHabitsItemsCommentsItemsHabitSerializer =
     new _$GGetSelfData_getUser_habits_items_comments_items_habitSerializer();
@@ -185,6 +207,9 @@ Serializer<GGetCommentData_getComment> _$gGetCommentDataGetCommentSerializer =
 Serializer<GGetCommentData_getComment_by>
     _$gGetCommentDataGetCommentBySerializer =
     new _$GGetCommentData_getComment_bySerializer();
+Serializer<GGetCommentData_getComment_by_avatar>
+    _$gGetCommentDataGetCommentByAvatarSerializer =
+    new _$GGetCommentData_getComment_by_avatarSerializer();
 Serializer<GGetCommentData_getComment_habit>
     _$gGetCommentDataGetCommentHabitSerializer =
     new _$GGetCommentData_getComment_habitSerializer();
@@ -211,6 +236,9 @@ Serializer<GSubscribeToUserData_subscribeToUser_comments_items>
 Serializer<GSubscribeToUserData_subscribeToUser_comments_items_by>
     _$gSubscribeToUserDataSubscribeToUserCommentsItemsBySerializer =
     new _$GSubscribeToUserData_subscribeToUser_comments_items_bySerializer();
+Serializer<GSubscribeToUserData_subscribeToUser_comments_items_by_avatar>
+    _$gSubscribeToUserDataSubscribeToUserCommentsItemsByAvatarSerializer =
+    new _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatarSerializer();
 Serializer<GSubscribeToUserData_subscribeToUser_comments_items_habit>
     _$gSubscribeToUserDataSubscribeToUserCommentsItemsHabitSerializer =
     new _$GSubscribeToUserData_subscribeToUser_comments_items_habitSerializer();
@@ -237,6 +265,10 @@ Serializer<GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by>
     _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsBySerializer =
     new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_bySerializer();
 Serializer<
+        GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar>
+    _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarSerializer();
+Serializer<
         GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit>
     _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsHabitSerializer =
     new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habitSerializer();
@@ -248,6 +280,98 @@ Serializer<
         GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_items>
     _$gSubscribeToUserDataSubscribeToUserHabitsItemsCommentsItemsHabitCommentsItemsSerializer =
     new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_itemsSerializer();
+Serializer<GOnCreateCommentData> _$gOnCreateCommentDataSerializer =
+    new _$GOnCreateCommentDataSerializer();
+Serializer<GOnCreateCommentData_onCreateComment>
+    _$gOnCreateCommentDataOnCreateCommentSerializer =
+    new _$GOnCreateCommentData_onCreateCommentSerializer();
+Serializer<GOnCreateCommentData_onCreateComment_by>
+    _$gOnCreateCommentDataOnCreateCommentBySerializer =
+    new _$GOnCreateCommentData_onCreateComment_bySerializer();
+Serializer<GOnCreateCommentData_onCreateComment_by_avatar>
+    _$gOnCreateCommentDataOnCreateCommentByAvatarSerializer =
+    new _$GOnCreateCommentData_onCreateComment_by_avatarSerializer();
+Serializer<GOnCreateCommentData_onCreateComment_habit>
+    _$gOnCreateCommentDataOnCreateCommentHabitSerializer =
+    new _$GOnCreateCommentData_onCreateComment_habitSerializer();
+Serializer<GOnCreateCommentData_onCreateComment_habit_comments>
+    _$gOnCreateCommentDataOnCreateCommentHabitCommentsSerializer =
+    new _$GOnCreateCommentData_onCreateComment_habit_commentsSerializer();
+Serializer<GOnCreateCommentData_onCreateComment_habit_comments_items>
+    _$gOnCreateCommentDataOnCreateCommentHabitCommentsItemsSerializer =
+    new _$GOnCreateCommentData_onCreateComment_habit_comments_itemsSerializer();
+Serializer<GOnUpdateCommentData> _$gOnUpdateCommentDataSerializer =
+    new _$GOnUpdateCommentDataSerializer();
+Serializer<GOnUpdateCommentData_onUpdateComment>
+    _$gOnUpdateCommentDataOnUpdateCommentSerializer =
+    new _$GOnUpdateCommentData_onUpdateCommentSerializer();
+Serializer<GOnUpdateCommentData_onUpdateComment_by>
+    _$gOnUpdateCommentDataOnUpdateCommentBySerializer =
+    new _$GOnUpdateCommentData_onUpdateComment_bySerializer();
+Serializer<GOnUpdateCommentData_onUpdateComment_by_avatar>
+    _$gOnUpdateCommentDataOnUpdateCommentByAvatarSerializer =
+    new _$GOnUpdateCommentData_onUpdateComment_by_avatarSerializer();
+Serializer<GOnUpdateCommentData_onUpdateComment_habit>
+    _$gOnUpdateCommentDataOnUpdateCommentHabitSerializer =
+    new _$GOnUpdateCommentData_onUpdateComment_habitSerializer();
+Serializer<GOnUpdateCommentData_onUpdateComment_habit_comments>
+    _$gOnUpdateCommentDataOnUpdateCommentHabitCommentsSerializer =
+    new _$GOnUpdateCommentData_onUpdateComment_habit_commentsSerializer();
+Serializer<GOnUpdateCommentData_onUpdateComment_habit_comments_items>
+    _$gOnUpdateCommentDataOnUpdateCommentHabitCommentsItemsSerializer =
+    new _$GOnUpdateCommentData_onUpdateComment_habit_comments_itemsSerializer();
+Serializer<GOnCreateHabitData> _$gOnCreateHabitDataSerializer =
+    new _$GOnCreateHabitDataSerializer();
+Serializer<GOnCreateHabitData_onCreateHabit>
+    _$gOnCreateHabitDataOnCreateHabitSerializer =
+    new _$GOnCreateHabitData_onCreateHabitSerializer();
+Serializer<GOnCreateHabitData_onCreateHabit_comments>
+    _$gOnCreateHabitDataOnCreateHabitCommentsSerializer =
+    new _$GOnCreateHabitData_onCreateHabit_commentsSerializer();
+Serializer<GOnCreateHabitData_onCreateHabit_comments_items>
+    _$gOnCreateHabitDataOnCreateHabitCommentsItemsSerializer =
+    new _$GOnCreateHabitData_onCreateHabit_comments_itemsSerializer();
+Serializer<GOnCreateHabitData_onCreateHabit_comments_items_by>
+    _$gOnCreateHabitDataOnCreateHabitCommentsItemsBySerializer =
+    new _$GOnCreateHabitData_onCreateHabit_comments_items_bySerializer();
+Serializer<GOnCreateHabitData_onCreateHabit_comments_items_by_avatar>
+    _$gOnCreateHabitDataOnCreateHabitCommentsItemsByAvatarSerializer =
+    new _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatarSerializer();
+Serializer<GOnCreateHabitData_onCreateHabit_comments_items_habit>
+    _$gOnCreateHabitDataOnCreateHabitCommentsItemsHabitSerializer =
+    new _$GOnCreateHabitData_onCreateHabit_comments_items_habitSerializer();
+Serializer<GOnCreateHabitData_onCreateHabit_comments_items_habit_comments>
+    _$gOnCreateHabitDataOnCreateHabitCommentsItemsHabitCommentsSerializer =
+    new _$GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsSerializer();
+Serializer<GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>
+    _$gOnCreateHabitDataOnCreateHabitCommentsItemsHabitCommentsItemsSerializer =
+    new _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsSerializer();
+Serializer<GOnUpdateHabitData> _$gOnUpdateHabitDataSerializer =
+    new _$GOnUpdateHabitDataSerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit>
+    _$gOnUpdateHabitDataOnUpdateHabitSerializer =
+    new _$GOnUpdateHabitData_onUpdateHabitSerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit_comments>
+    _$gOnUpdateHabitDataOnUpdateHabitCommentsSerializer =
+    new _$GOnUpdateHabitData_onUpdateHabit_commentsSerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items>
+    _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsSerializer =
+    new _$GOnUpdateHabitData_onUpdateHabit_comments_itemsSerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_by>
+    _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsBySerializer =
+    new _$GOnUpdateHabitData_onUpdateHabit_comments_items_bySerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar>
+    _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsByAvatarSerializer =
+    new _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarSerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_habit>
+    _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsHabitSerializer =
+    new _$GOnUpdateHabitData_onUpdateHabit_comments_items_habitSerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments>
+    _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsHabitCommentsSerializer =
+    new _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsSerializer();
+Serializer<GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>
+    _$gOnUpdateHabitDataOnUpdateHabitCommentsItemsHabitCommentsItemsSerializer =
+    new _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsSerializer();
 Serializer<GCreateUserData> _$gCreateUserDataSerializer =
     new _$GCreateUserDataSerializer();
 Serializer<GCreateUserData_createUser> _$gCreateUserDataCreateUserSerializer =
@@ -260,6 +384,9 @@ Serializer<GCreateCommentData_createComment>
 Serializer<GCreateCommentData_createComment_by>
     _$gCreateCommentDataCreateCommentBySerializer =
     new _$GCreateCommentData_createComment_bySerializer();
+Serializer<GCreateCommentData_createComment_by_avatar>
+    _$gCreateCommentDataCreateCommentByAvatarSerializer =
+    new _$GCreateCommentData_createComment_by_avatarSerializer();
 Serializer<GCreateCommentData_createComment_habit>
     _$gCreateCommentDataCreateCommentHabitSerializer =
     new _$GCreateCommentData_createComment_habitSerializer();
@@ -283,6 +410,9 @@ Serializer<GCreateHabitData_createHabit_comments_items>
 Serializer<GCreateHabitData_createHabit_comments_items_by>
     _$gCreateHabitDataCreateHabitCommentsItemsBySerializer =
     new _$GCreateHabitData_createHabit_comments_items_bySerializer();
+Serializer<GCreateHabitData_createHabit_comments_items_by_avatar>
+    _$gCreateHabitDataCreateHabitCommentsItemsByAvatarSerializer =
+    new _$GCreateHabitData_createHabit_comments_items_by_avatarSerializer();
 Serializer<GCreateHabitData_createHabit_comments_items_habit>
     _$gCreateHabitDataCreateHabitCommentsItemsHabitSerializer =
     new _$GCreateHabitData_createHabit_comments_items_habitSerializer();
@@ -308,6 +438,9 @@ Serializer<GUpdateUserData_updateUser_comments_items>
 Serializer<GUpdateUserData_updateUser_comments_items_by>
     _$gUpdateUserDataUpdateUserCommentsItemsBySerializer =
     new _$GUpdateUserData_updateUser_comments_items_bySerializer();
+Serializer<GUpdateUserData_updateUser_comments_items_by_avatar>
+    _$gUpdateUserDataUpdateUserCommentsItemsByAvatarSerializer =
+    new _$GUpdateUserData_updateUser_comments_items_by_avatarSerializer();
 Serializer<GUpdateUserData_updateUser_comments_items_habit>
     _$gUpdateUserDataUpdateUserCommentsItemsHabitSerializer =
     new _$GUpdateUserData_updateUser_comments_items_habitSerializer();
@@ -332,6 +465,9 @@ Serializer<GUpdateUserData_updateUser_habits_items_comments_items>
 Serializer<GUpdateUserData_updateUser_habits_items_comments_items_by>
     _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsBySerializer =
     new _$GUpdateUserData_updateUser_habits_items_comments_items_bySerializer();
+Serializer<GUpdateUserData_updateUser_habits_items_comments_items_by_avatar>
+    _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatarSerializer();
 Serializer<GUpdateUserData_updateUser_habits_items_comments_items_habit>
     _$gUpdateUserDataUpdateUserHabitsItemsCommentsItemsHabitSerializer =
     new _$GUpdateUserData_updateUser_habits_items_comments_items_habitSerializer();
@@ -357,6 +493,9 @@ Serializer<GUpdateHabitData_updateHabit_comments_items>
 Serializer<GUpdateHabitData_updateHabit_comments_items_by>
     _$gUpdateHabitDataUpdateHabitCommentsItemsBySerializer =
     new _$GUpdateHabitData_updateHabit_comments_items_bySerializer();
+Serializer<GUpdateHabitData_updateHabit_comments_items_by_avatar>
+    _$gUpdateHabitDataUpdateHabitCommentsItemsByAvatarSerializer =
+    new _$GUpdateHabitData_updateHabit_comments_items_by_avatarSerializer();
 Serializer<GUpdateHabitData_updateHabit_comments_items_habit>
     _$gUpdateHabitDataUpdateHabitCommentsItemsHabitSerializer =
     new _$GUpdateHabitData_updateHabit_comments_items_habitSerializer();
@@ -410,6 +549,9 @@ Serializer<GSearchUsersData_listUsers_items_comments_items>
 Serializer<GSearchUsersData_listUsers_items_comments_items_by>
     _$gSearchUsersDataListUsersItemsCommentsItemsBySerializer =
     new _$GSearchUsersData_listUsers_items_comments_items_bySerializer();
+Serializer<GSearchUsersData_listUsers_items_comments_items_by_avatar>
+    _$gSearchUsersDataListUsersItemsCommentsItemsByAvatarSerializer =
+    new _$GSearchUsersData_listUsers_items_comments_items_by_avatarSerializer();
 Serializer<GSearchUsersData_listUsers_items_comments_items_habit>
     _$gSearchUsersDataListUsersItemsCommentsItemsHabitSerializer =
     new _$GSearchUsersData_listUsers_items_comments_items_habitSerializer();
@@ -434,6 +576,10 @@ Serializer<GSearchUsersData_listUsers_items_habits_items_comments_items>
 Serializer<GSearchUsersData_listUsers_items_habits_items_comments_items_by>
     _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsBySerializer =
     new _$GSearchUsersData_listUsers_items_habits_items_comments_items_bySerializer();
+Serializer<
+        GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar>
+    _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarSerializer();
 Serializer<GSearchUsersData_listUsers_items_habits_items_comments_items_habit>
     _$gSearchUsersDataListUsersItemsHabitsItemsCommentsItemsHabitSerializer =
     new _$GSearchUsersData_listUsers_items_habits_items_comments_items_habitSerializer();
@@ -462,6 +608,9 @@ Serializer<GSearchHabitsData_listHabits_items_comments_items>
 Serializer<GSearchHabitsData_listHabits_items_comments_items_by>
     _$gSearchHabitsDataListHabitsItemsCommentsItemsBySerializer =
     new _$GSearchHabitsData_listHabits_items_comments_items_bySerializer();
+Serializer<GSearchHabitsData_listHabits_items_comments_items_by_avatar>
+    _$gSearchHabitsDataListHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GSearchHabitsData_listHabits_items_comments_items_by_avatarSerializer();
 Serializer<GSearchHabitsData_listHabits_items_comments_items_habit>
     _$gSearchHabitsDataListHabitsItemsCommentsItemsHabitSerializer =
     new _$GSearchHabitsData_listHabits_items_comments_items_habitSerializer();
@@ -483,6 +632,9 @@ Serializer<GAllHabitFieldsData_comments_items>
 Serializer<GAllHabitFieldsData_comments_items_by>
     _$gAllHabitFieldsDataCommentsItemsBySerializer =
     new _$GAllHabitFieldsData_comments_items_bySerializer();
+Serializer<GAllHabitFieldsData_comments_items_by_avatar>
+    _$gAllHabitFieldsDataCommentsItemsByAvatarSerializer =
+    new _$GAllHabitFieldsData_comments_items_by_avatarSerializer();
 Serializer<GAllHabitFieldsData_comments_items_habit>
     _$gAllHabitFieldsDataCommentsItemsHabitSerializer =
     new _$GAllHabitFieldsData_comments_items_habitSerializer();
@@ -506,6 +658,9 @@ Serializer<GAllPublicUserFieldsData_comments_items>
 Serializer<GAllPublicUserFieldsData_comments_items_by>
     _$gAllPublicUserFieldsDataCommentsItemsBySerializer =
     new _$GAllPublicUserFieldsData_comments_items_bySerializer();
+Serializer<GAllPublicUserFieldsData_comments_items_by_avatar>
+    _$gAllPublicUserFieldsDataCommentsItemsByAvatarSerializer =
+    new _$GAllPublicUserFieldsData_comments_items_by_avatarSerializer();
 Serializer<GAllPublicUserFieldsData_comments_items_habit>
     _$gAllPublicUserFieldsDataCommentsItemsHabitSerializer =
     new _$GAllPublicUserFieldsData_comments_items_habitSerializer();
@@ -530,6 +685,9 @@ Serializer<GAllPublicUserFieldsData_habits_items_comments_items>
 Serializer<GAllPublicUserFieldsData_habits_items_comments_items_by>
     _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsBySerializer =
     new _$GAllPublicUserFieldsData_habits_items_comments_items_bySerializer();
+Serializer<GAllPublicUserFieldsData_habits_items_comments_items_by_avatar>
+    _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatarSerializer();
 Serializer<GAllPublicUserFieldsData_habits_items_comments_items_habit>
     _$gAllPublicUserFieldsDataHabitsItemsCommentsItemsHabitSerializer =
     new _$GAllPublicUserFieldsData_habits_items_comments_items_habitSerializer();
@@ -554,6 +712,9 @@ Serializer<GAllPrivateUserFieldsData_comments_items>
 Serializer<GAllPrivateUserFieldsData_comments_items_by>
     _$gAllPrivateUserFieldsDataCommentsItemsBySerializer =
     new _$GAllPrivateUserFieldsData_comments_items_bySerializer();
+Serializer<GAllPrivateUserFieldsData_comments_items_by_avatar>
+    _$gAllPrivateUserFieldsDataCommentsItemsByAvatarSerializer =
+    new _$GAllPrivateUserFieldsData_comments_items_by_avatarSerializer();
 Serializer<GAllPrivateUserFieldsData_comments_items_habit>
     _$gAllPrivateUserFieldsDataCommentsItemsHabitSerializer =
     new _$GAllPrivateUserFieldsData_comments_items_habitSerializer();
@@ -578,6 +739,9 @@ Serializer<GAllPrivateUserFieldsData_habits_items_comments_items>
 Serializer<GAllPrivateUserFieldsData_habits_items_comments_items_by>
     _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsBySerializer =
     new _$GAllPrivateUserFieldsData_habits_items_comments_items_bySerializer();
+Serializer<GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar>
+    _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsByAvatarSerializer =
+    new _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarSerializer();
 Serializer<GAllPrivateUserFieldsData_habits_items_comments_items_habit>
     _$gAllPrivateUserFieldsDataHabitsItemsCommentsItemsHabitSerializer =
     new _$GAllPrivateUserFieldsData_habits_items_comments_items_habitSerializer();
@@ -592,6 +756,9 @@ Serializer<GAllCommentFieldsData> _$gAllCommentFieldsDataSerializer =
     new _$GAllCommentFieldsDataSerializer();
 Serializer<GAllCommentFieldsData_by> _$gAllCommentFieldsDataBySerializer =
     new _$GAllCommentFieldsData_bySerializer();
+Serializer<GAllCommentFieldsData_by_avatar>
+    _$gAllCommentFieldsDataByAvatarSerializer =
+    new _$GAllCommentFieldsData_by_avatarSerializer();
 Serializer<GAllCommentFieldsData_habit> _$gAllCommentFieldsDataHabitSerializer =
     new _$GAllCommentFieldsData_habitSerializer();
 Serializer<GAllCommentFieldsData_habit_comments>
@@ -1090,6 +1257,14 @@ class _$GListHabitsData_listHabits_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GListHabitsData_listHabits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -1120,6 +1295,105 @@ class _$GListHabitsData_listHabits_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GListHabitsData_listHabits_items_comments_items_by_avatar))!
+              as GListHabitsData_listHabits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GListHabitsData_listHabits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GListHabitsData_listHabits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GListHabitsData_listHabits_items_comments_items_by_avatar,
+    _$GListHabitsData_listHabits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GListHabitsData_listHabits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GListHabitsData_listHabits_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GListHabitsData_listHabits_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GListHabitsData_listHabits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -1938,6 +2212,14 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_bySerial
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -1968,6 +2250,107 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_bySerial
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar))!
+              as GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar,
+    _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -2697,6 +3080,14 @@ class _$GGetHabitData_getHabit_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GGetHabitData_getHabit_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -2726,6 +3117,102 @@ class _$GGetHabitData_getHabit_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GGetHabitData_getHabit_comments_items_by_avatar))!
+              as GGetHabitData_getHabit_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetHabitData_getHabit_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<GGetHabitData_getHabit_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GGetHabitData_getHabit_comments_items_by_avatar,
+    _$GGetHabitData_getHabit_comments_items_by_avatar
+  ];
+  @override
+  final String wireName = 'GGetHabitData_getHabit_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetHabitData_getHabit_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetHabitData_getHabit_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetHabitData_getHabit_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -3509,6 +3996,14 @@ class _$GGetUserData_getUser_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GGetUserData_getUser_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -3538,6 +4033,102 @@ class _$GGetUserData_getUser_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GGetUserData_getUser_comments_items_by_avatar))!
+              as GGetUserData_getUser_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetUserData_getUser_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<GGetUserData_getUser_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GGetUserData_getUser_comments_items_by_avatar,
+    _$GGetUserData_getUser_comments_items_by_avatar
+  ];
+  @override
+  final String wireName = 'GGetUserData_getUser_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetUserData_getUser_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetUserData_getUser_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetUserData_getUser_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -4266,6 +4857,14 @@ class _$GGetUserData_getUser_habits_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GGetUserData_getUser_habits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -4296,6 +4895,105 @@ class _$GGetUserData_getUser_habits_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GGetUserData_getUser_habits_items_comments_items_by_avatar))!
+              as GGetUserData_getUser_habits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetUserData_getUser_habits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GGetUserData_getUser_habits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GGetUserData_getUser_habits_items_comments_items_by_avatar,
+    _$GGetUserData_getUser_habits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GGetUserData_getUser_habits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetUserData_getUser_habits_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetUserData_getUser_habits_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -5112,6 +5810,14 @@ class _$GGetSelfData_getUser_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GGetSelfData_getUser_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -5141,6 +5847,102 @@ class _$GGetSelfData_getUser_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GGetSelfData_getUser_comments_items_by_avatar))!
+              as GGetSelfData_getUser_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetSelfData_getUser_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<GGetSelfData_getUser_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GGetSelfData_getUser_comments_items_by_avatar,
+    _$GGetSelfData_getUser_comments_items_by_avatar
+  ];
+  @override
+  final String wireName = 'GGetSelfData_getUser_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetSelfData_getUser_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetSelfData_getUser_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetSelfData_getUser_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -5869,6 +6671,14 @@ class _$GGetSelfData_getUser_habits_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GGetSelfData_getUser_habits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -5899,6 +6709,105 @@ class _$GGetSelfData_getUser_habits_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GGetSelfData_getUser_habits_items_comments_items_by_avatar))!
+              as GGetSelfData_getUser_habits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetSelfData_getUser_habits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GGetSelfData_getUser_habits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GGetSelfData_getUser_habits_items_comments_items_by_avatar,
+    _$GGetSelfData_getUser_habits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GGetSelfData_getUser_habits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetSelfData_getUser_habits_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetSelfData_getUser_habits_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -6429,6 +7338,14 @@ class _$GGetCommentData_getComment_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GGetCommentData_getComment_by_avatar)));
+    }
     return result;
   }
 
@@ -6458,6 +7375,101 @@ class _$GGetCommentData_getComment_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GGetCommentData_getComment_by_avatar))!
+              as GGetCommentData_getComment_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetCommentData_getComment_by_avatarSerializer
+    implements StructuredSerializer<GGetCommentData_getComment_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GGetCommentData_getComment_by_avatar,
+    _$GGetCommentData_getComment_by_avatar
+  ];
+  @override
+  final String wireName = 'GGetCommentData_getComment_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetCommentData_getComment_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetCommentData_getComment_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetCommentData_getComment_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -7282,6 +8294,14 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GSubscribeToUserData_subscribeToUser_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -7312,6 +8332,105 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GSubscribeToUserData_subscribeToUser_comments_items_by_avatar))!
+              as GSubscribeToUserData_subscribeToUser_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GSubscribeToUserData_subscribeToUser_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GSubscribeToUserData_subscribeToUser_comments_items_by_avatar,
+    _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GSubscribeToUserData_subscribeToUser_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -8063,6 +9182,14 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_bySeria
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -8093,6 +9220,107 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_bySeria
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar))!
+              as GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar,
+    _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -8370,6 +9598,3078 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_c
           {FullType specifiedType = FullType.unspecified}) {
     final result =
         new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_comments_itemsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateCommentDataSerializer
+    implements StructuredSerializer<GOnCreateCommentData> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentData,
+    _$GOnCreateCommentData
+  ];
+  @override
+  final String wireName = 'GOnCreateCommentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateCommentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.onCreateComment;
+    if (value != null) {
+      result
+        ..add('onCreateComment')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnCreateCommentData_onCreateComment)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateCommentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateCommentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'onCreateComment':
+          result.onCreateComment.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GOnCreateCommentData_onCreateComment))!
+              as GOnCreateCommentData_onCreateComment);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateCommentData_onCreateCommentSerializer
+    implements StructuredSerializer<GOnCreateCommentData_onCreateComment> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentData_onCreateComment,
+    _$GOnCreateCommentData_onCreateComment
+  ];
+  @override
+  final String wireName = 'GOnCreateCommentData_onCreateComment';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateCommentData_onCreateComment object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.by;
+    if (value != null) {
+      result
+        ..add('by')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnCreateCommentData_onCreateComment_by)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habit;
+    if (value != null) {
+      result
+        ..add('habit')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnCreateCommentData_onCreateComment_habit)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateCommentData_onCreateCommentBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'by':
+          result.by.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GOnCreateCommentData_onCreateComment_by))!
+              as GOnCreateCommentData_onCreateComment_by);
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habit':
+          result.habit.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateCommentData_onCreateComment_habit))!
+              as GOnCreateCommentData_onCreateComment_habit);
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_bySerializer
+    implements StructuredSerializer<GOnCreateCommentData_onCreateComment_by> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentData_onCreateComment_by,
+    _$GOnCreateCommentData_onCreateComment_by
+  ];
+  @override
+  final String wireName = 'GOnCreateCommentData_onCreateComment_by';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateCommentData_onCreateComment_by object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'username',
+      serializers.serialize(object.username,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.displayUsername;
+    if (value != null) {
+      result
+        ..add('displayUsername')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnCreateCommentData_onCreateComment_by_avatar)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_by deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateCommentData_onCreateComment_byBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'username':
+          result.username = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'displayUsername':
+          result.displayUsername = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateCommentData_onCreateComment_by_avatar))!
+              as GOnCreateCommentData_onCreateComment_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_by_avatarSerializer
+    implements
+        StructuredSerializer<GOnCreateCommentData_onCreateComment_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentData_onCreateComment_by_avatar,
+    _$GOnCreateCommentData_onCreateComment_by_avatar
+  ];
+  @override
+  final String wireName = 'GOnCreateCommentData_onCreateComment_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateCommentData_onCreateComment_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateCommentData_onCreateComment_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_habitSerializer
+    implements
+        StructuredSerializer<GOnCreateCommentData_onCreateComment_habit> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentData_onCreateComment_habit,
+    _$GOnCreateCommentData_onCreateComment_habit
+  ];
+  @override
+  final String wireName = 'GOnCreateCommentData_onCreateComment_habit';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateCommentData_onCreateComment_habit object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'tagline',
+      serializers.serialize(object.tagline,
+          specifiedType: const FullType(String)),
+      'category',
+      serializers.serialize(object.category,
+          specifiedType: const FullType(_i2.GCategory)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.details;
+    if (value != null) {
+      result
+        ..add('details')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.comments;
+    if (value != null) {
+      result
+        ..add('comments')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnCreateCommentData_onCreateComment_habit_comments)));
+    }
+    value = object.ups;
+    if (value != null) {
+      result
+        ..add('ups')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.downs;
+    if (value != null) {
+      result
+        ..add('downs')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateCommentData_onCreateComment_habitBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'tagline':
+          result.tagline = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
+          break;
+        case 'details':
+          result.details = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comments':
+          result.comments.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateCommentData_onCreateComment_habit_comments))!
+              as GOnCreateCommentData_onCreateComment_habit_comments);
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'ups':
+          result.ups = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'downs':
+          result.downs = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_habit_commentsSerializer
+    implements
+        StructuredSerializer<
+            GOnCreateCommentData_onCreateComment_habit_comments> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentData_onCreateComment_habit_comments,
+    _$GOnCreateCommentData_onCreateComment_habit_comments
+  ];
+  @override
+  final String wireName = 'GOnCreateCommentData_onCreateComment_habit_comments';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateCommentData_onCreateComment_habit_comments object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'items',
+      serializers.serialize(object.items,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GOnCreateCommentData_onCreateComment_habit_comments_items)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnCreateCommentData_onCreateComment_habit_commentsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'items':
+          result.items.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GOnCreateCommentData_onCreateComment_habit_comments_items)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_habit_comments_itemsSerializer
+    implements
+        StructuredSerializer<
+            GOnCreateCommentData_onCreateComment_habit_comments_items> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateCommentData_onCreateComment_habit_comments_items,
+    _$GOnCreateCommentData_onCreateComment_habit_comments_items
+  ];
+  @override
+  final String wireName =
+      'GOnCreateCommentData_onCreateComment_habit_comments_items';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateCommentData_onCreateComment_habit_comments_items object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments_items deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateCommentDataSerializer
+    implements StructuredSerializer<GOnUpdateCommentData> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentData,
+    _$GOnUpdateCommentData
+  ];
+  @override
+  final String wireName = 'GOnUpdateCommentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateCommentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.onUpdateComment;
+    if (value != null) {
+      result
+        ..add('onUpdateComment')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnUpdateCommentData_onUpdateComment)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateCommentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateCommentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'onUpdateComment':
+          result.onUpdateComment.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GOnUpdateCommentData_onUpdateComment))!
+              as GOnUpdateCommentData_onUpdateComment);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateCommentSerializer
+    implements StructuredSerializer<GOnUpdateCommentData_onUpdateComment> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentData_onUpdateComment,
+    _$GOnUpdateCommentData_onUpdateComment
+  ];
+  @override
+  final String wireName = 'GOnUpdateCommentData_onUpdateComment';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateCommentData_onUpdateComment object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.by;
+    if (value != null) {
+      result
+        ..add('by')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnUpdateCommentData_onUpdateComment_by)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habit;
+    if (value != null) {
+      result
+        ..add('habit')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnUpdateCommentData_onUpdateComment_habit)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateCommentData_onUpdateCommentBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'by':
+          result.by.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GOnUpdateCommentData_onUpdateComment_by))!
+              as GOnUpdateCommentData_onUpdateComment_by);
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habit':
+          result.habit.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateCommentData_onUpdateComment_habit))!
+              as GOnUpdateCommentData_onUpdateComment_habit);
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_bySerializer
+    implements StructuredSerializer<GOnUpdateCommentData_onUpdateComment_by> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentData_onUpdateComment_by,
+    _$GOnUpdateCommentData_onUpdateComment_by
+  ];
+  @override
+  final String wireName = 'GOnUpdateCommentData_onUpdateComment_by';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateCommentData_onUpdateComment_by object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'username',
+      serializers.serialize(object.username,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.displayUsername;
+    if (value != null) {
+      result
+        ..add('displayUsername')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnUpdateCommentData_onUpdateComment_by_avatar)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_by deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateCommentData_onUpdateComment_byBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'username':
+          result.username = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'displayUsername':
+          result.displayUsername = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateCommentData_onUpdateComment_by_avatar))!
+              as GOnUpdateCommentData_onUpdateComment_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_by_avatarSerializer
+    implements
+        StructuredSerializer<GOnUpdateCommentData_onUpdateComment_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentData_onUpdateComment_by_avatar,
+    _$GOnUpdateCommentData_onUpdateComment_by_avatar
+  ];
+  @override
+  final String wireName = 'GOnUpdateCommentData_onUpdateComment_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateCommentData_onUpdateComment_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateCommentData_onUpdateComment_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_habitSerializer
+    implements
+        StructuredSerializer<GOnUpdateCommentData_onUpdateComment_habit> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentData_onUpdateComment_habit,
+    _$GOnUpdateCommentData_onUpdateComment_habit
+  ];
+  @override
+  final String wireName = 'GOnUpdateCommentData_onUpdateComment_habit';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateCommentData_onUpdateComment_habit object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'tagline',
+      serializers.serialize(object.tagline,
+          specifiedType: const FullType(String)),
+      'category',
+      serializers.serialize(object.category,
+          specifiedType: const FullType(_i2.GCategory)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.details;
+    if (value != null) {
+      result
+        ..add('details')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.comments;
+    if (value != null) {
+      result
+        ..add('comments')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnUpdateCommentData_onUpdateComment_habit_comments)));
+    }
+    value = object.ups;
+    if (value != null) {
+      result
+        ..add('ups')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.downs;
+    if (value != null) {
+      result
+        ..add('downs')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateCommentData_onUpdateComment_habitBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'tagline':
+          result.tagline = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
+          break;
+        case 'details':
+          result.details = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comments':
+          result.comments.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateCommentData_onUpdateComment_habit_comments))!
+              as GOnUpdateCommentData_onUpdateComment_habit_comments);
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'ups':
+          result.ups = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'downs':
+          result.downs = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_habit_commentsSerializer
+    implements
+        StructuredSerializer<
+            GOnUpdateCommentData_onUpdateComment_habit_comments> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentData_onUpdateComment_habit_comments,
+    _$GOnUpdateCommentData_onUpdateComment_habit_comments
+  ];
+  @override
+  final String wireName = 'GOnUpdateCommentData_onUpdateComment_habit_comments';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateCommentData_onUpdateComment_habit_comments object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'items',
+      serializers.serialize(object.items,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GOnUpdateCommentData_onUpdateComment_habit_comments_items)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'items':
+          result.items.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GOnUpdateCommentData_onUpdateComment_habit_comments_items)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_habit_comments_itemsSerializer
+    implements
+        StructuredSerializer<
+            GOnUpdateCommentData_onUpdateComment_habit_comments_items> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateCommentData_onUpdateComment_habit_comments_items,
+    _$GOnUpdateCommentData_onUpdateComment_habit_comments_items
+  ];
+  @override
+  final String wireName =
+      'GOnUpdateCommentData_onUpdateComment_habit_comments_items';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateCommentData_onUpdateComment_habit_comments_items object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments_items deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitDataSerializer
+    implements StructuredSerializer<GOnCreateHabitData> {
+  @override
+  final Iterable<Type> types = const [GOnCreateHabitData, _$GOnCreateHabitData];
+  @override
+  final String wireName = 'GOnCreateHabitData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateHabitData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.onCreateHabit;
+    if (value != null) {
+      result
+        ..add('onCreateHabit')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOnCreateHabitData_onCreateHabit)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateHabitDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'onCreateHabit':
+          result.onCreateHabit.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GOnCreateHabitData_onCreateHabit))!
+              as GOnCreateHabitData_onCreateHabit);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabitSerializer
+    implements StructuredSerializer<GOnCreateHabitData_onCreateHabit> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit,
+    _$GOnCreateHabitData_onCreateHabit
+  ];
+  @override
+  final String wireName = 'GOnCreateHabitData_onCreateHabit';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateHabitData_onCreateHabit object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'tagline',
+      serializers.serialize(object.tagline,
+          specifiedType: const FullType(String)),
+      'category',
+      serializers.serialize(object.category,
+          specifiedType: const FullType(_i2.GCategory)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.details;
+    if (value != null) {
+      result
+        ..add('details')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.comments;
+    if (value != null) {
+      result
+        ..add('comments')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnCreateHabitData_onCreateHabit_comments)));
+    }
+    value = object.ups;
+    if (value != null) {
+      result
+        ..add('ups')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.downs;
+    if (value != null) {
+      result
+        ..add('downs')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateHabitData_onCreateHabitBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'tagline':
+          result.tagline = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
+          break;
+        case 'details':
+          result.details = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comments':
+          result.comments.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateHabitData_onCreateHabit_comments))!
+              as GOnCreateHabitData_onCreateHabit_comments);
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'ups':
+          result.ups = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'downs':
+          result.downs = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_commentsSerializer
+    implements StructuredSerializer<GOnCreateHabitData_onCreateHabit_comments> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit_comments,
+    _$GOnCreateHabitData_onCreateHabit_comments
+  ];
+  @override
+  final String wireName = 'GOnCreateHabitData_onCreateHabit_comments';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnCreateHabitData_onCreateHabit_comments object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'items',
+      serializers.serialize(object.items,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(GOnCreateHabitData_onCreateHabit_comments_items)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateHabitData_onCreateHabit_commentsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'items':
+          result.items.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GOnCreateHabitData_onCreateHabit_comments_items)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_itemsSerializer
+    implements
+        StructuredSerializer<GOnCreateHabitData_onCreateHabit_comments_items> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit_comments_items,
+    _$GOnCreateHabitData_onCreateHabit_comments_items
+  ];
+  @override
+  final String wireName = 'GOnCreateHabitData_onCreateHabit_comments_items';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateHabitData_onCreateHabit_comments_items object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.by;
+    if (value != null) {
+      result
+        ..add('by')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnCreateHabitData_onCreateHabit_comments_items_by)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habit;
+    if (value != null) {
+      result
+        ..add('habit')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnCreateHabitData_onCreateHabit_comments_items_habit)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnCreateHabitData_onCreateHabit_comments_itemsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'by':
+          result.by.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateHabitData_onCreateHabit_comments_items_by))!
+              as GOnCreateHabitData_onCreateHabit_comments_items_by);
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habit':
+          result.habit.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateHabitData_onCreateHabit_comments_items_habit))!
+              as GOnCreateHabitData_onCreateHabit_comments_items_habit);
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_bySerializer
+    implements
+        StructuredSerializer<
+            GOnCreateHabitData_onCreateHabit_comments_items_by> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit_comments_items_by,
+    _$GOnCreateHabitData_onCreateHabit_comments_items_by
+  ];
+  @override
+  final String wireName = 'GOnCreateHabitData_onCreateHabit_comments_items_by';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateHabitData_onCreateHabit_comments_items_by object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'username',
+      serializers.serialize(object.username,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.displayUsername;
+    if (value != null) {
+      result
+        ..add('displayUsername')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnCreateHabitData_onCreateHabit_comments_items_by_avatar)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnCreateHabitData_onCreateHabit_comments_items_byBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'username':
+          result.username = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'displayUsername':
+          result.displayUsername = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateHabitData_onCreateHabit_comments_items_by_avatar))!
+              as GOnCreateHabitData_onCreateHabit_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GOnCreateHabitData_onCreateHabit_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit_comments_items_by_avatar,
+    _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateHabitData_onCreateHabit_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_habitSerializer
+    implements
+        StructuredSerializer<
+            GOnCreateHabitData_onCreateHabit_comments_items_habit> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit_comments_items_habit,
+    _$GOnCreateHabitData_onCreateHabit_comments_items_habit
+  ];
+  @override
+  final String wireName =
+      'GOnCreateHabitData_onCreateHabit_comments_items_habit';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateHabitData_onCreateHabit_comments_items_habit object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'tagline',
+      serializers.serialize(object.tagline,
+          specifiedType: const FullType(String)),
+      'category',
+      serializers.serialize(object.category,
+          specifiedType: const FullType(_i2.GCategory)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.details;
+    if (value != null) {
+      result
+        ..add('details')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.comments;
+    if (value != null) {
+      result
+        ..add('comments')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnCreateHabitData_onCreateHabit_comments_items_habit_comments)));
+    }
+    value = object.ups;
+    if (value != null) {
+      result
+        ..add('ups')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.downs;
+    if (value != null) {
+      result
+        ..add('downs')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'tagline':
+          result.tagline = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
+          break;
+        case 'details':
+          result.details = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comments':
+          result.comments.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnCreateHabitData_onCreateHabit_comments_items_habit_comments))!
+              as GOnCreateHabitData_onCreateHabit_comments_items_habit_comments);
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'ups':
+          result.ups = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'downs':
+          result.downs = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsSerializer
+    implements
+        StructuredSerializer<
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit_comments_items_habit_comments,
+    _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+  ];
+  @override
+  final String wireName =
+      'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnCreateHabitData_onCreateHabit_comments_items_habit_comments object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'items',
+      serializers.serialize(object.items,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'items':
+          result.items.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsSerializer
+    implements
+        StructuredSerializer<
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items> {
+  @override
+  final Iterable<Type> types = const [
+    GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items,
+    _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+  ];
+  @override
+  final String wireName =
+      'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitDataSerializer
+    implements StructuredSerializer<GOnUpdateHabitData> {
+  @override
+  final Iterable<Type> types = const [GOnUpdateHabitData, _$GOnUpdateHabitData];
+  @override
+  final String wireName = 'GOnUpdateHabitData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateHabitData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.onUpdateHabit;
+    if (value != null) {
+      result
+        ..add('onUpdateHabit')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOnUpdateHabitData_onUpdateHabit)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateHabitDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'onUpdateHabit':
+          result.onUpdateHabit.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GOnUpdateHabitData_onUpdateHabit))!
+              as GOnUpdateHabitData_onUpdateHabit);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabitSerializer
+    implements StructuredSerializer<GOnUpdateHabitData_onUpdateHabit> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit,
+    _$GOnUpdateHabitData_onUpdateHabit
+  ];
+  @override
+  final String wireName = 'GOnUpdateHabitData_onUpdateHabit';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateHabitData_onUpdateHabit object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'tagline',
+      serializers.serialize(object.tagline,
+          specifiedType: const FullType(String)),
+      'category',
+      serializers.serialize(object.category,
+          specifiedType: const FullType(_i2.GCategory)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.details;
+    if (value != null) {
+      result
+        ..add('details')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.comments;
+    if (value != null) {
+      result
+        ..add('comments')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GOnUpdateHabitData_onUpdateHabit_comments)));
+    }
+    value = object.ups;
+    if (value != null) {
+      result
+        ..add('ups')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.downs;
+    if (value != null) {
+      result
+        ..add('downs')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateHabitData_onUpdateHabitBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'tagline':
+          result.tagline = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
+          break;
+        case 'details':
+          result.details = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comments':
+          result.comments.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateHabitData_onUpdateHabit_comments))!
+              as GOnUpdateHabitData_onUpdateHabit_comments);
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'ups':
+          result.ups = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'downs':
+          result.downs = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_commentsSerializer
+    implements StructuredSerializer<GOnUpdateHabitData_onUpdateHabit_comments> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit_comments,
+    _$GOnUpdateHabitData_onUpdateHabit_comments
+  ];
+  @override
+  final String wireName = 'GOnUpdateHabitData_onUpdateHabit_comments';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOnUpdateHabitData_onUpdateHabit_comments object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'items',
+      serializers.serialize(object.items,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(GOnUpdateHabitData_onUpdateHabit_comments_items)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateHabitData_onUpdateHabit_commentsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'items':
+          result.items.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GOnUpdateHabitData_onUpdateHabit_comments_items)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_itemsSerializer
+    implements
+        StructuredSerializer<GOnUpdateHabitData_onUpdateHabit_comments_items> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit_comments_items,
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items
+  ];
+  @override
+  final String wireName = 'GOnUpdateHabitData_onUpdateHabit_comments_items';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateHabitData_onUpdateHabit_comments_items object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.by;
+    if (value != null) {
+      result
+        ..add('by')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnUpdateHabitData_onUpdateHabit_comments_items_by)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habit;
+    if (value != null) {
+      result
+        ..add('habit')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnUpdateHabitData_onUpdateHabit_comments_items_habit)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'by':
+          result.by.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateHabitData_onUpdateHabit_comments_items_by))!
+              as GOnUpdateHabitData_onUpdateHabit_comments_items_by);
+          break;
+        case 'habitId':
+          result.habitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'habit':
+          result.habit.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateHabitData_onUpdateHabit_comments_items_habit))!
+              as GOnUpdateHabitData_onUpdateHabit_comments_items_habit);
+          break;
+        case 'comment':
+          result.comment = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_bySerializer
+    implements
+        StructuredSerializer<
+            GOnUpdateHabitData_onUpdateHabit_comments_items_by> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit_comments_items_by,
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_by
+  ];
+  @override
+  final String wireName = 'GOnUpdateHabitData_onUpdateHabit_comments_items_by';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateHabitData_onUpdateHabit_comments_items_by object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'username',
+      serializers.serialize(object.username,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.displayUsername;
+    if (value != null) {
+      result
+        ..add('displayUsername')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'username':
+          result.username = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'displayUsername':
+          result.displayUsername = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar))!
+              as GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar,
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_habitSerializer
+    implements
+        StructuredSerializer<
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit_comments_items_habit,
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit
+  ];
+  @override
+  final String wireName =
+      'GOnUpdateHabitData_onUpdateHabit_comments_items_habit';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateHabitData_onUpdateHabit_comments_items_habit object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'tagline',
+      serializers.serialize(object.tagline,
+          specifiedType: const FullType(String)),
+      'category',
+      serializers.serialize(object.category,
+          specifiedType: const FullType(_i2.GCategory)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.details;
+    if (value != null) {
+      result
+        ..add('details')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.comments;
+    if (value != null) {
+      result
+        ..add('comments')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments)));
+    }
+    value = object.ups;
+    if (value != null) {
+      result
+        ..add('ups')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.downs;
+    if (value != null) {
+      result
+        ..add('downs')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'tagline':
+          result.tagline = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GCategory))! as _i2.GCategory;
+          break;
+        case 'details':
+          result.details = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'owner':
+          result.owner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'comments':
+          result.comments.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments))!
+              as GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments);
+          break;
+        case 'createdAt':
+          result.createdAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'updatedAt':
+          result.updatedAt.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAWSDateTime))!
+              as _i2.GAWSDateTime);
+          break;
+        case 'ups':
+          result.ups = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'downs':
+          result.downs = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsSerializer
+    implements
+        StructuredSerializer<
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments,
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+  ];
+  @override
+  final String wireName =
+      'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'items',
+      serializers.serialize(object.items,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'items':
+          result.items.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsSerializer
+    implements
+        StructuredSerializer<
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items> {
+  @override
+  final Iterable<Type> types = const [
+    GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items,
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+  ];
+  @override
+  final String wireName =
+      'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'comment',
+      serializers.serialize(object.comment,
+          specifiedType: const FullType(String)),
+      'createdAt',
+      serializers.serialize(object.createdAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+      'updatedAt',
+      serializers.serialize(object.updatedAt,
+          specifiedType: const FullType(_i2.GAWSDateTime)),
+    ];
+    Object? value;
+    value = object.owner;
+    if (value != null) {
+      result
+        ..add('owner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.habitId;
+    if (value != null) {
+      result
+        ..add('habitId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -8739,6 +13039,14 @@ class _$GCreateCommentData_createComment_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GCreateCommentData_createComment_by_avatar)));
+    }
     return result;
   }
 
@@ -8768,6 +13076,102 @@ class _$GCreateCommentData_createComment_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GCreateCommentData_createComment_by_avatar))!
+              as GCreateCommentData_createComment_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateCommentData_createComment_by_avatarSerializer
+    implements
+        StructuredSerializer<GCreateCommentData_createComment_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GCreateCommentData_createComment_by_avatar,
+    _$GCreateCommentData_createComment_by_avatar
+  ];
+  @override
+  final String wireName = 'GCreateCommentData_createComment_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GCreateCommentData_createComment_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCreateCommentData_createComment_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateCommentData_createComment_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -9489,6 +13893,14 @@ class _$GCreateHabitData_createHabit_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GCreateHabitData_createHabit_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -9518,6 +13930,105 @@ class _$GCreateHabitData_createHabit_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GCreateHabitData_createHabit_comments_items_by_avatar))!
+              as GCreateHabitData_createHabit_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateHabitData_createHabit_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GCreateHabitData_createHabit_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GCreateHabitData_createHabit_comments_items_by_avatar,
+    _$GCreateHabitData_createHabit_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GCreateHabitData_createHabit_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GCreateHabitData_createHabit_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCreateHabitData_createHabit_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GCreateHabitData_createHabit_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -10338,6 +14849,14 @@ class _$GUpdateUserData_updateUser_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GUpdateUserData_updateUser_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -10367,6 +14886,104 @@ class _$GUpdateUserData_updateUser_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GUpdateUserData_updateUser_comments_items_by_avatar))!
+              as GUpdateUserData_updateUser_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateUserData_updateUser_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GUpdateUserData_updateUser_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateUserData_updateUser_comments_items_by_avatar,
+    _$GUpdateUserData_updateUser_comments_items_by_avatar
+  ];
+  @override
+  final String wireName = 'GUpdateUserData_updateUser_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GUpdateUserData_updateUser_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateUserData_updateUser_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GUpdateUserData_updateUser_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -11103,6 +15720,14 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GUpdateUserData_updateUser_habits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -11133,6 +15758,105 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GUpdateUserData_updateUser_habits_items_comments_items_by_avatar))!
+              as GUpdateUserData_updateUser_habits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GUpdateUserData_updateUser_habits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateUserData_updateUser_habits_items_comments_items_by_avatar,
+    _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GUpdateUserData_updateUser_habits_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -11865,6 +16589,14 @@ class _$GUpdateHabitData_updateHabit_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GUpdateHabitData_updateHabit_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -11894,6 +16626,105 @@ class _$GUpdateHabitData_updateHabit_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GUpdateHabitData_updateHabit_comments_items_by_avatar))!
+              as GUpdateHabitData_updateHabit_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateHabitData_updateHabit_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GUpdateHabitData_updateHabit_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateHabitData_updateHabit_comments_items_by_avatar,
+    _$GUpdateHabitData_updateHabit_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GUpdateHabitData_updateHabit_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GUpdateHabitData_updateHabit_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateHabitData_updateHabit_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -13500,6 +18331,14 @@ class _$GSearchUsersData_listUsers_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GSearchUsersData_listUsers_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -13530,6 +18369,105 @@ class _$GSearchUsersData_listUsers_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GSearchUsersData_listUsers_items_comments_items_by_avatar))!
+              as GSearchUsersData_listUsers_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSearchUsersData_listUsers_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GSearchUsersData_listUsers_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GSearchUsersData_listUsers_items_comments_items_by_avatar,
+    _$GSearchUsersData_listUsers_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GSearchUsersData_listUsers_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GSearchUsersData_listUsers_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GSearchUsersData_listUsers_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -14275,6 +19213,14 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_bySerialize
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -14305,6 +19251,107 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_bySerialize
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar))!
+              as GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar,
+    _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -15099,6 +20146,14 @@ class _$GSearchHabitsData_listHabits_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GSearchHabitsData_listHabits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -15129,6 +20184,105 @@ class _$GSearchHabitsData_listHabits_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GSearchHabitsData_listHabits_items_comments_items_by_avatar))!
+              as GSearchHabitsData_listHabits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSearchHabitsData_listHabits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GSearchHabitsData_listHabits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GSearchHabitsData_listHabits_items_comments_items_by_avatar,
+    _$GSearchHabitsData_listHabits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GSearchHabitsData_listHabits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GSearchHabitsData_listHabits_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GSearchHabitsData_listHabits_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -15800,6 +20954,14 @@ class _$GAllHabitFieldsData_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(GAllHabitFieldsData_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -15829,6 +20991,102 @@ class _$GAllHabitFieldsData_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GAllHabitFieldsData_comments_items_by_avatar))!
+              as GAllHabitFieldsData_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAllHabitFieldsData_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<GAllHabitFieldsData_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GAllHabitFieldsData_comments_items_by_avatar,
+    _$GAllHabitFieldsData_comments_items_by_avatar
+  ];
+  @override
+  final String wireName = 'GAllHabitFieldsData_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GAllHabitFieldsData_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAllHabitFieldsData_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAllHabitFieldsData_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -16561,6 +21819,14 @@ class _$GAllPublicUserFieldsData_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GAllPublicUserFieldsData_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -16590,6 +21856,104 @@ class _$GAllPublicUserFieldsData_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GAllPublicUserFieldsData_comments_items_by_avatar))!
+              as GAllPublicUserFieldsData_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAllPublicUserFieldsData_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GAllPublicUserFieldsData_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GAllPublicUserFieldsData_comments_items_by_avatar,
+    _$GAllPublicUserFieldsData_comments_items_by_avatar
+  ];
+  @override
+  final String wireName = 'GAllPublicUserFieldsData_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GAllPublicUserFieldsData_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAllPublicUserFieldsData_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GAllPublicUserFieldsData_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -17324,6 +22688,14 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GAllPublicUserFieldsData_habits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -17354,6 +22726,105 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GAllPublicUserFieldsData_habits_items_comments_items_by_avatar))!
+              as GAllPublicUserFieldsData_habits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GAllPublicUserFieldsData_habits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GAllPublicUserFieldsData_habits_items_comments_items_by_avatar,
+    _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GAllPublicUserFieldsData_habits_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -18124,6 +23595,14 @@ class _$GAllPrivateUserFieldsData_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GAllPrivateUserFieldsData_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -18153,6 +23632,104 @@ class _$GAllPrivateUserFieldsData_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GAllPrivateUserFieldsData_comments_items_by_avatar))!
+              as GAllPrivateUserFieldsData_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAllPrivateUserFieldsData_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GAllPrivateUserFieldsData_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GAllPrivateUserFieldsData_comments_items_by_avatar,
+    _$GAllPrivateUserFieldsData_comments_items_by_avatar
+  ];
+  @override
+  final String wireName = 'GAllPrivateUserFieldsData_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GAllPrivateUserFieldsData_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAllPrivateUserFieldsData_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GAllPrivateUserFieldsData_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -18888,6 +24465,14 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar)));
+    }
     return result;
   }
 
@@ -18918,6 +24503,105 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar))!
+              as GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarSerializer
+    implements
+        StructuredSerializer<
+            GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar,
+    _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar
+  ];
+  @override
+  final String wireName =
+      'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -19395,6 +25079,13 @@ class _$GAllCommentFieldsData_bySerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.avatar;
+    if (value != null) {
+      result
+        ..add('avatar')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GAllCommentFieldsData_by_avatar)));
+    }
     return result;
   }
 
@@ -19424,6 +25115,101 @@ class _$GAllCommentFieldsData_bySerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'avatar':
+          result.avatar.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GAllCommentFieldsData_by_avatar))!
+              as GAllCommentFieldsData_by_avatar);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAllCommentFieldsData_by_avatarSerializer
+    implements StructuredSerializer<GAllCommentFieldsData_by_avatar> {
+  @override
+  final Iterable<Type> types = const [
+    GAllCommentFieldsData_by_avatar,
+    _$GAllCommentFieldsData_by_avatar
+  ];
+  @override
+  final String wireName = 'GAllCommentFieldsData_by_avatar';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAllCommentFieldsData_by_avatar object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'bucket',
+      serializers.serialize(object.bucket,
+          specifiedType: const FullType(String)),
+      'region',
+      serializers.serialize(object.region,
+          specifiedType: const FullType(String)),
+      'key',
+      serializers.serialize(object.key, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessLevel;
+    if (value != null) {
+      result
+        ..add('accessLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GAccessLevel)));
+    }
+    value = object.cognitoId;
+    if (value != null) {
+      result
+        ..add('cognitoId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAllCommentFieldsData_by_avatar deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAllCommentFieldsData_by_avatarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'bucket':
+          result.bucket = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'key':
+          result.key = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'accessLevel':
+          result.accessLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(_i2.GAccessLevel))
+              as _i2.GAccessLevel?;
+          break;
+        case 'cognitoId':
+          result.cognitoId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
       }
@@ -20879,6 +26665,8 @@ class _$GListHabitsData_listHabits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GListHabitsData_listHabits_items_comments_items_by_avatar? avatar;
 
   factory _$GListHabitsData_listHabits_items_comments_items_by(
           [void Function(
@@ -20892,7 +26680,8 @@ class _$GListHabitsData_listHabits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GListHabitsData_listHabits_items_comments_items_by', 'G__typename');
@@ -20919,15 +26708,18 @@ class _$GListHabitsData_listHabits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -20937,7 +26729,8 @@ class _$GListHabitsData_listHabits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -20965,6 +26758,15 @@ class GListHabitsData_listHabits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GListHabitsData_listHabits_items_comments_items_by_avatarBuilder? _avatar;
+  GListHabitsData_listHabits_items_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GListHabitsData_listHabits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GListHabitsData_listHabits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GListHabitsData_listHabits_items_comments_items_byBuilder() {
     GListHabitsData_listHabits_items_comments_items_by._initializeBuilder(this);
   }
@@ -20976,6 +26778,7 @@ class GListHabitsData_listHabits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -20998,18 +26801,223 @@ class GListHabitsData_listHabits_items_comments_items_byBuilder
   GListHabitsData_listHabits_items_comments_items_by build() => _build();
 
   _$GListHabitsData_listHabits_items_comments_items_by _build() {
+    _$GListHabitsData_listHabits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GListHabitsData_listHabits_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GListHabitsData_listHabits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GListHabitsData_listHabits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GListHabitsData_listHabits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GListHabitsData_listHabits_items_comments_items_by_avatar
+    extends GListHabitsData_listHabits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GListHabitsData_listHabits_items_comments_items_by_avatar(
+          [void Function(
+                  GListHabitsData_listHabits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GListHabitsData_listHabits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GListHabitsData_listHabits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GListHabitsData_listHabits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GListHabitsData_listHabits_items_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GListHabitsData_listHabits_items_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(key,
+        r'GListHabitsData_listHabits_items_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GListHabitsData_listHabits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GListHabitsData_listHabits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GListHabitsData_listHabits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GListHabitsData_listHabits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GListHabitsData_listHabits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GListHabitsData_listHabits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GListHabitsData_listHabits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<GListHabitsData_listHabits_items_comments_items_by_avatar,
+            GListHabitsData_listHabits_items_comments_items_by_avatarBuilder> {
+  _$GListHabitsData_listHabits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GListHabitsData_listHabits_items_comments_items_by_avatarBuilder() {
+    GListHabitsData_listHabits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GListHabitsData_listHabits_items_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GListHabitsData_listHabits_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GListHabitsData_listHabits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GListHabitsData_listHabits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GListHabitsData_listHabits_items_comments_items_by_avatar build() => _build();
+
+  _$GListHabitsData_listHabits_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GListHabitsData_listHabits_items_comments_items_by._(
+        new _$GListHabitsData_listHabits_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GListHabitsData_listHabits_items_comments_items_by',
+                r'GListHabitsData_listHabits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GListHabitsData_listHabits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket:
+                BuiltValueNullFieldError.checkNotNull(
+                    bucket,
+                    r'GListHabitsData_listHabits_items_comments_items_by_avatar',
+                    'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GListHabitsData_listHabits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GListHabitsData_listHabits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -22661,6 +28669,9 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar?
+      avatar;
 
   factory _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by(
           [void Function(
@@ -22674,7 +28685,8 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
@@ -22707,15 +28719,18 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -22725,7 +28740,8 @@ class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -22754,6 +28770,16 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder?
+      _avatar;
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GListHabitsByCategoryData_habitsByCategory_items_comments_items_byBuilder() {
     GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
         ._initializeBuilder(this);
@@ -22767,6 +28793,7 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -22795,19 +28822,239 @@ class GListHabitsByCategoryData_habitsByCategory_items_comments_items_byBuilder
 
   _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
       _build() {
+    _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
+        _$result;
+    try {
+      _$result = _$v ??
+          new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
+                  ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+    extends GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar(
+          [void Function(
+                  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key,
+        r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
+        'key');
+  }
+
+  @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder
+    implements
+        Builder<
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar,
+            GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder> {
+  _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar?
+      _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder() {
+    GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+      build() => _build();
+
+  _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+      _build() {
     final _$result = _$v ??
-        new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
+        new _$GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
                 ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
+                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -24251,6 +30498,8 @@ class _$GGetHabitData_getHabit_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GGetHabitData_getHabit_comments_items_by_avatar? avatar;
 
   factory _$GGetHabitData_getHabit_comments_items_by(
           [void Function(GGetHabitData_getHabit_comments_items_byBuilder)?
@@ -24262,7 +30511,8 @@ class _$GGetHabitData_getHabit_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GGetHabitData_getHabit_comments_items_by', 'G__typename');
@@ -24287,15 +30537,18 @@ class _$GGetHabitData_getHabit_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -24305,7 +30558,8 @@ class _$GGetHabitData_getHabit_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -24333,6 +30587,13 @@ class GGetHabitData_getHabit_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GGetHabitData_getHabit_comments_items_by_avatarBuilder? _avatar;
+  GGetHabitData_getHabit_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GGetHabitData_getHabit_comments_items_by_avatarBuilder();
+  set avatar(GGetHabitData_getHabit_comments_items_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GGetHabitData_getHabit_comments_items_byBuilder() {
     GGetHabitData_getHabit_comments_items_by._initializeBuilder(this);
   }
@@ -24344,6 +30605,7 @@ class GGetHabitData_getHabit_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -24365,14 +30627,205 @@ class GGetHabitData_getHabit_comments_items_byBuilder
   GGetHabitData_getHabit_comments_items_by build() => _build();
 
   _$GGetHabitData_getHabit_comments_items_by _build() {
+    _$GGetHabitData_getHabit_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetHabitData_getHabit_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GGetHabitData_getHabit_comments_items_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GGetHabitData_getHabit_comments_items_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetHabitData_getHabit_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetHabitData_getHabit_comments_items_by_avatar
+    extends GGetHabitData_getHabit_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GGetHabitData_getHabit_comments_items_by_avatar(
+          [void Function(
+                  GGetHabitData_getHabit_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GGetHabitData_getHabit_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetHabitData_getHabit_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GGetHabitData_getHabit_comments_items_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GGetHabitData_getHabit_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GGetHabitData_getHabit_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GGetHabitData_getHabit_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GGetHabitData_getHabit_comments_items_by_avatar rebuild(
+          void Function(GGetHabitData_getHabit_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetHabitData_getHabit_comments_items_by_avatarBuilder toBuilder() =>
+      new GGetHabitData_getHabit_comments_items_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetHabitData_getHabit_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetHabitData_getHabit_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GGetHabitData_getHabit_comments_items_by_avatarBuilder
+    implements
+        Builder<GGetHabitData_getHabit_comments_items_by_avatar,
+            GGetHabitData_getHabit_comments_items_by_avatarBuilder> {
+  _$GGetHabitData_getHabit_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GGetHabitData_getHabit_comments_items_by_avatarBuilder() {
+    GGetHabitData_getHabit_comments_items_by_avatar._initializeBuilder(this);
+  }
+
+  GGetHabitData_getHabit_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetHabitData_getHabit_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetHabitData_getHabit_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GGetHabitData_getHabit_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetHabitData_getHabit_comments_items_by_avatar build() => _build();
+
+  _$GGetHabitData_getHabit_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GGetHabitData_getHabit_comments_items_by._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GGetHabitData_getHabit_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GGetHabitData_getHabit_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+        new _$GGetHabitData_getHabit_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GGetHabitData_getHabit_comments_items_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GGetHabitData_getHabit_comments_items_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GGetHabitData_getHabit_comments_items_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GGetHabitData_getHabit_comments_items_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -25845,6 +32298,8 @@ class _$GGetUserData_getUser_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GGetUserData_getUser_comments_items_by_avatar? avatar;
 
   factory _$GGetUserData_getUser_comments_items_by(
           [void Function(GGetUserData_getUser_comments_items_byBuilder)?
@@ -25856,7 +32311,8 @@ class _$GGetUserData_getUser_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename, r'GGetUserData_getUser_comments_items_by', 'G__typename');
@@ -25881,15 +32337,18 @@ class _$GGetUserData_getUser_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -25899,7 +32358,8 @@ class _$GGetUserData_getUser_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -25927,6 +32387,13 @@ class GGetUserData_getUser_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GGetUserData_getUser_comments_items_by_avatarBuilder? _avatar;
+  GGetUserData_getUser_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GGetUserData_getUser_comments_items_by_avatarBuilder();
+  set avatar(GGetUserData_getUser_comments_items_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GGetUserData_getUser_comments_items_byBuilder() {
     GGetUserData_getUser_comments_items_by._initializeBuilder(this);
   }
@@ -25938,6 +32405,7 @@ class GGetUserData_getUser_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -25959,14 +32427,203 @@ class GGetUserData_getUser_comments_items_byBuilder
   GGetUserData_getUser_comments_items_by build() => _build();
 
   _$GGetUserData_getUser_comments_items_by _build() {
+    _$GGetUserData_getUser_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetUserData_getUser_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GGetUserData_getUser_comments_items_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GGetUserData_getUser_comments_items_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetUserData_getUser_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetUserData_getUser_comments_items_by_avatar
+    extends GGetUserData_getUser_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GGetUserData_getUser_comments_items_by_avatar(
+          [void Function(GGetUserData_getUser_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GGetUserData_getUser_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetUserData_getUser_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GGetUserData_getUser_comments_items_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GGetUserData_getUser_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GGetUserData_getUser_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GGetUserData_getUser_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GGetUserData_getUser_comments_items_by_avatar rebuild(
+          void Function(GGetUserData_getUser_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetUserData_getUser_comments_items_by_avatarBuilder toBuilder() =>
+      new GGetUserData_getUser_comments_items_by_avatarBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetUserData_getUser_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetUserData_getUser_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GGetUserData_getUser_comments_items_by_avatarBuilder
+    implements
+        Builder<GGetUserData_getUser_comments_items_by_avatar,
+            GGetUserData_getUser_comments_items_by_avatarBuilder> {
+  _$GGetUserData_getUser_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GGetUserData_getUser_comments_items_by_avatarBuilder() {
+    GGetUserData_getUser_comments_items_by_avatar._initializeBuilder(this);
+  }
+
+  GGetUserData_getUser_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetUserData_getUser_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetUserData_getUser_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GGetUserData_getUser_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetUserData_getUser_comments_items_by_avatar build() => _build();
+
+  _$GGetUserData_getUser_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GGetUserData_getUser_comments_items_by._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GGetUserData_getUser_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GGetUserData_getUser_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+        new _$GGetUserData_getUser_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GGetUserData_getUser_comments_items_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GGetUserData_getUser_comments_items_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GGetUserData_getUser_comments_items_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GGetUserData_getUser_comments_items_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -27368,6 +34025,8 @@ class _$GGetUserData_getUser_habits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GGetUserData_getUser_habits_items_comments_items_by_avatar? avatar;
 
   factory _$GGetUserData_getUser_habits_items_comments_items_by(
           [void Function(
@@ -27381,7 +34040,8 @@ class _$GGetUserData_getUser_habits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GGetUserData_getUser_habits_items_comments_items_by', 'G__typename');
@@ -27408,15 +34068,18 @@ class _$GGetUserData_getUser_habits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -27426,7 +34089,8 @@ class _$GGetUserData_getUser_habits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -27454,6 +34118,15 @@ class GGetUserData_getUser_habits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder? _avatar;
+  GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GGetUserData_getUser_habits_items_comments_items_byBuilder() {
     GGetUserData_getUser_habits_items_comments_items_by._initializeBuilder(
         this);
@@ -27466,6 +34139,7 @@ class GGetUserData_getUser_habits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -27488,18 +34162,228 @@ class GGetUserData_getUser_habits_items_comments_items_byBuilder
   GGetUserData_getUser_habits_items_comments_items_by build() => _build();
 
   _$GGetUserData_getUser_habits_items_comments_items_by _build() {
+    _$GGetUserData_getUser_habits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetUserData_getUser_habits_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GGetUserData_getUser_habits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GGetUserData_getUser_habits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetUserData_getUser_habits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetUserData_getUser_habits_items_comments_items_by_avatar
+    extends GGetUserData_getUser_habits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GGetUserData_getUser_habits_items_comments_items_by_avatar(
+          [void Function(
+                  GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetUserData_getUser_habits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GGetUserData_getUser_habits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GGetUserData_getUser_habits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GGetUserData_getUser_habits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(key,
+        r'GGetUserData_getUser_habits_items_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GGetUserData_getUser_habits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GGetUserData_getUser_habits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetUserData_getUser_habits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<GGetUserData_getUser_habits_items_comments_items_by_avatar,
+            GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder> {
+  _$GGetUserData_getUser_habits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder() {
+    GGetUserData_getUser_habits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GGetUserData_getUser_habits_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetUserData_getUser_habits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GGetUserData_getUser_habits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetUserData_getUser_habits_items_comments_items_by_avatar build() =>
+      _build();
+
+  _$GGetUserData_getUser_habits_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GGetUserData_getUser_habits_items_comments_items_by._(
+        new _$GGetUserData_getUser_habits_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GGetUserData_getUser_habits_items_comments_items_by',
+                r'GGetUserData_getUser_habits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GGetUserData_getUser_habits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GGetUserData_getUser_habits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GGetUserData_getUser_habits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GGetUserData_getUser_habits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -29046,6 +35930,8 @@ class _$GGetSelfData_getUser_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GGetSelfData_getUser_comments_items_by_avatar? avatar;
 
   factory _$GGetSelfData_getUser_comments_items_by(
           [void Function(GGetSelfData_getUser_comments_items_byBuilder)?
@@ -29057,7 +35943,8 @@ class _$GGetSelfData_getUser_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename, r'GGetSelfData_getUser_comments_items_by', 'G__typename');
@@ -29082,15 +35969,18 @@ class _$GGetSelfData_getUser_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -29100,7 +35990,8 @@ class _$GGetSelfData_getUser_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -29128,6 +36019,13 @@ class GGetSelfData_getUser_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GGetSelfData_getUser_comments_items_by_avatarBuilder? _avatar;
+  GGetSelfData_getUser_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GGetSelfData_getUser_comments_items_by_avatarBuilder();
+  set avatar(GGetSelfData_getUser_comments_items_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GGetSelfData_getUser_comments_items_byBuilder() {
     GGetSelfData_getUser_comments_items_by._initializeBuilder(this);
   }
@@ -29139,6 +36037,7 @@ class GGetSelfData_getUser_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -29160,14 +36059,203 @@ class GGetSelfData_getUser_comments_items_byBuilder
   GGetSelfData_getUser_comments_items_by build() => _build();
 
   _$GGetSelfData_getUser_comments_items_by _build() {
+    _$GGetSelfData_getUser_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetSelfData_getUser_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GGetSelfData_getUser_comments_items_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GGetSelfData_getUser_comments_items_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetSelfData_getUser_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetSelfData_getUser_comments_items_by_avatar
+    extends GGetSelfData_getUser_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GGetSelfData_getUser_comments_items_by_avatar(
+          [void Function(GGetSelfData_getUser_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GGetSelfData_getUser_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetSelfData_getUser_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GGetSelfData_getUser_comments_items_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GGetSelfData_getUser_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GGetSelfData_getUser_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GGetSelfData_getUser_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GGetSelfData_getUser_comments_items_by_avatar rebuild(
+          void Function(GGetSelfData_getUser_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetSelfData_getUser_comments_items_by_avatarBuilder toBuilder() =>
+      new GGetSelfData_getUser_comments_items_by_avatarBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetSelfData_getUser_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetSelfData_getUser_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GGetSelfData_getUser_comments_items_by_avatarBuilder
+    implements
+        Builder<GGetSelfData_getUser_comments_items_by_avatar,
+            GGetSelfData_getUser_comments_items_by_avatarBuilder> {
+  _$GGetSelfData_getUser_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GGetSelfData_getUser_comments_items_by_avatarBuilder() {
+    GGetSelfData_getUser_comments_items_by_avatar._initializeBuilder(this);
+  }
+
+  GGetSelfData_getUser_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetSelfData_getUser_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetSelfData_getUser_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GGetSelfData_getUser_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetSelfData_getUser_comments_items_by_avatar build() => _build();
+
+  _$GGetSelfData_getUser_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GGetSelfData_getUser_comments_items_by._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GGetSelfData_getUser_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GGetSelfData_getUser_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+        new _$GGetSelfData_getUser_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GGetSelfData_getUser_comments_items_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GGetSelfData_getUser_comments_items_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GGetSelfData_getUser_comments_items_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GGetSelfData_getUser_comments_items_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -30569,6 +37657,8 @@ class _$GGetSelfData_getUser_habits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GGetSelfData_getUser_habits_items_comments_items_by_avatar? avatar;
 
   factory _$GGetSelfData_getUser_habits_items_comments_items_by(
           [void Function(
@@ -30582,7 +37672,8 @@ class _$GGetSelfData_getUser_habits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GGetSelfData_getUser_habits_items_comments_items_by', 'G__typename');
@@ -30609,15 +37700,18 @@ class _$GGetSelfData_getUser_habits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -30627,7 +37721,8 @@ class _$GGetSelfData_getUser_habits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -30655,6 +37750,15 @@ class GGetSelfData_getUser_habits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder? _avatar;
+  GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GGetSelfData_getUser_habits_items_comments_items_byBuilder() {
     GGetSelfData_getUser_habits_items_comments_items_by._initializeBuilder(
         this);
@@ -30667,6 +37771,7 @@ class GGetSelfData_getUser_habits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -30689,18 +37794,228 @@ class GGetSelfData_getUser_habits_items_comments_items_byBuilder
   GGetSelfData_getUser_habits_items_comments_items_by build() => _build();
 
   _$GGetSelfData_getUser_habits_items_comments_items_by _build() {
+    _$GGetSelfData_getUser_habits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetSelfData_getUser_habits_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GGetSelfData_getUser_habits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GGetSelfData_getUser_habits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetSelfData_getUser_habits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetSelfData_getUser_habits_items_comments_items_by_avatar
+    extends GGetSelfData_getUser_habits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GGetSelfData_getUser_habits_items_comments_items_by_avatar(
+          [void Function(
+                  GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetSelfData_getUser_habits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GGetSelfData_getUser_habits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GGetSelfData_getUser_habits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GGetSelfData_getUser_habits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(key,
+        r'GGetSelfData_getUser_habits_items_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GGetSelfData_getUser_habits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GGetSelfData_getUser_habits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetSelfData_getUser_habits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<GGetSelfData_getUser_habits_items_comments_items_by_avatar,
+            GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder> {
+  _$GGetSelfData_getUser_habits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder() {
+    GGetSelfData_getUser_habits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GGetSelfData_getUser_habits_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetSelfData_getUser_habits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GGetSelfData_getUser_habits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetSelfData_getUser_habits_items_comments_items_by_avatar build() =>
+      _build();
+
+  _$GGetSelfData_getUser_habits_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GGetSelfData_getUser_habits_items_comments_items_by._(
+        new _$GGetSelfData_getUser_habits_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GGetSelfData_getUser_habits_items_comments_items_by',
+                r'GGetSelfData_getUser_habits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GGetSelfData_getUser_habits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GGetSelfData_getUser_habits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GGetSelfData_getUser_habits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GGetSelfData_getUser_habits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -31733,6 +39048,8 @@ class _$GGetCommentData_getComment_by extends GGetCommentData_getComment_by {
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GGetCommentData_getComment_by_avatar? avatar;
 
   factory _$GGetCommentData_getComment_by(
           [void Function(GGetCommentData_getComment_byBuilder)? updates]) =>
@@ -31742,7 +39059,8 @@ class _$GGetCommentData_getComment_by extends GGetCommentData_getComment_by {
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename, r'GGetCommentData_getComment_by', 'G__typename');
@@ -31766,15 +39084,18 @@ class _$GGetCommentData_getComment_by extends GGetCommentData_getComment_by {
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -31783,7 +39104,8 @@ class _$GGetCommentData_getComment_by extends GGetCommentData_getComment_by {
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -31811,6 +39133,12 @@ class GGetCommentData_getComment_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GGetCommentData_getComment_by_avatarBuilder? _avatar;
+  GGetCommentData_getComment_by_avatarBuilder get avatar =>
+      _$this._avatar ??= new GGetCommentData_getComment_by_avatarBuilder();
+  set avatar(GGetCommentData_getComment_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GGetCommentData_getComment_byBuilder() {
     GGetCommentData_getComment_by._initializeBuilder(this);
   }
@@ -31822,6 +39150,7 @@ class GGetCommentData_getComment_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -31842,14 +39171,195 @@ class GGetCommentData_getComment_byBuilder
   GGetCommentData_getComment_by build() => _build();
 
   _$GGetCommentData_getComment_by _build() {
+    _$GGetCommentData_getComment_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetCommentData_getComment_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GGetCommentData_getComment_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username, r'GGetCommentData_getComment_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetCommentData_getComment_by', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetCommentData_getComment_by_avatar
+    extends GGetCommentData_getComment_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GGetCommentData_getComment_by_avatar(
+          [void Function(GGetCommentData_getComment_by_avatarBuilder)?
+              updates]) =>
+      (new GGetCommentData_getComment_by_avatarBuilder()..update(updates))
+          ._build();
+
+  _$GGetCommentData_getComment_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GGetCommentData_getComment_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GGetCommentData_getComment_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GGetCommentData_getComment_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GGetCommentData_getComment_by_avatar', 'key');
+  }
+
+  @override
+  GGetCommentData_getComment_by_avatar rebuild(
+          void Function(GGetCommentData_getComment_by_avatarBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetCommentData_getComment_by_avatarBuilder toBuilder() =>
+      new GGetCommentData_getComment_by_avatarBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetCommentData_getComment_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetCommentData_getComment_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GGetCommentData_getComment_by_avatarBuilder
+    implements
+        Builder<GGetCommentData_getComment_by_avatar,
+            GGetCommentData_getComment_by_avatarBuilder> {
+  _$GGetCommentData_getComment_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GGetCommentData_getComment_by_avatarBuilder() {
+    GGetCommentData_getComment_by_avatar._initializeBuilder(this);
+  }
+
+  GGetCommentData_getComment_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetCommentData_getComment_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetCommentData_getComment_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GGetCommentData_getComment_by_avatarBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetCommentData_getComment_by_avatar build() => _build();
+
+  _$GGetCommentData_getComment_by_avatar _build() {
     final _$result = _$v ??
-        new _$GGetCommentData_getComment_by._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GGetCommentData_getComment_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'GGetCommentData_getComment_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+        new _$GGetCommentData_getComment_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GGetCommentData_getComment_by_avatar', 'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket, r'GGetCommentData_getComment_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region, r'GGetCommentData_getComment_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GGetCommentData_getComment_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -33376,6 +40886,8 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GSubscribeToUserData_subscribeToUser_comments_items_by_avatar? avatar;
 
   factory _$GSubscribeToUserData_subscribeToUser_comments_items_by(
           [void Function(
@@ -33389,7 +40901,8 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
@@ -33418,15 +40931,18 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -33436,7 +40952,8 @@ class _$GSubscribeToUserData_subscribeToUser_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -33464,6 +40981,15 @@ class GSubscribeToUserData_subscribeToUser_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder? _avatar;
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder();
+  set avatar(
+          GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GSubscribeToUserData_subscribeToUser_comments_items_byBuilder() {
     GSubscribeToUserData_subscribeToUser_comments_items_by._initializeBuilder(
         this);
@@ -33476,6 +41002,7 @@ class GSubscribeToUserData_subscribeToUser_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -33499,18 +41026,232 @@ class GSubscribeToUserData_subscribeToUser_comments_items_byBuilder
   GSubscribeToUserData_subscribeToUser_comments_items_by build() => _build();
 
   _$GSubscribeToUserData_subscribeToUser_comments_items_by _build() {
+    _$GSubscribeToUserData_subscribeToUser_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GSubscribeToUserData_subscribeToUser_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GSubscribeToUserData_subscribeToUser_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GSubscribeToUserData_subscribeToUser_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar
+    extends GSubscribeToUserData_subscribeToUser_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar(
+          [void Function(
+                  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key,
+        r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
+        'key');
+  }
+
+  @override
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatar rebuild(
+          void Function(
+                  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GSubscribeToUserData_subscribeToUser_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder
+    implements
+        Builder<GSubscribeToUserData_subscribeToUser_comments_items_by_avatar,
+            GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder> {
+  _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder() {
+    GSubscribeToUserData_subscribeToUser_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GSubscribeToUserData_subscribeToUser_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GSubscribeToUserData_subscribeToUser_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSubscribeToUserData_subscribeToUser_comments_items_by_avatar build() =>
+      _build();
+
+  _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GSubscribeToUserData_subscribeToUser_comments_items_by._(
+        new _$GSubscribeToUserData_subscribeToUser_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GSubscribeToUserData_subscribeToUser_comments_items_by',
+                r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GSubscribeToUserData_subscribeToUser_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GSubscribeToUserData_subscribeToUser_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -35056,6 +42797,9 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar?
+      avatar;
 
   factory _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by(
           [void Function(
@@ -35069,7 +42813,8 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
@@ -35102,15 +42847,18 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -35120,7 +42868,8 @@ class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -35149,6 +42898,16 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder?
+      _avatar;
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GSubscribeToUserData_subscribeToUser_habits_items_comments_items_byBuilder() {
     GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
         ._initializeBuilder(this);
@@ -35162,6 +42921,7 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -35190,19 +42950,240 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_byBuilder
 
   _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
       _build() {
+    _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
+        _$result;
+    try {
+      _$result = _$v ??
+          new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
+                  ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+    extends GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar(
+          [void Function(
+                  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key,
+        r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
+        'key');
+  }
+
+  @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+      rebuild(
+              void Function(
+                      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder)
+                  updates) =>
+          (toBuilder()..update(updates)).build();
+
+  @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar,
+            GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder> {
+  _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar?
+      _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder() {
+    GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+      build() => _build();
+
+  _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+      _build() {
     final _$result = _$v ??
-        new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
+        new _$GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
                 ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
+                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -35914,6 +43895,6256 @@ class GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit_com
   }
 }
 
+class _$GOnCreateCommentData extends GOnCreateCommentData {
+  @override
+  final String G__typename;
+  @override
+  final GOnCreateCommentData_onCreateComment? onCreateComment;
+
+  factory _$GOnCreateCommentData(
+          [void Function(GOnCreateCommentDataBuilder)? updates]) =>
+      (new GOnCreateCommentDataBuilder()..update(updates))._build();
+
+  _$GOnCreateCommentData._({required this.G__typename, this.onCreateComment})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnCreateCommentData', 'G__typename');
+  }
+
+  @override
+  GOnCreateCommentData rebuild(
+          void Function(GOnCreateCommentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentDataBuilder toBuilder() =>
+      new GOnCreateCommentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentData &&
+        G__typename == other.G__typename &&
+        onCreateComment == other.onCreateComment;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), onCreateComment.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnCreateCommentData')
+          ..add('G__typename', G__typename)
+          ..add('onCreateComment', onCreateComment))
+        .toString();
+  }
+}
+
+class GOnCreateCommentDataBuilder
+    implements Builder<GOnCreateCommentData, GOnCreateCommentDataBuilder> {
+  _$GOnCreateCommentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GOnCreateCommentData_onCreateCommentBuilder? _onCreateComment;
+  GOnCreateCommentData_onCreateCommentBuilder get onCreateComment =>
+      _$this._onCreateComment ??=
+          new GOnCreateCommentData_onCreateCommentBuilder();
+  set onCreateComment(
+          GOnCreateCommentData_onCreateCommentBuilder? onCreateComment) =>
+      _$this._onCreateComment = onCreateComment;
+
+  GOnCreateCommentDataBuilder() {
+    GOnCreateCommentData._initializeBuilder(this);
+  }
+
+  GOnCreateCommentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _onCreateComment = $v.onCreateComment?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateCommentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentData;
+  }
+
+  @override
+  void update(void Function(GOnCreateCommentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentData build() => _build();
+
+  _$GOnCreateCommentData _build() {
+    _$GOnCreateCommentData _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateCommentData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GOnCreateCommentData', 'G__typename'),
+              onCreateComment: _onCreateComment?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'onCreateComment';
+        _onCreateComment?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateCommentData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment
+    extends GOnCreateCommentData_onCreateComment {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final GOnCreateCommentData_onCreateComment_by? by;
+  @override
+  final String? habitId;
+  @override
+  final GOnCreateCommentData_onCreateComment_habit? habit;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnCreateCommentData_onCreateComment(
+          [void Function(GOnCreateCommentData_onCreateCommentBuilder)?
+              updates]) =>
+      (new GOnCreateCommentData_onCreateCommentBuilder()..update(updates))
+          ._build();
+
+  _$GOnCreateCommentData_onCreateComment._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.by,
+      this.habitId,
+      this.habit,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnCreateCommentData_onCreateComment', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnCreateCommentData_onCreateComment', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment, r'GOnCreateCommentData_onCreateComment', 'comment');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt, r'GOnCreateCommentData_onCreateComment', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt, r'GOnCreateCommentData_onCreateComment', 'updatedAt');
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment rebuild(
+          void Function(GOnCreateCommentData_onCreateCommentBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentData_onCreateCommentBuilder toBuilder() =>
+      new GOnCreateCommentData_onCreateCommentBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentData_onCreateComment &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        by == other.by &&
+        habitId == other.habitId &&
+        habit == other.habit &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                                owner.hashCode),
+                            by.hashCode),
+                        habitId.hashCode),
+                    habit.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnCreateCommentData_onCreateComment')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('by', by)
+          ..add('habitId', habitId)
+          ..add('habit', habit)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnCreateCommentData_onCreateCommentBuilder
+    implements
+        Builder<GOnCreateCommentData_onCreateComment,
+            GOnCreateCommentData_onCreateCommentBuilder> {
+  _$GOnCreateCommentData_onCreateComment? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnCreateCommentData_onCreateComment_byBuilder? _by;
+  GOnCreateCommentData_onCreateComment_byBuilder get by =>
+      _$this._by ??= new GOnCreateCommentData_onCreateComment_byBuilder();
+  set by(GOnCreateCommentData_onCreateComment_byBuilder? by) => _$this._by = by;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  GOnCreateCommentData_onCreateComment_habitBuilder? _habit;
+  GOnCreateCommentData_onCreateComment_habitBuilder get habit =>
+      _$this._habit ??= new GOnCreateCommentData_onCreateComment_habitBuilder();
+  set habit(GOnCreateCommentData_onCreateComment_habitBuilder? habit) =>
+      _$this._habit = habit;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnCreateCommentData_onCreateCommentBuilder() {
+    GOnCreateCommentData_onCreateComment._initializeBuilder(this);
+  }
+
+  GOnCreateCommentData_onCreateCommentBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _by = $v.by?.toBuilder();
+      _habitId = $v.habitId;
+      _habit = $v.habit?.toBuilder();
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateCommentData_onCreateComment other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentData_onCreateComment;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateCommentData_onCreateCommentBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment build() => _build();
+
+  _$GOnCreateCommentData_onCreateComment _build() {
+    _$GOnCreateCommentData_onCreateComment _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateCommentData_onCreateComment._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnCreateCommentData_onCreateComment', 'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnCreateCommentData_onCreateComment', 'id'),
+              owner: owner,
+              by: _by?.build(),
+              habitId: habitId,
+              habit: _habit?.build(),
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment, r'GOnCreateCommentData_onCreateComment', 'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'by';
+        _by?.build();
+
+        _$failedField = 'habit';
+        _habit?.build();
+
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateCommentData_onCreateComment',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_by
+    extends GOnCreateCommentData_onCreateComment_by {
+  @override
+  final String G__typename;
+  @override
+  final String username;
+  @override
+  final String? displayUsername;
+  @override
+  final String? name;
+  @override
+  final GOnCreateCommentData_onCreateComment_by_avatar? avatar;
+
+  factory _$GOnCreateCommentData_onCreateComment_by(
+          [void Function(GOnCreateCommentData_onCreateComment_byBuilder)?
+              updates]) =>
+      (new GOnCreateCommentData_onCreateComment_byBuilder()..update(updates))
+          ._build();
+
+  _$GOnCreateCommentData_onCreateComment_by._(
+      {required this.G__typename,
+      required this.username,
+      this.displayUsername,
+      this.name,
+      this.avatar})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnCreateCommentData_onCreateComment_by', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        username, r'GOnCreateCommentData_onCreateComment_by', 'username');
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_by rebuild(
+          void Function(GOnCreateCommentData_onCreateComment_byBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentData_onCreateComment_byBuilder toBuilder() =>
+      new GOnCreateCommentData_onCreateComment_byBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentData_onCreateComment_by &&
+        G__typename == other.G__typename &&
+        username == other.username &&
+        displayUsername == other.displayUsername &&
+        name == other.name &&
+        avatar == other.avatar;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateCommentData_onCreateComment_by')
+          ..add('G__typename', G__typename)
+          ..add('username', username)
+          ..add('displayUsername', displayUsername)
+          ..add('name', name)
+          ..add('avatar', avatar))
+        .toString();
+  }
+}
+
+class GOnCreateCommentData_onCreateComment_byBuilder
+    implements
+        Builder<GOnCreateCommentData_onCreateComment_by,
+            GOnCreateCommentData_onCreateComment_byBuilder> {
+  _$GOnCreateCommentData_onCreateComment_by? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _username;
+  String? get username => _$this._username;
+  set username(String? username) => _$this._username = username;
+
+  String? _displayUsername;
+  String? get displayUsername => _$this._displayUsername;
+  set displayUsername(String? displayUsername) =>
+      _$this._displayUsername = displayUsername;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  GOnCreateCommentData_onCreateComment_by_avatarBuilder? _avatar;
+  GOnCreateCommentData_onCreateComment_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GOnCreateCommentData_onCreateComment_by_avatarBuilder();
+  set avatar(GOnCreateCommentData_onCreateComment_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
+  GOnCreateCommentData_onCreateComment_byBuilder() {
+    GOnCreateCommentData_onCreateComment_by._initializeBuilder(this);
+  }
+
+  GOnCreateCommentData_onCreateComment_byBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _username = $v.username;
+      _displayUsername = $v.displayUsername;
+      _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateCommentData_onCreateComment_by other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentData_onCreateComment_by;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateCommentData_onCreateComment_byBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_by build() => _build();
+
+  _$GOnCreateCommentData_onCreateComment_by _build() {
+    _$GOnCreateCommentData_onCreateComment_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateCommentData_onCreateComment_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnCreateCommentData_onCreateComment_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GOnCreateCommentData_onCreateComment_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateCommentData_onCreateComment_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_by_avatar
+    extends GOnCreateCommentData_onCreateComment_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GOnCreateCommentData_onCreateComment_by_avatar(
+          [void Function(GOnCreateCommentData_onCreateComment_by_avatarBuilder)?
+              updates]) =>
+      (new GOnCreateCommentData_onCreateComment_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateCommentData_onCreateComment_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnCreateCommentData_onCreateComment_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GOnCreateCommentData_onCreateComment_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GOnCreateCommentData_onCreateComment_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GOnCreateCommentData_onCreateComment_by_avatar', 'key');
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_by_avatar rebuild(
+          void Function(GOnCreateCommentData_onCreateComment_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentData_onCreateComment_by_avatarBuilder toBuilder() =>
+      new GOnCreateCommentData_onCreateComment_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentData_onCreateComment_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateCommentData_onCreateComment_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GOnCreateCommentData_onCreateComment_by_avatarBuilder
+    implements
+        Builder<GOnCreateCommentData_onCreateComment_by_avatar,
+            GOnCreateCommentData_onCreateComment_by_avatarBuilder> {
+  _$GOnCreateCommentData_onCreateComment_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GOnCreateCommentData_onCreateComment_by_avatarBuilder() {
+    GOnCreateCommentData_onCreateComment_by_avatar._initializeBuilder(this);
+  }
+
+  GOnCreateCommentData_onCreateComment_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateCommentData_onCreateComment_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentData_onCreateComment_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateCommentData_onCreateComment_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_by_avatar build() => _build();
+
+  _$GOnCreateCommentData_onCreateComment_by_avatar _build() {
+    final _$result = _$v ??
+        new _$GOnCreateCommentData_onCreateComment_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GOnCreateCommentData_onCreateComment_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GOnCreateCommentData_onCreateComment_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GOnCreateCommentData_onCreateComment_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GOnCreateCommentData_onCreateComment_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_habit
+    extends GOnCreateCommentData_onCreateComment_habit {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String tagline;
+  @override
+  final _i2.GCategory category;
+  @override
+  final String? details;
+  @override
+  final String? owner;
+  @override
+  final GOnCreateCommentData_onCreateComment_habit_comments? comments;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+  @override
+  final int? ups;
+  @override
+  final int? downs;
+
+  factory _$GOnCreateCommentData_onCreateComment_habit(
+          [void Function(GOnCreateCommentData_onCreateComment_habitBuilder)?
+              updates]) =>
+      (new GOnCreateCommentData_onCreateComment_habitBuilder()..update(updates))
+          ._build();
+
+  _$GOnCreateCommentData_onCreateComment_habit._(
+      {required this.G__typename,
+      required this.id,
+      required this.tagline,
+      required this.category,
+      this.details,
+      this.owner,
+      this.comments,
+      required this.createdAt,
+      required this.updatedAt,
+      this.ups,
+      this.downs})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnCreateCommentData_onCreateComment_habit', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnCreateCommentData_onCreateComment_habit', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        tagline, r'GOnCreateCommentData_onCreateComment_habit', 'tagline');
+    BuiltValueNullFieldError.checkNotNull(
+        category, r'GOnCreateCommentData_onCreateComment_habit', 'category');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt, r'GOnCreateCommentData_onCreateComment_habit', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt, r'GOnCreateCommentData_onCreateComment_habit', 'updatedAt');
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit rebuild(
+          void Function(GOnCreateCommentData_onCreateComment_habitBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentData_onCreateComment_habitBuilder toBuilder() =>
+      new GOnCreateCommentData_onCreateComment_habitBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentData_onCreateComment_habit &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        tagline == other.tagline &&
+        category == other.category &&
+        details == other.details &&
+        owner == other.owner &&
+        comments == other.comments &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        ups == other.ups &&
+        downs == other.downs;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, G__typename.hashCode),
+                                            id.hashCode),
+                                        tagline.hashCode),
+                                    category.hashCode),
+                                details.hashCode),
+                            owner.hashCode),
+                        comments.hashCode),
+                    createdAt.hashCode),
+                updatedAt.hashCode),
+            ups.hashCode),
+        downs.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateCommentData_onCreateComment_habit')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('tagline', tagline)
+          ..add('category', category)
+          ..add('details', details)
+          ..add('owner', owner)
+          ..add('comments', comments)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('ups', ups)
+          ..add('downs', downs))
+        .toString();
+  }
+}
+
+class GOnCreateCommentData_onCreateComment_habitBuilder
+    implements
+        Builder<GOnCreateCommentData_onCreateComment_habit,
+            GOnCreateCommentData_onCreateComment_habitBuilder> {
+  _$GOnCreateCommentData_onCreateComment_habit? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _tagline;
+  String? get tagline => _$this._tagline;
+  set tagline(String? tagline) => _$this._tagline = tagline;
+
+  _i2.GCategory? _category;
+  _i2.GCategory? get category => _$this._category;
+  set category(_i2.GCategory? category) => _$this._category = category;
+
+  String? _details;
+  String? get details => _$this._details;
+  set details(String? details) => _$this._details = details;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnCreateCommentData_onCreateComment_habit_commentsBuilder? _comments;
+  GOnCreateCommentData_onCreateComment_habit_commentsBuilder get comments =>
+      _$this._comments ??=
+          new GOnCreateCommentData_onCreateComment_habit_commentsBuilder();
+  set comments(
+          GOnCreateCommentData_onCreateComment_habit_commentsBuilder?
+              comments) =>
+      _$this._comments = comments;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  int? _ups;
+  int? get ups => _$this._ups;
+  set ups(int? ups) => _$this._ups = ups;
+
+  int? _downs;
+  int? get downs => _$this._downs;
+  set downs(int? downs) => _$this._downs = downs;
+
+  GOnCreateCommentData_onCreateComment_habitBuilder() {
+    GOnCreateCommentData_onCreateComment_habit._initializeBuilder(this);
+  }
+
+  GOnCreateCommentData_onCreateComment_habitBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _tagline = $v.tagline;
+      _category = $v.category;
+      _details = $v.details;
+      _owner = $v.owner;
+      _comments = $v.comments?.toBuilder();
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _ups = $v.ups;
+      _downs = $v.downs;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateCommentData_onCreateComment_habit other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentData_onCreateComment_habit;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateCommentData_onCreateComment_habitBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit build() => _build();
+
+  _$GOnCreateCommentData_onCreateComment_habit _build() {
+    _$GOnCreateCommentData_onCreateComment_habit _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateCommentData_onCreateComment_habit._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnCreateCommentData_onCreateComment_habit', 'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnCreateCommentData_onCreateComment_habit', 'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(tagline,
+                  r'GOnCreateCommentData_onCreateComment_habit', 'tagline'),
+              category: BuiltValueNullFieldError.checkNotNull(category,
+                  r'GOnCreateCommentData_onCreateComment_habit', 'category'),
+              details: details,
+              owner: owner,
+              comments: _comments?.build(),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build(),
+              ups: ups,
+              downs: downs);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'comments';
+        _comments?.build();
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateCommentData_onCreateComment_habit',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_habit_comments
+    extends GOnCreateCommentData_onCreateComment_habit_comments {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GOnCreateCommentData_onCreateComment_habit_comments_items>
+      items;
+
+  factory _$GOnCreateCommentData_onCreateComment_habit_comments(
+          [void Function(
+                  GOnCreateCommentData_onCreateComment_habit_commentsBuilder)?
+              updates]) =>
+      (new GOnCreateCommentData_onCreateComment_habit_commentsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateCommentData_onCreateComment_habit_comments._(
+      {required this.G__typename, required this.items})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnCreateCommentData_onCreateComment_habit_comments', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        items, r'GOnCreateCommentData_onCreateComment_habit_comments', 'items');
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments rebuild(
+          void Function(
+                  GOnCreateCommentData_onCreateComment_habit_commentsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_commentsBuilder toBuilder() =>
+      new GOnCreateCommentData_onCreateComment_habit_commentsBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentData_onCreateComment_habit_comments &&
+        G__typename == other.G__typename &&
+        items == other.items;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), items.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateCommentData_onCreateComment_habit_comments')
+          ..add('G__typename', G__typename)
+          ..add('items', items))
+        .toString();
+  }
+}
+
+class GOnCreateCommentData_onCreateComment_habit_commentsBuilder
+    implements
+        Builder<GOnCreateCommentData_onCreateComment_habit_comments,
+            GOnCreateCommentData_onCreateComment_habit_commentsBuilder> {
+  _$GOnCreateCommentData_onCreateComment_habit_comments? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GOnCreateCommentData_onCreateComment_habit_comments_items>?
+      _items;
+  ListBuilder<GOnCreateCommentData_onCreateComment_habit_comments_items>
+      get items => _$this._items ??= new ListBuilder<
+          GOnCreateCommentData_onCreateComment_habit_comments_items>();
+  set items(
+          ListBuilder<
+                  GOnCreateCommentData_onCreateComment_habit_comments_items>?
+              items) =>
+      _$this._items = items;
+
+  GOnCreateCommentData_onCreateComment_habit_commentsBuilder() {
+    GOnCreateCommentData_onCreateComment_habit_comments._initializeBuilder(
+        this);
+  }
+
+  GOnCreateCommentData_onCreateComment_habit_commentsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _items = $v.items.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateCommentData_onCreateComment_habit_comments other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentData_onCreateComment_habit_comments;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateCommentData_onCreateComment_habit_commentsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments build() => _build();
+
+  _$GOnCreateCommentData_onCreateComment_habit_comments _build() {
+    _$GOnCreateCommentData_onCreateComment_habit_comments _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateCommentData_onCreateComment_habit_comments._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnCreateCommentData_onCreateComment_habit_comments',
+                  'G__typename'),
+              items: items.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'items';
+        items.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateCommentData_onCreateComment_habit_comments',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateCommentData_onCreateComment_habit_comments_items
+    extends GOnCreateCommentData_onCreateComment_habit_comments_items {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final String? habitId;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnCreateCommentData_onCreateComment_habit_comments_items(
+          [void Function(
+                  GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder)?
+              updates]) =>
+      (new GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateCommentData_onCreateComment_habit_comments_items._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.habitId,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnCreateCommentData_onCreateComment_habit_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment,
+        r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+        'comment');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt,
+        r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+        'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt,
+        r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+        'updatedAt');
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments_items rebuild(
+          void Function(
+                  GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder
+      toBuilder() =>
+          new GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateCommentData_onCreateComment_habit_comments_items &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        habitId == other.habitId &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                        owner.hashCode),
+                    habitId.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateCommentData_onCreateComment_habit_comments_items')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('habitId', habitId)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder
+    implements
+        Builder<GOnCreateCommentData_onCreateComment_habit_comments_items,
+            GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder> {
+  _$GOnCreateCommentData_onCreateComment_habit_comments_items? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder() {
+    GOnCreateCommentData_onCreateComment_habit_comments_items
+        ._initializeBuilder(this);
+  }
+
+  GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _habitId = $v.habitId;
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnCreateCommentData_onCreateComment_habit_comments_items other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateCommentData_onCreateComment_habit_comments_items;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnCreateCommentData_onCreateComment_habit_comments_itemsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateCommentData_onCreateComment_habit_comments_items build() => _build();
+
+  _$GOnCreateCommentData_onCreateComment_habit_comments_items _build() {
+    _$GOnCreateCommentData_onCreateComment_habit_comments_items _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateCommentData_onCreateComment_habit_comments_items._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id,
+                  r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+                  'id'),
+              owner: owner,
+              habitId: habitId,
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+                  'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateCommentData_onCreateComment_habit_comments_items',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentData extends GOnUpdateCommentData {
+  @override
+  final String G__typename;
+  @override
+  final GOnUpdateCommentData_onUpdateComment? onUpdateComment;
+
+  factory _$GOnUpdateCommentData(
+          [void Function(GOnUpdateCommentDataBuilder)? updates]) =>
+      (new GOnUpdateCommentDataBuilder()..update(updates))._build();
+
+  _$GOnUpdateCommentData._({required this.G__typename, this.onUpdateComment})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnUpdateCommentData', 'G__typename');
+  }
+
+  @override
+  GOnUpdateCommentData rebuild(
+          void Function(GOnUpdateCommentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentDataBuilder toBuilder() =>
+      new GOnUpdateCommentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentData &&
+        G__typename == other.G__typename &&
+        onUpdateComment == other.onUpdateComment;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), onUpdateComment.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnUpdateCommentData')
+          ..add('G__typename', G__typename)
+          ..add('onUpdateComment', onUpdateComment))
+        .toString();
+  }
+}
+
+class GOnUpdateCommentDataBuilder
+    implements Builder<GOnUpdateCommentData, GOnUpdateCommentDataBuilder> {
+  _$GOnUpdateCommentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GOnUpdateCommentData_onUpdateCommentBuilder? _onUpdateComment;
+  GOnUpdateCommentData_onUpdateCommentBuilder get onUpdateComment =>
+      _$this._onUpdateComment ??=
+          new GOnUpdateCommentData_onUpdateCommentBuilder();
+  set onUpdateComment(
+          GOnUpdateCommentData_onUpdateCommentBuilder? onUpdateComment) =>
+      _$this._onUpdateComment = onUpdateComment;
+
+  GOnUpdateCommentDataBuilder() {
+    GOnUpdateCommentData._initializeBuilder(this);
+  }
+
+  GOnUpdateCommentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _onUpdateComment = $v.onUpdateComment?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateCommentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentData;
+  }
+
+  @override
+  void update(void Function(GOnUpdateCommentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentData build() => _build();
+
+  _$GOnUpdateCommentData _build() {
+    _$GOnUpdateCommentData _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateCommentData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GOnUpdateCommentData', 'G__typename'),
+              onUpdateComment: _onUpdateComment?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'onUpdateComment';
+        _onUpdateComment?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateCommentData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment
+    extends GOnUpdateCommentData_onUpdateComment {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final GOnUpdateCommentData_onUpdateComment_by? by;
+  @override
+  final String? habitId;
+  @override
+  final GOnUpdateCommentData_onUpdateComment_habit? habit;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnUpdateCommentData_onUpdateComment(
+          [void Function(GOnUpdateCommentData_onUpdateCommentBuilder)?
+              updates]) =>
+      (new GOnUpdateCommentData_onUpdateCommentBuilder()..update(updates))
+          ._build();
+
+  _$GOnUpdateCommentData_onUpdateComment._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.by,
+      this.habitId,
+      this.habit,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnUpdateCommentData_onUpdateComment', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnUpdateCommentData_onUpdateComment', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment, r'GOnUpdateCommentData_onUpdateComment', 'comment');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt, r'GOnUpdateCommentData_onUpdateComment', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt, r'GOnUpdateCommentData_onUpdateComment', 'updatedAt');
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment rebuild(
+          void Function(GOnUpdateCommentData_onUpdateCommentBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentData_onUpdateCommentBuilder toBuilder() =>
+      new GOnUpdateCommentData_onUpdateCommentBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentData_onUpdateComment &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        by == other.by &&
+        habitId == other.habitId &&
+        habit == other.habit &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                                owner.hashCode),
+                            by.hashCode),
+                        habitId.hashCode),
+                    habit.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnUpdateCommentData_onUpdateComment')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('by', by)
+          ..add('habitId', habitId)
+          ..add('habit', habit)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnUpdateCommentData_onUpdateCommentBuilder
+    implements
+        Builder<GOnUpdateCommentData_onUpdateComment,
+            GOnUpdateCommentData_onUpdateCommentBuilder> {
+  _$GOnUpdateCommentData_onUpdateComment? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnUpdateCommentData_onUpdateComment_byBuilder? _by;
+  GOnUpdateCommentData_onUpdateComment_byBuilder get by =>
+      _$this._by ??= new GOnUpdateCommentData_onUpdateComment_byBuilder();
+  set by(GOnUpdateCommentData_onUpdateComment_byBuilder? by) => _$this._by = by;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  GOnUpdateCommentData_onUpdateComment_habitBuilder? _habit;
+  GOnUpdateCommentData_onUpdateComment_habitBuilder get habit =>
+      _$this._habit ??= new GOnUpdateCommentData_onUpdateComment_habitBuilder();
+  set habit(GOnUpdateCommentData_onUpdateComment_habitBuilder? habit) =>
+      _$this._habit = habit;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnUpdateCommentData_onUpdateCommentBuilder() {
+    GOnUpdateCommentData_onUpdateComment._initializeBuilder(this);
+  }
+
+  GOnUpdateCommentData_onUpdateCommentBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _by = $v.by?.toBuilder();
+      _habitId = $v.habitId;
+      _habit = $v.habit?.toBuilder();
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateCommentData_onUpdateComment other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentData_onUpdateComment;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateCommentData_onUpdateCommentBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment build() => _build();
+
+  _$GOnUpdateCommentData_onUpdateComment _build() {
+    _$GOnUpdateCommentData_onUpdateComment _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateCommentData_onUpdateComment._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnUpdateCommentData_onUpdateComment', 'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnUpdateCommentData_onUpdateComment', 'id'),
+              owner: owner,
+              by: _by?.build(),
+              habitId: habitId,
+              habit: _habit?.build(),
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment, r'GOnUpdateCommentData_onUpdateComment', 'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'by';
+        _by?.build();
+
+        _$failedField = 'habit';
+        _habit?.build();
+
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateCommentData_onUpdateComment',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_by
+    extends GOnUpdateCommentData_onUpdateComment_by {
+  @override
+  final String G__typename;
+  @override
+  final String username;
+  @override
+  final String? displayUsername;
+  @override
+  final String? name;
+  @override
+  final GOnUpdateCommentData_onUpdateComment_by_avatar? avatar;
+
+  factory _$GOnUpdateCommentData_onUpdateComment_by(
+          [void Function(GOnUpdateCommentData_onUpdateComment_byBuilder)?
+              updates]) =>
+      (new GOnUpdateCommentData_onUpdateComment_byBuilder()..update(updates))
+          ._build();
+
+  _$GOnUpdateCommentData_onUpdateComment_by._(
+      {required this.G__typename,
+      required this.username,
+      this.displayUsername,
+      this.name,
+      this.avatar})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnUpdateCommentData_onUpdateComment_by', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        username, r'GOnUpdateCommentData_onUpdateComment_by', 'username');
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_by rebuild(
+          void Function(GOnUpdateCommentData_onUpdateComment_byBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_byBuilder toBuilder() =>
+      new GOnUpdateCommentData_onUpdateComment_byBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentData_onUpdateComment_by &&
+        G__typename == other.G__typename &&
+        username == other.username &&
+        displayUsername == other.displayUsername &&
+        name == other.name &&
+        avatar == other.avatar;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateCommentData_onUpdateComment_by')
+          ..add('G__typename', G__typename)
+          ..add('username', username)
+          ..add('displayUsername', displayUsername)
+          ..add('name', name)
+          ..add('avatar', avatar))
+        .toString();
+  }
+}
+
+class GOnUpdateCommentData_onUpdateComment_byBuilder
+    implements
+        Builder<GOnUpdateCommentData_onUpdateComment_by,
+            GOnUpdateCommentData_onUpdateComment_byBuilder> {
+  _$GOnUpdateCommentData_onUpdateComment_by? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _username;
+  String? get username => _$this._username;
+  set username(String? username) => _$this._username = username;
+
+  String? _displayUsername;
+  String? get displayUsername => _$this._displayUsername;
+  set displayUsername(String? displayUsername) =>
+      _$this._displayUsername = displayUsername;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  GOnUpdateCommentData_onUpdateComment_by_avatarBuilder? _avatar;
+  GOnUpdateCommentData_onUpdateComment_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GOnUpdateCommentData_onUpdateComment_by_avatarBuilder();
+  set avatar(GOnUpdateCommentData_onUpdateComment_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
+  GOnUpdateCommentData_onUpdateComment_byBuilder() {
+    GOnUpdateCommentData_onUpdateComment_by._initializeBuilder(this);
+  }
+
+  GOnUpdateCommentData_onUpdateComment_byBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _username = $v.username;
+      _displayUsername = $v.displayUsername;
+      _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateCommentData_onUpdateComment_by other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentData_onUpdateComment_by;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateCommentData_onUpdateComment_byBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_by build() => _build();
+
+  _$GOnUpdateCommentData_onUpdateComment_by _build() {
+    _$GOnUpdateCommentData_onUpdateComment_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateCommentData_onUpdateComment_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnUpdateCommentData_onUpdateComment_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GOnUpdateCommentData_onUpdateComment_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateCommentData_onUpdateComment_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_by_avatar
+    extends GOnUpdateCommentData_onUpdateComment_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GOnUpdateCommentData_onUpdateComment_by_avatar(
+          [void Function(GOnUpdateCommentData_onUpdateComment_by_avatarBuilder)?
+              updates]) =>
+      (new GOnUpdateCommentData_onUpdateComment_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateCommentData_onUpdateComment_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnUpdateCommentData_onUpdateComment_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GOnUpdateCommentData_onUpdateComment_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GOnUpdateCommentData_onUpdateComment_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GOnUpdateCommentData_onUpdateComment_by_avatar', 'key');
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_by_avatar rebuild(
+          void Function(GOnUpdateCommentData_onUpdateComment_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_by_avatarBuilder toBuilder() =>
+      new GOnUpdateCommentData_onUpdateComment_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentData_onUpdateComment_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateCommentData_onUpdateComment_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GOnUpdateCommentData_onUpdateComment_by_avatarBuilder
+    implements
+        Builder<GOnUpdateCommentData_onUpdateComment_by_avatar,
+            GOnUpdateCommentData_onUpdateComment_by_avatarBuilder> {
+  _$GOnUpdateCommentData_onUpdateComment_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GOnUpdateCommentData_onUpdateComment_by_avatarBuilder() {
+    GOnUpdateCommentData_onUpdateComment_by_avatar._initializeBuilder(this);
+  }
+
+  GOnUpdateCommentData_onUpdateComment_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateCommentData_onUpdateComment_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentData_onUpdateComment_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateCommentData_onUpdateComment_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_by_avatar build() => _build();
+
+  _$GOnUpdateCommentData_onUpdateComment_by_avatar _build() {
+    final _$result = _$v ??
+        new _$GOnUpdateCommentData_onUpdateComment_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GOnUpdateCommentData_onUpdateComment_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GOnUpdateCommentData_onUpdateComment_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GOnUpdateCommentData_onUpdateComment_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GOnUpdateCommentData_onUpdateComment_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_habit
+    extends GOnUpdateCommentData_onUpdateComment_habit {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String tagline;
+  @override
+  final _i2.GCategory category;
+  @override
+  final String? details;
+  @override
+  final String? owner;
+  @override
+  final GOnUpdateCommentData_onUpdateComment_habit_comments? comments;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+  @override
+  final int? ups;
+  @override
+  final int? downs;
+
+  factory _$GOnUpdateCommentData_onUpdateComment_habit(
+          [void Function(GOnUpdateCommentData_onUpdateComment_habitBuilder)?
+              updates]) =>
+      (new GOnUpdateCommentData_onUpdateComment_habitBuilder()..update(updates))
+          ._build();
+
+  _$GOnUpdateCommentData_onUpdateComment_habit._(
+      {required this.G__typename,
+      required this.id,
+      required this.tagline,
+      required this.category,
+      this.details,
+      this.owner,
+      this.comments,
+      required this.createdAt,
+      required this.updatedAt,
+      this.ups,
+      this.downs})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnUpdateCommentData_onUpdateComment_habit', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnUpdateCommentData_onUpdateComment_habit', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        tagline, r'GOnUpdateCommentData_onUpdateComment_habit', 'tagline');
+    BuiltValueNullFieldError.checkNotNull(
+        category, r'GOnUpdateCommentData_onUpdateComment_habit', 'category');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt, r'GOnUpdateCommentData_onUpdateComment_habit', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt, r'GOnUpdateCommentData_onUpdateComment_habit', 'updatedAt');
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit rebuild(
+          void Function(GOnUpdateCommentData_onUpdateComment_habitBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habitBuilder toBuilder() =>
+      new GOnUpdateCommentData_onUpdateComment_habitBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentData_onUpdateComment_habit &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        tagline == other.tagline &&
+        category == other.category &&
+        details == other.details &&
+        owner == other.owner &&
+        comments == other.comments &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        ups == other.ups &&
+        downs == other.downs;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, G__typename.hashCode),
+                                            id.hashCode),
+                                        tagline.hashCode),
+                                    category.hashCode),
+                                details.hashCode),
+                            owner.hashCode),
+                        comments.hashCode),
+                    createdAt.hashCode),
+                updatedAt.hashCode),
+            ups.hashCode),
+        downs.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateCommentData_onUpdateComment_habit')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('tagline', tagline)
+          ..add('category', category)
+          ..add('details', details)
+          ..add('owner', owner)
+          ..add('comments', comments)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('ups', ups)
+          ..add('downs', downs))
+        .toString();
+  }
+}
+
+class GOnUpdateCommentData_onUpdateComment_habitBuilder
+    implements
+        Builder<GOnUpdateCommentData_onUpdateComment_habit,
+            GOnUpdateCommentData_onUpdateComment_habitBuilder> {
+  _$GOnUpdateCommentData_onUpdateComment_habit? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _tagline;
+  String? get tagline => _$this._tagline;
+  set tagline(String? tagline) => _$this._tagline = tagline;
+
+  _i2.GCategory? _category;
+  _i2.GCategory? get category => _$this._category;
+  set category(_i2.GCategory? category) => _$this._category = category;
+
+  String? _details;
+  String? get details => _$this._details;
+  set details(String? details) => _$this._details = details;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder? _comments;
+  GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder get comments =>
+      _$this._comments ??=
+          new GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder();
+  set comments(
+          GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder?
+              comments) =>
+      _$this._comments = comments;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  int? _ups;
+  int? get ups => _$this._ups;
+  set ups(int? ups) => _$this._ups = ups;
+
+  int? _downs;
+  int? get downs => _$this._downs;
+  set downs(int? downs) => _$this._downs = downs;
+
+  GOnUpdateCommentData_onUpdateComment_habitBuilder() {
+    GOnUpdateCommentData_onUpdateComment_habit._initializeBuilder(this);
+  }
+
+  GOnUpdateCommentData_onUpdateComment_habitBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _tagline = $v.tagline;
+      _category = $v.category;
+      _details = $v.details;
+      _owner = $v.owner;
+      _comments = $v.comments?.toBuilder();
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _ups = $v.ups;
+      _downs = $v.downs;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateCommentData_onUpdateComment_habit other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentData_onUpdateComment_habit;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateCommentData_onUpdateComment_habitBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit build() => _build();
+
+  _$GOnUpdateCommentData_onUpdateComment_habit _build() {
+    _$GOnUpdateCommentData_onUpdateComment_habit _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateCommentData_onUpdateComment_habit._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnUpdateCommentData_onUpdateComment_habit', 'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnUpdateCommentData_onUpdateComment_habit', 'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(tagline,
+                  r'GOnUpdateCommentData_onUpdateComment_habit', 'tagline'),
+              category: BuiltValueNullFieldError.checkNotNull(category,
+                  r'GOnUpdateCommentData_onUpdateComment_habit', 'category'),
+              details: details,
+              owner: owner,
+              comments: _comments?.build(),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build(),
+              ups: ups,
+              downs: downs);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'comments';
+        _comments?.build();
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateCommentData_onUpdateComment_habit',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_habit_comments
+    extends GOnUpdateCommentData_onUpdateComment_habit_comments {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GOnUpdateCommentData_onUpdateComment_habit_comments_items>
+      items;
+
+  factory _$GOnUpdateCommentData_onUpdateComment_habit_comments(
+          [void Function(
+                  GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder)?
+              updates]) =>
+      (new GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateCommentData_onUpdateComment_habit_comments._(
+      {required this.G__typename, required this.items})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnUpdateCommentData_onUpdateComment_habit_comments', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        items, r'GOnUpdateCommentData_onUpdateComment_habit_comments', 'items');
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments rebuild(
+          void Function(
+                  GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder toBuilder() =>
+      new GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentData_onUpdateComment_habit_comments &&
+        G__typename == other.G__typename &&
+        items == other.items;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), items.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateCommentData_onUpdateComment_habit_comments')
+          ..add('G__typename', G__typename)
+          ..add('items', items))
+        .toString();
+  }
+}
+
+class GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder
+    implements
+        Builder<GOnUpdateCommentData_onUpdateComment_habit_comments,
+            GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder> {
+  _$GOnUpdateCommentData_onUpdateComment_habit_comments? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GOnUpdateCommentData_onUpdateComment_habit_comments_items>?
+      _items;
+  ListBuilder<GOnUpdateCommentData_onUpdateComment_habit_comments_items>
+      get items => _$this._items ??= new ListBuilder<
+          GOnUpdateCommentData_onUpdateComment_habit_comments_items>();
+  set items(
+          ListBuilder<
+                  GOnUpdateCommentData_onUpdateComment_habit_comments_items>?
+              items) =>
+      _$this._items = items;
+
+  GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder() {
+    GOnUpdateCommentData_onUpdateComment_habit_comments._initializeBuilder(
+        this);
+  }
+
+  GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _items = $v.items.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateCommentData_onUpdateComment_habit_comments other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentData_onUpdateComment_habit_comments;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateCommentData_onUpdateComment_habit_commentsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments build() => _build();
+
+  _$GOnUpdateCommentData_onUpdateComment_habit_comments _build() {
+    _$GOnUpdateCommentData_onUpdateComment_habit_comments _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateCommentData_onUpdateComment_habit_comments._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnUpdateCommentData_onUpdateComment_habit_comments',
+                  'G__typename'),
+              items: items.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'items';
+        items.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateCommentData_onUpdateComment_habit_comments',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateCommentData_onUpdateComment_habit_comments_items
+    extends GOnUpdateCommentData_onUpdateComment_habit_comments_items {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final String? habitId;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnUpdateCommentData_onUpdateComment_habit_comments_items(
+          [void Function(
+                  GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder)?
+              updates]) =>
+      (new GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateCommentData_onUpdateComment_habit_comments_items._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.habitId,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnUpdateCommentData_onUpdateComment_habit_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment,
+        r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+        'comment');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt,
+        r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+        'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt,
+        r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+        'updatedAt');
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments_items rebuild(
+          void Function(
+                  GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder
+      toBuilder() =>
+          new GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateCommentData_onUpdateComment_habit_comments_items &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        habitId == other.habitId &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                        owner.hashCode),
+                    habitId.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateCommentData_onUpdateComment_habit_comments_items')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('habitId', habitId)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder
+    implements
+        Builder<GOnUpdateCommentData_onUpdateComment_habit_comments_items,
+            GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder> {
+  _$GOnUpdateCommentData_onUpdateComment_habit_comments_items? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder() {
+    GOnUpdateCommentData_onUpdateComment_habit_comments_items
+        ._initializeBuilder(this);
+  }
+
+  GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _habitId = $v.habitId;
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnUpdateCommentData_onUpdateComment_habit_comments_items other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateCommentData_onUpdateComment_habit_comments_items;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnUpdateCommentData_onUpdateComment_habit_comments_itemsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateCommentData_onUpdateComment_habit_comments_items build() => _build();
+
+  _$GOnUpdateCommentData_onUpdateComment_habit_comments_items _build() {
+    _$GOnUpdateCommentData_onUpdateComment_habit_comments_items _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateCommentData_onUpdateComment_habit_comments_items._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id,
+                  r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+                  'id'),
+              owner: owner,
+              habitId: habitId,
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+                  'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateCommentData_onUpdateComment_habit_comments_items',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData extends GOnCreateHabitData {
+  @override
+  final String G__typename;
+  @override
+  final GOnCreateHabitData_onCreateHabit? onCreateHabit;
+
+  factory _$GOnCreateHabitData(
+          [void Function(GOnCreateHabitDataBuilder)? updates]) =>
+      (new GOnCreateHabitDataBuilder()..update(updates))._build();
+
+  _$GOnCreateHabitData._({required this.G__typename, this.onCreateHabit})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnCreateHabitData', 'G__typename');
+  }
+
+  @override
+  GOnCreateHabitData rebuild(
+          void Function(GOnCreateHabitDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitDataBuilder toBuilder() =>
+      new GOnCreateHabitDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitData &&
+        G__typename == other.G__typename &&
+        onCreateHabit == other.onCreateHabit;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), onCreateHabit.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnCreateHabitData')
+          ..add('G__typename', G__typename)
+          ..add('onCreateHabit', onCreateHabit))
+        .toString();
+  }
+}
+
+class GOnCreateHabitDataBuilder
+    implements Builder<GOnCreateHabitData, GOnCreateHabitDataBuilder> {
+  _$GOnCreateHabitData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GOnCreateHabitData_onCreateHabitBuilder? _onCreateHabit;
+  GOnCreateHabitData_onCreateHabitBuilder get onCreateHabit =>
+      _$this._onCreateHabit ??= new GOnCreateHabitData_onCreateHabitBuilder();
+  set onCreateHabit(GOnCreateHabitData_onCreateHabitBuilder? onCreateHabit) =>
+      _$this._onCreateHabit = onCreateHabit;
+
+  GOnCreateHabitDataBuilder() {
+    GOnCreateHabitData._initializeBuilder(this);
+  }
+
+  GOnCreateHabitDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _onCreateHabit = $v.onCreateHabit?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateHabitData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitData;
+  }
+
+  @override
+  void update(void Function(GOnCreateHabitDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData build() => _build();
+
+  _$GOnCreateHabitData _build() {
+    _$GOnCreateHabitData _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GOnCreateHabitData', 'G__typename'),
+              onCreateHabit: _onCreateHabit?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'onCreateHabit';
+        _onCreateHabit?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit
+    extends GOnCreateHabitData_onCreateHabit {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String tagline;
+  @override
+  final _i2.GCategory category;
+  @override
+  final String? details;
+  @override
+  final String? owner;
+  @override
+  final GOnCreateHabitData_onCreateHabit_comments? comments;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+  @override
+  final int? ups;
+  @override
+  final int? downs;
+
+  factory _$GOnCreateHabitData_onCreateHabit(
+          [void Function(GOnCreateHabitData_onCreateHabitBuilder)? updates]) =>
+      (new GOnCreateHabitData_onCreateHabitBuilder()..update(updates))._build();
+
+  _$GOnCreateHabitData_onCreateHabit._(
+      {required this.G__typename,
+      required this.id,
+      required this.tagline,
+      required this.category,
+      this.details,
+      this.owner,
+      this.comments,
+      required this.createdAt,
+      required this.updatedAt,
+      this.ups,
+      this.downs})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnCreateHabitData_onCreateHabit', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnCreateHabitData_onCreateHabit', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        tagline, r'GOnCreateHabitData_onCreateHabit', 'tagline');
+    BuiltValueNullFieldError.checkNotNull(
+        category, r'GOnCreateHabitData_onCreateHabit', 'category');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt, r'GOnCreateHabitData_onCreateHabit', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt, r'GOnCreateHabitData_onCreateHabit', 'updatedAt');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit rebuild(
+          void Function(GOnCreateHabitData_onCreateHabitBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabitBuilder toBuilder() =>
+      new GOnCreateHabitData_onCreateHabitBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitData_onCreateHabit &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        tagline == other.tagline &&
+        category == other.category &&
+        details == other.details &&
+        owner == other.owner &&
+        comments == other.comments &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        ups == other.ups &&
+        downs == other.downs;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, G__typename.hashCode),
+                                            id.hashCode),
+                                        tagline.hashCode),
+                                    category.hashCode),
+                                details.hashCode),
+                            owner.hashCode),
+                        comments.hashCode),
+                    createdAt.hashCode),
+                updatedAt.hashCode),
+            ups.hashCode),
+        downs.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnCreateHabitData_onCreateHabit')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('tagline', tagline)
+          ..add('category', category)
+          ..add('details', details)
+          ..add('owner', owner)
+          ..add('comments', comments)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('ups', ups)
+          ..add('downs', downs))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabitBuilder
+    implements
+        Builder<GOnCreateHabitData_onCreateHabit,
+            GOnCreateHabitData_onCreateHabitBuilder> {
+  _$GOnCreateHabitData_onCreateHabit? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _tagline;
+  String? get tagline => _$this._tagline;
+  set tagline(String? tagline) => _$this._tagline = tagline;
+
+  _i2.GCategory? _category;
+  _i2.GCategory? get category => _$this._category;
+  set category(_i2.GCategory? category) => _$this._category = category;
+
+  String? _details;
+  String? get details => _$this._details;
+  set details(String? details) => _$this._details = details;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnCreateHabitData_onCreateHabit_commentsBuilder? _comments;
+  GOnCreateHabitData_onCreateHabit_commentsBuilder get comments =>
+      _$this._comments ??=
+          new GOnCreateHabitData_onCreateHabit_commentsBuilder();
+  set comments(GOnCreateHabitData_onCreateHabit_commentsBuilder? comments) =>
+      _$this._comments = comments;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  int? _ups;
+  int? get ups => _$this._ups;
+  set ups(int? ups) => _$this._ups = ups;
+
+  int? _downs;
+  int? get downs => _$this._downs;
+  set downs(int? downs) => _$this._downs = downs;
+
+  GOnCreateHabitData_onCreateHabitBuilder() {
+    GOnCreateHabitData_onCreateHabit._initializeBuilder(this);
+  }
+
+  GOnCreateHabitData_onCreateHabitBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _tagline = $v.tagline;
+      _category = $v.category;
+      _details = $v.details;
+      _owner = $v.owner;
+      _comments = $v.comments?.toBuilder();
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _ups = $v.ups;
+      _downs = $v.downs;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateHabitData_onCreateHabit other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitData_onCreateHabit;
+  }
+
+  @override
+  void update(void Function(GOnCreateHabitData_onCreateHabitBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit build() => _build();
+
+  _$GOnCreateHabitData_onCreateHabit _build() {
+    _$GOnCreateHabitData_onCreateHabit _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData_onCreateHabit._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnCreateHabitData_onCreateHabit', 'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnCreateHabitData_onCreateHabit', 'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(
+                  tagline, r'GOnCreateHabitData_onCreateHabit', 'tagline'),
+              category: BuiltValueNullFieldError.checkNotNull(
+                  category, r'GOnCreateHabitData_onCreateHabit', 'category'),
+              details: details,
+              owner: owner,
+              comments: _comments?.build(),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build(),
+              ups: ups,
+              downs: downs);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'comments';
+        _comments?.build();
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData_onCreateHabit', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments
+    extends GOnCreateHabitData_onCreateHabit_comments {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GOnCreateHabitData_onCreateHabit_comments_items> items;
+
+  factory _$GOnCreateHabitData_onCreateHabit_comments(
+          [void Function(GOnCreateHabitData_onCreateHabit_commentsBuilder)?
+              updates]) =>
+      (new GOnCreateHabitData_onCreateHabit_commentsBuilder()..update(updates))
+          ._build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments._(
+      {required this.G__typename, required this.items})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnCreateHabitData_onCreateHabit_comments', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        items, r'GOnCreateHabitData_onCreateHabit_comments', 'items');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments rebuild(
+          void Function(GOnCreateHabitData_onCreateHabit_commentsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabit_commentsBuilder toBuilder() =>
+      new GOnCreateHabitData_onCreateHabit_commentsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitData_onCreateHabit_comments &&
+        G__typename == other.G__typename &&
+        items == other.items;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), items.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateHabitData_onCreateHabit_comments')
+          ..add('G__typename', G__typename)
+          ..add('items', items))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabit_commentsBuilder
+    implements
+        Builder<GOnCreateHabitData_onCreateHabit_comments,
+            GOnCreateHabitData_onCreateHabit_commentsBuilder> {
+  _$GOnCreateHabitData_onCreateHabit_comments? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GOnCreateHabitData_onCreateHabit_comments_items>? _items;
+  ListBuilder<GOnCreateHabitData_onCreateHabit_comments_items> get items =>
+      _$this._items ??=
+          new ListBuilder<GOnCreateHabitData_onCreateHabit_comments_items>();
+  set items(
+          ListBuilder<GOnCreateHabitData_onCreateHabit_comments_items>?
+              items) =>
+      _$this._items = items;
+
+  GOnCreateHabitData_onCreateHabit_commentsBuilder() {
+    GOnCreateHabitData_onCreateHabit_comments._initializeBuilder(this);
+  }
+
+  GOnCreateHabitData_onCreateHabit_commentsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _items = $v.items.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateHabitData_onCreateHabit_comments other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitData_onCreateHabit_comments;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateHabitData_onCreateHabit_commentsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments build() => _build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments _build() {
+    _$GOnCreateHabitData_onCreateHabit_comments _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData_onCreateHabit_comments._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnCreateHabitData_onCreateHabit_comments', 'G__typename'),
+              items: items.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'items';
+        items.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData_onCreateHabit_comments',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items
+    extends GOnCreateHabitData_onCreateHabit_comments_items {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final GOnCreateHabitData_onCreateHabit_comments_items_by? by;
+  @override
+  final String? habitId;
+  @override
+  final GOnCreateHabitData_onCreateHabit_comments_items_habit? habit;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnCreateHabitData_onCreateHabit_comments_items(
+          [void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_itemsBuilder)?
+              updates]) =>
+      (new GOnCreateHabitData_onCreateHabit_comments_itemsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.by,
+      this.habitId,
+      this.habit,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnCreateHabitData_onCreateHabit_comments_items', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnCreateHabitData_onCreateHabit_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment, r'GOnCreateHabitData_onCreateHabit_comments_items', 'comment');
+    BuiltValueNullFieldError.checkNotNull(createdAt,
+        r'GOnCreateHabitData_onCreateHabit_comments_items', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(updatedAt,
+        r'GOnCreateHabitData_onCreateHabit_comments_items', 'updatedAt');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items rebuild(
+          void Function(GOnCreateHabitData_onCreateHabit_comments_itemsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_itemsBuilder toBuilder() =>
+      new GOnCreateHabitData_onCreateHabit_comments_itemsBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitData_onCreateHabit_comments_items &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        by == other.by &&
+        habitId == other.habitId &&
+        habit == other.habit &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                                owner.hashCode),
+                            by.hashCode),
+                        habitId.hashCode),
+                    habit.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateHabitData_onCreateHabit_comments_items')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('by', by)
+          ..add('habitId', habitId)
+          ..add('habit', habit)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabit_comments_itemsBuilder
+    implements
+        Builder<GOnCreateHabitData_onCreateHabit_comments_items,
+            GOnCreateHabitData_onCreateHabit_comments_itemsBuilder> {
+  _$GOnCreateHabitData_onCreateHabit_comments_items? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_byBuilder? _by;
+  GOnCreateHabitData_onCreateHabit_comments_items_byBuilder get by =>
+      _$this._by ??=
+          new GOnCreateHabitData_onCreateHabit_comments_items_byBuilder();
+  set by(GOnCreateHabitData_onCreateHabit_comments_items_byBuilder? by) =>
+      _$this._by = by;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder? _habit;
+  GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder get habit =>
+      _$this._habit ??=
+          new GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder();
+  set habit(
+          GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder?
+              habit) =>
+      _$this._habit = habit;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnCreateHabitData_onCreateHabit_comments_itemsBuilder() {
+    GOnCreateHabitData_onCreateHabit_comments_items._initializeBuilder(this);
+  }
+
+  GOnCreateHabitData_onCreateHabit_comments_itemsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _by = $v.by?.toBuilder();
+      _habitId = $v.habitId;
+      _habit = $v.habit?.toBuilder();
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateHabitData_onCreateHabit_comments_items other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitData_onCreateHabit_comments_items;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateHabitData_onCreateHabit_comments_itemsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items build() => _build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items _build() {
+    _$GOnCreateHabitData_onCreateHabit_comments_items _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData_onCreateHabit_comments_items._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnCreateHabitData_onCreateHabit_comments_items', 'id'),
+              owner: owner,
+              by: _by?.build(),
+              habitId: habitId,
+              habit: _habit?.build(),
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items',
+                  'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'by';
+        _by?.build();
+
+        _$failedField = 'habit';
+        _habit?.build();
+
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData_onCreateHabit_comments_items',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_by
+    extends GOnCreateHabitData_onCreateHabit_comments_items_by {
+  @override
+  final String G__typename;
+  @override
+  final String username;
+  @override
+  final String? displayUsername;
+  @override
+  final String? name;
+  @override
+  final GOnCreateHabitData_onCreateHabit_comments_items_by_avatar? avatar;
+
+  factory _$GOnCreateHabitData_onCreateHabit_comments_items_by(
+          [void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_byBuilder)?
+              updates]) =>
+      (new GOnCreateHabitData_onCreateHabit_comments_items_byBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_by._(
+      {required this.G__typename,
+      required this.username,
+      this.displayUsername,
+      this.name,
+      this.avatar})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_by', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(username,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_by', 'username');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by rebuild(
+          void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_byBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_byBuilder toBuilder() =>
+      new GOnCreateHabitData_onCreateHabit_comments_items_byBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitData_onCreateHabit_comments_items_by &&
+        G__typename == other.G__typename &&
+        username == other.username &&
+        displayUsername == other.displayUsername &&
+        name == other.name &&
+        avatar == other.avatar;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_by')
+          ..add('G__typename', G__typename)
+          ..add('username', username)
+          ..add('displayUsername', displayUsername)
+          ..add('name', name)
+          ..add('avatar', avatar))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabit_comments_items_byBuilder
+    implements
+        Builder<GOnCreateHabitData_onCreateHabit_comments_items_by,
+            GOnCreateHabitData_onCreateHabit_comments_items_byBuilder> {
+  _$GOnCreateHabitData_onCreateHabit_comments_items_by? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _username;
+  String? get username => _$this._username;
+  set username(String? username) => _$this._username = username;
+
+  String? _displayUsername;
+  String? get displayUsername => _$this._displayUsername;
+  set displayUsername(String? displayUsername) =>
+      _$this._displayUsername = displayUsername;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder? _avatar;
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder();
+  set avatar(
+          GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_byBuilder() {
+    GOnCreateHabitData_onCreateHabit_comments_items_by._initializeBuilder(this);
+  }
+
+  GOnCreateHabitData_onCreateHabit_comments_items_byBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _username = $v.username;
+      _displayUsername = $v.displayUsername;
+      _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateHabitData_onCreateHabit_comments_items_by other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitData_onCreateHabit_comments_items_by;
+  }
+
+  @override
+  void update(
+      void Function(GOnCreateHabitData_onCreateHabit_comments_items_byBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by build() => _build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_by _build() {
+    _$GOnCreateHabitData_onCreateHabit_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData_onCreateHabit_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar
+    extends GOnCreateHabitData_onCreateHabit_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar(
+          [void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(key,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatar rebuild(
+          void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitData_onCreateHabit_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder
+    implements
+        Builder<GOnCreateHabitData_onCreateHabit_comments_items_by_avatar,
+            GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder> {
+  _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder() {
+    GOnCreateHabitData_onCreateHabit_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnCreateHabitData_onCreateHabit_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnCreateHabitData_onCreateHabit_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_by_avatar build() => _build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar _build() {
+    final _$result = _$v ??
+        new _$GOnCreateHabitData_onCreateHabit_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar',
+                'G__typename'),
+            bucket:
+                BuiltValueNullFieldError.checkNotNull(
+                    bucket,
+                    r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar',
+                    'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GOnCreateHabitData_onCreateHabit_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_habit
+    extends GOnCreateHabitData_onCreateHabit_comments_items_habit {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String tagline;
+  @override
+  final _i2.GCategory category;
+  @override
+  final String? details;
+  @override
+  final String? owner;
+  @override
+  final GOnCreateHabitData_onCreateHabit_comments_items_habit_comments?
+      comments;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+  @override
+  final int? ups;
+  @override
+  final int? downs;
+
+  factory _$GOnCreateHabitData_onCreateHabit_comments_items_habit(
+          [void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder)?
+              updates]) =>
+      (new GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit._(
+      {required this.G__typename,
+      required this.id,
+      required this.tagline,
+      required this.category,
+      this.details,
+      this.owner,
+      this.comments,
+      required this.createdAt,
+      required this.updatedAt,
+      this.ups,
+      this.downs})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnCreateHabitData_onCreateHabit_comments_items_habit', 'id');
+    BuiltValueNullFieldError.checkNotNull(tagline,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit', 'tagline');
+    BuiltValueNullFieldError.checkNotNull(category,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit', 'category');
+    BuiltValueNullFieldError.checkNotNull(createdAt,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(updatedAt,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit', 'updatedAt');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit rebuild(
+          void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder toBuilder() =>
+      new GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnCreateHabitData_onCreateHabit_comments_items_habit &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        tagline == other.tagline &&
+        category == other.category &&
+        details == other.details &&
+        owner == other.owner &&
+        comments == other.comments &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        ups == other.ups &&
+        downs == other.downs;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, G__typename.hashCode),
+                                            id.hashCode),
+                                        tagline.hashCode),
+                                    category.hashCode),
+                                details.hashCode),
+                            owner.hashCode),
+                        comments.hashCode),
+                    createdAt.hashCode),
+                updatedAt.hashCode),
+            ups.hashCode),
+        downs.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_habit')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('tagline', tagline)
+          ..add('category', category)
+          ..add('details', details)
+          ..add('owner', owner)
+          ..add('comments', comments)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('ups', ups)
+          ..add('downs', downs))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder
+    implements
+        Builder<GOnCreateHabitData_onCreateHabit_comments_items_habit,
+            GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder> {
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _tagline;
+  String? get tagline => _$this._tagline;
+  set tagline(String? tagline) => _$this._tagline = tagline;
+
+  _i2.GCategory? _category;
+  _i2.GCategory? get category => _$this._category;
+  set category(_i2.GCategory? category) => _$this._category = category;
+
+  String? _details;
+  String? get details => _$this._details;
+  set details(String? details) => _$this._details = details;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder?
+      _comments;
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder
+      get comments => _$this._comments ??=
+          new GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder();
+  set comments(
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder?
+              comments) =>
+      _$this._comments = comments;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  int? _ups;
+  int? get ups => _$this._ups;
+  set ups(int? ups) => _$this._ups = ups;
+
+  int? _downs;
+  int? get downs => _$this._downs;
+  set downs(int? downs) => _$this._downs = downs;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder() {
+    GOnCreateHabitData_onCreateHabit_comments_items_habit._initializeBuilder(
+        this);
+  }
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _tagline = $v.tagline;
+      _category = $v.category;
+      _details = $v.details;
+      _owner = $v.owner;
+      _comments = $v.comments?.toBuilder();
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _ups = $v.ups;
+      _downs = $v.downs;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnCreateHabitData_onCreateHabit_comments_items_habit other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnCreateHabitData_onCreateHabit_comments_items_habit;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnCreateHabitData_onCreateHabit_comments_items_habitBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit build() => _build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit _build() {
+    _$GOnCreateHabitData_onCreateHabit_comments_items_habit _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData_onCreateHabit_comments_items_habit._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit',
+                  'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(
+                  tagline,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit',
+                  'tagline'),
+              category: BuiltValueNullFieldError.checkNotNull(
+                  category,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit',
+                  'category'),
+              details: details,
+              owner: owner,
+              comments: _comments?.build(),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build(),
+              ups: ups,
+              downs: downs);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'comments';
+        _comments?.build();
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_habit',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+    extends GOnCreateHabitData_onCreateHabit_comments_items_habit_comments {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>
+      items;
+
+  factory _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments(
+          [void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder)?
+              updates]) =>
+      (new GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments._(
+      {required this.G__typename, required this.items})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        items,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments',
+        'items');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments rebuild(
+          void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder
+      toBuilder() =>
+          new GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GOnCreateHabitData_onCreateHabit_comments_items_habit_comments &&
+        G__typename == other.G__typename &&
+        items == other.items;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), items.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments')
+          ..add('G__typename', G__typename)
+          ..add('items', items))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder
+    implements
+        Builder<GOnCreateHabitData_onCreateHabit_comments_items_habit_comments,
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder> {
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>?
+      _items;
+  ListBuilder<
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>
+      get items => _$this._items ??= new ListBuilder<
+          GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>();
+  set items(
+          ListBuilder<
+                  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>?
+              items) =>
+      _$this._items = items;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder() {
+    GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+        ._initializeBuilder(this);
+  }
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _items = $v.items.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnCreateHabitData_onCreateHabit_comments_items_habit_comments other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnCreateHabitData_onCreateHabit_comments_items_habit_commentsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments build() =>
+      _build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments _build() {
+    _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+                  ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments',
+                  'G__typename'),
+              items: items.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'items';
+        items.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+    extends GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final String? habitId;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items(
+          [void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder)?
+              updates]) =>
+      (new GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.habitId,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+        'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+        'comment');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+        'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt,
+        r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+        'updatedAt');
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items rebuild(
+          void Function(
+                  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder
+      toBuilder() =>
+          new GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        habitId == other.habitId &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                        owner.hashCode),
+                    habitId.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('habitId', habitId)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder
+    implements
+        Builder<
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items,
+            GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder> {
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder() {
+    GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+        ._initializeBuilder(this);
+  }
+
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _habitId = $v.habitId;
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_itemsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+      build() => _build();
+
+  _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+      _build() {
+    _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+        _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+                  ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+                  'id'),
+              owner: owner,
+              habitId: habitId,
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+                  'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData extends GOnUpdateHabitData {
+  @override
+  final String G__typename;
+  @override
+  final GOnUpdateHabitData_onUpdateHabit? onUpdateHabit;
+
+  factory _$GOnUpdateHabitData(
+          [void Function(GOnUpdateHabitDataBuilder)? updates]) =>
+      (new GOnUpdateHabitDataBuilder()..update(updates))._build();
+
+  _$GOnUpdateHabitData._({required this.G__typename, this.onUpdateHabit})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnUpdateHabitData', 'G__typename');
+  }
+
+  @override
+  GOnUpdateHabitData rebuild(
+          void Function(GOnUpdateHabitDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitDataBuilder toBuilder() =>
+      new GOnUpdateHabitDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitData &&
+        G__typename == other.G__typename &&
+        onUpdateHabit == other.onUpdateHabit;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), onUpdateHabit.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnUpdateHabitData')
+          ..add('G__typename', G__typename)
+          ..add('onUpdateHabit', onUpdateHabit))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitDataBuilder
+    implements Builder<GOnUpdateHabitData, GOnUpdateHabitDataBuilder> {
+  _$GOnUpdateHabitData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GOnUpdateHabitData_onUpdateHabitBuilder? _onUpdateHabit;
+  GOnUpdateHabitData_onUpdateHabitBuilder get onUpdateHabit =>
+      _$this._onUpdateHabit ??= new GOnUpdateHabitData_onUpdateHabitBuilder();
+  set onUpdateHabit(GOnUpdateHabitData_onUpdateHabitBuilder? onUpdateHabit) =>
+      _$this._onUpdateHabit = onUpdateHabit;
+
+  GOnUpdateHabitDataBuilder() {
+    GOnUpdateHabitData._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _onUpdateHabit = $v.onUpdateHabit?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateHabitData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitData;
+  }
+
+  @override
+  void update(void Function(GOnUpdateHabitDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData build() => _build();
+
+  _$GOnUpdateHabitData _build() {
+    _$GOnUpdateHabitData _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GOnUpdateHabitData', 'G__typename'),
+              onUpdateHabit: _onUpdateHabit?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'onUpdateHabit';
+        _onUpdateHabit?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit
+    extends GOnUpdateHabitData_onUpdateHabit {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String tagline;
+  @override
+  final _i2.GCategory category;
+  @override
+  final String? details;
+  @override
+  final String? owner;
+  @override
+  final GOnUpdateHabitData_onUpdateHabit_comments? comments;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+  @override
+  final int? ups;
+  @override
+  final int? downs;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit(
+          [void Function(GOnUpdateHabitData_onUpdateHabitBuilder)? updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabitBuilder()..update(updates))._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit._(
+      {required this.G__typename,
+      required this.id,
+      required this.tagline,
+      required this.category,
+      this.details,
+      this.owner,
+      this.comments,
+      required this.createdAt,
+      required this.updatedAt,
+      this.ups,
+      this.downs})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOnUpdateHabitData_onUpdateHabit', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnUpdateHabitData_onUpdateHabit', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        tagline, r'GOnUpdateHabitData_onUpdateHabit', 'tagline');
+    BuiltValueNullFieldError.checkNotNull(
+        category, r'GOnUpdateHabitData_onUpdateHabit', 'category');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt, r'GOnUpdateHabitData_onUpdateHabit', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt, r'GOnUpdateHabitData_onUpdateHabit', 'updatedAt');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit rebuild(
+          void Function(GOnUpdateHabitData_onUpdateHabitBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabitBuilder toBuilder() =>
+      new GOnUpdateHabitData_onUpdateHabitBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitData_onUpdateHabit &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        tagline == other.tagline &&
+        category == other.category &&
+        details == other.details &&
+        owner == other.owner &&
+        comments == other.comments &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        ups == other.ups &&
+        downs == other.downs;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, G__typename.hashCode),
+                                            id.hashCode),
+                                        tagline.hashCode),
+                                    category.hashCode),
+                                details.hashCode),
+                            owner.hashCode),
+                        comments.hashCode),
+                    createdAt.hashCode),
+                updatedAt.hashCode),
+            ups.hashCode),
+        downs.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOnUpdateHabitData_onUpdateHabit')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('tagline', tagline)
+          ..add('category', category)
+          ..add('details', details)
+          ..add('owner', owner)
+          ..add('comments', comments)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('ups', ups)
+          ..add('downs', downs))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabitBuilder
+    implements
+        Builder<GOnUpdateHabitData_onUpdateHabit,
+            GOnUpdateHabitData_onUpdateHabitBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _tagline;
+  String? get tagline => _$this._tagline;
+  set tagline(String? tagline) => _$this._tagline = tagline;
+
+  _i2.GCategory? _category;
+  _i2.GCategory? get category => _$this._category;
+  set category(_i2.GCategory? category) => _$this._category = category;
+
+  String? _details;
+  String? get details => _$this._details;
+  set details(String? details) => _$this._details = details;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnUpdateHabitData_onUpdateHabit_commentsBuilder? _comments;
+  GOnUpdateHabitData_onUpdateHabit_commentsBuilder get comments =>
+      _$this._comments ??=
+          new GOnUpdateHabitData_onUpdateHabit_commentsBuilder();
+  set comments(GOnUpdateHabitData_onUpdateHabit_commentsBuilder? comments) =>
+      _$this._comments = comments;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  int? _ups;
+  int? get ups => _$this._ups;
+  set ups(int? ups) => _$this._ups = ups;
+
+  int? _downs;
+  int? get downs => _$this._downs;
+  set downs(int? downs) => _$this._downs = downs;
+
+  GOnUpdateHabitData_onUpdateHabitBuilder() {
+    GOnUpdateHabitData_onUpdateHabit._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabitBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _tagline = $v.tagline;
+      _category = $v.category;
+      _details = $v.details;
+      _owner = $v.owner;
+      _comments = $v.comments?.toBuilder();
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _ups = $v.ups;
+      _downs = $v.downs;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateHabitData_onUpdateHabit other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitData_onUpdateHabit;
+  }
+
+  @override
+  void update(void Function(GOnUpdateHabitData_onUpdateHabitBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit build() => _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit _build() {
+    _$GOnUpdateHabitData_onUpdateHabit _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData_onUpdateHabit._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnUpdateHabitData_onUpdateHabit', 'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnUpdateHabitData_onUpdateHabit', 'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(
+                  tagline, r'GOnUpdateHabitData_onUpdateHabit', 'tagline'),
+              category: BuiltValueNullFieldError.checkNotNull(
+                  category, r'GOnUpdateHabitData_onUpdateHabit', 'category'),
+              details: details,
+              owner: owner,
+              comments: _comments?.build(),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build(),
+              ups: ups,
+              downs: downs);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'comments';
+        _comments?.build();
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData_onUpdateHabit', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments
+    extends GOnUpdateHabitData_onUpdateHabit_comments {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GOnUpdateHabitData_onUpdateHabit_comments_items> items;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit_comments(
+          [void Function(GOnUpdateHabitData_onUpdateHabit_commentsBuilder)?
+              updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabit_commentsBuilder()..update(updates))
+          ._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments._(
+      {required this.G__typename, required this.items})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnUpdateHabitData_onUpdateHabit_comments', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        items, r'GOnUpdateHabitData_onUpdateHabit_comments', 'items');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments rebuild(
+          void Function(GOnUpdateHabitData_onUpdateHabit_commentsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_commentsBuilder toBuilder() =>
+      new GOnUpdateHabitData_onUpdateHabit_commentsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitData_onUpdateHabit_comments &&
+        G__typename == other.G__typename &&
+        items == other.items;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), items.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateHabitData_onUpdateHabit_comments')
+          ..add('G__typename', G__typename)
+          ..add('items', items))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabit_commentsBuilder
+    implements
+        Builder<GOnUpdateHabitData_onUpdateHabit_comments,
+            GOnUpdateHabitData_onUpdateHabit_commentsBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit_comments? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GOnUpdateHabitData_onUpdateHabit_comments_items>? _items;
+  ListBuilder<GOnUpdateHabitData_onUpdateHabit_comments_items> get items =>
+      _$this._items ??=
+          new ListBuilder<GOnUpdateHabitData_onUpdateHabit_comments_items>();
+  set items(
+          ListBuilder<GOnUpdateHabitData_onUpdateHabit_comments_items>?
+              items) =>
+      _$this._items = items;
+
+  GOnUpdateHabitData_onUpdateHabit_commentsBuilder() {
+    GOnUpdateHabitData_onUpdateHabit_comments._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabit_commentsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _items = $v.items.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateHabitData_onUpdateHabit_comments other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitData_onUpdateHabit_comments;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateHabitData_onUpdateHabit_commentsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments build() => _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments _build() {
+    _$GOnUpdateHabitData_onUpdateHabit_comments _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData_onUpdateHabit_comments._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments', 'G__typename'),
+              items: items.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'items';
+        items.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData_onUpdateHabit_comments',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items
+    extends GOnUpdateHabitData_onUpdateHabit_comments_items {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final GOnUpdateHabitData_onUpdateHabit_comments_items_by? by;
+  @override
+  final String? habitId;
+  @override
+  final GOnUpdateHabitData_onUpdateHabit_comments_items_habit? habit;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit_comments_items(
+          [void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder)?
+              updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.by,
+      this.habitId,
+      this.habit,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnUpdateHabitData_onUpdateHabit_comments_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment, r'GOnUpdateHabitData_onUpdateHabit_comments_items', 'comment');
+    BuiltValueNullFieldError.checkNotNull(createdAt,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(updatedAt,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items', 'updatedAt');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items rebuild(
+          void Function(GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder toBuilder() =>
+      new GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitData_onUpdateHabit_comments_items &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        by == other.by &&
+        habitId == other.habitId &&
+        habit == other.habit &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                                owner.hashCode),
+                            by.hashCode),
+                        habitId.hashCode),
+                    habit.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('by', by)
+          ..add('habitId', habitId)
+          ..add('habit', habit)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder
+    implements
+        Builder<GOnUpdateHabitData_onUpdateHabit_comments_items,
+            GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder? _by;
+  GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder get by =>
+      _$this._by ??=
+          new GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder();
+  set by(GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder? by) =>
+      _$this._by = by;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder? _habit;
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder get habit =>
+      _$this._habit ??=
+          new GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder();
+  set habit(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder?
+              habit) =>
+      _$this._habit = habit;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder() {
+    GOnUpdateHabitData_onUpdateHabit_comments_items._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _by = $v.by?.toBuilder();
+      _habitId = $v.habitId;
+      _habit = $v.habit?.toBuilder();
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateHabitData_onUpdateHabit_comments_items other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitData_onUpdateHabit_comments_items;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateHabitData_onUpdateHabit_comments_itemsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items build() => _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items _build() {
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData_onUpdateHabit_comments_items._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GOnUpdateHabitData_onUpdateHabit_comments_items', 'id'),
+              owner: owner,
+              by: _by?.build(),
+              habitId: habitId,
+              habit: _habit?.build(),
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items',
+                  'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'by';
+        _by?.build();
+
+        _$failedField = 'habit';
+        _habit?.build();
+
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_by
+    extends GOnUpdateHabitData_onUpdateHabit_comments_items_by {
+  @override
+  final String G__typename;
+  @override
+  final String username;
+  @override
+  final String? displayUsername;
+  @override
+  final String? name;
+  @override
+  final GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar? avatar;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit_comments_items_by(
+          [void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder)?
+              updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_by._(
+      {required this.G__typename,
+      required this.username,
+      this.displayUsername,
+      this.name,
+      this.avatar})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_by', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(username,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_by', 'username');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by rebuild(
+          void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder toBuilder() =>
+      new GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitData_onUpdateHabit_comments_items_by &&
+        G__typename == other.G__typename &&
+        username == other.username &&
+        displayUsername == other.displayUsername &&
+        name == other.name &&
+        avatar == other.avatar;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_by')
+          ..add('G__typename', G__typename)
+          ..add('username', username)
+          ..add('displayUsername', displayUsername)
+          ..add('name', name)
+          ..add('avatar', avatar))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder
+    implements
+        Builder<GOnUpdateHabitData_onUpdateHabit_comments_items_by,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_by? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _username;
+  String? get username => _$this._username;
+  set username(String? username) => _$this._username = username;
+
+  String? _displayUsername;
+  String? get displayUsername => _$this._displayUsername;
+  set displayUsername(String? displayUsername) =>
+      _$this._displayUsername = displayUsername;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder? _avatar;
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder();
+  set avatar(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder() {
+    GOnUpdateHabitData_onUpdateHabit_comments_items_by._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _username = $v.username;
+      _displayUsername = $v.displayUsername;
+      _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateHabitData_onUpdateHabit_comments_items_by other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitData_onUpdateHabit_comments_items_by;
+  }
+
+  @override
+  void update(
+      void Function(GOnUpdateHabitData_onUpdateHabit_comments_items_byBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by build() => _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_by _build() {
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData_onUpdateHabit_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar
+    extends GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar(
+          [void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(key,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar rebuild(
+          void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder
+    implements
+        Builder<GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder() {
+    GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar build() => _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar _build() {
+    final _$result = _$v ??
+        new _$GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar',
+                'G__typename'),
+            bucket:
+                BuiltValueNullFieldError.checkNotNull(
+                    bucket,
+                    r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar',
+                    'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit
+    extends GOnUpdateHabitData_onUpdateHabit_comments_items_habit {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String tagline;
+  @override
+  final _i2.GCategory category;
+  @override
+  final String? details;
+  @override
+  final String? owner;
+  @override
+  final GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments?
+      comments;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+  @override
+  final int? ups;
+  @override
+  final int? downs;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit(
+          [void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder)?
+              updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit._(
+      {required this.G__typename,
+      required this.id,
+      required this.tagline,
+      required this.category,
+      this.details,
+      this.owner,
+      this.comments,
+      required this.createdAt,
+      required this.updatedAt,
+      this.ups,
+      this.downs})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit', 'id');
+    BuiltValueNullFieldError.checkNotNull(tagline,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit', 'tagline');
+    BuiltValueNullFieldError.checkNotNull(category,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit', 'category');
+    BuiltValueNullFieldError.checkNotNull(createdAt,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit', 'createdAt');
+    BuiltValueNullFieldError.checkNotNull(updatedAt,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit', 'updatedAt');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit rebuild(
+          void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder toBuilder() =>
+      new GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOnUpdateHabitData_onUpdateHabit_comments_items_habit &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        tagline == other.tagline &&
+        category == other.category &&
+        details == other.details &&
+        owner == other.owner &&
+        comments == other.comments &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        ups == other.ups &&
+        downs == other.downs;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, G__typename.hashCode),
+                                            id.hashCode),
+                                        tagline.hashCode),
+                                    category.hashCode),
+                                details.hashCode),
+                            owner.hashCode),
+                        comments.hashCode),
+                    createdAt.hashCode),
+                updatedAt.hashCode),
+            ups.hashCode),
+        downs.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('tagline', tagline)
+          ..add('category', category)
+          ..add('details', details)
+          ..add('owner', owner)
+          ..add('comments', comments)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('ups', ups)
+          ..add('downs', downs))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder
+    implements
+        Builder<GOnUpdateHabitData_onUpdateHabit_comments_items_habit,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _tagline;
+  String? get tagline => _$this._tagline;
+  set tagline(String? tagline) => _$this._tagline = tagline;
+
+  _i2.GCategory? _category;
+  _i2.GCategory? get category => _$this._category;
+  set category(_i2.GCategory? category) => _$this._category = category;
+
+  String? _details;
+  String? get details => _$this._details;
+  set details(String? details) => _$this._details = details;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder?
+      _comments;
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder
+      get comments => _$this._comments ??=
+          new GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder();
+  set comments(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder?
+              comments) =>
+      _$this._comments = comments;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  int? _ups;
+  int? get ups => _$this._ups;
+  set ups(int? ups) => _$this._ups = ups;
+
+  int? _downs;
+  int? get downs => _$this._downs;
+  set downs(int? downs) => _$this._downs = downs;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder() {
+    GOnUpdateHabitData_onUpdateHabit_comments_items_habit._initializeBuilder(
+        this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _tagline = $v.tagline;
+      _category = $v.category;
+      _details = $v.details;
+      _owner = $v.owner;
+      _comments = $v.comments?.toBuilder();
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _ups = $v.ups;
+      _downs = $v.downs;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOnUpdateHabitData_onUpdateHabit_comments_items_habit other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnUpdateHabitData_onUpdateHabit_comments_items_habitBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit build() => _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit _build() {
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit',
+                  'id'),
+              tagline: BuiltValueNullFieldError.checkNotNull(
+                  tagline,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit',
+                  'tagline'),
+              category: BuiltValueNullFieldError.checkNotNull(
+                  category,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit',
+                  'category'),
+              details: details,
+              owner: owner,
+              comments: _comments?.build(),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build(),
+              ups: ups,
+              downs: downs);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'comments';
+        _comments?.build();
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+    extends GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>
+      items;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments(
+          [void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder)?
+              updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments._(
+      {required this.G__typename, required this.items})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        items,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments',
+        'items');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments rebuild(
+          void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder
+      toBuilder() =>
+          new GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments &&
+        G__typename == other.G__typename &&
+        items == other.items;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), items.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments')
+          ..add('G__typename', G__typename)
+          ..add('items', items))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder
+    implements
+        Builder<GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>?
+      _items;
+  ListBuilder<
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>
+      get items => _$this._items ??= new ListBuilder<
+          GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>();
+  set items(
+          ListBuilder<
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>?
+              items) =>
+      _$this._items = items;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder() {
+    GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+        ._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _items = $v.items.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnUpdateHabitData_onUpdateHabit_comments_items_habit_commentsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments build() =>
+      _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments _build() {
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+                  ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments',
+                  'G__typename'),
+              items: items.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'items';
+        items.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+    extends GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String? owner;
+  @override
+  final String? habitId;
+  @override
+  final String comment;
+  @override
+  final _i2.GAWSDateTime createdAt;
+  @override
+  final _i2.GAWSDateTime updatedAt;
+
+  factory _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items(
+          [void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder)?
+              updates]) =>
+      (new GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items._(
+      {required this.G__typename,
+      required this.id,
+      this.owner,
+      this.habitId,
+      required this.comment,
+      required this.createdAt,
+      required this.updatedAt})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+        'id');
+    BuiltValueNullFieldError.checkNotNull(
+        comment,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+        'comment');
+    BuiltValueNullFieldError.checkNotNull(
+        createdAt,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+        'createdAt');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedAt,
+        r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+        'updatedAt');
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items rebuild(
+          void Function(
+                  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder
+      toBuilder() =>
+          new GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        owner == other.owner &&
+        habitId == other.habitId &&
+        comment == other.comment &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                        owner.hashCode),
+                    habitId.hashCode),
+                comment.hashCode),
+            createdAt.hashCode),
+        updatedAt.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('owner', owner)
+          ..add('habitId', habitId)
+          ..add('comment', comment)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt))
+        .toString();
+  }
+}
+
+class GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder
+    implements
+        Builder<
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items,
+            GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder> {
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _owner;
+  String? get owner => _$this._owner;
+  set owner(String? owner) => _$this._owner = owner;
+
+  String? _habitId;
+  String? get habitId => _$this._habitId;
+  set habitId(String? habitId) => _$this._habitId = habitId;
+
+  String? _comment;
+  String? get comment => _$this._comment;
+  set comment(String? comment) => _$this._comment = comment;
+
+  _i2.GAWSDateTimeBuilder? _createdAt;
+  _i2.GAWSDateTimeBuilder get createdAt =>
+      _$this._createdAt ??= new _i2.GAWSDateTimeBuilder();
+  set createdAt(_i2.GAWSDateTimeBuilder? createdAt) =>
+      _$this._createdAt = createdAt;
+
+  _i2.GAWSDateTimeBuilder? _updatedAt;
+  _i2.GAWSDateTimeBuilder get updatedAt =>
+      _$this._updatedAt ??= new _i2.GAWSDateTimeBuilder();
+  set updatedAt(_i2.GAWSDateTimeBuilder? updatedAt) =>
+      _$this._updatedAt = updatedAt;
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder() {
+    GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+        ._initializeBuilder(this);
+  }
+
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _owner = $v.owner;
+      _habitId = $v.habitId;
+      _comment = $v.comment;
+      _createdAt = $v.createdAt.toBuilder();
+      _updatedAt = $v.updatedAt.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items;
+  }
+
+  @override
+  void update(
+      void Function(
+              GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_itemsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+      build() => _build();
+
+  _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+      _build() {
+    _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+        _$result;
+    try {
+      _$result = _$v ??
+          new _$GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+                  ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+                  'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+                  'id'),
+              owner: owner,
+              habitId: habitId,
+              comment: BuiltValueNullFieldError.checkNotNull(
+                  comment,
+                  r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+                  'comment'),
+              createdAt: createdAt.build(),
+              updatedAt: updatedAt.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'createdAt';
+        createdAt.build();
+        _$failedField = 'updatedAt';
+        updatedAt.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GCreateUserData extends GCreateUserData {
   @override
   final String G__typename;
@@ -36482,6 +50713,8 @@ class _$GCreateCommentData_createComment_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GCreateCommentData_createComment_by_avatar? avatar;
 
   factory _$GCreateCommentData_createComment_by(
           [void Function(GCreateCommentData_createComment_byBuilder)?
@@ -36493,7 +50726,8 @@ class _$GCreateCommentData_createComment_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename, r'GCreateCommentData_createComment_by', 'G__typename');
@@ -36517,15 +50751,18 @@ class _$GCreateCommentData_createComment_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -36534,7 +50771,8 @@ class _$GCreateCommentData_createComment_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -36562,6 +50800,13 @@ class GCreateCommentData_createComment_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GCreateCommentData_createComment_by_avatarBuilder? _avatar;
+  GCreateCommentData_createComment_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GCreateCommentData_createComment_by_avatarBuilder();
+  set avatar(GCreateCommentData_createComment_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GCreateCommentData_createComment_byBuilder() {
     GCreateCommentData_createComment_by._initializeBuilder(this);
   }
@@ -36573,6 +50818,7 @@ class GCreateCommentData_createComment_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -36594,14 +50840,200 @@ class GCreateCommentData_createComment_byBuilder
   GCreateCommentData_createComment_by build() => _build();
 
   _$GCreateCommentData_createComment_by _build() {
+    _$GCreateCommentData_createComment_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GCreateCommentData_createComment_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GCreateCommentData_createComment_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username, r'GCreateCommentData_createComment_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GCreateCommentData_createComment_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCreateCommentData_createComment_by_avatar
+    extends GCreateCommentData_createComment_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GCreateCommentData_createComment_by_avatar(
+          [void Function(GCreateCommentData_createComment_by_avatarBuilder)?
+              updates]) =>
+      (new GCreateCommentData_createComment_by_avatarBuilder()..update(updates))
+          ._build();
+
+  _$GCreateCommentData_createComment_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GCreateCommentData_createComment_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GCreateCommentData_createComment_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GCreateCommentData_createComment_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GCreateCommentData_createComment_by_avatar', 'key');
+  }
+
+  @override
+  GCreateCommentData_createComment_by_avatar rebuild(
+          void Function(GCreateCommentData_createComment_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateCommentData_createComment_by_avatarBuilder toBuilder() =>
+      new GCreateCommentData_createComment_by_avatarBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateCommentData_createComment_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GCreateCommentData_createComment_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GCreateCommentData_createComment_by_avatarBuilder
+    implements
+        Builder<GCreateCommentData_createComment_by_avatar,
+            GCreateCommentData_createComment_by_avatarBuilder> {
+  _$GCreateCommentData_createComment_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GCreateCommentData_createComment_by_avatarBuilder() {
+    GCreateCommentData_createComment_by_avatar._initializeBuilder(this);
+  }
+
+  GCreateCommentData_createComment_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateCommentData_createComment_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateCommentData_createComment_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GCreateCommentData_createComment_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GCreateCommentData_createComment_by_avatar build() => _build();
+
+  _$GCreateCommentData_createComment_by_avatar _build() {
     final _$result = _$v ??
-        new _$GCreateCommentData_createComment_by._(
+        new _$GCreateCommentData_createComment_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GCreateCommentData_createComment_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'GCreateCommentData_createComment_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+                r'GCreateCommentData_createComment_by_avatar', 'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GCreateCommentData_createComment_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GCreateCommentData_createComment_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GCreateCommentData_createComment_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -37976,6 +52408,8 @@ class _$GCreateHabitData_createHabit_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GCreateHabitData_createHabit_comments_items_by_avatar? avatar;
 
   factory _$GCreateHabitData_createHabit_comments_items_by(
           [void Function(GCreateHabitData_createHabit_comments_items_byBuilder)?
@@ -37988,7 +52422,8 @@ class _$GCreateHabitData_createHabit_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GCreateHabitData_createHabit_comments_items_by', 'G__typename');
@@ -38014,15 +52449,18 @@ class _$GCreateHabitData_createHabit_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -38032,7 +52470,8 @@ class _$GCreateHabitData_createHabit_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -38060,6 +52499,15 @@ class GCreateHabitData_createHabit_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GCreateHabitData_createHabit_comments_items_by_avatarBuilder? _avatar;
+  GCreateHabitData_createHabit_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GCreateHabitData_createHabit_comments_items_by_avatarBuilder();
+  set avatar(
+          GCreateHabitData_createHabit_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GCreateHabitData_createHabit_comments_items_byBuilder() {
     GCreateHabitData_createHabit_comments_items_by._initializeBuilder(this);
   }
@@ -38071,6 +52519,7 @@ class GCreateHabitData_createHabit_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -38093,16 +52542,220 @@ class GCreateHabitData_createHabit_comments_items_byBuilder
   GCreateHabitData_createHabit_comments_items_by build() => _build();
 
   _$GCreateHabitData_createHabit_comments_items_by _build() {
+    _$GCreateHabitData_createHabit_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GCreateHabitData_createHabit_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GCreateHabitData_createHabit_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GCreateHabitData_createHabit_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GCreateHabitData_createHabit_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCreateHabitData_createHabit_comments_items_by_avatar
+    extends GCreateHabitData_createHabit_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GCreateHabitData_createHabit_comments_items_by_avatar(
+          [void Function(
+                  GCreateHabitData_createHabit_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GCreateHabitData_createHabit_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GCreateHabitData_createHabit_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GCreateHabitData_createHabit_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GCreateHabitData_createHabit_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GCreateHabitData_createHabit_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GCreateHabitData_createHabit_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GCreateHabitData_createHabit_comments_items_by_avatar rebuild(
+          void Function(
+                  GCreateHabitData_createHabit_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateHabitData_createHabit_comments_items_by_avatarBuilder toBuilder() =>
+      new GCreateHabitData_createHabit_comments_items_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateHabitData_createHabit_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GCreateHabitData_createHabit_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GCreateHabitData_createHabit_comments_items_by_avatarBuilder
+    implements
+        Builder<GCreateHabitData_createHabit_comments_items_by_avatar,
+            GCreateHabitData_createHabit_comments_items_by_avatarBuilder> {
+  _$GCreateHabitData_createHabit_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GCreateHabitData_createHabit_comments_items_by_avatarBuilder() {
+    GCreateHabitData_createHabit_comments_items_by_avatar._initializeBuilder(
+        this);
+  }
+
+  GCreateHabitData_createHabit_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateHabitData_createHabit_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateHabitData_createHabit_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GCreateHabitData_createHabit_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GCreateHabitData_createHabit_comments_items_by_avatar build() => _build();
+
+  _$GCreateHabitData_createHabit_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GCreateHabitData_createHabit_comments_items_by._(
+        new _$GCreateHabitData_createHabit_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GCreateHabitData_createHabit_comments_items_by',
+                r'GCreateHabitData_createHabit_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GCreateHabitData_createHabit_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GCreateHabitData_createHabit_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GCreateHabitData_createHabit_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GCreateHabitData_createHabit_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -39648,6 +54301,8 @@ class _$GUpdateUserData_updateUser_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GUpdateUserData_updateUser_comments_items_by_avatar? avatar;
 
   factory _$GUpdateUserData_updateUser_comments_items_by(
           [void Function(GUpdateUserData_updateUser_comments_items_byBuilder)?
@@ -39660,7 +54315,8 @@ class _$GUpdateUserData_updateUser_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GUpdateUserData_updateUser_comments_items_by', 'G__typename');
@@ -39685,15 +54341,18 @@ class _$GUpdateUserData_updateUser_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -39703,7 +54362,8 @@ class _$GUpdateUserData_updateUser_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -39731,6 +54391,14 @@ class GUpdateUserData_updateUser_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GUpdateUserData_updateUser_comments_items_by_avatarBuilder? _avatar;
+  GUpdateUserData_updateUser_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GUpdateUserData_updateUser_comments_items_by_avatarBuilder();
+  set avatar(
+          GUpdateUserData_updateUser_comments_items_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GUpdateUserData_updateUser_comments_items_byBuilder() {
     GUpdateUserData_updateUser_comments_items_by._initializeBuilder(this);
   }
@@ -39742,6 +54410,7 @@ class GUpdateUserData_updateUser_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -39764,14 +54433,213 @@ class GUpdateUserData_updateUser_comments_items_byBuilder
   GUpdateUserData_updateUser_comments_items_by build() => _build();
 
   _$GUpdateUserData_updateUser_comments_items_by _build() {
+    _$GUpdateUserData_updateUser_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateUserData_updateUser_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GUpdateUserData_updateUser_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GUpdateUserData_updateUser_comments_items_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GUpdateUserData_updateUser_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateUserData_updateUser_comments_items_by_avatar
+    extends GUpdateUserData_updateUser_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GUpdateUserData_updateUser_comments_items_by_avatar(
+          [void Function(
+                  GUpdateUserData_updateUser_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GUpdateUserData_updateUser_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GUpdateUserData_updateUser_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GUpdateUserData_updateUser_comments_items_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GUpdateUserData_updateUser_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GUpdateUserData_updateUser_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GUpdateUserData_updateUser_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GUpdateUserData_updateUser_comments_items_by_avatar rebuild(
+          void Function(
+                  GUpdateUserData_updateUser_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateUserData_updateUser_comments_items_by_avatarBuilder toBuilder() =>
+      new GUpdateUserData_updateUser_comments_items_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateUserData_updateUser_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GUpdateUserData_updateUser_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GUpdateUserData_updateUser_comments_items_by_avatarBuilder
+    implements
+        Builder<GUpdateUserData_updateUser_comments_items_by_avatar,
+            GUpdateUserData_updateUser_comments_items_by_avatarBuilder> {
+  _$GUpdateUserData_updateUser_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GUpdateUserData_updateUser_comments_items_by_avatarBuilder() {
+    GUpdateUserData_updateUser_comments_items_by_avatar._initializeBuilder(
+        this);
+  }
+
+  GUpdateUserData_updateUser_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateUserData_updateUser_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateUserData_updateUser_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GUpdateUserData_updateUser_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdateUserData_updateUser_comments_items_by_avatar build() => _build();
+
+  _$GUpdateUserData_updateUser_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GUpdateUserData_updateUser_comments_items_by._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GUpdateUserData_updateUser_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GUpdateUserData_updateUser_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+        new _$GUpdateUserData_updateUser_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GUpdateUserData_updateUser_comments_items_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GUpdateUserData_updateUser_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GUpdateUserData_updateUser_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(key,
+                r'GUpdateUserData_updateUser_comments_items_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -41223,6 +56091,9 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GUpdateUserData_updateUser_habits_items_comments_items_by_avatar?
+      avatar;
 
   factory _$GUpdateUserData_updateUser_habits_items_comments_items_by(
           [void Function(
@@ -41236,7 +56107,8 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
@@ -41268,15 +56140,18 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -41286,7 +56161,8 @@ class _$GUpdateUserData_updateUser_habits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -41314,6 +56190,16 @@ class GUpdateUserData_updateUser_habits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder?
+      _avatar;
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GUpdateUserData_updateUser_habits_items_comments_items_byBuilder() {
     GUpdateUserData_updateUser_habits_items_comments_items_by
         ._initializeBuilder(this);
@@ -41326,6 +56212,7 @@ class GUpdateUserData_updateUser_habits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -41350,18 +56237,233 @@ class GUpdateUserData_updateUser_habits_items_comments_items_byBuilder
   GUpdateUserData_updateUser_habits_items_comments_items_by build() => _build();
 
   _$GUpdateUserData_updateUser_habits_items_comments_items_by _build() {
+    _$GUpdateUserData_updateUser_habits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateUserData_updateUser_habits_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GUpdateUserData_updateUser_habits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GUpdateUserData_updateUser_habits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar
+    extends GUpdateUserData_updateUser_habits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar(
+          [void Function(
+                  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key,
+        r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
+        'key');
+  }
+
+  @override
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GUpdateUserData_updateUser_habits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<
+            GUpdateUserData_updateUser_habits_items_comments_items_by_avatar,
+            GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder> {
+  _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder() {
+    GUpdateUserData_updateUser_habits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GUpdateUserData_updateUser_habits_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GUpdateUserData_updateUser_habits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdateUserData_updateUser_habits_items_comments_items_by_avatar build() =>
+      _build();
+
+  _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GUpdateUserData_updateUser_habits_items_comments_items_by._(
+        new _$GUpdateUserData_updateUser_habits_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GUpdateUserData_updateUser_habits_items_comments_items_by',
+                r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GUpdateUserData_updateUser_habits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GUpdateUserData_updateUser_habits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -42814,6 +57916,8 @@ class _$GUpdateHabitData_updateHabit_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GUpdateHabitData_updateHabit_comments_items_by_avatar? avatar;
 
   factory _$GUpdateHabitData_updateHabit_comments_items_by(
           [void Function(GUpdateHabitData_updateHabit_comments_items_byBuilder)?
@@ -42826,7 +57930,8 @@ class _$GUpdateHabitData_updateHabit_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GUpdateHabitData_updateHabit_comments_items_by', 'G__typename');
@@ -42852,15 +57957,18 @@ class _$GUpdateHabitData_updateHabit_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -42870,7 +57978,8 @@ class _$GUpdateHabitData_updateHabit_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -42898,6 +58007,15 @@ class GUpdateHabitData_updateHabit_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder? _avatar;
+  GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder();
+  set avatar(
+          GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GUpdateHabitData_updateHabit_comments_items_byBuilder() {
     GUpdateHabitData_updateHabit_comments_items_by._initializeBuilder(this);
   }
@@ -42909,6 +58027,7 @@ class GUpdateHabitData_updateHabit_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -42931,16 +58050,220 @@ class GUpdateHabitData_updateHabit_comments_items_byBuilder
   GUpdateHabitData_updateHabit_comments_items_by build() => _build();
 
   _$GUpdateHabitData_updateHabit_comments_items_by _build() {
+    _$GUpdateHabitData_updateHabit_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateHabitData_updateHabit_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GUpdateHabitData_updateHabit_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GUpdateHabitData_updateHabit_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GUpdateHabitData_updateHabit_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateHabitData_updateHabit_comments_items_by_avatar
+    extends GUpdateHabitData_updateHabit_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GUpdateHabitData_updateHabit_comments_items_by_avatar(
+          [void Function(
+                  GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GUpdateHabitData_updateHabit_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GUpdateHabitData_updateHabit_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GUpdateHabitData_updateHabit_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GUpdateHabitData_updateHabit_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GUpdateHabitData_updateHabit_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GUpdateHabitData_updateHabit_comments_items_by_avatar rebuild(
+          void Function(
+                  GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder toBuilder() =>
+      new GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateHabitData_updateHabit_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GUpdateHabitData_updateHabit_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder
+    implements
+        Builder<GUpdateHabitData_updateHabit_comments_items_by_avatar,
+            GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder> {
+  _$GUpdateHabitData_updateHabit_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder() {
+    GUpdateHabitData_updateHabit_comments_items_by_avatar._initializeBuilder(
+        this);
+  }
+
+  GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateHabitData_updateHabit_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateHabitData_updateHabit_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GUpdateHabitData_updateHabit_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GUpdateHabitData_updateHabit_comments_items_by_avatar build() => _build();
+
+  _$GUpdateHabitData_updateHabit_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GUpdateHabitData_updateHabit_comments_items_by._(
+        new _$GUpdateHabitData_updateHabit_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GUpdateHabitData_updateHabit_comments_items_by',
+                r'GUpdateHabitData_updateHabit_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GUpdateHabitData_updateHabit_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GUpdateHabitData_updateHabit_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GUpdateHabitData_updateHabit_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GUpdateHabitData_updateHabit_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -46067,6 +61390,8 @@ class _$GSearchUsersData_listUsers_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GSearchUsersData_listUsers_items_comments_items_by_avatar? avatar;
 
   factory _$GSearchUsersData_listUsers_items_comments_items_by(
           [void Function(
@@ -46080,7 +61405,8 @@ class _$GSearchUsersData_listUsers_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GSearchUsersData_listUsers_items_comments_items_by', 'G__typename');
@@ -46107,15 +61433,18 @@ class _$GSearchUsersData_listUsers_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -46125,7 +61454,8 @@ class _$GSearchUsersData_listUsers_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -46153,6 +61483,15 @@ class GSearchUsersData_listUsers_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder? _avatar;
+  GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GSearchUsersData_listUsers_items_comments_items_byBuilder() {
     GSearchUsersData_listUsers_items_comments_items_by._initializeBuilder(this);
   }
@@ -46164,6 +61503,7 @@ class GSearchUsersData_listUsers_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -46186,18 +61526,223 @@ class GSearchUsersData_listUsers_items_comments_items_byBuilder
   GSearchUsersData_listUsers_items_comments_items_by build() => _build();
 
   _$GSearchUsersData_listUsers_items_comments_items_by _build() {
+    _$GSearchUsersData_listUsers_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GSearchUsersData_listUsers_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSearchUsersData_listUsers_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GSearchUsersData_listUsers_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GSearchUsersData_listUsers_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSearchUsersData_listUsers_items_comments_items_by_avatar
+    extends GSearchUsersData_listUsers_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GSearchUsersData_listUsers_items_comments_items_by_avatar(
+          [void Function(
+                  GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GSearchUsersData_listUsers_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GSearchUsersData_listUsers_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GSearchUsersData_listUsers_items_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GSearchUsersData_listUsers_items_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(key,
+        r'GSearchUsersData_listUsers_items_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GSearchUsersData_listUsers_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GSearchUsersData_listUsers_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GSearchUsersData_listUsers_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder
+    implements
+        Builder<GSearchUsersData_listUsers_items_comments_items_by_avatar,
+            GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder> {
+  _$GSearchUsersData_listUsers_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder() {
+    GSearchUsersData_listUsers_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GSearchUsersData_listUsers_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GSearchUsersData_listUsers_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GSearchUsersData_listUsers_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSearchUsersData_listUsers_items_comments_items_by_avatar build() => _build();
+
+  _$GSearchUsersData_listUsers_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GSearchUsersData_listUsers_items_comments_items_by._(
+        new _$GSearchUsersData_listUsers_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GSearchUsersData_listUsers_items_comments_items_by',
+                r'GSearchUsersData_listUsers_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GSearchUsersData_listUsers_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket:
+                BuiltValueNullFieldError.checkNotNull(
+                    bucket,
+                    r'GSearchUsersData_listUsers_items_comments_items_by_avatar',
+                    'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GSearchUsersData_listUsers_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GSearchUsersData_listUsers_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -47707,6 +63252,9 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar?
+      avatar;
 
   factory _$GSearchUsersData_listUsers_items_habits_items_comments_items_by(
           [void Function(
@@ -47720,7 +63268,8 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
@@ -47753,15 +63302,18 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -47771,7 +63323,8 @@ class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -47799,6 +63352,16 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder?
+      _avatar;
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder() {
     GSearchUsersData_listUsers_items_habits_items_comments_items_by
         ._initializeBuilder(this);
@@ -47812,6 +63375,7 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -47838,18 +63402,237 @@ class GSearchUsersData_listUsers_items_habits_items_comments_items_byBuilder
       _build();
 
   _$GSearchUsersData_listUsers_items_habits_items_comments_items_by _build() {
+    _$GSearchUsersData_listUsers_items_habits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GSearchUsersData_listUsers_items_habits_items_comments_items_by
+                  ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+    extends GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar(
+          [void Function(
+                  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key,
+        r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
+        'key');
+  }
+
+  @override
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<
+            GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar,
+            GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder> {
+  _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder() {
+    GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+      build() => _build();
+
+  _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+      _build() {
     final _$result = _$v ??
-        new _$GSearchUsersData_listUsers_items_habits_items_comments_items_by._(
+        new _$GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+                ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
+                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -49447,6 +65230,8 @@ class _$GSearchHabitsData_listHabits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GSearchHabitsData_listHabits_items_comments_items_by_avatar? avatar;
 
   factory _$GSearchHabitsData_listHabits_items_comments_items_by(
           [void Function(
@@ -49460,7 +65245,8 @@ class _$GSearchHabitsData_listHabits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GSearchHabitsData_listHabits_items_comments_items_by', 'G__typename');
@@ -49487,15 +65273,18 @@ class _$GSearchHabitsData_listHabits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -49505,7 +65294,8 @@ class _$GSearchHabitsData_listHabits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -49533,6 +65323,15 @@ class GSearchHabitsData_listHabits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder? _avatar;
+  GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GSearchHabitsData_listHabits_items_comments_items_byBuilder() {
     GSearchHabitsData_listHabits_items_comments_items_by._initializeBuilder(
         this);
@@ -49545,6 +65344,7 @@ class GSearchHabitsData_listHabits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -49568,18 +65368,230 @@ class GSearchHabitsData_listHabits_items_comments_items_byBuilder
   GSearchHabitsData_listHabits_items_comments_items_by build() => _build();
 
   _$GSearchHabitsData_listHabits_items_comments_items_by _build() {
+    _$GSearchHabitsData_listHabits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GSearchHabitsData_listHabits_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GSearchHabitsData_listHabits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GSearchHabitsData_listHabits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GSearchHabitsData_listHabits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GSearchHabitsData_listHabits_items_comments_items_by_avatar
+    extends GSearchHabitsData_listHabits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GSearchHabitsData_listHabits_items_comments_items_by_avatar(
+          [void Function(
+                  GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GSearchHabitsData_listHabits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GSearchHabitsData_listHabits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GSearchHabitsData_listHabits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GSearchHabitsData_listHabits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(key,
+        r'GSearchHabitsData_listHabits_items_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GSearchHabitsData_listHabits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GSearchHabitsData_listHabits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GSearchHabitsData_listHabits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<GSearchHabitsData_listHabits_items_comments_items_by_avatar,
+            GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder> {
+  _$GSearchHabitsData_listHabits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder() {
+    GSearchHabitsData_listHabits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GSearchHabitsData_listHabits_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v =
+        other as _$GSearchHabitsData_listHabits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GSearchHabitsData_listHabits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSearchHabitsData_listHabits_items_comments_items_by_avatar build() =>
+      _build();
+
+  _$GSearchHabitsData_listHabits_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GSearchHabitsData_listHabits_items_comments_items_by._(
+        new _$GSearchHabitsData_listHabits_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GSearchHabitsData_listHabits_items_comments_items_by',
+                r'GSearchHabitsData_listHabits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GSearchHabitsData_listHabits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GSearchHabitsData_listHabits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GSearchHabitsData_listHabits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GSearchHabitsData_listHabits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -50885,6 +66897,8 @@ class _$GAllHabitFieldsData_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GAllHabitFieldsData_comments_items_by_avatar? avatar;
 
   factory _$GAllHabitFieldsData_comments_items_by(
           [void Function(GAllHabitFieldsData_comments_items_byBuilder)?
@@ -50896,7 +66910,8 @@ class _$GAllHabitFieldsData_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename, r'GAllHabitFieldsData_comments_items_by', 'G__typename');
@@ -50921,15 +66936,18 @@ class _$GAllHabitFieldsData_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -50939,7 +66957,8 @@ class _$GAllHabitFieldsData_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -50967,6 +66986,13 @@ class GAllHabitFieldsData_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GAllHabitFieldsData_comments_items_by_avatarBuilder? _avatar;
+  GAllHabitFieldsData_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GAllHabitFieldsData_comments_items_by_avatarBuilder();
+  set avatar(GAllHabitFieldsData_comments_items_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GAllHabitFieldsData_comments_items_byBuilder() {
     GAllHabitFieldsData_comments_items_by._initializeBuilder(this);
   }
@@ -50978,6 +67004,7 @@ class GAllHabitFieldsData_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -50999,14 +67026,201 @@ class GAllHabitFieldsData_comments_items_byBuilder
   GAllHabitFieldsData_comments_items_by build() => _build();
 
   _$GAllHabitFieldsData_comments_items_by _build() {
+    _$GAllHabitFieldsData_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GAllHabitFieldsData_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GAllHabitFieldsData_comments_items_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GAllHabitFieldsData_comments_items_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GAllHabitFieldsData_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAllHabitFieldsData_comments_items_by_avatar
+    extends GAllHabitFieldsData_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GAllHabitFieldsData_comments_items_by_avatar(
+          [void Function(GAllHabitFieldsData_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GAllHabitFieldsData_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GAllHabitFieldsData_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GAllHabitFieldsData_comments_items_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GAllHabitFieldsData_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GAllHabitFieldsData_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GAllHabitFieldsData_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GAllHabitFieldsData_comments_items_by_avatar rebuild(
+          void Function(GAllHabitFieldsData_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAllHabitFieldsData_comments_items_by_avatarBuilder toBuilder() =>
+      new GAllHabitFieldsData_comments_items_by_avatarBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAllHabitFieldsData_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GAllHabitFieldsData_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GAllHabitFieldsData_comments_items_by_avatarBuilder
+    implements
+        Builder<GAllHabitFieldsData_comments_items_by_avatar,
+            GAllHabitFieldsData_comments_items_by_avatarBuilder> {
+  _$GAllHabitFieldsData_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GAllHabitFieldsData_comments_items_by_avatarBuilder() {
+    GAllHabitFieldsData_comments_items_by_avatar._initializeBuilder(this);
+  }
+
+  GAllHabitFieldsData_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAllHabitFieldsData_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAllHabitFieldsData_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GAllHabitFieldsData_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAllHabitFieldsData_comments_items_by_avatar build() => _build();
+
+  _$GAllHabitFieldsData_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GAllHabitFieldsData_comments_items_by._(
+        new _$GAllHabitFieldsData_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GAllHabitFieldsData_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'GAllHabitFieldsData_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+                r'GAllHabitFieldsData_comments_items_by_avatar', 'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GAllHabitFieldsData_comments_items_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GAllHabitFieldsData_comments_items_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GAllHabitFieldsData_comments_items_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -52365,6 +68579,8 @@ class _$GAllPublicUserFieldsData_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GAllPublicUserFieldsData_comments_items_by_avatar? avatar;
 
   factory _$GAllPublicUserFieldsData_comments_items_by(
           [void Function(GAllPublicUserFieldsData_comments_items_byBuilder)?
@@ -52376,7 +68592,8 @@ class _$GAllPublicUserFieldsData_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GAllPublicUserFieldsData_comments_items_by', 'G__typename');
@@ -52401,15 +68618,18 @@ class _$GAllPublicUserFieldsData_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -52419,7 +68639,8 @@ class _$GAllPublicUserFieldsData_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -52447,6 +68668,14 @@ class GAllPublicUserFieldsData_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GAllPublicUserFieldsData_comments_items_by_avatarBuilder? _avatar;
+  GAllPublicUserFieldsData_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GAllPublicUserFieldsData_comments_items_by_avatarBuilder();
+  set avatar(
+          GAllPublicUserFieldsData_comments_items_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GAllPublicUserFieldsData_comments_items_byBuilder() {
     GAllPublicUserFieldsData_comments_items_by._initializeBuilder(this);
   }
@@ -52458,6 +68687,7 @@ class GAllPublicUserFieldsData_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -52480,14 +68710,206 @@ class GAllPublicUserFieldsData_comments_items_byBuilder
   GAllPublicUserFieldsData_comments_items_by build() => _build();
 
   _$GAllPublicUserFieldsData_comments_items_by _build() {
+    _$GAllPublicUserFieldsData_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GAllPublicUserFieldsData_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GAllPublicUserFieldsData_comments_items_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GAllPublicUserFieldsData_comments_items_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GAllPublicUserFieldsData_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAllPublicUserFieldsData_comments_items_by_avatar
+    extends GAllPublicUserFieldsData_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GAllPublicUserFieldsData_comments_items_by_avatar(
+          [void Function(
+                  GAllPublicUserFieldsData_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GAllPublicUserFieldsData_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GAllPublicUserFieldsData_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GAllPublicUserFieldsData_comments_items_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GAllPublicUserFieldsData_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GAllPublicUserFieldsData_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GAllPublicUserFieldsData_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GAllPublicUserFieldsData_comments_items_by_avatar rebuild(
+          void Function(
+                  GAllPublicUserFieldsData_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAllPublicUserFieldsData_comments_items_by_avatarBuilder toBuilder() =>
+      new GAllPublicUserFieldsData_comments_items_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAllPublicUserFieldsData_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GAllPublicUserFieldsData_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GAllPublicUserFieldsData_comments_items_by_avatarBuilder
+    implements
+        Builder<GAllPublicUserFieldsData_comments_items_by_avatar,
+            GAllPublicUserFieldsData_comments_items_by_avatarBuilder> {
+  _$GAllPublicUserFieldsData_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GAllPublicUserFieldsData_comments_items_by_avatarBuilder() {
+    GAllPublicUserFieldsData_comments_items_by_avatar._initializeBuilder(this);
+  }
+
+  GAllPublicUserFieldsData_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAllPublicUserFieldsData_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAllPublicUserFieldsData_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GAllPublicUserFieldsData_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAllPublicUserFieldsData_comments_items_by_avatar build() => _build();
+
+  _$GAllPublicUserFieldsData_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GAllPublicUserFieldsData_comments_items_by._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GAllPublicUserFieldsData_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GAllPublicUserFieldsData_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+        new _$GAllPublicUserFieldsData_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GAllPublicUserFieldsData_comments_items_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(bucket,
+                r'GAllPublicUserFieldsData_comments_items_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(region,
+                r'GAllPublicUserFieldsData_comments_items_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(key,
+                r'GAllPublicUserFieldsData_comments_items_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -53924,6 +70346,8 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GAllPublicUserFieldsData_habits_items_comments_items_by_avatar? avatar;
 
   factory _$GAllPublicUserFieldsData_habits_items_comments_items_by(
           [void Function(
@@ -53937,7 +70361,8 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
@@ -53966,15 +70391,18 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -53984,7 +70412,8 @@ class _$GAllPublicUserFieldsData_habits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -54012,6 +70441,16 @@ class GAllPublicUserFieldsData_habits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder?
+      _avatar;
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GAllPublicUserFieldsData_habits_items_comments_items_byBuilder() {
     GAllPublicUserFieldsData_habits_items_comments_items_by._initializeBuilder(
         this);
@@ -54024,6 +70463,7 @@ class GAllPublicUserFieldsData_habits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -54047,18 +70487,232 @@ class GAllPublicUserFieldsData_habits_items_comments_items_byBuilder
   GAllPublicUserFieldsData_habits_items_comments_items_by build() => _build();
 
   _$GAllPublicUserFieldsData_habits_items_comments_items_by _build() {
+    _$GAllPublicUserFieldsData_habits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GAllPublicUserFieldsData_habits_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GAllPublicUserFieldsData_habits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GAllPublicUserFieldsData_habits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar
+    extends GAllPublicUserFieldsData_habits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar(
+          [void Function(
+                  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key,
+        r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
+        'key');
+  }
+
+  @override
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GAllPublicUserFieldsData_habits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<GAllPublicUserFieldsData_habits_items_comments_items_by_avatar,
+            GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder> {
+  _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder() {
+    GAllPublicUserFieldsData_habits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GAllPublicUserFieldsData_habits_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GAllPublicUserFieldsData_habits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAllPublicUserFieldsData_habits_items_comments_items_by_avatar build() =>
+      _build();
+
+  _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GAllPublicUserFieldsData_habits_items_comments_items_by._(
+        new _$GAllPublicUserFieldsData_habits_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GAllPublicUserFieldsData_habits_items_comments_items_by',
+                r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GAllPublicUserFieldsData_habits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GAllPublicUserFieldsData_habits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -55524,6 +72178,8 @@ class _$GAllPrivateUserFieldsData_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GAllPrivateUserFieldsData_comments_items_by_avatar? avatar;
 
   factory _$GAllPrivateUserFieldsData_comments_items_by(
           [void Function(GAllPrivateUserFieldsData_comments_items_byBuilder)?
@@ -55536,7 +72192,8 @@ class _$GAllPrivateUserFieldsData_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
         r'GAllPrivateUserFieldsData_comments_items_by', 'G__typename');
@@ -55561,15 +72218,18 @@ class _$GAllPrivateUserFieldsData_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -55579,7 +72239,8 @@ class _$GAllPrivateUserFieldsData_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -55607,6 +72268,14 @@ class GAllPrivateUserFieldsData_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GAllPrivateUserFieldsData_comments_items_by_avatarBuilder? _avatar;
+  GAllPrivateUserFieldsData_comments_items_by_avatarBuilder get avatar =>
+      _$this._avatar ??=
+          new GAllPrivateUserFieldsData_comments_items_by_avatarBuilder();
+  set avatar(
+          GAllPrivateUserFieldsData_comments_items_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GAllPrivateUserFieldsData_comments_items_byBuilder() {
     GAllPrivateUserFieldsData_comments_items_by._initializeBuilder(this);
   }
@@ -55618,6 +72287,7 @@ class GAllPrivateUserFieldsData_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -55640,14 +72310,212 @@ class GAllPrivateUserFieldsData_comments_items_byBuilder
   GAllPrivateUserFieldsData_comments_items_by build() => _build();
 
   _$GAllPrivateUserFieldsData_comments_items_by _build() {
+    _$GAllPrivateUserFieldsData_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GAllPrivateUserFieldsData_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GAllPrivateUserFieldsData_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(username,
+                  r'GAllPrivateUserFieldsData_comments_items_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GAllPrivateUserFieldsData_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAllPrivateUserFieldsData_comments_items_by_avatar
+    extends GAllPrivateUserFieldsData_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GAllPrivateUserFieldsData_comments_items_by_avatar(
+          [void Function(
+                  GAllPrivateUserFieldsData_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GAllPrivateUserFieldsData_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GAllPrivateUserFieldsData_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GAllPrivateUserFieldsData_comments_items_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(bucket,
+        r'GAllPrivateUserFieldsData_comments_items_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(region,
+        r'GAllPrivateUserFieldsData_comments_items_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GAllPrivateUserFieldsData_comments_items_by_avatar', 'key');
+  }
+
+  @override
+  GAllPrivateUserFieldsData_comments_items_by_avatar rebuild(
+          void Function(
+                  GAllPrivateUserFieldsData_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAllPrivateUserFieldsData_comments_items_by_avatarBuilder toBuilder() =>
+      new GAllPrivateUserFieldsData_comments_items_by_avatarBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAllPrivateUserFieldsData_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GAllPrivateUserFieldsData_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GAllPrivateUserFieldsData_comments_items_by_avatarBuilder
+    implements
+        Builder<GAllPrivateUserFieldsData_comments_items_by_avatar,
+            GAllPrivateUserFieldsData_comments_items_by_avatarBuilder> {
+  _$GAllPrivateUserFieldsData_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GAllPrivateUserFieldsData_comments_items_by_avatarBuilder() {
+    GAllPrivateUserFieldsData_comments_items_by_avatar._initializeBuilder(this);
+  }
+
+  GAllPrivateUserFieldsData_comments_items_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAllPrivateUserFieldsData_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAllPrivateUserFieldsData_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(GAllPrivateUserFieldsData_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAllPrivateUserFieldsData_comments_items_by_avatar build() => _build();
+
+  _$GAllPrivateUserFieldsData_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GAllPrivateUserFieldsData_comments_items_by._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GAllPrivateUserFieldsData_comments_items_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(username,
-                r'GAllPrivateUserFieldsData_comments_items_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+        new _$GAllPrivateUserFieldsData_comments_items_by_avatar._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GAllPrivateUserFieldsData_comments_items_by_avatar',
+                'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GAllPrivateUserFieldsData_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GAllPrivateUserFieldsData_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(key,
+                r'GAllPrivateUserFieldsData_comments_items_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -57090,6 +73958,8 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_by
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar? avatar;
 
   factory _$GAllPrivateUserFieldsData_habits_items_comments_items_by(
           [void Function(
@@ -57103,7 +73973,8 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_by
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
@@ -57134,15 +74005,18 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_by
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -57152,7 +74026,8 @@ class _$GAllPrivateUserFieldsData_habits_items_comments_items_by
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -57180,6 +74055,16 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder?
+      _avatar;
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder
+      get avatar => _$this._avatar ??=
+          new GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder();
+  set avatar(
+          GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder?
+              avatar) =>
+      _$this._avatar = avatar;
+
   GAllPrivateUserFieldsData_habits_items_comments_items_byBuilder() {
     GAllPrivateUserFieldsData_habits_items_comments_items_by._initializeBuilder(
         this);
@@ -57192,6 +74077,7 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -57215,18 +74101,232 @@ class GAllPrivateUserFieldsData_habits_items_comments_items_byBuilder
   GAllPrivateUserFieldsData_habits_items_comments_items_by build() => _build();
 
   _$GAllPrivateUserFieldsData_habits_items_comments_items_by _build() {
+    _$GAllPrivateUserFieldsData_habits_items_comments_items_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GAllPrivateUserFieldsData_habits_items_comments_items_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+                  'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username,
+                  r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+                  'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar
+    extends GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar(
+          [void Function(
+                  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder)?
+              updates]) =>
+      (new GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket,
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
+        'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region,
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
+        'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key,
+        r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
+        'key');
+  }
+
+  @override
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar rebuild(
+          void Function(
+                  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder
+      toBuilder() =>
+          new GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder
+    implements
+        Builder<GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar,
+            GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder> {
+  _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder() {
+    GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar
+        ._initializeBuilder(this);
+  }
+
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar;
+  }
+
+  @override
+  void update(
+      void Function(
+              GAllPrivateUserFieldsData_habits_items_comments_items_by_avatarBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar build() =>
+      _build();
+
+  _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar _build() {
     final _$result = _$v ??
-        new _$GAllPrivateUserFieldsData_habits_items_comments_items_by._(
+        new _$GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
-                r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
+                r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
                 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username,
-                r'GAllPrivateUserFieldsData_habits_items_comments_items_by',
-                'username'),
-            displayUsername: displayUsername,
-            name: name);
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket,
+                r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
+                'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region,
+                r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
+                'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key,
+                r'GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar',
+                'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }
@@ -58165,6 +75265,8 @@ class _$GAllCommentFieldsData_by extends GAllCommentFieldsData_by {
   final String? displayUsername;
   @override
   final String? name;
+  @override
+  final GAllCommentFieldsData_by_avatar? avatar;
 
   factory _$GAllCommentFieldsData_by(
           [void Function(GAllCommentFieldsData_byBuilder)? updates]) =>
@@ -58174,7 +75276,8 @@ class _$GAllCommentFieldsData_by extends GAllCommentFieldsData_by {
       {required this.G__typename,
       required this.username,
       this.displayUsername,
-      this.name})
+      this.name,
+      this.avatar})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename, r'GAllCommentFieldsData_by', 'G__typename');
@@ -58198,15 +75301,18 @@ class _$GAllCommentFieldsData_by extends GAllCommentFieldsData_by {
         G__typename == other.G__typename &&
         username == other.username &&
         displayUsername == other.displayUsername &&
-        name == other.name;
+        name == other.name &&
+        avatar == other.avatar;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
-            displayUsername.hashCode),
-        name.hashCode));
+        $jc(
+            $jc($jc($jc(0, G__typename.hashCode), username.hashCode),
+                displayUsername.hashCode),
+            name.hashCode),
+        avatar.hashCode));
   }
 
   @override
@@ -58215,7 +75321,8 @@ class _$GAllCommentFieldsData_by extends GAllCommentFieldsData_by {
           ..add('G__typename', G__typename)
           ..add('username', username)
           ..add('displayUsername', displayUsername)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('avatar', avatar))
         .toString();
   }
 }
@@ -58242,6 +75349,12 @@ class GAllCommentFieldsData_byBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  GAllCommentFieldsData_by_avatarBuilder? _avatar;
+  GAllCommentFieldsData_by_avatarBuilder get avatar =>
+      _$this._avatar ??= new GAllCommentFieldsData_by_avatarBuilder();
+  set avatar(GAllCommentFieldsData_by_avatarBuilder? avatar) =>
+      _$this._avatar = avatar;
+
   GAllCommentFieldsData_byBuilder() {
     GAllCommentFieldsData_by._initializeBuilder(this);
   }
@@ -58253,6 +75366,7 @@ class GAllCommentFieldsData_byBuilder
       _username = $v.username;
       _displayUsername = $v.displayUsername;
       _name = $v.name;
+      _avatar = $v.avatar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -58273,14 +75387,192 @@ class GAllCommentFieldsData_byBuilder
   GAllCommentFieldsData_by build() => _build();
 
   _$GAllCommentFieldsData_by _build() {
+    _$GAllCommentFieldsData_by _$result;
+    try {
+      _$result = _$v ??
+          new _$GAllCommentFieldsData_by._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GAllCommentFieldsData_by', 'G__typename'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username, r'GAllCommentFieldsData_by', 'username'),
+              displayUsername: displayUsername,
+              name: name,
+              avatar: _avatar?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'avatar';
+        _avatar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GAllCommentFieldsData_by', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAllCommentFieldsData_by_avatar
+    extends GAllCommentFieldsData_by_avatar {
+  @override
+  final String G__typename;
+  @override
+  final String bucket;
+  @override
+  final String region;
+  @override
+  final String key;
+  @override
+  final _i2.GAccessLevel? accessLevel;
+  @override
+  final String? cognitoId;
+
+  factory _$GAllCommentFieldsData_by_avatar(
+          [void Function(GAllCommentFieldsData_by_avatarBuilder)? updates]) =>
+      (new GAllCommentFieldsData_by_avatarBuilder()..update(updates))._build();
+
+  _$GAllCommentFieldsData_by_avatar._(
+      {required this.G__typename,
+      required this.bucket,
+      required this.region,
+      required this.key,
+      this.accessLevel,
+      this.cognitoId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GAllCommentFieldsData_by_avatar', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        bucket, r'GAllCommentFieldsData_by_avatar', 'bucket');
+    BuiltValueNullFieldError.checkNotNull(
+        region, r'GAllCommentFieldsData_by_avatar', 'region');
+    BuiltValueNullFieldError.checkNotNull(
+        key, r'GAllCommentFieldsData_by_avatar', 'key');
+  }
+
+  @override
+  GAllCommentFieldsData_by_avatar rebuild(
+          void Function(GAllCommentFieldsData_by_avatarBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAllCommentFieldsData_by_avatarBuilder toBuilder() =>
+      new GAllCommentFieldsData_by_avatarBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAllCommentFieldsData_by_avatar &&
+        G__typename == other.G__typename &&
+        bucket == other.bucket &&
+        region == other.region &&
+        key == other.key &&
+        accessLevel == other.accessLevel &&
+        cognitoId == other.cognitoId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, G__typename.hashCode), bucket.hashCode),
+                    region.hashCode),
+                key.hashCode),
+            accessLevel.hashCode),
+        cognitoId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GAllCommentFieldsData_by_avatar')
+          ..add('G__typename', G__typename)
+          ..add('bucket', bucket)
+          ..add('region', region)
+          ..add('key', key)
+          ..add('accessLevel', accessLevel)
+          ..add('cognitoId', cognitoId))
+        .toString();
+  }
+}
+
+class GAllCommentFieldsData_by_avatarBuilder
+    implements
+        Builder<GAllCommentFieldsData_by_avatar,
+            GAllCommentFieldsData_by_avatarBuilder> {
+  _$GAllCommentFieldsData_by_avatar? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _bucket;
+  String? get bucket => _$this._bucket;
+  set bucket(String? bucket) => _$this._bucket = bucket;
+
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
+
+  String? _key;
+  String? get key => _$this._key;
+  set key(String? key) => _$this._key = key;
+
+  _i2.GAccessLevel? _accessLevel;
+  _i2.GAccessLevel? get accessLevel => _$this._accessLevel;
+  set accessLevel(_i2.GAccessLevel? accessLevel) =>
+      _$this._accessLevel = accessLevel;
+
+  String? _cognitoId;
+  String? get cognitoId => _$this._cognitoId;
+  set cognitoId(String? cognitoId) => _$this._cognitoId = cognitoId;
+
+  GAllCommentFieldsData_by_avatarBuilder() {
+    GAllCommentFieldsData_by_avatar._initializeBuilder(this);
+  }
+
+  GAllCommentFieldsData_by_avatarBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _bucket = $v.bucket;
+      _region = $v.region;
+      _key = $v.key;
+      _accessLevel = $v.accessLevel;
+      _cognitoId = $v.cognitoId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAllCommentFieldsData_by_avatar other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAllCommentFieldsData_by_avatar;
+  }
+
+  @override
+  void update(void Function(GAllCommentFieldsData_by_avatarBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAllCommentFieldsData_by_avatar build() => _build();
+
+  _$GAllCommentFieldsData_by_avatar _build() {
     final _$result = _$v ??
-        new _$GAllCommentFieldsData_by._(
+        new _$GAllCommentFieldsData_by_avatar._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GAllCommentFieldsData_by', 'G__typename'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'GAllCommentFieldsData_by', 'username'),
-            displayUsername: displayUsername,
-            name: name);
+                G__typename, r'GAllCommentFieldsData_by_avatar', 'G__typename'),
+            bucket: BuiltValueNullFieldError.checkNotNull(
+                bucket, r'GAllCommentFieldsData_by_avatar', 'bucket'),
+            region: BuiltValueNullFieldError.checkNotNull(
+                region, r'GAllCommentFieldsData_by_avatar', 'region'),
+            key: BuiltValueNullFieldError.checkNotNull(
+                key, r'GAllCommentFieldsData_by_avatar', 'key'),
+            accessLevel: accessLevel,
+            cognitoId: cognitoId);
     replace(_$result);
     return _$result;
   }

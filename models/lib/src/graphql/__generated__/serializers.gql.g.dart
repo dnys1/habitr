@@ -11,6 +11,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GAccessLevel.serializer)
       ..add(GAllCommentFieldsData.serializer)
       ..add(GAllCommentFieldsData_by.serializer)
+      ..add(GAllCommentFieldsData_by_avatar.serializer)
       ..add(GAllCommentFieldsData_habit.serializer)
       ..add(GAllCommentFieldsData_habit_comments.serializer)
       ..add(GAllCommentFieldsData_habit_comments_items.serializer)
@@ -19,6 +20,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GAllHabitFieldsData_comments.serializer)
       ..add(GAllHabitFieldsData_comments_items.serializer)
       ..add(GAllHabitFieldsData_comments_items_by.serializer)
+      ..add(GAllHabitFieldsData_comments_items_by_avatar.serializer)
       ..add(GAllHabitFieldsData_comments_items_habit.serializer)
       ..add(GAllHabitFieldsData_comments_items_habit_comments.serializer)
       ..add(GAllHabitFieldsData_comments_items_habit_comments_items.serializer)
@@ -28,6 +30,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GAllPrivateUserFieldsData_comments.serializer)
       ..add(GAllPrivateUserFieldsData_comments_items.serializer)
       ..add(GAllPrivateUserFieldsData_comments_items_by.serializer)
+      ..add(GAllPrivateUserFieldsData_comments_items_by_avatar.serializer)
       ..add(GAllPrivateUserFieldsData_comments_items_habit.serializer)
       ..add(GAllPrivateUserFieldsData_comments_items_habit_comments.serializer)
       ..add(GAllPrivateUserFieldsData_comments_items_habit_comments_items
@@ -37,6 +40,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GAllPrivateUserFieldsData_habits_items_comments.serializer)
       ..add(GAllPrivateUserFieldsData_habits_items_comments_items.serializer)
       ..add(GAllPrivateUserFieldsData_habits_items_comments_items_by.serializer)
+      ..add(GAllPrivateUserFieldsData_habits_items_comments_items_by_avatar
+          .serializer)
       ..add(GAllPrivateUserFieldsData_habits_items_comments_items_habit
           .serializer)
       ..add(GAllPrivateUserFieldsData_habits_items_comments_items_habit_comments
@@ -50,6 +55,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GAllPublicUserFieldsData_comments.serializer)
       ..add(GAllPublicUserFieldsData_comments_items.serializer)
       ..add(GAllPublicUserFieldsData_comments_items_by.serializer)
+      ..add(GAllPublicUserFieldsData_comments_items_by_avatar.serializer)
       ..add(GAllPublicUserFieldsData_comments_items_habit.serializer)
       ..add(GAllPublicUserFieldsData_comments_items_habit_comments.serializer)
       ..add(GAllPublicUserFieldsData_comments_items_habit_comments_items
@@ -59,6 +65,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GAllPublicUserFieldsData_habits_items_comments.serializer)
       ..add(GAllPublicUserFieldsData_habits_items_comments_items.serializer)
       ..add(GAllPublicUserFieldsData_habits_items_comments_items_by.serializer)
+      ..add(GAllPublicUserFieldsData_habits_items_comments_items_by_avatar
+          .serializer)
       ..add(
           GAllPublicUserFieldsData_habits_items_comments_items_habit.serializer)
       ..add(GAllPublicUserFieldsData_habits_items_comments_items_habit_comments
@@ -76,6 +84,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GCreateCommentData.serializer)
       ..add(GCreateCommentData_createComment.serializer)
       ..add(GCreateCommentData_createComment_by.serializer)
+      ..add(GCreateCommentData_createComment_by_avatar.serializer)
       ..add(GCreateCommentData_createComment_habit.serializer)
       ..add(GCreateCommentData_createComment_habit_comments.serializer)
       ..add(GCreateCommentData_createComment_habit_comments_items.serializer)
@@ -87,6 +96,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GCreateHabitData_createHabit_comments.serializer)
       ..add(GCreateHabitData_createHabit_comments_items.serializer)
       ..add(GCreateHabitData_createHabit_comments_items_by.serializer)
+      ..add(GCreateHabitData_createHabit_comments_items_by_avatar.serializer)
       ..add(GCreateHabitData_createHabit_comments_items_habit.serializer)
       ..add(
           GCreateHabitData_createHabit_comments_items_habit_comments.serializer)
@@ -110,6 +120,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GGetCommentData.serializer)
       ..add(GGetCommentData_getComment.serializer)
       ..add(GGetCommentData_getComment_by.serializer)
+      ..add(GGetCommentData_getComment_by_avatar.serializer)
       ..add(GGetCommentData_getComment_habit.serializer)
       ..add(GGetCommentData_getComment_habit_comments.serializer)
       ..add(GGetCommentData_getComment_habit_comments_items.serializer)
@@ -120,6 +131,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GGetHabitData_getHabit_comments.serializer)
       ..add(GGetHabitData_getHabit_comments_items.serializer)
       ..add(GGetHabitData_getHabit_comments_items_by.serializer)
+      ..add(GGetHabitData_getHabit_comments_items_by_avatar.serializer)
       ..add(GGetHabitData_getHabit_comments_items_habit.serializer)
       ..add(GGetHabitData_getHabit_comments_items_habit_comments.serializer)
       ..add(
@@ -132,6 +144,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GGetSelfData_getUser_comments.serializer)
       ..add(GGetSelfData_getUser_comments_items.serializer)
       ..add(GGetSelfData_getUser_comments_items_by.serializer)
+      ..add(GGetSelfData_getUser_comments_items_by_avatar.serializer)
       ..add(GGetSelfData_getUser_comments_items_habit.serializer)
       ..add(GGetSelfData_getUser_comments_items_habit_comments.serializer)
       ..add(GGetSelfData_getUser_comments_items_habit_comments_items.serializer)
@@ -140,6 +153,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GGetSelfData_getUser_habits_items_comments.serializer)
       ..add(GGetSelfData_getUser_habits_items_comments_items.serializer)
       ..add(GGetSelfData_getUser_habits_items_comments_items_by.serializer)
+      ..add(
+          GGetSelfData_getUser_habits_items_comments_items_by_avatar.serializer)
       ..add(GGetSelfData_getUser_habits_items_comments_items_habit.serializer)
       ..add(GGetSelfData_getUser_habits_items_comments_items_habit_comments
           .serializer)
@@ -154,6 +169,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GGetUserData_getUser_comments.serializer)
       ..add(GGetUserData_getUser_comments_items.serializer)
       ..add(GGetUserData_getUser_comments_items_by.serializer)
+      ..add(GGetUserData_getUser_comments_items_by_avatar.serializer)
       ..add(GGetUserData_getUser_comments_items_habit.serializer)
       ..add(GGetUserData_getUser_comments_items_habit_comments.serializer)
       ..add(GGetUserData_getUser_comments_items_habit_comments_items.serializer)
@@ -162,6 +178,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GGetUserData_getUser_habits_items_comments.serializer)
       ..add(GGetUserData_getUser_habits_items_comments_items.serializer)
       ..add(GGetUserData_getUser_habits_items_comments_items_by.serializer)
+      ..add(
+          GGetUserData_getUser_habits_items_comments_items_by_avatar.serializer)
       ..add(GGetUserData_getUser_habits_items_comments_items_habit.serializer)
       ..add(GGetUserData_getUser_habits_items_comments_items_habit_comments
           .serializer)
@@ -181,6 +199,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GListHabitsByCategoryData_habitsByCategory_items_comments_items_by
           .serializer)
       ..add(
+          GListHabitsByCategoryData_habitsByCategory_items_comments_items_by_avatar
+              .serializer)
+      ..add(
           GListHabitsByCategoryData_habitsByCategory_items_comments_items_habit
               .serializer)
       ..add(
@@ -196,6 +217,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GListHabitsData_listHabits_items_comments.serializer)
       ..add(GListHabitsData_listHabits_items_comments_items.serializer)
       ..add(GListHabitsData_listHabits_items_comments_items_by.serializer)
+      ..add(
+          GListHabitsData_listHabits_items_comments_items_by_avatar.serializer)
       ..add(GListHabitsData_listHabits_items_comments_items_habit.serializer)
       ..add(GListHabitsData_listHabits_items_comments_items_habit_comments
           .serializer)
@@ -218,6 +241,54 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GModelStringInput.serializer)
       ..add(GModelUserConditionInput.serializer)
       ..add(GModelUserFilterInput.serializer)
+      ..add(GOnCreateComment.serializer)
+      ..add(GOnCreateCommentData.serializer)
+      ..add(GOnCreateCommentData_onCreateComment.serializer)
+      ..add(GOnCreateCommentData_onCreateComment_by.serializer)
+      ..add(GOnCreateCommentData_onCreateComment_by_avatar.serializer)
+      ..add(GOnCreateCommentData_onCreateComment_habit.serializer)
+      ..add(GOnCreateCommentData_onCreateComment_habit_comments.serializer)
+      ..add(
+          GOnCreateCommentData_onCreateComment_habit_comments_items.serializer)
+      ..add(GOnCreateCommentVars.serializer)
+      ..add(GOnCreateHabit.serializer)
+      ..add(GOnCreateHabitData.serializer)
+      ..add(GOnCreateHabitData_onCreateHabit.serializer)
+      ..add(GOnCreateHabitData_onCreateHabit_comments.serializer)
+      ..add(GOnCreateHabitData_onCreateHabit_comments_items.serializer)
+      ..add(GOnCreateHabitData_onCreateHabit_comments_items_by.serializer)
+      ..add(
+          GOnCreateHabitData_onCreateHabit_comments_items_by_avatar.serializer)
+      ..add(GOnCreateHabitData_onCreateHabit_comments_items_habit.serializer)
+      ..add(GOnCreateHabitData_onCreateHabit_comments_items_habit_comments
+          .serializer)
+      ..add(GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items
+          .serializer)
+      ..add(GOnCreateHabitVars.serializer)
+      ..add(GOnUpdateComment.serializer)
+      ..add(GOnUpdateCommentData.serializer)
+      ..add(GOnUpdateCommentData_onUpdateComment.serializer)
+      ..add(GOnUpdateCommentData_onUpdateComment_by.serializer)
+      ..add(GOnUpdateCommentData_onUpdateComment_by_avatar.serializer)
+      ..add(GOnUpdateCommentData_onUpdateComment_habit.serializer)
+      ..add(GOnUpdateCommentData_onUpdateComment_habit_comments.serializer)
+      ..add(
+          GOnUpdateCommentData_onUpdateComment_habit_comments_items.serializer)
+      ..add(GOnUpdateCommentVars.serializer)
+      ..add(GOnUpdateHabit.serializer)
+      ..add(GOnUpdateHabitData.serializer)
+      ..add(GOnUpdateHabitData_onUpdateHabit.serializer)
+      ..add(GOnUpdateHabitData_onUpdateHabit_comments.serializer)
+      ..add(GOnUpdateHabitData_onUpdateHabit_comments_items.serializer)
+      ..add(GOnUpdateHabitData_onUpdateHabit_comments_items_by.serializer)
+      ..add(
+          GOnUpdateHabitData_onUpdateHabit_comments_items_by_avatar.serializer)
+      ..add(GOnUpdateHabitData_onUpdateHabit_comments_items_habit.serializer)
+      ..add(GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments
+          .serializer)
+      ..add(GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items
+          .serializer)
+      ..add(GOnUpdateHabitVars.serializer)
       ..add(GS3ObjectInput.serializer)
       ..add(GSearchHabits.serializer)
       ..add(GSearchHabitsData.serializer)
@@ -226,6 +297,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GSearchHabitsData_listHabits_items_comments.serializer)
       ..add(GSearchHabitsData_listHabits_items_comments_items.serializer)
       ..add(GSearchHabitsData_listHabits_items_comments_items_by.serializer)
+      ..add(GSearchHabitsData_listHabits_items_comments_items_by_avatar
+          .serializer)
       ..add(GSearchHabitsData_listHabits_items_comments_items_habit.serializer)
       ..add(GSearchHabitsData_listHabits_items_comments_items_habit_comments
           .serializer)
@@ -241,6 +314,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GSearchUsersData_listUsers_items_comments.serializer)
       ..add(GSearchUsersData_listUsers_items_comments_items.serializer)
       ..add(GSearchUsersData_listUsers_items_comments_items_by.serializer)
+      ..add(
+          GSearchUsersData_listUsers_items_comments_items_by_avatar.serializer)
       ..add(GSearchUsersData_listUsers_items_comments_items_habit.serializer)
       ..add(GSearchUsersData_listUsers_items_comments_items_habit_comments
           .serializer)
@@ -253,6 +328,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(GSearchUsersData_listUsers_items_habits_items_comments_items_by
           .serializer)
+      ..add(
+          GSearchUsersData_listUsers_items_habits_items_comments_items_by_avatar
+              .serializer)
       ..add(GSearchUsersData_listUsers_items_habits_items_comments_items_habit
           .serializer)
       ..add(
@@ -269,6 +347,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GSubscribeToUserData_subscribeToUser_comments.serializer)
       ..add(GSubscribeToUserData_subscribeToUser_comments_items.serializer)
       ..add(GSubscribeToUserData_subscribeToUser_comments_items_by.serializer)
+      ..add(GSubscribeToUserData_subscribeToUser_comments_items_by_avatar
+          .serializer)
       ..add(
           GSubscribeToUserData_subscribeToUser_comments_items_habit.serializer)
       ..add(GSubscribeToUserData_subscribeToUser_comments_items_habit_comments
@@ -284,6 +364,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by
           .serializer)
+      ..add(
+          GSubscribeToUserData_subscribeToUser_habits_items_comments_items_by_avatar
+              .serializer)
       ..add(
           GSubscribeToUserData_subscribeToUser_habits_items_comments_items_habit
               .serializer)
@@ -307,6 +390,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GUpdateHabitData_updateHabit_comments.serializer)
       ..add(GUpdateHabitData_updateHabit_comments_items.serializer)
       ..add(GUpdateHabitData_updateHabit_comments_items_by.serializer)
+      ..add(GUpdateHabitData_updateHabit_comments_items_by_avatar.serializer)
       ..add(GUpdateHabitData_updateHabit_comments_items_habit.serializer)
       ..add(
           GUpdateHabitData_updateHabit_comments_items_habit_comments.serializer)
@@ -321,6 +405,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GUpdateUserData_updateUser_comments.serializer)
       ..add(GUpdateUserData_updateUser_comments_items.serializer)
       ..add(GUpdateUserData_updateUser_comments_items_by.serializer)
+      ..add(GUpdateUserData_updateUser_comments_items_by_avatar.serializer)
       ..add(GUpdateUserData_updateUser_comments_items_habit.serializer)
       ..add(GUpdateUserData_updateUser_comments_items_habit_comments.serializer)
       ..add(GUpdateUserData_updateUser_comments_items_habit_comments_items
@@ -331,6 +416,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GUpdateUserData_updateUser_habits_items_comments_items.serializer)
       ..add(
           GUpdateUserData_updateUser_habits_items_comments_items_by.serializer)
+      ..add(GUpdateUserData_updateUser_habits_items_comments_items_by_avatar
+          .serializer)
       ..add(GUpdateUserData_updateUser_habits_items_comments_items_habit
           .serializer)
       ..add(
@@ -598,6 +685,46 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GModelUserFilterInput)]),
           () => new ListBuilder<GModelUserFilterInput>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GOnCreateCommentData_onCreateComment_habit_comments_items)
+          ]),
+          () => new ListBuilder<
+              GOnCreateCommentData_onCreateComment_habit_comments_items>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GOnCreateHabitData_onCreateHabit_comments_items)
+          ]),
+          () => new ListBuilder<
+              GOnCreateHabitData_onCreateHabit_comments_items>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items)
+          ]),
+          () => new ListBuilder<
+              GOnCreateHabitData_onCreateHabit_comments_items_habit_comments_items>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GOnUpdateCommentData_onUpdateComment_habit_comments_items)
+          ]),
+          () => new ListBuilder<
+              GOnUpdateCommentData_onUpdateComment_habit_comments_items>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GOnUpdateHabitData_onUpdateHabit_comments_items)
+          ]),
+          () => new ListBuilder<
+              GOnUpdateHabitData_onUpdateHabit_comments_items>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items)
+          ]),
+          () => new ListBuilder<
+              GOnUpdateHabitData_onUpdateHabit_comments_items_habit_comments_items>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(GSearchHabitsData_listHabits_items)]),
