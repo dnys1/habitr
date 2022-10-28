@@ -1,8 +1,8 @@
 import 'dart:io';
 
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/services.dart';
 import 'package:habitr/util/base_viewmodel.dart';
-import 'package:habitr/util/print.dart';
 import 'package:image_picker/image_picker.dart';
 
 mixin ImagePickerMixin on BaseViewModel {

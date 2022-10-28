@@ -113,7 +113,7 @@ class AmplifyAuthService implements AuthService {
       confirmationCode: code,
     );
     if (!result.isSignUpComplete) {
-      throw const AuthException();
+      throw AuthException('Could not verify: ${result.nextStep.signUpStep}');
     }
   }
 
@@ -162,19 +162,4 @@ class AmplifyAuthService implements AuthService {
   Future<void> logout() async {
     await Amplify.Auth.signOut();
   }
-}
-
-class AuthException implements Exception {
-  const AuthException([
-    this.message = 'An unknown error occurred.',
-    this.wrappedException,
-    this.stackTrace,
-  ]);
-
-  final String message;
-  final Object? wrappedException;
-  final StackTrace? stackTrace;
-
-  @override
-  String toString() => 'AuthException{ message: "$message" }';
 }

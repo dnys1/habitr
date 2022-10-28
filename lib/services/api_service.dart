@@ -79,7 +79,9 @@ abstract class ApiService {
   Future<void> deleteHabit(Habit habit);
 }
 
-class AmplifyApiService implements ApiService {
+class AmplifyApiService
+    with AWSDebuggable, AWSLoggerMixin
+    implements ApiService {
   Stream<VoteResult>? _voteResultStream;
 
   @override
@@ -93,7 +95,12 @@ class AmplifyApiService implements ApiService {
     );
 
     return _voteResultStream ??= Amplify.API
-        .subscribe<String>(GraphQLRequest(document: gql.printNode(document)))
+        .subscribe<String>(
+      GraphQLRequest(document: gql.printNode(document)),
+      onEstablished: () => logger.debug(
+        'subscribeToVotes subscription established',
+      ),
+    )
         .map((data) {
       final map = jsonDecode(data.data!) as Map<String, dynamic>;
       final voteResult = map[operationName] as Map<String, dynamic>?;
@@ -496,4 +503,7 @@ class AmplifyApiService implements ApiService {
       mutation.vars.toJson(),
     );
   }
+
+  @override
+  String get runtimeTypeName => 'AmplifyApiService';
 }

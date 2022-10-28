@@ -1,9 +1,9 @@
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:habitr/models/Category.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/screens/habit_details/habit_details_screen.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';

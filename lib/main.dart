@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
@@ -17,11 +18,11 @@ import 'package:habitr/services/backend_service.dart';
 import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/services/theme_service.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
+  AWSLogger().logLevel = LogLevel.debug;
   WidgetsFlutterBinding.ensureInitialized();
 
   Bloc.observer = HabitrBlocObserver();

@@ -1,7 +1,7 @@
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:habitr/models/Comment.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/util/base_viewmodel.dart';
-import 'package:habitr/util/print.dart';
 
 class CommentCardViewModel extends BaseViewModel {
   CommentCardViewModel({

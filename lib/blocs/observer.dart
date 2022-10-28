@@ -1,5 +1,5 @@
+import 'package:amplify_flutter/amplify_flutter.dart' show safePrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:habitr/util/print.dart';
 
 class HabitrBlocObserver extends BlocObserver {
   @override

@@ -1,8 +1,8 @@
+import 'package:amplify_flutter/amplify_flutter.dart' show safePrint;
 import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
 class VerifyViewModel extends BaseViewModel {

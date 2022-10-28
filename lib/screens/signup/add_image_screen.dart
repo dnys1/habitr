@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
@@ -6,7 +9,6 @@ import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/widgets/user/user_avatar.dart';
-import 'package:habitr/widgets/username_form_field/username_form_field.dart';
 import 'package:provider/provider.dart';
 
 class AddImageScreen extends StatelessWidget {
@@ -44,6 +46,7 @@ class _AddImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final supportsImagePicker = zIsWeb || Platform.isAndroid || Platform.isIOS;
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
@@ -69,23 +72,26 @@ class _AddImageView extends StatelessWidget {
                             height: 20 + MediaQuery.of(context).viewPadding.top,
                           ),
                           Text(
-                            'Add a name and picture',
+                            'Add a name${supportsImagePicker ? ' and picture' : ''}',
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.headline6,
                           ),
-                          const SizedBox(height: 20),
-                          UserAvatar(
-                            user: viewModel.user,
-                            selectImage: viewModel.pickImage,
-                            image: viewModel.image,
-                          ),
-                          const SizedBox(height: 20),
-                          UsernameFormField(
-                            onChanged: viewModel.setUsername,
-                            onUpdateRequestFuture:
-                                viewModel.setUsernameExistsFuture,
-                            validator: (_) => null,
-                          ),
+                          if (supportsImagePicker) ...[
+                            const SizedBox(height: 20),
+                            UserAvatar(
+                              user: viewModel.user,
+                              selectImage: viewModel.pickImage,
+                              image: viewModel.image,
+                            ),
+                          ],
+                          // TODO(dnys1): Add back displayName + search
+                          // const SizedBox(height: 20),
+                          // UsernameFormField(
+                          //   onChanged: viewModel.setUsername,
+                          //   onUpdateRequestFuture:
+                          //       viewModel.setUsernameExistsFuture,
+                          //   validator: (_) => null,
+                          // ),
                           const SizedBox(height: 20),
                           TextField(
                             onChanged: viewModel.setName,

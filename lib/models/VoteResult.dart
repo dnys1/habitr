@@ -79,13 +79,11 @@ class VoteResult {
   }
 
   VoteResult.fromJson(Map<String, dynamic> json)
-      : _habit = json['habit']?['serializedData'] != null
-            ? Habit.fromJson(
-                Map<String, dynamic>.from(json['habit']['serializedData']))
+      : _habit = json['habit'] != null
+            ? Habit.fromJson(Map<String, dynamic>.from(json['habit']))
             : null,
-        _user = json['user']?['serializedData'] != null
-            ? User.fromJson(
-                Map<String, dynamic>.from(json['user']['serializedData']))
+        _user = json['user'] != null
+            ? User.fromJson(Map<String, dynamic>.from(json['user']))
             : null;
 
   Map<String, dynamic> toJson() =>

@@ -1,10 +1,10 @@
+import 'package:amplify_flutter/amplify_flutter.dart' show safePrint;
 import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/models/Habit.dart';
 import 'package:habitr/repos/comment_repository.dart';
 import 'package:habitr/repos/habit_repository.dart';
 import 'package:habitr/util/base_viewmodel.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
 class HabitDetailsViewModel extends BaseViewModel {

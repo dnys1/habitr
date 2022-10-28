@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:amplify_auth_cognito/amplify_auth_cognito.dart'
-    hide AuthException;
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:amplify_flutter/amplify_flutter.dart' hide Transition, Emitter;
 import 'package:bloc/bloc.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:equatable/equatable.dart';
@@ -14,7 +14,6 @@ import 'package:habitr/services/backend_service.dart';
 import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/error.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
@@ -195,8 +194,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final username = loginData.username!;
       await _authService.resendVerificationCode(username);
       emit(AuthInFlow.verify(username));
-    } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString(), e, st));
+    } on Exception catch (e) {
+      _exceptionController.add(AuthException.fromException(e));
     }
   }
 
@@ -212,8 +211,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         signupData.email,
       );
       emit(AuthInFlow.verify(signupData.username!));
-    } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString(), e, st));
+    } on Exception catch (e) {
+      _exceptionController.add(AuthException.fromException(e));
     }
   }
 
@@ -233,8 +232,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         showSuccessSnackbar('Signup complete! 🎉');
         emit(AuthInFlow.login());
       }
-    } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString(), e, st));
+    } on Exception catch (e) {
+      _exceptionController.add(AuthException.fromException(e));
     }
   }
 
@@ -244,8 +243,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _userUpdates?.cancel();
       _userUpdates = null;
       emit(AuthInFlow.login());
-    } on Exception catch (e, st) {
-      _exceptionController.add(AuthException(e.toString(), e, st));
+    } on Exception catch (e) {
+      _exceptionController.add(AuthException.fromException(e));
     }
   }
 }

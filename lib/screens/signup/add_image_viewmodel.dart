@@ -1,3 +1,4 @@
+import 'package:amplify_flutter/amplify_flutter.dart' show safePrint;
 import 'package:flutter/material.dart';
 import 'package:habitr/blocs/auth/auth_bloc.dart';
 import 'package:habitr/mixins/image_picker.dart';
@@ -8,7 +9,6 @@ import 'package:habitr/services/api_service.dart';
 import 'package:habitr/services/auth_service.dart';
 import 'package:habitr/services/storage_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
 class AddImageViewModel extends BaseViewModel

@@ -1,7 +1,7 @@
+import 'package:amplify_flutter/amplify_flutter.dart' show safePrint;
 import 'package:habitr/services/analytics_service.dart';
 import 'package:habitr/services/preferences_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/scaffold.dart';
 
 class SettingsViewModel extends BaseViewModel {

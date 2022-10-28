@@ -1,10 +1,9 @@
 import 'dart:async';
 
-import 'package:amplify_api/amplify_api.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
-import 'package:habitr/util/print.dart';
 import 'package:habitr/util/validators.dart' as util;
 import 'package:stream_transform/stream_transform.dart';
 
