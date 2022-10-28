@@ -96,19 +96,21 @@ class AmplifyApiService
 
     return _voteResultStream ??= Amplify.API
         .subscribe<String>(
-      GraphQLRequest(document: gql.printNode(document)),
-      onEstablished: () => logger.debug(
-        'subscribeToVotes subscription established',
-      ),
-    )
+          GraphQLRequest(document: gql.printNode(document)),
+          onEstablished: () => logger.debug(
+            'subscribeToVotes subscription established',
+          ),
+        )
         .map((data) {
-      final map = jsonDecode(data.data!) as Map<String, dynamic>;
-      final voteResult = map[operationName] as Map<String, dynamic>?;
-      if (voteResult == null) {
-        return null;
-      }
-      return VoteResult.fromJson(voteResult);
-    }).whereType();
+          final map = jsonDecode(data.data!) as Map<String, dynamic>;
+          final voteResult = map[operationName] as Map<String, dynamic>?;
+          if (voteResult == null) {
+            return null;
+          }
+          return VoteResult.fromJson(voteResult);
+        })
+        .whereType<VoteResult>()
+        .asBroadcastStream(onCancel: (_) => _voteResultStream = null);
   }
 
   Future<Map<String, dynamic>?> _runQuery(

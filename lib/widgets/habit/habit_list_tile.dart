@@ -132,7 +132,7 @@ class _HabitListTileView extends StatelessWidget {
                 color: isLoading || isProcessing
                     ? loadingColor
                     : isUpvoted == false
-                        ? Colors.amber
+                        ? Colors.lightBlue
                         : null,
               ),
               onPressed: isLoading || isProcessing ? null : onClickDownvote,

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/services.dart';
 import 'package:habitr/util/base_viewmodel.dart';
@@ -15,9 +13,16 @@ mixin ImagePickerMixin on BaseViewModel {
     notifyListeners();
   }
 
-  File? _image;
-  File? get image => _image;
-  void setImage(File image) {
+  Uint8List? _imageBytes;
+  Uint8List? get imageBytes => _imageBytes;
+  void setImageBytes(Uint8List imageBytes) {
+    _imageBytes = imageBytes;
+    notifyListeners();
+  }
+
+  XFile? _image;
+  XFile? get image => _image;
+  void setImage(XFile image) {
     _image = image;
     notifyListeners();
   }
@@ -36,7 +41,9 @@ mixin ImagePickerMixin on BaseViewModel {
       );
 
       if (pickedImage != null) {
-        setImage(File(pickedImage.path));
+        final imageBytes = await pickedImage.readAsBytes();
+        setImageBytes(imageBytes);
+        setImage(pickedImage);
       }
     } on PlatformException catch (e) {
       safePrint('Exception while selecting image: $e');

@@ -30,6 +30,12 @@ query SearchUsers($username: String!) {
   }
 `
 
+var corsHeaders = map[string]string{
+	"Access-Control-Allow-Origin":  "*",
+	"Access-Control-Allow-Methods": "OPTIONS,GET,POST",
+	"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,x-amz-content-sha256",
+}
+
 func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	body := apiGatewayEvent.Body
 	var req UsernameExistsRequest
@@ -37,6 +43,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusBadRequest,
+			Headers:    corsHeaders,
 			Body:       err.Error(),
 		}, err
 	}
@@ -44,6 +51,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if req.Username == "" {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusBadRequest,
+			Headers:    corsHeaders,
 			Body:       "Must specify a username",
 		}, errors.New("must specify a username")
 	}
@@ -58,6 +66,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 			Body:       err.Error(),
 		}, err
 	}
@@ -66,6 +75,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 			Body:       err.Error(),
 		}, err
 	}
@@ -75,6 +85,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 			Body:       err.Error(),
 		}, err
 	}
@@ -83,6 +94,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if err != nil || resp.StatusCode != http.StatusOK {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 			Body:       string(respBody),
 		}, err
 	}
@@ -99,6 +111,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 			Body:       err.Error(),
 		}, err
 	}
@@ -106,6 +119,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if len(response.Errors) > 0 {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 			Body:       response.Errors[0].Message,
 		}, fmt.Errorf(response.Errors[0].Message)
 	}
@@ -117,12 +131,14 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
+			Headers:    corsHeaders,
 			Body:       err.Error(),
 		}, err
 	}
 
 	return &events.APIGatewayProxyResponse{
 		StatusCode: http.StatusOK,
+		Headers:    corsHeaders,
 		Body:       string(replyJson),
 	}, nil
 }

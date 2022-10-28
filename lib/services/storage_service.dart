@@ -11,6 +11,7 @@ import 'package:habitr/models/User.dart';
 import 'package:habitr/repos/repository.dart';
 import 'package:habitr/services/analytics_service.dart';
 import 'package:habitr/services/auth_service.dart';
+import 'package:habitr/util/file.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 
@@ -19,9 +20,9 @@ abstract class StorageService extends Repository<String> {
 
   /// Holds any lost data due to a pending file upload being interrupted
   /// by the app shutting down.
-  File? get lostFile;
+  XFile? get lostFile;
 
-  Future<S3Object> putImage(User user, File image);
+  Future<S3Object> putImage(User user, XFile image);
   Future<String> getImageUrl(String? identityId, String key);
   Future<void> precache(User user);
 }
@@ -43,18 +44,18 @@ class AmplifyStorageService extends StorageService {
   final AuthService _authService;
   final AnalyticsService _analyticsService;
 
-  File? _lostFile;
+  XFile? _lostFile;
   @override
-  File? get lostFile => _lostFile;
+  XFile? get lostFile => _lostFile;
 
   @override
   Future<void> init() async {
     // See discussion about Android crashes:
     // https://pub.dev/packages/image_picker
-    if (Platform.isAndroid) {
+    if (!zIsWeb && Platform.isAndroid) {
       final response = await _imagePicker.retrieveLostData();
       if (!response.isEmpty && response.file != null) {
-        _lostFile = File(response.file!.path);
+        _lostFile = response.file;
       }
     }
   }
@@ -71,10 +72,12 @@ class AmplifyStorageService extends StorageService {
   }
 
   @override
-  Future<S3Object> putImage(User user, File image) async {
+  Future<S3Object> putImage(User user, XFile image) async {
     final key = const Uuid().v4();
     await Amplify.Storage.uploadFile(
-      localFile: AWSFile.fromPath(image.path),
+      localFile: await image.toAwsFile(
+        contentType: image.mimeType,
+      ),
       key: key,
       options: const S3UploadFileOptions(
         accessLevel: StorageAccessLevel.protected,

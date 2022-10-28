@@ -81,7 +81,8 @@ class _AddImageView extends StatelessWidget {
                             UserAvatar(
                               user: viewModel.user,
                               selectImage: viewModel.pickImage,
-                              image: viewModel.image,
+                              imageBytes: viewModel.imageBytes,
+                              imageUrl: viewModel.image?.path,
                             ),
                           ],
                           // TODO(dnys1): Add back displayName + search

@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:math';
+import 'dart:typed_data';
 
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,8 @@ class UserAvatar extends StatelessWidget {
   const UserAvatar({
     this.canEdit = true,
     this.user,
-    this.image,
+    this.imageBytes,
+    this.imageUrl,
     this.username,
     this.onTap,
     this.selectImage,
@@ -31,7 +34,8 @@ class UserAvatar extends StatelessWidget {
   final User? user;
   final String? username;
 
-  final File? image;
+  final Uint8List? imageBytes;
+  final String? imageUrl;
 
   /// Whether or not the image is shown as a thumbnail.
   final bool isThumbnail;
@@ -69,7 +73,8 @@ class UserAvatar extends StatelessWidget {
           canEdit: canEdit,
           onTap: onTap,
           selectImage: selectImage,
-          image: image,
+          imageBytes: imageBytes,
+          imageUrl: imageUrl,
           isThumbnail: isThumbnail,
           isEditing: isEditing,
         );
@@ -86,7 +91,8 @@ class _UserAvatarView extends StatefulWidget {
     required this.canEdit,
     required this.isEditing,
     required this.isThumbnail,
-    this.image,
+    this.imageBytes,
+    this.imageUrl,
   });
 
   final UserAvatarViewModel viewModel;
@@ -95,7 +101,8 @@ class _UserAvatarView extends StatefulWidget {
   final bool canEdit;
   final bool isEditing;
   final bool isThumbnail;
-  final File? image;
+  final Uint8List? imageBytes;
+  final String? imageUrl;
 
   @override
   _UserAvatarViewState createState() => _UserAvatarViewState();
@@ -196,14 +203,26 @@ class _UserAvatarViewState extends State<_UserAvatarView> {
             return storageService.get(key);
           },
           builder: (context, url, child) {
+            ImageProvider? provider;
+            final imageBytes = widget.imageBytes;
+            final imageUrl = url ?? widget.imageUrl;
+            if (imageBytes != null) {
+              provider = MemoryImage(imageBytes);
+            } else if (imageUrl != null) {
+              if (imageUrl.startsWith('http')) {
+                provider = CachedNetworkImageProvider(imageUrl);
+              } else if (!zIsWeb) {
+                provider = FileImage(File(imageUrl));
+              }
+            }
             return GestureDetector(
               onTap: getAction(url),
               child: CircleAvatar(
                 backgroundColor: Colors.grey[200],
                 radius: radius,
-                foregroundImage:
-                    widget.image != null ? FileImage(widget.image!) : null,
-                child: childForRadius(radius, url),
+                foregroundImage: provider,
+                // TODO(dnys1): Not working
+                child: childForRadius(radius, imageUrl),
               ),
             );
           },

@@ -35,6 +35,7 @@ dependencies:
   bloc: ^8.1.0
   bloc_concurrency: ^0.2.0
   cached_network_image: ^3.0.0
+  cross_file: ^0.3.3+2
   cupertino_icons: ^1.0.2
   date_format: ^2.0.2
   equatable: ^2.0.2

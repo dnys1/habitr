@@ -240,7 +240,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _logout(Emitter<AuthState> emit) async {
     try {
       await _authService.logout();
-      await _userUpdates?.cancel();
+      unawaited(_userUpdates?.cancel());
       _userUpdates = null;
       emit(AuthInFlow.login());
     } on Exception catch (e) {
