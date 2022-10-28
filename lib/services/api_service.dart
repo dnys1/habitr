@@ -92,7 +92,7 @@ class AmplifyApiService implements ApiService {
       ],
     );
 
-    _voteResultStream ??= Amplify.API
+    return _voteResultStream ??= Amplify.API
         .subscribe<String>(GraphQLRequest(document: gql.printNode(document)))
         .map((data) {
       final map = jsonDecode(data.data!) as Map<String, dynamic>;
@@ -102,8 +102,6 @@ class AmplifyApiService implements ApiService {
       }
       return VoteResult.fromJson(voteResult);
     }).whereType();
-
-    return _voteResultStream!;
   }
 
   Future<Map<String, dynamic>?> _runQuery(
