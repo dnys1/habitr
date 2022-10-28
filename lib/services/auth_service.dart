@@ -133,16 +133,10 @@ class AmplifyAuthService implements AuthService {
 
   @override
   Future<String?> get cognitoIdentityId async {
-    final resp = await Amplify.API
-        .get(
-          restOptions: const RestOptions(
-            path: '/user/identity',
-            apiName: 'habitrAPI',
-          ),
-        )
-        .response;
-    final body = jsonDecode(utf8.decode(resp.data)) as Map<String, dynamic>;
-    return body['identityId'] as String?;
+    final session = await Amplify.Auth.fetchAuthSession(
+      options: const CognitoSessionOptions(getAWSCredentials: true),
+    ) as CognitoAuthSession;
+    return session.identityId;
   }
 
   @override

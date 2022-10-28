@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:typed_data';
 
 import 'package:amplify_flutter/amplify_flutter.dart' hide Category;
 import 'package:gql/ast.dart' as ast;
@@ -102,7 +101,7 @@ class AmplifyApiService implements ApiService {
         return null;
       }
       return VoteResult.fromJson(voteResult);
-    }).whereType<VoteResult>();
+    }).whereType();
 
     return _voteResultStream!;
   }
@@ -113,15 +112,15 @@ class AmplifyApiService implements ApiService {
     Map<String, dynamic> vars,
   ) async {
     final resp = await Amplify.API
-        .query<String?>(
+        .query<String>(
           request: GraphQLRequest(
             document: gql.printNode(operation),
             variables: vars,
           ),
         )
         .response;
-    if (resp.errors.isNotEmpty) {
-      throw Exception(resp.errors.first.toString());
+    if (resp.hasErrors) {
+      throw Exception(resp.errors);
     }
 
     final data = resp.data != null
@@ -343,17 +342,15 @@ class AmplifyApiService implements ApiService {
     final request = UserExistsRequest(username);
     final resp = await Amplify.API
         .post(
-          restOptions: RestOptions(
-            path: '/user/exists',
-            body: Uint8List.fromList(jsonEncode(request).codeUnits),
-          ),
+          '/user/exists',
+          body: HttpPayload.json(request),
         )
         .response;
     if (resp.statusCode != 200) {
-      throw Exception('${resp.statusCode}: ${resp.body}');
+      throw Exception('${resp.statusCode}: ${resp.decodeBody()}');
     }
 
-    final json = jsonDecode(resp.body) as Map<String, dynamic>;
+    final json = jsonDecode(resp.decodeBody()) as Map<String, dynamic>;
     return UserExistsResponse.fromJson(json).exists;
   }
 

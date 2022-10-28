@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:amplify_api/amplify_api.dart';
 import 'package:flutter/material.dart';
 import 'package:habitr/services/api_service.dart';
 import 'package:habitr/util/base_viewmodel.dart';
@@ -60,7 +61,10 @@ class UsernameFormFieldViewModel extends BaseViewModel {
       final exists = await _apiService.usernameExists(username);
       _setUsernameExists(exists);
     } on Exception catch (e) {
-      safePrint('Error checking if username exists: $e');
+      safePrint(
+        'Error checking if username exists: '
+        '${e is RestException ? e.response.decodeBody() : e}',
+      );
       _setUsernameExists(true);
     } finally {
       _setUsernameExistsLoading(false);

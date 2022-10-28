@@ -74,12 +74,12 @@ class AmplifyStorageService extends StorageService {
   Future<S3Object> putImage(User user, File image) async {
     final key = const Uuid().v4();
     await Amplify.Storage.uploadFile(
-      local: image,
+      localFile: AWSFile.fromPath(image.path),
       key: key,
-      options: S3UploadFileOptions(
+      options: const S3UploadFileOptions(
         accessLevel: StorageAccessLevel.protected,
       ),
-    );
+    ).result;
     unawaited(_analyticsService.recordEvent('photoUpload'));
     final newUrl = await getImageUrl(null, key);
     put(key, newUrl);
@@ -101,11 +101,8 @@ class AmplifyStorageService extends StorageService {
     identityId ??= await _authService.cognitoIdentityId;
     final result = await Amplify.Storage.getUrl(
       key: key,
-      options: S3GetUrlOptions(
-        targetIdentityId: identityId,
-        accessLevel: StorageAccessLevel.protected,
-      ),
-    );
-    return put(key, result.url);
+      options: S3GetUrlOptions.forIdentity(identityId!),
+    ).result;
+    return put(key, result.url.toString());
   }
 }
