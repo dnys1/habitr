@@ -49,7 +49,7 @@ app.*.map.json
 .env
 /data/
 team-provider-info.json
-**/bin/**
+amplify/**/bin/**
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
