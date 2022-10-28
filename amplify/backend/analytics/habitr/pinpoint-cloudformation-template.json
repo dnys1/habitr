@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"7.6.22\",\"stackType\":\"analytics-Pinpoint\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"10.4.0\",\"stackType\":\"analytics-Pinpoint\",\"metadata\":{}}",
   "Parameters": {
     "appName": {
       "Type": "String"

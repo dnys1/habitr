@@ -236,4 +236,4 @@ type Subscription {
         @aws_subscribe(mutations: ["vote"])
         @aws_api_key
         @aws_cognito_user_pools
-} 
+}  

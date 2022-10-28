@@ -32,12 +32,6 @@ export type AmplifyDependentResourcesAttributes = {
             "Region": "string",
             "LambdaExecutionRole": "string"
         },
-        "habitrUserIdentity": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        },
         "habitr672b9506PostConfirmation": {
             "Name": "string",
             "Arn": "string",

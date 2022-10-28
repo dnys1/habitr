@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"7.6.22\",\"stackType\":\"storage-S3\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"10.4.0\",\"stackType\":\"storage-S3\",\"metadata\":{}}",
   "Parameters": {
     "bucketName": {
       "Type": "String"

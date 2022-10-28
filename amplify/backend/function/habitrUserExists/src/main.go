@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 
@@ -23,13 +24,8 @@ type UsernameExistsResponse struct {
 
 const usernameExists = `
 query SearchUsers($username: String!) {
-	searchUsers(filter: { 
-	  or: [
-		{ username: { eq: $username } },
-		{ displayUsername: { eq: $username } }
-	  ]
-	}) {
-	  total
+	getUser(username: $username) {
+	  username
 	}
   }
 `
@@ -82,16 +78,24 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 			Body:       err.Error(),
 		}, err
 	}
+	respBody, err := io.ReadAll(resp.Body)
+	defer resp.Body.Close()
+	if err != nil || resp.StatusCode != http.StatusOK {
+		return &events.APIGatewayProxyResponse{
+			StatusCode: http.StatusInternalServerError,
+			Body:       string(respBody),
+		}, err
+	}
 
 	var response struct {
 		Data struct {
-			SearchUsers struct {
-				Total int `json:"total"`
-			} `json:"searchUsers"`
+			GetUser struct {
+				Username string `json:"username"`
+			} `json:"getUser"`
 		} `json:"data"`
 		Errors []Error `json:"errors"`
 	}
-	err = json.NewDecoder(resp.Body).Decode(&response)
+	err = json.Unmarshal(respBody, &response)
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,
@@ -107,7 +111,7 @@ func HandleRequest(ctx context.Context, apiGatewayEvent *events.APIGatewayProxyR
 	}
 
 	reply := UsernameExistsResponse{
-		Exists: response.Data.SearchUsers.Total != 0,
+		Exists: response.Data.GetUser.Username == req.Username,
 	}
 	replyJson, err := json.Marshal(reply)
 	if err != nil {

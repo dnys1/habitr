@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -61,6 +62,11 @@ func HandleRequest(ctx context.Context, event *events.CognitoEventUserPoolsPostC
 		log.Printf("Error sending request: %v\n", err)
 		return event, err
 	}
+	respBody, err := io.ReadAll(resp.Body)
+	defer resp.Body.Close()
+	if err != nil || resp.StatusCode != http.StatusOK {
+		return event, err
+	}
 
 	var response struct {
 		Data struct {
@@ -70,7 +76,7 @@ func HandleRequest(ctx context.Context, event *events.CognitoEventUserPoolsPostC
 		} `json:"data"`
 		Errors []Error `json:"errors"`
 	}
-	err = json.NewDecoder(resp.Body).Decode(&response)
+	err = json.Unmarshal(respBody, &response)
 	if err != nil {
 		log.Printf("Error decoding response: %v\n", err)
 		return nil, err

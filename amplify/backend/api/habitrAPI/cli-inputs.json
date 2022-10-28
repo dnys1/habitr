@@ -6,15 +6,6 @@
         "setting": "open"
       },
       "lambdaFunction": "habitrUserExists"
-    },
-    "/user/identity": {
-      "permissions": {
-        "setting": "private",
-        "auth": [
-          "read"
-        ]
-      },
-      "lambdaFunction": "habitrUserIdentity"
     }
   }
 }

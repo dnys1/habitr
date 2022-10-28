@@ -16,9 +16,8 @@
       ],
       "customAuth": false,
       "frontendAuthConfig": {
-        "loginMechanisms": [
-          "PREFERRED_USERNAME"
-        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
         "signupAttributes": [
           "EMAIL"
         ],
@@ -87,14 +86,6 @@
             "Name",
             "Arn"
           ]
-        },
-        {
-          "category": "function",
-          "resourceName": "habitrUserIdentity",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
         }
       ]
     }
@@ -113,11 +104,6 @@
           ]
         }
       ],
-      "service": "Lambda"
-    },
-    "habitrUserIdentity": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
     "habitr672b9506PostConfirmation": {
