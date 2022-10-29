@@ -1,8 +1,23 @@
 version: 0.2
 
 phases:
-  install:
+  install:    
     commands:
-      - 
+      - git clone https://github.com/flutter/flutter.git -b stable
+      - export PATH="$PATH:`pwd`/flutter/bin"
+      - flutter precache
+      - flutter doctor
+  pre_build:
+    commands:
+      - flutter pub get
+  build:
+    commands:
+      - flutter test --coverage
+      - flutter build web
+  post_build:
+    commands:
+      - curl -s https://codecov.io/bash | bash
 artifacts:
-  - build/web/**/*
+  files:
+    - build/web/**/*
+  discard-paths: true
