@@ -6,10 +6,12 @@ class HabitrLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Habitr',
-      style: GoogleFonts.poppins(
-        textStyle: Theme.of(context).textTheme.headline1,
+    return FittedBox(
+      child: Text(
+        'Habitr',
+        style: GoogleFonts.poppins(
+          textStyle: Theme.of(context).textTheme.headline1,
+        ),
       ),
     );
   }
