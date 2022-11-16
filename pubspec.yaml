@@ -7,31 +7,11 @@ environment:
   sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
-  amplify_analytics_pinpoint:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/analytics/amplify_analytics_pinpoint
-  amplify_api:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/api/amplify_api
-  amplify_auth_cognito:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/auth/amplify_auth_cognito
-  amplify_flutter:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/amplify/amplify_flutter
-  amplify_storage_s3:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/storage/amplify_storage_s3
+  amplify_analytics_pinpoint: ^1.0.0-next.1
+  amplify_api: ^1.0.0-next.1
+  amplify_auth_cognito: ^1.0.0-next.1
+  amplify_flutter: ^1.0.0-next.1
+  amplify_storage_s3: ^1.0.0-next.1
   bloc: ^8.1.0
   bloc_concurrency: ^0.2.0
   cached_network_image: ^3.0.0
@@ -57,118 +37,6 @@ dependencies:
   stream_transform: ^2.0.0
   tuple: ^2.0.0
   uuid: ^3.0.4
-
-dependency_overrides:
-  amplify_analytics_pinpoint:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/analytics/amplify_analytics_pinpoint
-  amplify_analytics_pinpoint_dart:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/analytics/amplify_analytics_pinpoint_dart
-  amplify_api:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/api/amplify_api
-  amplify_api_android:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/api/amplify_api_android
-  amplify_api_ios:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/api/amplify_api_ios
-  amplify_auth_cognito:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/auth/amplify_auth_cognito
-  amplify_auth_cognito_android:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/auth/amplify_auth_cognito_android
-  amplify_auth_cognito_dart:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/auth/amplify_auth_cognito_dart
-  amplify_auth_cognito_ios:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/auth/amplify_auth_cognito_ios
-  amplify_core:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/amplify_core
-  amplify_flutter:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/amplify/amplify_flutter
-  amplify_flutter_android:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/amplify/amplify_flutter_android
-  amplify_flutter_ios:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/amplify/amplify_flutter_ios
-  amplify_secure_storage:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/secure_storage/amplify_secure_storage
-  amplify_secure_storage_dart:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/secure_storage/amplify_secure_storage_dart
-  amplify_storage_s3:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/storage/amplify_storage_s3
-  amplify_storage_s3_dart:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/storage/amplify_storage_s3_dart
-  aws_common:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/aws_common
-  aws_signature_v4:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/aws_signature_v4
-  smithy:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/smithy/smithy
-  smithy_aws:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/smithy/smithy_aws
-  worker_bee:
-    git:
-      url: https://github.com/aws-amplify/amplify-flutter.git
-      ref: non_auth_pentest
-      path: packages/worker_bee/worker_bee
 
 dev_dependencies:
   amplify_lints: ^2.0.1
