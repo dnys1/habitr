@@ -1,0 +1,36 @@
+name: habitr
+version: 0.1.0
+summary: Habitr
+description: Habit-tracking social network built with Amplify Flutter
+
+confinement: strict
+base: core18
+grade: stable
+
+slots:
+  dbus-habitr:
+    interface: dbus
+    bus: session
+    name: com.dillonnys.habitr
+
+apps:
+  habitr:
+    command: habitr
+    extensions: 
+      - flutter-master
+    plugs:
+      - network
+    slots:
+      - dbus-habitr
+
+parts:
+  habitr:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart
+    build-packages:
+      - libsecret-1-dev
+      - libglib2.0-dev
+    stage-packages:
+      - libsecret-1-0
+      - libglib2.0-0

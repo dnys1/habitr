@@ -38,6 +38,10 @@ dependencies:
   tuple: ^2.0.0
   uuid: ^3.0.4
 
+dependency_overrides:
+  amplify_db_common:
+    path: ../amplify-flutter/packages/common/amplify_db_common
+
 dev_dependencies:
   amplify_lints: ^2.0.1
   args: ^2.1.1
