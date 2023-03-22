@@ -1,32 +1,32 @@
 PODS:
-  - Amplify (1.23.0):
-    - Amplify/Default (= 1.23.0)
-  - Amplify/Default (1.23.0)
+  - Amplify (1.29.1):
+    - Amplify/Default (= 1.29.1)
+  - Amplify/Default (1.29.1)
   - amplify_api_ios (0.0.1):
-    - Amplify (= 1.23.0)
+    - Amplify (= 1.29.1)
     - amplify_flutter_ios
-    - AmplifyPlugins/AWSAPIPlugin (= 1.23.0)
+    - AmplifyPlugins/AWSAPIPlugin (= 1.29.1)
     - Flutter
   - amplify_auth_cognito_ios (0.0.1):
-    - Amplify (= 1.23.0)
+    - Amplify (= 1.29.1)
     - amplify_flutter_ios
     - Flutter
   - amplify_flutter_ios (0.0.1):
-    - Amplify (= 1.23.0)
-    - AWSPluginsCore (= 1.23.0)
+    - Amplify (= 1.29.1)
+    - AWSPluginsCore (= 1.29.1)
     - Flutter
   - amplify_secure_storage (0.0.1):
     - Flutter
-  - AmplifyPlugins/AWSAPIPlugin (1.23.0):
-    - AppSyncRealTimeClient (~> 1.8)
-    - AWSCore (~> 2.27.0)
-    - AWSPluginsCore (= 1.23.0)
-  - AppSyncRealTimeClient (1.10.0):
+  - AmplifyPlugins/AWSAPIPlugin (1.29.1):
+    - AppSyncRealTimeClient (~> 3.0)
+    - AWSCore (~> 2.30.1)
+    - AWSPluginsCore (= 1.29.1)
+  - AppSyncRealTimeClient (3.0.0):
     - Starscream (~> 4.0.4)
-  - AWSCore (2.27.15)
-  - AWSPluginsCore (1.23.0):
-    - Amplify (= 1.23.0)
-    - AWSCore (~> 2.27.0)
+  - AWSCore (2.30.4)
+  - AWSPluginsCore (1.29.1):
+    - Amplify (= 1.29.1)
+    - AWSCore (~> 2.30.1)
   - connectivity_plus (0.0.1):
     - Flutter
     - ReachabilitySwift
@@ -40,29 +40,16 @@ PODS:
     - Flutter
   - package_info_plus (0.4.5):
     - Flutter
-  - path_provider_ios (0.0.1):
+  - path_provider_foundation (0.0.1):
     - Flutter
+    - FlutterMacOS
   - ReachabilitySwift (5.0.0)
-  - shared_preferences_ios (0.0.1):
+  - shared_preferences_foundation (0.0.1):
     - Flutter
+    - FlutterMacOS
   - sqflite (0.0.2):
     - Flutter
     - FMDB (>= 2.7.5)
-  - sqlite3 (3.39.3):
-    - sqlite3/common (= 3.39.3)
-  - sqlite3/common (3.39.3)
-  - sqlite3/fts5 (3.39.3):
-    - sqlite3/common
-  - sqlite3/perf-threadsafe (3.39.3):
-    - sqlite3/common
-  - sqlite3/rtree (3.39.3):
-    - sqlite3/common
-  - sqlite3_flutter_libs (0.0.1):
-    - Flutter
-    - sqlite3 (~> 3.39.3)
-    - sqlite3/fts5
-    - sqlite3/perf-threadsafe
-    - sqlite3/rtree
   - Starscream (4.0.4)
 
 DEPENDENCIES:
@@ -75,10 +62,9 @@ DEPENDENCIES:
   - Flutter (from `Flutter`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
-  - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
-  - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
-  - sqlite3_flutter_libs (from `.symlinks/plugins/sqlite3_flutter_libs/ios`)
 
 SPEC REPOS:
   trunk:
@@ -89,7 +75,6 @@ SPEC REPOS:
     - AWSPluginsCore
     - FMDB
     - ReachabilitySwift
-    - sqlite3
     - Starscream
 
 EXTERNAL SOURCES:
@@ -111,39 +96,35 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/image_picker_ios/ios"
   package_info_plus:
     :path: ".symlinks/plugins/package_info_plus/ios"
-  path_provider_ios:
-    :path: ".symlinks/plugins/path_provider_ios/ios"
-  shared_preferences_ios:
-    :path: ".symlinks/plugins/shared_preferences_ios/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/ios"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
-  sqlite3_flutter_libs:
-    :path: ".symlinks/plugins/sqlite3_flutter_libs/ios"
 
 SPEC CHECKSUMS:
-  Amplify: 010d6a71db20812d9e3062db1fe827393d01e584
-  amplify_api_ios: 033f02bfad0b378c055d792f1a47eb0586977934
-  amplify_auth_cognito_ios: 672d66106aa0a3f3b014f24e58563031736eca4f
-  amplify_flutter_ios: b850afebaa322d97d55aae63851fb8209ea36743
+  Amplify: b72bc02515114147a7be8c4f76ef4ecc41350a23
+  amplify_api_ios: 2382ea8fc27e1ae0a45c5d98ae5c2766ce45475c
+  amplify_auth_cognito_ios: 8dc9b2447bccb969b2d6f74437cdfe6d2c122c89
+  amplify_flutter_ios: 9206b5f8d50ddf71ef4fbbb90469a3fac11d6468
   amplify_secure_storage: 501cbdac671a050090d48dfcc002d5637d3f4a55
-  AmplifyPlugins: d939707cf36dfcd53c5fd6533e842e323a2287ab
-  AppSyncRealTimeClient: 656ab4215e05f6ca47fe6d8c73f416d9984a8aac
-  AWSCore: c67277201b6aca10e4cf24638eadaa67c85ebf03
-  AWSPluginsCore: 120cfa265293694921b6595fe00d1cb5ab558847
+  AmplifyPlugins: f8fa63aafd782a44cf48abef656e759dcab3eb71
+  AppSyncRealTimeClient: ec19a24f635611b193eb98a2da573abcf98b793b
+  AWSCore: 19b8233fe2d0ed3ccf5cff833a615814282cdc90
+  AWSPluginsCore: d2c3685072cf896a05f09b55686af476db7c0596
   connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
   device_info_plus: e5c5da33f982a436e103237c0c85f9031142abed
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  image_picker_ios: b786a5dcf033a8336a657191401bfdf12017dabb
+  image_picker_ios: 4a8aadfbb6dc30ad5141a2ce3832af9214a705b5
   package_info_plus: 6c92f08e1f853dc01228d6f553146438dafcd14e
-  path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
+  path_provider_foundation: c68054786f1b4f3343858c1e1d0caaded73f0be9
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
-  shared_preferences_ios: 548a61f8053b9b8a49ac19c1ffbc8b92c50d68ad
+  shared_preferences_foundation: 986fc17f3d3251412d18b0265f9c64113a8c2472
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
-  sqlite3: 50117e9e063a9ef2b865f7bdf2f2601e5d368e9a
-  sqlite3_flutter_libs: c6ab7f23670a98fef45a137159452004bc552168
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
 PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

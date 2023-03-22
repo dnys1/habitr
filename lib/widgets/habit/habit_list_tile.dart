@@ -120,7 +120,7 @@ class _HabitListTileView extends StatelessWidget {
           ),
           Text(
             isLoading ? '' : '${(habit!.ups ?? 0) - (habit!.downs ?? 0)}',
-            style: Theme.of(context).textTheme.bodyText1!.copyWith(
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: isLoading || isProcessing ? loadingColor : null,
                 ),
           ),

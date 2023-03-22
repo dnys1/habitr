@@ -74,7 +74,7 @@ class _AddImageView extends StatelessWidget {
                           Text(
                             'Add a name${supportsImagePicker ? ' and picture' : ''}',
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                           if (supportsImagePicker) ...[
                             const SizedBox(height: 20),

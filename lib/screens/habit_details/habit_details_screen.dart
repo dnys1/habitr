@@ -126,7 +126,7 @@ class _HabitDetailScreenBody extends StatelessWidget {
             children: [
               Text(
                 habit.tagline,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: 20),
               _Detail(
@@ -138,7 +138,7 @@ class _HabitDetailScreenBody extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 'Details',
-                style: Theme.of(context).textTheme.subtitle1,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 10),
               Card(
@@ -150,7 +150,7 @@ class _HabitDetailScreenBody extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 'Comments',
-                style: Theme.of(context).textTheme.subtitle1,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               _AddCommentTextField(
                 controller: viewModel.commentController,
@@ -205,11 +205,11 @@ class _Detail extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: '$label: ',
-        style: Theme.of(context).textTheme.bodyText1,
+        style: Theme.of(context).textTheme.bodyLarge,
         children: [
           TextSpan(
             text: value,
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ],
       ),

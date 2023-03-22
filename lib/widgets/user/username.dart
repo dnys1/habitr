@@ -18,7 +18,7 @@ class UsernameText extends StatelessWidget {
       builder: (context, displayUsername, child) {
         return Text(
           '@${displayUsername ?? user.username}',
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
           textAlign: TextAlign.center,
         );
       },

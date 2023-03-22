@@ -72,7 +72,7 @@ class _VerifyView extends StatelessWidget {
                         const SizedBox(height: 20),
                         Text(
                           'Please check your email for the 6-digit verification code.',
-                          style: Theme.of(context).textTheme.caption,
+                          style: Theme.of(context).textTheme.bodySmall,
                         ),
                         const SizedBox(height: 5),
                         TextButton(

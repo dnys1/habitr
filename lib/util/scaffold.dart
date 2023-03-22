@@ -12,7 +12,7 @@ ThemeData get _theme {
 }
 
 TextStyle get _textStyle {
-  return _theme.textTheme.bodyText2!.copyWith(
+  return _theme.textTheme.bodyMedium!.copyWith(
     color: Colors.white,
   );
 }

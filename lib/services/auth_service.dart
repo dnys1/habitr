@@ -20,7 +20,7 @@ abstract class AuthService {
   Future<String?> get username;
   Stream<User> get userUpdates;
   Future<bool> get isLoggedIn;
-  Future<String?> get cognitoIdentityId;
+  Future<String> get cognitoIdentityId;
 }
 
 class AmplifyAuthService implements AuthService {
@@ -73,7 +73,7 @@ class AmplifyAuthService implements AuthService {
       password: password,
     );
     if (!result.isSignedIn) {
-      throw const AuthException('Could not login');
+      throw const UnknownException('Could not login');
     }
     return (await currentUser)!;
   }
@@ -87,7 +87,7 @@ class AmplifyAuthService implements AuthService {
     try {
       final result = await Amplify.Auth.signInWithWebUI(provider: provider);
       if (!result.isSignedIn) {
-        throw const AuthException('Could not login');
+        throw const UnknownException('Could not login');
       }
       return (await currentUser)!;
     } on UserCancelledException {
@@ -100,7 +100,7 @@ class AmplifyAuthService implements AuthService {
     await Amplify.Auth.signUp(
       username: username,
       password: password,
-      options: CognitoSignUpOptions(
+      options: SignUpOptions(
         userAttributes: {CognitoUserAttributeKey.email: email},
       ),
     );
@@ -113,7 +113,9 @@ class AmplifyAuthService implements AuthService {
       confirmationCode: code,
     );
     if (!result.isSignUpComplete) {
-      throw AuthException('Could not verify: ${result.nextStep.signUpStep}');
+      throw UnknownException(
+        'Could not verify: ${result.nextStep.signUpStep}',
+      );
     }
   }
 
@@ -132,11 +134,9 @@ class AmplifyAuthService implements AuthService {
   }
 
   @override
-  Future<String?> get cognitoIdentityId async {
-    final session = await Amplify.Auth.fetchAuthSession(
-      options: const CognitoSessionOptions(getAWSCredentials: true),
-    ) as CognitoAuthSession;
-    return session.identityId;
+  Future<String> get cognitoIdentityId async {
+    final session = await Amplify.Auth.fetchAuthSession() as CognitoAuthSession;
+    return session.identityIdResult.value;
   }
 
   @override

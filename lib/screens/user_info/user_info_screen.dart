@@ -159,7 +159,7 @@ class _UserInfoBody extends StatelessWidget {
                     }
                     return Text(
                       name,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                       textAlign: TextAlign.center,
                     );
                   },

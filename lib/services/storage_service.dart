@@ -65,7 +65,7 @@ class AmplifyStorageService extends StorageService {
     final avatar = user.avatar;
     if (avatar != null) {
       await getImageUrl(
-        avatar.cognitoId ?? (await _authService.cognitoIdentityId)!,
+        avatar.cognitoId ?? await _authService.cognitoIdentityId,
         avatar.key,
       );
     }
@@ -104,7 +104,7 @@ class AmplifyStorageService extends StorageService {
     identityId ??= await _authService.cognitoIdentityId;
     final result = await Amplify.Storage.getUrl(
       key: key,
-      options: S3GetUrlOptions.forIdentity(identityId!),
+      options: S3GetUrlOptions.forIdentity(identityId),
     ).result;
     return put(key, result.url.toString());
   }

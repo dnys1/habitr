@@ -27,8 +27,10 @@ class SearchResults extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child:
-                    Text('Habits', style: Theme.of(context).textTheme.caption),
+                child: Text(
+                  'Habits',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
               ),
             ),
             if (habits == null)
@@ -48,8 +50,10 @@ class SearchResults extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child:
-                    Text('Users', style: Theme.of(context).textTheme.caption),
+                child: Text(
+                  'Users',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
               ),
             ),
             if (users == null)

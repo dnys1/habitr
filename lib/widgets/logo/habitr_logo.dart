@@ -10,7 +10,7 @@ class HabitrLogo extends StatelessWidget {
       child: Text(
         'Habitr',
         style: GoogleFonts.poppins(
-          textStyle: Theme.of(context).textTheme.headline1,
+          textStyle: Theme.of(context).textTheme.displayLarge,
         ),
       ),
     );

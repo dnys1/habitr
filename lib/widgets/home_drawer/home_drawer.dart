@@ -138,7 +138,7 @@ class _HomeDrawerHeader extends StatelessWidget {
               final name = names.item2;
               return Text(
                 name ?? '@$username',
-                style: Theme.of(context).textTheme.headline6!.copyWith(
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: isDarkModeEnabled ? Colors.white : Colors.black,
                     ),
               );
